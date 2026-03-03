@@ -11,6 +11,11 @@ import {
   searchNodes,
   validateGraphData,
 } from "./core/graph";
+import {
+  decodeViewStateFromUrl,
+  encodeViewStateToQuery,
+  reconcileViewState,
+} from "./core/url-state";
 import type {
   GraphData,
   GraphNode,
@@ -356,7 +361,9 @@ function renderSearch(state: AppState, root: HTMLElement) {
     return;
   }
 
-  const results = searchNodes(state.data, value).slice(0, 20);
+  const results = searchNodes(state.data, value)
+    .filter((node) => !state.hiddenCategories.has(node.category))
+    .slice(0, 20);
   list.innerHTML = "";
   list.classList.toggle("open", results.length > 0);
 
@@ -379,6 +386,7 @@ function renderSearch(state: AppState, root: HTMLElement) {
       refreshLabels(state);
       list.classList.remove("open");
       input.value = "";
+      syncUrlState(state);
     });
     list.appendChild(button);
   }
@@ -387,6 +395,7 @@ function renderSearch(state: AppState, root: HTMLElement) {
 function computeElements(state: AppState) {
   const filtered = filterGraphByCategories(state.data, state.hiddenCategories);
   const contextualIds = new Set(filtered.contextualNodes.map((node) => node.id));
+  const strictVisibleIds = new Set(filtered.visibleNodes.map((node) => node.id));
 
   const nodes = [...filtered.visibleNodes, ...filtered.contextualNodes].map((node) => ({
     data: {
@@ -414,7 +423,7 @@ function computeElements(state: AppState) {
       })),
   );
 
-  return { nodes, edges };
+  return { nodes, edges, strictVisibleIds };
 }
 
 function wireExportImport(state: AppState, root: HTMLElement) {
@@ -456,9 +465,28 @@ function wireExportImport(state: AppState, root: HTMLElement) {
     });
 }
 
+function readViewStateFromUrl(state: AppState) {
+  return reconcileViewState(decodeViewStateFromUrl(window.location.href), {
+    validNodeIds: new Set(state.nodeById.keys()),
+    validCategories: new Set(state.categories),
+  });
+}
+
+function syncUrlState(state: AppState) {
+  const query = encodeViewStateToQuery({
+    selectedId: state.selectedId,
+    hiddenCategories: state.hiddenCategories,
+  });
+  const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const next = `${window.location.pathname}${query}${window.location.hash}`;
+  if (current !== next) {
+    window.history.replaceState(null, "", next);
+  }
+}
+
 function rerenderGraph(state: AppState, root: HTMLElement) {
   const elements = computeElements(state);
-  state.selectedId = reconcileSelection(state.selectedId, new Set(elements.nodes.map((node) => node.data.id)));
+  state.selectedId = reconcileSelection(state.selectedId, elements.strictVisibleIds);
   state.cy.elements().remove();
   state.cy.add([...elements.nodes, ...elements.edges]);
   syncNodeClasses(state);
@@ -475,6 +503,7 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   refreshLabels(state);
   renderLegend(state, root, () => rerenderGraph(state, root));
   renderDetails(state, root);
+  syncUrlState(state);
 }
 
 function wireInteractions(state: AppState, root: HTMLElement) {
@@ -483,6 +512,7 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     state.selectedId = id;
     renderDetails(state, root);
     refreshLabels(state);
+    syncUrlState(state);
   });
 
   state.cy.on("mouseover", "node", (event) => {
@@ -513,6 +543,13 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     if (!target.closest(".floating")) {
       root.querySelector<HTMLElement>("#search-results")?.classList.remove("open");
     }
+  });
+
+  window.addEventListener("popstate", () => {
+    const fromUrl = readViewStateFromUrl(state);
+    state.selectedId = fromUrl.selectedId;
+    state.hiddenCategories = fromUrl.hiddenCategories;
+    rerenderGraph(state, root);
   });
 }
 
@@ -616,6 +653,10 @@ export async function bootstrapApp(root: HTMLElement | null) {
     categoryColors,
     storage,
   };
+
+  const fromUrl = readViewStateFromUrl(state);
+  state.selectedId = fromUrl.selectedId;
+  state.hiddenCategories = fromUrl.hiddenCategories;
 
   rerenderGraph(state, root);
   wireInteractions(state, root);

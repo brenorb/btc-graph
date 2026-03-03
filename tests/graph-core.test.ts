@@ -306,4 +306,12 @@ describe("reconcileSelection", () => {
     const visible = new Set(["node.a", "node.b"]);
     expect(reconcileSelection("node.a", visible)).toBe("node.a");
   });
+
+  it("clears url-selected node when its category is hidden", () => {
+    const data = sampleData();
+    const filtered = filterGraphByCategories(data, new Set(["Lightning"]));
+    const strictVisibleIds = new Set(filtered.visibleNodes.map((node) => node.id));
+
+    expect(reconcileSelection("lightning.htlc", strictVisibleIds)).toBeNull();
+  });
 });
