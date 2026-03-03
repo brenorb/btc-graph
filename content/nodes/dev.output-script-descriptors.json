@@ -1,0 +1,37 @@
+{
+  "id": "dev.output-script-descriptors",
+  "title": "Output Script Descriptors",
+  "description": "Descriptor expressions that precisely describe script templates and key origins for wallets and tooling.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.wallet-development"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 380: Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+      "notes": "Canonical descriptor syntax and checksum behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "How Core maps descriptors to wallet script management internals."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Wallets",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+      "notes": "Wallet architecture context for descriptor-based design."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "descriptors",
+    "wallet-internals"
+  ],
+  "aliases": [
+    "script descriptors"
+  ]
+}

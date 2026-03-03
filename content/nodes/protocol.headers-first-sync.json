@@ -1,0 +1,39 @@
+{
+  "id": "protocol.headers-first-sync",
+  "title": "Headers-First Synchronization",
+  "description": "How nodes download and validate block headers before fetching full blocks during initial sync.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "ops.initial-block-download",
+    "dev.p2p-messages"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "Walks through peer synchronization stages in node startup."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Explains message-level sync behavior and peer coordination."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Reference: P2P Networking",
+      "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+      "notes": "Reference for messages used during header and block exchange."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "synchronization",
+    "p2p"
+  ],
+  "aliases": [
+    "headers first",
+    "header sync"
+  ]
+}

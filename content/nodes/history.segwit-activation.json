@@ -1,0 +1,39 @@
+{
+  "id": "history.segwit-activation",
+  "title": "SegWit Activation",
+  "description": "The activation path, signaling dynamics, and coordination history behind SegWit deployment.",
+  "category": "Governance & History",
+  "prerequisites": [
+    "history.block-size-war",
+    "protocol.segregated-witness"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 9: Versionbits",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+      "notes": "Miner-signaled soft fork activation framework used before UASF pressure."
+    },
+    {
+      "type": "article",
+      "title": "BIP 148: User Activated Soft Fork",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+      "notes": "Mechanism and timing used in the SegWit activation coordination process."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Soft Fork Activation",
+      "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+      "notes": "Comparative context across activation strategies and lessons learned."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "history",
+    "governance"
+  ],
+  "aliases": [
+    "segwit rollout",
+    "segwit activation history"
+  ]
+}

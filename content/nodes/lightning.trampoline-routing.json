@@ -1,0 +1,38 @@
+{
+  "id": "lightning.trampoline-routing",
+  "title": "Lightning Trampoline Routing",
+  "description": "A routing mode where lightweight wallets delegate part of pathfinding to trampoline nodes.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.onion-routing",
+    "lightning.multi-path-payments"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Trampoline Payments",
+      "url": "https://bitcoinops.org/en/topics/trampoline-payments/",
+      "notes": "Tradeoffs and implementation progress for trampoline routing."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+      "notes": "Packet structure relevant to delegated routing hops."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Lightning Services",
+      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
+      "notes": "Wallet UX context for abstracting route construction complexity."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "lightning",
+    "routing"
+  ],
+  "aliases": [
+    "trampoline payments"
+  ]
+}

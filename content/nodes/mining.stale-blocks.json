@@ -1,0 +1,39 @@
+{
+  "id": "mining.stale-blocks",
+  "title": "Stale Blocks",
+  "description": "Why valid blocks can become stale due to propagation races and how relay improvements reduce this risk.",
+  "category": "Mining",
+  "prerequisites": [
+    "protocol.reorgs-finality",
+    "mining.pool-vs-solo"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Block Relay",
+      "url": "https://bitcoincore.academy/block-relay.html",
+      "notes": "Relay performance and topology effects on stale-rate outcomes."
+    },
+    {
+      "type": "article",
+      "title": "BIP 152: Compact Block Relay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki",
+      "notes": "Bandwidth and latency optimizations that reduce stale races."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Chain race and reorganization background."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "mining",
+    "propagation"
+  ],
+  "aliases": [
+    "orphans",
+    "orphan risk"
+  ]
+}

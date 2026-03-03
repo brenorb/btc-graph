@@ -1,0 +1,39 @@
+{
+  "id": "custody.air-gapped-signing",
+  "title": "Air-Gapped Signing",
+  "description": "Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.psbt",
+    "custody.watch-only-wallets",
+    "custody.hardware-wallets"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Private Key Management Overview",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+      "notes": "Threat model and key-isolation design patterns."
+    },
+    {
+      "type": "article",
+      "title": "BIP 174: PSBT",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+      "notes": "Portable transaction handoff format used in offline signing flows."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Recommended Wallets",
+      "url": "https://www.lopp.net/bitcoin-information/recommended-wallets.html",
+      "notes": "Tooling options supporting offline and multi-device custody setups."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "self-custody",
+    "security"
+  ],
+  "aliases": [
+    "offline signing"
+  ]
+}

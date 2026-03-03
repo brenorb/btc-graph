@@ -1,0 +1,39 @@
+{
+  "id": "protocol.witness-commitment",
+  "title": "SegWit Witness Commitment",
+  "description": "How witness data is committed in coinbase transactions to secure segregated witness verification.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.segregated-witness",
+    "fundamentals.merkle-trees"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Defines witness commitment structure and validation rules."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Reference: Block Chain",
+      "url": "https://developer.bitcoin.org/reference/block_chain.html",
+      "notes": "Reference for block and coinbase data fields used by commitments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Shows where witness commitments fit in consensus validation."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "segwit",
+    "block-validation"
+  ],
+  "aliases": [
+    "witness root",
+    "witness merkle commitment"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ops.compact-blocks-vs-filters",
+  "title": "Compact Blocks vs Compact Filters",
+  "description": "Operational differences between block propagation optimization and lightweight-client block filtering protocols.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "protocol.compact-block-relay",
+    "protocol.compact-block-filters"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Compact Block Relay",
+      "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
+      "notes": "Background on BIP152 relay for full-node block propagation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Compact Block Filters",
+      "url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+      "notes": "BIP157/158 client-side filtering model and use cases."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Block Relay",
+      "url": "https://bitcoincore.academy/block-relay.html",
+      "notes": "Operational relay behavior and networking tradeoffs."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "node-operations",
+    "relay"
+  ],
+  "aliases": [
+    "bip152 vs bip157"
+  ]
+}

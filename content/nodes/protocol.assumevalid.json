@@ -1,0 +1,37 @@
+{
+  "id": "protocol.assumevalid",
+  "title": "Assumevalid",
+  "description": "A sync optimization that can skip historical script verification until chain trust is established during IBD.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "ops.initial-block-download"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Hardcoded Consensus Values",
+      "url": "https://bitcoincore.academy/hardcoded-consensus-values.html",
+      "notes": "Covers chain parameters and assumptions embedded for validation behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "Context for validation shortcuts used during initial chain sync."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Full Node Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Describes full validation behavior and tradeoffs in node operation."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "validation",
+    "ibd"
+  ],
+  "aliases": [
+    "assume valid"
+  ]
+}

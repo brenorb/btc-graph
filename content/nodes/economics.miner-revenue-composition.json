@@ -1,0 +1,38 @@
+{
+  "id": "economics.miner-revenue-composition",
+  "title": "Miner Revenue Composition",
+  "description": "How subsidy and fees combine to form miner revenue and how that mix evolves across halvings.",
+  "category": "Economics",
+  "prerequisites": [
+    "mining.mining-economics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Subsidy and transaction-fee revenue mechanics."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Curated references on incentives and mining industry structure."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Mining and Consensus",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "notes": "Detailed treatment of economic incentives for miners."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "mining"
+  ],
+  "aliases": [
+    "subsidy vs fees",
+    "miner income mix"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "dev.psbt-v2",
+  "title": "PSBT v2",
+  "description": "The v2 evolution of PSBT that improves transaction construction semantics and interoperability.",
+  "category": "Development",
+  "prerequisites": [
+    "custody.psbt",
+    "dev.descriptors"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+      "notes": "Original PSBT format and field model."
+    },
+    {
+      "type": "article",
+      "title": "BIP 370: PSBT Version 2",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki",
+      "notes": "Defines PSBT v2 fields and behavior changes."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Wallet Interfaces",
+      "url": "https://bitcoincore.academy/wallet-interfaces.html",
+      "notes": "Implementation context for wallet data flow and signing interfaces."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "wallet-development",
+    "interoperability"
+  ],
+  "aliases": [
+    "psbt2"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "privacy.utxo-consolidation-tradeoffs",
+  "title": "UTXO Consolidation Tradeoffs",
+  "description": "Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.coin-control",
+    "privacy.chain-analysis-heuristics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Wallet-level consolidation behavior and user controls."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Fee Estimates",
+      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+      "notes": "Fee environment context for consolidation timing decisions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Transaction Fees",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
+      "notes": "Economic mechanics behind fee pressure and input management."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "privacy",
+    "fees"
+  ],
+  "aliases": [
+    "utxo merge tradeoffs",
+    "consolidation"
+  ]
+}

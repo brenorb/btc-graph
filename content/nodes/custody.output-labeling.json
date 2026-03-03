@@ -1,0 +1,39 @@
+{
+  "id": "custody.output-labeling",
+  "title": "UTXO and Output Labeling",
+  "description": "Maintaining labels for transaction outputs and counterparties to improve spending decisions, accounting, and privacy hygiene.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.watch-only-wallets",
+    "privacy.coin-control"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Transaction Identification",
+      "url": "https://bitcoincore.academy/transaction-identification.html",
+      "notes": "Foundational model for tracking and identifying relevant transactions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "How labeled UTXOs enable better privacy-aware spending patterns."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Wallets",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+      "notes": "Wallet data-management and control patterns for advanced users."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "self-custody",
+    "wallet-ops"
+  ],
+  "aliases": [
+    "labeling",
+    "utxo labels"
+  ]
+}

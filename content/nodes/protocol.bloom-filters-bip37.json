@@ -1,0 +1,39 @@
+{
+  "id": "protocol.bloom-filters-bip37",
+  "title": "Transaction Bloom Filtering (BIP37)",
+  "description": "Legacy lightweight-client filtering using bloom filters and why modern wallets moved to compact filters.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "dev.p2p-messages",
+    "protocol.addresses-outputs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 37: Connection Bloom Filtering",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki",
+      "notes": "Canonical protocol definition for bloom-filtered transaction relay."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Transaction Bloom Filtering",
+      "url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/",
+      "notes": "Security and privacy limitations with historical context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Explains SPV wallet behavior and related trust models."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "spv",
+    "privacy"
+  ],
+  "aliases": [
+    "bip37",
+    "bloom filtering"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "lightning.channel-jamming",
+  "title": "Lightning Channel Jamming",
+  "description": "A denial-of-service pattern where HTLC slots or liquidity are intentionally exhausted on routing paths.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.liquidity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Channel Jamming Attacks",
+      "url": "https://bitcoinops.org/en/topics/channel-jamming-attacks/",
+      "notes": "Attack taxonomy and mitigation tracking."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 02: Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "HTLC update and commitment behavior exploited by jamming strategies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Pinning Attacks",
+      "url": "https://bitcoincore.academy/pinning-attacks.html",
+      "notes": "Related fee/pinning mechanics that affect channel closure safety."
+    }
+  ],
+  "estimatedTime": "90m",
+  "tags": [
+    "lightning",
+    "security"
+  ],
+  "aliases": [
+    "htlc jamming"
+  ]
+}

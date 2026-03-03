@@ -1,0 +1,37 @@
+{
+  "id": "ops.txindex",
+  "title": "Transaction Index (txindex)",
+  "description": "Global transaction indexing mode for historical transaction lookups at the cost of extra disk and sync overhead.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin RPC Reference: getrawtransaction",
+      "url": "https://developer.bitcoin.org/reference/rpc/getrawtransaction.html",
+      "notes": "Documents txindex requirement for arbitrary historical lookups."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Transaction Tracking",
+      "url": "https://bitcoincore.academy/transaction-tracking.html",
+      "notes": "Wallet and node-level transaction tracking internals."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Operational tradeoffs of enabling full indexes."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "node-operations",
+    "indexing"
+  ],
+  "aliases": [
+    "txindex mode"
+  ]
+}

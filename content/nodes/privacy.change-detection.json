@@ -1,0 +1,38 @@
+{
+  "id": "privacy.change-detection",
+  "title": "Change Output Detection",
+  "description": "How analysts identify probable change outputs and why output structure discipline matters for privacy.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.chain-analysis-heuristics",
+    "privacy.coin-control"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Wallet-side output and UTXO behavior that influences change patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction structure fundamentals needed to reason about heuristics."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Practical privacy techniques and common deanonymization vectors."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "privacy",
+    "heuristics"
+  ],
+  "aliases": [
+    "change heuristics"
+  ]
+}

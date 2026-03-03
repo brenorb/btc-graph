@@ -1,0 +1,38 @@
+{
+  "id": "mining.block-template-selection",
+  "title": "Block Template Transaction Selection",
+  "description": "How miners and pools choose mempool transactions for candidate blocks under fee and policy constraints.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.getblocktemplate",
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin RPC Reference: getblocktemplate",
+      "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
+      "notes": "Template fields and policy knobs exposed to mining software."
+    },
+    {
+      "type": "article",
+      "title": "BIP 22: getblocktemplate Fundamentals",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki",
+      "notes": "Protocol-level definition for template-based mining."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "How transaction admission and eviction affect candidate selection."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "mining",
+    "fees"
+  ],
+  "aliases": [
+    "template selection"
+  ]
+}

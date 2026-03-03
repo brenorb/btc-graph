@@ -1,0 +1,38 @@
+{
+  "id": "lightning.route-blinding",
+  "title": "Lightning Route Blinding",
+  "description": "A privacy technique where receivers hide destination topology by providing blinded route hints.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.bolt12-offers"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Rendez-vous Routing",
+      "url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+      "notes": "Conceptual background and deployment updates for blinded routing."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+      "notes": "Core onion routing mechanics used by blinding methods."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 12: Offers",
+      "url": "https://github.com/lightning/bolts/blob/master/12-offer-encoding.md",
+      "notes": "Offer and invoice request fields that carry blinded path data."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "lightning",
+    "privacy"
+  ],
+  "aliases": [
+    "blinded paths",
+    "rendezvous routing"
+  ]
+}
