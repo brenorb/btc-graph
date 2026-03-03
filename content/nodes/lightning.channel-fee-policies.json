@@ -1,0 +1,38 @@
+{
+  "id": "lightning.channel-fee-policies",
+  "title": "Lightning Channel Fee Policies",
+  "description": "Base fee and proportional fee policy setting for balancing routing attractiveness against channel risk.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.liquidity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 07: Routing Gossip",
+      "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+      "notes": "Defines fee fields and update propagation for channel policies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Liquidity",
+      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
+      "notes": "Operational and product tradeoffs in channel liquidity management."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Multipath Payments",
+      "url": "https://bitcoinops.org/en/topics/multipath-payments/",
+      "notes": "How routing and fee policy interact with split-payment reliability."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "lightning",
+    "fees"
+  ],
+  "aliases": [
+    "routing fee policy",
+    "channel_update fees"
+  ]
+}

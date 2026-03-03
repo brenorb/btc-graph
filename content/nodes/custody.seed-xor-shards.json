@@ -1,0 +1,38 @@
+{
+  "id": "custody.seed-xor-shards",
+  "title": "Seed XOR Shards",
+  "description": "Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.backups-recovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 39: Mnemonic code for generating deterministic keys",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+      "notes": "Seed phrase foundations needed before any entropy-splitting method."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Backups",
+      "url": "https://bitcoin.design/guide/how-it-works/backups/",
+      "notes": "Backup design patterns and user-risk framing for distributed secret storage."
+    },
+    {
+      "type": "article",
+      "title": "Blockchain Commons SmartCustody Book",
+      "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
+      "notes": "Operational threat models and recovery procedures for advanced backups."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "self-custody",
+    "backups"
+  ],
+  "aliases": [
+    "xor seed split",
+    "seed shard backups"
+  ]
+}

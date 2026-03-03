@@ -1,0 +1,39 @@
+{
+  "id": "lightning.probing-attacks",
+  "title": "Lightning Probing Attacks",
+  "description": "Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.routing",
+    "privacy.network-privacy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+      "notes": "Packet structure and error propagation relevant to probing surfaces."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: P2P Attacks",
+      "url": "https://bitcoincore.academy/p2p-attacks.html",
+      "notes": "Threat-model framing for adversarial network behavior."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Curated references for practical privacy defenses."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "lightning",
+    "privacy"
+  ],
+  "aliases": [
+    "liquidity probing",
+    "channel probing"
+  ]
+}

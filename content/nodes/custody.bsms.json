@@ -1,0 +1,39 @@
+{
+  "id": "custody.bsms",
+  "title": "BSMS for Multisig Coordination",
+  "description": "Bitcoin Secure Multisig Setup standards for interoperable multisig setup, descriptors, and recovery metadata.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.multisig",
+    "custody.output-labeling"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Blockchain Commons SmartCustody Book",
+      "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
+      "notes": "Operational guidance for collaborative custody and recovery documentation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Wallet Interfaces",
+      "url": "https://bitcoincore.academy/wallet-interfaces.html",
+      "notes": "Implementation context for inter-wallet metadata handoffs and signer interoperability."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Private Key Management",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+      "notes": "Design and operational context for distributed key management."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "self-custody",
+    "multisig"
+  ],
+  "aliases": [
+    "bitcoin secure multisig setup",
+    "multisig standards"
+  ]
+}

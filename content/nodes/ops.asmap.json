@@ -1,0 +1,38 @@
+{
+  "id": "ops.asmap",
+  "title": "ASMAP Peer Diversity",
+  "description": "Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.peer-discovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Addrman",
+      "url": "https://bitcoincore.academy/addrman.html",
+      "notes": "Address manager behavior and peer bucket design context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin P2P Networking Reference",
+      "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+      "notes": "Network-level message and peer lifecycle background."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Full Node Resources",
+      "url": "https://www.lopp.net/bitcoin-information/full-node.html",
+      "notes": "Operational hardening references and node security materials."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "node-operations",
+    "security"
+  ],
+  "aliases": [
+    "as-level bucketing",
+    "eclipse resistance"
+  ]
+}

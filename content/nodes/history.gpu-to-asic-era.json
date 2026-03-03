@@ -1,0 +1,39 @@
+{
+  "id": "history.gpu-to-asic-era",
+  "title": "GPU-to-ASIC Transition",
+  "description": "Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.",
+  "category": "History",
+  "prerequisites": [
+    "history.early-bitcoin",
+    "mining.mining-hardware"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining Resources",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Historical material on mining hardware and industry structure."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Mining",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "notes": "Technical and economic context for mining hardware evolution."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "How mining competition and chain selection interact with hardware specialization."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "history",
+    "mining"
+  ],
+  "aliases": [
+    "ASIC transition",
+    "mining centralization era"
+  ]
+}

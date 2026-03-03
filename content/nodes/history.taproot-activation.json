@@ -1,0 +1,39 @@
+{
+  "id": "history.taproot-activation",
+  "title": "Taproot Activation History",
+  "description": "Timeline and mechanism of Taproot deployment, from signaling design to mainnet lock-in and activation.",
+  "category": "History",
+  "prerequisites": [
+    "protocol.taproot",
+    "history.segwit-activation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Taproot",
+      "url": "https://bitcoinops.org/en/topics/taproot/",
+      "notes": "Activation chronology and ecosystem rollout updates."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Consensus and activation-relevant specification details."
+    },
+    {
+      "type": "article",
+      "title": "BIP 9: Versionbits",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+      "notes": "Signaling mechanism context for modern soft-fork deployments."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "history",
+    "softforks"
+  ],
+  "aliases": [
+    "speedy trial",
+    "taproot rollout"
+  ]
+}

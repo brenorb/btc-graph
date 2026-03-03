@@ -1,0 +1,39 @@
+{
+  "id": "dev.hwi-psbt-flow",
+  "title": "HWI + PSBT Signing Flow",
+  "description": "Separation between host construction and hardware-device signing through PSBT-based workflows.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.psbt-v2",
+    "custody.hardware-wallets"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 174: PSBT",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+      "notes": "Canonical PSBT v0 format and role separation model."
+    },
+    {
+      "type": "article",
+      "title": "BIP 370: PSBT v2",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki",
+      "notes": "Enhanced PSBT format used in modern wallet and signing stacks."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Private Key Management Overview",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+      "notes": "Security and UX guidance for device-assisted key handling."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "psbt",
+    "hardware-wallets"
+  ],
+  "aliases": [
+    "hardware wallet interface",
+    "offline signing flow"
+  ]
+}

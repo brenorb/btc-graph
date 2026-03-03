@@ -113,6 +113,45 @@
       ]
     },
     {
+      "id": "custody.bsms",
+      "title": "BSMS for Multisig Coordination",
+      "description": "Bitcoin Secure Multisig Setup standards for interoperable multisig setup, descriptors, and recovery metadata.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.multisig",
+        "custody.output-labeling"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Blockchain Commons SmartCustody Book",
+          "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
+          "notes": "Operational guidance for collaborative custody and recovery documentation."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Wallet Interfaces",
+          "url": "https://bitcoincore.academy/wallet-interfaces.html",
+          "notes": "Implementation context for inter-wallet metadata handoffs and signer interoperability."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Private Key Management",
+          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+          "notes": "Design and operational context for distributed key management."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "self-custody",
+        "multisig"
+      ],
+      "aliases": [
+        "bitcoin secure multisig setup",
+        "multisig standards"
+      ]
+    },
+    {
       "id": "custody.hardware-wallets",
       "title": "Hardware Wallets",
       "description": "Isolated signing environments and practical security tradeoffs.",
@@ -409,6 +448,44 @@
       ]
     },
     {
+      "id": "custody.seed-xor-shards",
+      "title": "Seed XOR Shards",
+      "description": "Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.backups-recovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 39: Mnemonic code for generating deterministic keys",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+          "notes": "Seed phrase foundations needed before any entropy-splitting method."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Backups",
+          "url": "https://bitcoin.design/guide/how-it-works/backups/",
+          "notes": "Backup design patterns and user-risk framing for distributed secret storage."
+        },
+        {
+          "type": "article",
+          "title": "Blockchain Commons SmartCustody Book",
+          "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
+          "notes": "Operational threat models and recovery procedures for advanced backups."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "self-custody",
+        "backups"
+      ],
+      "aliases": [
+        "xor seed split",
+        "seed shard backups"
+      ]
+    },
+    {
       "id": "custody.self-custody",
       "title": "Self-Custody Principles",
       "description": "Operational responsibility model and threat minimization.",
@@ -669,6 +746,45 @@
       ]
     },
     {
+      "id": "dev.descriptor-wallet-imports",
+      "title": "Descriptor Wallet Imports",
+      "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",
+      "category": "Development",
+      "prerequisites": [
+        "dev.output-script-descriptors",
+        "dev.bip32"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+          "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+          "notes": "Core wallet internals behind descriptor and script management."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Wallets",
+          "url": "https://developer.bitcoin.org/devguide/wallets.html",
+          "notes": "Wallet model context for importing and tracking scripts."
+        },
+        {
+          "type": "article",
+          "title": "BIP 380: Output Script Descriptors",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+          "notes": "Canonical descriptor grammar and checksum expectations."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "wallet-internals",
+        "descriptors"
+      ],
+      "aliases": [
+        "importdescriptors",
+        "descriptor wallets"
+      ]
+    },
+    {
       "id": "dev.descriptors",
       "title": "Output Descriptors",
       "description": "Policy expression for wallet script templates and scanning.",
@@ -703,6 +819,84 @@
       ],
       "aliases": [
         "output descriptors"
+      ]
+    },
+    {
+      "id": "dev.fee-estimation-rpc",
+      "title": "Fee Estimation RPC",
+      "description": "How wallet and node software estimate feerates from mempool and historical confirmation data.",
+      "category": "Development",
+      "prerequisites": [
+        "protocol.fee-market",
+        "dev.bitcoin-core-rpc"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core RPC: estimatesmartfee",
+          "url": "https://developer.bitcoin.org/reference/rpc/estimatesmartfee.html",
+          "notes": "Reference behavior for feerate estimation targets and modes."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Lifecycle",
+          "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+          "notes": "Why mempool state drives fee estimation quality."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Fee Estimates",
+          "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+          "notes": "Practical fee estimation tools and background references."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "fees",
+        "rpc"
+      ],
+      "aliases": [
+        "estimatesmartfee",
+        "feerate estimation"
+      ]
+    },
+    {
+      "id": "dev.hwi-psbt-flow",
+      "title": "HWI + PSBT Signing Flow",
+      "description": "Separation between host construction and hardware-device signing through PSBT-based workflows.",
+      "category": "Development",
+      "prerequisites": [
+        "dev.psbt-v2",
+        "custody.hardware-wallets"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 174: PSBT",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+          "notes": "Canonical PSBT v0 format and role separation model."
+        },
+        {
+          "type": "article",
+          "title": "BIP 370: PSBT v2",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki",
+          "notes": "Enhanced PSBT format used in modern wallet and signing stacks."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Private Key Management Overview",
+          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+          "notes": "Security and UX guidance for device-assisted key handling."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "psbt",
+        "hardware-wallets"
+      ],
+      "aliases": [
+        "hardware wallet interface",
+        "offline signing flow"
       ]
     },
     {
@@ -964,6 +1158,45 @@
       ]
     },
     {
+      "id": "economics.fee-pressure-cycles",
+      "title": "Fee Pressure Cycles",
+      "description": "Recurring phases of low and high blockspace demand that impact confirmation expectations and wallet behavior.",
+      "category": "Economics",
+      "prerequisites": [
+        "protocol.fee-market",
+        "economics.security-budget"
+      ],
+      "resources": [
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin: Transaction Fees",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
+          "notes": "Economic background for fee dynamics and bidding strategies."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html",
+          "notes": "Miner transaction selection and blockspace allocation incentives."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Fee Estimates",
+          "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+          "notes": "Operational indicators and fee estimation references over time."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "economics",
+        "fees"
+      ],
+      "aliases": [
+        "blockspace demand cycles",
+        "fee volatility cycles"
+      ]
+    },
+    {
       "id": "economics.lost-coins",
       "title": "Lost Coins and Effective Supply",
       "description": "How permanently inaccessible coins affect circulating supply, liquidity, and long-term scarcity.",
@@ -1148,6 +1381,44 @@
       ],
       "aliases": [
         "security model economics"
+      ]
+    },
+    {
+      "id": "economics.transaction-batching-economics",
+      "title": "Transaction Batching Economics",
+      "description": "Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.",
+      "category": "Economics",
+      "prerequisites": [
+        "protocol.fee-market"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Transaction structure fundamentals behind batching tradeoffs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Coin Selection",
+          "url": "https://bitcoinops.org/en/topics/coin-selection/",
+          "notes": "Wallet construction decisions that interact with batching policy."
+        },
+        {
+          "type": "article",
+          "title": "mempool.space Docs",
+          "url": "https://mempool.space/docs",
+          "notes": "Practical mempool behavior context for fee-saving batching strategies."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "economics",
+        "wallet-operations"
+      ],
+      "aliases": [
+        "payment batching",
+        "batching tradeoffs"
       ]
     },
     {
@@ -1877,6 +2148,45 @@
       ]
     },
     {
+      "id": "history.gpu-to-asic-era",
+      "title": "GPU-to-ASIC Transition",
+      "description": "Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.",
+      "category": "History",
+      "prerequisites": [
+        "history.early-bitcoin",
+        "mining.mining-hardware"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Mining Resources",
+          "url": "https://www.lopp.net/bitcoin-information/mining.html",
+          "notes": "Historical material on mining hardware and industry structure."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin: Mining",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "notes": "Technical and economic context for mining hardware evolution."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Consensus Model",
+          "url": "https://bitcoincore.academy/consensus-model.html",
+          "notes": "How mining competition and chain selection interact with hardware specialization."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "history",
+        "mining"
+      ],
+      "aliases": [
+        "ASIC transition",
+        "mining centralization era"
+      ]
+    },
+    {
       "id": "history.segwit-activation",
       "title": "SegWit Activation",
       "description": "The activation path, signaling dynamics, and coordination history behind SegWit deployment.",
@@ -1913,6 +2223,45 @@
       "aliases": [
         "segwit rollout",
         "segwit activation history"
+      ]
+    },
+    {
+      "id": "history.taproot-activation",
+      "title": "Taproot Activation History",
+      "description": "Timeline and mechanism of Taproot deployment, from signaling design to mainnet lock-in and activation.",
+      "category": "History",
+      "prerequisites": [
+        "protocol.taproot",
+        "history.segwit-activation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Taproot",
+          "url": "https://bitcoinops.org/en/topics/taproot/",
+          "notes": "Activation chronology and ecosystem rollout updates."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Consensus and activation-relevant specification details."
+        },
+        {
+          "type": "article",
+          "title": "BIP 9: Versionbits",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+          "notes": "Signaling mechanism context for modern soft-fork deployments."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "history",
+        "softforks"
+      ],
+      "aliases": [
+        "speedy trial",
+        "taproot rollout"
       ]
     },
     {
@@ -2067,6 +2416,44 @@
       ]
     },
     {
+      "id": "lightning.channel-fee-policies",
+      "title": "Lightning Channel Fee Policies",
+      "description": "Base fee and proportional fee policy setting for balancing routing attractiveness against channel risk.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.liquidity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT 07: Routing Gossip",
+          "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+          "notes": "Defines fee fields and update propagation for channel policies."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Liquidity",
+          "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
+          "notes": "Operational and product tradeoffs in channel liquidity management."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Multipath Payments",
+          "url": "https://bitcoinops.org/en/topics/multipath-payments/",
+          "notes": "How routing and fee policy interact with split-payment reliability."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "lightning",
+        "fees"
+      ],
+      "aliases": [
+        "routing fee policy",
+        "channel_update fees"
+      ]
+    },
+    {
       "id": "lightning.channel-jamming",
       "title": "Lightning Channel Jamming",
       "description": "A denial-of-service pattern where HTLC slots or liquidity are intentionally exhausted on routing paths.",
@@ -2178,6 +2565,45 @@
       "aliases": [
         "force close",
         "unilateral close"
+      ]
+    },
+    {
+      "id": "lightning.gossip-protocol",
+      "title": "Lightning Gossip Protocol",
+      "description": "How channel and node announcements propagate network topology and routing policy updates.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.routing",
+        "dev.p2p-messages"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT 07: Routing Gossip",
+          "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+          "notes": "Canonical specification for gossip messages and update semantics."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 02: Peer Protocol",
+          "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+          "notes": "Peer state machine and channel message flow dependencies."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Lightning Services",
+          "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
+          "notes": "Product-level implications of channel graph and service routing."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "lightning",
+        "routing"
+      ],
+      "aliases": [
+        "channel announcements",
+        "routing gossip"
       ]
     },
     {
@@ -2399,6 +2825,45 @@
       ],
       "aliases": [
         "payment channels"
+      ]
+    },
+    {
+      "id": "lightning.probing-attacks",
+      "title": "Lightning Probing Attacks",
+      "description": "Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.routing",
+        "privacy.network-privacy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT 04: Onion Routing Protocol",
+          "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+          "notes": "Packet structure and error propagation relevant to probing surfaces."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: P2P Attacks",
+          "url": "https://bitcoincore.academy/p2p-attacks.html",
+          "notes": "Threat-model framing for adversarial network behavior."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Privacy",
+          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+          "notes": "Curated references for practical privacy defenses."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "lightning",
+        "privacy"
+      ],
+      "aliases": [
+        "liquidity probing",
+        "channel probing"
       ]
     },
     {
@@ -2666,6 +3131,45 @@
       ]
     },
     {
+      "id": "mining.fee-sniping",
+      "title": "Fee Sniping",
+      "description": "Miner strategy of re-mining recent blocks to capture high-fee transactions, with reorg and incentive tradeoffs.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.mining-economics",
+        "protocol.reorgs-finality"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Fee Sniping",
+          "url": "https://bitcoinops.org/en/topics/fee-sniping/",
+          "notes": "Historical and current mitigation approaches for fee-sniping incentives."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin: Mining",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "notes": "Mining incentive framework and block-template decision context."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html",
+          "notes": "Protocol-level overview of miner transaction selection behavior."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "mining",
+        "incentives"
+      ],
+      "aliases": [
+        "reorg fee capture",
+        "miner fee reorg incentives"
+      ]
+    },
+    {
       "id": "mining.getblocktemplate",
       "title": "GetBlockTemplate Workflow",
       "description": "How miners request candidate block templates and construct valid block submissions.",
@@ -2927,6 +3431,82 @@
       ]
     },
     {
+      "id": "mining.template-construction",
+      "title": "Mining Template Construction",
+      "description": "How miners and pools build candidate blocks from mempool transactions under policy, size, and fee constraints.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.block-template-selection"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 22: getblocktemplate",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki",
+          "notes": "Canonical interface between miners and full nodes for block templates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core RPC: getblocktemplate",
+          "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
+          "notes": "RPC details that shape practical template assembly behavior."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Lifecycle",
+          "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+          "notes": "Mempool state transitions that feed candidate selection quality."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "mining",
+        "mempool"
+      ],
+      "aliases": [
+        "block assembly",
+        "candidate block construction"
+      ]
+    },
+    {
+      "id": "ops.asmap",
+      "title": "ASMAP Peer Diversity",
+      "description": "Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.peer-discovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Addrman",
+          "url": "https://bitcoincore.academy/addrman.html",
+          "notes": "Address manager behavior and peer bucket design context."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin P2P Networking Reference",
+          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+          "notes": "Network-level message and peer lifecycle background."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Full Node Resources",
+          "url": "https://www.lopp.net/bitcoin-information/full-node.html",
+          "notes": "Operational hardening references and node security materials."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "node-operations",
+        "security"
+      ],
+      "aliases": [
+        "as-level bucketing",
+        "eclipse resistance"
+      ]
+    },
+    {
       "id": "ops.assumeutxo",
       "title": "AssumeUTXO",
       "description": "Fast-start strategy using UTXO snapshots with deferred full validation for faster node usability.",
@@ -3000,6 +3580,44 @@
       ],
       "aliases": [
         "bip152 vs bip157"
+      ]
+    },
+    {
+      "id": "ops.dns-seeds",
+      "title": "DNS Seeds",
+      "description": "Bootstrap mechanism that gives new nodes initial peers before ongoing address gossip takes over.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.peer-discovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: P2P Network",
+          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+          "notes": "Bootstrap flow and role of seed peers in initial discovery."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Bootstrapping",
+          "url": "https://bitcoincore.academy/bootstrapping.html",
+          "notes": "Detailed IBD and peer selection startup process."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Addrman",
+          "url": "https://bitcoincore.academy/addrman.html",
+          "notes": "How discovered addresses are scored and retained after bootstrap."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "node-operations",
+        "networking"
+      ],
+      "aliases": [
+        "seed nodes",
+        "DNS bootstrap"
       ]
     },
     {
@@ -3452,6 +4070,45 @@
       ]
     },
     {
+      "id": "privacy.amount-correlation",
+      "title": "Amount Correlation",
+      "description": "How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.",
+      "category": "Privacy",
+      "prerequisites": [
+        "privacy.chain-analysis-heuristics",
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Coin Selection",
+          "url": "https://bitcoinops.org/en/topics/coin-selection/",
+          "notes": "Input selection patterns that shape amount linkage risk."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Coin Selection",
+          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+          "notes": "User-facing coin selection tradeoffs affecting privacy outcomes."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Privacy",
+          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+          "notes": "Techniques and tools to reduce amount-based linkage."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "privacy",
+        "onchain-analysis"
+      ],
+      "aliases": [
+        "amount linking",
+        "value correlation"
+      ]
+    },
+    {
       "id": "privacy.chain-analysis-heuristics",
       "title": "Chain Analysis Heuristics",
       "description": "Common heuristics used to cluster addresses and infer ownership from on-chain behavior.",
@@ -3711,6 +4368,44 @@
       ]
     },
     {
+      "id": "privacy.script-type-fingerprinting",
+      "title": "Script-Type Fingerprinting",
+      "description": "Privacy leakage from distinctive output script and address-type patterns that narrow likely wallet/software identity.",
+      "category": "Privacy",
+      "prerequisites": [
+        "privacy.address-reuse"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+          "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+          "notes": "Script template management internals that can become observable patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Wallets",
+          "url": "https://developer.bitcoin.org/devguide/wallets.html",
+          "notes": "Wallet address/script behavior fundamentals relevant to fingerprinting."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Privacy",
+          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+          "notes": "Practical mitigation resources for script and wallet metadata leaks."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "privacy",
+        "wallets"
+      ],
+      "aliases": [
+        "script fingerprinting",
+        "wallet fingerprinting"
+      ]
+    },
+    {
       "id": "privacy.utxo-consolidation-tradeoffs",
       "title": "UTXO Consolidation Tradeoffs",
       "description": "Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.",
@@ -3786,6 +4481,44 @@
       "aliases": [
         "xpub privacy",
         "extended public key leakage"
+      ]
+    },
+    {
+      "id": "protocol.addr-v2-bip155",
+      "title": "AddrV2 (BIP 155)",
+      "description": "Extended peer address relay format that supports newer network address types while preserving compatibility.",
+      "category": "Protocol",
+      "prerequisites": [
+        "ops.peer-discovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 155: addrv2 message",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki",
+          "notes": "Canonical specification for addrv2 address relay serialization."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin P2P Networking Reference",
+          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+          "notes": "Reference for address-related P2P messages and relay behavior."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Address Relay",
+          "url": "https://bitcoincore.academy/address-relay.html",
+          "notes": "Implementation-focused overview of modern address gossip handling."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "p2p",
+        "networking"
+      ],
+      "aliases": [
+        "addrv2",
+        "bip155"
       ]
     },
     {
@@ -4504,6 +5237,45 @@
       ]
     },
     {
+      "id": "protocol.package-relay",
+      "title": "Package Relay",
+      "description": "Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.",
+      "category": "Protocol",
+      "prerequisites": [
+        "protocol.cpfp",
+        "ops.mempool-policy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Package Relay",
+          "url": "https://bitcoinops.org/en/topics/package-relay/",
+          "notes": "Status updates and design tradeoffs around package acceptance and relay."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Lifecycle",
+          "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+          "notes": "Core mempool admission and eviction context needed for packages."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Pinning Attacks",
+          "url": "https://bitcoincore.academy/pinning-attacks.html",
+          "notes": "Why package relay matters for anti-pinning mitigation."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "mempool",
+        "fee-management"
+      ],
+      "aliases": [
+        "transaction packages",
+        "package mempool relay"
+      ]
+    },
+    {
       "id": "protocol.pay-to-script-hash",
       "title": "Pay-to-Script-Hash (P2SH)",
       "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
@@ -4730,6 +5502,44 @@
       ]
     },
     {
+      "id": "protocol.sighash-flags",
+      "title": "SIGHASH Flags",
+      "description": "Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.",
+      "category": "Protocol",
+      "prerequisites": [
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 143: Transaction Signature Verification for Version 0 Witness Program",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+          "notes": "Defines modern segwit signature digest construction details."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Taproot-era signature digest and script path verification semantics."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: Bitcoin Script 101",
+          "url": "https://bitcoindev.network/bitcoin-script-101/",
+          "notes": "Foundational script execution context for interpreting SIGHASH behavior."
+        }
+      ],
+      "estimatedTime": "90m",
+      "tags": [
+        "signatures",
+        "script"
+      ],
+      "aliases": [
+        "signature hash types",
+        "anyonecanpay"
+      ]
+    },
+    {
       "id": "protocol.softfork-hardfork",
       "title": "Soft Forks vs Hard Forks",
       "description": "Compatibility tradeoffs in protocol upgrades.",
@@ -4913,6 +5723,45 @@
       ],
       "aliases": [
         "tx malleability"
+      ]
+    },
+    {
+      "id": "protocol.transaction-relay-inv-getdata",
+      "title": "Transaction Relay (inv/getdata)",
+      "description": "How peers announce and request transactions using inv/getdata before full tx relay.",
+      "category": "Protocol",
+      "prerequisites": [
+        "dev.p2p-messages",
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin P2P Networking Reference",
+          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+          "notes": "Message-level behavior for inventory announcements and requests."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: Wire Protocol",
+          "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
+          "notes": "Accessible walkthrough of Bitcoin message framing and relay flow."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction Tracking",
+          "url": "https://bitcoincore.academy/transaction-tracking.html",
+          "notes": "How Core tracks transaction knowledge and relay state."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "mempool",
+        "p2p"
+      ],
+      "aliases": [
+        "inv getdata",
+        "transaction inventory relay"
       ]
     },
     {

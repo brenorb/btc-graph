@@ -1,0 +1,39 @@
+{
+  "id": "privacy.amount-correlation",
+  "title": "Amount Correlation",
+  "description": "How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.chain-analysis-heuristics",
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "Input selection patterns that shape amount linkage risk."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "User-facing coin selection tradeoffs affecting privacy outcomes."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Techniques and tools to reduce amount-based linkage."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "privacy",
+    "onchain-analysis"
+  ],
+  "aliases": [
+    "amount linking",
+    "value correlation"
+  ]
+}
