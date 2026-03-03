@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.settlement-assurances",
+  "title": "Transaction Confirmations",
+  "description": "How confirmation depth affects settlement confidence for different payment risk profiles.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "protocol.reorgs-finality"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "How blocks and confirmations establish confidence."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Confirmation Risk Calculator",
+      "url": "https://jlopp.github.io/bitcoin-confirmation-risk-calculator/",
+      "notes": "Interactive model for mapping hashrate assumptions to confirmation risk."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Consensus assumptions behind finality expectations."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "confirmations",
+    "finality"
+  ],
+  "aliases": [
+    "confirmation confidence"
+  ]
+}

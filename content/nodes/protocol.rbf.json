@@ -1,0 +1,37 @@
+{
+  "id": "protocol.rbf",
+  "title": "Replace-by-Fee (RBF)",
+  "description": "Policy mechanism to replace unconfirmed transactions with higher-fee versions.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 125: Opt-in Full RBF",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki",
+      "notes": "Canonical policy rules."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Replace-by-Fee",
+      "url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+      "notes": "Wallet/service operational guidance."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Mempool policy context for transaction replacement."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "fees",
+    "mempool"
+  ],
+  "aliases": [
+    "rbf"
+  ]
+}

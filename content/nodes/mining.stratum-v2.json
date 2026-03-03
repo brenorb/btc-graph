@@ -1,0 +1,37 @@
+{
+  "id": "mining.stratum-v2",
+  "title": "Stratum V2",
+  "description": "Mining protocol upgrades for efficiency, security, and improved job negotiation.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.stratum"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Stratum V2 Specification",
+      "url": "https://stratumprotocol.org/specification/",
+      "notes": "Canonical Stratum V2 protocol docs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Pooled Mining",
+      "url": "https://bitcoinops.org/en/topics/pooled-mining/",
+      "notes": "Mining pool architecture discussions including Stratum V2 developments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Operational mining workflow and block assembly context."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "mining",
+    "protocol"
+  ],
+  "aliases": [
+    "stratumv2"
+  ]
+}

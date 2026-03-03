@@ -1,0 +1,37 @@
+{
+  "id": "protocol.cpfp",
+  "title": "Child Pays for Parent (CPFP)",
+  "description": "Fee-bumping strategy where a child transaction incentivizes confirmation of a low-fee parent.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Child Pays For Parent",
+      "url": "https://bitcoinops.org/en/topics/cpfp/",
+      "notes": "Operational use-cases and tradeoffs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction chaining and fee dynamics."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Package Relay",
+      "url": "https://bitcoinops.org/en/topics/package-relay/",
+      "notes": "Policy and relay mechanics relevant to ancestor/descendant fee package handling."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "fees",
+    "mempool"
+  ],
+  "aliases": [
+    "cpfp"
+  ]
+}

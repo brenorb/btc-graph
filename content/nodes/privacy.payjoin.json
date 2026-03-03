@@ -1,0 +1,38 @@
+{
+  "id": "privacy.payjoin",
+  "title": "PayJoin (P2EP)",
+  "description": "Interactive transaction protocol that breaks common-input ownership heuristics.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.chain-analysis-heuristics",
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 78: Pay to Endpoint",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki",
+      "notes": "Protocol specification for PayJoin."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Payjoin",
+      "url": "https://bitcoinops.org/en/topics/payjoin/",
+      "notes": "Implementation guidance and known caveats."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Selection strategy implications for privacy tools."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "privacy",
+    "transactions"
+  ],
+  "aliases": [
+    "p2ep"
+  ]
+}

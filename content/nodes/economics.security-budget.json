@@ -1,0 +1,38 @@
+{
+  "id": "economics.security-budget",
+  "title": "Long-Term Security Budget",
+  "description": "How subsidy decline and fee revenue together influence miner incentives and chain security.",
+  "category": "Economics",
+  "prerequisites": [
+    "protocol.halving",
+    "economics.cost-of-production"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Miner reward composition and incentives."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Fee Sniping",
+      "url": "https://bitcoinops.org/en/topics/fee-sniping/",
+      "notes": "Incentive analysis for miner behavior around fee and subsidy revenue."
+    },
+    {
+      "type": "article",
+      "title": "BIP 42: Finite Monetary Supply Fix",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+      "notes": "Consensus-level context for long-term subsidy schedule assumptions."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "economics",
+    "mining"
+  ],
+  "aliases": [
+    "security model economics"
+  ]
+}

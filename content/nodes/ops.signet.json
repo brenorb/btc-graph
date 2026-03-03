@@ -1,0 +1,37 @@
+{
+  "id": "ops.signet",
+  "title": "Signet Operations",
+  "description": "Using signet for deterministic, low-value testing of wallet and node workflows.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "dev.testnet-regtest"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Testnets",
+      "url": "https://bitcoincore.academy/testnets.html",
+      "notes": "When to choose regtest, testnet, or signet."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Signet",
+      "url": "https://bitcoinops.org/en/topics/signet/",
+      "notes": "Network usage and ecosystem support updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Nigiri Guide",
+      "url": "https://bitcoindev.network/getting-started-with-nigiri/",
+      "notes": "Practical local testing setup."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "node",
+    "testing"
+  ],
+  "aliases": [
+    "default signet"
+  ]
+}

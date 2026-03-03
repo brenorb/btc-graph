@@ -1,0 +1,37 @@
+{
+  "id": "protocol.timelocks",
+  "title": "Script Timelocks",
+  "description": "Timelock primitives used to constrain when funds can be spent in script contracts.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 65: CHECKLOCKTIMEVERIFY",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki",
+      "notes": "Absolute timelock opcode semantics."
+    },
+    {
+      "type": "article",
+      "title": "BIP 112: CHECKSEQUENCEVERIFY",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki",
+      "notes": "Relative timelock opcode semantics."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Contracts",
+      "url": "https://developer.bitcoin.org/devguide/contracts.html",
+      "notes": "Practical contract templates and usage."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "script",
+    "timelocks"
+  ],
+  "aliases": [
+    "cltv csv"
+  ]
+}

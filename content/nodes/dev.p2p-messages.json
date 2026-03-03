@@ -1,0 +1,38 @@
+{
+  "id": "dev.p2p-messages",
+  "title": "Bitcoin P2P Message Flow",
+  "description": "Version handshake, inventory relay, and message sequencing in node-to-node communication.",
+  "category": "Development",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network",
+    "protocol.nodes-vs-miners"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Reference: P2P Networking",
+      "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+      "notes": "Message definitions and wire formats."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Wire Protocol",
+      "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
+      "notes": "Implementation-oriented breakdown."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Address Relay",
+      "url": "https://bitcoincore.academy/address-relay.html",
+      "notes": "How relay policy affects message propagation."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "networking",
+    "protocol"
+  ],
+  "aliases": [
+    "wire messages"
+  ]
+}

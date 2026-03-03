@@ -1,0 +1,37 @@
+{
+  "id": "lightning.onion-routing",
+  "title": "Lightning Onion Routing",
+  "description": "Packet format and forwarding privacy model for multi-hop Lightning payments.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.routing"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+      "notes": "Canonical Lightning onion packet behavior."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 07: Gossip Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+      "notes": "Routing information distribution layer."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Route Blinding",
+      "url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+      "notes": "Privacy-preserving routing patterns related to onion message paths."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "lightning",
+    "routing"
+  ],
+  "aliases": [
+    "sphinx routing"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "protocol.block-weight-vbytes",
+  "title": "Block Weight and Virtual Bytes",
+  "description": "How weight units and vbytes price block space after SegWit.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.segregated-witness",
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Block Weight Rules",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Weight metric and witness discount definition."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction sizing and fee calculation context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Reference: Transactions",
+      "url": "https://developer.bitcoin.org/reference/transactions.html",
+      "notes": "Field-level transaction structure reference used for vsize/weight reasoning."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "fees",
+    "blockspace"
+  ],
+  "aliases": [
+    "vbytes",
+    "block weight"
+  ]
+}

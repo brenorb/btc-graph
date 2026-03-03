@@ -1,0 +1,37 @@
+{
+  "id": "dev.bip39",
+  "title": "BIP39 Mnemonics",
+  "description": "Mnemonic seed format and entropy/checksum model used by many wallet backups.",
+  "category": "Development",
+  "prerequisites": [
+    "fundamentals.hash-functions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 39: Mnemonic Code",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+      "notes": "Wordlist + checksum + seed derivation spec."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Backups",
+      "url": "https://bitcoin.design/guide/how-it-works/backups/",
+      "notes": "Human-centered guidance on backup handling."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: HD Key Generation",
+      "url": "https://bitcoinops.org/en/topics/hd-key-generation/",
+      "notes": "Background context on HD key hierarchies used with mnemonic seeds."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "wallets",
+    "mnemonic"
+  ],
+  "aliases": [
+    "mnemonic phrases"
+  ]
+}

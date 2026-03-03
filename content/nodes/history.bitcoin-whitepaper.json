@@ -1,0 +1,37 @@
+{
+  "id": "history.bitcoin-whitepaper",
+  "title": "Bitcoin Whitepaper",
+  "description": "Original system design framing for decentralized digital cash and double-spend resistance.",
+  "category": "Governance & History",
+  "prerequisites": [
+    "history.double-spend-problem"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "Primary source document by Satoshi Nakamoto."
+    },
+    {
+      "type": "article",
+      "title": "Original Whitepaper Announcement (Metzdowd)",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+      "notes": "Primary historical announcement thread introducing the paper."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Modern explanation of the consensus ideas introduced in the whitepaper."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "history",
+    "whitepaper"
+  ],
+  "aliases": [
+    "satoshi paper"
+  ]
+}

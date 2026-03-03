@@ -1,0 +1,38 @@
+{
+  "id": "custody.inheritance-planning",
+  "title": "Bitcoin Inheritance Planning",
+  "description": "Designing survivable custody workflows that balance privacy, security, and recoverability.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.backups-recovery",
+    "custody.multisig"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Smart Custody Book",
+      "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
+      "notes": "Open reference material for long-term custody design and recovery planning."
+    },
+    {
+      "type": "article",
+      "title": "Cryptocurrency Security Standard (CCSS)",
+      "url": "https://cryptoconsortium.github.io/CCSS/",
+      "notes": "Neutral custody security framework applicable to succession planning controls."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Backup and Recovery",
+      "url": "https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/landing-page/",
+      "notes": "Human-centered recovery flow design for non-technical heirs and operators."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "custody",
+    "planning"
+  ],
+  "aliases": [
+    "bitcoin inheritance"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "privacy.chain-analysis-heuristics",
+  "title": "Chain Analysis Heuristics",
+  "description": "Common heuristics used to cluster addresses and infer ownership from on-chain behavior.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.address-reuse"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Linking",
+      "url": "https://bitcoinops.org/en/topics/output-linking/",
+      "notes": "How transaction patterns can leak relationship signals."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Wallet behavior choices that impact privacy."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "How wallet input selection patterns influence clustering and linkability."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "privacy",
+    "surveillance"
+  ],
+  "aliases": [
+    "cluster analysis"
+  ]
+}

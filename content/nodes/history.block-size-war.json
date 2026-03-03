@@ -1,0 +1,38 @@
+{
+  "id": "history.block-size-war",
+  "title": "Block Size War",
+  "description": "Governance conflict over scaling strategy and how social consensus resolved protocol direction.",
+  "category": "Governance & History",
+  "prerequisites": [
+    "protocol.softfork-hardfork",
+    "history.early-bitcoin"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Segregated Witness",
+      "url": "https://bitcoinops.org/en/topics/segregated-witness/",
+      "notes": "Technical and historical context around SegWit."
+    },
+    {
+      "type": "article",
+      "title": "BIP 148: UASF SegWit Activation",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+      "notes": "Primary-source proposal central to the activation conflict."
+    },
+    {
+      "type": "article",
+      "title": "BIP 91: Reduced Threshold SegWit MASF",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki",
+      "notes": "Primary-source activation mechanism that shaped the conflict timeline."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "governance",
+    "scaling"
+  ],
+  "aliases": [
+    "blocksize war"
+  ]
+}

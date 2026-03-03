@@ -1,0 +1,38 @@
+{
+  "id": "lightning.bolt12-offers",
+  "title": "BOLT12 Offers",
+  "description": "Next-generation Lightning request format for reusable, richer, and more private payment intents.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.invoices",
+    "lightning.onion-routing"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 12: Offers",
+      "url": "https://github.com/lightning/bolts/blob/master/12-offer-encoding.md",
+      "notes": "Offer/invoice request/invoice protocol format."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Offers",
+      "url": "https://bitcoinops.org/en/topics/offers/",
+      "notes": "Implementation status and ecosystem support."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 11: Payment Request Format",
+      "url": "https://github.com/lightning/bolts/blob/master/11-payment-encoding.md",
+      "notes": "Legacy invoice format baseline for comparing BOLT12 offers."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "lightning",
+    "invoices"
+  ],
+  "aliases": [
+    "offers"
+  ]
+}

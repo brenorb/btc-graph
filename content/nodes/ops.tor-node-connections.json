@@ -1,0 +1,37 @@
+{
+  "id": "ops.tor-node-connections",
+  "title": "Tor for Node Connectivity",
+  "description": "Improving network privacy and resilience by routing node traffic over Tor.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "privacy.network-privacy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Tor Documentation",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
+      "notes": "Canonical node configuration guidance for Tor."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anonymity Networks",
+      "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+      "notes": "Node-level anonymity network tradeoffs and deployment notes."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Networking foundations for peer transport choices."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "node",
+    "privacy"
+  ],
+  "aliases": [
+    "tor nodes"
+  ]
+}

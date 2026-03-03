@@ -1,0 +1,38 @@
+{
+  "id": "mining.getblocktemplate",
+  "title": "GetBlockTemplate Workflow",
+  "description": "How miners request candidate block templates and construct valid block submissions.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.pool-vs-solo",
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 22: getblocktemplate",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki",
+      "notes": "RPC spec for block template construction."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Mining architecture and template logic overview."
+    },
+    {
+      "type": "article",
+      "title": "BIP 23: getblocktemplate Extensions",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki",
+      "notes": "Extension behaviors and capabilities beyond the base template protocol."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "mining",
+    "rpc"
+  ],
+  "aliases": [
+    "gbt"
+  ]
+}

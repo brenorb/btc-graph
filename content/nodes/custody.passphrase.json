@@ -1,0 +1,37 @@
+{
+  "id": "custody.passphrase",
+  "title": "Seed Passphrase (BIP39)",
+  "description": "Optional passphrase extension for mnemonic seeds and its recovery risk tradeoffs.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.seed-phrases"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 39: Mnemonic Code",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+      "notes": "Specification for mnemonic + passphrase derivation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Backups",
+      "url": "https://bitcoin.design/guide/how-it-works/backups/",
+      "notes": "Human factors and backup strategy guidance."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Operational key-management context for passphrase-protected seeds."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "seed",
+    "backup"
+  ],
+  "aliases": [
+    "25th word"
+  ]
+}

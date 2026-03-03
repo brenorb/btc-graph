@@ -1,0 +1,37 @@
+{
+  "id": "protocol.segregated-witness",
+  "title": "Segregated Witness (SegWit)",
+  "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Canonical specification."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Segregated Witness",
+      "url": "https://bitcoinops.org/en/topics/segregated-witness/",
+      "notes": "Operational implications and ecosystem updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Native SegWit Guide",
+      "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
+      "notes": "Implementation-oriented walkthrough."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "protocol",
+    "segwit"
+  ],
+  "aliases": [
+    "segwit"
+  ]
+}

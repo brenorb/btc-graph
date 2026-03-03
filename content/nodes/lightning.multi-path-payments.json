@@ -1,0 +1,37 @@
+{
+  "id": "lightning.multi-path-payments",
+  "title": "Lightning Multi-Path Payments",
+  "description": "Splitting payments across routes to improve reliability and liquidity utilization.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.liquidity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md",
+      "notes": "Technical basis for multi-part delivery."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Multipath Payments",
+      "url": "https://bitcoinops.org/en/topics/multipath-payments/",
+      "notes": "Tradeoffs and implementation progress."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Atomic Multipath (AMP)",
+      "url": "https://bitcoinops.org/en/topics/atomic-multipath/",
+      "notes": "Design tradeoffs for atomic multi-part payment construction."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "lightning",
+    "liquidity"
+  ],
+  "aliases": [
+    "mpp"
+  ]
+}

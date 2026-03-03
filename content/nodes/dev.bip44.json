@@ -1,0 +1,38 @@
+{
+  "id": "dev.bip44",
+  "title": "BIP44 Derivation Paths",
+  "description": "Account hierarchy convention for interoperable deterministic wallet path structures.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.bip32",
+    "custody.address-types"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 44: Multi-Account Hierarchy",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki",
+      "notes": "Account-level path structure."
+    },
+    {
+      "type": "article",
+      "title": "BIP 84: Native SegWit Paths",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki",
+      "notes": "Example extension illustrating how BIP44-style hierarchy evolved for SegWit."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Native SegWit",
+      "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
+      "notes": "Applied derivation and script-type implementation."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "wallets",
+    "standards"
+  ],
+  "aliases": [
+    "bip44 paths"
+  ]
+}

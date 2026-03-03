@@ -1,0 +1,37 @@
+{
+  "id": "dev.bip32",
+  "title": "BIP32 Hierarchical Deterministic Keys",
+  "description": "Tree-based key derivation model enabling deterministic wallet structures and account separation.",
+  "category": "Development",
+  "prerequisites": [
+    "fundamentals.public-private-keys"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 32: HD Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+      "notes": "Canonical derivation scheme specification."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Implementation concepts and key management context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: HD Key Generation",
+      "url": "https://bitcoinops.org/en/topics/hd-key-generation/",
+      "notes": "Historical context and implementation nuances for HD wallet schemes."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "wallets",
+    "keys"
+  ],
+  "aliases": [
+    "hd derivation"
+  ]
+}

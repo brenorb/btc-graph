@@ -1,0 +1,37 @@
+{
+  "id": "protocol.transaction-malleability",
+  "title": "Transaction Malleability",
+  "description": "How pre-confirmation transaction mutation risk appears and why stable identifiers matter.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Key specification reference describing malleability-related improvements."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction structure and ID derivation context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Consensus implications of pre-confirmation tx mutation."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "transactions",
+    "segwit"
+  ],
+  "aliases": [
+    "tx malleability"
+  ]
+}

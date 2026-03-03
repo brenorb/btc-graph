@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.peer-to-peer-network",
+  "title": "Peer-to-Peer Network Topology",
+  "description": "How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "fundamentals.distributed-systems"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Core networking behavior and message flow."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Address Relay",
+      "url": "https://bitcoincore.academy/address-relay.html",
+      "notes": "Hands-on explanation of relay mechanics."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Wire Protocol",
+      "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
+      "notes": "Developer-focused protocol walkthrough."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "networking",
+    "p2p"
+  ],
+  "aliases": [
+    "p2p network"
+  ]
+}

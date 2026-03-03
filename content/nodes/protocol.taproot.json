@@ -1,0 +1,37 @@
+{
+  "id": "protocol.taproot",
+  "title": "Taproot",
+  "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.segregated-witness"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Cryptographic foundation of Taproot."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Consensus and transaction-level behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Taproot",
+      "url": "https://bitcoinops.org/en/topics/taproot/",
+      "notes": "Activation and practical ecosystem usage."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "taproot",
+    "schnorr"
+  ],
+  "aliases": [
+    "taproot upgrade"
+  ]
+}

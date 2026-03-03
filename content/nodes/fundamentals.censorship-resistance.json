@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.censorship-resistance",
+  "title": "Censorship Resistance",
+  "description": "Why open participation and distributed validation make transaction censorship costly and fragile.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network",
+    "protocol.nodes-vs-miners"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Decentralized relay and peer diversity context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Tor Documentation",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
+      "notes": "Practical node-level transport hardening against network-level censorship."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anonymity Networks",
+      "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+      "notes": "Network-layer privacy techniques that improve censorship resistance."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "network",
+    "resilience"
+  ],
+  "aliases": [
+    "resistance to censorship"
+  ]
+}

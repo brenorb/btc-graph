@@ -1,0 +1,38 @@
+{
+  "id": "protocol.coinbase-transaction",
+  "title": "Coinbase Transaction",
+  "description": "Special first transaction in each block that collects subsidy and transaction fees.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.block-structure",
+    "protocol.halving"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Coinbase construction and miner incentives."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Special rules for coinbase transactions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Validation and subsidy schedule context."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "mining",
+    "issuance"
+  ],
+  "aliases": [
+    "coinbase tx"
+  ]
+}

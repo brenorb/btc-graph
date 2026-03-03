@@ -1,0 +1,38 @@
+{
+  "id": "lightning.splicing",
+  "title": "Lightning Channel Splicing",
+  "description": "Updating channel capacity without fully closing channels by combining on-chain and off-chain state changes.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "protocol.rbf"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Splicing",
+      "url": "https://bitcoinops.org/en/topics/splicing/",
+      "notes": "State of implementations and protocol design choices."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 02: Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "Channel lifecycle primitives used by splicing designs."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 03: Transaction and Channel States",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+      "notes": "Funding and commitment transaction transitions relevant to splicing."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "lightning",
+    "channels"
+  ],
+  "aliases": [
+    "channel splicing"
+  ]
+}
