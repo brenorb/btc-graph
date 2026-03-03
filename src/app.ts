@@ -27,22 +27,35 @@ import type {
 cytoscape.use(dagre);
 
 const CATEGORY_PALETTE = [
-  "#1f77b4",
-  "#ff7f0e",
-  "#2ca02c",
-  "#d62728",
-  "#9467bd",
-  "#8c564b",
-  "#e377c2",
-  "#17becf",
-  "#bcbd22",
-  "#7f7f7f",
+  "#2886c4",
+  "#7562d8",
+  "#2fae70",
+  "#d96cb3",
+  "#a39b28",
+  "#8e6148",
+  "#3887d1",
+  "#5b9a3a",
+  "#9f6ac8",
+  "#d17a2b",
 ];
 
 const PROGRESS_LABELS: Record<ProgressState, string> = {
   need_to_learn: "Need to learn",
   learning: "Learning",
   know_it: "Know it",
+};
+
+const CATEGORY_TONE_MAP: Record<string, string> = {
+  "Bitcoin Protocol": "#7562d8",
+  Development: "#8e6148",
+  Economics: "#a79a1f",
+  Fundamentals: "#2886c4",
+  "Governance & History": "#8f9524",
+  Lightning: "#2fae70",
+  Mining: "#2a7fbe",
+  "Node Operations": "#2e9a58",
+  Privacy: "#9668c9",
+  "Self-Custody": "#d96cb3",
 };
 
 interface AppState {
@@ -64,6 +77,11 @@ function buildIssueUrl(title: string, body: string) {
 function getCategoryColor(category: string, map: Map<string, string>) {
   if (map.has(category)) {
     return map.get(category)!;
+  }
+
+  if (CATEGORY_TONE_MAP[category]) {
+    map.set(category, CATEGORY_TONE_MAP[category]);
+    return CATEGORY_TONE_MAP[category];
   }
 
   const hash = [...category].reduce((acc, char) => acc + char.charCodeAt(0), 0);
@@ -142,7 +160,10 @@ function createLayout(root: HTMLElement) {
           </div>
         </div>
         <div class="controls legend" id="legend"></div>
-        <div id="graph"></div>
+        <div class="graph-stage">
+          <div class="graph-hint">Tip: zoom in for dense labels, click any node to focus its immediate prerequisites and unlocks.</div>
+          <div id="graph"></div>
+        </div>
       </section>
 
       <aside class="detail-panel" id="detail-panel">
@@ -386,6 +407,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
       setProgress(state, node.id, next);
       renderDetails(state, root);
       syncNodeClasses(state);
+      syncFocusClasses(state);
       syncOverviewStats(state, root, getStrictVisibleNodeCount(state));
     });
   });
@@ -393,7 +415,9 @@ function renderDetails(state: AppState, root: HTMLElement) {
 
 function syncNodeClasses(state: AppState) {
   for (const node of state.cy.nodes()) {
-    node.removeClass("state-need_to_learn state-learning state-know_it contextual");
+    node.removeClass(
+      "state-need_to_learn state-learning state-know_it contextual focus neighbor",
+    );
 
     const id = node.id();
     const progress = state.progress[id]?.state ?? "need_to_learn";
@@ -404,13 +428,43 @@ function syncNodeClasses(state: AppState) {
   }
 }
 
+function syncFocusClasses(state: AppState) {
+  state.cy.edges().removeClass("focus-edge");
+
+  if (!state.selectedId) {
+    return;
+  }
+
+  const selected = state.cy.getElementById(state.selectedId);
+  if (selected.empty()) {
+    return;
+  }
+
+  selected.addClass("focus");
+  selected.neighborhood("node").addClass("neighbor");
+  selected.connectedEdges().addClass("focus-edge");
+}
+
 function refreshLabels(state: AppState) {
   const zoom = state.cy.zoom();
-  const showAll = zoom >= 1.15;
+  const showAll = zoom >= 1.05;
+  const focusIds = new Set<string>();
+
+  if (state.selectedId) {
+    const selected = state.cy.getElementById(state.selectedId);
+    if (selected.nonempty()) {
+      focusIds.add(selected.id());
+      selected.connectedEdges().forEach((edge) => {
+        focusIds.add(edge.source().id());
+        focusIds.add(edge.target().id());
+      });
+    }
+  }
+
   for (const node of state.cy.nodes()) {
     const title = node.data("title");
     const isHovered = Boolean(node.data("hovered"));
-    node.data("label", showAll || isHovered ? title : "");
+    node.data("label", showAll || isHovered || focusIds.has(node.id()) ? title : "");
   }
 }
 
@@ -447,6 +501,8 @@ function renderSearch(state: AppState, root: HTMLElement) {
           duration: 280,
         });
       }
+      syncNodeClasses(state);
+      syncFocusClasses(state);
       renderDetails(state, root);
       refreshLabels(state);
       list.classList.remove("open");
@@ -522,6 +578,7 @@ function wireExportImport(state: AppState, root: HTMLElement) {
         saveProgressState(state.storage, state.progress);
         renderDetails(state, root);
         syncNodeClasses(state);
+        syncFocusClasses(state);
         syncOverviewStats(state, root, getStrictVisibleNodeCount(state));
       } catch {
         window.alert("Invalid progress file.");
@@ -560,12 +617,14 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   state.cy.layout({
     name: "dagre",
     rankDir: "BT",
-    nodeSep: 34,
-    rankSep: 48,
+    nodeSep: 48,
+    rankSep: 72,
     edgeSep: 12,
     animate: false,
   }).run();
 
+  state.cy.fit(state.cy.nodes(), 60);
+  syncFocusClasses(state);
   refreshLabels(state);
   syncOverviewStats(state, root, elements.strictVisibleIds.size);
   renderLegend(state, root, () => rerenderGraph(state, root));
@@ -577,6 +636,8 @@ function wireInteractions(state: AppState, root: HTMLElement) {
   state.cy.on("tap", "node", (event) => {
     const id = event.target.id();
     state.selectedId = id;
+    syncNodeClasses(state);
+    syncFocusClasses(state);
     renderDetails(state, root);
     refreshLabels(state);
     syncUrlState(state);
@@ -624,34 +685,40 @@ function createGraph(container: HTMLElement) {
   return cytoscape({
     container,
     wheelSensitivity: 0.18,
+    minZoom: 0.35,
+    maxZoom: 2.6,
     style: [
       {
         selector: "node",
         style: {
-          width: 30,
-          height: 30,
+          width: 34,
+          height: 34,
           shape: "ellipse",
           label: "data(label)",
-          "font-size": 9,
+          "font-size": 8.5,
+          "font-family": "Azeret Mono",
           "text-wrap": "wrap",
-          "text-max-width": 150,
+          "text-max-width": 170,
           "text-valign": "top",
-          "text-margin-y": -10,
+          "text-margin-y": -11,
           "background-color": "data(color)",
           color: "#0f172a",
           "border-width": 1.4,
           "border-color": "#f8fafc",
+          "text-outline-width": 1.8,
+          "text-outline-color": "#f8fafc",
+          "text-outline-opacity": 0.86,
         },
       },
       {
         selector: "edge",
         style: {
-          width: 1.4,
+          width: 1.2,
           "line-color": "#94a3b8",
           "target-arrow-shape": "triangle",
           "target-arrow-color": "#94a3b8",
           "curve-style": "bezier",
-          opacity: 0.8,
+          opacity: 0.65,
         },
       },
       {
@@ -689,6 +756,32 @@ function createGraph(container: HTMLElement) {
         style: {
           "border-width": 4,
           "border-color": "#f97316",
+        },
+      },
+      {
+        selector: ".focus",
+        style: {
+          "border-width": 5,
+          "border-color": "#f97316",
+          "z-index": 999,
+          opacity: 1,
+        },
+      },
+      {
+        selector: ".neighbor",
+        style: {
+          "border-width": 3.5,
+          "border-color": "#22c55e",
+          opacity: 1,
+        },
+      },
+      {
+        selector: ".focus-edge",
+        style: {
+          width: 2.2,
+          opacity: 0.95,
+          "line-color": "#f97316",
+          "target-arrow-color": "#f97316",
         },
       },
     ],
