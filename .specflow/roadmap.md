@@ -55,3 +55,16 @@ Deliverables:
 Exit criteria:
 - Live URL works.
 - CI green on `master`.
+
+## Phase 5: Deep Content Expansion (Post-Launch)
+Goal: expand node coverage from the source corpus with stricter prerequisite quality and curated primary references.
+
+Deliverables:
+- Additional source-driven node set across protocol, lightning, mining, node operations, privacy, custody, economics, and history.
+- Phase-specific content tests for required IDs and quality constraints.
+- No-context review loop and fix pass documented in `.specflow/phases/phase-5/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
