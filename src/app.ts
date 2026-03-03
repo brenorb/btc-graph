@@ -97,27 +97,49 @@ function createLayout(root: HTMLElement) {
     <div class="layout">
       <header class="header">
         <div class="brand">
-          <div class="brand-title">Bitcoin Learning Graph</div>
-          <div class="brand-subtitle">Map your understanding, expose gaps, keep moving.</div>
+          <div class="brand-kicker">Proof of Learning</div>
+          <h1 class="brand-title">Bitcoin Knowledge Atlas</h1>
+          <p class="brand-subtitle">Map prerequisites, surface gaps, and build Bitcoin understanding with intent.</p>
+          <div class="brand-pill-row">
+            <div class="brand-pill"><span id="total-concepts">0</span> concepts</div>
+            <div class="brand-pill"><span id="total-categories">0</span> branches</div>
+          </div>
         </div>
         <div class="header-actions">
           <a class="btn" target="_blank" rel="noreferrer" id="add-concept-link">Add concept</a>
           <a class="btn" target="_blank" rel="noreferrer" id="generic-change-link">Generic change</a>
           <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
-          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">◐</button>
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme"></button>
         </div>
       </header>
 
       <section class="main-panel">
         <div class="controls">
           <div class="floating">
+            <label class="field-label" for="search-input">Find concept</label>
             <input type="search" id="search-input" placeholder="Search concepts..." autocomplete="off" />
             <div id="search-results" class="search-results" role="listbox"></div>
           </div>
-          <button class="btn" id="clear-filters">Reset filters</button>
-          <button class="btn" id="export-progress">Export progress</button>
-          <label class="btn" for="import-progress-input">Import progress</label>
-          <input id="import-progress-input" type="file" accept="application/json" hidden />
+          <div class="control-actions">
+            <button class="btn" id="clear-filters">Reset filters</button>
+            <button class="btn" id="export-progress">Export progress</button>
+            <label class="btn" for="import-progress-input">Import progress</label>
+            <input id="import-progress-input" type="file" accept="application/json" hidden />
+          </div>
+        </div>
+        <div class="overview-strip">
+          <div class="overview-item">
+            <div class="overview-label">Visible nodes</div>
+            <div class="overview-value" id="visible-nodes-count">0</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Hidden branches</div>
+            <div class="overview-value" id="hidden-categories-count">0</div>
+          </div>
+          <div class="overview-item">
+            <div class="overview-label">Mastered nodes</div>
+            <div class="overview-value" id="mastered-nodes-count">0</div>
+          </div>
         </div>
         <div class="controls legend" id="legend"></div>
         <div id="graph"></div>
@@ -168,6 +190,46 @@ function createLayout(root: HTMLElement) {
   }
 }
 
+function syncHeaderStats(state: AppState, root: HTMLElement) {
+  const totalConcepts = root.querySelector<HTMLElement>("#total-concepts");
+  const totalCategories = root.querySelector<HTMLElement>("#total-categories");
+  if (totalConcepts) {
+    totalConcepts.textContent = String(state.data.nodes.length);
+  }
+  if (totalCategories) {
+    totalCategories.textContent = String(state.categories.length);
+  }
+}
+
+function syncOverviewStats(state: AppState, root: HTMLElement, visibleNodeCount: number) {
+  const visible = root.querySelector<HTMLElement>("#visible-nodes-count");
+  const hidden = root.querySelector<HTMLElement>("#hidden-categories-count");
+  const mastered = root.querySelector<HTMLElement>("#mastered-nodes-count");
+
+  if (visible) {
+    visible.textContent = String(visibleNodeCount);
+  }
+  if (hidden) {
+    hidden.textContent = String(state.hiddenCategories.size);
+  }
+  if (mastered) {
+    mastered.textContent = String(
+      Object.values(state.progress).filter((entry) => entry.state === "know_it").length,
+    );
+  }
+}
+
+function getStrictVisibleNodeCount(state: AppState) {
+  return state.cy.nodes().filter((node) => !Boolean(node.data("contextual"))).length;
+}
+
+function setThemeButtonLabel(button: HTMLButtonElement | null, theme: string) {
+  if (!button) return;
+
+  button.textContent = theme === "dark" ? "Light" : "Dark";
+  button.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+}
+
 function getSafeStorage(): StorageLike | undefined {
   try {
     return window.localStorage;
@@ -183,9 +245,11 @@ function themeSetup(root: HTMLElement, storage: StorageLike | undefined) {
   root.dataset.theme = theme;
 
   const button = root.querySelector<HTMLButtonElement>("#theme-toggle");
+  setThemeButtonLabel(button, theme);
   button?.addEventListener("click", () => {
     const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
     root.dataset.theme = nextTheme;
+    setThemeButtonLabel(button, nextTheme);
     try {
       storage?.setItem("btc-graph-theme", nextTheme);
     } catch {
@@ -322,6 +386,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
       setProgress(state, node.id, next);
       renderDetails(state, root);
       syncNodeClasses(state);
+      syncOverviewStats(state, root, getStrictVisibleNodeCount(state));
     });
   });
 }
@@ -457,6 +522,7 @@ function wireExportImport(state: AppState, root: HTMLElement) {
         saveProgressState(state.storage, state.progress);
         renderDetails(state, root);
         syncNodeClasses(state);
+        syncOverviewStats(state, root, getStrictVisibleNodeCount(state));
       } catch {
         window.alert("Invalid progress file.");
       } finally {
@@ -501,6 +567,7 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   }).run();
 
   refreshLabels(state);
+  syncOverviewStats(state, root, elements.strictVisibleIds.size);
   renderLegend(state, root, () => rerenderGraph(state, root));
   renderDetails(state, root);
   syncUrlState(state);
@@ -561,36 +628,36 @@ function createGraph(container: HTMLElement) {
       {
         selector: "node",
         style: {
-          width: 26,
-          height: 26,
+          width: 30,
+          height: 30,
           shape: "ellipse",
           label: "data(label)",
-          "font-size": 8,
+          "font-size": 9,
           "text-wrap": "wrap",
-          "text-max-width": 140,
+          "text-max-width": 150,
           "text-valign": "top",
-          "text-margin-y": -8,
+          "text-margin-y": -10,
           "background-color": "data(color)",
-          color: "#243041",
-          "border-width": 1,
-          "border-color": "#ffffff",
+          color: "#0f172a",
+          "border-width": 1.4,
+          "border-color": "#f8fafc",
         },
       },
       {
         selector: "edge",
         style: {
-          width: 1.2,
-          "line-color": "#b4becf",
+          width: 1.4,
+          "line-color": "#94a3b8",
           "target-arrow-shape": "triangle",
-          "target-arrow-color": "#b4becf",
+          "target-arrow-color": "#94a3b8",
           "curve-style": "bezier",
-          opacity: 0.72,
+          opacity: 0.8,
         },
       },
       {
         selector: ".contextual",
         style: {
-          opacity: 0.55,
+          opacity: 0.45,
           "border-color": "#6b7280",
           "line-color": "#9ca3af",
           "target-arrow-color": "#9ca3af",
@@ -615,6 +682,13 @@ function createGraph(container: HTMLElement) {
         style: {
           "border-width": 3,
           "border-color": "#16a34a",
+        },
+      },
+      {
+        selector: ":selected",
+        style: {
+          "border-width": 4,
+          "border-color": "#f97316",
         },
       },
     ],
@@ -658,6 +732,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
   state.selectedId = fromUrl.selectedId;
   state.hiddenCategories = fromUrl.hiddenCategories;
 
+  syncHeaderStats(state, root);
   rerenderGraph(state, root);
   wireInteractions(state, root);
   wireExportImport(state, root);
