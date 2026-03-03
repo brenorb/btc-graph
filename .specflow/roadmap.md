@@ -68,3 +68,17 @@ Exit criteria:
 - `npm run build:data` passes.
 - `npm test` passes.
 - `npm run check:links` passes.
+
+## Phase 6: Source Corpus Saturation
+Goal: cover remaining high-signal gaps from the source catalog with stronger operational and wallet-internals depth.
+
+Deliverables:
+- Additional node slice across protocol sync, wallet standards, Lightning privacy/routing, mining template policy, node operations, and privacy practices.
+- Phase-specific tests requiring target IDs and enforcing source-domain and dependency quality constraints.
+- Independent no-context review plus fix pass documented in `.specflow/phases/phase-6/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.
