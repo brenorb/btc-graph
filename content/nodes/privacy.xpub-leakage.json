@@ -1,0 +1,39 @@
+{
+  "id": "privacy.xpub-leakage",
+  "title": "XPUB Leakage",
+  "description": "Privacy and security risks from sharing extended public keys with third-party services.",
+  "category": "Privacy",
+  "prerequisites": [
+    "custody.hd-wallets",
+    "privacy.address-reuse"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 32: Hierarchical Deterministic Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+      "notes": "Defines xpub/xprv derivation and exposure surface."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Wallet architecture patterns relevant to key exposure."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Private Key Management Overview",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+      "notes": "User-facing key management and account model implications."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "privacy",
+    "wallets"
+  ],
+  "aliases": [
+    "xpub privacy",
+    "extended public key leakage"
+  ]
+}

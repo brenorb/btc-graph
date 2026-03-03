@@ -1,0 +1,39 @@
+{
+  "id": "mining.51-percent-attack",
+  "title": "51% Attack Model",
+  "description": "Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.pool-vs-solo",
+    "protocol.reorgs-finality"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: P2P Attacks",
+      "url": "https://bitcoincore.academy/p2p-attacks.html",
+      "notes": "Attack surfaces and defensive assumptions around network and consensus."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Chain selection and reorganization fundamentals."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Formal limits of miner power under full-node consensus validation."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "mining",
+    "security"
+  ],
+  "aliases": [
+    "majority attack",
+    "51 percent attack"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "protocol.block-height",
+  "title": "Block Height",
+  "description": "Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 34: Block v2, Height in Coinbase",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki",
+      "notes": "Defines coinbase height commitments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Reference: Block Chain",
+      "url": "https://developer.bitcoin.org/reference/block_chain.html",
+      "notes": "Canonical block-header and chain reference fields."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "How nodes traverse height during initial sync."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "blocks",
+    "consensus"
+  ],
+  "aliases": [
+    "height",
+    "block number"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.bitcoin-layers",
+  "title": "Bitcoin Layers",
+  "description": "How the base layer, payment channels, and higher-layer protocols compose a layered system.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network",
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain Overview",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Base-layer settlement model and chain behavior."
+    },
+    {
+      "type": "article",
+      "title": "BOLTs Introduction",
+      "url": "https://github.com/lightning/bolts/blob/master/00-introduction.md",
+      "notes": "How Lightning builds on top of Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Lightning Services",
+      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
+      "notes": "User-facing view of Lightning as a higher-layer payment system."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "architecture",
+    "layers"
+  ],
+  "aliases": [
+    "layered bitcoin",
+    "layered architecture"
+  ]
+}

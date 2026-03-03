@@ -1,0 +1,39 @@
+{
+  "id": "custody.watch-only-wallets",
+  "title": "Watch-Only Wallets",
+  "description": "Wallet setups that monitor balances and addresses without holding spending keys.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.hd-wallets",
+    "custody.address-types"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Wallet Keys",
+      "url": "https://bitcoincore.academy/wallet-keys.html",
+      "notes": "Key separation concepts behind watch-only setups."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Wallet architecture and signing separation."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Recommended Wallets",
+      "url": "https://www.lopp.net/bitcoin-information/recommended-wallets.html",
+      "notes": "Practical wallet tooling references with watch-only capabilities."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "wallets",
+    "monitoring"
+  ],
+  "aliases": [
+    "watch only",
+    "observer wallet"
+  ]
+}

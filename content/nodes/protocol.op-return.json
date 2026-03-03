@@ -1,0 +1,32 @@
+{
+  "id": "protocol.op-return",
+  "title": "OP_RETURN Outputs",
+  "description": "Provably unspendable script outputs used for bounded data commitments on-chain.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Bitcoin Script 101",
+      "url": "https://bitcoindev.network/bitcoin-script-101/",
+      "notes": "Opcode context and script execution fundamentals."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions (Null Data)",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html#null-data",
+      "notes": "Policy constraints and transaction usage patterns."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "script",
+    "transactions"
+  ],
+  "aliases": [
+    "nulldata outputs",
+    "data commitments"
+  ]
+}

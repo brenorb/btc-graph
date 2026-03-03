@@ -1,0 +1,39 @@
+{
+  "id": "protocol.compact-block-relay",
+  "title": "Compact Block Relay",
+  "description": "Bandwidth-efficient block propagation using short transaction identifiers.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "dev.p2p-messages",
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 152: Compact Block Relay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki",
+      "notes": "Wire protocol specification for compact blocks."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Compact Block Relay",
+      "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
+      "notes": "Implementation and policy history with operational notes."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Block Relay",
+      "url": "https://bitcoincore.academy/block-relay.html",
+      "notes": "How relay behavior impacts propagation latency."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "p2p",
+    "relay"
+  ],
+  "aliases": [
+    "compact blocks",
+    "bip152"
+  ]
+}

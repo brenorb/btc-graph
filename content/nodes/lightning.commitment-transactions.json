@@ -1,0 +1,38 @@
+{
+  "id": "lightning.commitment-transactions",
+  "title": "Lightning Commitment Transactions",
+  "description": "Pre-signed updateable channel states that enforce current balances during unilateral close.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+      "notes": "Canonical commitment transaction structure."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 02: Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "State update protocol between channel peers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Liquidity",
+      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
+      "notes": "Practical liquidity and channel management context."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "lightning",
+    "channels"
+  ],
+  "aliases": [
+    "commitment tx"
+  ]
+}

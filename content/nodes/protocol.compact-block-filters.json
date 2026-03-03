@@ -1,0 +1,40 @@
+{
+  "id": "protocol.compact-block-filters",
+  "title": "Compact Block Filters",
+  "description": "Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "dev.p2p-messages",
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 157: Client-Side Block Filtering",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki",
+      "notes": "Protocol messages for serving compact filters."
+    },
+    {
+      "type": "article",
+      "title": "BIP 158: Compact Block Filter Format",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki",
+      "notes": "Filter encoding and matching behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Compact Block Filters",
+      "url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+      "notes": "Operational coverage and deployment context."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "light clients",
+    "p2p"
+  ],
+  "aliases": [
+    "bip157",
+    "bip158",
+    "neutrino"
+  ]
+}

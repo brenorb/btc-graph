@@ -1,0 +1,39 @@
+{
+  "id": "economics.lost-coins",
+  "title": "Lost Coins and Effective Supply",
+  "description": "How permanently inaccessible coins affect circulating supply, liquidity, and long-term scarcity.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.scarcity",
+    "custody.seed-phrases"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+      "notes": "Consensus fix preserving long-term issuance cap assumptions."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin History",
+      "url": "https://www.lopp.net/bitcoin-information/history.html",
+      "notes": "Historical incidents that led to permanently inaccessible supply."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "UTXO spendability mechanics and irrecoverability implications."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "economics",
+    "supply"
+  ],
+  "aliases": [
+    "effective supply",
+    "coin loss"
+  ]
+}

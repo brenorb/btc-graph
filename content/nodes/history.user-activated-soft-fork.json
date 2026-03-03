@@ -1,0 +1,38 @@
+{
+  "id": "history.user-activated-soft-fork",
+  "title": "User-Activated Soft Fork (UASF)",
+  "description": "How node operators coordinated policy to enforce soft-fork activation during the SegWit era.",
+  "category": "Governance & History",
+  "prerequisites": [
+    "history.block-size-war"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 148: Mandatory Activation of SegWit",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+      "notes": "Formal UASF proposal used during 2017 activation debates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Soft Fork Activation",
+      "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+      "notes": "Comparative history of activation mechanisms."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin History",
+      "url": "https://www.lopp.net/bitcoin-information/history.html",
+      "notes": "Historical timeline and primary references around governance conflicts."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "governance",
+    "activation"
+  ],
+  "aliases": [
+    "uasf",
+    "bip148"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ops.initial-block-download",
+  "title": "Initial Block Download",
+  "description": "How a new node bootstraps chainstate safely and reaches current tip.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.run-full-node",
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "Detailed sync stages and verification flow."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Tradeoffs across node operation modes during and after sync."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Full Node Resources",
+      "url": "https://www.lopp.net/bitcoin-information/full-node.html",
+      "notes": "Operational references for node deployment and maintenance."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "node",
+    "sync"
+  ],
+  "aliases": [
+    "ibd",
+    "node bootstrapping"
+  ]
+}

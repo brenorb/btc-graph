@@ -1,0 +1,38 @@
+{
+  "id": "protocol.median-time-past",
+  "title": "Median Time Past",
+  "description": "Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.block-structure",
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 113: Median Time-Past as Endpoint",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki",
+      "notes": "Defines MTP usage for locktime evaluation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Reference: Block Chain",
+      "url": "https://developer.bitcoin.org/reference/block_chain.html",
+      "notes": "Timestamp fields and consensus constraints."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Where time assumptions fit in consensus validation."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "consensus",
+    "timelocks"
+  ],
+  "aliases": [
+    "mtp"
+  ]
+}

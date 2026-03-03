@@ -1,0 +1,39 @@
+{
+  "id": "lightning.force-closures",
+  "title": "Lightning Force Closures",
+  "description": "Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.commitment-transactions",
+    "lightning.watchtowers"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 05: On-chain Handling of Channel Closures",
+      "url": "https://github.com/lightning/bolts/blob/master/05-onchain.md",
+      "notes": "Canonical close-state handling rules."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Watchtowers",
+      "url": "https://bitcoinops.org/en/topics/watchtowers/",
+      "notes": "Operational risks and monitoring strategies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Liquidity",
+      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
+      "notes": "Channel availability and closure impact in user-facing products."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "lightning",
+    "risk"
+  ],
+  "aliases": [
+    "force close",
+    "unilateral close"
+  ]
+}

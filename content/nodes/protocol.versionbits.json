@@ -1,0 +1,39 @@
+{
+  "id": "protocol.versionbits",
+  "title": "Version Bits Signaling",
+  "description": "Miner signaling mechanism for coordinated soft-fork deployment using block version fields.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.softfork-hardfork",
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 9: Version Bits with Timeout and Delay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+      "notes": "Core signaling framework for modern soft-fork activation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Soft Fork Activation",
+      "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+      "notes": "Tradeoffs across activation schemes including versionbits."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Changes",
+      "url": "https://bitcoincore.academy/consensus-changes.html",
+      "notes": "Consensus upgrade lifecycle and operational concerns."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "consensus",
+    "activation"
+  ],
+  "aliases": [
+    "bip9",
+    "version bits"
+  ]
+}

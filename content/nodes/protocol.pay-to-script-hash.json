@@ -1,0 +1,37 @@
+{
+  "id": "protocol.pay-to-script-hash",
+  "title": "Pay-to-Script-Hash (P2SH)",
+  "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 16: Pay to Script Hash",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki",
+      "notes": "Canonical P2SH consensus and policy behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Bitcoin Script 101",
+      "url": "https://bitcoindev.network/bitcoin-script-101/",
+      "notes": "Script execution model and practical examples."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction construction and standard output patterns."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "script",
+    "addresses"
+  ],
+  "aliases": [
+    "p2sh"
+  ]
+}

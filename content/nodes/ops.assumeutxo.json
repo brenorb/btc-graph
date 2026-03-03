@@ -1,0 +1,38 @@
+{
+  "id": "ops.assumeutxo",
+  "title": "AssumeUTXO",
+  "description": "Fast-start strategy using UTXO snapshots with deferred full validation for faster node usability.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.initial-block-download",
+    "ops.verify-sync"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: AssumeUTXO",
+      "url": "https://bitcoinops.org/en/topics/assumeutxo/",
+      "notes": "Design and implementation status tracking."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "Background on sync bottlenecks AssumeUTXO targets."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Node mode assumptions and trust tradeoffs."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "node",
+    "sync"
+  ],
+  "aliases": [
+    "utxo snapshots"
+  ]
+}
