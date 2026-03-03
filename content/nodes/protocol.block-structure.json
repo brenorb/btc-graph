@@ -1,0 +1,38 @@
+{
+  "id": "protocol.block-structure",
+  "title": "Block Structure",
+  "description": "Header fields, merkle root, and block composition.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "fundamentals.merkle-trees",
+    "protocol.proof-of-work"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Protocol deep dives and exercises."
+    },
+    {
+      "type": "article",
+      "title": "BIPs Repository",
+      "url": "https://github.com/bitcoin/bips",
+      "notes": "Canonical specification source for standards."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical implementation context."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "bitcoin",
+    "protocol"
+  ],
+  "aliases": [
+    "block structure"
+  ]
+}

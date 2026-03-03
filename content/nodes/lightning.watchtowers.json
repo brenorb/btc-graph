@@ -1,0 +1,37 @@
+{
+  "id": "lightning.watchtowers",
+  "title": "Watchtowers",
+  "description": "Penalty transaction protection in offline scenarios.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "protocol.reorgs-finality"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT Specifications",
+      "url": "https://github.com/lightning/bolts",
+      "notes": "Canonical Lightning protocol specifications."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical Lightning-focused developer content."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "UX and product considerations for Lightning apps."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "lightning"
+  ],
+  "aliases": [
+    "watchtowers"
+  ]
+}

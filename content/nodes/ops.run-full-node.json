@@ -1,0 +1,37 @@
+{
+  "id": "ops.run-full-node",
+  "title": "Run a Full Node",
+  "description": "Install, sync, and maintain independently verifying infrastructure.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "protocol.nodes-vs-miners"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Operational and protocol-centric lessons."
+    },
+    {
+      "type": "article",
+      "title": "Mempool Documentation",
+      "url": "https://mempool.space/docs",
+      "notes": "Operational view of mempool and blockspace."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Node behavior and protocol mechanics."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "node",
+    "operations"
+  ],
+  "aliases": [
+    "run a full node"
+  ]
+}

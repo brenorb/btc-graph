@@ -1,0 +1,36 @@
+{
+  "id": "custody.hd-wallets",
+  "title": "HD Wallets",
+  "description": "Deterministic key derivation for scalable wallet management.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.seed-phrases"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX and user safety patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Broad educational references and explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Advanced guidance and implementation notes."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "self-custody"
+  ],
+  "aliases": [
+    "hd wallets"
+  ]
+}

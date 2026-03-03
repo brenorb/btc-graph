@@ -1,0 +1,34 @@
+{
+  "id": "fundamentals.public-private-keys",
+  "title": "Public/Private Keys",
+  "description": "Asymmetric cryptography foundations for ownership proofs.",
+  "category": "Fundamentals",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible concept summaries."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "High-signal explainers and updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User-centered framing for applied learning."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "fundamentals"
+  ],
+  "aliases": [
+    "public/private keys"
+  ]
+}

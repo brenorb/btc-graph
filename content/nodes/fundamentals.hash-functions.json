@@ -1,0 +1,34 @@
+{
+  "id": "fundamentals.hash-functions",
+  "title": "Hash Functions",
+  "description": "One-way functions, preimage resistance, and collision resistance.",
+  "category": "Fundamentals",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible concept summaries."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "High-signal explainers and updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User-centered framing for applied learning."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "fundamentals"
+  ],
+  "aliases": [
+    "hash functions"
+  ]
+}

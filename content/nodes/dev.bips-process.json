@@ -1,0 +1,37 @@
+{
+  "id": "dev.bips-process",
+  "title": "BIPs Process",
+  "description": "How proposals become standards and deployment conventions.",
+  "category": "Development",
+  "prerequisites": [
+    "protocol.softfork-hardfork",
+    "history.early-bitcoin"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Developer-focused learning paths and tools."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Structured technical lessons."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Reference documentation for implementation."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "development"
+  ],
+  "aliases": [
+    "bips process"
+  ]
+}

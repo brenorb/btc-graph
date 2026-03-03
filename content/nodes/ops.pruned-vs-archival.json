@@ -1,0 +1,37 @@
+{
+  "id": "ops.pruned-vs-archival",
+  "title": "Pruned vs Archival Nodes",
+  "description": "Storage and functionality tradeoffs in node configuration.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.run-full-node"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Operational and protocol-centric lessons."
+    },
+    {
+      "type": "article",
+      "title": "Mempool Documentation",
+      "url": "https://mempool.space/docs",
+      "notes": "Operational view of mempool and blockspace."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Node behavior and protocol mechanics."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "node",
+    "operations"
+  ],
+  "aliases": [
+    "pruned vs archival nodes"
+  ]
+}

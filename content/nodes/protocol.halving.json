@@ -1,0 +1,37 @@
+{
+  "id": "protocol.halving",
+  "title": "Halving Cycle",
+  "description": "Programmed issuance reductions and long-term security implications.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.difficulty-adjustment"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Protocol deep dives and exercises."
+    },
+    {
+      "type": "article",
+      "title": "BIPs Repository",
+      "url": "https://github.com/bitcoin/bips",
+      "notes": "Canonical specification source for standards."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical implementation context."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "bitcoin",
+    "protocol"
+  ],
+  "aliases": [
+    "halving cycle"
+  ]
+}

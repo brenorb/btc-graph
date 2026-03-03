@@ -1,0 +1,37 @@
+{
+  "id": "protocol.utxo-model",
+  "title": "UTXO Model",
+  "description": "State model based on spendable outputs instead of account balances.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "fundamentals.digital-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Protocol deep dives and exercises."
+    },
+    {
+      "type": "article",
+      "title": "BIPs Repository",
+      "url": "https://github.com/bitcoin/bips",
+      "notes": "Canonical specification source for standards."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical implementation context."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "bitcoin",
+    "protocol"
+  ],
+  "aliases": [
+    "utxo model"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "fundamentals.money-properties",
+  "title": "Properties of Money",
+  "description": "Durability, portability, divisibility, recognizability, and scarcity.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "fundamentals.barter-limitations"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible concept summaries."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "High-signal explainers and updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User-centered framing for applied learning."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "fundamentals"
+  ],
+  "aliases": [
+    "properties of money"
+  ]
+}

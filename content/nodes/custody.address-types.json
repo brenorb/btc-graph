@@ -1,0 +1,36 @@
+{
+  "id": "custody.address-types",
+  "title": "Address Types",
+  "description": "Legacy, SegWit, and modern output encoding differences.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "protocol.addresses-outputs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX and user safety patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Broad educational references and explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Advanced guidance and implementation notes."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "self-custody"
+  ],
+  "aliases": [
+    "address types"
+  ]
+}

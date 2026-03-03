@@ -1,0 +1,37 @@
+{
+  "id": "protocol.difficulty-adjustment",
+  "title": "Difficulty Adjustment",
+  "description": "Automatic retargeting to stabilize block production.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.proof-of-work"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Protocol deep dives and exercises."
+    },
+    {
+      "type": "article",
+      "title": "BIPs Repository",
+      "url": "https://github.com/bitcoin/bips",
+      "notes": "Canonical specification source for standards."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical implementation context."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "bitcoin",
+    "protocol"
+  ],
+  "aliases": [
+    "difficulty adjustment"
+  ]
+}

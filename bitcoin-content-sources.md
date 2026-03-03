@@ -33,6 +33,12 @@ Purpose: central place to collect high-signal sources for building and refining 
 ## Diigo Search Keywords To Try
 - `guide`
 - `wallet`
+- `tutorial`
+- `explain`
+- `vizualisation`
+- `book`
+- `article`
+- `paper`
 - `utxo`
 - `fees`
 - `lightning`

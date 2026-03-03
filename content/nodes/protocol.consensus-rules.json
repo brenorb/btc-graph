@@ -1,0 +1,38 @@
+{
+  "id": "protocol.consensus-rules",
+  "title": "Consensus Rules",
+  "description": "Validation rules that define Bitcoin’s canonical state.",
+  "category": "Bitcoin Protocol",
+  "prerequisites": [
+    "protocol.proof-of-work",
+    "fundamentals.distributed-systems"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Protocol deep dives and exercises."
+    },
+    {
+      "type": "article",
+      "title": "BIPs Repository",
+      "url": "https://github.com/bitcoin/bips",
+      "notes": "Canonical specification source for standards."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Practical implementation context."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "bitcoin",
+    "protocol"
+  ],
+  "aliases": [
+    "consensus rules"
+  ]
+}

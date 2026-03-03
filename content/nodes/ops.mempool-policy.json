@@ -1,0 +1,38 @@
+{
+  "id": "ops.mempool-policy",
+  "title": "Mempool Policy",
+  "description": "Standardness, relay policy, and transaction propagation behavior.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.run-full-node",
+    "protocol.mempool"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Operational and protocol-centric lessons."
+    },
+    {
+      "type": "article",
+      "title": "Mempool Documentation",
+      "url": "https://mempool.space/docs",
+      "notes": "Operational view of mempool and blockspace."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Node behavior and protocol mechanics."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "node",
+    "operations"
+  ],
+  "aliases": [
+    "mempool policy"
+  ]
+}

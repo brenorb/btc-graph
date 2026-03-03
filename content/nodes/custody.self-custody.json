@@ -1,0 +1,36 @@
+{
+  "id": "custody.self-custody",
+  "title": "Self-Custody Principles",
+  "description": "Operational responsibility model and threat minimization.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.hd-wallets"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX and user safety patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Broad educational references and explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Advanced guidance and implementation notes."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "self-custody"
+  ],
+  "aliases": [
+    "self-custody principles"
+  ]
+}

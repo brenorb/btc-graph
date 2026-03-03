@@ -1,0 +1,36 @@
+{
+  "id": "privacy.kyc-tradeoffs",
+  "title": "KYC and Privacy Tradeoffs",
+  "description": "Identity linkage risks and mitigation strategies.",
+  "category": "Privacy",
+  "prerequisites": [
+    "custody.self-custody"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX and user safety patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Broad educational references and explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Advanced guidance and implementation notes."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "privacy"
+  ],
+  "aliases": [
+    "kyc and privacy tradeoffs"
+  ]
+}

@@ -1,0 +1,2458 @@
+{
+  "nodes": [
+    {
+      "id": "custody.address-types",
+      "title": "Address Types",
+      "description": "Legacy, SegWit, and modern output encoding differences.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "address types"
+      ]
+    },
+    {
+      "id": "custody.backups-recovery",
+      "title": "Backups and Recovery",
+      "description": "Recovery drills, inheritance planning, and backup hygiene.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.seed-phrases",
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "backups and recovery"
+      ]
+    },
+    {
+      "id": "custody.hardware-wallets",
+      "title": "Hardware Wallets",
+      "description": "Isolated signing environments and practical security tradeoffs.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "hardware wallets"
+      ]
+    },
+    {
+      "id": "custody.hd-wallets",
+      "title": "HD Wallets",
+      "description": "Deterministic key derivation for scalable wallet management.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.seed-phrases"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "hd wallets"
+      ]
+    },
+    {
+      "id": "custody.multisig",
+      "title": "Multisig Wallets",
+      "description": "Threshold signing policies for resilience and governance.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.self-custody",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "multisig wallets"
+      ]
+    },
+    {
+      "id": "custody.psbt",
+      "title": "PSBT Workflow",
+      "description": "Partially signed transaction flow for safer collaborative signing.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.multisig",
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "psbt workflow"
+      ]
+    },
+    {
+      "id": "custody.seed-phrases",
+      "title": "Seed Phrases",
+      "description": "Mnemonic backups and key restoration model.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "fundamentals.public-private-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "seed phrases"
+      ]
+    },
+    {
+      "id": "custody.self-custody",
+      "title": "Self-Custody Principles",
+      "description": "Operational responsibility model and threat minimization.",
+      "category": "Self-Custody",
+      "prerequisites": [
+        "custody.hd-wallets"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "self-custody"
+      ],
+      "aliases": [
+        "self-custody principles"
+      ]
+    },
+    {
+      "id": "dev.bips-process",
+      "title": "BIPs Process",
+      "description": "How proposals become standards and deployment conventions.",
+      "category": "Development",
+      "prerequisites": [
+        "protocol.softfork-hardfork",
+        "history.early-bitcoin"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "bips process"
+      ]
+    },
+    {
+      "id": "dev.bitcoin-core-rpc",
+      "title": "Bitcoin Core RPC",
+      "description": "Programmatic interaction with node functionality.",
+      "category": "Development",
+      "prerequisites": [
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "bitcoin core rpc"
+      ]
+    },
+    {
+      "id": "dev.descriptors",
+      "title": "Output Descriptors",
+      "description": "Policy expression for wallet script templates and scanning.",
+      "category": "Development",
+      "prerequisites": [
+        "custody.address-types",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "output descriptors"
+      ]
+    },
+    {
+      "id": "dev.miniscript",
+      "title": "Miniscript",
+      "description": "Safer script composition and policy analysis.",
+      "category": "Development",
+      "prerequisites": [
+        "dev.descriptors"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "miniscript"
+      ]
+    },
+    {
+      "id": "dev.testnet-regtest",
+      "title": "Testnet and Regtest",
+      "description": "Controlled experimentation environments for protocol and wallet behavior.",
+      "category": "Development",
+      "prerequisites": [
+        "dev.bitcoin-core-rpc"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "testnet and regtest"
+      ]
+    },
+    {
+      "id": "dev.wallet-development",
+      "title": "Wallet Development Basics",
+      "description": "Building safer wallet UX around signing and policy constraints.",
+      "category": "Development",
+      "prerequisites": [
+        "dev.descriptors",
+        "custody.psbt"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Developer-focused learning paths and tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Structured technical lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Reference documentation for implementation."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "development"
+      ],
+      "aliases": [
+        "wallet development basics"
+      ]
+    },
+    {
+      "id": "economics.cost-of-production",
+      "title": "Cost of Production",
+      "description": "How energy and hardware costs constrain issuance economics.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.scarcity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "economics"
+      ],
+      "aliases": [
+        "cost of production"
+      ]
+    },
+    {
+      "id": "economics.monetary-premium",
+      "title": "Monetary Premium",
+      "description": "How market participants price liquidity and store-of-value properties.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.scarcity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "economics"
+      ],
+      "aliases": [
+        "monetary premium"
+      ]
+    },
+    {
+      "id": "economics.scarcity",
+      "title": "Scarcity and Sound Money",
+      "description": "Why scarce assets can accumulate monetary premium.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.money-properties"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "economics"
+      ],
+      "aliases": [
+        "scarcity and sound money"
+      ]
+    },
+    {
+      "id": "fundamentals.barter-limitations",
+      "title": "Barter Limitations",
+      "description": "Why direct barter fails at scale and drives monetary emergence.",
+      "category": "Fundamentals",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "barter limitations"
+      ]
+    },
+    {
+      "id": "fundamentals.byzantine-generals",
+      "title": "Byzantine Generals Problem",
+      "description": "Consensus under adversarial communication assumptions.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.distributed-systems"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "byzantine generals problem"
+      ]
+    },
+    {
+      "id": "fundamentals.digital-signatures",
+      "title": "Digital Signatures",
+      "description": "Verifiable authorization without revealing private keys.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.public-private-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "digital signatures"
+      ]
+    },
+    {
+      "id": "fundamentals.distributed-systems",
+      "title": "Distributed Systems Basics",
+      "description": "Replication, fault tolerance, and coordination in decentralized networks.",
+      "category": "Fundamentals",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "distributed systems basics"
+      ]
+    },
+    {
+      "id": "fundamentals.hash-functions",
+      "title": "Hash Functions",
+      "description": "One-way functions, preimage resistance, and collision resistance.",
+      "category": "Fundamentals",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "hash functions"
+      ]
+    },
+    {
+      "id": "fundamentals.inflation",
+      "title": "Inflation Basics",
+      "description": "How monetary expansion changes purchasing power and incentives.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.money-properties"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "inflation basics"
+      ]
+    },
+    {
+      "id": "fundamentals.merkle-trees",
+      "title": "Merkle Trees",
+      "description": "Efficient integrity proofs for large sets of transactions.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "merkle trees"
+      ]
+    },
+    {
+      "id": "fundamentals.money-properties",
+      "title": "Properties of Money",
+      "description": "Durability, portability, divisibility, recognizability, and scarcity.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.barter-limitations"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "properties of money"
+      ]
+    },
+    {
+      "id": "fundamentals.public-private-keys",
+      "title": "Public/Private Keys",
+      "description": "Asymmetric cryptography foundations for ownership proofs.",
+      "category": "Fundamentals",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "public/private keys"
+      ]
+    },
+    {
+      "id": "fundamentals.time-preference",
+      "title": "Time Preference",
+      "description": "How short-term vs long-term thinking affects savings behavior.",
+      "category": "Fundamentals",
+      "prerequisites": [
+        "fundamentals.money-properties"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "fundamentals"
+      ],
+      "aliases": [
+        "time preference"
+      ]
+    },
+    {
+      "id": "history.cypherpunks",
+      "title": "Cypherpunk Movement",
+      "description": "Origins of privacy-preserving digital cash ideas.",
+      "category": "Governance & History",
+      "prerequisites": [
+        "fundamentals.public-private-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "governance",
+        "history"
+      ],
+      "aliases": [
+        "cypherpunk movement"
+      ]
+    },
+    {
+      "id": "history.double-spend-problem",
+      "title": "Double-Spend Problem",
+      "description": "Why digital scarcity is hard and what constraints must be solved.",
+      "category": "Governance & History",
+      "prerequisites": [
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "governance",
+        "history"
+      ],
+      "aliases": [
+        "double-spend problem"
+      ]
+    },
+    {
+      "id": "history.early-bitcoin",
+      "title": "Early Bitcoin History",
+      "description": "From launch to early adoption cycles and network maturation.",
+      "category": "Governance & History",
+      "prerequisites": [
+        "history.genesis-block"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "governance",
+        "history"
+      ],
+      "aliases": [
+        "early bitcoin history"
+      ]
+    },
+    {
+      "id": "history.genesis-block",
+      "title": "Genesis Block",
+      "description": "Bitcoin’s launch context and embedded design signals.",
+      "category": "Governance & History",
+      "prerequisites": [
+        "history.cypherpunks"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible concept summaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "High-signal explainers and updates."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User-centered framing for applied learning."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "governance",
+        "history"
+      ],
+      "aliases": [
+        "genesis block"
+      ]
+    },
+    {
+      "id": "lightning.channel-backups",
+      "title": "Channel Backups",
+      "description": "Static channel backups and operational recovery steps.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.payment-channels",
+        "custody.backups-recovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "channel backups"
+      ]
+    },
+    {
+      "id": "lightning.htlc",
+      "title": "HTLCs",
+      "description": "Conditional forwarding using hashlocks and timelocks.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.payment-channels",
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "htlcs"
+      ]
+    },
+    {
+      "id": "lightning.invoices",
+      "title": "Invoices and Payment Requests",
+      "description": "BOLT11 request format and payment execution flow.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.routing"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "invoices and payment requests"
+      ]
+    },
+    {
+      "id": "lightning.liquidity",
+      "title": "Liquidity Management",
+      "description": "Inbound/outbound capacity and channel balance operations.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.routing",
+        "protocol.fee-market"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "liquidity management"
+      ]
+    },
+    {
+      "id": "lightning.payment-channels",
+      "title": "Payment Channels",
+      "description": "Off-chain bilateral channels secured by on-chain contracts.",
+      "category": "Lightning",
+      "prerequisites": [
+        "protocol.transaction-lifecycle",
+        "custody.multisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "payment channels"
+      ]
+    },
+    {
+      "id": "lightning.routing",
+      "title": "Lightning Routing",
+      "description": "Path finding, forwarding, and reliability constraints.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.htlc"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "lightning routing"
+      ]
+    },
+    {
+      "id": "lightning.watchtowers",
+      "title": "Watchtowers",
+      "description": "Penalty transaction protection in offline scenarios.",
+      "category": "Lightning",
+      "prerequisites": [
+        "lightning.payment-channels",
+        "protocol.reorgs-finality"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BOLT Specifications",
+          "url": "https://github.com/lightning/bolts",
+          "notes": "Canonical Lightning protocol specifications."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical Lightning-focused developer content."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "UX and product considerations for Lightning apps."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "lightning"
+      ],
+      "aliases": [
+        "watchtowers"
+      ]
+    },
+    {
+      "id": "mining.mining-economics",
+      "title": "Mining Economics",
+      "description": "Revenue, opex, capex, and fee dependence over time.",
+      "category": "Mining",
+      "prerequisites": [
+        "protocol.fee-market",
+        "protocol.halving",
+        "mining.mining-hardware"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "mining"
+      ],
+      "aliases": [
+        "mining economics"
+      ]
+    },
+    {
+      "id": "mining.mining-hardware",
+      "title": "Mining Hardware",
+      "description": "ASIC design constraints and practical deployment considerations.",
+      "category": "Mining",
+      "prerequisites": [
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "mining"
+      ],
+      "aliases": [
+        "mining hardware"
+      ]
+    },
+    {
+      "id": "mining.pool-vs-solo",
+      "title": "Pool vs Solo Mining",
+      "description": "Variance, payout models, and operational tradeoffs.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.mining-hardware",
+        "protocol.difficulty-adjustment"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "mining"
+      ],
+      "aliases": [
+        "pool vs solo mining"
+      ]
+    },
+    {
+      "id": "mining.stratum",
+      "title": "Stratum Basics",
+      "description": "Mining communication protocol concepts and architecture.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.pool-vs-solo"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "mining"
+      ],
+      "aliases": [
+        "stratum basics"
+      ]
+    },
+    {
+      "id": "ops.electrum-server",
+      "title": "Electrum Server",
+      "description": "Serving wallet queries from your own verified node stack.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "electrum server"
+      ]
+    },
+    {
+      "id": "ops.mempool-policy",
+      "title": "Mempool Policy",
+      "description": "Standardness, relay policy, and transaction propagation behavior.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.run-full-node",
+        "protocol.mempool"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "mempool policy"
+      ]
+    },
+    {
+      "id": "ops.node-hardware",
+      "title": "Node Hardware Sizing",
+      "description": "CPU, RAM, disk, and network requirements by workload.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "node hardware sizing"
+      ]
+    },
+    {
+      "id": "ops.pruned-vs-archival",
+      "title": "Pruned vs Archival Nodes",
+      "description": "Storage and functionality tradeoffs in node configuration.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "pruned vs archival nodes"
+      ]
+    },
+    {
+      "id": "ops.run-full-node",
+      "title": "Run a Full Node",
+      "description": "Install, sync, and maintain independently verifying infrastructure.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "protocol.nodes-vs-miners"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "run a full node"
+      ]
+    },
+    {
+      "id": "ops.verify-sync",
+      "title": "Verify Node Sync",
+      "description": "Validation checkpoints and trust-minimized sync checks.",
+      "category": "Node Operations",
+      "prerequisites": [
+        "ops.run-full-node",
+        "protocol.reorgs-finality"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Operational and protocol-centric lessons."
+        },
+        {
+          "type": "article",
+          "title": "Mempool Documentation",
+          "url": "https://mempool.space/docs",
+          "notes": "Operational view of mempool and blockspace."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide",
+          "url": "https://developer.bitcoin.org/devguide/",
+          "notes": "Node behavior and protocol mechanics."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "node",
+        "operations"
+      ],
+      "aliases": [
+        "verify node sync"
+      ]
+    },
+    {
+      "id": "privacy.address-reuse",
+      "title": "Address Reuse",
+      "description": "How reuse harms financial privacy and graph analysis resistance.",
+      "category": "Privacy",
+      "prerequisites": [
+        "custody.address-types"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "privacy"
+      ],
+      "aliases": [
+        "address reuse"
+      ]
+    },
+    {
+      "id": "privacy.coin-control",
+      "title": "Coin Control",
+      "description": "Manual UTXO selection to optimize privacy and fee outcomes.",
+      "category": "Privacy",
+      "prerequisites": [
+        "protocol.utxo-model",
+        "protocol.fee-market"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "privacy"
+      ],
+      "aliases": [
+        "coin control"
+      ]
+    },
+    {
+      "id": "privacy.coinjoin-basics",
+      "title": "CoinJoin Basics",
+      "description": "Collaborative transaction construction to reduce heuristics.",
+      "category": "Privacy",
+      "prerequisites": [
+        "privacy.coin-control",
+        "privacy.address-reuse"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "privacy"
+      ],
+      "aliases": [
+        "coinjoin basics"
+      ]
+    },
+    {
+      "id": "privacy.kyc-tradeoffs",
+      "title": "KYC and Privacy Tradeoffs",
+      "description": "Identity linkage risks and mitigation strategies.",
+      "category": "Privacy",
+      "prerequisites": [
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "privacy"
+      ],
+      "aliases": [
+        "kyc and privacy tradeoffs"
+      ]
+    },
+    {
+      "id": "privacy.network-privacy",
+      "title": "Network Privacy (Tor)",
+      "description": "Reducing IP-level linkage when interacting with Bitcoin nodes.",
+      "category": "Privacy",
+      "prerequisites": [
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX and user safety patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Broad educational references and explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Advanced guidance and implementation notes."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "privacy"
+      ],
+      "aliases": [
+        "network privacy (tor)"
+      ]
+    },
+    {
+      "id": "protocol.addresses-outputs",
+      "title": "Addresses and Outputs",
+      "description": "Address formats, script templates, and spendability.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "addresses and outputs"
+      ]
+    },
+    {
+      "id": "protocol.block-structure",
+      "title": "Block Structure",
+      "description": "Header fields, merkle root, and block composition.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "fundamentals.merkle-trees",
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "block structure"
+      ]
+    },
+    {
+      "id": "protocol.consensus-rules",
+      "title": "Consensus Rules",
+      "description": "Validation rules that define Bitcoin’s canonical state.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.proof-of-work",
+        "fundamentals.distributed-systems"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "consensus rules"
+      ]
+    },
+    {
+      "id": "protocol.difficulty-adjustment",
+      "title": "Difficulty Adjustment",
+      "description": "Automatic retargeting to stabilize block production.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "difficulty adjustment"
+      ]
+    },
+    {
+      "id": "protocol.fee-market",
+      "title": "Fee Market",
+      "description": "Blockspace auction dynamics and confirmation priority.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.mempool"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "fee market"
+      ]
+    },
+    {
+      "id": "protocol.halving",
+      "title": "Halving Cycle",
+      "description": "Programmed issuance reductions and long-term security implications.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.difficulty-adjustment"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "halving cycle"
+      ]
+    },
+    {
+      "id": "protocol.mempool",
+      "title": "Mempool",
+      "description": "Unconfirmed transaction relay and node policy behavior.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "mempool"
+      ]
+    },
+    {
+      "id": "protocol.nodes-vs-miners",
+      "title": "Nodes vs Miners",
+      "description": "Different responsibilities and power boundaries in the network.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.consensus-rules",
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "nodes vs miners"
+      ]
+    },
+    {
+      "id": "protocol.proof-of-work",
+      "title": "Proof of Work",
+      "description": "Energy-based sybil resistance and chain security.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "fundamentals.hash-functions",
+        "fundamentals.byzantine-generals",
+        "history.double-spend-problem"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "proof of work"
+      ]
+    },
+    {
+      "id": "protocol.reorgs-finality",
+      "title": "Reorgs and Finality",
+      "description": "Probabilistic finality and chain reorganization behavior.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.block-structure",
+        "protocol.consensus-rules"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "reorgs and finality"
+      ]
+    },
+    {
+      "id": "protocol.script-basics",
+      "title": "Bitcoin Script Basics",
+      "description": "Locking and unlocking conditions for UTXO spending.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.utxo-model",
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "bitcoin script basics"
+      ]
+    },
+    {
+      "id": "protocol.softfork-hardfork",
+      "title": "Soft Forks vs Hard Forks",
+      "description": "Compatibility tradeoffs in protocol upgrades.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.consensus-rules"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "soft forks vs hard forks"
+      ]
+    },
+    {
+      "id": "protocol.transaction-lifecycle",
+      "title": "Transaction Lifecycle",
+      "description": "From creation and propagation to confirmation and settlement.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "protocol.utxo-model",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "transaction lifecycle"
+      ]
+    },
+    {
+      "id": "protocol.utxo-model",
+      "title": "UTXO Model",
+      "description": "State model based on spendable outputs instead of account balances.",
+      "category": "Bitcoin Protocol",
+      "prerequisites": [
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy",
+          "url": "https://bitcoincore.academy/",
+          "notes": "Protocol deep dives and exercises."
+        },
+        {
+          "type": "article",
+          "title": "BIPs Repository",
+          "url": "https://github.com/bitcoin/bips",
+          "notes": "Canonical specification source for standards."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network",
+          "url": "https://bitcoindev.network/",
+          "notes": "Practical implementation context."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "bitcoin",
+        "protocol"
+      ],
+      "aliases": [
+        "utxo model"
+      ]
+    }
+  ]
+}

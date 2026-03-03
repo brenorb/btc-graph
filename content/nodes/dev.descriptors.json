@@ -1,0 +1,37 @@
+{
+  "id": "dev.descriptors",
+  "title": "Output Descriptors",
+  "description": "Policy expression for wallet script templates and scanning.",
+  "category": "Development",
+  "prerequisites": [
+    "custody.address-types",
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network",
+      "url": "https://bitcoindev.network/",
+      "notes": "Developer-focused learning paths and tools."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Structured technical lessons."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Reference documentation for implementation."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "development"
+  ],
+  "aliases": [
+    "output descriptors"
+  ]
+}

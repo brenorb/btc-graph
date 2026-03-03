@@ -1,0 +1,36 @@
+{
+  "id": "fundamentals.time-preference",
+  "title": "Time Preference",
+  "description": "How short-term vs long-term thinking affects savings behavior.",
+  "category": "Fundamentals",
+  "prerequisites": [
+    "fundamentals.money-properties"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible concept summaries."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "High-signal explainers and updates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User-centered framing for applied learning."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "fundamentals"
+  ],
+  "aliases": [
+    "time preference"
+  ]
+}

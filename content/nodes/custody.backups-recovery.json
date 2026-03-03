@@ -1,0 +1,37 @@
+{
+  "id": "custody.backups-recovery",
+  "title": "Backups and Recovery",
+  "description": "Recovery drills, inheritance planning, and backup hygiene.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.seed-phrases",
+    "custody.self-custody"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX and user safety patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Broad educational references and explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Advanced guidance and implementation notes."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "self-custody"
+  ],
+  "aliases": [
+    "backups and recovery"
+  ]
+}

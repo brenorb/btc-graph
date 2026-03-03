@@ -1,0 +1,38 @@
+{
+  "id": "ops.verify-sync",
+  "title": "Verify Node Sync",
+  "description": "Validation checkpoints and trust-minimized sync checks.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.run-full-node",
+    "protocol.reorgs-finality"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy",
+      "url": "https://bitcoincore.academy/",
+      "notes": "Operational and protocol-centric lessons."
+    },
+    {
+      "type": "article",
+      "title": "Mempool Documentation",
+      "url": "https://mempool.space/docs",
+      "notes": "Operational view of mempool and blockspace."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "notes": "Node behavior and protocol mechanics."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "node",
+    "operations"
+  ],
+  "aliases": [
+    "verify node sync"
+  ]
+}
