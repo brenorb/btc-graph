@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build:data": "node scripts/build-graph.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "build": "npm run build:data && vite build",
     "preview": "vite preview",
     "test": "vitest run",

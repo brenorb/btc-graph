@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project spec
+    url: https://github.com/brenorb/btc-graph/blob/master/spec.md
+    about: Read current product and content decisions before opening an issue.
