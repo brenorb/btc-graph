@@ -96,3 +96,34 @@ Exit criteria:
 - `npm test` passes.
 - `npm run check:links` passes.
 - `npm run build` passes.
+
+## Phase 8: UI/UX Corrections
+Goal: resolve post-launch UI interaction regressions and polish usability across desktop/mobile.
+
+Deliverables:
+- Label visibility controls (`Show all labels` / `Hide all labels`).
+- Zoom-independent label visibility behavior.
+- Progress-state toggle-off behavior for active explicit state.
+- Dark mode fix and control alignment polish.
+- Footer with social/project links.
+- Independent no-context review and closeout docs in `.specflow/phases/phase-8/`.
+
+Exit criteria:
+- `npm test` passes.
+- `npm run build:data` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.
+
+## Phase 9: Advanced Policy/Ops Content Expansion
+Goal: add another comprehensive source-driven node slice focused on protocol policy, developer RPCs, Lightning channel internals, operations hardening, and economics/history.
+
+Deliverables:
+- 22 additional curated nodes across protocol/dev/lightning/mining/ops/privacy/custody/economics/history.
+- Phase-specific tests for required IDs, prerequisite quality, and source-domain curation.
+- Independent no-context review and closeout docs in `.specflow/phases/phase-9/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.

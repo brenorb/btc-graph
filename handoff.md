@@ -1,14 +1,14 @@
 # Session Handoff (2026-03-03)
 
 ## Repository
-- Path: `/Users/breno/Documents/code/PROJECTS/btc-graph`
+- Path: `/Users/breno/Documents/code/PROJECTS/btc-graph-phase8`
 - Remote: `https://github.com/brenorb/btc-graph`
-- Branch: `codex/specflow-phase7-comprehensive`
+- Branch: `codex/phase8-ui-ux-and-content`
 
-## Latest Committed + Pushed State
-- Latest local commit: `b98bf6d`
-- Message: `feat(phase7): add comprehensive source-driven nodes with quality tests`
-- Remote baseline: `origin/master` at `0571c4e`
+## Latest Local State
+- Latest commit: `d3eb63c`
+- Message: `feat(phase8): fix ui interactions, theming, and layout polish`
+- Working tree: includes uncommitted Phase 9 content expansion (22 node files + tests + generated graph + docs)
 
 ## Phase Status
 - Phase 1: complete
@@ -17,72 +17,46 @@
 - Phase 4: complete
 - Phase 5: complete
 - Phase 6: complete
-- Phase 7: complete (local branch)
+- Phase 7: complete
+- Phase 8: complete (committed)
+- Phase 9: complete (implemented and validated locally; pending commit/push)
 
-## Phase 5 Summary
-- Added 18 new nodes sourced from the corpus in `bitcoin-content-sources.md`.
-- Graph size increased from `97` to `115` nodes.
-- Added phase-specific content quality tests:
-  - `tests/phase-5-content.test.ts`
-- New node areas:
-  - fundamentals layers
-  - UASF history
-  - protocol relay/activation primitives
-  - lightning commitment/closure mechanics
-  - mining attack model
-  - node bootstrapping + AssumeUTXO
-  - xpub privacy risks
-  - watch-only custody
-  - lost-coins economics
+## Phase 8 Summary
+- Added label visibility controls (`Show all labels`, `Hide all labels`)
+- Removed zoom-threshold label logic (labels controlled explicitly)
+- Added progress-state toggle-off behavior for explicit node state
+- Fixed dark mode application by writing theme to `document.documentElement`
+- Polished button alignment/centering and added footer with social/project links
+- Updated dependency wording to post-requisites in issue template/details
+- Added phase-8 artifacts:
+  - `.specflow/phases/phase-8/plan.md`
+  - `.specflow/phases/phase-8/plan-2.md`
+  - `.specflow/phases/phase-8/review-no-context.md`
+  - `.specflow/phases/phase-8/visual-verification.md`
 
-## Phase 6 Summary (Current)
-- Added 20 additional source-driven nodes from the same corpus and canonical references.
-- Graph size increased from `115` to `135` nodes.
-- Added phase-6 quality tests:
-  - `tests/phase-6-content.test.ts`
-- Added phase-6 planning/research/review artifacts:
-  - `.specflow/phases/phase-6/plan.md`
-  - `.specflow/phases/phase-6/plan-2.md`
-  - `.specflow/phases/phase-6/source-research.md`
-  - `.specflow/phases/phase-6/review-no-context.md`
-- New node areas:
-  - headers-first sync, assumevalid, BIP37, witness commitment
-  - PSBT v2 and output script descriptors
-  - route blinding, trampoline routing, channel jamming
-  - mining template selection and stale blocks
-  - peer discovery, txindex, compact-relay vs filters
-  - change detection, consolidation tradeoffs
-  - air-gapped signing, output labeling
-  - miner revenue composition and SegWit activation history
+## Phase 9 Summary
+- Added 22 new source-driven nodes across protocol/dev/lightning/mining/ops/privacy/custody/economics/history
+- Graph size increased from `157` to `179` nodes
+- Added phase-9 quality tests:
+  - `tests/phase-9-content.test.ts`
+- Added phase-9 planning/research/review artifacts:
+  - `.specflow/phases/phase-9/plan.md`
+  - `.specflow/phases/phase-9/plan-2.md`
+  - `.specflow/phases/phase-9/source-research.md`
+  - `.specflow/phases/phase-9/review-no-context.md`
 
-## Phase 7 Summary (Current)
-- Added 22 additional source-driven nodes from the same corpus and canonical references.
-- Graph size increased from `135` to `157` nodes.
-- Added phase-7 quality tests:
-  - `tests/phase-7-content.test.ts`
-- Added phase-7 planning/research/review artifacts:
-  - `.specflow/phases/phase-7/plan.md`
-  - `.specflow/phases/phase-7/plan-2.md`
-  - `.specflow/phases/phase-7/source-research.md`
-  - `.specflow/phases/phase-7/review-no-context.md`
-- New node areas:
-  - relay internals (`addrv2`, inv/getdata, package relay, SIGHASH semantics)
-  - dev workflows (descriptor imports, HWI + PSBT flow, fee-estimation RPC)
-  - Lightning operations (gossip protocol, probing attacks, fee policies)
-  - mining strategy (fee sniping, template construction)
-  - node hardening (DNS seeds, ASMAP)
-  - privacy heuristics (script fingerprinting, amount correlation)
-  - custody operations (BSMS coordination, XOR seed shard tradeoffs)
-  - economics/history (fee-pressure cycles, batching economics, Taproot activation, GPU-to-ASIC era)
-
-## Operational Checks (Latest)
-- `npm test` passes (`45` tests)
-- `npm run build:data` passes (`157` nodes built)
-- `npm run check:links` passes (`129` unique URLs, all reachable)
+## Operational Checks (Latest Main Session)
+- `npm test` passes (`57` tests)
+- `npm run build:data` passes (`179` nodes built)
+- `npm run check:links` passes (`135` unique URLs, all reachable)
 - `npm run build` passes
 
+## Note On No-Context Reviewer Link Checks
+- No-context reviewer sessions reported environment-level `fetch failed` errors on link checks.
+- Re-runs in the main writable session passed.
+
 ## Launch State
-- CI workflow: green (`CI`, run `22638665193`)
-- Pages workflow: green (`Deploy Pages`, run `22638665190`)
-- Live URL: `https://brenorb.com/btc-graph/`
-- Redirect URL: `https://brenorb.github.io/btc-graph/`
+- Current public URL remains:
+  - `https://brenorb.com/btc-graph/`
+  - `https://brenorb.github.io/btc-graph/`
+- Updated Phase 8/9 work is not live yet until pushed/merged/deployed.

@@ -26,7 +26,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - top-level branches will be defined later from source material and kept flexible for community evolution
 - Node behavior:
   - graph view shows concept names
-  - node labels are shown when zoomed in, or on mouse hover
+  - node labels are shown by default and can be toggled with explicit `Show all labels` / `Hide all labels` controls
   - click a node to open details in a right sidebar
   - details include a curated set of resources:
     - links/articles
@@ -67,6 +67,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - orientation is opposite of usual maps: fundamentals lower, advanced/specialized higher
 - Learner state:
   - mark node as `Need to learn`, `Learning`, or `Know it`
+  - clicking the currently active explicit state toggles it off (returns to no explicit state)
   - derive gaps from unmet prerequisites
   - persist state locally (`localStorage`)
   - include low-prominence `Export progress` and `Import progress` actions (not a primary CTA)
