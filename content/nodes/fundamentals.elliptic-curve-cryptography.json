@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.elliptic-curve-cryptography",
+  "title": "Elliptic Curve Cryptography",
+  "description": "Elliptic curve cryptography maps finite-field arithmetic into group operations used for Bitcoin keys and signatures. It is the practical cryptographic system behind secp256k1.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.finite-fields",
+    "fundamentals.discrete-log-problem"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Structured introduction to curve arithmetic and key derivation."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Library-level reference for curve operations used in production software."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Glossary",
+      "url": "https://bitcoincore.academy/glossary.html",
+      "notes": "Terminology bridge between cryptography primitives and Bitcoin Core concepts."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "ecc",
+    "cryptography"
+  ],
+  "aliases": [
+    "ecc"
+  ]
+}

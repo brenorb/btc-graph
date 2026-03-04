@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.ecdsa-basics",
+  "title": "ECDSA Basics",
+  "description": "ECDSA is the legacy Bitcoin signature algorithm used by pre-Taproot outputs and many wallets. Understanding its nonce and inverse terms explains key leak risks and malleability-era constraints.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.secp256k1",
+    "fundamentals.modular-inverse",
+    "fundamentals.scalar-multiplication"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Walkthrough of ECDSA signing and verification flow."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction-level context where signatures authorize spends."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Glossary",
+      "url": "https://bitcoincore.academy/glossary.html",
+      "notes": "Terminology reference for cryptographic components and node behavior."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "ecdsa",
+    "signatures"
+  ],
+  "aliases": [
+    "ecdsa signature scheme"
+  ]
+}

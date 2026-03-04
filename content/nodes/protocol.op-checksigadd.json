@@ -5,7 +5,8 @@
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.taproot",
-    "protocol.script-basics"
+    "protocol.script-basics",
+    "fundamentals.schnorr-signatures"
   ],
   "resources": [
     {

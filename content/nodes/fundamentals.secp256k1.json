@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.secp256k1",
+  "title": "secp256k1 Curve Parameters",
+  "description": "secp256k1 is Bitcoin's elliptic curve and fixed parameter set for key generation and signatures. Its field, generator point, and group order determine valid key and nonce ranges.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.elliptic-curve-cryptography",
+    "fundamentals.finite-fields"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Canonical implementation reference for the curve used by Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "BIP 32: Hierarchical Deterministic Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+      "notes": "Uses secp256k1 key derivation primitives in wallet key trees."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Specifies signature behavior over secp256k1."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "secp256k1",
+    "curve parameters"
+  ],
+  "aliases": [
+    "bitcoin curve"
+  ]
+}

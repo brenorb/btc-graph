@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.scalar-multiplication",
+  "title": "Scalar Multiplication",
+  "description": "Scalar multiplication is repeated elliptic-curve point addition and is the operation that derives public keys from private keys. It is efficient forward but infeasible to reverse in practice.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.elliptic-curve-cryptography"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Describes the core key-derivation operation used in Bitcoin wallets."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Implementation details for fast and constant-time scalar multiplication."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+      "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+      "notes": "Engineering perspective for how libraries expose key math operations."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "ecc",
+    "key derivation"
+  ],
+  "aliases": [
+    "point multiplication"
+  ]
+}

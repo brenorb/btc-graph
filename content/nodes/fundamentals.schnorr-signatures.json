@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.schnorr-signatures",
+  "title": "Schnorr Signatures",
+  "description": "Schnorr signatures are Bitcoin's modern signature scheme introduced with Taproot and designed for linearity and simpler multisignature constructions. They improve composability for advanced scripts and protocols.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.secp256k1",
+    "fundamentals.discrete-log-problem",
+    "fundamentals.hash-functions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Canonical Schnorr signature specification for Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Defines how Schnorr keys and scripts are used in Taproot outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Script",
+      "url": "https://bitcoincore.academy/script.html",
+      "notes": "Connects Schnorr-era script execution to practical Bitcoin validation."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "schnorr",
+    "taproot"
+  ],
+  "aliases": [
+    "bip340 signatures"
+  ]
+}

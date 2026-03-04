@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.modular-inverse",
+  "title": "Modular Inverse",
+  "description": "Modular inversion is required in Bitcoin signature equations for both key and nonce terms. Understanding inversion clarifies why bad nonce handling can leak private keys.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.modular-arithmetic",
+    "fundamentals.fermat-little-theorem"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Covers inversion in the signature construction flow."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Formal signature equations that rely on modular arithmetic properties."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Shows implementation details and side-channel considerations around arithmetic operations."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "number theory",
+    "signatures"
+  ],
+  "aliases": [
+    "multiplicative inverse"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.finite-fields",
+  "title": "Finite Fields",
+  "description": "Finite fields define the arithmetic space where Bitcoin elliptic-curve operations occur. Prime-field constraints make key operations deterministic and secure.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.modular-arithmetic"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Explains finite fields as the mathematical setting for secp256k1."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Implementation-focused notes on finite-field arithmetic and optimization choices."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Spec context for arithmetic over secp256k1 field elements."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "finite fields",
+    "cryptography"
+  ],
+  "aliases": [
+    "prime fields"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "fundamentals.modular-arithmetic",
+  "title": "Modular Arithmetic",
+  "description": "Modular arithmetic is clock-style math over a fixed modulus and is the base of Bitcoin signature calculations. It defines addition, subtraction, and multiplication inside finite fields.",
+  "category": "Security",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Introduces modular arithmetic in the context of Bitcoin keys and signatures."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Script",
+      "url": "https://bitcoincore.academy/script.html",
+      "notes": "Shows arithmetic and numeric constraints in Bitcoin Script execution."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+      "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+      "notes": "Practical engineering context that links math primitives to implementation details."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "mathematics",
+    "cryptography"
+  ],
+  "aliases": [
+    "mod arithmetic"
+  ]
+}

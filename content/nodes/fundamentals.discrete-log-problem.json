@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.discrete-log-problem",
+  "title": "Discrete Logarithm Problem",
+  "description": "Bitcoin key security depends on the hardness of solving discrete logarithms on elliptic curves. This hardness assumption is the core one-way property behind public keys.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.finite-fields"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Explains why reversing public keys to private keys is computationally hard."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+      "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+      "notes": "Developer-facing context for cryptographic assumptions in tooling and libraries."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Spec-level assumptions for security and nonce behavior."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "cryptography",
+    "one-way functions"
+  ],
+  "aliases": [
+    "dlp"
+  ]
+}

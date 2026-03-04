@@ -3,25 +3,28 @@
   "title": "Public/Private Keys",
   "description": "Asymmetric cryptography foundations for ownership proofs.",
   "category": "Security",
-  "prerequisites": [],
+  "prerequisites": [
+    "fundamentals.elliptic-curve-cryptography",
+    "fundamentals.discrete-log-problem"
+  ],
   "resources": [
     {
       "type": "article",
-      "title": "Bitcoin.page",
-      "url": "https://bitcoin.page",
-      "notes": "Accessible concept summaries."
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Core walkthrough of how private and public keys are represented and used."
     },
     {
       "type": "article",
-      "title": "Bitcoin Optech",
-      "url": "https://bitcoinops.org/",
-      "notes": "High-signal explainers and updates."
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Shows where key material and signing behavior appear in wallet systems."
     },
     {
       "type": "article",
-      "title": "Bitcoin Design",
-      "url": "https://bitcoin.design/",
-      "notes": "User-centered framing for applied learning."
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Implementation-level context for key operations and curve assumptions."
     }
   ],
   "estimatedTime": "45m",

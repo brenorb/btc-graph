@@ -2483,26 +2483,27 @@
       "description": "Verifiable authorization without revealing private keys.",
       "category": "Security",
       "prerequisites": [
-        "fundamentals.public-private-keys"
+        "fundamentals.public-private-keys",
+        "fundamentals.ecdsa-basics"
       ],
       "resources": [
         {
           "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Detailed explanation of signing and verification flow in Bitcoin."
         },
         {
           "type": "article",
-          "title": "Bitcoin Optech",
-          "url": "https://bitcoinops.org/",
-          "notes": "High-signal explainers and updates."
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Transaction authorization context for digital signatures in scripts."
         },
         {
           "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "User-centered framing for applied learning."
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Modern Bitcoin signature scheme specification for Taproot outputs."
         }
       ],
       "estimatedTime": "50m",
@@ -2511,6 +2512,43 @@
       ],
       "aliases": [
         "digital signatures"
+      ]
+    },
+    {
+      "id": "fundamentals.discrete-log-problem",
+      "title": "Discrete Logarithm Problem",
+      "description": "Bitcoin key security depends on the hardness of solving discrete logarithms on elliptic curves. This hardness assumption is the core one-way property behind public keys.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.finite-fields"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Explains why reversing public keys to private keys is computationally hard."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+          "notes": "Developer-facing context for cryptographic assumptions in tooling and libraries."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Spec-level assumptions for security and nonce behavior."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "cryptography",
+        "one-way functions"
+      ],
+      "aliases": [
+        "dlp"
       ]
     },
     {
@@ -2545,6 +2583,151 @@
       ],
       "aliases": [
         "distributed systems basics"
+      ]
+    },
+    {
+      "id": "fundamentals.ecdsa-basics",
+      "title": "ECDSA Basics",
+      "description": "ECDSA is the legacy Bitcoin signature algorithm used by pre-Taproot outputs and many wallets. Understanding its nonce and inverse terms explains key leak risks and malleability-era constraints.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.secp256k1",
+        "fundamentals.modular-inverse",
+        "fundamentals.scalar-multiplication"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Walkthrough of ECDSA signing and verification flow."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Transaction-level context where signatures authorize spends."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Glossary",
+          "url": "https://bitcoincore.academy/glossary.html",
+          "notes": "Terminology reference for cryptographic components and node behavior."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "ecdsa",
+        "signatures"
+      ],
+      "aliases": [
+        "ecdsa signature scheme"
+      ]
+    },
+    {
+      "id": "fundamentals.elliptic-curve-cryptography",
+      "title": "Elliptic Curve Cryptography",
+      "description": "Elliptic curve cryptography maps finite-field arithmetic into group operations used for Bitcoin keys and signatures. It is the practical cryptographic system behind secp256k1.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.finite-fields",
+        "fundamentals.discrete-log-problem"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Structured introduction to curve arithmetic and key derivation."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Library-level reference for curve operations used in production software."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Glossary",
+          "url": "https://bitcoincore.academy/glossary.html",
+          "notes": "Terminology bridge between cryptography primitives and Bitcoin Core concepts."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "ecc",
+        "cryptography"
+      ],
+      "aliases": [
+        "ecc"
+      ]
+    },
+    {
+      "id": "fundamentals.fermat-little-theorem",
+      "title": "Fermat's Little Theorem",
+      "description": "Fermat's little theorem is used to reason about inverses in prime fields used by Bitcoin cryptography. It helps explain why modular inversion works for non-zero elements.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-arithmetic"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Provides the field arithmetic background used in ECC derivations."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Practical notes for inversion and field operations in real code paths."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "number theory",
+        "modular arithmetic"
+      ],
+      "aliases": [
+        "flt"
+      ]
+    },
+    {
+      "id": "fundamentals.finite-fields",
+      "title": "Finite Fields",
+      "description": "Finite fields define the arithmetic space where Bitcoin elliptic-curve operations occur. Prime-field constraints make key operations deterministic and secure.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-arithmetic"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Explains finite fields as the mathematical setting for secp256k1."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Implementation-focused notes on finite-field arithmetic and optimization choices."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Spec context for arithmetic over secp256k1 field elements."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "finite fields",
+        "cryptography"
+      ],
+      "aliases": [
+        "prime fields"
       ]
     },
     {
@@ -2651,6 +2834,79 @@
       ],
       "aliases": [
         "merkle trees"
+      ]
+    },
+    {
+      "id": "fundamentals.modular-arithmetic",
+      "title": "Modular Arithmetic",
+      "description": "Modular arithmetic is clock-style math over a fixed modulus and is the base of Bitcoin signature calculations. It defines addition, subtraction, and multiplication inside finite fields.",
+      "category": "Security",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Introduces modular arithmetic in the context of Bitcoin keys and signatures."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Script",
+          "url": "https://bitcoincore.academy/script.html",
+          "notes": "Shows arithmetic and numeric constraints in Bitcoin Script execution."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+          "notes": "Practical engineering context that links math primitives to implementation details."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "mathematics",
+        "cryptography"
+      ],
+      "aliases": [
+        "mod arithmetic"
+      ]
+    },
+    {
+      "id": "fundamentals.modular-inverse",
+      "title": "Modular Inverse",
+      "description": "Modular inversion is required in Bitcoin signature equations for both key and nonce terms. Understanding inversion clarifies why bad nonce handling can leak private keys.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-arithmetic",
+        "fundamentals.fermat-little-theorem"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Covers inversion in the signature construction flow."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Formal signature equations that rely on modular arithmetic properties."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Shows implementation details and side-channel considerations around arithmetic operations."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "number theory",
+        "signatures"
+      ],
+      "aliases": [
+        "multiplicative inverse"
       ]
     },
     {
@@ -2769,25 +3025,28 @@
       "title": "Public/Private Keys",
       "description": "Asymmetric cryptography foundations for ownership proofs.",
       "category": "Security",
-      "prerequisites": [],
+      "prerequisites": [
+        "fundamentals.elliptic-curve-cryptography",
+        "fundamentals.discrete-log-problem"
+      ],
       "resources": [
         {
           "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Core walkthrough of how private and public keys are represented and used."
         },
         {
           "type": "article",
-          "title": "Bitcoin Optech",
-          "url": "https://bitcoinops.org/",
-          "notes": "High-signal explainers and updates."
+          "title": "Bitcoin Developer Guide: Wallets",
+          "url": "https://developer.bitcoin.org/devguide/wallets.html",
+          "notes": "Shows where key material and signing behavior appear in wallet systems."
         },
         {
           "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "User-centered framing for applied learning."
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Implementation-level context for key operations and curve assumptions."
         }
       ],
       "estimatedTime": "45m",
@@ -2796,6 +3055,120 @@
       ],
       "aliases": [
         "public/private keys"
+      ]
+    },
+    {
+      "id": "fundamentals.scalar-multiplication",
+      "title": "Scalar Multiplication",
+      "description": "Scalar multiplication is repeated elliptic-curve point addition and is the operation that derives public keys from private keys. It is efficient forward but infeasible to reverse in practice.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.elliptic-curve-cryptography"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Describes the core key-derivation operation used in Bitcoin wallets."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Implementation details for fast and constant-time scalar multiplication."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
+          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
+          "notes": "Engineering perspective for how libraries expose key math operations."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "ecc",
+        "key derivation"
+      ],
+      "aliases": [
+        "point multiplication"
+      ]
+    },
+    {
+      "id": "fundamentals.schnorr-signatures",
+      "title": "Schnorr Signatures",
+      "description": "Schnorr signatures are Bitcoin's modern signature scheme introduced with Taproot and designed for linearity and simpler multisignature constructions. They improve composability for advanced scripts and protocols.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.secp256k1",
+        "fundamentals.discrete-log-problem",
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Canonical Schnorr signature specification for Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Defines how Schnorr keys and scripts are used in Taproot outputs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Script",
+          "url": "https://bitcoincore.academy/script.html",
+          "notes": "Connects Schnorr-era script execution to practical Bitcoin validation."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "schnorr",
+        "taproot"
+      ],
+      "aliases": [
+        "bip340 signatures"
+      ]
+    },
+    {
+      "id": "fundamentals.secp256k1",
+      "title": "secp256k1 Curve Parameters",
+      "description": "secp256k1 is Bitcoin's elliptic curve and fixed parameter set for key generation and signatures. Its field, generator point, and group order determine valid key and nonce ranges.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.elliptic-curve-cryptography",
+        "fundamentals.finite-fields"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Canonical implementation reference for the curve used by Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "BIP 32: Hierarchical Deterministic Wallets",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+          "notes": "Uses secp256k1 key derivation primitives in wallet key trees."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Specifies signature behavior over secp256k1."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "secp256k1",
+        "curve parameters"
+      ],
+      "aliases": [
+        "bitcoin curve"
       ]
     },
     {
@@ -7526,7 +7899,8 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.taproot",
-        "protocol.script-basics"
+        "protocol.script-basics",
+        "fundamentals.schnorr-signatures"
       ],
       "resources": [
         {
@@ -8125,7 +8499,8 @@
       "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.segregated-witness"
+        "protocol.segregated-witness",
+        "fundamentals.schnorr-signatures"
       ],
       "resources": [
         {
