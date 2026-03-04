@@ -1,0 +1,38 @@
+{
+  "id": "extension.discreet-log-contracts",
+  "title": "Discreet Log Contracts (DLCs)",
+  "description": "DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.adaptor-signatures",
+    "fundamentals.digital-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: DLCs",
+      "url": "https://covenants.info/use-cases/dlcs/",
+      "notes": "DLC framing within covenant-related contract use cases."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Discreet Log Contracts",
+      "url": "https://bitcoinops.org/en/topics/discreet-log-contracts/",
+      "notes": "Protocol updates and integration lessons."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: dlc",
+      "url": "https://btctranscripts.com/search?filter_tags=dlc",
+      "notes": "Advanced design and implementation tradeoffs."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "dlc",
+    "oracle"
+  ],
+  "aliases": [
+    "dlcs"
+  ]
+}

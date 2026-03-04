@@ -1125,6 +1125,44 @@
       ]
     },
     {
+      "id": "dev.reproducible-builds",
+      "title": "Reproducible Builds",
+      "description": "Reproducible builds let independent parties verify that released binaries match source code. They reduce supply-chain trust assumptions for wallet and node software.",
+      "category": "Security",
+      "prerequisites": [
+        "ops.run-full-node",
+        "dev.wallet-development"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Reproducible Builds",
+          "url": "https://bitcoinops.org/en/topics/reproducible-builds/",
+          "notes": "Ecosystem context and ongoing engineering work."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: reproducible-builds",
+          "url": "https://btctranscripts.com/search?filter_tags=reproducible-builds",
+          "notes": "Engineering process details and verification workflows."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Release Process",
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/release-process.md",
+          "notes": "Practical release-signing and verification guidance."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "builds",
+        "supply chain"
+      ],
+      "aliases": [
+        "deterministic builds"
+      ]
+    },
+    {
       "id": "dev.scantxoutset-rpc",
       "title": "scantxoutset RPC",
       "description": "RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.",
@@ -1608,6 +1646,384 @@
       "aliases": [
         "payment batching",
         "batching tradeoffs"
+      ]
+    },
+    {
+      "id": "extension.ark",
+      "title": "Ark Protocol",
+      "description": "Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.payment-pools",
+        "lightning.liquidity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Ark",
+          "url": "https://covenants.info/use-cases/ark/",
+          "notes": "Ark motivation and mechanism summary."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ark",
+          "url": "https://bitcoinops.org/en/topics/ark/",
+          "notes": "Ecosystem updates and implementation notes."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: ark",
+          "url": "https://btctranscripts.com/search?filter_tags=ark",
+          "notes": "Design debates and open questions."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "ark",
+        "scaling"
+      ],
+      "aliases": [
+        "ark protocol"
+      ]
+    },
+    {
+      "id": "extension.bitvm",
+      "title": "BitVM",
+      "description": "BitVM enables optimistic computation protocols anchored to Bitcoin settlement. It trades covenant requirements for interactive proofs and operational complexity.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.matt-ccv"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info: BitVM",
+          "url": "https://covenants.info/extra/bitvm/",
+          "notes": "Conceptual overview and relation to MATT-like designs."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: bitvm",
+          "url": "https://btctranscripts.com/search?filter_tags=bitvm",
+          "notes": "Technical tradeoff analysis from active researchers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: MATT",
+          "url": "https://bitcoinops.org/en/topics/matt/",
+          "notes": "Adjacent discussion relevant to BitVM design comparisons."
+        }
+      ],
+      "estimatedTime": "90m",
+      "tags": [
+        "bitvm",
+        "contracts"
+      ],
+      "aliases": [
+        "optimistic computation"
+      ]
+    },
+    {
+      "id": "extension.coinpools",
+      "title": "Coinpools",
+      "description": "Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.payment-pools",
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BTC Transcripts: coinpools",
+          "url": "https://btctranscripts.com/search?filter_tags=coinpools",
+          "notes": "Research and implementation discussions."
+        },
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Payment Pools",
+          "url": "https://covenants.info/use-cases/payment-pools/",
+          "notes": "Related shared-UTXO architecture patterns."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "coinpools",
+        "scaling"
+      ],
+      "aliases": [
+        "coin pools"
+      ]
+    },
+    {
+      "id": "extension.congestion-control",
+      "title": "Congestion-Control Trees",
+      "description": "Congestion-control trees pre-structure exits so many users can settle efficiently during fee spikes. They prioritize predictable emergency paths over flexible ad hoc spending.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.transaction-templating",
+        "protocol.fee-market"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Congestion Control",
+          "url": "https://covenants.info/use-cases/congestion-control/",
+          "notes": "Use-case design and execution flow."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: congestion-control",
+          "url": "https://btctranscripts.com/search?filter_tags=congestion-control",
+          "notes": "Discussion of practical deployment constraints."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "fees",
+        "covenants"
+      ],
+      "aliases": [
+        "congestion control trees"
+      ]
+    },
+    {
+      "id": "extension.discreet-log-contracts",
+      "title": "Discreet Log Contracts (DLCs)",
+      "description": "DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.adaptor-signatures",
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: DLCs",
+          "url": "https://covenants.info/use-cases/dlcs/",
+          "notes": "DLC framing within covenant-related contract use cases."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Discreet Log Contracts",
+          "url": "https://bitcoinops.org/en/topics/discreet-log-contracts/",
+          "notes": "Protocol updates and integration lessons."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: dlc",
+          "url": "https://btctranscripts.com/search?filter_tags=dlc",
+          "notes": "Advanced design and implementation tradeoffs."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "dlc",
+        "oracle"
+      ],
+      "aliases": [
+        "dlcs"
+      ]
+    },
+    {
+      "id": "extension.great-script-restoration",
+      "title": "The Great Script Restoration",
+      "description": "The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.script-basics",
+        "protocol.op-cat"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info: The Great Script Restoration",
+          "url": "https://covenants.info/extra/gsr/",
+          "notes": "Project motivation and roadmap."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: great-script-restoration",
+          "url": "https://btctranscripts.com/search?filter_tags=great-script-restoration",
+          "notes": "Community discussion on safety and utility."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "script",
+        "gsr"
+      ],
+      "aliases": [
+        "gsr"
+      ]
+    },
+    {
+      "id": "extension.payment-pools",
+      "title": "Payment Pools",
+      "description": "Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.transaction-templating",
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Payment Pools",
+          "url": "https://covenants.info/use-cases/payment-pools/",
+          "notes": "Canonical payment-pool construction overview."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: payment-pools",
+          "url": "https://btctranscripts.com/search?filter_tags=payment-pools",
+          "notes": "Discussion of state-management and exit complexity."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "scaling",
+        "shared-utxos"
+      ],
+      "aliases": [
+        "payment pool"
+      ]
+    },
+    {
+      "id": "extension.spacechains",
+      "title": "Spacechains",
+      "description": "Spacechains anchor external consensus data to Bitcoin while preserving independent execution environments. They use Bitcoin finality as a settlement root without full smart-contract expressiveness.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.proof-of-work",
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Spacechains",
+          "url": "https://covenants.info/use-cases/spacechains/",
+          "notes": "Concept and intended construction patterns."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: spacechains",
+          "url": "https://btctranscripts.com/search?filter_tags=spacechains",
+          "notes": "Research discourse on assumptions and tradeoffs."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "spacechains"
+      ],
+      "aliases": [
+        "space chains"
+      ]
+    },
+    {
+      "id": "extension.statechains",
+      "title": "Statechains",
+      "description": "Statechains transfer control of pre-funded outputs between participants with minimal on-chain activity. Their trust and liveness assumptions differ from Lightning and covenant trees.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.segregated-witness",
+        "custody.multisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Statechains",
+          "url": "https://covenants.info/use-cases/statechains/",
+          "notes": "Statechain model and limitations."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Statechains",
+          "url": "https://bitcoinops.org/en/topics/statechains/",
+          "notes": "Recent protocol work and critiques."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: statechains",
+          "url": "https://btctranscripts.com/search?filter_tags=statechains",
+          "notes": "Operational concerns and security assumptions."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "statechains"
+      ],
+      "aliases": [
+        "state chains"
+      ]
+    },
+    {
+      "id": "extension.transaction-templating",
+      "title": "Transaction Templating",
+      "description": "Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.op-checktemplateverify",
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Transaction Templating",
+          "url": "https://covenants.info/use-cases/tx-templating/",
+          "notes": "Primary use-case walkthrough."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: transaction-templating",
+          "url": "https://btctranscripts.com/search?filter_tags=transaction-templating",
+          "notes": "Technical tradeoffs and deployment discussions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "templates",
+        "covenants"
+      ],
+      "aliases": [
+        "tx templating"
       ]
     },
     {
@@ -2794,6 +3210,44 @@
       ]
     },
     {
+      "id": "lightning.eltoo",
+      "title": "Eltoo Channel Updates",
+      "description": "Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.anyprevout",
+        "lightning.commitment-transactions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Eltoo",
+          "url": "https://bitcoinops.org/en/topics/eltoo/",
+          "notes": "Historical and current status of eltoo research."
+        },
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Eltoo / LN-Symmetry",
+          "url": "https://covenants.info/use-cases/eltoo/",
+          "notes": "How eltoo fits into broader covenant design space."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: eltoo",
+          "url": "https://btctranscripts.com/search?filter_tags=eltoo",
+          "notes": "Technical details and protocol migration discussion."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "lightning",
+        "eltoo"
+      ],
+      "aliases": [
+        "ln symmetry"
+      ]
+    },
+    {
       "id": "lightning.force-closures",
       "title": "Lightning Force Closures",
       "description": "Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.",
@@ -3167,6 +3621,44 @@
       "aliases": [
         "liquidity probing",
         "channel probing"
+      ]
+    },
+    {
+      "id": "lightning.ptlc",
+      "title": "Point Time-Locked Contracts (PTLCs)",
+      "description": "PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.htlc",
+        "protocol.adaptor-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: PTLC",
+          "url": "https://bitcoinops.org/en/topics/ptlc/",
+          "notes": "High-level PTLC mechanics and status."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: ptlc",
+          "url": "https://btctranscripts.com/search?filter_tags=ptlc",
+          "notes": "Implementation tradeoffs and migration paths."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "lightning",
+        "ptlc"
+      ],
+      "aliases": [
+        "point timelock contracts"
       ]
     },
     {
@@ -4865,6 +5357,44 @@
       ]
     },
     {
+      "id": "privacy.dandelion",
+      "title": "Dandelion Transaction Propagation",
+      "description": "Dandelion-style relay separates diffusion phases to reduce origin-linkability. It is a network-level privacy strategy with deployment and adversarial-model tradeoffs.",
+      "category": "Security",
+      "prerequisites": [
+        "privacy.network-privacy",
+        "protocol.transaction-relay-inv-getdata"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Dandelion",
+          "url": "https://bitcoinops.org/en/topics/dandelion/",
+          "notes": "Design motivations and implementation history."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: dandelion",
+          "url": "https://btctranscripts.com/search?filter_tags=dandelion",
+          "notes": "Practical challenges and threat-model discussion."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "privacy",
+        "relay"
+      ],
+      "aliases": [
+        "dandelion relay"
+      ]
+    },
+    {
       "id": "privacy.kyc-tradeoffs",
       "title": "KYC and Privacy Tradeoffs",
       "description": "Identity linkage risks and mitigation strategies.",
@@ -5091,6 +5621,44 @@
       ]
     },
     {
+      "id": "protocol.adaptor-signatures",
+      "title": "Adaptor Signatures",
+      "description": "Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.digital-signatures",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Adaptor Signatures",
+          "url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+          "notes": "Core concept and applied protocol usage."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: adaptor-signatures",
+          "url": "https://btctranscripts.com/search?filter_tags=adaptor-signatures",
+          "notes": "Deep technical discussions from protocol developers."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "signatures",
+        "contracts"
+      ],
+      "aliases": [
+        "encrypted signatures"
+      ]
+    },
+    {
       "id": "protocol.addr-v2-bip155",
       "title": "AddrV2 (BIP 155)",
       "description": "Extended peer address relay format that supports newer network address types while preserving compatibility.",
@@ -5163,6 +5731,44 @@
       ],
       "aliases": [
         "addresses and outputs"
+      ]
+    },
+    {
+      "id": "protocol.anyprevout",
+      "title": "SIGHASH_ANYPREVOUT",
+      "description": "ANYPREVOUT changes signature commitment semantics so updates can bind less history. It is a key enabler for eltoo-style channel update protocols.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.sighash-flags",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: ANYPREVOUT",
+          "url": "https://covenants.info/proposals/apo/",
+          "notes": "Proposal framing and relation to other covenant primitives."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: SIGHASH_ANYPREVOUT",
+          "url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
+          "notes": "Implementation and deployment considerations."
+        },
+        {
+          "type": "article",
+          "title": "BIP 118 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki",
+          "notes": "Specification draft for ANYPREVOUT signature flags."
+        }
+      ],
+      "estimatedTime": "85m",
+      "tags": [
+        "sighash",
+        "eltoo"
+      ],
+      "aliases": [
+        "anyprevout"
       ]
     },
     {
@@ -5395,6 +6001,44 @@
       ]
     },
     {
+      "id": "protocol.cluster-mempool",
+      "title": "Cluster Mempool",
+      "description": "Cluster mempool tracks package relationships to improve policy decisions and package relay behavior. It aims to make ancestor/descendant handling more predictable under load.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.mempool",
+        "ops.mempool-policy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Cluster Mempool",
+          "url": "https://bitcoinops.org/en/topics/cluster-mempool/",
+          "notes": "Implementation status and policy impact."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: cluster-mempool",
+          "url": "https://btctranscripts.com/search?filter_tags=cluster-mempool",
+          "notes": "Design goals and edge-case handling discussions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Baseline mempool and relay context for package policy discussions."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "mempool",
+        "relay"
+      ],
+      "aliases": [
+        "clustered mempool"
+      ]
+    },
+    {
       "id": "protocol.coinbase-transaction",
       "title": "Coinbase Transaction",
       "description": "Special first transaction in each block that collects subsidy and transaction fees.",
@@ -5550,6 +6194,44 @@
       ]
     },
     {
+      "id": "protocol.covenants",
+      "title": "Bitcoin Covenants",
+      "description": "Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script-basics",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Covenants",
+          "url": "https://bitcoinops.org/en/topics/covenants/",
+          "notes": "Implementation context and ecosystem progress."
+        },
+        {
+          "type": "article",
+          "title": "Covenants.info Use Case: Transaction Templating",
+          "url": "https://covenants.info/use-cases/tx-templating/",
+          "notes": "Concrete covenant-style use case showing template-constrained spending trees."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "covenants",
+        "script"
+      ],
+      "aliases": [
+        "covenants"
+      ]
+    },
+    {
       "id": "protocol.cpfp",
       "title": "Child Pays for Parent (CPFP)",
       "description": "Fee-bumping strategy where a child transaction incentivizes confirmation of a low-fee parent.",
@@ -5584,6 +6266,44 @@
       ],
       "aliases": [
         "cpfp"
+      ]
+    },
+    {
+      "id": "protocol.cross-input-signature-aggregation",
+      "title": "Cross-Input Signature Aggregation (CISA)",
+      "description": "CISA aggregates signatures across multiple inputs to reduce weight and improve coordination efficiency. It introduces new accounting and policy considerations for batch spenders.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.adaptor-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: CISA",
+          "url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/",
+          "notes": "Current proposals and constraints."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: cross-input-signature-aggregation",
+          "url": "https://btctranscripts.com/search?filter_tags=cross-input-signature-aggregation",
+          "notes": "Debates around fee savings and safety assumptions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "aggregation",
+        "fees"
+      ],
+      "aliases": [
+        "cisa"
       ]
     },
     {
@@ -5662,6 +6382,44 @@
       ]
     },
     {
+      "id": "protocol.direct-introspection",
+      "title": "Direct Introspection Proposals",
+      "description": "Direct introspection proposals expose transaction fields to Script for covenant enforcement. They increase expressiveness while raising complexity and review-surface tradeoffs.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: Direct Introspection",
+          "url": "https://covenants.info/proposals/direct-introspection/",
+          "notes": "Overview of direct-field introspection approaches."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: direct-introspection",
+          "url": "https://btctranscripts.com/search?filter_tags=direct-introspection",
+          "notes": "Discussion around security model and policy impact."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "notes": "Practical walkthrough of Script and transaction construction from first principles."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "script",
+        "introspection"
+      ],
+      "aliases": [
+        "introspection opcodes"
+      ]
+    },
+    {
       "id": "protocol.dust-policy",
       "title": "Dust Policy",
       "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
@@ -5697,6 +6455,82 @@
       "aliases": [
         "dust outputs",
         "uneconomical outputs"
+      ]
+    },
+    {
+      "id": "protocol.ephemeral-anchors",
+      "title": "Ephemeral Anchors",
+      "description": "Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "lightning.anchor-outputs",
+        "protocol.package-relay"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ephemeral Anchors",
+          "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+          "notes": "Policy motivation and deployment details."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: ephemeral-anchors",
+          "url": "https://btctranscripts.com/search?filter_tags=ephemeral-anchors",
+          "notes": "Design discussion and operational caveats."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Anchor Outputs",
+          "url": "https://bitcoinops.org/en/topics/anchor-outputs/",
+          "notes": "Context for fee-bumping mechanisms in Lightning commitments."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "relay",
+        "lightning"
+      ],
+      "aliases": [
+        "ephemeral anchor outputs"
+      ]
+    },
+    {
+      "id": "protocol.erlay",
+      "title": "Erlay Transaction Relay",
+      "description": "Erlay reduces transaction relay bandwidth while preserving propagation robustness. It changes gossip behavior to scale peer connectivity more efficiently.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.transaction-relay-inv-getdata",
+        "ops.peer-discovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Erlay",
+          "url": "https://bitcoinops.org/en/topics/erlay/",
+          "notes": "Design and rollout considerations."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: erlay",
+          "url": "https://btctranscripts.com/search?filter_tags=erlay",
+          "notes": "Engineering discussion around relay efficiency."
+        },
+        {
+          "type": "article",
+          "title": "BIP 330 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0330.mediawiki",
+          "notes": "Protocol specification draft for Erlay."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "p2p",
+        "relay"
+      ],
+      "aliases": [
+        "erlay"
       ]
     },
     {
@@ -5813,6 +6647,45 @@
       ]
     },
     {
+      "id": "protocol.matt-ccv",
+      "title": "MATT and CCV",
+      "description": "MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants",
+        "dev.miniscript"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: CCV & MATT",
+          "url": "https://covenants.info/proposals/matt/",
+          "notes": "Primary reference for MATT/CCV framing."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: MATT",
+          "url": "https://bitcoinops.org/en/topics/matt/",
+          "notes": "Tracking implementation and ecosystem discussion."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "95m",
+      "tags": [
+        "covenants",
+        "contracts"
+      ],
+      "aliases": [
+        "matt",
+        "ccv"
+      ]
+    },
+    {
       "id": "protocol.median-time-past",
       "title": "Median Time Past",
       "description": "Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.",
@@ -5923,6 +6796,195 @@
       ],
       "aliases": [
         "nodes vs miners"
+      ]
+    },
+    {
+      "id": "protocol.op-cat",
+      "title": "OP_CAT",
+      "description": "OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Opcode Explained: OP_CAT",
+          "url": "https://opcodeexplained.com/opcodes/op_cat",
+          "notes": "Byte-level semantics and execution behavior."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: OP_CAT",
+          "url": "https://bitcoinops.org/en/topics/op_cat/",
+          "notes": "Activation and policy discussion."
+        },
+        {
+          "type": "article",
+          "title": "Covenants.info: OP_CAT",
+          "url": "https://covenants.info/extra/cat/",
+          "notes": "How OP_CAT fits into current covenant research."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "script",
+        "opcodes"
+      ],
+      "aliases": [
+        "cat opcode"
+      ]
+    },
+    {
+      "id": "protocol.op-checksigadd",
+      "title": "OP_CHECKSIGADD",
+      "description": "OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Opcode Explained: OP_CHECKSIGADD",
+          "url": "https://opcodeexplained.com/opcodes/op_checksigadd",
+          "notes": "Execution semantics and stack behavior."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: op-checksigadd",
+          "url": "https://btctranscripts.com/search?filter_tags=op-checksigadd",
+          "notes": "Design and operational usage discussions."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Defines Tapscript context where OP_CHECKSIGADD is introduced."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "tapscript",
+        "opcodes"
+      ],
+      "aliases": [
+        "checksigadd"
+      ]
+    },
+    {
+      "id": "protocol.op-checksigfromstack",
+      "title": "OP_CHECKSIGFROMSTACK",
+      "description": "OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script-basics",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: OP_CHECKSIGFROMSTACK",
+          "url": "https://bitcoinops.org/en/topics/op_checksigfromstack/",
+          "notes": "Historical proposals and modern usage context."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: op-checksigfromstack",
+          "url": "https://btctranscripts.com/search?filter_tags=op-checksigfromstack",
+          "notes": "Protocol discussions around feasibility and risk."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "notes": "Practical walkthrough of Script and transaction construction from first principles."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "script",
+        "opcodes"
+      ],
+      "aliases": [
+        "checksigfromstack"
+      ]
+    },
+    {
+      "id": "protocol.op-checktemplateverify",
+      "title": "OP_CHECKTEMPLATEVERIFY (CTV)",
+      "description": "CTV restricts spending transactions to a committed template hash. This enables deterministic spending trees and scalable pre-planned transaction structures.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.timelocks",
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: CTV",
+          "url": "https://covenants.info/proposals/ctv/",
+          "notes": "Proposal details and covenant motivations."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: OP_CHECKTEMPLATEVERIFY",
+          "url": "https://bitcoinops.org/en/topics/op_checktemplateverify/",
+          "notes": "Ecosystem progress and deployment discussion."
+        },
+        {
+          "type": "article",
+          "title": "BIP 119 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki",
+          "notes": "Specification draft for CTV."
+        }
+      ],
+      "estimatedTime": "90m",
+      "tags": [
+        "ctv",
+        "covenants"
+      ],
+      "aliases": [
+        "ctv"
+      ]
+    },
+    {
+      "id": "protocol.op-codeseparator",
+      "title": "OP_CODESEPARATOR",
+      "description": "OP_CODESEPARATOR changes the script segment committed by signature hashing. Its behavior is subtle and historically important for advanced script correctness.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.sighash-flags",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Opcode Explained: OP_CODESEPARATOR",
+          "url": "https://opcodeexplained.com/opcodes/op_codeseparator",
+          "notes": "Exact execution and signature-hash effects."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: codeseparator",
+          "url": "https://btctranscripts.com/search?filter_tags=codeseparator",
+          "notes": "Practical concerns raised by wallet and protocol developers."
+        },
+        {
+          "type": "article",
+          "title": "BIP 143: SegWit Signature Hash",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+          "notes": "Context on signature hashing changes and script-code handling."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "sighash",
+        "script"
+      ],
+      "aliases": [
+        "codeseparator"
       ]
     },
     {
@@ -6448,6 +7510,44 @@
       ]
     },
     {
+      "id": "protocol.tluv",
+      "title": "TLUV Proposal",
+      "description": "TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants",
+        "protocol.op-checktemplateverify"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: TLUV",
+          "url": "https://covenants.info/proposals/tluv/",
+          "notes": "Proposal overview and comparative tradeoffs."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: tluv",
+          "url": "https://btctranscripts.com/search?filter_tags=tluv",
+          "notes": "Technical discussion and criticism from protocol contributors."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "covenants",
+        "proposals"
+      ],
+      "aliases": [
+        "tluv"
+      ]
+    },
+    {
       "id": "protocol.transaction-lifecycle",
       "title": "Transaction Lifecycle",
       "description": "From creation and propagation to confirmation and settlement.",
@@ -6562,6 +7662,44 @@
       ]
     },
     {
+      "id": "protocol.txhash",
+      "title": "TXHASH Proposal",
+      "description": "TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants",
+        "protocol.sighash-flags"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: TXHASH",
+          "url": "https://covenants.info/proposals/txhash/",
+          "notes": "Proposal summary and intended contract capabilities."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: txhash",
+          "url": "https://btctranscripts.com/search?filter_tags=txhash",
+          "notes": "Discussion of design goals and edge cases."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "covenants",
+        "introspection"
+      ],
+      "aliases": [
+        "txhash"
+      ]
+    },
+    {
       "id": "protocol.utxo-model",
       "title": "UTXO Model",
       "description": "State model based on spendable outputs instead of account balances.",
@@ -6596,6 +7734,44 @@
       ],
       "aliases": [
         "utxo model"
+      ]
+    },
+    {
+      "id": "protocol.v2-p2p-transport",
+      "title": "V2 P2P Transport (BIP324)",
+      "description": "V2 transport encrypts peer-to-peer traffic and improves handshake behavior. It reduces passive metadata leakage and hardens network communications.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.transaction-relay-inv-getdata",
+        "protocol.addr-v2-bip155"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: V2 P2P Transport",
+          "url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
+          "notes": "Deployment guidance and compatibility notes."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: v2-p2p-transport",
+          "url": "https://btctranscripts.com/search?filter_tags=v2-p2p-transport",
+          "notes": "Detailed protocol and implementation conversation."
+        },
+        {
+          "type": "article",
+          "title": "BIP 324 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki",
+          "notes": "Transport v2 protocol draft."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "p2p",
+        "encryption"
+      ],
+      "aliases": [
+        "bip324"
       ]
     },
     {
@@ -6712,6 +7888,82 @@
       "aliases": [
         "bip339",
         "witness txid relay"
+      ]
+    },
+    {
+      "id": "security.eclipse-attacks",
+      "title": "Eclipse Attacks",
+      "description": "Eclipse attacks isolate a node from honest peers to manipulate its view of the network. Mitigation requires peer diversity, routing hygiene, and robust eviction policy.",
+      "category": "Security",
+      "prerequisites": [
+        "ops.peer-discovery",
+        "privacy.network-privacy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Eclipse Attacks",
+          "url": "https://bitcoinops.org/en/topics/eclipse-attacks/",
+          "notes": "Attack mechanics and mitigation guidance."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: eclipse-attacks",
+          "url": "https://btctranscripts.com/search?filter_tags=eclipse-attacks",
+          "notes": "Operational lessons from node operators and researchers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: P2P Network",
+          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+          "notes": "Baseline peer-to-peer behavior needed to reason about eclipse vectors."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "network security"
+      ],
+      "aliases": [
+        "eclipse attack"
+      ]
+    },
+    {
+      "id": "security.op-vault",
+      "title": "OP_VAULT Proposal",
+      "description": "OP_VAULT proposes native covenant support for delayed recovery and theft mitigation flows. It is designed to make vault policies safer and simpler to deploy.",
+      "category": "Security",
+      "prerequisites": [
+        "protocol.covenants",
+        "protocol.timelocks",
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Covenants.info Proposal: OP_VAULT",
+          "url": "https://covenants.info/proposals/op-vault/",
+          "notes": "Proposal rationale and expected security properties."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: op-vault",
+          "url": "https://btctranscripts.com/search?filter_tags=op-vault",
+          "notes": "Design discussions and policy implications."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin (Amazon)",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "vaults",
+        "custody"
+      ],
+      "aliases": [
+        "op vault"
       ]
     }
   ]

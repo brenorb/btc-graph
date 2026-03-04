@@ -1,0 +1,38 @@
+{
+  "id": "protocol.txhash",
+  "title": "TXHASH Proposal",
+  "description": "TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants",
+    "protocol.sighash-flags"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: TXHASH",
+      "url": "https://covenants.info/proposals/txhash/",
+      "notes": "Proposal summary and intended contract capabilities."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: txhash",
+      "url": "https://btctranscripts.com/search?filter_tags=txhash",
+      "notes": "Discussion of design goals and edge cases."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "covenants",
+    "introspection"
+  ],
+  "aliases": [
+    "txhash"
+  ]
+}

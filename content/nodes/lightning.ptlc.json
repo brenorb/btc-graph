@@ -1,0 +1,38 @@
+{
+  "id": "lightning.ptlc",
+  "title": "Point Time-Locked Contracts (PTLCs)",
+  "description": "PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.htlc",
+    "protocol.adaptor-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: PTLC",
+      "url": "https://bitcoinops.org/en/topics/ptlc/",
+      "notes": "High-level PTLC mechanics and status."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: ptlc",
+      "url": "https://btctranscripts.com/search?filter_tags=ptlc",
+      "notes": "Implementation tradeoffs and migration paths."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+      "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "lightning",
+    "ptlc"
+  ],
+  "aliases": [
+    "point timelock contracts"
+  ]
+}

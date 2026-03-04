@@ -1,0 +1,39 @@
+{
+  "id": "protocol.matt-ccv",
+  "title": "MATT and CCV",
+  "description": "MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants",
+    "dev.miniscript"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: CCV & MATT",
+      "url": "https://covenants.info/proposals/matt/",
+      "notes": "Primary reference for MATT/CCV framing."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: MATT",
+      "url": "https://bitcoinops.org/en/topics/matt/",
+      "notes": "Tracking implementation and ecosystem discussion."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "95m",
+  "tags": [
+    "covenants",
+    "contracts"
+  ],
+  "aliases": [
+    "matt",
+    "ccv"
+  ]
+}

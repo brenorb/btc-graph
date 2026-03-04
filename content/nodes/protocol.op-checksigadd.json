@@ -1,0 +1,38 @@
+{
+  "id": "protocol.op-checksigadd",
+  "title": "OP_CHECKSIGADD",
+  "description": "OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Opcode Explained: OP_CHECKSIGADD",
+      "url": "https://opcodeexplained.com/opcodes/op_checksigadd",
+      "notes": "Execution semantics and stack behavior."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: op-checksigadd",
+      "url": "https://btctranscripts.com/search?filter_tags=op-checksigadd",
+      "notes": "Design and operational usage discussions."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Defines Tapscript context where OP_CHECKSIGADD is introduced."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "tapscript",
+    "opcodes"
+  ],
+  "aliases": [
+    "checksigadd"
+  ]
+}

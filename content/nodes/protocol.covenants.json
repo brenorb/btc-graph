@@ -1,0 +1,38 @@
+{
+  "id": "protocol.covenants",
+  "title": "Bitcoin Covenants",
+  "description": "Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script-basics",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Covenants",
+      "url": "https://bitcoinops.org/en/topics/covenants/",
+      "notes": "Implementation context and ecosystem progress."
+    },
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Transaction Templating",
+      "url": "https://covenants.info/use-cases/tx-templating/",
+      "notes": "Concrete covenant-style use case showing template-constrained spending trees."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "covenants",
+    "script"
+  ],
+  "aliases": [
+    "covenants"
+  ]
+}

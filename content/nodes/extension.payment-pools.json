@@ -1,0 +1,38 @@
+{
+  "id": "extension.payment-pools",
+  "title": "Payment Pools",
+  "description": "Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.transaction-templating",
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Payment Pools",
+      "url": "https://covenants.info/use-cases/payment-pools/",
+      "notes": "Canonical payment-pool construction overview."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: payment-pools",
+      "url": "https://btctranscripts.com/search?filter_tags=payment-pools",
+      "notes": "Discussion of state-management and exit complexity."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "scaling",
+    "shared-utxos"
+  ],
+  "aliases": [
+    "payment pool"
+  ]
+}

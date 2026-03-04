@@ -1,0 +1,38 @@
+{
+  "id": "protocol.direct-introspection",
+  "title": "Direct Introspection Proposals",
+  "description": "Direct introspection proposals expose transaction fields to Script for covenant enforcement. They increase expressiveness while raising complexity and review-surface tradeoffs.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants",
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: Direct Introspection",
+      "url": "https://covenants.info/proposals/direct-introspection/",
+      "notes": "Overview of direct-field introspection approaches."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: direct-introspection",
+      "url": "https://btctranscripts.com/search?filter_tags=direct-introspection",
+      "notes": "Discussion around security model and policy impact."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+      "notes": "Practical walkthrough of Script and transaction construction from first principles."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "script",
+    "introspection"
+  ],
+  "aliases": [
+    "introspection opcodes"
+  ]
+}

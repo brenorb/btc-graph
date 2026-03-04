@@ -1,0 +1,37 @@
+{
+  "id": "extension.statechains",
+  "title": "Statechains",
+  "description": "Statechains transfer control of pre-funded outputs between participants with minimal on-chain activity. Their trust and liveness assumptions differ from Lightning and covenant trees.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.segregated-witness",
+    "custody.multisig"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Statechains",
+      "url": "https://covenants.info/use-cases/statechains/",
+      "notes": "Statechain model and limitations."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Statechains",
+      "url": "https://bitcoinops.org/en/topics/statechains/",
+      "notes": "Recent protocol work and critiques."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: statechains",
+      "url": "https://btctranscripts.com/search?filter_tags=statechains",
+      "notes": "Operational concerns and security assumptions."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "statechains"
+  ],
+  "aliases": [
+    "state chains"
+  ]
+}

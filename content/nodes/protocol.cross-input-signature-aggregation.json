@@ -1,0 +1,38 @@
+{
+  "id": "protocol.cross-input-signature-aggregation",
+  "title": "Cross-Input Signature Aggregation (CISA)",
+  "description": "CISA aggregates signatures across multiple inputs to reduce weight and improve coordination efficiency. It introduces new accounting and policy considerations for batch spenders.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.adaptor-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: CISA",
+      "url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/",
+      "notes": "Current proposals and constraints."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: cross-input-signature-aggregation",
+      "url": "https://btctranscripts.com/search?filter_tags=cross-input-signature-aggregation",
+      "notes": "Debates around fee savings and safety assumptions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "aggregation",
+    "fees"
+  ],
+  "aliases": [
+    "cisa"
+  ]
+}

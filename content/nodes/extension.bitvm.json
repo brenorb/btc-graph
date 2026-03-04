@@ -1,0 +1,38 @@
+{
+  "id": "extension.bitvm",
+  "title": "BitVM",
+  "description": "BitVM enables optimistic computation protocols anchored to Bitcoin settlement. It trades covenant requirements for interactive proofs and operational complexity.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.matt-ccv"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info: BitVM",
+      "url": "https://covenants.info/extra/bitvm/",
+      "notes": "Conceptual overview and relation to MATT-like designs."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: bitvm",
+      "url": "https://btctranscripts.com/search?filter_tags=bitvm",
+      "notes": "Technical tradeoff analysis from active researchers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: MATT",
+      "url": "https://bitcoinops.org/en/topics/matt/",
+      "notes": "Adjacent discussion relevant to BitVM design comparisons."
+    }
+  ],
+  "estimatedTime": "90m",
+  "tags": [
+    "bitvm",
+    "contracts"
+  ],
+  "aliases": [
+    "optimistic computation"
+  ]
+}

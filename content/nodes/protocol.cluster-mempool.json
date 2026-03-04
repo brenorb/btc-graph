@@ -1,0 +1,38 @@
+{
+  "id": "protocol.cluster-mempool",
+  "title": "Cluster Mempool",
+  "description": "Cluster mempool tracks package relationships to improve policy decisions and package relay behavior. It aims to make ancestor/descendant handling more predictable under load.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "protocol.mempool",
+    "ops.mempool-policy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Cluster Mempool",
+      "url": "https://bitcoinops.org/en/topics/cluster-mempool/",
+      "notes": "Implementation status and policy impact."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: cluster-mempool",
+      "url": "https://btctranscripts.com/search?filter_tags=cluster-mempool",
+      "notes": "Design goals and edge-case handling discussions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Baseline mempool and relay context for package policy discussions."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "mempool",
+    "relay"
+  ],
+  "aliases": [
+    "clustered mempool"
+  ]
+}

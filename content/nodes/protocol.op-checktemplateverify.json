@@ -1,0 +1,38 @@
+{
+  "id": "protocol.op-checktemplateverify",
+  "title": "OP_CHECKTEMPLATEVERIFY (CTV)",
+  "description": "CTV restricts spending transactions to a committed template hash. This enables deterministic spending trees and scalable pre-planned transaction structures.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.timelocks",
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: CTV",
+      "url": "https://covenants.info/proposals/ctv/",
+      "notes": "Proposal details and covenant motivations."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: OP_CHECKTEMPLATEVERIFY",
+      "url": "https://bitcoinops.org/en/topics/op_checktemplateverify/",
+      "notes": "Ecosystem progress and deployment discussion."
+    },
+    {
+      "type": "article",
+      "title": "BIP 119 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki",
+      "notes": "Specification draft for CTV."
+    }
+  ],
+  "estimatedTime": "90m",
+  "tags": [
+    "ctv",
+    "covenants"
+  ],
+  "aliases": [
+    "ctv"
+  ]
+}

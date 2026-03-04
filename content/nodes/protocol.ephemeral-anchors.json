@@ -1,0 +1,38 @@
+{
+  "id": "protocol.ephemeral-anchors",
+  "title": "Ephemeral Anchors",
+  "description": "Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "lightning.anchor-outputs",
+    "protocol.package-relay"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Ephemeral Anchors",
+      "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+      "notes": "Policy motivation and deployment details."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: ephemeral-anchors",
+      "url": "https://btctranscripts.com/search?filter_tags=ephemeral-anchors",
+      "notes": "Design discussion and operational caveats."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anchor Outputs",
+      "url": "https://bitcoinops.org/en/topics/anchor-outputs/",
+      "notes": "Context for fee-bumping mechanisms in Lightning commitments."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "relay",
+    "lightning"
+  ],
+  "aliases": [
+    "ephemeral anchor outputs"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "extension.congestion-control",
+  "title": "Congestion-Control Trees",
+  "description": "Congestion-control trees pre-structure exits so many users can settle efficiently during fee spikes. They prioritize predictable emergency paths over flexible ad hoc spending.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.transaction-templating",
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Congestion Control",
+      "url": "https://covenants.info/use-cases/congestion-control/",
+      "notes": "Use-case design and execution flow."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: congestion-control",
+      "url": "https://btctranscripts.com/search?filter_tags=congestion-control",
+      "notes": "Discussion of practical deployment constraints."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "fees",
+    "covenants"
+  ],
+  "aliases": [
+    "congestion control trees"
+  ]
+}

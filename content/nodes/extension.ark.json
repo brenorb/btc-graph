@@ -1,0 +1,38 @@
+{
+  "id": "extension.ark",
+  "title": "Ark Protocol",
+  "description": "Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.payment-pools",
+    "lightning.liquidity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Ark",
+      "url": "https://covenants.info/use-cases/ark/",
+      "notes": "Ark motivation and mechanism summary."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Ark",
+      "url": "https://bitcoinops.org/en/topics/ark/",
+      "notes": "Ecosystem updates and implementation notes."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: ark",
+      "url": "https://btctranscripts.com/search?filter_tags=ark",
+      "notes": "Design debates and open questions."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "ark",
+    "scaling"
+  ],
+  "aliases": [
+    "ark protocol"
+  ]
+}

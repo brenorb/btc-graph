@@ -1,0 +1,38 @@
+{
+  "id": "protocol.tluv",
+  "title": "TLUV Proposal",
+  "description": "TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants",
+    "protocol.op-checktemplateverify"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: TLUV",
+      "url": "https://covenants.info/proposals/tluv/",
+      "notes": "Proposal overview and comparative tradeoffs."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: tluv",
+      "url": "https://btctranscripts.com/search?filter_tags=tluv",
+      "notes": "Technical discussion and criticism from protocol contributors."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "covenants",
+    "proposals"
+  ],
+  "aliases": [
+    "tluv"
+  ]
+}

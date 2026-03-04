@@ -1,0 +1,37 @@
+{
+  "id": "extension.spacechains",
+  "title": "Spacechains",
+  "description": "Spacechains anchor external consensus data to Bitcoin while preserving independent execution environments. They use Bitcoin finality as a settlement root without full smart-contract expressiveness.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.proof-of-work",
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Spacechains",
+      "url": "https://covenants.info/use-cases/spacechains/",
+      "notes": "Concept and intended construction patterns."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: spacechains",
+      "url": "https://btctranscripts.com/search?filter_tags=spacechains",
+      "notes": "Research discourse on assumptions and tradeoffs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "spacechains"
+  ],
+  "aliases": [
+    "space chains"
+  ]
+}

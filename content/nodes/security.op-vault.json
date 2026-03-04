@@ -1,0 +1,39 @@
+{
+  "id": "security.op-vault",
+  "title": "OP_VAULT Proposal",
+  "description": "OP_VAULT proposes native covenant support for delayed recovery and theft mitigation flows. It is designed to make vault policies safer and simpler to deploy.",
+  "category": "Security",
+  "prerequisites": [
+    "protocol.covenants",
+    "protocol.timelocks",
+    "custody.self-custody"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: OP_VAULT",
+      "url": "https://covenants.info/proposals/op-vault/",
+      "notes": "Proposal rationale and expected security properties."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: op-vault",
+      "url": "https://btctranscripts.com/search?filter_tags=op-vault",
+      "notes": "Design discussions and policy implications."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "vaults",
+    "custody"
+  ],
+  "aliases": [
+    "op vault"
+  ]
+}

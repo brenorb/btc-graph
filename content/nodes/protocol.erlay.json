@@ -1,0 +1,38 @@
+{
+  "id": "protocol.erlay",
+  "title": "Erlay Transaction Relay",
+  "description": "Erlay reduces transaction relay bandwidth while preserving propagation robustness. It changes gossip behavior to scale peer connectivity more efficiently.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "protocol.transaction-relay-inv-getdata",
+    "ops.peer-discovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Erlay",
+      "url": "https://bitcoinops.org/en/topics/erlay/",
+      "notes": "Design and rollout considerations."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: erlay",
+      "url": "https://btctranscripts.com/search?filter_tags=erlay",
+      "notes": "Engineering discussion around relay efficiency."
+    },
+    {
+      "type": "article",
+      "title": "BIP 330 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0330.mediawiki",
+      "notes": "Protocol specification draft for Erlay."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "p2p",
+    "relay"
+  ],
+  "aliases": [
+    "erlay"
+  ]
+}

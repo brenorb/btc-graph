@@ -1,0 +1,38 @@
+{
+  "id": "extension.great-script-restoration",
+  "title": "The Great Script Restoration",
+  "description": "The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.script-basics",
+    "protocol.op-cat"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info: The Great Script Restoration",
+      "url": "https://covenants.info/extra/gsr/",
+      "notes": "Project motivation and roadmap."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: great-script-restoration",
+      "url": "https://btctranscripts.com/search?filter_tags=great-script-restoration",
+      "notes": "Community discussion on safety and utility."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "script",
+    "gsr"
+  ],
+  "aliases": [
+    "gsr"
+  ]
+}

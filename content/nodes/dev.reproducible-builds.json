@@ -1,0 +1,38 @@
+{
+  "id": "dev.reproducible-builds",
+  "title": "Reproducible Builds",
+  "description": "Reproducible builds let independent parties verify that released binaries match source code. They reduce supply-chain trust assumptions for wallet and node software.",
+  "category": "Security",
+  "prerequisites": [
+    "ops.run-full-node",
+    "dev.wallet-development"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Reproducible Builds",
+      "url": "https://bitcoinops.org/en/topics/reproducible-builds/",
+      "notes": "Ecosystem context and ongoing engineering work."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: reproducible-builds",
+      "url": "https://btctranscripts.com/search?filter_tags=reproducible-builds",
+      "notes": "Engineering process details and verification workflows."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Release Process",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/release-process.md",
+      "notes": "Practical release-signing and verification guidance."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "builds",
+    "supply chain"
+  ],
+  "aliases": [
+    "deterministic builds"
+  ]
+}

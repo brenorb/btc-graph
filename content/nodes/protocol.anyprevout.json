@@ -1,0 +1,38 @@
+{
+  "id": "protocol.anyprevout",
+  "title": "SIGHASH_ANYPREVOUT",
+  "description": "ANYPREVOUT changes signature commitment semantics so updates can bind less history. It is a key enabler for eltoo-style channel update protocols.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.sighash-flags",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Proposal: ANYPREVOUT",
+      "url": "https://covenants.info/proposals/apo/",
+      "notes": "Proposal framing and relation to other covenant primitives."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: SIGHASH_ANYPREVOUT",
+      "url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
+      "notes": "Implementation and deployment considerations."
+    },
+    {
+      "type": "article",
+      "title": "BIP 118 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki",
+      "notes": "Specification draft for ANYPREVOUT signature flags."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "sighash",
+    "eltoo"
+  ],
+  "aliases": [
+    "anyprevout"
+  ]
+}

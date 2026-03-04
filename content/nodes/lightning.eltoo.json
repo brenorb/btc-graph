@@ -1,0 +1,38 @@
+{
+  "id": "lightning.eltoo",
+  "title": "Eltoo Channel Updates",
+  "description": "Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.anyprevout",
+    "lightning.commitment-transactions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Eltoo",
+      "url": "https://bitcoinops.org/en/topics/eltoo/",
+      "notes": "Historical and current status of eltoo research."
+    },
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Eltoo / LN-Symmetry",
+      "url": "https://covenants.info/use-cases/eltoo/",
+      "notes": "How eltoo fits into broader covenant design space."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: eltoo",
+      "url": "https://btctranscripts.com/search?filter_tags=eltoo",
+      "notes": "Technical details and protocol migration discussion."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "lightning",
+    "eltoo"
+  ],
+  "aliases": [
+    "ln symmetry"
+  ]
+}

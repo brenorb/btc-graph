@@ -1,0 +1,38 @@
+{
+  "id": "protocol.op-codeseparator",
+  "title": "OP_CODESEPARATOR",
+  "description": "OP_CODESEPARATOR changes the script segment committed by signature hashing. Its behavior is subtle and historically important for advanced script correctness.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.sighash-flags",
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Opcode Explained: OP_CODESEPARATOR",
+      "url": "https://opcodeexplained.com/opcodes/op_codeseparator",
+      "notes": "Exact execution and signature-hash effects."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: codeseparator",
+      "url": "https://btctranscripts.com/search?filter_tags=codeseparator",
+      "notes": "Practical concerns raised by wallet and protocol developers."
+    },
+    {
+      "type": "article",
+      "title": "BIP 143: SegWit Signature Hash",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+      "notes": "Context on signature hashing changes and script-code handling."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "sighash",
+    "script"
+  ],
+  "aliases": [
+    "codeseparator"
+  ]
+}

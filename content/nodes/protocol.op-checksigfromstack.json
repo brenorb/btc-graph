@@ -1,0 +1,38 @@
+{
+  "id": "protocol.op-checksigfromstack",
+  "title": "OP_CHECKSIGFROMSTACK",
+  "description": "OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script-basics",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: OP_CHECKSIGFROMSTACK",
+      "url": "https://bitcoinops.org/en/topics/op_checksigfromstack/",
+      "notes": "Historical proposals and modern usage context."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: op-checksigfromstack",
+      "url": "https://btctranscripts.com/search?filter_tags=op-checksigfromstack",
+      "notes": "Protocol discussions around feasibility and risk."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+      "notes": "Practical walkthrough of Script and transaction construction from first principles."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "script",
+    "opcodes"
+  ],
+  "aliases": [
+    "checksigfromstack"
+  ]
+}

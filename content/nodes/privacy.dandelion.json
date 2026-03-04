@@ -1,0 +1,38 @@
+{
+  "id": "privacy.dandelion",
+  "title": "Dandelion Transaction Propagation",
+  "description": "Dandelion-style relay separates diffusion phases to reduce origin-linkability. It is a network-level privacy strategy with deployment and adversarial-model tradeoffs.",
+  "category": "Security",
+  "prerequisites": [
+    "privacy.network-privacy",
+    "protocol.transaction-relay-inv-getdata"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Dandelion",
+      "url": "https://bitcoinops.org/en/topics/dandelion/",
+      "notes": "Design motivations and implementation history."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: dandelion",
+      "url": "https://btctranscripts.com/search?filter_tags=dandelion",
+      "notes": "Practical challenges and threat-model discussion."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "privacy",
+    "relay"
+  ],
+  "aliases": [
+    "dandelion relay"
+  ]
+}

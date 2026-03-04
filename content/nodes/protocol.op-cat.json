@@ -1,0 +1,37 @@
+{
+  "id": "protocol.op-cat",
+  "title": "OP_CAT",
+  "description": "OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Opcode Explained: OP_CAT",
+      "url": "https://opcodeexplained.com/opcodes/op_cat",
+      "notes": "Byte-level semantics and execution behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: OP_CAT",
+      "url": "https://bitcoinops.org/en/topics/op_cat/",
+      "notes": "Activation and policy discussion."
+    },
+    {
+      "type": "article",
+      "title": "Covenants.info: OP_CAT",
+      "url": "https://covenants.info/extra/cat/",
+      "notes": "How OP_CAT fits into current covenant research."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "script",
+    "opcodes"
+  ],
+  "aliases": [
+    "cat opcode"
+  ]
+}

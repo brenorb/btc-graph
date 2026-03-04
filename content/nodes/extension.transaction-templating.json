@@ -1,0 +1,38 @@
+{
+  "id": "extension.transaction-templating",
+  "title": "Transaction Templating",
+  "description": "Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.op-checktemplateverify",
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Transaction Templating",
+      "url": "https://covenants.info/use-cases/tx-templating/",
+      "notes": "Primary use-case walkthrough."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: transaction-templating",
+      "url": "https://btctranscripts.com/search?filter_tags=transaction-templating",
+      "notes": "Technical tradeoffs and deployment discussions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "templates",
+    "covenants"
+  ],
+  "aliases": [
+    "tx templating"
+  ]
+}

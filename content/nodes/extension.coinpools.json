@@ -1,0 +1,38 @@
+{
+  "id": "extension.coinpools",
+  "title": "Coinpools",
+  "description": "Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.payment-pools",
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BTC Transcripts: coinpools",
+      "url": "https://btctranscripts.com/search?filter_tags=coinpools",
+      "notes": "Research and implementation discussions."
+    },
+    {
+      "type": "article",
+      "title": "Covenants.info Use Case: Payment Pools",
+      "url": "https://covenants.info/use-cases/payment-pools/",
+      "notes": "Related shared-UTXO architecture patterns."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin (Amazon)",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "coinpools",
+    "scaling"
+  ],
+  "aliases": [
+    "coin pools"
+  ]
+}

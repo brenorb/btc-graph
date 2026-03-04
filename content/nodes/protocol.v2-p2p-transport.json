@@ -1,0 +1,38 @@
+{
+  "id": "protocol.v2-p2p-transport",
+  "title": "V2 P2P Transport (BIP324)",
+  "description": "V2 transport encrypts peer-to-peer traffic and improves handshake behavior. It reduces passive metadata leakage and hardens network communications.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "protocol.transaction-relay-inv-getdata",
+    "protocol.addr-v2-bip155"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: V2 P2P Transport",
+      "url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
+      "notes": "Deployment guidance and compatibility notes."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: v2-p2p-transport",
+      "url": "https://btctranscripts.com/search?filter_tags=v2-p2p-transport",
+      "notes": "Detailed protocol and implementation conversation."
+    },
+    {
+      "type": "article",
+      "title": "BIP 324 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki",
+      "notes": "Transport v2 protocol draft."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "p2p",
+    "encryption"
+  ],
+  "aliases": [
+    "bip324"
+  ]
+}

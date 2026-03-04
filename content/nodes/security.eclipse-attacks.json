@@ -1,0 +1,37 @@
+{
+  "id": "security.eclipse-attacks",
+  "title": "Eclipse Attacks",
+  "description": "Eclipse attacks isolate a node from honest peers to manipulate its view of the network. Mitigation requires peer diversity, routing hygiene, and robust eviction policy.",
+  "category": "Security",
+  "prerequisites": [
+    "ops.peer-discovery",
+    "privacy.network-privacy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Eclipse Attacks",
+      "url": "https://bitcoinops.org/en/topics/eclipse-attacks/",
+      "notes": "Attack mechanics and mitigation guidance."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: eclipse-attacks",
+      "url": "https://btctranscripts.com/search?filter_tags=eclipse-attacks",
+      "notes": "Operational lessons from node operators and researchers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Baseline peer-to-peer behavior needed to reason about eclipse vectors."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "network security"
+  ],
+  "aliases": [
+    "eclipse attack"
+  ]
+}
