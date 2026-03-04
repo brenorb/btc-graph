@@ -16,6 +16,13 @@ import {
   encodeViewStateToQuery,
   reconcileViewState,
 } from "./core/url-state";
+import {
+  deriveNextProgressState,
+  resolveLabelText,
+  resolveInitialTheme,
+  resolveNextTheme,
+  type LabelVisibilityMode,
+} from "./core/ui-state";
 import type {
   GraphData,
   GraphNode,
@@ -55,6 +62,7 @@ interface AppState {
   categories: string[];
   categoryColors: Map<string, string>;
   storage: StorageLike | undefined;
+  labelVisibilityMode: LabelVisibilityMode;
 }
 
 function buildIssueUrl(title: string, body: string) {
@@ -115,6 +123,10 @@ function createLayout(root: HTMLElement) {
             <div id="search-results" class="search-results" role="listbox"></div>
           </div>
           <button class="btn" id="clear-filters">Reset filters</button>
+          <div class="label-controls">
+            <button class="btn" id="show-all-labels" type="button">Show all labels</button>
+            <button class="btn" id="hide-all-labels" type="button">Hide all labels</button>
+          </div>
           <button class="btn" id="export-progress">Export progress</button>
           <label class="btn" for="import-progress-input">Import progress</label>
           <input id="import-progress-input" type="file" accept="application/json" hidden />
@@ -127,6 +139,36 @@ function createLayout(root: HTMLElement) {
         <div class="mobile-sheet-handle"></div>
         <div id="detail-content" class="meta">Select a node to inspect prerequisites, resources, and progress.</div>
       </aside>
+
+      <footer class="site-footer">
+        <div class="footer-main">
+          <div class="footer-title">Bitcoin Learning Graph</div>
+          <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
+          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
+          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
+          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+        </div>
+        <div class="footer-socials" aria-label="Social links">
+          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.31 6.84 9.66.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.74-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .08 1.53 1.05 1.53 1.05.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.09 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.06A9.36 9.36 0 0 1 12 6.84c.85 0 1.7.12 2.5.35 1.91-1.34 2.75-1.06 2.75-1.06.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.77 0 3.96-2.35 4.82-4.58 5.08.36.31.67.93.67 1.87 0 1.35-.01 2.43-.01 2.76 0 .27.18.6.69.49A10.22 10.22 0 0 0 22 12.22C22 6.58 17.52 2 12 2z"/>
+            </svg>
+          </a>
+          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://nostr.com" aria-label="Nostr">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 2.2 6.9 3.84L12 11.9 5.1 8.04 12 4.2zm-7 5.51 6 3.34v6.78l-6-3.33V9.71zm14 0v6.79l-6 3.33v-6.78l6-3.34z"/>
+            </svg>
+          </a>
+          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://x.com/search?q=btc%20graph" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.9 2H22l-6.77 7.73L23.2 22h-6.27l-4.91-6.43L6.4 22H3.3l7.24-8.26L.8 2h6.43l4.45 5.88L18.9 2zm-1.1 18h1.73L6.33 3.9H4.48L17.8 20z"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
     </div>
   `;
 
@@ -145,7 +187,7 @@ function createLayout(root: HTMLElement) {
         "",
         "## Dependencies",
         "- Prerequisite node ids:",
-        "- Related/attached node ids:",
+        "- Post-requisite node ids (nodes that depend on this concept):",
         "",
         "## Resources",
         "- Resource links:",
@@ -176,16 +218,18 @@ function getSafeStorage(): StorageLike | undefined {
   }
 }
 
-function themeSetup(root: HTMLElement, storage: StorageLike | undefined) {
+function themeSetup(storage: StorageLike | undefined) {
+  const themeRoot = document.documentElement;
   const stored = storage?.getItem("btc-graph-theme") ?? null;
   const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = stored ?? (preferredDark ? "dark" : "light");
-  root.dataset.theme = theme;
+  const theme = resolveInitialTheme(stored, preferredDark);
+  themeRoot.dataset.theme = theme;
 
-  const button = root.querySelector<HTMLButtonElement>("#theme-toggle");
+  const button = document.querySelector<HTMLButtonElement>("#theme-toggle");
   button?.addEventListener("click", () => {
-    const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-    root.dataset.theme = nextTheme;
+    const currentTheme = themeRoot.dataset.theme === "dark" ? "dark" : "light";
+    const nextTheme = resolveNextTheme(currentTheme);
+    themeRoot.dataset.theme = nextTheme;
     try {
       storage?.setItem("btc-graph-theme", nextTheme);
     } catch {
@@ -195,10 +239,16 @@ function themeSetup(root: HTMLElement, storage: StorageLike | undefined) {
 }
 
 function setProgress(state: AppState, nodeId: string, next: ProgressState) {
-  state.progress[nodeId] = {
-    state: next,
-    updatedAt: new Date().toISOString(),
-  };
+  const current = state.progress[nodeId]?.state ?? null;
+  const resolved = deriveNextProgressState(current, next);
+  if (!resolved) {
+    delete state.progress[nodeId];
+  } else {
+    state.progress[nodeId] = {
+      state: resolved,
+      updatedAt: new Date().toISOString(),
+    };
+  }
   saveProgressState(state.storage, state.progress);
 }
 
@@ -244,7 +294,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
 
   panel.classList.add("open");
 
-  const currentState = state.progress[node.id]?.state ?? "need_to_learn";
+  const currentState = state.progress[node.id]?.state ?? null;
   const gaps = detectGaps(state.data, state.progress, node.id);
 
   const resources =
@@ -287,7 +337,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
     </div>
     <p>${node.description}</p>
     <div class="meta"><strong>Prerequisites:</strong> ${node.prerequisites.join(", ") || "None"}</div>
-    <div class="meta"><strong>Unlocks:</strong> ${state.data.nodes
+    <div class="meta"><strong>Post-requisites (depends on this concept):</strong> ${state.data.nodes
       .filter((candidate) => candidate.prerequisites.includes(node.id))
       .map((candidate) => candidate.id)
       .join(", ") || "None"}</div>
@@ -300,6 +350,11 @@ function renderDetails(state: AppState, root: HTMLElement) {
 
     <div>
       <div class="meta">Progress state</div>
+      <div class="meta">${
+        currentState
+          ? `Selected: ${PROGRESS_LABELS[currentState]}`
+          : "No explicit state selected (default graph style is Need to learn)."
+      }</div>
       <div class="progress-controls">
         ${Object.entries(PROGRESS_LABELS)
           .map(([value, label]) => {
@@ -340,13 +395,20 @@ function syncNodeClasses(state: AppState) {
 }
 
 function refreshLabels(state: AppState) {
-  const zoom = state.cy.zoom();
-  const showAll = zoom >= 1.15;
   for (const node of state.cy.nodes()) {
     const title = node.data("title");
     const isHovered = Boolean(node.data("hovered"));
-    node.data("label", showAll || isHovered ? title : "");
+    node.data("label", resolveLabelText(state.labelVisibilityMode, title, isHovered));
   }
+}
+
+function renderLabelControls(state: AppState, root: HTMLElement) {
+  const showButton = root.querySelector<HTMLButtonElement>("#show-all-labels");
+  const hideButton = root.querySelector<HTMLButtonElement>("#hide-all-labels");
+  if (!showButton || !hideButton) return;
+
+  showButton.classList.toggle("primary", state.labelVisibilityMode === "all");
+  hideButton.classList.toggle("primary", state.labelVisibilityMode === "none");
 }
 
 function renderSearch(state: AppState, root: HTMLElement) {
@@ -501,6 +563,7 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   }).run();
 
   refreshLabels(state);
+  renderLabelControls(state, root);
   renderLegend(state, root, () => rerenderGraph(state, root));
   renderDetails(state, root);
   syncUrlState(state);
@@ -525,10 +588,6 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     refreshLabels(state);
   });
 
-  state.cy.on("zoom", () => {
-    refreshLabels(state);
-  });
-
   root.querySelector<HTMLInputElement>("#search-input")?.addEventListener("input", () => {
     renderSearch(state, root);
   });
@@ -536,6 +595,18 @@ function wireInteractions(state: AppState, root: HTMLElement) {
   root.querySelector<HTMLButtonElement>("#clear-filters")?.addEventListener("click", () => {
     state.hiddenCategories.clear();
     rerenderGraph(state, root);
+  });
+
+  root.querySelector<HTMLButtonElement>("#show-all-labels")?.addEventListener("click", () => {
+    state.labelVisibilityMode = "all";
+    refreshLabels(state);
+    renderLabelControls(state, root);
+  });
+
+  root.querySelector<HTMLButtonElement>("#hide-all-labels")?.addEventListener("click", () => {
+    state.labelVisibilityMode = "none";
+    refreshLabels(state);
+    renderLabelControls(state, root);
   });
 
   document.addEventListener("click", (event) => {
@@ -565,11 +636,11 @@ function createGraph(container: HTMLElement) {
           height: 26,
           shape: "ellipse",
           label: "data(label)",
-          "font-size": 8,
+          "font-size": 11,
           "text-wrap": "wrap",
-          "text-max-width": 140,
+          "text-max-width": 160,
           "text-valign": "top",
-          "text-margin-y": -8,
+          "text-margin-y": -10,
           "background-color": "data(color)",
           color: "#243041",
           "border-width": 1,
@@ -626,7 +697,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
 
   createLayout(root);
   const storage = getSafeStorage();
-  themeSetup(root, storage);
+  themeSetup(storage);
 
   let data: GraphData;
   try {
@@ -652,6 +723,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     categories,
     categoryColors,
     storage,
+    labelVisibilityMode: "all",
   };
 
   const fromUrl = readViewStateFromUrl(state);
