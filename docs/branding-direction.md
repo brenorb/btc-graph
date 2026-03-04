@@ -23,6 +23,7 @@ This product is a public learning map, not a trading dashboard. The interface sh
 - Status controls are intentionally strong and high contrast.
 - Gap states are warm alert blocks, not destructive errors.
 - Overview counters make progress legible at a glance.
+- Selected concept context stays visible in the graph (node + direct neighborhood), so orientation is never lost.
 
 4. Distinctive signature
 - The header behaves like a mission card: `Proof of Learning` + atlas title + live concept/branch counts.

@@ -48,3 +48,21 @@
 1. Add branch-specific iconography in legend chips.
 2. Add subtle node-entry animation when filters change.
 3. Add an explicit “learning streak” stat once progress dates are used in UI.
+
+## Iteration 2 improvements (post-merge polish)
+1. Graph readability
+- Increased dagre spacing and added viewport fitting after each graph rerender to avoid compressed “bottom strip” rendering.
+- Added selection-context labels: selected node and its direct neighbors now stay labeled at lower zoom.
+
+2. Selection focus mode
+- Added focused-node visual mode in Cytoscape:
+  - selected node gets strong orange emphasis
+  - direct neighbors get green ring emphasis
+  - connected prerequisite edges get highlighted
+
+3. Category tone discipline
+- Added explicit category-to-color mapping for known branches to keep palette stable and intentional across sessions.
+
+4. Map-stage atmosphere
+- Wrapped graph in a dedicated stage container with instructional hint overlay.
+- Strengthened graph background with subtle contour/grid layers and accent lighting for depth.
