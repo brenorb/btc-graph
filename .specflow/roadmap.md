@@ -168,7 +168,7 @@ Exit criteria:
 - `npm run check:links` passes.
 - `npm run build` passes.
 
-## Phase 11: Layout, Accessibility, and Foundations Math Expansion
+## Phase 12: Layout, Accessibility, and Foundations Math Expansion
 Goal: resolve remaining graph usability bugs (layout/label readability/category bulk filtering/dark-mode contrast) and add missing foundational math/cryptography prerequisites for Bitcoin learners using the project source catalog.
 
 Deliverables:
@@ -178,11 +178,11 @@ Deliverables:
 - Dark-mode text readability fixes for graph labels and resource links.
 - New foundational nodes for modular arithmetic, finite fields, Fermat's little theorem, discrete logarithms, elliptic-curve cryptography, secp256k1, and signature primitives.
 - Phase-specific tests for UI helpers/config and required foundational node IDs/prerequisites.
-- Independent no-context review and fix-pass docs in `.specflow/phases/phase-11/`.
+- Independent no-context review and fix-pass docs in `.specflow/phases/phase-12/`.
 
 Exit criteria:
 - `npm test` passes.
 - `npm run build:data` passes.
 - `npm run check:links` passes.
 - `npm run build` passes.
-- Site is deployed on GitHub Pages with phase-11 updates.
+- Site is deployed on GitHub Pages with phase-12 updates.
