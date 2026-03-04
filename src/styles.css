@@ -8,6 +8,7 @@
   --text: #1d2738;
   --muted: #5e6d86;
   --accent: #0f766e;
+  --link: #0f766e;
   --danger: #c2410c;
   --ok: #166534;
   --shadow: 0 12px 28px rgba(5, 18, 35, 0.12);
@@ -23,6 +24,7 @@
   --text: #e9efff;
   --muted: #9bb0d9;
   --accent: #2dd4bf;
+  --link: #8cd9ff;
   --danger: #fdba74;
   --ok: #86efac;
   --shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
@@ -200,6 +202,7 @@ input {
   border: 1px solid var(--panel-border);
   background: rgba(255, 255, 255, 0.48);
   font-size: 0.8rem;
+  color: var(--text);
   cursor: pointer;
 }
 
@@ -283,6 +286,16 @@ input {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
+}
+
+.resource a,
+.detail-panel a:not(.btn) {
+  color: var(--link);
+}
+
+.resource a:hover,
+.detail-panel a:not(.btn):hover {
+  color: color-mix(in srgb, var(--link) 88%, white);
 }
 
 .search-results {

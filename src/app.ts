@@ -17,11 +17,13 @@ import {
   reconcileViewState,
 } from "./core/url-state";
 import {
+  applyCategoryBulkAction,
   deriveNextProgressState,
+  resolveGraphColorPalette,
+  resolveGraphLayoutSettings,
   resolveLabelText,
   resolveInitialTheme,
   resolveNextTheme,
-  type LabelVisibilityMode,
 } from "./core/ui-state";
 import type {
   GraphData,
@@ -62,7 +64,6 @@ interface AppState {
   categories: string[];
   categoryColors: Map<string, string>;
   storage: StorageLike | undefined;
-  labelVisibilityMode: LabelVisibilityMode;
 }
 
 function buildIssueUrl(title: string, body: string) {
@@ -124,8 +125,8 @@ function createLayout(root: HTMLElement) {
           </div>
           <button class="btn" id="clear-filters">Reset filters</button>
           <div class="label-controls">
-            <button class="btn" id="show-all-labels" type="button">Show all labels</button>
-            <button class="btn" id="hide-all-labels" type="button">Hide all labels</button>
+            <button class="btn" id="select-all-categories" type="button">Select all categories</button>
+            <button class="btn" id="deselect-all-categories" type="button">Deselect all categories</button>
           </div>
           <button class="btn" id="export-progress">Export progress</button>
           <label class="btn" for="import-progress-input">Import progress</label>
@@ -395,20 +396,25 @@ function syncNodeClasses(state: AppState) {
 }
 
 function refreshLabels(state: AppState) {
+  const denseLabelThreshold = 1.4;
+  const showDenseLabels = state.cy.zoom() >= denseLabelThreshold;
+
   for (const node of state.cy.nodes()) {
     const title = node.data("title");
     const isHovered = Boolean(node.data("hovered"));
-    node.data("label", resolveLabelText(state.labelVisibilityMode, title, isHovered));
+    const isSelected = node.id() === state.selectedId;
+    const mode = showDenseLabels || isHovered || isSelected ? "all" : "none";
+    node.data("label", resolveLabelText(mode, title, isHovered));
   }
 }
 
-function renderLabelControls(state: AppState, root: HTMLElement) {
-  const showButton = root.querySelector<HTMLButtonElement>("#show-all-labels");
-  const hideButton = root.querySelector<HTMLButtonElement>("#hide-all-labels");
-  if (!showButton || !hideButton) return;
+function renderCategoryBulkControls(state: AppState, root: HTMLElement) {
+  const selectAllButton = root.querySelector<HTMLButtonElement>("#select-all-categories");
+  const deselectAllButton = root.querySelector<HTMLButtonElement>("#deselect-all-categories");
+  if (!selectAllButton || !deselectAllButton) return;
 
-  showButton.classList.toggle("primary", state.labelVisibilityMode === "all");
-  hideButton.classList.toggle("primary", state.labelVisibilityMode === "none");
+  selectAllButton.classList.toggle("primary", state.hiddenCategories.size === 0);
+  deselectAllButton.classList.toggle("primary", state.hiddenCategories.size === state.categories.length);
 }
 
 function renderSearch(state: AppState, root: HTMLElement) {
@@ -455,6 +461,9 @@ function renderSearch(state: AppState, root: HTMLElement) {
 }
 
 function computeElements(state: AppState) {
+  const palette = resolveGraphColorPalette(
+    document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+  );
   const filtered = filterGraphByCategories(state.data, state.hiddenCategories);
   const contextualIds = new Set(filtered.contextualNodes.map((node) => node.id));
   const strictVisibleIds = new Set(filtered.visibleNodes.map((node) => node.id));
@@ -467,8 +476,11 @@ function computeElements(state: AppState) {
       label: "",
       contextual: contextualIds.has(node.id),
       color: contextualIds.has(node.id)
-        ? "#9ca3af"
+        ? palette.contextualNodeFill
         : getCategoryColor(node.category, state.categoryColors),
+      borderColor: palette.nodeBorder,
+      labelColor: palette.nodeLabel,
+      labelBackgroundColor: palette.labelBackground,
     },
   }));
 
@@ -481,11 +493,36 @@ function computeElements(state: AppState) {
           id: `${prerequisite}->${node.id}`,
           source: prerequisite,
           target: node.id,
+          lineColor: palette.edge,
+          opacity:
+            contextualIds.has(prerequisite) || contextualIds.has(node.id)
+              ? 0.45
+              : 0.74,
         },
       })),
   );
 
   return { nodes, edges, strictVisibleIds };
+}
+
+function applyGraphTheme(state: AppState) {
+  const palette = resolveGraphColorPalette(
+    document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+  );
+
+  for (const node of state.cy.nodes()) {
+    node.data("labelColor", palette.nodeLabel);
+    node.data("labelBackgroundColor", palette.labelBackground);
+    node.data("borderColor", palette.nodeBorder);
+
+    if (Boolean(node.data("contextual"))) {
+      node.data("color", palette.contextualNodeFill);
+    }
+  }
+
+  for (const edge of state.cy.edges()) {
+    edge.data("lineColor", palette.edge);
+  }
 }
 
 function wireExportImport(state: AppState, root: HTMLElement) {
@@ -553,17 +590,10 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   state.cy.add([...elements.nodes, ...elements.edges]);
   syncNodeClasses(state);
 
-  state.cy.layout({
-    name: "dagre",
-    rankDir: "BT",
-    nodeSep: 34,
-    rankSep: 48,
-    edgeSep: 12,
-    animate: false,
-  }).run();
+  state.cy.layout(resolveGraphLayoutSettings()).run();
 
   refreshLabels(state);
-  renderLabelControls(state, root);
+  renderCategoryBulkControls(state, root);
   renderLegend(state, root, () => rerenderGraph(state, root));
   renderDetails(state, root);
   syncUrlState(state);
@@ -588,6 +618,10 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     refreshLabels(state);
   });
 
+  state.cy.on("zoom", () => {
+    refreshLabels(state);
+  });
+
   root.querySelector<HTMLInputElement>("#search-input")?.addEventListener("input", () => {
     renderSearch(state, root);
   });
@@ -597,16 +631,21 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     rerenderGraph(state, root);
   });
 
-  root.querySelector<HTMLButtonElement>("#show-all-labels")?.addEventListener("click", () => {
-    state.labelVisibilityMode = "all";
-    refreshLabels(state);
-    renderLabelControls(state, root);
+  root.querySelector<HTMLButtonElement>("#select-all-categories")?.addEventListener("click", () => {
+    state.hiddenCategories = applyCategoryBulkAction(state.categories, "select_all");
+    rerenderGraph(state, root);
   });
 
-  root.querySelector<HTMLButtonElement>("#hide-all-labels")?.addEventListener("click", () => {
-    state.labelVisibilityMode = "none";
-    refreshLabels(state);
-    renderLabelControls(state, root);
+  root.querySelector<HTMLButtonElement>("#deselect-all-categories")?.addEventListener("click", () => {
+    state.hiddenCategories = applyCategoryBulkAction(state.categories, "deselect_all");
+    rerenderGraph(state, root);
+  });
+
+  root.querySelector<HTMLButtonElement>("#theme-toggle")?.addEventListener("click", () => {
+    window.requestAnimationFrame(() => {
+      applyGraphTheme(state);
+      refreshLabels(state);
+    });
   });
 
   document.addEventListener("click", (event) => {
@@ -636,26 +675,30 @@ function createGraph(container: HTMLElement) {
           height: 26,
           shape: "ellipse",
           label: "data(label)",
-          "font-size": 11,
+          "font-size": 10,
           "text-wrap": "wrap",
-          "text-max-width": 160,
-          "text-valign": "top",
-          "text-margin-y": -10,
+          "text-max-width": 120,
+          "text-valign": "bottom",
+          "text-margin-y": 8,
           "background-color": "data(color)",
-          color: "#243041",
+          color: "data(labelColor)",
+          "text-background-color": "data(labelBackgroundColor)",
+          "text-background-opacity": 0.84,
+          "text-background-padding": 3,
+          "text-background-shape": "roundrectangle",
           "border-width": 1,
-          "border-color": "#ffffff",
+          "border-color": "data(borderColor)",
         },
       },
       {
         selector: "edge",
         style: {
           width: 1.2,
-          "line-color": "#b4becf",
+          "line-color": "data(lineColor)",
           "target-arrow-shape": "triangle",
-          "target-arrow-color": "#b4becf",
+          "target-arrow-color": "data(lineColor)",
           "curve-style": "bezier",
-          opacity: 0.72,
+          opacity: "data(opacity)",
         },
       },
       {
@@ -663,8 +706,6 @@ function createGraph(container: HTMLElement) {
         style: {
           opacity: 0.55,
           "border-color": "#6b7280",
-          "line-color": "#9ca3af",
-          "target-arrow-color": "#9ca3af",
         },
       },
       {
@@ -723,7 +764,6 @@ export async function bootstrapApp(root: HTMLElement | null) {
     categories,
     categoryColors,
     storage,
-    labelVisibilityMode: "all",
   };
 
   const fromUrl = readViewStateFromUrl(state);
