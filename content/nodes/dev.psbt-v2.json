@@ -2,7 +2,7 @@
   "id": "dev.psbt-v2",
   "title": "PSBT v2",
   "description": "The v2 evolution of PSBT that improves transaction construction semantics and interoperability.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "custody.psbt",
     "dev.descriptors"

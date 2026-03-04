@@ -2,7 +2,7 @@
   "id": "protocol.headers-first-sync",
   "title": "Headers-First Synchronization",
   "description": "How nodes download and validate block headers before fetching full blocks during initial sync.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.initial-block-download",
     "dev.p2p-messages"

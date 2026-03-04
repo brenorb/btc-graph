@@ -2,7 +2,7 @@
   "id": "protocol.block-structure",
   "title": "Block Structure",
   "description": "Header fields, merkle root, and block composition.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "fundamentals.merkle-trees",
     "protocol.proof-of-work"

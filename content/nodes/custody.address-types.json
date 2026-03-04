@@ -2,7 +2,7 @@
   "id": "custody.address-types",
   "title": "Address Types",
   "description": "Legacy, SegWit, and modern output encoding differences.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "protocol.addresses-outputs"
   ],

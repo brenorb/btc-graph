@@ -2,7 +2,7 @@
   "id": "privacy.change-detection",
   "title": "Change Output Detection",
   "description": "How analysts identify probable change outputs and why output structure discipline matters for privacy.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.chain-analysis-heuristics",
     "privacy.coin-control"

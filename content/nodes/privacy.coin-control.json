@@ -2,7 +2,7 @@
   "id": "privacy.coin-control",
   "title": "Coin Control",
   "description": "Manual UTXO selection to optimize privacy and fee outcomes.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "protocol.utxo-model",
     "protocol.fee-market"

@@ -2,7 +2,7 @@
   "id": "dev.descriptor-wallet-imports",
   "title": "Descriptor Wallet Imports",
   "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.output-script-descriptors",
     "dev.bip32"

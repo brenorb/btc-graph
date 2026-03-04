@@ -2,7 +2,7 @@
   "id": "ops.electrum-server",
   "title": "Electrum Server",
   "description": "Serving wallet queries from your own verified node stack.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node"
   ],

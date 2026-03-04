@@ -2,7 +2,7 @@
   "id": "ops.asmap",
   "title": "ASMAP Peer Diversity",
   "description": "Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.peer-discovery"
   ],

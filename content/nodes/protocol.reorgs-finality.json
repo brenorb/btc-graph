@@ -2,7 +2,7 @@
   "id": "protocol.reorgs-finality",
   "title": "Reorgs and Finality",
   "description": "Probabilistic finality and chain reorganization behavior.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.block-structure",
     "protocol.consensus-rules"

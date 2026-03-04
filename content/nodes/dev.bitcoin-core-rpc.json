@@ -2,7 +2,7 @@
   "id": "dev.bitcoin-core-rpc",
   "title": "Bitcoin Core RPC",
   "description": "Programmatic interaction with node functionality.",
-  "category": "Development",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node"
   ],

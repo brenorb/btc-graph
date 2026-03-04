@@ -2,7 +2,7 @@
   "id": "dev.bip32",
   "title": "BIP32 Hierarchical Deterministic Keys",
   "description": "Tree-based key derivation model enabling deterministic wallet structures and account separation.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "fundamentals.public-private-keys"
   ],

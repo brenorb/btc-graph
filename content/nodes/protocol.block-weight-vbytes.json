@@ -2,7 +2,7 @@
   "id": "protocol.block-weight-vbytes",
   "title": "Block Weight and Virtual Bytes",
   "description": "How weight units and vbytes price block space after SegWit.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.segregated-witness",
     "protocol.block-structure"

@@ -2,7 +2,7 @@
   "id": "dev.p2p-messages",
   "title": "Bitcoin P2P Message Flow",
   "description": "Version handshake, inventory relay, and message sequencing in node-to-node communication.",
-  "category": "Development",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "fundamentals.peer-to-peer-network",
     "protocol.nodes-vs-miners"

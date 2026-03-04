@@ -2,7 +2,7 @@
   "id": "history.segwit-activation",
   "title": "SegWit Activation",
   "description": "The activation path, signaling dynamics, and coordination history behind SegWit deployment.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.block-size-war",
     "protocol.segregated-witness"

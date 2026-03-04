@@ -2,7 +2,7 @@
   "id": "protocol.assumevalid",
   "title": "Assumevalid",
   "description": "A sync optimization that can skip historical script verification until chain trust is established during IBD.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.initial-block-download"
   ],

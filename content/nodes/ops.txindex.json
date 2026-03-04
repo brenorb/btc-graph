@@ -2,7 +2,7 @@
   "id": "ops.txindex",
   "title": "Transaction Index (txindex)",
   "description": "Global transaction indexing mode for historical transaction lookups at the cost of extra disk and sync overhead.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.bitcoin-core-rpc"
   ],

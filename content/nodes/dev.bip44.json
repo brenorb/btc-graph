@@ -2,7 +2,7 @@
   "id": "dev.bip44",
   "title": "BIP44 Derivation Paths",
   "description": "Account hierarchy convention for interoperable deterministic wallet path structures.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.bip32",
     "custody.address-types"

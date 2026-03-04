@@ -2,7 +2,7 @@
   "id": "dev.fee-estimation-rpc",
   "title": "Fee Estimation RPC",
   "description": "How wallet and node software estimate feerates from mempool and historical confirmation data.",
-  "category": "Development",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.fee-market",
     "dev.bitcoin-core-rpc"

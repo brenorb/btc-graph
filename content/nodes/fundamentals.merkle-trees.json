@@ -2,7 +2,7 @@
   "id": "fundamentals.merkle-trees",
   "title": "Merkle Trees",
   "description": "Efficient integrity proofs for large sets of transactions.",
-  "category": "Fundamentals",
+  "category": "Security",
   "prerequisites": [
     "fundamentals.hash-functions"
   ],

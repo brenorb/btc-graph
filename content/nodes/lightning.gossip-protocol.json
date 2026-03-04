@@ -2,7 +2,7 @@
   "id": "lightning.gossip-protocol",
   "title": "Lightning Gossip Protocol",
   "description": "How channel and node announcements propagate network topology and routing policy updates.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.routing",
     "dev.p2p-messages"

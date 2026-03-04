@@ -2,7 +2,7 @@
   "id": "lightning.liquidity",
   "title": "Liquidity Management",
   "description": "Inbound/outbound capacity and channel balance operations.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.routing",
     "protocol.fee-market"

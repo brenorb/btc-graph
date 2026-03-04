@@ -2,7 +2,7 @@
   "id": "lightning.commitment-transactions",
   "title": "Lightning Commitment Transactions",
   "description": "Pre-signed updateable channel states that enforce current balances during unilateral close.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.payment-channels",
     "protocol.timelocks"

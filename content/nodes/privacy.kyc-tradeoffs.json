@@ -2,7 +2,7 @@
   "id": "privacy.kyc-tradeoffs",
   "title": "KYC and Privacy Tradeoffs",
   "description": "Identity linkage risks and mitigation strategies.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "custody.self-custody"
   ],

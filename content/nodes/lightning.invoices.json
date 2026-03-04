@@ -2,7 +2,7 @@
   "id": "lightning.invoices",
   "title": "Invoices and Payment Requests",
   "description": "BOLT11 request format and payment execution flow.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.routing"
   ],

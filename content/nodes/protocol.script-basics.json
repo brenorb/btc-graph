@@ -2,7 +2,7 @@
   "id": "protocol.script-basics",
   "title": "Bitcoin Script Basics",
   "description": "Locking and unlocking conditions for UTXO spending.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.utxo-model",
     "fundamentals.digital-signatures"

@@ -2,7 +2,7 @@
   "id": "protocol.fee-market",
   "title": "Fee Market",
   "description": "Blockspace auction dynamics and confirmation priority.",
-  "category": "Bitcoin Protocol",
+  "category": "Economics",
   "prerequisites": [
     "protocol.mempool"
   ],

@@ -2,7 +2,7 @@
   "id": "protocol.pay-to-script-hash",
   "title": "Pay-to-Script-Hash (P2SH)",
   "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.script-basics"
   ],

@@ -2,7 +2,7 @@
   "id": "protocol.cpfp",
   "title": "Child Pays for Parent (CPFP)",
   "description": "Fee-bumping strategy where a child transaction incentivizes confirmation of a low-fee parent.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.fee-market"
   ],

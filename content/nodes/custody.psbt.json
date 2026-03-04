@@ -2,7 +2,7 @@
   "id": "custody.psbt",
   "title": "PSBT Workflow",
   "description": "Partially signed transaction flow for safer collaborative signing.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.multisig",
     "protocol.transaction-lifecycle"

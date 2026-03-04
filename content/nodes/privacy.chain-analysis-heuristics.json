@@ -2,7 +2,7 @@
   "id": "privacy.chain-analysis-heuristics",
   "title": "Chain Analysis Heuristics",
   "description": "Common heuristics used to cluster addresses and infer ownership from on-chain behavior.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.address-reuse"
   ],

@@ -2,7 +2,7 @@
   "id": "custody.seed-phrases",
   "title": "Seed Phrases",
   "description": "Mnemonic backups and key restoration model.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "fundamentals.public-private-keys"
   ],

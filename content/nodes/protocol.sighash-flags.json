@@ -2,7 +2,7 @@
   "id": "protocol.sighash-flags",
   "title": "SIGHASH Flags",
   "description": "Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.",
-  "category": "Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.script-basics"
   ],

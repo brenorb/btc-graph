@@ -2,7 +2,7 @@
   "id": "history.taproot-activation",
   "title": "Taproot Activation History",
   "description": "Timeline and mechanism of Taproot deployment, from signaling design to mainnet lock-in and activation.",
-  "category": "History",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.taproot",
     "history.segwit-activation"

@@ -2,7 +2,7 @@
   "id": "dev.bip39",
   "title": "BIP39 Mnemonics",
   "description": "Mnemonic seed format and entropy/checksum model used by many wallet backups.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "fundamentals.hash-functions"
   ],

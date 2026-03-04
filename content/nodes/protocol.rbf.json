@@ -2,7 +2,7 @@
   "id": "protocol.rbf",
   "title": "Replace-by-Fee (RBF)",
   "description": "Policy mechanism to replace unconfirmed transactions with higher-fee versions.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.fee-market"
   ],

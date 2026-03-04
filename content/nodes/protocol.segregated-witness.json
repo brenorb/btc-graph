@@ -2,7 +2,7 @@
   "id": "protocol.segregated-witness",
   "title": "Segregated Witness (SegWit)",
   "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.transaction-lifecycle"
   ],

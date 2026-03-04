@@ -2,7 +2,7 @@
   "id": "custody.output-labeling",
   "title": "UTXO and Output Labeling",
   "description": "Maintaining labels for transaction outputs and counterparties to improve spending decisions, accounting, and privacy hygiene.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.watch-only-wallets",
     "privacy.coin-control"

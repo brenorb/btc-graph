@@ -2,7 +2,7 @@
   "id": "fundamentals.peer-to-peer-network",
   "title": "Peer-to-Peer Network Topology",
   "description": "How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.",
-  "category": "Fundamentals",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "fundamentals.distributed-systems"
   ],

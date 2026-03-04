@@ -2,7 +2,7 @@
   "id": "privacy.network-privacy",
   "title": "Network Privacy (Tor)",
   "description": "Reducing IP-level linkage when interacting with Bitcoin nodes.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "ops.run-full-node"
   ],

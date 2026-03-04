@@ -2,7 +2,7 @@
   "id": "lightning.route-blinding",
   "title": "Lightning Route Blinding",
   "description": "A privacy technique where receivers hide destination topology by providing blinded route hints.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.bolt12-offers"
   ],

@@ -2,7 +2,7 @@
   "id": "privacy.script-type-fingerprinting",
   "title": "Script-Type Fingerprinting",
   "description": "Privacy leakage from distinctive output script and address-type patterns that narrow likely wallet/software identity.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.address-reuse"
   ],

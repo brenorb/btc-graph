@@ -2,7 +2,7 @@
   "id": "protocol.transaction-lifecycle",
   "title": "Transaction Lifecycle",
   "description": "From creation and propagation to confirmation and settlement.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.utxo-model",
     "protocol.script-basics"

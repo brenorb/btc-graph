@@ -2,7 +2,7 @@
   "id": "lightning.routing",
   "title": "Lightning Routing",
   "description": "Path finding, forwarding, and reliability constraints.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.htlc"
   ],

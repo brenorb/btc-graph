@@ -2,7 +2,7 @@
   "id": "fundamentals.time-preference",
   "title": "Time Preference",
   "description": "How short-term vs long-term thinking affects savings behavior.",
-  "category": "Fundamentals",
+  "category": "Economics",
   "prerequisites": [
     "fundamentals.money-properties"
   ],

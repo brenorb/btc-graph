@@ -2,7 +2,7 @@
   "id": "lightning.onion-routing",
   "title": "Lightning Onion Routing",
   "description": "Packet format and forwarding privacy model for multi-hop Lightning payments.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.routing"
   ],

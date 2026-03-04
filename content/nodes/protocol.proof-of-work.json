@@ -2,7 +2,7 @@
   "id": "protocol.proof-of-work",
   "title": "Proof of Work",
   "description": "Energy-based sybil resistance and chain security.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "fundamentals.hash-functions",
     "fundamentals.byzantine-generals",

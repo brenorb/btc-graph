@@ -2,7 +2,7 @@
   "id": "fundamentals.settlement-assurances",
   "title": "Transaction Confirmations",
   "description": "How confirmation depth affects settlement confidence for different payment risk profiles.",
-  "category": "Fundamentals",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.reorgs-finality"
   ],

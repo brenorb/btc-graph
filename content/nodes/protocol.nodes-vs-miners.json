@@ -2,7 +2,7 @@
   "id": "protocol.nodes-vs-miners",
   "title": "Nodes vs Miners",
   "description": "Different responsibilities and power boundaries in the network.",
-  "category": "Bitcoin Protocol",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.consensus-rules",
     "protocol.proof-of-work"

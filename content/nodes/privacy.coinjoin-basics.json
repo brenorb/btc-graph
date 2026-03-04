@@ -2,7 +2,7 @@
   "id": "privacy.coinjoin-basics",
   "title": "CoinJoin Basics",
   "description": "Collaborative transaction construction to reduce heuristics.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.coin-control",
     "privacy.address-reuse"

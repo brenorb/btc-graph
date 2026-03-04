@@ -2,7 +2,7 @@
   "id": "history.bitcoin-whitepaper",
   "title": "Bitcoin Whitepaper",
   "description": "Original system design framing for decentralized digital cash and double-spend resistance.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.double-spend-problem"
   ],

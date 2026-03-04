@@ -2,7 +2,7 @@
   "id": "ops.assumeutxo",
   "title": "AssumeUTXO",
   "description": "Fast-start strategy using UTXO snapshots with deferred full validation for faster node usability.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.initial-block-download",
     "ops.verify-sync"

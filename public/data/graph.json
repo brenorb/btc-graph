@@ -4,7 +4,7 @@
       "id": "custody.address-types",
       "title": "Address Types",
       "description": "Legacy, SegWit, and modern output encoding differences.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "protocol.addresses-outputs"
       ],
@@ -40,7 +40,7 @@
       "id": "custody.air-gapped-signing",
       "title": "Air-Gapped Signing",
       "description": "Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.psbt",
         "custody.watch-only-wallets",
@@ -79,7 +79,7 @@
       "id": "custody.backups-recovery",
       "title": "Backups and Recovery",
       "description": "Recovery drills, inheritance planning, and backup hygiene.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.seed-phrases",
         "custody.self-custody"
@@ -116,7 +116,7 @@
       "id": "custody.bsms",
       "title": "BSMS for Multisig Coordination",
       "description": "Bitcoin Secure Multisig Setup standards for interoperable multisig setup, descriptors, and recovery metadata.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.multisig",
         "custody.output-labeling"
@@ -155,7 +155,7 @@
       "id": "custody.hardware-wallets",
       "title": "Hardware Wallets",
       "description": "Isolated signing environments and practical security tradeoffs.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.self-custody"
       ],
@@ -191,7 +191,7 @@
       "id": "custody.hd-wallets",
       "title": "HD Wallets",
       "description": "Deterministic key derivation for scalable wallet management.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.seed-phrases"
       ],
@@ -227,7 +227,7 @@
       "id": "custody.inheritance-planning",
       "title": "Bitcoin Inheritance Planning",
       "description": "Designing survivable custody workflows that balance privacy, security, and recoverability.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.backups-recovery",
         "custody.multisig"
@@ -265,7 +265,7 @@
       "id": "custody.multisig",
       "title": "Multisig Wallets",
       "description": "Threshold signing policies for resilience and governance.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.self-custody",
         "protocol.script-basics"
@@ -302,7 +302,7 @@
       "id": "custody.output-labeling",
       "title": "UTXO and Output Labeling",
       "description": "Maintaining labels for transaction outputs and counterparties to improve spending decisions, accounting, and privacy hygiene.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.watch-only-wallets",
         "privacy.coin-control"
@@ -341,7 +341,7 @@
       "id": "custody.passphrase",
       "title": "Seed Passphrase (BIP39)",
       "description": "Optional passphrase extension for mnemonic seeds and its recovery risk tradeoffs.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.seed-phrases"
       ],
@@ -378,7 +378,7 @@
       "id": "custody.psbt",
       "title": "PSBT Workflow",
       "description": "Partially signed transaction flow for safer collaborative signing.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.multisig",
         "protocol.transaction-lifecycle"
@@ -415,7 +415,7 @@
       "id": "custody.seed-phrases",
       "title": "Seed Phrases",
       "description": "Mnemonic backups and key restoration model.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "fundamentals.public-private-keys"
       ],
@@ -451,7 +451,7 @@
       "id": "custody.seed-xor-shards",
       "title": "Seed XOR Shards",
       "description": "Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.backups-recovery"
       ],
@@ -489,7 +489,7 @@
       "id": "custody.self-custody",
       "title": "Self-Custody Principles",
       "description": "Operational responsibility model and threat minimization.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.hd-wallets"
       ],
@@ -525,7 +525,7 @@
       "id": "custody.watch-only-wallets",
       "title": "Watch-Only Wallets",
       "description": "Wallet setups that monitor balances and addresses without holding spending keys.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.hd-wallets",
         "custody.address-types"
@@ -564,7 +564,7 @@
       "id": "dev.bip32",
       "title": "BIP32 Hierarchical Deterministic Keys",
       "description": "Tree-based key derivation model enabling deterministic wallet structures and account separation.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "fundamentals.public-private-keys"
       ],
@@ -601,7 +601,7 @@
       "id": "dev.bip39",
       "title": "BIP39 Mnemonics",
       "description": "Mnemonic seed format and entropy/checksum model used by many wallet backups.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "fundamentals.hash-functions"
       ],
@@ -638,7 +638,7 @@
       "id": "dev.bip44",
       "title": "BIP44 Derivation Paths",
       "description": "Account hierarchy convention for interoperable deterministic wallet path structures.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.bip32",
         "custody.address-types"
@@ -676,7 +676,7 @@
       "id": "dev.bips-process",
       "title": "BIPs Process",
       "description": "How proposals become standards and deployment conventions.",
-      "category": "Development",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.softfork-hardfork",
         "history.early-bitcoin"
@@ -713,7 +713,7 @@
       "id": "dev.bitcoin-core-rpc",
       "title": "Bitcoin Core RPC",
       "description": "Programmatic interaction with node functionality.",
-      "category": "Development",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node"
       ],
@@ -749,7 +749,7 @@
       "id": "dev.descriptor-wallet-imports",
       "title": "Descriptor Wallet Imports",
       "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.output-script-descriptors",
         "dev.bip32"
@@ -788,7 +788,7 @@
       "id": "dev.descriptors",
       "title": "Output Descriptors",
       "description": "Policy expression for wallet script templates and scanning.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "custody.address-types",
         "protocol.script-basics"
@@ -825,7 +825,7 @@
       "id": "dev.fee-estimation-rpc",
       "title": "Fee Estimation RPC",
       "description": "How wallet and node software estimate feerates from mempool and historical confirmation data.",
-      "category": "Development",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.fee-market",
         "dev.bitcoin-core-rpc"
@@ -864,7 +864,7 @@
       "id": "dev.hwi-psbt-flow",
       "title": "HWI + PSBT Signing Flow",
       "description": "Separation between host construction and hardware-device signing through PSBT-based workflows.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.psbt-v2",
         "custody.hardware-wallets"
@@ -903,7 +903,7 @@
       "id": "dev.miniscript",
       "title": "Miniscript",
       "description": "Safer script composition and policy analysis.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.descriptors"
       ],
@@ -939,7 +939,7 @@
       "id": "dev.output-script-descriptors",
       "title": "Output Script Descriptors",
       "description": "Descriptor expressions that precisely describe script templates and key origins for wallets and tooling.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.wallet-development"
       ],
@@ -976,7 +976,7 @@
       "id": "dev.p2p-messages",
       "title": "Bitcoin P2P Message Flow",
       "description": "Version handshake, inventory relay, and message sequencing in node-to-node communication.",
-      "category": "Development",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "fundamentals.peer-to-peer-network",
         "protocol.nodes-vs-miners"
@@ -1014,7 +1014,7 @@
       "id": "dev.psbt-v2",
       "title": "PSBT v2",
       "description": "The v2 evolution of PSBT that improves transaction construction semantics and interoperability.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "custody.psbt",
         "dev.descriptors"
@@ -1052,7 +1052,7 @@
       "id": "dev.testnet-regtest",
       "title": "Testnet and Regtest",
       "description": "Controlled experimentation environments for protocol and wallet behavior.",
-      "category": "Development",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.bitcoin-core-rpc"
       ],
@@ -1088,7 +1088,7 @@
       "id": "dev.wallet-development",
       "title": "Wallet Development Basics",
       "description": "Building safer wallet UX around signing and policy constraints.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.descriptors",
         "custody.psbt"
@@ -1425,7 +1425,7 @@
       "id": "fundamentals.barter-limitations",
       "title": "Barter Limitations",
       "description": "Why direct barter fails at scale and drives monetary emergence.",
-      "category": "Fundamentals",
+      "category": "Economics",
       "prerequisites": [],
       "resources": [
         {
@@ -1459,7 +1459,7 @@
       "id": "fundamentals.bitcoin-layers",
       "title": "Bitcoin Layers",
       "description": "How the base layer, payment channels, and higher-layer protocols compose a layered system.",
-      "category": "Fundamentals",
+      "category": "Extension Systems",
       "prerequisites": [
         "fundamentals.peer-to-peer-network",
         "protocol.transaction-lifecycle"
@@ -1498,7 +1498,7 @@
       "id": "fundamentals.byzantine-generals",
       "title": "Byzantine Generals Problem",
       "description": "Consensus under adversarial communication assumptions.",
-      "category": "Fundamentals",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "fundamentals.distributed-systems"
       ],
@@ -1534,7 +1534,7 @@
       "id": "fundamentals.censorship-resistance",
       "title": "Censorship Resistance",
       "description": "Why open participation and distributed validation make transaction censorship costly and fragile.",
-      "category": "Fundamentals",
+      "category": "Security",
       "prerequisites": [
         "fundamentals.peer-to-peer-network",
         "protocol.nodes-vs-miners"
@@ -1572,7 +1572,7 @@
       "id": "fundamentals.digital-signatures",
       "title": "Digital Signatures",
       "description": "Verifiable authorization without revealing private keys.",
-      "category": "Fundamentals",
+      "category": "Security",
       "prerequisites": [
         "fundamentals.public-private-keys"
       ],
@@ -1608,7 +1608,7 @@
       "id": "fundamentals.distributed-systems",
       "title": "Distributed Systems Basics",
       "description": "Replication, fault tolerance, and coordination in decentralized networks.",
-      "category": "Fundamentals",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [],
       "resources": [
         {
@@ -1642,7 +1642,7 @@
       "id": "fundamentals.hash-functions",
       "title": "Hash Functions",
       "description": "One-way functions, preimage resistance, and collision resistance.",
-      "category": "Fundamentals",
+      "category": "Security",
       "prerequisites": [],
       "resources": [
         {
@@ -1676,7 +1676,7 @@
       "id": "fundamentals.inflation",
       "title": "Inflation Basics",
       "description": "How monetary expansion changes purchasing power and incentives.",
-      "category": "Fundamentals",
+      "category": "Economics",
       "prerequisites": [
         "fundamentals.money-properties"
       ],
@@ -1712,7 +1712,7 @@
       "id": "fundamentals.merkle-trees",
       "title": "Merkle Trees",
       "description": "Efficient integrity proofs for large sets of transactions.",
-      "category": "Fundamentals",
+      "category": "Security",
       "prerequisites": [
         "fundamentals.hash-functions"
       ],
@@ -1748,7 +1748,7 @@
       "id": "fundamentals.money-properties",
       "title": "Properties of Money",
       "description": "Durability, portability, divisibility, recognizability, and scarcity.",
-      "category": "Fundamentals",
+      "category": "Economics",
       "prerequisites": [
         "fundamentals.barter-limitations"
       ],
@@ -1784,7 +1784,7 @@
       "id": "fundamentals.peer-to-peer-network",
       "title": "Peer-to-Peer Network Topology",
       "description": "How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.",
-      "category": "Fundamentals",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "fundamentals.distributed-systems"
       ],
@@ -1821,7 +1821,7 @@
       "id": "fundamentals.public-private-keys",
       "title": "Public/Private Keys",
       "description": "Asymmetric cryptography foundations for ownership proofs.",
-      "category": "Fundamentals",
+      "category": "Security",
       "prerequisites": [],
       "resources": [
         {
@@ -1855,7 +1855,7 @@
       "id": "fundamentals.settlement-assurances",
       "title": "Transaction Confirmations",
       "description": "How confirmation depth affects settlement confidence for different payment risk profiles.",
-      "category": "Fundamentals",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.reorgs-finality"
       ],
@@ -1892,7 +1892,7 @@
       "id": "fundamentals.time-preference",
       "title": "Time Preference",
       "description": "How short-term vs long-term thinking affects savings behavior.",
-      "category": "Fundamentals",
+      "category": "Economics",
       "prerequisites": [
         "fundamentals.money-properties"
       ],
@@ -1928,7 +1928,7 @@
       "id": "history.bitcoin-whitepaper",
       "title": "Bitcoin Whitepaper",
       "description": "Original system design framing for decentralized digital cash and double-spend resistance.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.double-spend-problem"
       ],
@@ -1965,7 +1965,7 @@
       "id": "history.block-size-war",
       "title": "Block Size War",
       "description": "Governance conflict over scaling strategy and how social consensus resolved protocol direction.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.softfork-hardfork",
         "history.early-bitcoin"
@@ -2003,7 +2003,7 @@
       "id": "history.cypherpunks",
       "title": "Cypherpunk Movement",
       "description": "Origins of privacy-preserving digital cash ideas.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "fundamentals.public-private-keys"
       ],
@@ -2040,7 +2040,7 @@
       "id": "history.double-spend-problem",
       "title": "Double-Spend Problem",
       "description": "Why digital scarcity is hard and what constraints must be solved.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "fundamentals.digital-signatures"
       ],
@@ -2077,7 +2077,7 @@
       "id": "history.early-bitcoin",
       "title": "Early Bitcoin History",
       "description": "From launch to early adoption cycles and network maturation.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.genesis-block"
       ],
@@ -2114,7 +2114,7 @@
       "id": "history.genesis-block",
       "title": "Genesis Block",
       "description": "Bitcoin’s launch context and embedded design signals.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.cypherpunks"
       ],
@@ -2151,7 +2151,7 @@
       "id": "history.gpu-to-asic-era",
       "title": "GPU-to-ASIC Transition",
       "description": "Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.",
-      "category": "History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.early-bitcoin",
         "mining.mining-hardware"
@@ -2190,7 +2190,7 @@
       "id": "history.segwit-activation",
       "title": "SegWit Activation",
       "description": "The activation path, signaling dynamics, and coordination history behind SegWit deployment.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.block-size-war",
         "protocol.segregated-witness"
@@ -2229,7 +2229,7 @@
       "id": "history.taproot-activation",
       "title": "Taproot Activation History",
       "description": "Timeline and mechanism of Taproot deployment, from signaling design to mainnet lock-in and activation.",
-      "category": "History",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.taproot",
         "history.segwit-activation"
@@ -2268,7 +2268,7 @@
       "id": "history.user-activated-soft-fork",
       "title": "User-Activated Soft Fork (UASF)",
       "description": "How node operators coordinated policy to enforce soft-fork activation during the SegWit era.",
-      "category": "Governance & History",
+      "category": "History & Governance",
       "prerequisites": [
         "history.block-size-war"
       ],
@@ -2306,7 +2306,7 @@
       "id": "lightning.anchor-outputs",
       "title": "Lightning Anchor Outputs",
       "description": "Commitment format that improves fee-bumping flexibility for channel closure transactions.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.commitment-transactions",
         "protocol.cpfp"
@@ -2344,7 +2344,7 @@
       "id": "lightning.bolt12-offers",
       "title": "BOLT12 Offers",
       "description": "Next-generation Lightning request format for reusable, richer, and more private payment intents.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.invoices",
         "lightning.onion-routing"
@@ -2382,7 +2382,7 @@
       "id": "lightning.channel-backups",
       "title": "Channel Backups",
       "description": "Static channel backups and operational recovery steps.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels",
         "custody.backups-recovery"
@@ -2419,7 +2419,7 @@
       "id": "lightning.channel-fee-policies",
       "title": "Lightning Channel Fee Policies",
       "description": "Base fee and proportional fee policy setting for balancing routing attractiveness against channel risk.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.liquidity"
       ],
@@ -2457,7 +2457,7 @@
       "id": "lightning.channel-jamming",
       "title": "Lightning Channel Jamming",
       "description": "A denial-of-service pattern where HTLC slots or liquidity are intentionally exhausted on routing paths.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.liquidity"
       ],
@@ -2494,7 +2494,7 @@
       "id": "lightning.commitment-transactions",
       "title": "Lightning Commitment Transactions",
       "description": "Pre-signed updateable channel states that enforce current balances during unilateral close.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels",
         "protocol.timelocks"
@@ -2532,7 +2532,7 @@
       "id": "lightning.force-closures",
       "title": "Lightning Force Closures",
       "description": "Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.commitment-transactions",
         "lightning.watchtowers"
@@ -2571,7 +2571,7 @@
       "id": "lightning.gossip-protocol",
       "title": "Lightning Gossip Protocol",
       "description": "How channel and node announcements propagate network topology and routing policy updates.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.routing",
         "dev.p2p-messages"
@@ -2610,7 +2610,7 @@
       "id": "lightning.htlc",
       "title": "HTLCs",
       "description": "Conditional forwarding using hashlocks and timelocks.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels",
         "fundamentals.hash-functions"
@@ -2647,7 +2647,7 @@
       "id": "lightning.invoices",
       "title": "Invoices and Payment Requests",
       "description": "BOLT11 request format and payment execution flow.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.routing"
       ],
@@ -2683,7 +2683,7 @@
       "id": "lightning.liquidity",
       "title": "Liquidity Management",
       "description": "Inbound/outbound capacity and channel balance operations.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.routing",
         "protocol.fee-market"
@@ -2720,7 +2720,7 @@
       "id": "lightning.multi-path-payments",
       "title": "Lightning Multi-Path Payments",
       "description": "Splitting payments across routes to improve reliability and liquidity utilization.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.liquidity"
       ],
@@ -2757,7 +2757,7 @@
       "id": "lightning.onion-routing",
       "title": "Lightning Onion Routing",
       "description": "Packet format and forwarding privacy model for multi-hop Lightning payments.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.routing"
       ],
@@ -2794,7 +2794,7 @@
       "id": "lightning.payment-channels",
       "title": "Payment Channels",
       "description": "Off-chain bilateral channels secured by on-chain contracts.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "protocol.transaction-lifecycle",
         "custody.multisig"
@@ -2831,7 +2831,7 @@
       "id": "lightning.probing-attacks",
       "title": "Lightning Probing Attacks",
       "description": "Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.routing",
         "privacy.network-privacy"
@@ -2870,7 +2870,7 @@
       "id": "lightning.route-blinding",
       "title": "Lightning Route Blinding",
       "description": "A privacy technique where receivers hide destination topology by providing blinded route hints.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.bolt12-offers"
       ],
@@ -2908,7 +2908,7 @@
       "id": "lightning.routing",
       "title": "Lightning Routing",
       "description": "Path finding, forwarding, and reliability constraints.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.htlc"
       ],
@@ -2944,7 +2944,7 @@
       "id": "lightning.splicing",
       "title": "Lightning Channel Splicing",
       "description": "Updating channel capacity without fully closing channels by combining on-chain and off-chain state changes.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels",
         "protocol.rbf"
@@ -2982,7 +2982,7 @@
       "id": "lightning.trampoline-routing",
       "title": "Lightning Trampoline Routing",
       "description": "A routing mode where lightweight wallets delegate part of pathfinding to trampoline nodes.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.onion-routing",
         "lightning.multi-path-payments"
@@ -3020,7 +3020,7 @@
       "id": "lightning.watchtowers",
       "title": "Watchtowers",
       "description": "Penalty transaction protection in offline scenarios.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels",
         "protocol.reorgs-finality"
@@ -3472,7 +3472,7 @@
       "id": "ops.asmap",
       "title": "ASMAP Peer Diversity",
       "description": "Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.peer-discovery"
       ],
@@ -3510,7 +3510,7 @@
       "id": "ops.assumeutxo",
       "title": "AssumeUTXO",
       "description": "Fast-start strategy using UTXO snapshots with deferred full validation for faster node usability.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.initial-block-download",
         "ops.verify-sync"
@@ -3548,7 +3548,7 @@
       "id": "ops.compact-blocks-vs-filters",
       "title": "Compact Blocks vs Compact Filters",
       "description": "Operational differences between block propagation optimization and lightweight-client block filtering protocols.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.compact-block-relay",
         "protocol.compact-block-filters"
@@ -3586,7 +3586,7 @@
       "id": "ops.dns-seeds",
       "title": "DNS Seeds",
       "description": "Bootstrap mechanism that gives new nodes initial peers before ongoing address gossip takes over.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.peer-discovery"
       ],
@@ -3624,7 +3624,7 @@
       "id": "ops.electrum-server",
       "title": "Electrum Server",
       "description": "Serving wallet queries from your own verified node stack.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node"
       ],
@@ -3661,7 +3661,7 @@
       "id": "ops.initial-block-download",
       "title": "Initial Block Download",
       "description": "How a new node bootstraps chainstate safely and reaches current tip.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node",
         "protocol.block-structure"
@@ -3700,7 +3700,7 @@
       "id": "ops.mempool-policy",
       "title": "Mempool Policy",
       "description": "Standardness, relay policy, and transaction propagation behavior.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node",
         "protocol.mempool"
@@ -3738,7 +3738,7 @@
       "id": "ops.node-hardware",
       "title": "Node Hardware Sizing",
       "description": "CPU, RAM, disk, and network requirements by workload.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node"
       ],
@@ -3775,7 +3775,7 @@
       "id": "ops.peer-discovery",
       "title": "Peer Discovery and Addrman",
       "description": "How nodes discover, score, and rotate peers using address relay and addrman persistence.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node",
         "dev.p2p-messages"
@@ -3814,7 +3814,7 @@
       "id": "ops.pruned-vs-archival",
       "title": "Pruned vs Archival Nodes",
       "description": "Storage and functionality tradeoffs in node configuration.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node"
       ],
@@ -3851,7 +3851,7 @@
       "id": "ops.run-full-node",
       "title": "Run a Full Node",
       "description": "Install, sync, and maintain independently verifying infrastructure.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.nodes-vs-miners"
       ],
@@ -3888,7 +3888,7 @@
       "id": "ops.signet",
       "title": "Signet Operations",
       "description": "Using signet for deterministic, low-value testing of wallet and node workflows.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.testnet-regtest"
       ],
@@ -3925,7 +3925,7 @@
       "id": "ops.tor-node-connections",
       "title": "Tor for Node Connectivity",
       "description": "Improving network privacy and resilience by routing node traffic over Tor.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "privacy.network-privacy"
       ],
@@ -3962,7 +3962,7 @@
       "id": "ops.txindex",
       "title": "Transaction Index (txindex)",
       "description": "Global transaction indexing mode for historical transaction lookups at the cost of extra disk and sync overhead.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.bitcoin-core-rpc"
       ],
@@ -3999,7 +3999,7 @@
       "id": "ops.verify-sync",
       "title": "Verify Node Sync",
       "description": "Validation checkpoints and trust-minimized sync checks.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.run-full-node",
         "protocol.reorgs-finality"
@@ -4037,7 +4037,7 @@
       "id": "privacy.address-reuse",
       "title": "Address Reuse",
       "description": "How reuse harms financial privacy and graph analysis resistance.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "custody.address-types"
       ],
@@ -4073,7 +4073,7 @@
       "id": "privacy.amount-correlation",
       "title": "Amount Correlation",
       "description": "How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.chain-analysis-heuristics",
         "protocol.transaction-lifecycle"
@@ -4112,7 +4112,7 @@
       "id": "privacy.chain-analysis-heuristics",
       "title": "Chain Analysis Heuristics",
       "description": "Common heuristics used to cluster addresses and infer ownership from on-chain behavior.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.address-reuse"
       ],
@@ -4149,7 +4149,7 @@
       "id": "privacy.change-detection",
       "title": "Change Output Detection",
       "description": "How analysts identify probable change outputs and why output structure discipline matters for privacy.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.chain-analysis-heuristics",
         "privacy.coin-control"
@@ -4187,7 +4187,7 @@
       "id": "privacy.coin-control",
       "title": "Coin Control",
       "description": "Manual UTXO selection to optimize privacy and fee outcomes.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "protocol.utxo-model",
         "protocol.fee-market"
@@ -4224,7 +4224,7 @@
       "id": "privacy.coinjoin-basics",
       "title": "CoinJoin Basics",
       "description": "Collaborative transaction construction to reduce heuristics.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.coin-control",
         "privacy.address-reuse"
@@ -4261,7 +4261,7 @@
       "id": "privacy.kyc-tradeoffs",
       "title": "KYC and Privacy Tradeoffs",
       "description": "Identity linkage risks and mitigation strategies.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "custody.self-custody"
       ],
@@ -4297,7 +4297,7 @@
       "id": "privacy.network-privacy",
       "title": "Network Privacy (Tor)",
       "description": "Reducing IP-level linkage when interacting with Bitcoin nodes.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "ops.run-full-node"
       ],
@@ -4333,7 +4333,7 @@
       "id": "privacy.payjoin",
       "title": "PayJoin (P2EP)",
       "description": "Interactive transaction protocol that breaks common-input ownership heuristics.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.chain-analysis-heuristics",
         "protocol.transaction-lifecycle"
@@ -4371,7 +4371,7 @@
       "id": "privacy.script-type-fingerprinting",
       "title": "Script-Type Fingerprinting",
       "description": "Privacy leakage from distinctive output script and address-type patterns that narrow likely wallet/software identity.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.address-reuse"
       ],
@@ -4409,7 +4409,7 @@
       "id": "privacy.utxo-consolidation-tradeoffs",
       "title": "UTXO Consolidation Tradeoffs",
       "description": "Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.coin-control",
         "privacy.chain-analysis-heuristics"
@@ -4448,7 +4448,7 @@
       "id": "privacy.xpub-leakage",
       "title": "XPUB Leakage",
       "description": "Privacy and security risks from sharing extended public keys with third-party services.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "custody.hd-wallets",
         "privacy.address-reuse"
@@ -4487,7 +4487,7 @@
       "id": "protocol.addr-v2-bip155",
       "title": "AddrV2 (BIP 155)",
       "description": "Extended peer address relay format that supports newer network address types while preserving compatibility.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.peer-discovery"
       ],
@@ -4525,7 +4525,7 @@
       "id": "protocol.addresses-outputs",
       "title": "Addresses and Outputs",
       "description": "Address formats, script templates, and spendability.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.utxo-model"
       ],
@@ -4562,7 +4562,7 @@
       "id": "protocol.assumevalid",
       "title": "Assumevalid",
       "description": "A sync optimization that can skip historical script verification until chain trust is established during IBD.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.initial-block-download"
       ],
@@ -4599,7 +4599,7 @@
       "id": "protocol.block-height",
       "title": "Block Height",
       "description": "Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.block-structure"
       ],
@@ -4637,7 +4637,7 @@
       "id": "protocol.block-structure",
       "title": "Block Structure",
       "description": "Header fields, merkle root, and block composition.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "fundamentals.merkle-trees",
         "protocol.proof-of-work"
@@ -4675,7 +4675,7 @@
       "id": "protocol.block-weight-vbytes",
       "title": "Block Weight and Virtual Bytes",
       "description": "How weight units and vbytes price block space after SegWit.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.segregated-witness",
         "protocol.block-structure"
@@ -4714,7 +4714,7 @@
       "id": "protocol.bloom-filters-bip37",
       "title": "Transaction Bloom Filtering (BIP37)",
       "description": "Legacy lightweight-client filtering using bloom filters and why modern wallets moved to compact filters.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.p2p-messages",
         "protocol.addresses-outputs"
@@ -4753,7 +4753,7 @@
       "id": "protocol.coinbase-transaction",
       "title": "Coinbase Transaction",
       "description": "Special first transaction in each block that collects subsidy and transaction fees.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.block-structure",
         "protocol.halving"
@@ -4791,7 +4791,7 @@
       "id": "protocol.compact-block-filters",
       "title": "Compact Block Filters",
       "description": "Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.p2p-messages",
         "protocol.block-structure"
@@ -4831,7 +4831,7 @@
       "id": "protocol.compact-block-relay",
       "title": "Compact Block Relay",
       "description": "Bandwidth-efficient block propagation using short transaction identifiers.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.p2p-messages",
         "protocol.block-structure"
@@ -4870,7 +4870,7 @@
       "id": "protocol.consensus-rules",
       "title": "Consensus Rules",
       "description": "Validation rules that define Bitcoin’s canonical state.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.proof-of-work",
         "fundamentals.distributed-systems"
@@ -4908,7 +4908,7 @@
       "id": "protocol.cpfp",
       "title": "Child Pays for Parent (CPFP)",
       "description": "Fee-bumping strategy where a child transaction incentivizes confirmation of a low-fee parent.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.fee-market"
       ],
@@ -4945,7 +4945,7 @@
       "id": "protocol.difficulty-adjustment",
       "title": "Difficulty Adjustment",
       "description": "Automatic retargeting to stabilize block production.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.proof-of-work"
       ],
@@ -4982,7 +4982,7 @@
       "id": "protocol.fee-market",
       "title": "Fee Market",
       "description": "Blockspace auction dynamics and confirmation priority.",
-      "category": "Bitcoin Protocol",
+      "category": "Economics",
       "prerequisites": [
         "protocol.mempool"
       ],
@@ -5019,7 +5019,7 @@
       "id": "protocol.halving",
       "title": "Halving Cycle",
       "description": "Programmed issuance reductions and long-term security implications.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.difficulty-adjustment"
       ],
@@ -5056,7 +5056,7 @@
       "id": "protocol.headers-first-sync",
       "title": "Headers-First Synchronization",
       "description": "How nodes download and validate block headers before fetching full blocks during initial sync.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.initial-block-download",
         "dev.p2p-messages"
@@ -5095,7 +5095,7 @@
       "id": "protocol.median-time-past",
       "title": "Median Time Past",
       "description": "Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.block-structure",
         "protocol.timelocks"
@@ -5133,7 +5133,7 @@
       "id": "protocol.mempool",
       "title": "Mempool",
       "description": "Unconfirmed transaction relay and node policy behavior.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.transaction-lifecycle"
       ],
@@ -5170,7 +5170,7 @@
       "id": "protocol.nodes-vs-miners",
       "title": "Nodes vs Miners",
       "description": "Different responsibilities and power boundaries in the network.",
-      "category": "Bitcoin Protocol",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.consensus-rules",
         "protocol.proof-of-work"
@@ -5208,7 +5208,7 @@
       "id": "protocol.op-return",
       "title": "OP_RETURN Outputs",
       "description": "Provably unspendable script outputs used for bounded data commitments on-chain.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.script-basics"
       ],
@@ -5240,7 +5240,7 @@
       "id": "protocol.package-relay",
       "title": "Package Relay",
       "description": "Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.cpfp",
         "ops.mempool-policy"
@@ -5279,7 +5279,7 @@
       "id": "protocol.pay-to-script-hash",
       "title": "Pay-to-Script-Hash (P2SH)",
       "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.script-basics"
       ],
@@ -5316,7 +5316,7 @@
       "id": "protocol.proof-of-work",
       "title": "Proof of Work",
       "description": "Energy-based sybil resistance and chain security.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "fundamentals.hash-functions",
         "fundamentals.byzantine-generals",
@@ -5355,7 +5355,7 @@
       "id": "protocol.rbf",
       "title": "Replace-by-Fee (RBF)",
       "description": "Policy mechanism to replace unconfirmed transactions with higher-fee versions.",
-      "category": "Bitcoin Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.fee-market"
       ],
@@ -5392,7 +5392,7 @@
       "id": "protocol.reorgs-finality",
       "title": "Reorgs and Finality",
       "description": "Probabilistic finality and chain reorganization behavior.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.block-structure",
         "protocol.consensus-rules"
@@ -5430,7 +5430,7 @@
       "id": "protocol.script-basics",
       "title": "Bitcoin Script Basics",
       "description": "Locking and unlocking conditions for UTXO spending.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.utxo-model",
         "fundamentals.digital-signatures"
@@ -5468,7 +5468,7 @@
       "id": "protocol.segregated-witness",
       "title": "Segregated Witness (SegWit)",
       "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.transaction-lifecycle"
       ],
@@ -5505,7 +5505,7 @@
       "id": "protocol.sighash-flags",
       "title": "SIGHASH Flags",
       "description": "Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.",
-      "category": "Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.script-basics"
       ],
@@ -5543,7 +5543,7 @@
       "id": "protocol.softfork-hardfork",
       "title": "Soft Forks vs Hard Forks",
       "description": "Compatibility tradeoffs in protocol upgrades.",
-      "category": "Bitcoin Protocol",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.consensus-rules"
       ],
@@ -5580,7 +5580,7 @@
       "id": "protocol.taproot",
       "title": "Taproot",
       "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.segregated-witness"
       ],
@@ -5617,7 +5617,7 @@
       "id": "protocol.timelocks",
       "title": "Script Timelocks",
       "description": "Timelock primitives used to constrain when funds can be spent in script contracts.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.script-basics"
       ],
@@ -5654,7 +5654,7 @@
       "id": "protocol.transaction-lifecycle",
       "title": "Transaction Lifecycle",
       "description": "From creation and propagation to confirmation and settlement.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.utxo-model",
         "protocol.script-basics"
@@ -5692,7 +5692,7 @@
       "id": "protocol.transaction-malleability",
       "title": "Transaction Malleability",
       "description": "How pre-confirmation transaction mutation risk appears and why stable identifiers matter.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.transaction-lifecycle"
       ],
@@ -5729,7 +5729,7 @@
       "id": "protocol.transaction-relay-inv-getdata",
       "title": "Transaction Relay (inv/getdata)",
       "description": "How peers announce and request transactions using inv/getdata before full tx relay.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.p2p-messages",
         "protocol.transaction-lifecycle"
@@ -5768,7 +5768,7 @@
       "id": "protocol.utxo-model",
       "title": "UTXO Model",
       "description": "State model based on spendable outputs instead of account balances.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "fundamentals.digital-signatures"
       ],
@@ -5805,7 +5805,7 @@
       "id": "protocol.versionbits",
       "title": "Version Bits Signaling",
       "description": "Miner signaling mechanism for coordinated soft-fork deployment using block version fields.",
-      "category": "Bitcoin Protocol",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.softfork-hardfork",
         "protocol.block-structure"
@@ -5844,7 +5844,7 @@
       "id": "protocol.witness-commitment",
       "title": "SegWit Witness Commitment",
       "description": "How witness data is committed in coinbase transactions to secure segregated witness verification.",
-      "category": "Bitcoin Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.segregated-witness",
         "fundamentals.merkle-trees"

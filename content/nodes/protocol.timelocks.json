@@ -2,7 +2,7 @@
   "id": "protocol.timelocks",
   "title": "Script Timelocks",
   "description": "Timelock primitives used to constrain when funds can be spent in script contracts.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.script-basics"
   ],

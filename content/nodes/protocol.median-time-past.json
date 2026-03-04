@@ -2,7 +2,7 @@
   "id": "protocol.median-time-past",
   "title": "Median Time Past",
   "description": "Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.block-structure",
     "protocol.timelocks"

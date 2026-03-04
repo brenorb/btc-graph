@@ -2,7 +2,7 @@
   "id": "protocol.coinbase-transaction",
   "title": "Coinbase Transaction",
   "description": "Special first transaction in each block that collects subsidy and transaction fees.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.block-structure",
     "protocol.halving"

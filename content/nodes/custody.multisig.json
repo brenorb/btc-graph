@@ -2,7 +2,7 @@
   "id": "custody.multisig",
   "title": "Multisig Wallets",
   "description": "Threshold signing policies for resilience and governance.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.self-custody",
     "protocol.script-basics"

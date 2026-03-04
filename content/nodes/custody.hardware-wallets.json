@@ -2,7 +2,7 @@
   "id": "custody.hardware-wallets",
   "title": "Hardware Wallets",
   "description": "Isolated signing environments and practical security tradeoffs.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.self-custody"
   ],

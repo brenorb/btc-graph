@@ -2,7 +2,7 @@
   "id": "fundamentals.bitcoin-layers",
   "title": "Bitcoin Layers",
   "description": "How the base layer, payment channels, and higher-layer protocols compose a layered system.",
-  "category": "Fundamentals",
+  "category": "Extension Systems",
   "prerequisites": [
     "fundamentals.peer-to-peer-network",
     "protocol.transaction-lifecycle"

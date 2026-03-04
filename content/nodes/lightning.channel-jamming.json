@@ -2,7 +2,7 @@
   "id": "lightning.channel-jamming",
   "title": "Lightning Channel Jamming",
   "description": "A denial-of-service pattern where HTLC slots or liquidity are intentionally exhausted on routing paths.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.liquidity"
   ],

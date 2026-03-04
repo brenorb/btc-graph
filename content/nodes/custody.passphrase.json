@@ -2,7 +2,7 @@
   "id": "custody.passphrase",
   "title": "Seed Passphrase (BIP39)",
   "description": "Optional passphrase extension for mnemonic seeds and its recovery risk tradeoffs.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.seed-phrases"
   ],

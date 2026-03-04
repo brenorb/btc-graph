@@ -2,7 +2,7 @@
   "id": "dev.descriptors",
   "title": "Output Descriptors",
   "description": "Policy expression for wallet script templates and scanning.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "custody.address-types",
     "protocol.script-basics"

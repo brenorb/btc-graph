@@ -2,7 +2,7 @@
   "id": "protocol.block-height",
   "title": "Block Height",
   "description": "Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.block-structure"
   ],

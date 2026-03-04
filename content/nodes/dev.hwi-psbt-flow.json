@@ -2,7 +2,7 @@
   "id": "dev.hwi-psbt-flow",
   "title": "HWI + PSBT Signing Flow",
   "description": "Separation between host construction and hardware-device signing through PSBT-based workflows.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.psbt-v2",
     "custody.hardware-wallets"

@@ -2,7 +2,7 @@
   "id": "ops.verify-sync",
   "title": "Verify Node Sync",
   "description": "Validation checkpoints and trust-minimized sync checks.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
     "protocol.reorgs-finality"

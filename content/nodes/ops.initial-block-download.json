@@ -2,7 +2,7 @@
   "id": "ops.initial-block-download",
   "title": "Initial Block Download",
   "description": "How a new node bootstraps chainstate safely and reaches current tip.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
     "protocol.block-structure"

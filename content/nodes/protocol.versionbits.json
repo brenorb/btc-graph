@@ -2,7 +2,7 @@
   "id": "protocol.versionbits",
   "title": "Version Bits Signaling",
   "description": "Miner signaling mechanism for coordinated soft-fork deployment using block version fields.",
-  "category": "Bitcoin Protocol",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.softfork-hardfork",
     "protocol.block-structure"

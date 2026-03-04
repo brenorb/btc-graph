@@ -2,7 +2,7 @@
   "id": "ops.tor-node-connections",
   "title": "Tor for Node Connectivity",
   "description": "Improving network privacy and resilience by routing node traffic over Tor.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "privacy.network-privacy"
   ],

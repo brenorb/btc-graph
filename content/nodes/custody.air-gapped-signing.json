@@ -2,7 +2,7 @@
   "id": "custody.air-gapped-signing",
   "title": "Air-Gapped Signing",
   "description": "Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.psbt",
     "custody.watch-only-wallets",
