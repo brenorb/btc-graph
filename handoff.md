@@ -17,6 +17,7 @@
 - Phase 9: complete
 - Phase 10: complete (external topic corpus integration)
 - Phase 11: complete (topic specificity and source coverage expansion)
+- Phase 12: complete (layout accessibility and foundations math expansion)
 
 ## Phase 11 Summary
 - Added roadmap entry:
@@ -77,3 +78,56 @@
   - `/tmp/btc-graph-phase11-desktop.png`
   - `/tmp/btc-graph-phase11-mobile.png`
   - `/tmp/btc-graph-phase11-desktop-dark.png`
+
+## Phase 12 Summary
+- Added roadmap entry:
+  - `Phase 12: Layout, Accessibility, and Foundations Math Expansion`
+- Added SpecFlow artifacts:
+  - `.specflow/phases/phase-12/plan.md`
+  - `.specflow/phases/phase-12/plan-2.md`
+  - `.specflow/phases/phase-12/source-research.md`
+  - `.specflow/phases/phase-12/review-no-context.md`
+  - `.specflow/phases/phase-12/visual-verification.md`
+- Added phase-specific tests:
+  - `tests/phase-12-ui.test.ts`
+  - `tests/phase-12-content.test.ts`
+- UI fixes:
+  - replaced `Show all labels` / `Hide all labels` with `Select all categories` / `Deselect all categories`
+  - tuned graph layout to a stronger vertical hierarchy (`dagre` `ranker=tight-tree`, higher `rankSep`, lower `nodeSep`)
+  - reduced label overlap by showing labels on hover/selection by default and enabling dense labels at higher zoom
+  - dark-mode readability improvements for graph labels, legend text, and resource links
+  - theme toggle now updates graph palette in-place without resetting viewport/layout
+- Added foundational math/crypto nodes:
+  - `fundamentals.modular-arithmetic`
+  - `fundamentals.finite-fields`
+  - `fundamentals.fermat-little-theorem`
+  - `fundamentals.modular-inverse`
+  - `fundamentals.discrete-log-problem`
+  - `fundamentals.elliptic-curve-cryptography`
+  - `fundamentals.scalar-multiplication`
+  - `fundamentals.secp256k1`
+  - `fundamentals.ecdsa-basics`
+  - `fundamentals.schnorr-signatures`
+- Rewired existing prerequisites:
+  - `fundamentals.public-private-keys`
+  - `fundamentals.digital-signatures`
+  - `protocol.taproot`
+  - `protocol.op-checksigadd`
+- Updated generated graph artifact:
+  - `public/data/graph.json` now contains `244` nodes.
+
+## Phase 12 Operational Checks
+- `npm test` passes (`72` tests).
+- `npm run build:data` passes (`244` nodes built).
+- `npm run check:links` passes (`265` unique URLs, all reachable).
+- `npm run build` passes.
+- GitHub Pages deploy succeeded:
+  - run `22655385934` (`master`, commit `a5e2df3`)
+
+## Phase 12 Visual Verification
+- Local runtime verified at `http://127.0.0.1:4173/btc-graph/`.
+- Screenshot artifacts:
+  - `/tmp/btc-graph-phase12-desktop.png`
+  - `/tmp/btc-graph-phase12-mobile.png`
+  - `/tmp/btc-graph-phase12-desktop-dark.png`
+  - `/tmp/btc-graph-phase12-mobile-dark.png`
