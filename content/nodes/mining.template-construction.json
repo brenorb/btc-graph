@@ -1,0 +1,38 @@
+{
+  "id": "mining.template-construction",
+  "title": "Mining Template Construction",
+  "description": "How miners and pools build candidate blocks from mempool transactions under policy, size, and fee constraints.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.block-template-selection"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 22: getblocktemplate",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki",
+      "notes": "Canonical interface between miners and full nodes for block templates."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: getblocktemplate",
+      "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
+      "notes": "RPC details that shape practical template assembly behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Mempool state transitions that feed candidate selection quality."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "mining",
+    "mempool"
+  ],
+  "aliases": [
+    "block assembly",
+    "candidate block construction"
+  ]
+}

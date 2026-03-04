@@ -1,0 +1,39 @@
+{
+  "id": "economics.fee-pressure-cycles",
+  "title": "Fee Pressure Cycles",
+  "description": "Recurring phases of low and high blockspace demand that impact confirmation expectations and wallet behavior.",
+  "category": "Economics",
+  "prerequisites": [
+    "protocol.fee-market",
+    "economics.security-budget"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Transaction Fees",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
+      "notes": "Economic background for fee dynamics and bidding strategies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Miner transaction selection and blockspace allocation incentives."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Fee Estimates",
+      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+      "notes": "Operational indicators and fee estimation references over time."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "economics",
+    "fees"
+  ],
+  "aliases": [
+    "blockspace demand cycles",
+    "fee volatility cycles"
+  ]
+}

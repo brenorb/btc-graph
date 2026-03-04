@@ -1,0 +1,39 @@
+{
+  "id": "lightning.gossip-protocol",
+  "title": "Lightning Gossip Protocol",
+  "description": "How channel and node announcements propagate network topology and routing policy updates.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.routing",
+    "dev.p2p-messages"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 07: Routing Gossip",
+      "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+      "notes": "Canonical specification for gossip messages and update semantics."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 02: Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "Peer state machine and channel message flow dependencies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Lightning Services",
+      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
+      "notes": "Product-level implications of channel graph and service routing."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "lightning",
+    "routing"
+  ],
+  "aliases": [
+    "channel announcements",
+    "routing gossip"
+  ]
+}

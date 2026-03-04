@@ -3,11 +3,12 @@
 ## Repository
 - Path: `/Users/breno/Documents/code/PROJECTS/btc-graph`
 - Remote: `https://github.com/brenorb/btc-graph`
-- Branch: `master`
+- Branch: `codex/specflow-phase7-comprehensive`
 
 ## Latest Committed + Pushed State
-- Use `git log --oneline -n 5` for current commit details.
-- Remote sync: local `master` matches `origin/master` after push.
+- Latest local commit: `b98bf6d`
+- Message: `feat(phase7): add comprehensive source-driven nodes with quality tests`
+- Remote baseline: `origin/master` at `0571c4e`
 
 ## Phase Status
 - Phase 1: complete
@@ -16,6 +17,7 @@
 - Phase 4: complete
 - Phase 5: complete
 - Phase 6: complete
+- Phase 7: complete (local branch)
 
 ## Phase 5 Summary
 - Added 18 new nodes sourced from the corpus in `bitcoin-content-sources.md`.
@@ -53,10 +55,30 @@
   - air-gapped signing, output labeling
   - miner revenue composition and SegWit activation history
 
+## Phase 7 Summary (Current)
+- Added 22 additional source-driven nodes from the same corpus and canonical references.
+- Graph size increased from `135` to `157` nodes.
+- Added phase-7 quality tests:
+  - `tests/phase-7-content.test.ts`
+- Added phase-7 planning/research/review artifacts:
+  - `.specflow/phases/phase-7/plan.md`
+  - `.specflow/phases/phase-7/plan-2.md`
+  - `.specflow/phases/phase-7/source-research.md`
+  - `.specflow/phases/phase-7/review-no-context.md`
+- New node areas:
+  - relay internals (`addrv2`, inv/getdata, package relay, SIGHASH semantics)
+  - dev workflows (descriptor imports, HWI + PSBT flow, fee-estimation RPC)
+  - Lightning operations (gossip protocol, probing attacks, fee policies)
+  - mining strategy (fee sniping, template construction)
+  - node hardening (DNS seeds, ASMAP)
+  - privacy heuristics (script fingerprinting, amount correlation)
+  - custody operations (BSMS coordination, XOR seed shard tradeoffs)
+  - economics/history (fee-pressure cycles, batching economics, Taproot activation, GPU-to-ASIC era)
+
 ## Operational Checks (Latest)
-- `npm test` passes (`41` tests)
-- `npm run build:data` passes (`135` nodes built)
-- `npm run check:links` passes (`126` unique URLs, all reachable)
+- `npm test` passes (`45` tests)
+- `npm run build:data` passes (`157` nodes built)
+- `npm run check:links` passes (`129` unique URLs, all reachable)
 - `npm run build` passes
 
 ## Launch State

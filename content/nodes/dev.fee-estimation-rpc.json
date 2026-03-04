@@ -1,0 +1,39 @@
+{
+  "id": "dev.fee-estimation-rpc",
+  "title": "Fee Estimation RPC",
+  "description": "How wallet and node software estimate feerates from mempool and historical confirmation data.",
+  "category": "Development",
+  "prerequisites": [
+    "protocol.fee-market",
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: estimatesmartfee",
+      "url": "https://developer.bitcoin.org/reference/rpc/estimatesmartfee.html",
+      "notes": "Reference behavior for feerate estimation targets and modes."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Why mempool state drives fee estimation quality."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Fee Estimates",
+      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+      "notes": "Practical fee estimation tools and background references."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "fees",
+    "rpc"
+  ],
+  "aliases": [
+    "estimatesmartfee",
+    "feerate estimation"
+  ]
+}

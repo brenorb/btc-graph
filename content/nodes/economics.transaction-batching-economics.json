@@ -1,0 +1,38 @@
+{
+  "id": "economics.transaction-batching-economics",
+  "title": "Transaction Batching Economics",
+  "description": "Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.",
+  "category": "Economics",
+  "prerequisites": [
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction structure fundamentals behind batching tradeoffs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "Wallet construction decisions that interact with batching policy."
+    },
+    {
+      "type": "article",
+      "title": "mempool.space Docs",
+      "url": "https://mempool.space/docs",
+      "notes": "Practical mempool behavior context for fee-saving batching strategies."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "wallet-operations"
+  ],
+  "aliases": [
+    "payment batching",
+    "batching tradeoffs"
+  ]
+}

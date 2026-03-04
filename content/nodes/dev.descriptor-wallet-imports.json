@@ -1,0 +1,39 @@
+{
+  "id": "dev.descriptor-wallet-imports",
+  "title": "Descriptor Wallet Imports",
+  "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.output-script-descriptors",
+    "dev.bip32"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "Core wallet internals behind descriptor and script management."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Wallet model context for importing and tracking scripts."
+    },
+    {
+      "type": "article",
+      "title": "BIP 380: Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+      "notes": "Canonical descriptor grammar and checksum expectations."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "wallet-internals",
+    "descriptors"
+  ],
+  "aliases": [
+    "importdescriptors",
+    "descriptor wallets"
+  ]
+}

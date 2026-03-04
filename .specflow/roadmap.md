@@ -82,3 +82,17 @@ Exit criteria:
 - `npm test` passes.
 - `npm run check:links` passes.
 - `npm run build` passes.
+
+## Phase 7: Comprehensive Source Expansion
+Goal: continue source-corpus coverage with deeper relay policy, wallet operations, Lightning routing economics, and historical activation context.
+
+Deliverables:
+- Additional source-driven node slice across protocol relay/signing semantics, wallet tooling, Lightning gossip/privacy, mining incentives, node bootstrapping hardening, privacy heuristics, custody standards, and economic/history context.
+- Phase-specific content tests requiring target IDs and enforcing domain/prerequisite quality constraints.
+- Independent no-context review plus fix pass documented in `.specflow/phases/phase-7/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.

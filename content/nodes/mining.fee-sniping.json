@@ -1,0 +1,39 @@
+{
+  "id": "mining.fee-sniping",
+  "title": "Fee Sniping",
+  "description": "Miner strategy of re-mining recent blocks to capture high-fee transactions, with reorg and incentive tradeoffs.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.mining-economics",
+    "protocol.reorgs-finality"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Fee Sniping",
+      "url": "https://bitcoinops.org/en/topics/fee-sniping/",
+      "notes": "Historical and current mitigation approaches for fee-sniping incentives."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Mining",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "notes": "Mining incentive framework and block-template decision context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Protocol-level overview of miner transaction selection behavior."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "mining",
+    "incentives"
+  ],
+  "aliases": [
+    "reorg fee capture",
+    "miner fee reorg incentives"
+  ]
+}

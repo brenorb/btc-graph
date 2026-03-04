@@ -1,0 +1,39 @@
+{
+  "id": "protocol.package-relay",
+  "title": "Package Relay",
+  "description": "Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.cpfp",
+    "ops.mempool-policy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Package Relay",
+      "url": "https://bitcoinops.org/en/topics/package-relay/",
+      "notes": "Status updates and design tradeoffs around package acceptance and relay."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Core mempool admission and eviction context needed for packages."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Pinning Attacks",
+      "url": "https://bitcoincore.academy/pinning-attacks.html",
+      "notes": "Why package relay matters for anti-pinning mitigation."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "mempool",
+    "fee-management"
+  ],
+  "aliases": [
+    "transaction packages",
+    "package mempool relay"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "privacy.script-type-fingerprinting",
+  "title": "Script-Type Fingerprinting",
+  "description": "Privacy leakage from distinctive output script and address-type patterns that narrow likely wallet/software identity.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.address-reuse"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "Script template management internals that can become observable patterns."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Wallet address/script behavior fundamentals relevant to fingerprinting."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Practical mitigation resources for script and wallet metadata leaks."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "privacy",
+    "wallets"
+  ],
+  "aliases": [
+    "script fingerprinting",
+    "wallet fingerprinting"
+  ]
+}
