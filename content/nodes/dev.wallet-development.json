@@ -2,7 +2,7 @@
   "id": "dev.wallet-development",
   "title": "Wallet Development Basics",
   "description": "Building safer wallet UX around signing and policy constraints.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.descriptors",
     "custody.psbt"

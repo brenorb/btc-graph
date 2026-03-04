@@ -2,7 +2,7 @@
   "id": "privacy.amount-correlation",
   "title": "Amount Correlation",
   "description": "How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.chain-analysis-heuristics",
     "protocol.transaction-lifecycle"

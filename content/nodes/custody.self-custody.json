@@ -2,7 +2,7 @@
   "id": "custody.self-custody",
   "title": "Self-Custody Principles",
   "description": "Operational responsibility model and threat minimization.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.hd-wallets"
   ],

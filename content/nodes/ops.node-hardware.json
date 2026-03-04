@@ -2,7 +2,7 @@
   "id": "ops.node-hardware",
   "title": "Node Hardware Sizing",
   "description": "CPU, RAM, disk, and network requirements by workload.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node"
   ],

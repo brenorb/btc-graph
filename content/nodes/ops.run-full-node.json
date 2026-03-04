@@ -2,7 +2,7 @@
   "id": "ops.run-full-node",
   "title": "Run a Full Node",
   "description": "Install, sync, and maintain independently verifying infrastructure.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.nodes-vs-miners"
   ],

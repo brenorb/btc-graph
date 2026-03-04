@@ -2,7 +2,7 @@
   "id": "custody.bsms",
   "title": "BSMS for Multisig Coordination",
   "description": "Bitcoin Secure Multisig Setup standards for interoperable multisig setup, descriptors, and recovery metadata.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.multisig",
     "custody.output-labeling"

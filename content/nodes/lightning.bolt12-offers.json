@@ -2,7 +2,7 @@
   "id": "lightning.bolt12-offers",
   "title": "BOLT12 Offers",
   "description": "Next-generation Lightning request format for reusable, richer, and more private payment intents.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.invoices",
     "lightning.onion-routing"

@@ -2,7 +2,7 @@
   "id": "protocol.compact-block-relay",
   "title": "Compact Block Relay",
   "description": "Bandwidth-efficient block propagation using short transaction identifiers.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.p2p-messages",
     "protocol.block-structure"

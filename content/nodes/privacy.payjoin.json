@@ -2,7 +2,7 @@
   "id": "privacy.payjoin",
   "title": "PayJoin (P2EP)",
   "description": "Interactive transaction protocol that breaks common-input ownership heuristics.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.chain-analysis-heuristics",
     "protocol.transaction-lifecycle"

@@ -2,7 +2,7 @@
   "id": "ops.peer-discovery",
   "title": "Peer Discovery and Addrman",
   "description": "How nodes discover, score, and rotate peers using address relay and addrman persistence.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
     "dev.p2p-messages"

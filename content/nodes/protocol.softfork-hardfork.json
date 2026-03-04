@@ -2,7 +2,7 @@
   "id": "protocol.softfork-hardfork",
   "title": "Soft Forks vs Hard Forks",
   "description": "Compatibility tradeoffs in protocol upgrades.",
-  "category": "Bitcoin Protocol",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.consensus-rules"
   ],

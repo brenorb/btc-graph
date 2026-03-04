@@ -2,7 +2,7 @@
   "id": "protocol.witness-commitment",
   "title": "SegWit Witness Commitment",
   "description": "How witness data is committed in coinbase transactions to secure segregated witness verification.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.segregated-witness",
     "fundamentals.merkle-trees"

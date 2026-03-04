@@ -2,7 +2,7 @@
   "id": "protocol.mempool",
   "title": "Mempool",
   "description": "Unconfirmed transaction relay and node policy behavior.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.transaction-lifecycle"
   ],

@@ -2,7 +2,7 @@
   "id": "protocol.compact-block-filters",
   "title": "Compact Block Filters",
   "description": "Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.p2p-messages",
     "protocol.block-structure"

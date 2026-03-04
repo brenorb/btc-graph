@@ -2,7 +2,7 @@
   "id": "history.double-spend-problem",
   "title": "Double-Spend Problem",
   "description": "Why digital scarcity is hard and what constraints must be solved.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "fundamentals.digital-signatures"
   ],

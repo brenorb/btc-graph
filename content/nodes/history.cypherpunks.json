@@ -2,7 +2,7 @@
   "id": "history.cypherpunks",
   "title": "Cypherpunk Movement",
   "description": "Origins of privacy-preserving digital cash ideas.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "fundamentals.public-private-keys"
   ],

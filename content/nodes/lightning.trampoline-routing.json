@@ -2,7 +2,7 @@
   "id": "lightning.trampoline-routing",
   "title": "Lightning Trampoline Routing",
   "description": "A routing mode where lightweight wallets delegate part of pathfinding to trampoline nodes.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.onion-routing",
     "lightning.multi-path-payments"

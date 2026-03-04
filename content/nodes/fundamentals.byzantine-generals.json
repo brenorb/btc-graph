@@ -2,7 +2,7 @@
   "id": "fundamentals.byzantine-generals",
   "title": "Byzantine Generals Problem",
   "description": "Consensus under adversarial communication assumptions.",
-  "category": "Fundamentals",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "fundamentals.distributed-systems"
   ],

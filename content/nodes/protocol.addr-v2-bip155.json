@@ -2,7 +2,7 @@
   "id": "protocol.addr-v2-bip155",
   "title": "AddrV2 (BIP 155)",
   "description": "Extended peer address relay format that supports newer network address types while preserving compatibility.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.peer-discovery"
   ],

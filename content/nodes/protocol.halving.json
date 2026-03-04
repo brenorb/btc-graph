@@ -2,7 +2,7 @@
   "id": "protocol.halving",
   "title": "Halving Cycle",
   "description": "Programmed issuance reductions and long-term security implications.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.difficulty-adjustment"
   ],

@@ -2,7 +2,7 @@
   "id": "privacy.xpub-leakage",
   "title": "XPUB Leakage",
   "description": "Privacy and security risks from sharing extended public keys with third-party services.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "custody.hd-wallets",
     "privacy.address-reuse"

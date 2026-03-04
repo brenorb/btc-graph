@@ -2,7 +2,7 @@
   "id": "protocol.taproot",
   "title": "Taproot",
   "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.segregated-witness"
   ],

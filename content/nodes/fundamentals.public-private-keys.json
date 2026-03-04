@@ -2,7 +2,7 @@
   "id": "fundamentals.public-private-keys",
   "title": "Public/Private Keys",
   "description": "Asymmetric cryptography foundations for ownership proofs.",
-  "category": "Fundamentals",
+  "category": "Security",
   "prerequisites": [],
   "resources": [
     {

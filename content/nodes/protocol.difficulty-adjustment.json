@@ -2,7 +2,7 @@
   "id": "protocol.difficulty-adjustment",
   "title": "Difficulty Adjustment",
   "description": "Automatic retargeting to stabilize block production.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.proof-of-work"
   ],

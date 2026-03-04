@@ -2,7 +2,7 @@
   "id": "ops.signet",
   "title": "Signet Operations",
   "description": "Using signet for deterministic, low-value testing of wallet and node workflows.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.testnet-regtest"
   ],

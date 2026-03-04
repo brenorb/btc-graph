@@ -2,7 +2,7 @@
   "id": "protocol.transaction-relay-inv-getdata",
   "title": "Transaction Relay (inv/getdata)",
   "description": "How peers announce and request transactions using inv/getdata before full tx relay.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.p2p-messages",
     "protocol.transaction-lifecycle"

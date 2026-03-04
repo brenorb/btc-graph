@@ -2,7 +2,7 @@
   "id": "protocol.transaction-malleability",
   "title": "Transaction Malleability",
   "description": "How pre-confirmation transaction mutation risk appears and why stable identifiers matter.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.transaction-lifecycle"
   ],

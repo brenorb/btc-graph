@@ -2,7 +2,7 @@
   "id": "history.genesis-block",
   "title": "Genesis Block",
   "description": "Bitcoin’s launch context and embedded design signals.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.cypherpunks"
   ],

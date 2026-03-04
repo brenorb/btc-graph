@@ -2,7 +2,7 @@
   "id": "protocol.addresses-outputs",
   "title": "Addresses and Outputs",
   "description": "Address formats, script templates, and spendability.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.utxo-model"
   ],

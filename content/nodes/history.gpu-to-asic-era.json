@@ -2,7 +2,7 @@
   "id": "history.gpu-to-asic-era",
   "title": "GPU-to-ASIC Transition",
   "description": "Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.",
-  "category": "History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.early-bitcoin",
     "mining.mining-hardware"

@@ -2,7 +2,7 @@
   "id": "protocol.utxo-model",
   "title": "UTXO Model",
   "description": "State model based on spendable outputs instead of account balances.",
-  "category": "Bitcoin Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "fundamentals.digital-signatures"
   ],

@@ -2,7 +2,7 @@
   "id": "fundamentals.digital-signatures",
   "title": "Digital Signatures",
   "description": "Verifiable authorization without revealing private keys.",
-  "category": "Fundamentals",
+  "category": "Security",
   "prerequisites": [
     "fundamentals.public-private-keys"
   ],

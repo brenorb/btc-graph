@@ -2,7 +2,7 @@
   "id": "fundamentals.inflation",
   "title": "Inflation Basics",
   "description": "How monetary expansion changes purchasing power and incentives.",
-  "category": "Fundamentals",
+  "category": "Economics",
   "prerequisites": [
     "fundamentals.money-properties"
   ],

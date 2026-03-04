@@ -2,7 +2,7 @@
   "id": "dev.output-script-descriptors",
   "title": "Output Script Descriptors",
   "description": "Descriptor expressions that precisely describe script templates and key origins for wallets and tooling.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.wallet-development"
   ],

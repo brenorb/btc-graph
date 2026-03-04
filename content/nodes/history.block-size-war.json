@@ -2,7 +2,7 @@
   "id": "history.block-size-war",
   "title": "Block Size War",
   "description": "Governance conflict over scaling strategy and how social consensus resolved protocol direction.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.softfork-hardfork",
     "history.early-bitcoin"

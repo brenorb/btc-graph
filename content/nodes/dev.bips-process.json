@@ -2,7 +2,7 @@
   "id": "dev.bips-process",
   "title": "BIPs Process",
   "description": "How proposals become standards and deployment conventions.",
-  "category": "Development",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.softfork-hardfork",
     "history.early-bitcoin"

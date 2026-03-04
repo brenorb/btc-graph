@@ -2,7 +2,7 @@
   "id": "fundamentals.hash-functions",
   "title": "Hash Functions",
   "description": "One-way functions, preimage resistance, and collision resistance.",
-  "category": "Fundamentals",
+  "category": "Security",
   "prerequisites": [],
   "resources": [
     {

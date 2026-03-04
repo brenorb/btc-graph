@@ -2,7 +2,7 @@
   "id": "custody.watch-only-wallets",
   "title": "Watch-Only Wallets",
   "description": "Wallet setups that monitor balances and addresses without holding spending keys.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.hd-wallets",
     "custody.address-types"

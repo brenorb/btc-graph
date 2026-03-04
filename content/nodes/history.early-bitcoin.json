@@ -2,7 +2,7 @@
   "id": "history.early-bitcoin",
   "title": "Early Bitcoin History",
   "description": "From launch to early adoption cycles and network maturation.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.genesis-block"
   ],

@@ -2,7 +2,7 @@
   "id": "privacy.utxo-consolidation-tradeoffs",
   "title": "UTXO Consolidation Tradeoffs",
   "description": "Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.coin-control",
     "privacy.chain-analysis-heuristics"

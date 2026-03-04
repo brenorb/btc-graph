@@ -2,7 +2,7 @@
   "id": "protocol.package-relay",
   "title": "Package Relay",
   "description": "Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.cpfp",
     "ops.mempool-policy"

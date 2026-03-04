@@ -2,7 +2,7 @@
   "id": "ops.mempool-policy",
   "title": "Mempool Policy",
   "description": "Standardness, relay policy, and transaction propagation behavior.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
     "protocol.mempool"

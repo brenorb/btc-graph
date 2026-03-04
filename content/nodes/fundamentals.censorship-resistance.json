@@ -2,7 +2,7 @@
   "id": "fundamentals.censorship-resistance",
   "title": "Censorship Resistance",
   "description": "Why open participation and distributed validation make transaction censorship costly and fragile.",
-  "category": "Fundamentals",
+  "category": "Security",
   "prerequisites": [
     "fundamentals.peer-to-peer-network",
     "protocol.nodes-vs-miners"

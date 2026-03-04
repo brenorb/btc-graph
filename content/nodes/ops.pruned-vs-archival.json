@@ -2,7 +2,7 @@
   "id": "ops.pruned-vs-archival",
   "title": "Pruned vs Archival Nodes",
   "description": "Storage and functionality tradeoffs in node configuration.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node"
   ],

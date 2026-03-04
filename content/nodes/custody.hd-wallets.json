@@ -2,7 +2,7 @@
   "id": "custody.hd-wallets",
   "title": "HD Wallets",
   "description": "Deterministic key derivation for scalable wallet management.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.seed-phrases"
   ],

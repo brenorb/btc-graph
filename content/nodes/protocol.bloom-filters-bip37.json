@@ -2,7 +2,7 @@
   "id": "protocol.bloom-filters-bip37",
   "title": "Transaction Bloom Filtering (BIP37)",
   "description": "Legacy lightweight-client filtering using bloom filters and why modern wallets moved to compact filters.",
-  "category": "Bitcoin Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.p2p-messages",
     "protocol.addresses-outputs"

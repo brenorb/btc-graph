@@ -2,7 +2,7 @@
   "id": "history.user-activated-soft-fork",
   "title": "User-Activated Soft Fork (UASF)",
   "description": "How node operators coordinated policy to enforce soft-fork activation during the SegWit era.",
-  "category": "Governance & History",
+  "category": "History & Governance",
   "prerequisites": [
     "history.block-size-war"
   ],

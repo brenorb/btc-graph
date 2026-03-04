@@ -2,7 +2,7 @@
   "id": "privacy.address-reuse",
   "title": "Address Reuse",
   "description": "How reuse harms financial privacy and graph analysis resistance.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "custody.address-types"
   ],

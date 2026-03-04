@@ -2,7 +2,7 @@
   "id": "dev.testnet-regtest",
   "title": "Testnet and Regtest",
   "description": "Controlled experimentation environments for protocol and wallet behavior.",
-  "category": "Development",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "dev.bitcoin-core-rpc"
   ],

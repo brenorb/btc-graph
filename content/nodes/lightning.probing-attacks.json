@@ -2,7 +2,7 @@
   "id": "lightning.probing-attacks",
   "title": "Lightning Probing Attacks",
   "description": "Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.routing",
     "privacy.network-privacy"

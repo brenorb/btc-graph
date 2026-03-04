@@ -2,7 +2,7 @@
   "id": "custody.inheritance-planning",
   "title": "Bitcoin Inheritance Planning",
   "description": "Designing survivable custody workflows that balance privacy, security, and recoverability.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.backups-recovery",
     "custody.multisig"

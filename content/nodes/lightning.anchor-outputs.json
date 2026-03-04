@@ -2,7 +2,7 @@
   "id": "lightning.anchor-outputs",
   "title": "Lightning Anchor Outputs",
   "description": "Commitment format that improves fee-bumping flexibility for channel closure transactions.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.commitment-transactions",
     "protocol.cpfp"

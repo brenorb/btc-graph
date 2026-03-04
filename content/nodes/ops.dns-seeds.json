@@ -2,7 +2,7 @@
   "id": "ops.dns-seeds",
   "title": "DNS Seeds",
   "description": "Bootstrap mechanism that gives new nodes initial peers before ongoing address gossip takes over.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.peer-discovery"
   ],

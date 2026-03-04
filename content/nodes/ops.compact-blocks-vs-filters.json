@@ -2,7 +2,7 @@
   "id": "ops.compact-blocks-vs-filters",
   "title": "Compact Blocks vs Compact Filters",
   "description": "Operational differences between block propagation optimization and lightweight-client block filtering protocols.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.compact-block-relay",
     "protocol.compact-block-filters"

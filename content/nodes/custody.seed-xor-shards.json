@@ -2,7 +2,7 @@
   "id": "custody.seed-xor-shards",
   "title": "Seed XOR Shards",
   "description": "Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.backups-recovery"
   ],

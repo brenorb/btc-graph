@@ -2,7 +2,7 @@
   "id": "lightning.force-closures",
   "title": "Lightning Force Closures",
   "description": "Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.commitment-transactions",
     "lightning.watchtowers"

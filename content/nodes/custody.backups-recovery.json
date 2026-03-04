@@ -2,7 +2,7 @@
   "id": "custody.backups-recovery",
   "title": "Backups and Recovery",
   "description": "Recovery drills, inheritance planning, and backup hygiene.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.seed-phrases",
     "custody.self-custody"

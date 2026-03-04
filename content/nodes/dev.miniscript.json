@@ -2,7 +2,7 @@
   "id": "dev.miniscript",
   "title": "Miniscript",
   "description": "Safer script composition and policy analysis.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.descriptors"
   ],

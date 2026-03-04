@@ -2,7 +2,7 @@
   "id": "lightning.multi-path-payments",
   "title": "Lightning Multi-Path Payments",
   "description": "Splitting payments across routes to improve reliability and liquidity utilization.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.liquidity"
   ],
