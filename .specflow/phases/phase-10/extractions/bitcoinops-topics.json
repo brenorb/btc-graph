@@ -1,0 +1,1640 @@
+[
+  {
+    "topic": "2pECDSA",
+    "source_url": "https://bitcoinops.org/en/topics/multisignature/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Accidental confiscation",
+    "source_url": "https://bitcoinops.org/en/topics/accidental-confiscation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Accountable Computing Contracts",
+    "source_url": "https://bitcoinops.org/en/topics/acc/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Adaptor signatures",
+    "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Addr v2",
+    "source_url": "https://bitcoinops.org/en/topics/addr-v2/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Address reuse",
+    "source_url": "https://bitcoinops.org/en/topics/output-linking/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "AMP",
+    "source_url": "https://bitcoinops.org/en/topics/atomic-multipath/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Ancestor feerate mining",
+    "source_url": "https://bitcoinops.org/en/topics/cpfp/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Anchor outputs",
+    "source_url": "https://bitcoinops.org/en/topics/anchor-outputs/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Annex",
+    "source_url": "https://bitcoinops.org/en/topics/annex/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Anonymity networks",
+    "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Anti fee sniping",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sniping/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Ark protocol",
+    "source_url": "https://bitcoinops.org/en/topics/ark/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "ASICBoost",
+    "source_url": "https://bitcoinops.org/en/topics/asicboost/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "AssumeUTXO",
+    "source_url": "https://bitcoinops.org/en/topics/assumeutxo/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Async payments",
+    "source_url": "https://bitcoinops.org/en/topics/async-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Atomic multipath payments (AMPs)",
+    "source_url": "https://bitcoinops.org/en/topics/atomic-multipath/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Attributable failures",
+    "source_url": "https://bitcoinops.org/en/topics/attributable-failures/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Base AMP",
+    "source_url": "https://bitcoinops.org/en/topics/multipath-payments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Basic Bitcoin Lisp Language (bll)",
+    "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Batching",
+    "source_url": "https://bitcoinops.org/en/topics/payment-batching/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Bech32",
+    "source_url": "https://bitcoinops.org/en/topics/bech32/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Bech32(m)",
+    "source_url": "https://bitcoinops.org/en/topics/bech32/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Bech32m",
+    "source_url": "https://bitcoinops.org/en/topics/bech32/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Betterhash",
+    "source_url": "https://bitcoinops.org/en/topics/pooled-mining/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP8",
+    "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP9",
+    "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP32",
+    "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP37",
+    "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP54",
+    "source_url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP70 payment protocol",
+    "source_url": "https://bitcoinops.org/en/topics/bip70-payment-protocol/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "BIP79",
+    "source_url": "https://bitcoinops.org/en/topics/payjoin/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP93",
+    "source_url": "https://bitcoinops.org/en/topics/codex32/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP125",
+    "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP151",
+    "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP152",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-relay/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP156",
+    "source_url": "https://bitcoinops.org/en/topics/dandelion/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP157",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP158",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP173",
+    "source_url": "https://bitcoinops.org/en/topics/bech32/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP174",
+    "source_url": "https://bitcoinops.org/en/topics/psbt/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP322",
+    "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP324",
+    "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BIP331",
+    "source_url": "https://bitcoinops.org/en/topics/package-relay/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BitVM",
+    "source_url": "https://bitcoinops.org/en/topics/acc/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Blinded paths",
+    "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "bllsh",
+    "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Block 1,983,702 problem",
+    "source_url": "https://bitcoinops.org/en/topics/duplicate-transactions/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Block explorers",
+    "source_url": "https://bitcoinops.org/en/topics/block-explorers/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Block withholding",
+    "source_url": "https://bitcoinops.org/en/topics/block-withholding/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Bloom filters",
+    "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BLS signatures",
+    "source_url": "https://bitcoinops.org/en/topics/bls-signatures/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "BOLT12",
+    "source_url": "https://bitcoinops.org/en/topics/offers/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Boomerang payments",
+    "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Braidpool",
+    "source_url": "https://bitcoinops.org/en/topics/pooled-mining/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "BTC Lisp",
+    "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Bustapay",
+    "source_url": "https://bitcoinops.org/en/topics/payjoin/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Channel announcements",
+    "source_url": "https://bitcoinops.org/en/topics/channel-announcements/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Channel commitment upgrades",
+    "source_url": "https://bitcoinops.org/en/topics/channel-commitment-upgrades/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Channel factories",
+    "source_url": "https://bitcoinops.org/en/topics/channel-factories/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Channel jamming attacks",
+    "source_url": "https://bitcoinops.org/en/topics/channel-jamming-attacks/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Child pays for parent (CPFP)",
+    "source_url": "https://bitcoinops.org/en/topics/cpfp/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Client-side validation",
+    "source_url": "https://bitcoinops.org/en/topics/client-side-validation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "CLTV expiry delta",
+    "source_url": "https://bitcoinops.org/en/topics/cltv-expiry-delta/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Cluster mempool",
+    "source_url": "https://bitcoinops.org/en/topics/cluster-mempool/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Codex32",
+    "source_url": "https://bitcoinops.org/en/topics/codex32/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Coin selection",
+    "source_url": "https://bitcoinops.org/en/topics/coin-selection/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Coinjoin",
+    "source_url": "https://bitcoinops.org/en/topics/coinjoin/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Coinpools",
+    "source_url": "https://bitcoinops.org/en/topics/joinpools/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Coinswap",
+    "source_url": "https://bitcoinops.org/en/topics/coinswap/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Compact block filters",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Compact block relay",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-relay/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Consensus cleanup soft fork",
+    "source_url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Countersign",
+    "source_url": "https://bitcoinops.org/en/topics/countersign/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Covenants",
+    "source_url": "https://bitcoinops.org/en/topics/covenants/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Covert ASICBoost",
+    "source_url": "https://bitcoinops.org/en/topics/asicboost/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CPFP carve out",
+    "source_url": "https://bitcoinops.org/en/topics/cpfp-carve-out/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Cross-input signature aggregation (CISA)",
+    "source_url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "CVE-2012-2459",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2013-2292",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2015-3641",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2015-6031",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2017-12842",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2017-18350",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2018-17144",
+    "source_url": "https://bitcoinops.org/en/topics/cve-2018-17144/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "CVE-2018-17145",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2020-14198",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2020-26895",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2020-26896",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2021-31876",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVE-2023-39910",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "CVEs (various)",
+    "source_url": "https://bitcoinops.org/en/topics/cve/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Dandelion",
+    "source_url": "https://bitcoinops.org/en/topics/dandelion/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Default minimum transaction relay feerates",
+    "source_url": "https://bitcoinops.org/en/topics/default-minimum-transaction-relay-feerates/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Delegation",
+    "source_url": "https://bitcoinops.org/en/topics/signer-delegation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Descriptors",
+    "source_url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Difficulty adjustment algorithms",
+    "source_url": "https://bitcoinops.org/en/topics/difficulty-adjustment-algorithms/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Discreet Log Contracts (DLCs)",
+    "source_url": "https://bitcoinops.org/en/topics/discreet-log-contracts/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Discrete log equivalency (DLEQ)",
+    "source_url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Dual funding",
+    "source_url": "https://bitcoinops.org/en/topics/dual-funding/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Duplex micropayment channels",
+    "source_url": "https://bitcoinops.org/en/topics/duplex-micropayment-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Duplicate inputs vulnerability",
+    "source_url": "https://bitcoinops.org/en/topics/cve-2018-17144/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Duplicate transactions",
+    "source_url": "https://bitcoinops.org/en/topics/duplicate-transactions/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Dust",
+    "source_url": "https://bitcoinops.org/en/topics/uneconomical-outputs/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Dust attacks",
+    "source_url": "https://bitcoinops.org/en/topics/output-linking/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Ecash",
+    "source_url": "https://bitcoinops.org/en/topics/ecash/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Eclipse attacks",
+    "source_url": "https://bitcoinops.org/en/topics/eclipse-attacks/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Eltoo",
+    "source_url": "https://bitcoinops.org/en/topics/eltoo/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Endogenous fees",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Ephemeral anchors",
+    "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Ephemeral dust",
+    "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Erlay",
+    "source_url": "https://bitcoinops.org/en/topics/erlay/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Exfiltration-resistant signing",
+    "source_url": "https://bitcoinops.org/en/topics/exfiltration-resistant-signing/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Exogenous fees",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Expiration floods",
+    "source_url": "https://bitcoinops.org/en/topics/expiration-floods/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Fee estimation",
+    "source_url": "https://bitcoinops.org/en/topics/fee-estimation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Fee sniping",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sniping/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Fee sourcing",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Fee sponsorship",
+    "source_url": "https://bitcoinops.org/en/topics/fee-sponsorship/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Flood and loot",
+    "source_url": "https://bitcoinops.org/en/topics/expiration-floods/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Forced expiration spam",
+    "source_url": "https://bitcoinops.org/en/topics/expiration-floods/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Free relay",
+    "source_url": "https://bitcoinops.org/en/topics/free-relay/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Full-RBF",
+    "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Gap limits",
+    "source_url": "https://bitcoinops.org/en/topics/gap-limits/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Generic signmessage",
+    "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Gitian",
+    "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Gossip (LN)",
+    "source_url": "https://bitcoinops.org/en/topics/channel-announcements/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Guix",
+    "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Half aggregation",
+    "source_url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Hardware wallet interface (HWI)",
+    "source_url": "https://bitcoinops.org/en/topics/hwi/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Hash Time Locked Contract (HTLC)",
+    "source_url": "https://bitcoinops.org/en/topics/htlc/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "HD key generation",
+    "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "HD wallets",
+    "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Hidden destinations",
+    "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Hold invoices",
+    "source_url": "https://bitcoinops.org/en/topics/hold-invoices/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "HTLC endorsement",
+    "source_url": "https://bitcoinops.org/en/topics/htlc-endorsement/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "I2P",
+    "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Inbound forwarding fees",
+    "source_url": "https://bitcoinops.org/en/topics/inbound-forwarding-fees/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Interactive funding protocol",
+    "source_url": "https://bitcoinops.org/en/topics/dual-funding/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Joinpools",
+    "source_url": "https://bitcoinops.org/en/topics/joinpools/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Just-In-Time (JIT) channels",
+    "source_url": "https://bitcoinops.org/en/topics/jit-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Just-in-time (JIT) routing",
+    "source_url": "https://bitcoinops.org/en/topics/jit-routing/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Keysend",
+    "source_url": "https://bitcoinops.org/en/topics/spontaneous-payments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Kindred replace by fee",
+    "source_url": "https://bitcoinops.org/en/topics/kindred-replace-by-fee/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Large channels",
+    "source_url": "https://bitcoinops.org/en/topics/large-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Libminisketch",
+    "source_url": "https://bitcoinops.org/en/topics/minisketch/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Lightning Addresses",
+    "source_url": "https://bitcoinops.org/en/topics/lnurl/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Liquidity advertisements",
+    "source_url": "https://bitcoinops.org/en/topics/liquidity-advertisements/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "LN-Penalty",
+    "source_url": "https://bitcoinops.org/en/topics/ln-penalty/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "LN-Symmetry",
+    "source_url": "https://bitcoinops.org/en/topics/eltoo/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "LNURL",
+    "source_url": "https://bitcoinops.org/en/topics/lnurl/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Low-r grinding",
+    "source_url": "https://bitcoinops.org/en/topics/low-r-grinding/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "MAST",
+    "source_url": "https://bitcoinops.org/en/topics/mast/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "MATT",
+    "source_url": "https://bitcoinops.org/en/topics/matt/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Merkle tree vulnerabilities",
+    "source_url": "https://bitcoinops.org/en/topics/merkle-tree-vulnerabilities/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Miniscript",
+    "source_url": "https://bitcoinops.org/en/topics/miniscript/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Minisketch",
+    "source_url": "https://bitcoinops.org/en/topics/minisketch/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Multipart payments",
+    "source_url": "https://bitcoinops.org/en/topics/multipath-payments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Multipath payments",
+    "source_url": "https://bitcoinops.org/en/topics/multipath-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "MuSig",
+    "source_url": "https://bitcoinops.org/en/topics/musig/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Native segwit address",
+    "source_url": "https://bitcoinops.org/en/topics/bech32/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Neutrino protocol",
+    "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Oblivious shares",
+    "source_url": "https://bitcoinops.org/en/topics/block-withholding/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Offers",
+    "source_url": "https://bitcoinops.org/en/topics/offers/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Onion messages",
+    "source_url": "https://bitcoinops.org/en/topics/onion-messages/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "OP_CAT",
+    "source_url": "https://bitcoinops.org/en/topics/op_cat/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "OP_CHECKCONTRACTVERIFY",
+    "source_url": "https://bitcoinops.org/en/topics/matt/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "OP_CHECKSIGFROMSTACK",
+    "source_url": "https://bitcoinops.org/en/topics/op_checksigfromstack/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "OP_CHECKTEMPLATEVERIFY",
+    "source_url": "https://bitcoinops.org/en/topics/op_checktemplateverify/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "OP_CODESEPARATOR",
+    "source_url": "https://bitcoinops.org/en/topics/op_codeseparator/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Opt-in Replace-by-Fee",
+    "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Out-of-band fees",
+    "source_url": "https://bitcoinops.org/en/topics/out-of-band-fees/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Output linking",
+    "source_url": "https://bitcoinops.org/en/topics/output-linking/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Output script descriptors",
+    "source_url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Overt ASICBoost",
+    "source_url": "https://bitcoinops.org/en/topics/asicboost/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Package relay",
+    "source_url": "https://bitcoinops.org/en/topics/package-relay/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Partially signed bitcoin transactions",
+    "source_url": "https://bitcoinops.org/en/topics/psbt/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Pay-to-Anchor (P2A)",
+    "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Pay-to-Contract (P2C) protocols",
+    "source_url": "https://bitcoinops.org/en/topics/pay-to-contract-outputs/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Pay-to-EndPoint",
+    "source_url": "https://bitcoinops.org/en/topics/payjoin/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Payjoin",
+    "source_url": "https://bitcoinops.org/en/topics/payjoin/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Payment batching",
+    "source_url": "https://bitcoinops.org/en/topics/payment-batching/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Payment pools",
+    "source_url": "https://bitcoinops.org/en/topics/joinpools/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Payment probes",
+    "source_url": "https://bitcoinops.org/en/topics/payment-probes/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Payment secrets",
+    "source_url": "https://bitcoinops.org/en/topics/payment-secrets/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Peer storage",
+    "source_url": "https://bitcoinops.org/en/topics/peer-storage/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Point Time Locked Contracts (PTLCs)",
+    "source_url": "https://bitcoinops.org/en/topics/ptlc/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Pooled mining",
+    "source_url": "https://bitcoinops.org/en/topics/pooled-mining/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Post-quantum cryptography",
+    "source_url": "https://bitcoinops.org/en/topics/quantum-resistance/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Private channels",
+    "source_url": "https://bitcoinops.org/en/topics/unannounced-channels/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Probabilistic payments",
+    "source_url": "https://bitcoinops.org/en/topics/probabilistic-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Probing",
+    "source_url": "https://bitcoinops.org/en/topics/payment-probes/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Proof of payment",
+    "source_url": "https://bitcoinops.org/en/topics/proof-of-payment/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Proof of reserves",
+    "source_url": "https://bitcoinops.org/en/topics/proof-of-reserves/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Proofs of discrete log equivalency (PODLE)",
+    "source_url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "PSBT",
+    "source_url": "https://bitcoinops.org/en/topics/psbt/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Quantum resistance",
+    "source_url": "https://bitcoinops.org/en/topics/quantum-resistance/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Redundant overpayments",
+    "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Rendez-vous routing",
+    "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Replace-by-fee (RBF)",
+    "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Replacement cycling",
+    "source_url": "https://bitcoinops.org/en/topics/replacement-cycling/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Reproducible builds",
+    "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Responsible disclosures",
+    "source_url": "https://bitcoinops.org/en/topics/responsible-disclosures/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Reuse avoidance",
+    "source_url": "https://bitcoinops.org/en/topics/output-linking/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "RGB",
+    "source_url": "https://bitcoinops.org/en/topics/client-side-validation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Route blinding",
+    "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Schnorr signatures",
+    "source_url": "https://bitcoinops.org/en/topics/schnorr-signatures/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Scriptless multisignatures",
+    "source_url": "https://bitcoinops.org/en/topics/multisignature/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Scriptless scripts",
+    "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Segregated witness",
+    "source_url": "https://bitcoinops.org/en/topics/segregated-witness/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Selfish mining",
+    "source_url": "https://bitcoinops.org/en/topics/selfish-mining/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Shielded CSV",
+    "source_url": "https://bitcoinops.org/en/topics/client-side-validation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Sibling eviction",
+    "source_url": "https://bitcoinops.org/en/topics/kindred-replace-by-fee/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Side channels",
+    "source_url": "https://bitcoinops.org/en/topics/side-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Sidechains",
+    "source_url": "https://bitcoinops.org/en/topics/sidechains/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "SIGHASH_ANYPREVOUT",
+    "source_url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "SIGHASH_NOINPUT",
+    "source_url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Signature adaptors",
+    "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Signature grinding",
+    "source_url": "https://bitcoinops.org/en/topics/low-r-grinding/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Signer delegation",
+    "source_url": "https://bitcoinops.org/en/topics/signer-delegation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Signet",
+    "source_url": "https://bitcoinops.org/en/topics/signet/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Signmessage",
+    "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Silent payments",
+    "source_url": "https://bitcoinops.org/en/topics/silent-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Simple taproot channels",
+    "source_url": "https://bitcoinops.org/en/topics/simple-taproot-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Simplicity",
+    "source_url": "https://bitcoinops.org/en/topics/simplicity/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Simplified commitments",
+    "source_url": "https://bitcoinops.org/en/topics/anchor-outputs/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Simplified multipath payments",
+    "source_url": "https://bitcoinops.org/en/topics/multipath-payments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Soft fork activation",
+    "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Splicing",
+    "source_url": "https://bitcoinops.org/en/topics/splicing/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Spontaneous payments",
+    "source_url": "https://bitcoinops.org/en/topics/spontaneous-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Statechains",
+    "source_url": "https://bitcoinops.org/en/topics/statechains/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Stateless invoices",
+    "source_url": "https://bitcoinops.org/en/topics/stateless-invoices/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Static channel backups",
+    "source_url": "https://bitcoinops.org/en/topics/static-channel-backups/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Stratum",
+    "source_url": "https://bitcoinops.org/en/topics/pooled-mining/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Stratum v2",
+    "source_url": "https://bitcoinops.org/en/topics/pooled-mining/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Stuckless payments",
+    "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Submarine swaps",
+    "source_url": "https://bitcoinops.org/en/topics/submarine-swaps/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Swap-in Potentiam (SIP)",
+    "source_url": "https://bitcoinops.org/en/topics/swap-in-potentiam/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "symbll",
+    "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Taproot",
+    "source_url": "https://bitcoinops.org/en/topics/taproot/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Taproot Assets",
+    "source_url": "https://bitcoinops.org/en/topics/client-side-validation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Tapscript",
+    "source_url": "https://bitcoinops.org/en/topics/tapscript/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Taro",
+    "source_url": "https://bitcoinops.org/en/topics/client-side-validation/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Testnet",
+    "source_url": "https://bitcoinops.org/en/topics/testnet/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Testnet3",
+    "source_url": "https://bitcoinops.org/en/topics/testnet/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Testnet4",
+    "source_url": "https://bitcoinops.org/en/topics/testnet/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Threshold signature",
+    "source_url": "https://bitcoinops.org/en/topics/threshold-signature/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Time warp",
+    "source_url": "https://bitcoinops.org/en/topics/time-warp/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Timelocks",
+    "source_url": "https://bitcoinops.org/en/topics/timelocks/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Timeout trees",
+    "source_url": "https://bitcoinops.org/en/topics/timeout-trees/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Topologically Restricted Until Confirmation (TRUC)",
+    "source_url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Tor",
+    "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Trampoline payments",
+    "source_url": "https://bitcoinops.org/en/topics/trampoline-payments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Transaction bloom filtering",
+    "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Transaction origin privacy",
+    "source_url": "https://bitcoinops.org/en/topics/transaction-origin-privacy/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Transaction pinning",
+    "source_url": "https://bitcoinops.org/en/topics/transaction-pinning/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Transitory soft forks",
+    "source_url": "https://bitcoinops.org/en/topics/transitory-soft-forks/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Trimmed HTLC",
+    "source_url": "https://bitcoinops.org/en/topics/trimmed-htlc/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Two-Party ECDSA (2pECDSA)",
+    "source_url": "https://bitcoinops.org/en/topics/multisignature/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Unannounced channels",
+    "source_url": "https://bitcoinops.org/en/topics/unannounced-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Uneconomical outputs",
+    "source_url": "https://bitcoinops.org/en/topics/uneconomical-outputs/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Utreexo",
+    "source_url": "https://bitcoinops.org/en/topics/utreexo/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "V3 commitments",
+    "source_url": "https://bitcoinops.org/en/topics/v3-commitments/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Vaults",
+    "source_url": "https://bitcoinops.org/en/topics/vaults/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Version 2 P2P transport",
+    "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Version 3 transaction relay",
+    "source_url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Wallet labels",
+    "source_url": "https://bitcoinops.org/en/topics/wallet-labels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Watchtowers",
+    "source_url": "https://bitcoinops.org/en/topics/watchtowers/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Wumbo",
+    "source_url": "https://bitcoinops.org/en/topics/large-channels/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "X-only public keys",
+    "source_url": "https://bitcoinops.org/en/topics/x-only-public-keys/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Zero-conf channels",
+    "source_url": "https://bitcoinops.org/en/topics/zero-conf-channels/",
+    "keep_for_graph": true,
+    "reason": "Canonical Bitcoin Optech topic that maps to a learnable concept/proposal for the graph."
+  },
+  {
+    "topic": "Zero-fee commitments",
+    "source_url": "https://bitcoinops.org/en/topics/v3-commitments/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  },
+  {
+    "topic": "Zero-Knowledge Contingent Payments (ZKCP)",
+    "source_url": "https://bitcoinops.org/en/topics/acc/",
+    "keep_for_graph": false,
+    "reason": "Alias/alternative label for a canonical topic; skip to avoid duplicate graph nodes."
+  }
+]

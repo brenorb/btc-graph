@@ -1,0 +1,1568 @@
+[
+  {
+    "topic": "Script Basics",
+    "source_url": "https://opcodeexplained.com/script/script_basics",
+    "keep_for_graph": true,
+    "reason": "Foundational Script topic page that provides conceptual context for opcode learning."
+  },
+  {
+    "topic": "Script Success and Failure",
+    "source_url": "https://opcodeexplained.com/script/script",
+    "keep_for_graph": true,
+    "reason": "Foundational Script topic page that provides conceptual context for opcode learning."
+  },
+  {
+    "topic": "ASM Representation",
+    "source_url": "https://opcodeexplained.com/script/asm",
+    "keep_for_graph": true,
+    "reason": "Foundational Script topic page that provides conceptual context for opcode learning."
+  },
+  {
+    "topic": "Push Operators",
+    "source_url": "https://opcodeexplained.com/script/push",
+    "keep_for_graph": true,
+    "reason": "Foundational Script topic page that provides conceptual context for opcode learning."
+  },
+  {
+    "topic": "Numbers in Script",
+    "source_url": "https://opcodeexplained.com/script/numbers",
+    "keep_for_graph": true,
+    "reason": "Foundational Script topic page that provides conceptual context for opcode learning."
+  },
+  {
+    "topic": "OP_0",
+    "source_url": "https://opcodeexplained.com/opcodes/op_0",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_PUSHBYTES_1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_1",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_2",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_2",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_3",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_3",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_4",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_4",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_5",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_5",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_6",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_6",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_7",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_7",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_8",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_8",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_9",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_9",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_10",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_10",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_11",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_11",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_12",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_12",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_13",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_13",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_14",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_14",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_15",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_15",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_16",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_16",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_17",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_17",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_18",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_18",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_19",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_19",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_20",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_20",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_21",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_21",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_22",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_22",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_23",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_23",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_24",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_24",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_25",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_25",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_26",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_26",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_27",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_27",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_28",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_28",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_29",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_29",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_30",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_30",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_31",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_31",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_32",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_32",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_33",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_33",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_34",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_34",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_35",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_35",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_36",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_36",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_37",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_37",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_38",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_38",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_39",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_39",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_40",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_40",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_41",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_41",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_42",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_42",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_43",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_43",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_44",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_44",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_45",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_45",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_46",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_46",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_47",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_47",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_48",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_48",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_49",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_49",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_50",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_50",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_51",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_51",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_52",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_52",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_53",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_53",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_54",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_54",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_55",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_55",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_56",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_56",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_57",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_57",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_58",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_58",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_59",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_59",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_60",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_60",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_61",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_61",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_62",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_62",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_63",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_63",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_64",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_64",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_65",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_65",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_66",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_66",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_67",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_67",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_68",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_68",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_69",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_69",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_70",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_70",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_71",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_71",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_72",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_72",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_73",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_73",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_74",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_74",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHBYTES_75",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_75",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHDATA1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushdata1",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHDATA2",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushdata2",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_PUSHDATA4",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pushdata4",
+    "keep_for_graph": false,
+    "reason": "Trivial data-push variant; low standalone study value for the learning graph."
+  },
+  {
+    "topic": "OP_1NEGATE",
+    "source_url": "https://opcodeexplained.com/opcodes/op_1negate",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_RESERVED",
+    "source_url": "https://opcodeexplained.com/opcodes/op_reserved",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_1",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_2",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_3",
+    "source_url": "https://opcodeexplained.com/opcodes/op_3",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_4",
+    "source_url": "https://opcodeexplained.com/opcodes/op_4",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_5",
+    "source_url": "https://opcodeexplained.com/opcodes/op_5",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_6",
+    "source_url": "https://opcodeexplained.com/opcodes/op_6",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_7",
+    "source_url": "https://opcodeexplained.com/opcodes/op_7",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_8",
+    "source_url": "https://opcodeexplained.com/opcodes/op_8",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_9",
+    "source_url": "https://opcodeexplained.com/opcodes/op_9",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_10",
+    "source_url": "https://opcodeexplained.com/opcodes/op_10",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_11",
+    "source_url": "https://opcodeexplained.com/opcodes/op_11",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_12",
+    "source_url": "https://opcodeexplained.com/opcodes/op_12",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_13",
+    "source_url": "https://opcodeexplained.com/opcodes/op_13",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_14",
+    "source_url": "https://opcodeexplained.com/opcodes/op_14",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_15",
+    "source_url": "https://opcodeexplained.com/opcodes/op_15",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_16",
+    "source_url": "https://opcodeexplained.com/opcodes/op_16",
+    "keep_for_graph": false,
+    "reason": "Trivial numeric literal opcode; avoid graph clutter from near-duplicate number constants."
+  },
+  {
+    "topic": "OP_NOP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_VER",
+    "source_url": "https://opcodeexplained.com/opcodes/op_ver",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_IF",
+    "source_url": "https://opcodeexplained.com/opcodes/op_if",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_NOTIF",
+    "source_url": "https://opcodeexplained.com/opcodes/op_notif",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_VERIF",
+    "source_url": "https://opcodeexplained.com/opcodes/op_verif",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_VERNOTIF",
+    "source_url": "https://opcodeexplained.com/opcodes/op_vernotif",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_ELSE",
+    "source_url": "https://opcodeexplained.com/opcodes/op_else",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_ENDIF",
+    "source_url": "https://opcodeexplained.com/opcodes/op_endif",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_VERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_verify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_RETURN",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_TOALTSTACK",
+    "source_url": "https://opcodeexplained.com/opcodes/op_toaltstack",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_FROMALTSTACK",
+    "source_url": "https://opcodeexplained.com/opcodes/op_fromaltstack",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2DROP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2drop",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2DUP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2dup",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_3DUP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_3dup",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2OVER",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2over",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2ROT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2rot",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2SWAP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2swap",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_IFDUP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_ifdup",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_DEPTH",
+    "source_url": "https://opcodeexplained.com/opcodes/op_depth",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_DROP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_drop",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_DUP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_dup",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_NIP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nip",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_OVER",
+    "source_url": "https://opcodeexplained.com/opcodes/op_over",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_PICK",
+    "source_url": "https://opcodeexplained.com/opcodes/op_pick",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_ROLL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_roll",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_ROT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_rot",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_SWAP",
+    "source_url": "https://opcodeexplained.com/opcodes/op_swap",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_TUCK",
+    "source_url": "https://opcodeexplained.com/opcodes/op_tuck",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_CAT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_cat",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_SUBSTR",
+    "source_url": "https://opcodeexplained.com/opcodes/op_substr",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_LEFT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_left",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_RIGHT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_right",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_SIZE",
+    "source_url": "https://opcodeexplained.com/opcodes/op_size",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_INVERT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_invert",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_AND",
+    "source_url": "https://opcodeexplained.com/opcodes/op_and",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_OR",
+    "source_url": "https://opcodeexplained.com/opcodes/op_or",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_XOR",
+    "source_url": "https://opcodeexplained.com/opcodes/op_xor",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_EQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_equal",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_EQUALVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_equalverify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_RESERVED1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_reserved1",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_RESERVED2",
+    "source_url": "https://opcodeexplained.com/opcodes/op_reserved2",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_1ADD",
+    "source_url": "https://opcodeexplained.com/opcodes/op_1add",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_1SUB",
+    "source_url": "https://opcodeexplained.com/opcodes/op_1sub",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_2MUL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2mul",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_2DIV",
+    "source_url": "https://opcodeexplained.com/opcodes/op_2div",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_NEGATE",
+    "source_url": "https://opcodeexplained.com/opcodes/op_negate",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_ABS",
+    "source_url": "https://opcodeexplained.com/opcodes/op_abs",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_NOT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_not",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_0NOTEQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_0notequal",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_ADD",
+    "source_url": "https://opcodeexplained.com/opcodes/op_add",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_MUL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_mul",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_SUB",
+    "source_url": "https://opcodeexplained.com/opcodes/op_sub",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_DIV",
+    "source_url": "https://opcodeexplained.com/opcodes/op_div",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_MOD",
+    "source_url": "https://opcodeexplained.com/opcodes/op_mod",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_LSHIFT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_lshift",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_RSHIFT",
+    "source_url": "https://opcodeexplained.com/opcodes/op_rshift",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  },
+  {
+    "topic": "OP_BOOLAND",
+    "source_url": "https://opcodeexplained.com/opcodes/op_booland",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_BOOLOR",
+    "source_url": "https://opcodeexplained.com/opcodes/op_boolor",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_NUMEQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_numequal",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_NUMEQUALVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_numequalverify",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_NUMNOTEQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_numnotequal",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_LESSTHAN",
+    "source_url": "https://opcodeexplained.com/opcodes/op_lessthan",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_GREATERTHAN",
+    "source_url": "https://opcodeexplained.com/opcodes/op_greaterthan",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_LESSTHANOREQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_lessthanorequal",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_GREATERTHANOREQUAL",
+    "source_url": "https://opcodeexplained.com/opcodes/op_greaterthanorequal",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_MIN",
+    "source_url": "https://opcodeexplained.com/opcodes/op_min",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_MAX",
+    "source_url": "https://opcodeexplained.com/opcodes/op_max",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_WITHIN",
+    "source_url": "https://opcodeexplained.com/opcodes/op_within",
+    "keep_for_graph": false,
+    "reason": "Low-priority stack/arithmetic utility opcode; not selected as a top-level study topic."
+  },
+  {
+    "topic": "OP_RIPEMD160",
+    "source_url": "https://opcodeexplained.com/opcodes/op_ripemd160",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_SHA1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_sha1",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_SHA256",
+    "source_url": "https://opcodeexplained.com/opcodes/op_sha256",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_HASH160",
+    "source_url": "https://opcodeexplained.com/opcodes/op_hash160",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_HASH256",
+    "source_url": "https://opcodeexplained.com/opcodes/op_hash256",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CODESEPARATOR",
+    "source_url": "https://opcodeexplained.com/opcodes/op_codeseparator",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CHECKSIG",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checksig",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CHECKSIGVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checksigverify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CHECKMULTISIG",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checkmultisig",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CHECKMULTISIGVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checkmultisigverify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_NOP1",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop1",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_CHECKLOCKTIMEVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checklocktimeverify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_CHECKSEQUENCEVERIFY",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checksequenceverify",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_NOP4",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop4",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP5",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop5",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP6",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop6",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP7",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop7",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP8",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop8",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP9",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop9",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_NOP10",
+    "source_url": "https://opcodeexplained.com/opcodes/op_nop10",
+    "keep_for_graph": false,
+    "reason": "No-op/reserved alias; near-duplicate entry not worth a dedicated concept node."
+  },
+  {
+    "topic": "OP_CHECKSIGADD",
+    "source_url": "https://opcodeexplained.com/opcodes/op_checksigadd",
+    "keep_for_graph": true,
+    "reason": "Conceptually meaningful opcode for Script semantics and spend conditions."
+  },
+  {
+    "topic": "OP_RETURN_187",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_187",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_188",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_188",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_189",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_189",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_190",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_190",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_191",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_191",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_192",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_192",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_193",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_193",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_194",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_194",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_195",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_195",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_196",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_196",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_197",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_197",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_198",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_198",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_199",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_199",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_200",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_200",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_201",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_201",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_202",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_202",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_203",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_203",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_204",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_204",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_205",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_205",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_206",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_206",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_207",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_207",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_208",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_208",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_209",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_209",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_210",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_210",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_211",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_211",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_212",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_212",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_213",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_213",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_214",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_214",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_215",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_215",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_216",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_216",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_217",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_217",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_218",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_218",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_219",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_219",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_220",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_220",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_221",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_221",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_222",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_222",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_223",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_223",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_224",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_224",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_225",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_225",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_226",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_226",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_227",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_227",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_228",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_228",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_229",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_229",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_230",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_230",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_231",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_231",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_232",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_232",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_233",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_233",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_234",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_234",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_235",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_235",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_236",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_236",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_237",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_237",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_238",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_238",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_239",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_239",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_240",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_240",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_241",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_241",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_242",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_242",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_243",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_243",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_244",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_244",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_245",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_245",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_246",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_246",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_247",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_247",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_248",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_248",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_249",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_249",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_250",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_250",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_251",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_251",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_252",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_252",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_253",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_253",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_RETURN_254",
+    "source_url": "https://opcodeexplained.com/opcodes/op_return_254",
+    "keep_for_graph": false,
+    "reason": "Near-duplicate reserved OP_RETURN alias with no distinct study value."
+  },
+  {
+    "topic": "OP_INVALIDOPCODE",
+    "source_url": "https://opcodeexplained.com/opcodes/op_invalidopcode",
+    "keep_for_graph": false,
+    "reason": "Disabled/reserved legacy opcode; keep historical notes elsewhere instead of a graph node."
+  }
+]

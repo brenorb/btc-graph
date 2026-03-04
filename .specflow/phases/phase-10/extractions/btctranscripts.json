@@ -1,0 +1,986 @@
+[
+  {
+    "topic": "2025",
+    "source_url": "https://btctranscripts.com/search?filter_tags=2025",
+    "keep_for_graph": false,
+    "reason": "Time/year label, not a concept."
+  },
+  {
+    "topic": "Adaptor signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=adaptor-signatures",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "altcoins",
+    "source_url": "https://btctranscripts.com/search?filter_tags=altcoins",
+    "keep_for_graph": false,
+    "reason": "Not a Bitcoin concept-level topic."
+  },
+  {
+    "topic": "Anchor outputs",
+    "source_url": "https://btctranscripts.com/search?filter_tags=anchor-outputs",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Anonymity networks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=anonymity-networks",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Ark",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ark",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "asmap",
+    "source_url": "https://btctranscripts.com/search?filter_tags=asmap",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "AssumeUTXO",
+    "source_url": "https://btctranscripts.com/search?filter_tags=assumeutxo",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "atlanta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=atlanta",
+    "keep_for_graph": false,
+    "reason": "Place tag, not a concept."
+  },
+  {
+    "topic": "Atomic multipath payments (AMPs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=amp",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Bandwidth Reduction (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bandwidth-reduction",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "batch-validation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=batch-validation",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "BDK",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bdk",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "bdk-floresta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bdk-floresta",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "Bech32(m)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bech32",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "benchmarking",
+    "source_url": "https://btctranscripts.com/search?filter_tags=benchmarking",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "bitcoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Bitcoin development",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-development",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Bitcoin wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-wallet",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "bitcoin-core",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-core",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "bitcoinconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoinconf",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "bitcoinconference",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoinconference",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "bitcoindev",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoindev",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "bitcoineducation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoineducation",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "BLS signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bls-signatures",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "btcplusplus",
+    "source_url": "https://btctranscripts.com/search?filter_tags=btcplusplus",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "build-system",
+    "source_url": "https://btctranscripts.com/search?filter_tags=build-system",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "build-systems",
+    "source_url": "https://btctranscripts.com/search?filter_tags=build-systems",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "c-lightning",
+    "source_url": "https://btctranscripts.com/search?filter_tags=c-lightning",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "career",
+    "source_url": "https://btctranscripts.com/search?filter_tags=career",
+    "keep_for_graph": false,
+    "reason": "Role/career label, not a technical concept."
+  },
+  {
+    "topic": "Channel factories",
+    "source_url": "https://btctranscripts.com/search?filter_tags=channel-factories",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Child pays for parent (CPFP)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cpfp",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Client-side validation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=client-side-validation",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Cluster mempool",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cluster-mempool",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "cmake",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cmake",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Codex32",
+    "source_url": "https://btctranscripts.com/search?filter_tags=codex32",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Coin selection",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coin-selection",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Coinjoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coinjoin",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Coinswap",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coinswap",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Compact block filters",
+    "source_url": "https://btctranscripts.com/search?filter_tags=compact-block-filters",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Compact block relay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=compact-block-relay",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "conference",
+    "source_url": "https://btctranscripts.com/search?filter_tags=conference",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "Consensus cleanup soft fork",
+    "source_url": "https://btctranscripts.com/search?filter_tags=consensus-cleanup",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Consensus Enforcement (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=consensus-enforcement",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Contract Protocols (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=contract-protocols",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Covenants",
+    "source_url": "https://btctranscripts.com/search?filter_tags=covenants",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "CPFP carve out",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cpfp-carve-out",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Cross-input signature aggregation (CISA)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cisa",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "cryptography",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cryptography",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "CVE-2018-17144",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cve-2018-17144",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "CVEs (various)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cves",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "cypherpunks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cypherpunks",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "Dandelion",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dandelion",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "devconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=devconf",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "developer",
+    "source_url": "https://btctranscripts.com/search?filter_tags=developer",
+    "keep_for_graph": false,
+    "reason": "Role/career label, not a technical concept."
+  },
+  {
+    "topic": "Developer Tools (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=developer-tools",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Discreet Log Contracts (DLCs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dlc",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Dual funding",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dual-funding",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Ecash",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ecash",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Eclipse attacks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=eclipse-attacks",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Eltoo",
+    "source_url": "https://btctranscripts.com/search?filter_tags=eltoo",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Ephemeral anchors",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ephemeral-anchors",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Erlay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=erlay",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "ethereum",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ethereum",
+    "keep_for_graph": false,
+    "reason": "Not a Bitcoin concept-level topic."
+  },
+  {
+    "topic": "Fee Management (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=fee-management",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Floresta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=floresta",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "fuzz-testing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=fuzz-testing",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Generic signmessage",
+    "source_url": "https://btctranscripts.com/search?filter_tags=generic-signmessage",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "gui",
+    "source_url": "https://btctranscripts.com/search?filter_tags=gui",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Hardware wallet interface (HWI)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hwi",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "hardware-wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hardware-wallet",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Hash Time Locked Contract (HTLC)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=htlc",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "HD key generation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bip32",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Hold invoices",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hold-invoices",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "ibd",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ibd",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "incentives",
+    "source_url": "https://btctranscripts.com/search?filter_tags=incentives",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "libbitcoinkernel",
+    "source_url": "https://btctranscripts.com/search?filter_tags=libbitcoinkernel",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "libsecp256k1",
+    "source_url": "https://btctranscripts.com/search?filter_tags=libsecp256k1",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "Lightning Network (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lightning",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Lightweight Client Support (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lightweight-client",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "lnd",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lnd",
+    "keep_for_graph": false,
+    "reason": "Project/implementation label, not a protocol concept."
+  },
+  {
+    "topic": "LNURL",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lnurl",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "MAST",
+    "source_url": "https://btctranscripts.com/search?filter_tags=mast",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "merkle",
+    "source_url": "https://btctranscripts.com/search?filter_tags=merkle",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Mining (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=mining",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Miniscript",
+    "source_url": "https://btctranscripts.com/search?filter_tags=miniscript",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Minisketch",
+    "source_url": "https://btctranscripts.com/search?filter_tags=minisketch",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "multiparty channel",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multiparty-channel",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Multipath payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multipath-payments",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "multiprocess",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multiprocess",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "MuSig",
+    "source_url": "https://btctranscripts.com/search?filter_tags=musig",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "niftynei",
+    "source_url": "https://btctranscripts.com/search?filter_tags=niftynei",
+    "keep_for_graph": false,
+    "reason": "Person tag, not a concept."
+  },
+  {
+    "topic": "Offers",
+    "source_url": "https://btctranscripts.com/search?filter_tags=offers",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "OP_CAT",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-cat",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "OP_CHECKSIGFROMSTACK",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-checksigfromstack",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "OP_CHECKTEMPLATEVERIFY",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-checktemplateverify",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Output linking",
+    "source_url": "https://btctranscripts.com/search?filter_tags=output-linking",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Output script descriptors",
+    "source_url": "https://btctranscripts.com/search?filter_tags=descriptors",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "P2P Network Protocol (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=p2p",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Package relay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=package-relay",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Partially signed bitcoin transactions",
+    "source_url": "https://btctranscripts.com/search?filter_tags=psbt",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "pathfinding",
+    "source_url": "https://btctranscripts.com/search?filter_tags=pathfinding",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Pay-to-Contract (P2C) protocols",
+    "source_url": "https://btctranscripts.com/search?filter_tags=p2c",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Payjoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=payjoin",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Payment batching",
+    "source_url": "https://btctranscripts.com/search?filter_tags=payment-batching",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Point Time Locked Contracts (PTLCs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ptlc",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Pooled mining",
+    "source_url": "https://btctranscripts.com/search?filter_tags=pooled-mining",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "privacy",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Privacy Enhancements (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy-enhancements",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Privacy Problems (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy-problems",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Proof of payment",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-of-payment",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "proof-of-stake",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-of-stake",
+    "keep_for_graph": false,
+    "reason": "Not a Bitcoin concept-level topic."
+  },
+  {
+    "topic": "proof-systems",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-systems",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "quantum",
+    "source_url": "https://btctranscripts.com/search?filter_tags=quantum",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Quantum resistance",
+    "source_url": "https://btctranscripts.com/search?filter_tags=quantum-resistance",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "regulation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=regulation",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Rendez-vous routing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rv-routing",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Replace-by-fee (RBF)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rbf",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Reproducible builds",
+    "source_url": "https://btctranscripts.com/search?filter_tags=reproducible-builds",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "research",
+    "source_url": "https://btctranscripts.com/search?filter_tags=research",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "routing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=routing",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "rpc",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rpc",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "scalability",
+    "source_url": "https://btctranscripts.com/search?filter_tags=scalability",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Schnorr signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=schnorr-signatures",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Scriptless multisignatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multisignature",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Scripts and Addresses (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=scripts-addresses",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "security",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Security Enhancements (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security-enhancements",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Security Problems (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security-problems",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Segregated witness",
+    "source_url": "https://btctranscripts.com/search?filter_tags=segwit",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Sidechains",
+    "source_url": "https://btctranscripts.com/search?filter_tags=sidechains",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "SIGHASH_ANYPREVOUT",
+    "source_url": "https://btctranscripts.com/search?filter_tags=sighash-anyprevout",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "signature-aggregation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=signature-aggregation",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Signet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=signet",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Silent payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=silent-payments",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Simple taproot channels",
+    "source_url": "https://btctranscripts.com/search?filter_tags=simple-taproot-channels",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Simplicity",
+    "source_url": "https://btctranscripts.com/search?filter_tags=simplicity",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "soft fork",
+    "source_url": "https://btctranscripts.com/search?filter_tags=soft-fork",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Soft fork activation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=soft-fork-activation",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Splicing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=splicing",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Statechains",
+    "source_url": "https://btctranscripts.com/search?filter_tags=statechains",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "stratum-v2",
+    "source_url": "https://btctranscripts.com/search?filter_tags=stratum-v2",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Submarine swaps",
+    "source_url": "https://btctranscripts.com/search?filter_tags=submarine-swaps",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "tabconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tabconf",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "tabconf 7",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tabconf-7",
+    "keep_for_graph": false,
+    "reason": "Event/community label, not a concept-level learning topic."
+  },
+  {
+    "topic": "Taproot",
+    "source_url": "https://btctranscripts.com/search?filter_tags=taproot",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Tapscript",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tapscript",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "technology",
+    "source_url": "https://btctranscripts.com/search?filter_tags=technology",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "testing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=testing",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Threshold signature",
+    "source_url": "https://btctranscripts.com/search?filter_tags=threshold-signature",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Timelocks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=timelocks",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "topology",
+    "source_url": "https://btctranscripts.com/search?filter_tags=topology",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Trampoline payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trampoline-payments",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Transaction pinning",
+    "source_url": "https://btctranscripts.com/search?filter_tags=transaction-pinning",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Transaction Relay Policy (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=transaction-relay-policy",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Trimmed HTLC",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trimmed-htlc",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "trustless wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trustless-wallet",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Utreexo",
+    "source_url": "https://btctranscripts.com/search?filter_tags=utreexo",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "ux",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ux",
+    "keep_for_graph": false,
+    "reason": "Generic/non-specific label, not a concrete concept node."
+  },
+  {
+    "topic": "Vaults",
+    "source_url": "https://btctranscripts.com/search?filter_tags=vaults",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Version 2 P2P transport",
+    "source_url": "https://btctranscripts.com/search?filter_tags=v2-p2p-transport",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=wallet",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Watchtowers",
+    "source_url": "https://btctranscripts.com/search?filter_tags=watchtowers",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  },
+  {
+    "topic": "Zero-conf channels",
+    "source_url": "https://btctranscripts.com/search?filter_tags=zero-conf-channels",
+    "keep_for_graph": true,
+    "reason": "Concept-level Bitcoin/Lightning learning topic suitable for the graph."
+  }
+]

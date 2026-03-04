@@ -1,0 +1,122 @@
+[
+  {
+    "topic": "ANYPREVOUT",
+    "source_url": "https://covenants.info/proposals/apo/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "CTV",
+    "source_url": "https://covenants.info/proposals/ctv/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "OP_VAULT",
+    "source_url": "https://covenants.info/proposals/op-vault/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "TLUV",
+    "source_url": "https://covenants.info/proposals/tluv/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "TXHASH",
+    "source_url": "https://covenants.info/proposals/txhash/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Direct Introspection",
+    "source_url": "https://covenants.info/proposals/direct-introspection/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "CCV & MATT",
+    "source_url": "https://covenants.info/proposals/matt/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "others",
+    "source_url": "https://covenants.info/proposals/others/",
+    "keep_for_graph": false,
+    "reason": "Catch-all bucket; not a single concrete concept node."
+  },
+  {
+    "topic": "Transaction Templating",
+    "source_url": "https://covenants.info/use-cases/tx-templating/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Eltoo / LN-Symmetry",
+    "source_url": "https://covenants.info/use-cases/eltoo/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Vaults",
+    "source_url": "https://covenants.info/use-cases/vaults/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Payment Pools",
+    "source_url": "https://covenants.info/use-cases/payment-pools/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Ark",
+    "source_url": "https://covenants.info/use-cases/ark/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "DLCs",
+    "source_url": "https://covenants.info/use-cases/dlcs/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Statechains",
+    "source_url": "https://covenants.info/use-cases/statechains/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Spacechains",
+    "source_url": "https://covenants.info/use-cases/spacechains/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "Congestion Control",
+    "source_url": "https://covenants.info/use-cases/congestion-control/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "The Great Script Restoration",
+    "source_url": "https://covenants.info/extra/gsr/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "BitVM",
+    "source_url": "https://covenants.info/extra/bitvm/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  },
+  {
+    "topic": "OP_CAT",
+    "source_url": "https://covenants.info/extra/cat/",
+    "keep_for_graph": true,
+    "reason": "Concrete covenant/contract-system concept relevant to Bitcoin learning graph."
+  }
+]

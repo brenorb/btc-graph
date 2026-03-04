@@ -97,6 +97,23 @@ Exit criteria:
 - `npm run check:links` passes.
 - `npm run build` passes.
 
+## Phase 10: External Topic Corpus Integration
+Goal: ingest concept topics from the external topic indexes (`btctranscripts`, `bitcoinops`, `opcodeexplained`, and `covenants.info`) and map meaningful items into curated graph nodes with focused resources.
+
+Deliverables:
+- Source extraction artifacts from each requested website and a curated keep/drop pass for graph-suitable concepts.
+- Additional node slice focused on Script/opcode semantics, covenant design space, and advanced protocol proposals/use cases.
+- Two-sentence-max descriptions for each new node and source-focused resources (no broad landing pages when specific topic pages exist).
+- Phase-specific content tests requiring target IDs and enforcing quality constraints (resource precision, dependency quality, and description brevity).
+- Independent no-context review plus fix pass documented in `.specflow/phases/phase-10/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.
+- Site is deployed and reachable on GitHub Pages with phase-8 content live.
+
 ## Phase 8: UI/UX Corrections
 Goal: resolve post-launch UI interaction regressions and polish usability across desktop/mobile.
 
