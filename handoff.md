@@ -1,14 +1,9 @@
-# Session Handoff (2026-03-03)
+# Session Handoff (2026-03-04)
 
 ## Repository
-- Path: `/Users/breno/Documents/code/PROJECTS/btc-graph-phase8`
+- Path: `/Users/breno/Documents/code/PROJECTS/btc-graph`
 - Remote: `https://github.com/brenorb/btc-graph`
-- Branch: `codex/phase8-ui-ux-and-content`
-
-## Latest Local State
-- Latest commit: `d3eb63c`
-- Message: `feat(phase8): fix ui interactions, theming, and layout polish`
-- Working tree: includes uncommitted Phase 9 content expansion (22 node files + tests + generated graph + docs)
+- Branch: `codex/phase8-topic-ingestion`
 
 ## Phase Status
 - Phase 1: complete
@@ -18,45 +13,43 @@
 - Phase 5: complete
 - Phase 6: complete
 - Phase 7: complete
-- Phase 8: complete (committed)
-- Phase 9: complete (implemented and validated locally; pending commit/push)
+- Phase 8: complete (UI/UX corrections)
+- Phase 9: complete
+- Phase 10: complete (external topic corpus integration)
 
-## Phase 8 Summary
-- Added label visibility controls (`Show all labels`, `Hide all labels`)
-- Removed zoom-threshold label logic (labels controlled explicitly)
-- Added progress-state toggle-off behavior for explicit node state
-- Fixed dark mode application by writing theme to `document.documentElement`
-- Polished button alignment/centering and added footer with social/project links
-- Updated dependency wording to post-requisites in issue template/details
-- Added phase-8 artifacts:
-  - `.specflow/phases/phase-8/plan.md`
-  - `.specflow/phases/phase-8/plan-2.md`
-  - `.specflow/phases/phase-8/review-no-context.md`
-  - `.specflow/phases/phase-8/visual-verification.md`
+## Phase 10 Summary
+- Added roadmap entry:
+  - `Phase 10: External Topic Corpus Integration`
+- Added SpecFlow artifacts:
+  - `.specflow/phases/phase-10/plan.md`
+  - `.specflow/phases/phase-10/plan-2.md`
+  - `.specflow/phases/phase-10/source-research.md`
+  - `.specflow/phases/phase-10/review-no-context.md`
+  - `.specflow/phases/phase-10/visual-verification.md`
+  - `.specflow/phases/phase-10/extractions/*.json` (4 source extraction outputs)
+- Added new phase test:
+  - `tests/phase-10-content.test.ts`
+- Added 33 curated nodes from requested sources (covenants, selective opcodes, relay/privacy/lightning advanced topics).
+- Updated generated graph artifact:
+  - `public/data/graph.json` now contains `212` nodes.
 
-## Phase 9 Summary
-- Added 22 new source-driven nodes across protocol/dev/lightning/mining/ops/privacy/custody/economics/history
-- Graph size increased from `157` to `179` nodes
-- Added phase-9 quality tests:
-  - `tests/phase-9-content.test.ts`
-- Added phase-9 planning/research/review artifacts:
-  - `.specflow/phases/phase-9/plan.md`
-  - `.specflow/phases/phase-9/plan-2.md`
-  - `.specflow/phases/phase-9/source-research.md`
-  - `.specflow/phases/phase-9/review-no-context.md`
+## No-Context Review Outcome
+- Reviewer flagged broad-link edge-case coverage gap and one broad landing-page resource.
+- Applied fixes:
+  - strengthened broad-link fixture coverage in `tests/phase-10-content.test.ts`
+  - replaced broad `covenants.info/use-cases/` resource with focused `.../use-cases/tx-templating/` in `protocol.covenants`
+- Re-validation after fixes: all checks green.
 
-## Operational Checks (Latest Main Session)
-- `npm test` passes (`57` tests)
-- `npm run build:data` passes (`179` nodes built)
-- `npm run check:links` passes (`135` unique URLs, all reachable)
-- `npm run build` passes
+## Operational Checks (Latest)
+- `npm test` passes (`60` tests).
+- `npm run build:data` passes (`212` nodes built).
+- `npm run check:links` passes (`212` unique URLs, all reachable).
+- `npm run build` passes.
 
-## Note On No-Context Reviewer Link Checks
-- No-context reviewer sessions reported environment-level `fetch failed` errors on link checks.
-- Re-runs in the main writable session passed.
-
-## Launch State
-- Current public URL remains:
-  - `https://brenorb.com/btc-graph/`
-  - `https://brenorb.github.io/btc-graph/`
-- Updated Phase 8/9 work is not live yet until pushed/merged/deployed.
+## Visual Verification
+- Local runtime verified at `http://127.0.0.1:4173/btc-graph/`.
+- Screenshot artifacts:
+  - `/tmp/btc-graph-phase10-desktop.png`
+  - `/tmp/btc-graph-phase10-mobile.png`
+  - `/tmp/btc-graph-phase10-desktop-dark.png`
+- `peekaboo` was attempted; fallback to Playwright screenshots due missing Screen Recording permission in this environment.
