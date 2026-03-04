@@ -3,7 +3,7 @@
 ## Repository
 - Path: `/Users/breno/Documents/code/PROJECTS/btc-graph`
 - Remote: `https://github.com/brenorb/btc-graph`
-- Branch: `codex/phase8-topic-ingestion`
+- Branch: `codex/phase11-topic-resource-specificity`
 
 ## Phase Status
 - Phase 1: complete
@@ -16,40 +16,64 @@
 - Phase 8: complete (UI/UX corrections)
 - Phase 9: complete
 - Phase 10: complete (external topic corpus integration)
+- Phase 11: complete (topic specificity and source coverage expansion)
 
-## Phase 10 Summary
+## Phase 11 Summary
 - Added roadmap entry:
-  - `Phase 10: External Topic Corpus Integration`
+  - `Phase 11: Topic Specificity and Source Coverage Expansion`
 - Added SpecFlow artifacts:
-  - `.specflow/phases/phase-10/plan.md`
-  - `.specflow/phases/phase-10/plan-2.md`
-  - `.specflow/phases/phase-10/source-research.md`
-  - `.specflow/phases/phase-10/review-no-context.md`
-  - `.specflow/phases/phase-10/visual-verification.md`
-  - `.specflow/phases/phase-10/extractions/*.json` (4 source extraction outputs)
-- Added new phase test:
-  - `tests/phase-10-content.test.ts`
-- Added 33 curated nodes from requested sources (covenants, selective opcodes, relay/privacy/lightning advanced topics).
+  - `.specflow/phases/phase-11/plan.md`
+  - `.specflow/phases/phase-11/plan-2.md`
+  - `.specflow/phases/phase-11/source-research.md`
+  - `.specflow/phases/phase-11/review-no-context.md`
+  - `.specflow/phases/phase-11/visual-verification.md`
+  - `.specflow/phases/phase-11/extractions/raw-*.json`
+  - `.specflow/phases/phase-11/extractions/curated-topics.json`
+- Added phase-specific test:
+  - `tests/phase-11-content.test.ts`
+- Added 22 new curated nodes from requested source topics:
+  - `protocol.annex`
+  - `mining.asicboost`
+  - `extension.channel-factories`
+  - `extension.coinswap`
+  - `extension.dual-funding`
+  - `extension.ecash`
+  - `custody.codex32`
+  - `privacy.silent-payments`
+  - `extension.sidechains`
+  - `ops.utreexo`
+  - `extension.lnurl`
+  - `extension.submarine-swaps`
+  - `protocol.transaction-pinning`
+  - `protocol.cpfp-carve-out`
+  - `security.exfiltration-resistant-signing`
+  - `protocol.fee-sponsorship`
+  - `protocol.discrete-log-equivalency`
+  - `fundamentals.trustlessness`
+  - `fundamentals.neutrality`
+  - `privacy.fungibility`
+  - `security.adversarial-thinking`
+  - `security.responsible-disclosure`
 - Updated generated graph artifact:
-  - `public/data/graph.json` now contains `212` nodes.
+  - `public/data/graph.json` now contains `234` nodes.
 
 ## No-Context Review Outcome
-- Reviewer flagged broad-link edge-case coverage gap and one broad landing-page resource.
+- Reviewer identified one medium issue:
+  - invalid prerequisite IDs in two new phase-11 nodes caused `build:data` failure.
 - Applied fixes:
-  - strengthened broad-link fixture coverage in `tests/phase-10-content.test.ts`
-  - replaced broad `covenants.info/use-cases/` resource with focused `.../use-cases/tx-templating/` in `protocol.covenants`
+  - updated prerequisites in `protocol.discrete-log-equivalency` and `security.exfiltration-resistant-signing`
+  - aligned expected prerequisites in `tests/phase-11-content.test.ts`
 - Re-validation after fixes: all checks green.
 
 ## Operational Checks (Latest)
-- `npm test` passes (`60` tests).
-- `npm run build:data` passes (`212` nodes built).
-- `npm run check:links` passes (`212` unique URLs, all reachable).
+- `npm test` passes (`63` tests).
+- `npm run build:data` passes (`234` nodes built).
+- `npm run check:links` passes (`260` unique URLs, all reachable).
 - `npm run build` passes.
 
 ## Visual Verification
 - Local runtime verified at `http://127.0.0.1:4173/btc-graph/`.
 - Screenshot artifacts:
-  - `/tmp/btc-graph-phase10-desktop.png`
-  - `/tmp/btc-graph-phase10-mobile.png`
-  - `/tmp/btc-graph-phase10-desktop-dark.png`
-- `peekaboo` was attempted; fallback to Playwright screenshots due missing Screen Recording permission in this environment.
+  - `/tmp/btc-graph-phase11-desktop.png`
+  - `/tmp/btc-graph-phase11-mobile.png`
+  - `/tmp/btc-graph-phase11-desktop-dark.png`
