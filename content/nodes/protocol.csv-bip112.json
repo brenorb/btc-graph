@@ -2,7 +2,7 @@
   "id": "protocol.csv-bip112",
   "title": "CHECKSEQUENCEVERIFY (BIP 112)",
   "description": "Script opcode that enforces relative locktime conditions using sequence-based spending constraints.",
-  "category": "Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.timelocks"
   ],

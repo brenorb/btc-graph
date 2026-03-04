@@ -2,7 +2,7 @@
   "id": "protocol.cltv-bip65",
   "title": "CHECKLOCKTIMEVERIFY (BIP 65)",
   "description": "Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.",
-  "category": "Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.timelocks"
   ],

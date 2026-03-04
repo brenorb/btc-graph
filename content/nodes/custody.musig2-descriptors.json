@@ -2,7 +2,7 @@
   "id": "custody.musig2-descriptors",
   "title": "MuSig2 Descriptor Workflows",
   "description": "How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.",
-  "category": "Self-Custody",
+  "category": "Wallets",
   "prerequisites": [
     "custody.multisig",
     "protocol.taproot"

@@ -2,7 +2,7 @@
   "id": "protocol.sequence-locks-bip68",
   "title": "Sequence Locks (BIP 68)",
   "description": "Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.",
-  "category": "Protocol",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.timelocks"
   ],

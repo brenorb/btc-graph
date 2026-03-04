@@ -2,7 +2,7 @@
   "id": "ops.addrman-bucketing",
   "title": "AddrMan Bucketing",
   "description": "Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.peer-discovery"
   ],

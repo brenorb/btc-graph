@@ -2,7 +2,7 @@
   "id": "dev.scantxoutset-rpc",
   "title": "scantxoutset RPC",
   "description": "RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.bitcoin-core-rpc"
   ],

@@ -2,7 +2,7 @@
   "id": "protocol.standardness-policy",
   "title": "Standardness Policy",
   "description": "Node relay and mempool policy rules that constrain which valid transactions are considered standard.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.mempool-policy"
   ],

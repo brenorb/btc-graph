@@ -2,7 +2,7 @@
   "id": "lightning.htlc-timeout-settlement",
   "title": "HTLC Timeout Settlement Paths",
   "description": "On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.htlc"
   ],

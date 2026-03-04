@@ -2,7 +2,7 @@
   "id": "history.rbf-policy-evolution",
   "title": "RBF Policy Evolution",
   "description": "Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.",
-  "category": "History",
+  "category": "History & Governance",
   "prerequisites": [
     "protocol.rbf"
   ],

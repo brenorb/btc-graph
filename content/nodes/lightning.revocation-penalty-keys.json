@@ -2,7 +2,7 @@
   "id": "lightning.revocation-penalty-keys",
   "title": "Revocation and Penalty Keys",
   "description": "Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.commitment-transactions"
   ],

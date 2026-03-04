@@ -2,7 +2,7 @@
   "id": "ops.utxo-set-management",
   "title": "UTXO Set Management",
   "description": "Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.utxo-model"
   ],

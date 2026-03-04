@@ -2,7 +2,7 @@
   "id": "lightning.channel-reserve-policy",
   "title": "Channel Reserve and Dust Limits",
   "description": "Channel-level reserve and dust constraints that preserve safety margins and spendability under fee pressure.",
-  "category": "Lightning",
+  "category": "Extension Systems",
   "prerequisites": [
     "lightning.payment-channels"
   ],

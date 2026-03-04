@@ -302,7 +302,7 @@
       "id": "custody.musig2-descriptors",
       "title": "MuSig2 Descriptor Workflows",
       "description": "How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.",
-      "category": "Self-Custody",
+      "category": "Wallets",
       "prerequisites": [
         "custody.multisig",
         "protocol.taproot"
@@ -903,7 +903,7 @@
       "id": "dev.fundrawtransaction-rpc",
       "title": "fundrawtransaction RPC",
       "description": "RPC for coin selection and fee funding of partially constructed transactions.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.bitcoin-core-rpc"
       ],
@@ -1128,7 +1128,7 @@
       "id": "dev.scantxoutset-rpc",
       "title": "scantxoutset RPC",
       "description": "RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.",
-      "category": "Development",
+      "category": "Wallets",
       "prerequisites": [
         "dev.bitcoin-core-rpc"
       ],
@@ -1166,7 +1166,7 @@
       "id": "dev.testmempoolaccept-rpc",
       "title": "testmempoolaccept RPC",
       "description": "RPC workflow to pre-check transaction acceptance against local mempool and policy rules.",
-      "category": "Development",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "dev.bitcoin-core-rpc"
       ],
@@ -2379,7 +2379,7 @@
       "id": "history.rbf-policy-evolution",
       "title": "RBF Policy Evolution",
       "description": "Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.",
-      "category": "History",
+      "category": "History & Governance",
       "prerequisites": [
         "protocol.rbf"
       ],
@@ -2721,7 +2721,7 @@
       "id": "lightning.channel-reserve-policy",
       "title": "Channel Reserve and Dust Limits",
       "description": "Channel-level reserve and dust constraints that preserve safety margins and spendability under fee pressure.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.payment-channels"
       ],
@@ -2912,7 +2912,7 @@
       "id": "lightning.htlc-timeout-settlement",
       "title": "HTLC Timeout Settlement Paths",
       "description": "On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.htlc"
       ],
@@ -3173,7 +3173,7 @@
       "id": "lightning.revocation-penalty-keys",
       "title": "Revocation and Penalty Keys",
       "description": "Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.",
-      "category": "Lightning",
+      "category": "Extension Systems",
       "prerequisites": [
         "lightning.commitment-transactions"
       ],
@@ -3889,7 +3889,7 @@
       "id": "ops.addrman-bucketing",
       "title": "AddrMan Bucketing",
       "description": "Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.peer-discovery"
       ],
@@ -4269,7 +4269,7 @@
       "id": "ops.peer-eviction-protection",
       "title": "Peer Eviction Protection",
       "description": "Inbound and outbound peer eviction logic designed to retain high-value peers and resist DoS/eclipsing behavior.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.peer-discovery"
       ],
@@ -4492,7 +4492,7 @@
       "id": "ops.utxo-set-management",
       "title": "UTXO Set Management",
       "description": "Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.",
-      "category": "Node Operations",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.utxo-model"
       ],
@@ -4680,7 +4680,7 @@
       "id": "privacy.change-avoidance",
       "title": "Change Avoidance Strategies",
       "description": "Wallet spending techniques that minimize change output creation to reduce linkage and future privacy leakage.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.change-detection"
       ],
@@ -4830,7 +4830,7 @@
       "id": "privacy.common-input-ownership",
       "title": "Common-Input Ownership Heuristic",
       "description": "Heuristic that clusters addresses by assuming inputs in one transaction are controlled by the same entity.",
-      "category": "Privacy",
+      "category": "Security",
       "prerequisites": [
         "privacy.chain-analysis-heuristics"
       ],
@@ -5360,7 +5360,7 @@
       "id": "protocol.cltv-bip65",
       "title": "CHECKLOCKTIMEVERIFY (BIP 65)",
       "description": "Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.",
-      "category": "Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.timelocks"
       ],
@@ -5590,7 +5590,7 @@
       "id": "protocol.csv-bip112",
       "title": "CHECKSEQUENCEVERIFY (BIP 112)",
       "description": "Script opcode that enforces relative locktime conditions using sequence-based spending constraints.",
-      "category": "Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.timelocks"
       ],
@@ -5665,7 +5665,7 @@
       "id": "protocol.dust-policy",
       "title": "Dust Policy",
       "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.fee-market"
       ],
@@ -6226,7 +6226,7 @@
       "id": "protocol.sequence-locks-bip68",
       "title": "Sequence Locks (BIP 68)",
       "description": "Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.",
-      "category": "Protocol",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.timelocks"
       ],
@@ -6339,7 +6339,7 @@
       "id": "protocol.standardness-policy",
       "title": "Standardness Policy",
       "description": "Node relay and mempool policy rules that constrain which valid transactions are considered standard.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "ops.mempool-policy"
       ],
@@ -6680,7 +6680,7 @@
       "id": "protocol.wtxid-relay-bip339",
       "title": "WTXID Relay (BIP 339)",
       "description": "Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.",
-      "category": "Protocol",
+      "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.transaction-relay-inv-getdata"
       ],

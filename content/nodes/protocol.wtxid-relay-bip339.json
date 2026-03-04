@@ -2,7 +2,7 @@
   "id": "protocol.wtxid-relay-bip339",
   "title": "WTXID Relay (BIP 339)",
   "description": "Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.transaction-relay-inv-getdata"
   ],

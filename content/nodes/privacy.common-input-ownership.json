@@ -2,7 +2,7 @@
   "id": "privacy.common-input-ownership",
   "title": "Common-Input Ownership Heuristic",
   "description": "Heuristic that clusters addresses by assuming inputs in one transaction are controlled by the same entity.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.chain-analysis-heuristics"
   ],

@@ -2,7 +2,7 @@
   "id": "dev.fundrawtransaction-rpc",
   "title": "fundrawtransaction RPC",
   "description": "RPC for coin selection and fee funding of partially constructed transactions.",
-  "category": "Development",
+  "category": "Wallets",
   "prerequisites": [
     "dev.bitcoin-core-rpc"
   ],

@@ -2,7 +2,7 @@
   "id": "protocol.dust-policy",
   "title": "Dust Policy",
   "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
-  "category": "Protocol",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.fee-market"
   ],

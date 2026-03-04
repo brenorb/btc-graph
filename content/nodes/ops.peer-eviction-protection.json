@@ -2,7 +2,7 @@
   "id": "ops.peer-eviction-protection",
   "title": "Peer Eviction Protection",
   "description": "Inbound and outbound peer eviction logic designed to retain high-value peers and resist DoS/eclipsing behavior.",
-  "category": "Node Operations",
+  "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.peer-discovery"
   ],

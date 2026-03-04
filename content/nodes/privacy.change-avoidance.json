@@ -2,7 +2,7 @@
   "id": "privacy.change-avoidance",
   "title": "Change Avoidance Strategies",
   "description": "Wallet spending techniques that minimize change output creation to reduce linkage and future privacy leakage.",
-  "category": "Privacy",
+  "category": "Security",
   "prerequisites": [
     "privacy.change-detection"
   ],
