@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.trustlessness",
+  "title": "Trustlessness",
+  "description": "Trustlessness in Bitcoin means security comes from verification and incentives rather than trusted operators. You can reduce counterparty risk by validating rules locally.",
+  "category": "Security",
+  "prerequisites": [
+    "ops.run-full-node",
+    "fundamentals.censorship-resistance"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Trustlessness",
+      "url": "https://bitcoindevphilosophy.com/#trustlessness",
+      "notes": "Philosophical and engineering framing of trust minimization."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+      "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+      "notes": "Operational implications of self-verification in practice."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Protocol mechanics behind independent verification."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "philosophy",
+    "verification"
+  ],
+  "aliases": [
+    "dont trust verify"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "protocol.fee-sponsorship",
+  "title": "Fee Sponsorship",
+  "description": "Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.cpfp",
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Fee Sponsorship",
+      "url": "https://bitcoinops.org/en/topics/fee-sponsorship/",
+      "notes": "Current proposals and policy constraints for sponsorship schemes."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Fee Sourcing",
+      "url": "https://bitcoinops.org/en/topics/fee-sourcing/",
+      "notes": "Related techniques for externalizing fees and improving reliability."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Package Relay",
+      "url": "https://bitcoinops.org/en/topics/package-relay/",
+      "notes": "Relay-level mechanics required by sponsorship patterns."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "fees",
+    "relay-policy"
+  ],
+  "aliases": [
+    "sponsored fees"
+  ]
+}

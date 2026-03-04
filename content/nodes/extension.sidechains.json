@@ -1,0 +1,38 @@
+{
+  "id": "extension.sidechains",
+  "title": "Sidechains",
+  "description": "Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.softfork-hardfork",
+    "protocol.nodes-vs-miners"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Sidechains",
+      "url": "https://bitcoinops.org/en/topics/sidechains/",
+      "notes": "Tradeoff overview across federated and miner-assisted designs."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Sidechains",
+      "url": "https://btctranscripts.com/search?filter_tags=sidechains",
+      "notes": "Primary-source discussions on peg safety and deployment paths."
+    },
+    {
+      "type": "article",
+      "title": "BIP 300 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0300.mediawiki",
+      "notes": "Drivechain-style sidechain proposal specification."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "scaling",
+    "peg"
+  ],
+  "aliases": [
+    "two-way pegs"
+  ]
+}

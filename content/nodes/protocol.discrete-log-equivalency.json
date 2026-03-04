@@ -1,0 +1,38 @@
+{
+  "id": "protocol.discrete-log-equivalency",
+  "title": "Discrete Log Equivalency (DLEQ)",
+  "description": "DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, and scriptless constructions.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.digital-signatures",
+    "protocol.adaptor-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Discrete Log Equivalency",
+      "url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/",
+      "notes": "Bitcoin-focused usage of DLEQ in contract and signing protocols."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Adaptor Signatures",
+      "url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+      "notes": "Practical relation between DLEQ and adaptor signature flows."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+      "notes": "Useful context on scriptless protocols that use DLEQ-like constructs."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "cryptography",
+    "signatures"
+  ],
+  "aliases": [
+    "dleq proofs"
+  ]
+}

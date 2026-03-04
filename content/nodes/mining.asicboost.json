@@ -1,0 +1,38 @@
+{
+  "id": "mining.asicboost",
+  "title": "ASICBoost",
+  "description": "ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.mining-hardware",
+    "protocol.proof-of-work"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: ASICBoost",
+      "url": "https://bitcoinops.org/en/topics/asicboost/",
+      "notes": "Historical and technical context for overt and covert ASICBoost."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Pooled Mining",
+      "url": "https://bitcoinops.org/en/topics/pooled-mining/",
+      "notes": "How pool construction and incentives interact with mining optimizations."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Mining mechanics and block construction fundamentals."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "mining",
+    "pow"
+  ],
+  "aliases": [
+    "covert asicboost"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "security.adversarial-thinking",
+  "title": "Adversarial Thinking",
+  "description": "Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.",
+  "category": "Security",
+  "prerequisites": [
+    "security.eclipse-attacks",
+    "fundamentals.distributed-systems"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Adversarial thinking",
+      "url": "https://bitcoindevphilosophy.com/#adversarialthinking",
+      "notes": "Mindset and framework for threat-driven review."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Threats",
+      "url": "https://bitcoindevphilosophy.com/#threats",
+      "notes": "Concrete examples of modeling attack surfaces in Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Expiration Floods",
+      "url": "https://bitcoinops.org/en/topics/expiration-floods/",
+      "notes": "Example of threat modeling for Lightning-related attack patterns."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "threat-modeling",
+    "review"
+  ],
+  "aliases": [
+    "threat modeling"
+  ]
+}

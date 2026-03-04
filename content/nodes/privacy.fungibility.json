@@ -1,0 +1,38 @@
+{
+  "id": "privacy.fungibility",
+  "title": "Fungibility",
+  "description": "Fungibility means each unit is equally acceptable regardless of its transaction history. Weak fungibility raises censorship and surveillance risk even when base-layer ownership remains valid.",
+  "category": "Security",
+  "prerequisites": [
+    "privacy.chain-analysis-heuristics",
+    "fundamentals.money-properties"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Fungibility",
+      "url": "https://bitcoindevphilosophy.com/#fungibility",
+      "notes": "Clear framing of fungibility in Bitcoin system design."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Linking",
+      "url": "https://bitcoinops.org/en/topics/output-linking/",
+      "notes": "Heuristic linkage mechanisms that degrade practical fungibility."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Money-property context for evaluating fungibility tradeoffs."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "privacy",
+    "money-properties"
+  ],
+  "aliases": [
+    "coin fungibility"
+  ]
+}

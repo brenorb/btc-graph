@@ -1,0 +1,38 @@
+{
+  "id": "extension.channel-factories",
+  "title": "Channel Factories",
+  "description": "Channel factories let multiple users share one on-chain UTXO to open and rebalance many off-chain channels. They trade coordination complexity for better on-chain footprint and liquidity efficiency.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "lightning.liquidity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Channel Factories",
+      "url": "https://bitcoinops.org/en/topics/channel-factories/",
+      "notes": "Design tradeoffs and status of factory-based channel constructions."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Channel factories",
+      "url": "https://btctranscripts.com/search?filter_tags=channel-factories",
+      "notes": "Primary-source discussions from Lightning protocol workshops."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+      "notes": "Lightning channel design patterns and protocol internals."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "lightning",
+    "scaling"
+  ],
+  "aliases": [
+    "factory channels"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "security.responsible-disclosure",
+  "title": "Responsible Disclosure",
+  "description": "Responsible disclosure coordinates vulnerability reporting and patching to reduce exploit windows. In Bitcoin, disclosure timing and communication quality can have ecosystem-wide impact.",
+  "category": "Security",
+  "prerequisites": [
+    "security.adversarial-thinking",
+    "ops.run-full-node"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Responsible disclosure",
+      "url": "https://bitcoindevphilosophy.com/#responsible-disclosure",
+      "notes": "Process guidance from historical incidents and response lessons."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: CVEs (various)",
+      "url": "https://bitcoinops.org/en/topics/cve/",
+      "notes": "Catalog of vulnerability classes and publication history."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Security Policy",
+      "url": "https://github.com/bitcoin/bitcoin/security/policy",
+      "notes": "Current reporting channel and embargo process for Bitcoin Core."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "security-process",
+    "incident-response"
+  ],
+  "aliases": [
+    "coordinated disclosure"
+  ]
+}

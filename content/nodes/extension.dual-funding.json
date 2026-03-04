@@ -1,0 +1,38 @@
+{
+  "id": "extension.dual-funding",
+  "title": "Dual-Funded Channels",
+  "description": "Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "lightning.commitment-transactions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Dual Funding",
+      "url": "https://bitcoinops.org/en/topics/dual-funding/",
+      "notes": "Deployment notes and interoperability considerations across implementations."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Dual funding",
+      "url": "https://btctranscripts.com/search?filter_tags=dual-funding",
+      "notes": "Design details from developer discussions and spec sessions."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 2 Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "Channel establishment message flow and negotiation context."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "lightning",
+    "liquidity"
+  ],
+  "aliases": [
+    "dual funding"
+  ]
+}

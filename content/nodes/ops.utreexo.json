@@ -1,0 +1,38 @@
+{
+  "id": "ops.utreexo",
+  "title": "Utreexo",
+  "description": "Utreexo compresses UTXO commitments using accumulator proofs to reduce full-node state costs. It shifts part of the burden to proof generation and verification pipelines.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "ops.utxo-set-management",
+    "protocol.utxo-model"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Utreexo",
+      "url": "https://bitcoinops.org/en/topics/utreexo/",
+      "notes": "Operational and protocol implications for accumulator-based nodes."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Utreexo",
+      "url": "https://btctranscripts.com/search?filter_tags=utreexo",
+      "notes": "Engineering talks on proof sizes and node integration."
+    },
+    {
+      "type": "article",
+      "title": "Utreexo Project Repository",
+      "url": "https://github.com/utreexo/utreexo",
+      "notes": "Reference implementation and design notes for accumulator structures."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "node-ops",
+    "utxo"
+  ],
+  "aliases": [
+    "accumulator utxo"
+  ]
+}

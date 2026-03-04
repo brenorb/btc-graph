@@ -1,0 +1,38 @@
+{
+  "id": "custody.codex32",
+  "title": "Codex32 Backups",
+  "description": "Codex32 is a checksummed seed-sharing format designed for human-verifiable backup workflows. It focuses on robustness against transcription and partial-share handling mistakes.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.seed-phrases",
+    "custody.backups-recovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Codex32",
+      "url": "https://bitcoinops.org/en/topics/codex32/",
+      "notes": "Background and status of codex32 backup format work."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Codex32",
+      "url": "https://btctranscripts.com/search?filter_tags=codex32",
+      "notes": "Author explanations and review discussions from live sessions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Backup and key-management context for evaluating codex32 workflows."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "backup",
+    "seed"
+  ],
+  "aliases": [
+    "bip93"
+  ]
+}

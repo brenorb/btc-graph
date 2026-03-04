@@ -1,0 +1,38 @@
+{
+  "id": "extension.submarine-swaps",
+  "title": "Submarine Swaps",
+  "description": "Submarine swaps atomically bridge on-chain and Lightning balances using hashlock and timelock constructions. They enable non-custodial liquidity transitions across layers.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.htlc",
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Submarine Swaps",
+      "url": "https://bitcoinops.org/en/topics/submarine-swaps/",
+      "notes": "Routing, liquidity, and trust-model considerations for swaps."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Submarine swaps",
+      "url": "https://btctranscripts.com/search?filter_tags=submarine-swaps",
+      "notes": "Primary discussions of swap implementation and failure modes."
+    },
+    {
+      "type": "article",
+      "title": "Boltz Backend",
+      "url": "https://github.com/BoltzExchange/boltz-backend",
+      "notes": "Production swap implementation to study protocol flow in practice."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "lightning",
+    "swaps"
+  ],
+  "aliases": [
+    "loop in out"
+  ]
+}

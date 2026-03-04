@@ -1,0 +1,38 @@
+{
+  "id": "security.exfiltration-resistant-signing",
+  "title": "Exfiltration-Resistant Signing",
+  "description": "Exfiltration-resistant signing protocols prevent compromised signers from leaking key material through nonce channels. They are particularly important in multi-device and hardware-assisted setups.",
+  "category": "Security",
+  "prerequisites": [
+    "custody.air-gapped-signing",
+    "fundamentals.digital-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Exfiltration-Resistant Signing",
+      "url": "https://bitcoinops.org/en/topics/exfiltration-resistant-signing/",
+      "notes": "Threat model and protocol patterns for nonce hardening."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340 Schnorr Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Signature construction assumptions relevant to nonce leakage defense."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Key-management and signing model fundamentals for custody systems."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "signing",
+    "custody"
+  ],
+  "aliases": [
+    "anti exfiltration"
+  ]
+}

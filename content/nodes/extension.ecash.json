@@ -1,0 +1,38 @@
+{
+  "id": "extension.ecash",
+  "title": "Bitcoin-Backed Ecash Systems",
+  "description": "Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "fundamentals.digital-signatures",
+    "protocol.utxo-model"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Ecash",
+      "url": "https://bitcoinops.org/en/topics/ecash/",
+      "notes": "Survey of ecash protocols and their integration points with Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Ecash",
+      "url": "https://btctranscripts.com/search?filter_tags=ecash",
+      "notes": "Workshop-level discussion of trust models and federation design."
+    },
+    {
+      "type": "article",
+      "title": "Cashu NUT Specifications",
+      "url": "https://github.com/cashubtc/nuts",
+      "notes": "Reference protocol docs for ecash mint and token interoperability."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "ecash",
+    "custodial-risk"
+  ],
+  "aliases": [
+    "federated ecash"
+  ]
+}

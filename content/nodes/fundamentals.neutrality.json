@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.neutrality",
+  "title": "Protocol Neutrality",
+  "description": "Protocol neutrality means consensus and relay rules should avoid embedding special treatment for particular users or outcomes. Neutral rule design is a core part of Bitcoin’s credible fairness.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network",
+    "protocol.consensus-rules"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Neutrality",
+      "url": "https://bitcoindevphilosophy.com/#neutrality",
+      "notes": "Why neutral policy and consensus boundaries matter."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Decentralization",
+      "url": "https://bitcoindevphilosophy.com/#decentralization",
+      "notes": "How neutrality and decentralization reinforce each other."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "Consensus-rule perspective needed to evaluate neutrality tradeoffs."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "governance",
+    "consensus"
+  ],
+  "aliases": [
+    "neutral rules"
+  ]
+}

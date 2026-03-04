@@ -1,0 +1,38 @@
+{
+  "id": "extension.coinswap",
+  "title": "Coinswaps",
+  "description": "Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "privacy.coinjoin-basics",
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coinswap",
+      "url": "https://bitcoinops.org/en/topics/coinswap/",
+      "notes": "Protocol approaches and implementation status across proposals."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Coinswap",
+      "url": "https://btctranscripts.com/search?filter_tags=coinswap",
+      "notes": "Deep-dive talks from practitioners working on swap protocols."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "notes": "UTXO and script primitives used by swap constructions."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "privacy",
+    "swaps"
+  ],
+  "aliases": [
+    "coin swap"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "privacy.silent-payments",
+  "title": "Silent Payments",
+  "description": "Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.",
+  "category": "Security",
+  "prerequisites": [
+    "protocol.taproot",
+    "privacy.address-reuse"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Silent Payments",
+      "url": "https://bitcoinops.org/en/topics/silent-payments/",
+      "notes": "Protocol mechanics and wallet integration tradeoffs."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Silent payments",
+      "url": "https://btctranscripts.com/search?filter_tags=silent-payments",
+      "notes": "Implementation-oriented talks on scanning and address UX."
+    },
+    {
+      "type": "article",
+      "title": "BIP 352 Draft",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki",
+      "notes": "Specification draft for silent payment address and spend flow."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "privacy",
+    "wallets"
+  ],
+  "aliases": [
+    "silent payment addresses"
+  ]
+}

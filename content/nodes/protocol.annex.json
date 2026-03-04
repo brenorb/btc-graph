@@ -1,0 +1,38 @@
+{
+  "id": "protocol.annex",
+  "title": "Taproot Annex",
+  "description": "The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.script-basics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Annex",
+      "url": "https://bitcoinops.org/en/topics/annex/",
+      "notes": "Practical review of annex behavior and implementation context."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Formal definition of annex commitment rules in Taproot spends."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+      "notes": "Script and witness structure background for Taproot-era spending."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "taproot",
+    "script"
+  ],
+  "aliases": [
+    "annex"
+  ]
+}

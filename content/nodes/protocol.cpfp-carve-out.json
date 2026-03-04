@@ -1,0 +1,38 @@
+{
+  "id": "protocol.cpfp-carve-out",
+  "title": "CPFP Carve-Out Policy",
+  "description": "CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.cpfp",
+    "protocol.mempool"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: CPFP Carve Out",
+      "url": "https://bitcoinops.org/en/topics/cpfp-carve-out/",
+      "notes": "Policy rationale and Lightning-specific fee-bump behavior."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: CPFP carve out",
+      "url": "https://btctranscripts.com/search?filter_tags=cpfp-carve-out",
+      "notes": "Developer discussion of carve-out limitations and successor policy."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Mempool Limits",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/packages.md",
+      "notes": "Current package and policy context connected to carve-out behavior."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "mempool",
+    "policy"
+  ],
+  "aliases": [
+    "carve out"
+  ]
+}

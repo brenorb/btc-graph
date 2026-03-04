@@ -1,0 +1,38 @@
+{
+  "id": "extension.lnurl",
+  "title": "LNURL",
+  "description": "LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.invoices",
+    "lightning.bolt12-offers"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: LNURL",
+      "url": "https://bitcoinops.org/en/topics/lnurl/",
+      "notes": "Operational and security considerations around LNURL workflows."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: LNURL",
+      "url": "https://btctranscripts.com/search?filter_tags=lnurl",
+      "notes": "Implementation commentary and critiques from Lightning developers."
+    },
+    {
+      "type": "article",
+      "title": "LNURL LUD Specifications",
+      "url": "https://github.com/lnurl/luds",
+      "notes": "Canonical protocol extension documents for LNURL behavior."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "lightning",
+    "ux"
+  ],
+  "aliases": [
+    "lnurl-pay"
+  ]
+}

@@ -152,6 +152,44 @@
       ]
     },
     {
+      "id": "custody.codex32",
+      "title": "Codex32 Backups",
+      "description": "Codex32 is a checksummed seed-sharing format designed for human-verifiable backup workflows. It focuses on robustness against transcription and partial-share handling mistakes.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.seed-phrases",
+        "custody.backups-recovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Codex32",
+          "url": "https://bitcoinops.org/en/topics/codex32/",
+          "notes": "Background and status of codex32 backup format work."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Codex32",
+          "url": "https://btctranscripts.com/search?filter_tags=codex32",
+          "notes": "Author explanations and review discussions from live sessions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Backup and key-management context for evaluating codex32 workflows."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "backup",
+        "seed"
+      ],
+      "aliases": [
+        "bip93"
+      ]
+    },
+    {
       "id": "custody.hardware-wallets",
       "title": "Hardware Wallets",
       "description": "Isolated signing environments and practical security tradeoffs.",
@@ -1725,6 +1763,44 @@
       ]
     },
     {
+      "id": "extension.channel-factories",
+      "title": "Channel Factories",
+      "description": "Channel factories let multiple users share one on-chain UTXO to open and rebalance many off-chain channels. They trade coordination complexity for better on-chain footprint and liquidity efficiency.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.payment-channels",
+        "lightning.liquidity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Channel Factories",
+          "url": "https://bitcoinops.org/en/topics/channel-factories/",
+          "notes": "Design tradeoffs and status of factory-based channel constructions."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Channel factories",
+          "url": "https://btctranscripts.com/search?filter_tags=channel-factories",
+          "notes": "Primary-source discussions from Lightning protocol workshops."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "notes": "Lightning channel design patterns and protocol internals."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "lightning",
+        "scaling"
+      ],
+      "aliases": [
+        "factory channels"
+      ]
+    },
+    {
       "id": "extension.coinpools",
       "title": "Coinpools",
       "description": "Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.",
@@ -1760,6 +1836,44 @@
       ],
       "aliases": [
         "coin pools"
+      ]
+    },
+    {
+      "id": "extension.coinswap",
+      "title": "Coinswaps",
+      "description": "Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "privacy.coinjoin-basics",
+        "protocol.timelocks"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Coinswap",
+          "url": "https://bitcoinops.org/en/topics/coinswap/",
+          "notes": "Protocol approaches and implementation status across proposals."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Coinswap",
+          "url": "https://btctranscripts.com/search?filter_tags=coinswap",
+          "notes": "Deep-dive talks from practitioners working on swap protocols."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "UTXO and script primitives used by swap constructions."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "privacy",
+        "swaps"
+      ],
+      "aliases": [
+        "coin swap"
       ]
     },
     {
@@ -1839,6 +1953,82 @@
       ]
     },
     {
+      "id": "extension.dual-funding",
+      "title": "Dual-Funded Channels",
+      "description": "Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.payment-channels",
+        "lightning.commitment-transactions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Dual Funding",
+          "url": "https://bitcoinops.org/en/topics/dual-funding/",
+          "notes": "Deployment notes and interoperability considerations across implementations."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Dual funding",
+          "url": "https://btctranscripts.com/search?filter_tags=dual-funding",
+          "notes": "Design details from developer discussions and spec sessions."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 2 Peer Protocol",
+          "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+          "notes": "Channel establishment message flow and negotiation context."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "lightning",
+        "liquidity"
+      ],
+      "aliases": [
+        "dual funding"
+      ]
+    },
+    {
+      "id": "extension.ecash",
+      "title": "Bitcoin-Backed Ecash Systems",
+      "description": "Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "fundamentals.digital-signatures",
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ecash",
+          "url": "https://bitcoinops.org/en/topics/ecash/",
+          "notes": "Survey of ecash protocols and their integration points with Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Ecash",
+          "url": "https://btctranscripts.com/search?filter_tags=ecash",
+          "notes": "Workshop-level discussion of trust models and federation design."
+        },
+        {
+          "type": "article",
+          "title": "Cashu NUT Specifications",
+          "url": "https://github.com/cashubtc/nuts",
+          "notes": "Reference protocol docs for ecash mint and token interoperability."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "ecash",
+        "custodial-risk"
+      ],
+      "aliases": [
+        "federated ecash"
+      ]
+    },
+    {
       "id": "extension.great-script-restoration",
       "title": "The Great Script Restoration",
       "description": "The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.",
@@ -1877,6 +2067,44 @@
       ]
     },
     {
+      "id": "extension.lnurl",
+      "title": "LNURL",
+      "description": "LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.invoices",
+        "lightning.bolt12-offers"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: LNURL",
+          "url": "https://bitcoinops.org/en/topics/lnurl/",
+          "notes": "Operational and security considerations around LNURL workflows."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: LNURL",
+          "url": "https://btctranscripts.com/search?filter_tags=lnurl",
+          "notes": "Implementation commentary and critiques from Lightning developers."
+        },
+        {
+          "type": "article",
+          "title": "LNURL LUD Specifications",
+          "url": "https://github.com/lnurl/luds",
+          "notes": "Canonical protocol extension documents for LNURL behavior."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "lightning",
+        "ux"
+      ],
+      "aliases": [
+        "lnurl-pay"
+      ]
+    },
+    {
       "id": "extension.payment-pools",
       "title": "Payment Pools",
       "description": "Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.",
@@ -1912,6 +2140,44 @@
       ],
       "aliases": [
         "payment pool"
+      ]
+    },
+    {
+      "id": "extension.sidechains",
+      "title": "Sidechains",
+      "description": "Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.softfork-hardfork",
+        "protocol.nodes-vs-miners"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Sidechains",
+          "url": "https://bitcoinops.org/en/topics/sidechains/",
+          "notes": "Tradeoff overview across federated and miner-assisted designs."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Sidechains",
+          "url": "https://btctranscripts.com/search?filter_tags=sidechains",
+          "notes": "Primary-source discussions on peg safety and deployment paths."
+        },
+        {
+          "type": "article",
+          "title": "BIP 300 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0300.mediawiki",
+          "notes": "Drivechain-style sidechain proposal specification."
+        }
+      ],
+      "estimatedTime": "80m",
+      "tags": [
+        "scaling",
+        "peg"
+      ],
+      "aliases": [
+        "two-way pegs"
       ]
     },
     {
@@ -1986,6 +2252,44 @@
       ],
       "aliases": [
         "state chains"
+      ]
+    },
+    {
+      "id": "extension.submarine-swaps",
+      "title": "Submarine Swaps",
+      "description": "Submarine swaps atomically bridge on-chain and Lightning balances using hashlock and timelock constructions. They enable non-custodial liquidity transitions across layers.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.htlc",
+        "protocol.timelocks"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Submarine Swaps",
+          "url": "https://bitcoinops.org/en/topics/submarine-swaps/",
+          "notes": "Routing, liquidity, and trust-model considerations for swaps."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Submarine swaps",
+          "url": "https://btctranscripts.com/search?filter_tags=submarine-swaps",
+          "notes": "Primary discussions of swap implementation and failure modes."
+        },
+        {
+          "type": "article",
+          "title": "Boltz Backend",
+          "url": "https://github.com/BoltzExchange/boltz-backend",
+          "notes": "Production swap implementation to study protocol flow in practice."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "lightning",
+        "swaps"
+      ],
+      "aliases": [
+        "loop in out"
       ]
     },
     {
@@ -2386,6 +2690,44 @@
       ]
     },
     {
+      "id": "fundamentals.neutrality",
+      "title": "Protocol Neutrality",
+      "description": "Protocol neutrality means consensus and relay rules should avoid embedding special treatment for particular users or outcomes. Neutral rule design is a core part of Bitcoin’s credible fairness.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.peer-to-peer-network",
+        "protocol.consensus-rules"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Neutrality",
+          "url": "https://bitcoindevphilosophy.com/#neutrality",
+          "notes": "Why neutral policy and consensus boundaries matter."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Decentralization",
+          "url": "https://bitcoindevphilosophy.com/#decentralization",
+          "notes": "How neutrality and decentralization reinforce each other."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Consensus-rule perspective needed to evaluate neutrality tradeoffs."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "governance",
+        "consensus"
+      ],
+      "aliases": [
+        "neutral rules"
+      ]
+    },
+    {
       "id": "fundamentals.peer-to-peer-network",
       "title": "Peer-to-Peer Network Topology",
       "description": "How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.",
@@ -2527,6 +2869,44 @@
       ],
       "aliases": [
         "time preference"
+      ]
+    },
+    {
+      "id": "fundamentals.trustlessness",
+      "title": "Trustlessness",
+      "description": "Trustlessness in Bitcoin means security comes from verification and incentives rather than trusted operators. You can reduce counterparty risk by validating rules locally.",
+      "category": "Security",
+      "prerequisites": [
+        "ops.run-full-node",
+        "fundamentals.censorship-resistance"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Trustlessness",
+          "url": "https://bitcoindevphilosophy.com/#trustlessness",
+          "notes": "Philosophical and engineering framing of trust minimization."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+          "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+          "notes": "Operational implications of self-verification in practice."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Protocol mechanics behind independent verification."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "philosophy",
+        "verification"
+      ],
+      "aliases": [
+        "dont trust verify"
       ]
     },
     {
@@ -3926,6 +4306,44 @@
       ]
     },
     {
+      "id": "mining.asicboost",
+      "title": "ASICBoost",
+      "description": "ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.mining-hardware",
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: ASICBoost",
+          "url": "https://bitcoinops.org/en/topics/asicboost/",
+          "notes": "Historical and technical context for overt and covert ASICBoost."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Pooled Mining",
+          "url": "https://bitcoinops.org/en/topics/pooled-mining/",
+          "notes": "How pool construction and incentives interact with mining optimizations."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Mining mechanics and block construction fundamentals."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "mining",
+        "pow"
+      ],
+      "aliases": [
+        "covert asicboost"
+      ]
+    },
+    {
       "id": "mining.block-propagation-latency",
       "title": "Block Propagation Latency",
       "description": "How network propagation speed affects stale risk, template quality, and mining profitability.",
@@ -4981,6 +5399,44 @@
       ]
     },
     {
+      "id": "ops.utreexo",
+      "title": "Utreexo",
+      "description": "Utreexo compresses UTXO commitments using accumulator proofs to reduce full-node state costs. It shifts part of the burden to proof generation and verification pipelines.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "ops.utxo-set-management",
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Utreexo",
+          "url": "https://bitcoinops.org/en/topics/utreexo/",
+          "notes": "Operational and protocol implications for accumulator-based nodes."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Utreexo",
+          "url": "https://btctranscripts.com/search?filter_tags=utreexo",
+          "notes": "Engineering talks on proof sizes and node integration."
+        },
+        {
+          "type": "article",
+          "title": "Utreexo Project Repository",
+          "url": "https://github.com/utreexo/utreexo",
+          "notes": "Reference implementation and design notes for accumulator structures."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "node-ops",
+        "utxo"
+      ],
+      "aliases": [
+        "accumulator utxo"
+      ]
+    },
+    {
       "id": "ops.utxo-set-management",
       "title": "UTXO Set Management",
       "description": "Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.",
@@ -5395,6 +5851,44 @@
       ]
     },
     {
+      "id": "privacy.fungibility",
+      "title": "Fungibility",
+      "description": "Fungibility means each unit is equally acceptable regardless of its transaction history. Weak fungibility raises censorship and surveillance risk even when base-layer ownership remains valid.",
+      "category": "Security",
+      "prerequisites": [
+        "privacy.chain-analysis-heuristics",
+        "fundamentals.money-properties"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Fungibility",
+          "url": "https://bitcoindevphilosophy.com/#fungibility",
+          "notes": "Clear framing of fungibility in Bitcoin system design."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Linking",
+          "url": "https://bitcoinops.org/en/topics/output-linking/",
+          "notes": "Heuristic linkage mechanisms that degrade practical fungibility."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Money-property context for evaluating fungibility tradeoffs."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "privacy",
+        "money-properties"
+      ],
+      "aliases": [
+        "coin fungibility"
+      ]
+    },
+    {
       "id": "privacy.kyc-tradeoffs",
       "title": "KYC and Privacy Tradeoffs",
       "description": "Identity linkage risks and mitigation strategies.",
@@ -5540,6 +6034,44 @@
       "aliases": [
         "script fingerprinting",
         "wallet fingerprinting"
+      ]
+    },
+    {
+      "id": "privacy.silent-payments",
+      "title": "Silent Payments",
+      "description": "Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.",
+      "category": "Security",
+      "prerequisites": [
+        "protocol.taproot",
+        "privacy.address-reuse"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Silent Payments",
+          "url": "https://bitcoinops.org/en/topics/silent-payments/",
+          "notes": "Protocol mechanics and wallet integration tradeoffs."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Silent payments",
+          "url": "https://btctranscripts.com/search?filter_tags=silent-payments",
+          "notes": "Implementation-oriented talks on scanning and address UX."
+        },
+        {
+          "type": "article",
+          "title": "BIP 352 Draft",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki",
+          "notes": "Specification draft for silent payment address and spend flow."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "privacy",
+        "wallets"
+      ],
+      "aliases": [
+        "silent payment addresses"
       ]
     },
     {
@@ -5731,6 +6263,44 @@
       ],
       "aliases": [
         "addresses and outputs"
+      ]
+    },
+    {
+      "id": "protocol.annex",
+      "title": "Taproot Annex",
+      "description": "The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.script-basics"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Annex",
+          "url": "https://bitcoinops.org/en/topics/annex/",
+          "notes": "Practical review of annex behavior and implementation context."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Formal definition of annex commitment rules in Taproot spends."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "notes": "Script and witness structure background for Taproot-era spending."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "taproot",
+        "script"
+      ],
+      "aliases": [
+        "annex"
       ]
     },
     {
@@ -6269,6 +6839,44 @@
       ]
     },
     {
+      "id": "protocol.cpfp-carve-out",
+      "title": "CPFP Carve-Out Policy",
+      "description": "CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.cpfp",
+        "protocol.mempool"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: CPFP Carve Out",
+          "url": "https://bitcoinops.org/en/topics/cpfp-carve-out/",
+          "notes": "Policy rationale and Lightning-specific fee-bump behavior."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: CPFP carve out",
+          "url": "https://btctranscripts.com/search?filter_tags=cpfp-carve-out",
+          "notes": "Developer discussion of carve-out limitations and successor policy."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Mempool Limits",
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/packages.md",
+          "notes": "Current package and policy context connected to carve-out behavior."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "mempool",
+        "policy"
+      ],
+      "aliases": [
+        "carve out"
+      ]
+    },
+    {
       "id": "protocol.cross-input-signature-aggregation",
       "title": "Cross-Input Signature Aggregation (CISA)",
       "description": "CISA aggregates signatures across multiple inputs to reduce weight and improve coordination efficiency. It introduces new accounting and policy considerations for batch spenders.",
@@ -6420,6 +7028,44 @@
       ]
     },
     {
+      "id": "protocol.discrete-log-equivalency",
+      "title": "Discrete Log Equivalency (DLEQ)",
+      "description": "DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, and scriptless constructions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.digital-signatures",
+        "protocol.adaptor-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Discrete Log Equivalency",
+          "url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/",
+          "notes": "Bitcoin-focused usage of DLEQ in contract and signing protocols."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Adaptor Signatures",
+          "url": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+          "notes": "Practical relation between DLEQ and adaptor signature flows."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "notes": "Useful context on scriptless protocols that use DLEQ-like constructs."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "cryptography",
+        "signatures"
+      ],
+      "aliases": [
+        "dleq proofs"
+      ]
+    },
+    {
       "id": "protocol.dust-policy",
       "title": "Dust Policy",
       "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
@@ -6568,6 +7214,44 @@
       ],
       "aliases": [
         "fee market"
+      ]
+    },
+    {
+      "id": "protocol.fee-sponsorship",
+      "title": "Fee Sponsorship",
+      "description": "Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.cpfp",
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Fee Sponsorship",
+          "url": "https://bitcoinops.org/en/topics/fee-sponsorship/",
+          "notes": "Current proposals and policy constraints for sponsorship schemes."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Fee Sourcing",
+          "url": "https://bitcoinops.org/en/topics/fee-sourcing/",
+          "notes": "Related techniques for externalizing fees and improving reliability."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Package Relay",
+          "url": "https://bitcoinops.org/en/topics/package-relay/",
+          "notes": "Relay-level mechanics required by sponsorship patterns."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "fees",
+        "relay-policy"
+      ],
+      "aliases": [
+        "sponsored fees"
       ]
     },
     {
@@ -7623,6 +8307,44 @@
       ]
     },
     {
+      "id": "protocol.transaction-pinning",
+      "title": "Transaction Pinning",
+      "description": "Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.mempool",
+        "protocol.package-relay"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Transaction Pinning",
+          "url": "https://bitcoinops.org/en/topics/transaction-pinning/",
+          "notes": "Detailed taxonomy of pinning vectors and mitigation proposals."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Transaction pinning",
+          "url": "https://btctranscripts.com/search?filter_tags=transaction-pinning",
+          "notes": "Workshop sessions covering realistic attack scenarios."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Package Relay",
+          "url": "https://bitcoinops.org/en/topics/package-relay/",
+          "notes": "Current proposal track for reducing contract pinning exposure."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "mempool",
+        "contracts"
+      ],
+      "aliases": [
+        "pinning attacks"
+      ]
+    },
+    {
       "id": "protocol.transaction-relay-inv-getdata",
       "title": "Transaction Relay (inv/getdata)",
       "description": "How peers announce and request transactions using inv/getdata before full tx relay.",
@@ -7891,6 +8613,44 @@
       ]
     },
     {
+      "id": "security.adversarial-thinking",
+      "title": "Adversarial Thinking",
+      "description": "Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.",
+      "category": "Security",
+      "prerequisites": [
+        "security.eclipse-attacks",
+        "fundamentals.distributed-systems"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Adversarial thinking",
+          "url": "https://bitcoindevphilosophy.com/#adversarialthinking",
+          "notes": "Mindset and framework for threat-driven review."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Threats",
+          "url": "https://bitcoindevphilosophy.com/#threats",
+          "notes": "Concrete examples of modeling attack surfaces in Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Expiration Floods",
+          "url": "https://bitcoinops.org/en/topics/expiration-floods/",
+          "notes": "Example of threat modeling for Lightning-related attack patterns."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "threat-modeling",
+        "review"
+      ],
+      "aliases": [
+        "threat modeling"
+      ]
+    },
+    {
       "id": "security.eclipse-attacks",
       "title": "Eclipse Attacks",
       "description": "Eclipse attacks isolate a node from honest peers to manipulate its view of the network. Mitigation requires peer diversity, routing hygiene, and robust eviction policy.",
@@ -7925,6 +8685,44 @@
       ],
       "aliases": [
         "eclipse attack"
+      ]
+    },
+    {
+      "id": "security.exfiltration-resistant-signing",
+      "title": "Exfiltration-Resistant Signing",
+      "description": "Exfiltration-resistant signing protocols prevent compromised signers from leaking key material through nonce channels. They are particularly important in multi-device and hardware-assisted setups.",
+      "category": "Security",
+      "prerequisites": [
+        "custody.air-gapped-signing",
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Exfiltration-Resistant Signing",
+          "url": "https://bitcoinops.org/en/topics/exfiltration-resistant-signing/",
+          "notes": "Threat model and protocol patterns for nonce hardening."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340 Schnorr Signatures",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Signature construction assumptions relevant to nonce leakage defense."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "notes": "Key-management and signing model fundamentals for custody systems."
+        }
+      ],
+      "estimatedTime": "65m",
+      "tags": [
+        "signing",
+        "custody"
+      ],
+      "aliases": [
+        "anti exfiltration"
       ]
     },
     {
@@ -7964,6 +8762,44 @@
       ],
       "aliases": [
         "op vault"
+      ]
+    },
+    {
+      "id": "security.responsible-disclosure",
+      "title": "Responsible Disclosure",
+      "description": "Responsible disclosure coordinates vulnerability reporting and patching to reduce exploit windows. In Bitcoin, disclosure timing and communication quality can have ecosystem-wide impact.",
+      "category": "Security",
+      "prerequisites": [
+        "security.adversarial-thinking",
+        "ops.run-full-node"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Responsible disclosure",
+          "url": "https://bitcoindevphilosophy.com/#responsible-disclosure",
+          "notes": "Process guidance from historical incidents and response lessons."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: CVEs (various)",
+          "url": "https://bitcoinops.org/en/topics/cve/",
+          "notes": "Catalog of vulnerability classes and publication history."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Security Policy",
+          "url": "https://github.com/bitcoin/bitcoin/security/policy",
+          "notes": "Current reporting channel and embargo process for Bitcoin Core."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "security-process",
+        "incident-response"
+      ],
+      "aliases": [
+        "coordinated disclosure"
       ]
     }
   ]

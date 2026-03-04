@@ -1,0 +1,38 @@
+{
+  "id": "protocol.transaction-pinning",
+  "title": "Transaction Pinning",
+  "description": "Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.mempool",
+    "protocol.package-relay"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Transaction Pinning",
+      "url": "https://bitcoinops.org/en/topics/transaction-pinning/",
+      "notes": "Detailed taxonomy of pinning vectors and mitigation proposals."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Transaction pinning",
+      "url": "https://btctranscripts.com/search?filter_tags=transaction-pinning",
+      "notes": "Workshop sessions covering realistic attack scenarios."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Package Relay",
+      "url": "https://bitcoinops.org/en/topics/package-relay/",
+      "notes": "Current proposal track for reducing contract pinning exposure."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "mempool",
+    "contracts"
+  ],
+  "aliases": [
+    "pinning attacks"
+  ]
+}
