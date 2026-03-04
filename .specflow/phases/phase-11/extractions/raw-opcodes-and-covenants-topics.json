@@ -1,0 +1,1126 @@
+{
+  "opcodeexplained_topics": [
+    {
+      "topic": "0 | OP_0",
+      "source_url": "https://opcodeexplained.com/opcodes/op_0"
+    },
+    {
+      "topic": "1 | OP_PUSHBYTES_1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_1"
+    },
+    {
+      "topic": "2 | OP_PUSHBYTES_2",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_2"
+    },
+    {
+      "topic": "3 | OP_PUSHBYTES_3",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_3"
+    },
+    {
+      "topic": "4 | OP_PUSHBYTES_4",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_4"
+    },
+    {
+      "topic": "5 | OP_PUSHBYTES_5",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_5"
+    },
+    {
+      "topic": "6 | OP_PUSHBYTES_6",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_6"
+    },
+    {
+      "topic": "7 | OP_PUSHBYTES_7",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_7"
+    },
+    {
+      "topic": "8 | OP_PUSHBYTES_8",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_8"
+    },
+    {
+      "topic": "9 | OP_PUSHBYTES_9",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_9"
+    },
+    {
+      "topic": "10 | OP_PUSHBYTES_10",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_10"
+    },
+    {
+      "topic": "11 | OP_PUSHBYTES_11",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_11"
+    },
+    {
+      "topic": "12 | OP_PUSHBYTES_12",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_12"
+    },
+    {
+      "topic": "13 | OP_PUSHBYTES_13",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_13"
+    },
+    {
+      "topic": "14 | OP_PUSHBYTES_14",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_14"
+    },
+    {
+      "topic": "15 | OP_PUSHBYTES_15",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_15"
+    },
+    {
+      "topic": "16 | OP_PUSHBYTES_16",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_16"
+    },
+    {
+      "topic": "17 | OP_PUSHBYTES_17",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_17"
+    },
+    {
+      "topic": "18 | OP_PUSHBYTES_18",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_18"
+    },
+    {
+      "topic": "19 | OP_PUSHBYTES_19",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_19"
+    },
+    {
+      "topic": "20 | OP_PUSHBYTES_20",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_20"
+    },
+    {
+      "topic": "21 | OP_PUSHBYTES_21",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_21"
+    },
+    {
+      "topic": "22 | OP_PUSHBYTES_22",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_22"
+    },
+    {
+      "topic": "23 | OP_PUSHBYTES_23",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_23"
+    },
+    {
+      "topic": "24 | OP_PUSHBYTES_24",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_24"
+    },
+    {
+      "topic": "25 | OP_PUSHBYTES_25",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_25"
+    },
+    {
+      "topic": "26 | OP_PUSHBYTES_26",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_26"
+    },
+    {
+      "topic": "27 | OP_PUSHBYTES_27",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_27"
+    },
+    {
+      "topic": "28 | OP_PUSHBYTES_28",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_28"
+    },
+    {
+      "topic": "29 | OP_PUSHBYTES_29",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_29"
+    },
+    {
+      "topic": "30 | OP_PUSHBYTES_30",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_30"
+    },
+    {
+      "topic": "31 | OP_PUSHBYTES_31",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_31"
+    },
+    {
+      "topic": "32 | OP_PUSHBYTES_32",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_32"
+    },
+    {
+      "topic": "33 | OP_PUSHBYTES_33",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_33"
+    },
+    {
+      "topic": "34 | OP_PUSHBYTES_34",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_34"
+    },
+    {
+      "topic": "35 | OP_PUSHBYTES_35",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_35"
+    },
+    {
+      "topic": "36 | OP_PUSHBYTES_36",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_36"
+    },
+    {
+      "topic": "37 | OP_PUSHBYTES_37",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_37"
+    },
+    {
+      "topic": "38 | OP_PUSHBYTES_38",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_38"
+    },
+    {
+      "topic": "39 | OP_PUSHBYTES_39",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_39"
+    },
+    {
+      "topic": "40 | OP_PUSHBYTES_40",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_40"
+    },
+    {
+      "topic": "41 | OP_PUSHBYTES_41",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_41"
+    },
+    {
+      "topic": "42 | OP_PUSHBYTES_42",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_42"
+    },
+    {
+      "topic": "43 | OP_PUSHBYTES_43",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_43"
+    },
+    {
+      "topic": "44 | OP_PUSHBYTES_44",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_44"
+    },
+    {
+      "topic": "45 | OP_PUSHBYTES_45",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_45"
+    },
+    {
+      "topic": "46 | OP_PUSHBYTES_46",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_46"
+    },
+    {
+      "topic": "47 | OP_PUSHBYTES_47",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_47"
+    },
+    {
+      "topic": "48 | OP_PUSHBYTES_48",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_48"
+    },
+    {
+      "topic": "49 | OP_PUSHBYTES_49",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_49"
+    },
+    {
+      "topic": "50 | OP_PUSHBYTES_50",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_50"
+    },
+    {
+      "topic": "51 | OP_PUSHBYTES_51",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_51"
+    },
+    {
+      "topic": "52 | OP_PUSHBYTES_52",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_52"
+    },
+    {
+      "topic": "53 | OP_PUSHBYTES_53",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_53"
+    },
+    {
+      "topic": "54 | OP_PUSHBYTES_54",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_54"
+    },
+    {
+      "topic": "55 | OP_PUSHBYTES_55",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_55"
+    },
+    {
+      "topic": "56 | OP_PUSHBYTES_56",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_56"
+    },
+    {
+      "topic": "57 | OP_PUSHBYTES_57",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_57"
+    },
+    {
+      "topic": "58 | OP_PUSHBYTES_58",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_58"
+    },
+    {
+      "topic": "59 | OP_PUSHBYTES_59",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_59"
+    },
+    {
+      "topic": "60 | OP_PUSHBYTES_60",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_60"
+    },
+    {
+      "topic": "61 | OP_PUSHBYTES_61",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_61"
+    },
+    {
+      "topic": "62 | OP_PUSHBYTES_62",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_62"
+    },
+    {
+      "topic": "63 | OP_PUSHBYTES_63",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_63"
+    },
+    {
+      "topic": "64 | OP_PUSHBYTES_64",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_64"
+    },
+    {
+      "topic": "65 | OP_PUSHBYTES_65",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_65"
+    },
+    {
+      "topic": "66 | OP_PUSHBYTES_66",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_66"
+    },
+    {
+      "topic": "67 | OP_PUSHBYTES_67",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_67"
+    },
+    {
+      "topic": "68 | OP_PUSHBYTES_68",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_68"
+    },
+    {
+      "topic": "69 | OP_PUSHBYTES_69",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_69"
+    },
+    {
+      "topic": "70 | OP_PUSHBYTES_70",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_70"
+    },
+    {
+      "topic": "71 | OP_PUSHBYTES_71",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_71"
+    },
+    {
+      "topic": "72 | OP_PUSHBYTES_72",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_72"
+    },
+    {
+      "topic": "73 | OP_PUSHBYTES_73",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_73"
+    },
+    {
+      "topic": "74 | OP_PUSHBYTES_74",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_74"
+    },
+    {
+      "topic": "75 | OP_PUSHBYTES_75",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushbytes_75"
+    },
+    {
+      "topic": "76 | OP_PUSHDATA1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushdata1"
+    },
+    {
+      "topic": "77 | OP_PUSHDATA2",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushdata2"
+    },
+    {
+      "topic": "78 | OP_PUSHDATA4",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pushdata4"
+    },
+    {
+      "topic": "79 | OP_1NEGATE",
+      "source_url": "https://opcodeexplained.com/opcodes/op_1negate"
+    },
+    {
+      "topic": "80 | OP_RESERVED",
+      "source_url": "https://opcodeexplained.com/opcodes/op_reserved"
+    },
+    {
+      "topic": "81 | OP_1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_1"
+    },
+    {
+      "topic": "82 | OP_2",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2"
+    },
+    {
+      "topic": "83 | OP_3",
+      "source_url": "https://opcodeexplained.com/opcodes/op_3"
+    },
+    {
+      "topic": "84 | OP_4",
+      "source_url": "https://opcodeexplained.com/opcodes/op_4"
+    },
+    {
+      "topic": "85 | OP_5",
+      "source_url": "https://opcodeexplained.com/opcodes/op_5"
+    },
+    {
+      "topic": "86 | OP_6",
+      "source_url": "https://opcodeexplained.com/opcodes/op_6"
+    },
+    {
+      "topic": "87 | OP_7",
+      "source_url": "https://opcodeexplained.com/opcodes/op_7"
+    },
+    {
+      "topic": "88 | OP_8",
+      "source_url": "https://opcodeexplained.com/opcodes/op_8"
+    },
+    {
+      "topic": "89 | OP_9",
+      "source_url": "https://opcodeexplained.com/opcodes/op_9"
+    },
+    {
+      "topic": "90 | OP_10",
+      "source_url": "https://opcodeexplained.com/opcodes/op_10"
+    },
+    {
+      "topic": "91 | OP_11",
+      "source_url": "https://opcodeexplained.com/opcodes/op_11"
+    },
+    {
+      "topic": "92 | OP_12",
+      "source_url": "https://opcodeexplained.com/opcodes/op_12"
+    },
+    {
+      "topic": "93 | OP_13",
+      "source_url": "https://opcodeexplained.com/opcodes/op_13"
+    },
+    {
+      "topic": "94 | OP_14",
+      "source_url": "https://opcodeexplained.com/opcodes/op_14"
+    },
+    {
+      "topic": "95 | OP_15",
+      "source_url": "https://opcodeexplained.com/opcodes/op_15"
+    },
+    {
+      "topic": "96 | OP_16",
+      "source_url": "https://opcodeexplained.com/opcodes/op_16"
+    },
+    {
+      "topic": "97 | OP_NOP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop"
+    },
+    {
+      "topic": "98 | OP_VER",
+      "source_url": "https://opcodeexplained.com/opcodes/op_ver"
+    },
+    {
+      "topic": "99 | OP_IF",
+      "source_url": "https://opcodeexplained.com/opcodes/op_if"
+    },
+    {
+      "topic": "100 | OP_NOTIF",
+      "source_url": "https://opcodeexplained.com/opcodes/op_notif"
+    },
+    {
+      "topic": "101 | OP_VERIF",
+      "source_url": "https://opcodeexplained.com/opcodes/op_verif"
+    },
+    {
+      "topic": "102 | OP_VERNOTIF",
+      "source_url": "https://opcodeexplained.com/opcodes/op_vernotif"
+    },
+    {
+      "topic": "103 | OP_ELSE",
+      "source_url": "https://opcodeexplained.com/opcodes/op_else"
+    },
+    {
+      "topic": "104 | OP_ENDIF",
+      "source_url": "https://opcodeexplained.com/opcodes/op_endif"
+    },
+    {
+      "topic": "105 | OP_VERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_verify"
+    },
+    {
+      "topic": "106 | OP_RETURN",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return"
+    },
+    {
+      "topic": "107 | OP_TOALTSTACK",
+      "source_url": "https://opcodeexplained.com/opcodes/op_toaltstack"
+    },
+    {
+      "topic": "108 | OP_FROMALTSTACK",
+      "source_url": "https://opcodeexplained.com/opcodes/op_fromaltstack"
+    },
+    {
+      "topic": "109 | OP_2DROP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2drop"
+    },
+    {
+      "topic": "110 | OP_2DUP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2dup"
+    },
+    {
+      "topic": "111 | OP_3DUP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_3dup"
+    },
+    {
+      "topic": "112 | OP_2OVER",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2over"
+    },
+    {
+      "topic": "113 | OP_2ROT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2rot"
+    },
+    {
+      "topic": "114 | OP_2SWAP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2swap"
+    },
+    {
+      "topic": "115 | OP_IFDUP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_ifdup"
+    },
+    {
+      "topic": "116 | OP_DEPTH",
+      "source_url": "https://opcodeexplained.com/opcodes/op_depth"
+    },
+    {
+      "topic": "117 | OP_DROP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_drop"
+    },
+    {
+      "topic": "118 | OP_DUP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_dup"
+    },
+    {
+      "topic": "119 | OP_NIP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nip"
+    },
+    {
+      "topic": "120 | OP_OVER",
+      "source_url": "https://opcodeexplained.com/opcodes/op_over"
+    },
+    {
+      "topic": "121 | OP_PICK",
+      "source_url": "https://opcodeexplained.com/opcodes/op_pick"
+    },
+    {
+      "topic": "122 | OP_ROLL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_roll"
+    },
+    {
+      "topic": "123 | OP_ROT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_rot"
+    },
+    {
+      "topic": "124 | OP_SWAP",
+      "source_url": "https://opcodeexplained.com/opcodes/op_swap"
+    },
+    {
+      "topic": "125 | OP_TUCK",
+      "source_url": "https://opcodeexplained.com/opcodes/op_tuck"
+    },
+    {
+      "topic": "126 | OP_CAT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_cat"
+    },
+    {
+      "topic": "127 | OP_SUBSTR",
+      "source_url": "https://opcodeexplained.com/opcodes/op_substr"
+    },
+    {
+      "topic": "128 | OP_LEFT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_left"
+    },
+    {
+      "topic": "129 | OP_RIGHT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_right"
+    },
+    {
+      "topic": "130 | OP_SIZE",
+      "source_url": "https://opcodeexplained.com/opcodes/op_size"
+    },
+    {
+      "topic": "131 | OP_INVERT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_invert"
+    },
+    {
+      "topic": "132 | OP_AND",
+      "source_url": "https://opcodeexplained.com/opcodes/op_and"
+    },
+    {
+      "topic": "133 | OP_OR",
+      "source_url": "https://opcodeexplained.com/opcodes/op_or"
+    },
+    {
+      "topic": "134 | OP_XOR",
+      "source_url": "https://opcodeexplained.com/opcodes/op_xor"
+    },
+    {
+      "topic": "135 | OP_EQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_equal"
+    },
+    {
+      "topic": "136 | OP_EQUALVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_equalverify"
+    },
+    {
+      "topic": "137 | OP_RESERVED1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_reserved1"
+    },
+    {
+      "topic": "138 | OP_RESERVED2",
+      "source_url": "https://opcodeexplained.com/opcodes/op_reserved2"
+    },
+    {
+      "topic": "139 | OP_1ADD",
+      "source_url": "https://opcodeexplained.com/opcodes/op_1add"
+    },
+    {
+      "topic": "140 | OP_1SUB",
+      "source_url": "https://opcodeexplained.com/opcodes/op_1sub"
+    },
+    {
+      "topic": "141 | OP_2MUL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2mul"
+    },
+    {
+      "topic": "142 | OP_2DIV",
+      "source_url": "https://opcodeexplained.com/opcodes/op_2div"
+    },
+    {
+      "topic": "143 | OP_NEGATE",
+      "source_url": "https://opcodeexplained.com/opcodes/op_negate"
+    },
+    {
+      "topic": "144 | OP_ABS",
+      "source_url": "https://opcodeexplained.com/opcodes/op_abs"
+    },
+    {
+      "topic": "145 | OP_NOT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_not"
+    },
+    {
+      "topic": "146 | OP_0NOTEQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_0notequal"
+    },
+    {
+      "topic": "147 | OP_ADD",
+      "source_url": "https://opcodeexplained.com/opcodes/op_add"
+    },
+    {
+      "topic": "148 | OP_SUB",
+      "source_url": "https://opcodeexplained.com/opcodes/op_sub"
+    },
+    {
+      "topic": "149 | OP_MUL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_mul"
+    },
+    {
+      "topic": "150 | OP_DIV",
+      "source_url": "https://opcodeexplained.com/opcodes/op_div"
+    },
+    {
+      "topic": "151 | OP_MOD",
+      "source_url": "https://opcodeexplained.com/opcodes/op_mod"
+    },
+    {
+      "topic": "152 | OP_LSHIFT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_lshift"
+    },
+    {
+      "topic": "153 | OP_RSHIFT",
+      "source_url": "https://opcodeexplained.com/opcodes/op_rshift"
+    },
+    {
+      "topic": "154 | OP_BOOLAND",
+      "source_url": "https://opcodeexplained.com/opcodes/op_booland"
+    },
+    {
+      "topic": "155 | OP_BOOLOR",
+      "source_url": "https://opcodeexplained.com/opcodes/op_boolor"
+    },
+    {
+      "topic": "156 | OP_NUMEQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_numequal"
+    },
+    {
+      "topic": "157 | OP_NUMEQUALVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_numequalverify"
+    },
+    {
+      "topic": "158 | OP_NUMNOTEQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_numnotequal"
+    },
+    {
+      "topic": "159 | OP_LESSTHAN",
+      "source_url": "https://opcodeexplained.com/opcodes/op_lessthan"
+    },
+    {
+      "topic": "160 | OP_GREATERTHAN",
+      "source_url": "https://opcodeexplained.com/opcodes/op_greaterthan"
+    },
+    {
+      "topic": "161 | OP_LESSTHANOREQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_lessthanorequal"
+    },
+    {
+      "topic": "162 | OP_GREATERTHANOREQUAL",
+      "source_url": "https://opcodeexplained.com/opcodes/op_greaterthanorequal"
+    },
+    {
+      "topic": "163 | OP_MIN",
+      "source_url": "https://opcodeexplained.com/opcodes/op_min"
+    },
+    {
+      "topic": "164 | OP_MAX",
+      "source_url": "https://opcodeexplained.com/opcodes/op_max"
+    },
+    {
+      "topic": "165 | OP_WITHIN",
+      "source_url": "https://opcodeexplained.com/opcodes/op_within"
+    },
+    {
+      "topic": "166 | OP_RIPEMD160",
+      "source_url": "https://opcodeexplained.com/opcodes/op_ripemd160"
+    },
+    {
+      "topic": "167 | OP_SHA1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_sha1"
+    },
+    {
+      "topic": "168 | OP_SHA256",
+      "source_url": "https://opcodeexplained.com/opcodes/op_sha256"
+    },
+    {
+      "topic": "169 | OP_HASH160",
+      "source_url": "https://opcodeexplained.com/opcodes/op_hash160"
+    },
+    {
+      "topic": "170 | OP_HASH256",
+      "source_url": "https://opcodeexplained.com/opcodes/op_hash256"
+    },
+    {
+      "topic": "171 | OP_CODESEPARATOR",
+      "source_url": "https://opcodeexplained.com/opcodes/op_codeseparator"
+    },
+    {
+      "topic": "172 | OP_CHECKSIG",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checksig"
+    },
+    {
+      "topic": "173 | OP_CHECKSIGVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checksigverify"
+    },
+    {
+      "topic": "174 | OP_CHECKMULTISIG",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checkmultisig"
+    },
+    {
+      "topic": "175 | OP_CHECKMULTISIGVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checkmultisigverify"
+    },
+    {
+      "topic": "176 | OP_NOP1",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop1"
+    },
+    {
+      "topic": "177 | OP_CHECKLOCKTIMEVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checklocktimeverify"
+    },
+    {
+      "topic": "178 | OP_CHECKSEQUENCEVERIFY",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checksequenceverify"
+    },
+    {
+      "topic": "179 | OP_NOP4",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop4"
+    },
+    {
+      "topic": "180 | OP_NOP5",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop5"
+    },
+    {
+      "topic": "181 | OP_NOP6",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop6"
+    },
+    {
+      "topic": "182 | OP_NOP7",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop7"
+    },
+    {
+      "topic": "183 | OP_NOP8",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop8"
+    },
+    {
+      "topic": "184 | OP_NOP9",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop9"
+    },
+    {
+      "topic": "185 | OP_NOP10",
+      "source_url": "https://opcodeexplained.com/opcodes/op_nop10"
+    },
+    {
+      "topic": "186 | OP_CHECKSIGADD",
+      "source_url": "https://opcodeexplained.com/opcodes/op_checksigadd"
+    },
+    {
+      "topic": "187 | OP_RETURN_187",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_187"
+    },
+    {
+      "topic": "188 | OP_RETURN_188",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_188"
+    },
+    {
+      "topic": "189 | OP_RETURN_189",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_189"
+    },
+    {
+      "topic": "190 | OP_RETURN_190",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_190"
+    },
+    {
+      "topic": "191 | OP_RETURN_191",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_191"
+    },
+    {
+      "topic": "192 | OP_RETURN_192",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_192"
+    },
+    {
+      "topic": "193 | OP_RETURN_193",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_193"
+    },
+    {
+      "topic": "194 | OP_RETURN_194",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_194"
+    },
+    {
+      "topic": "195 | OP_RETURN_195",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_195"
+    },
+    {
+      "topic": "196 | OP_RETURN_196",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_196"
+    },
+    {
+      "topic": "197 | OP_RETURN_197",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_197"
+    },
+    {
+      "topic": "198 | OP_RETURN_198",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_198"
+    },
+    {
+      "topic": "199 | OP_RETURN_199",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_199"
+    },
+    {
+      "topic": "200 | OP_RETURN_200",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_200"
+    },
+    {
+      "topic": "201 | OP_RETURN_201",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_201"
+    },
+    {
+      "topic": "202 | OP_RETURN_202",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_202"
+    },
+    {
+      "topic": "203 | OP_RETURN_203",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_203"
+    },
+    {
+      "topic": "204 | OP_RETURN_204",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_204"
+    },
+    {
+      "topic": "205 | OP_RETURN_205",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_205"
+    },
+    {
+      "topic": "206 | OP_RETURN_206",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_206"
+    },
+    {
+      "topic": "207 | OP_RETURN_207",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_207"
+    },
+    {
+      "topic": "208 | OP_RETURN_208",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_208"
+    },
+    {
+      "topic": "209 | OP_RETURN_209",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_209"
+    },
+    {
+      "topic": "210 | OP_RETURN_210",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_210"
+    },
+    {
+      "topic": "211 | OP_RETURN_211",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_211"
+    },
+    {
+      "topic": "212 | OP_RETURN_212",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_212"
+    },
+    {
+      "topic": "213 | OP_RETURN_213",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_213"
+    },
+    {
+      "topic": "214 | OP_RETURN_214",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_214"
+    },
+    {
+      "topic": "215 | OP_RETURN_215",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_215"
+    },
+    {
+      "topic": "216 | OP_RETURN_216",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_216"
+    },
+    {
+      "topic": "217 | OP_RETURN_217",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_217"
+    },
+    {
+      "topic": "218 | OP_RETURN_218",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_218"
+    },
+    {
+      "topic": "219 | OP_RETURN_219",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_219"
+    },
+    {
+      "topic": "220 | OP_RETURN_220",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_220"
+    },
+    {
+      "topic": "220 | OP_RETURN_221",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_221"
+    },
+    {
+      "topic": "220 | OP_RETURN_222",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_222"
+    },
+    {
+      "topic": "220 | OP_RETURN_223",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_223"
+    },
+    {
+      "topic": "220 | OP_RETURN_224",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_224"
+    },
+    {
+      "topic": "220 | OP_RETURN_225",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_225"
+    },
+    {
+      "topic": "220 | OP_RETURN_226",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_226"
+    },
+    {
+      "topic": "220 | OP_RETURN_227",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_227"
+    },
+    {
+      "topic": "220 | OP_RETURN_228",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_228"
+    },
+    {
+      "topic": "220 | OP_RETURN_229",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_229"
+    },
+    {
+      "topic": "230 | OP_RETURN_230",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_230"
+    },
+    {
+      "topic": "231 | OP_RETURN_231",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_231"
+    },
+    {
+      "topic": "232 | OP_RETURN_232",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_232"
+    },
+    {
+      "topic": "233 | OP_RETURN_233",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_233"
+    },
+    {
+      "topic": "234 | OP_RETURN_234",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_234"
+    },
+    {
+      "topic": "235 | OP_RETURN_235",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_235"
+    },
+    {
+      "topic": "236 | OP_RETURN_236",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_236"
+    },
+    {
+      "topic": "237 | OP_RETURN_237",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_237"
+    },
+    {
+      "topic": "238 | OP_RETURN_238",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_238"
+    },
+    {
+      "topic": "239 | OP_RETURN_239",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_239"
+    },
+    {
+      "topic": "240 | OP_RETURN_240",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_240"
+    },
+    {
+      "topic": "241 | OP_RETURN_241",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_241"
+    },
+    {
+      "topic": "242 | OP_RETURN_242",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_242"
+    },
+    {
+      "topic": "243 | OP_RETURN_243",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_243"
+    },
+    {
+      "topic": "244 | OP_RETURN_244",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_244"
+    },
+    {
+      "topic": "245 | OP_RETURN_245",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_245"
+    },
+    {
+      "topic": "246 | OP_RETURN_246",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_246"
+    },
+    {
+      "topic": "247 | OP_RETURN_247",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_247"
+    },
+    {
+      "topic": "248 | OP_RETURN_248",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_248"
+    },
+    {
+      "topic": "249 | OP_RETURN_249",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_249"
+    },
+    {
+      "topic": "250 | OP_RETURN_250",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_250"
+    },
+    {
+      "topic": "251 | OP_RETURN_251",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_251"
+    },
+    {
+      "topic": "252 | OP_RETURN_252",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_252"
+    },
+    {
+      "topic": "253 | OP_RETURN_253",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_253"
+    },
+    {
+      "topic": "254 | OP_RETURN_254",
+      "source_url": "https://opcodeexplained.com/opcodes/op_return_254"
+    },
+    {
+      "topic": "255 | OP_INVALIDOPCODE",
+      "source_url": "https://opcodeexplained.com/opcodes/op_invalidopcode"
+    },
+    {
+      "topic": "Script Basics",
+      "source_url": "https://opcodeexplained.com/script/script_basics"
+    },
+    {
+      "topic": "Script Success and Failure",
+      "source_url": "https://opcodeexplained.com/script/script"
+    },
+    {
+      "topic": "ASM Representation",
+      "source_url": "https://opcodeexplained.com/script/asm"
+    },
+    {
+      "topic": "Push Operators",
+      "source_url": "https://opcodeexplained.com/script/push"
+    },
+    {
+      "topic": "Numbers in Script",
+      "source_url": "https://opcodeexplained.com/script/numbers"
+    }
+  ],
+  "covenants_topics": [
+    {
+      "topic": "ANYPREVOUT",
+      "source_url": "https://covenants.info/proposals/apo/"
+    },
+    {
+      "topic": "CTV",
+      "source_url": "https://covenants.info/proposals/ctv/"
+    },
+    {
+      "topic": "OP_VAULT",
+      "source_url": "https://covenants.info/proposals/op-vault/"
+    },
+    {
+      "topic": "TLUV",
+      "source_url": "https://covenants.info/proposals/tluv/"
+    },
+    {
+      "topic": "TXHASH",
+      "source_url": "https://covenants.info/proposals/txhash/"
+    },
+    {
+      "topic": "Direct Introspection",
+      "source_url": "https://covenants.info/proposals/direct-introspection/"
+    },
+    {
+      "topic": "CCV & MATT",
+      "source_url": "https://covenants.info/proposals/matt/"
+    },
+    {
+      "topic": "others",
+      "source_url": "https://covenants.info/proposals/others/"
+    },
+    {
+      "topic": "Transaction Templating",
+      "source_url": "https://covenants.info/use-cases/tx-templating/"
+    },
+    {
+      "topic": "Eltoo / LN-Symmetry",
+      "source_url": "https://covenants.info/use-cases/eltoo/"
+    },
+    {
+      "topic": "Vaults",
+      "source_url": "https://covenants.info/use-cases/vaults/"
+    },
+    {
+      "topic": "Payment Pools",
+      "source_url": "https://covenants.info/use-cases/payment-pools/"
+    },
+    {
+      "topic": "Ark",
+      "source_url": "https://covenants.info/use-cases/ark/"
+    },
+    {
+      "topic": "DLCs",
+      "source_url": "https://covenants.info/use-cases/dlcs/"
+    },
+    {
+      "topic": "Statechains",
+      "source_url": "https://covenants.info/use-cases/statechains/"
+    },
+    {
+      "topic": "Spacechains",
+      "source_url": "https://covenants.info/use-cases/spacechains/"
+    },
+    {
+      "topic": "Congestion Control",
+      "source_url": "https://covenants.info/use-cases/congestion-control/"
+    },
+    {
+      "topic": "The Great Script Restoration",
+      "source_url": "https://covenants.info/extra/gsr/"
+    },
+    {
+      "topic": "BitVM",
+      "source_url": "https://covenants.info/extra/bitvm/"
+    }
+  ]
+}

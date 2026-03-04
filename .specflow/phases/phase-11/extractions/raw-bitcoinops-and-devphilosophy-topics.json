@@ -1,0 +1,1410 @@
+{
+  "bitcoinops_topics": [
+    {
+      "topic": "2pECDSA",
+      "source_url": "https://bitcoinops.org/en/topics/multisignature/"
+    },
+    {
+      "topic": "Accidental confiscation",
+      "source_url": "https://bitcoinops.org/en/topics/accidental-confiscation/"
+    },
+    {
+      "topic": "Accountable Computing Contracts",
+      "source_url": "https://bitcoinops.org/en/topics/acc/"
+    },
+    {
+      "topic": "Adaptor signatures",
+      "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/"
+    },
+    {
+      "topic": "Addr v2",
+      "source_url": "https://bitcoinops.org/en/topics/addr-v2/"
+    },
+    {
+      "topic": "Address reuse",
+      "source_url": "https://bitcoinops.org/en/topics/output-linking/"
+    },
+    {
+      "topic": "AMP",
+      "source_url": "https://bitcoinops.org/en/topics/atomic-multipath/"
+    },
+    {
+      "topic": "Ancestor feerate mining",
+      "source_url": "https://bitcoinops.org/en/topics/cpfp/"
+    },
+    {
+      "topic": "Anchor outputs",
+      "source_url": "https://bitcoinops.org/en/topics/anchor-outputs/"
+    },
+    {
+      "topic": "Annex",
+      "source_url": "https://bitcoinops.org/en/topics/annex/"
+    },
+    {
+      "topic": "Anonymity networks",
+      "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/"
+    },
+    {
+      "topic": "Anti fee sniping",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sniping/"
+    },
+    {
+      "topic": "Ark protocol",
+      "source_url": "https://bitcoinops.org/en/topics/ark/"
+    },
+    {
+      "topic": "ASICBoost",
+      "source_url": "https://bitcoinops.org/en/topics/asicboost/"
+    },
+    {
+      "topic": "AssumeUTXO",
+      "source_url": "https://bitcoinops.org/en/topics/assumeutxo/"
+    },
+    {
+      "topic": "Async payments",
+      "source_url": "https://bitcoinops.org/en/topics/async-payments/"
+    },
+    {
+      "topic": "Atomic multipath payments (AMPs)",
+      "source_url": "https://bitcoinops.org/en/topics/atomic-multipath/"
+    },
+    {
+      "topic": "Attributable failures",
+      "source_url": "https://bitcoinops.org/en/topics/attributable-failures/"
+    },
+    {
+      "topic": "Base AMP",
+      "source_url": "https://bitcoinops.org/en/topics/multipath-payments/"
+    },
+    {
+      "topic": "Basic Bitcoin Lisp Language (bll)",
+      "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/"
+    },
+    {
+      "topic": "Batching",
+      "source_url": "https://bitcoinops.org/en/topics/payment-batching/"
+    },
+    {
+      "topic": "Bech32",
+      "source_url": "https://bitcoinops.org/en/topics/bech32/"
+    },
+    {
+      "topic": "Bech32(m)",
+      "source_url": "https://bitcoinops.org/en/topics/bech32/"
+    },
+    {
+      "topic": "Bech32m",
+      "source_url": "https://bitcoinops.org/en/topics/bech32/"
+    },
+    {
+      "topic": "Betterhash",
+      "source_url": "https://bitcoinops.org/en/topics/pooled-mining/"
+    },
+    {
+      "topic": "BIP8",
+      "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/"
+    },
+    {
+      "topic": "BIP9",
+      "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/"
+    },
+    {
+      "topic": "BIP32",
+      "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/"
+    },
+    {
+      "topic": "BIP37",
+      "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/"
+    },
+    {
+      "topic": "BIP54",
+      "source_url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/"
+    },
+    {
+      "topic": "BIP70 payment protocol",
+      "source_url": "https://bitcoinops.org/en/topics/bip70-payment-protocol/"
+    },
+    {
+      "topic": "BIP79",
+      "source_url": "https://bitcoinops.org/en/topics/payjoin/"
+    },
+    {
+      "topic": "BIP93",
+      "source_url": "https://bitcoinops.org/en/topics/codex32/"
+    },
+    {
+      "topic": "BIP125",
+      "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/"
+    },
+    {
+      "topic": "BIP151",
+      "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/"
+    },
+    {
+      "topic": "BIP152",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-relay/"
+    },
+    {
+      "topic": "BIP156",
+      "source_url": "https://bitcoinops.org/en/topics/dandelion/"
+    },
+    {
+      "topic": "BIP157",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/"
+    },
+    {
+      "topic": "BIP158",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/"
+    },
+    {
+      "topic": "BIP173",
+      "source_url": "https://bitcoinops.org/en/topics/bech32/"
+    },
+    {
+      "topic": "BIP174",
+      "source_url": "https://bitcoinops.org/en/topics/psbt/"
+    },
+    {
+      "topic": "BIP322",
+      "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/"
+    },
+    {
+      "topic": "BIP324",
+      "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/"
+    },
+    {
+      "topic": "BIP331",
+      "source_url": "https://bitcoinops.org/en/topics/package-relay/"
+    },
+    {
+      "topic": "BIP340",
+      "source_url": "https://bitcoinops.org/en/topics/taproot/"
+    },
+    {
+      "topic": "BitVM",
+      "source_url": "https://bitcoinops.org/en/topics/acc/"
+    },
+    {
+      "topic": "Blinded paths",
+      "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/"
+    },
+    {
+      "topic": "bllsh",
+      "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/"
+    },
+    {
+      "topic": "Block 1,983,702 problem",
+      "source_url": "https://bitcoinops.org/en/topics/duplicate-transactions/"
+    },
+    {
+      "topic": "Block explorers",
+      "source_url": "https://bitcoinops.org/en/topics/block-explorers/"
+    },
+    {
+      "topic": "Block withholding",
+      "source_url": "https://bitcoinops.org/en/topics/block-withholding/"
+    },
+    {
+      "topic": "Bloom filters",
+      "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/"
+    },
+    {
+      "topic": "BLS signatures",
+      "source_url": "https://bitcoinops.org/en/topics/bls-signatures/"
+    },
+    {
+      "topic": "BOLT12",
+      "source_url": "https://bitcoinops.org/en/topics/offers/"
+    },
+    {
+      "topic": "Boomerang payments",
+      "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/"
+    },
+    {
+      "topic": "Braidpool",
+      "source_url": "https://bitcoinops.org/en/topics/pooled-mining/"
+    },
+    {
+      "topic": "BTC Lisp",
+      "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/"
+    },
+    {
+      "topic": "Bustapay",
+      "source_url": "https://bitcoinops.org/en/topics/payjoin/"
+    },
+    {
+      "topic": "Channel announcements",
+      "source_url": "https://bitcoinops.org/en/topics/channel-announcements/"
+    },
+    {
+      "topic": "Channel commitment upgrades",
+      "source_url": "https://bitcoinops.org/en/topics/channel-commitment-upgrades/"
+    },
+    {
+      "topic": "Channel factories",
+      "source_url": "https://bitcoinops.org/en/topics/channel-factories/"
+    },
+    {
+      "topic": "Channel jamming attacks",
+      "source_url": "https://bitcoinops.org/en/topics/channel-jamming-attacks/"
+    },
+    {
+      "topic": "Child pays for parent (CPFP)",
+      "source_url": "https://bitcoinops.org/en/topics/cpfp/"
+    },
+    {
+      "topic": "Client-side validation",
+      "source_url": "https://bitcoinops.org/en/topics/client-side-validation/"
+    },
+    {
+      "topic": "CLTV expiry delta",
+      "source_url": "https://bitcoinops.org/en/topics/cltv-expiry-delta/"
+    },
+    {
+      "topic": "Cluster mempool",
+      "source_url": "https://bitcoinops.org/en/topics/cluster-mempool/"
+    },
+    {
+      "topic": "Codex32",
+      "source_url": "https://bitcoinops.org/en/topics/codex32/"
+    },
+    {
+      "topic": "Coin selection",
+      "source_url": "https://bitcoinops.org/en/topics/coin-selection/"
+    },
+    {
+      "topic": "Coinjoin",
+      "source_url": "https://bitcoinops.org/en/topics/coinjoin/"
+    },
+    {
+      "topic": "Coinpools",
+      "source_url": "https://bitcoinops.org/en/topics/joinpools/"
+    },
+    {
+      "topic": "Coinswap",
+      "source_url": "https://bitcoinops.org/en/topics/coinswap/"
+    },
+    {
+      "topic": "Compact block filters",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/"
+    },
+    {
+      "topic": "Compact block relay",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-relay/"
+    },
+    {
+      "topic": "Consensus cleanup soft fork",
+      "source_url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/"
+    },
+    {
+      "topic": "Countersign",
+      "source_url": "https://bitcoinops.org/en/topics/countersign/"
+    },
+    {
+      "topic": "Covenants",
+      "source_url": "https://bitcoinops.org/en/topics/covenants/"
+    },
+    {
+      "topic": "Covert ASICBoost",
+      "source_url": "https://bitcoinops.org/en/topics/asicboost/"
+    },
+    {
+      "topic": "CPFP carve out",
+      "source_url": "https://bitcoinops.org/en/topics/cpfp-carve-out/"
+    },
+    {
+      "topic": "Cross-input signature aggregation (CISA)",
+      "source_url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/"
+    },
+    {
+      "topic": "CVE-2012-2459",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2013-2292",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2015-3641",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2015-6031",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2017-12842",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2017-18350",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2018-17144",
+      "source_url": "https://bitcoinops.org/en/topics/cve-2018-17144/"
+    },
+    {
+      "topic": "CVE-2018-17145",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2020-14198",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2020-26895",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2020-26896",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2021-31876",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVE-2023-39910",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "CVEs (various)",
+      "source_url": "https://bitcoinops.org/en/topics/cve/"
+    },
+    {
+      "topic": "Dandelion",
+      "source_url": "https://bitcoinops.org/en/topics/dandelion/"
+    },
+    {
+      "topic": "Default minimum transaction relay feerates",
+      "source_url": "https://bitcoinops.org/en/topics/default-minimum-transaction-relay-feerates/"
+    },
+    {
+      "topic": "Delegation",
+      "source_url": "https://bitcoinops.org/en/topics/signer-delegation/"
+    },
+    {
+      "topic": "Descriptors",
+      "source_url": "https://bitcoinops.org/en/topics/output-script-descriptors/"
+    },
+    {
+      "topic": "Difficulty adjustment algorithms",
+      "source_url": "https://bitcoinops.org/en/topics/difficulty-adjustment-algorithms/"
+    },
+    {
+      "topic": "Discreet Log Contracts (DLCs)",
+      "source_url": "https://bitcoinops.org/en/topics/discreet-log-contracts/"
+    },
+    {
+      "topic": "Discrete log equivalency (DLEQ)",
+      "source_url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/"
+    },
+    {
+      "topic": "Dual funding",
+      "source_url": "https://bitcoinops.org/en/topics/dual-funding/"
+    },
+    {
+      "topic": "Duplex micropayment channels",
+      "source_url": "https://bitcoinops.org/en/topics/duplex-micropayment-channels/"
+    },
+    {
+      "topic": "Duplicate inputs vulnerability",
+      "source_url": "https://bitcoinops.org/en/topics/cve-2018-17144/"
+    },
+    {
+      "topic": "Duplicate transactions",
+      "source_url": "https://bitcoinops.org/en/topics/duplicate-transactions/"
+    },
+    {
+      "topic": "Dust",
+      "source_url": "https://bitcoinops.org/en/topics/uneconomical-outputs/"
+    },
+    {
+      "topic": "Dust attacks",
+      "source_url": "https://bitcoinops.org/en/topics/output-linking/"
+    },
+    {
+      "topic": "Ecash",
+      "source_url": "https://bitcoinops.org/en/topics/ecash/"
+    },
+    {
+      "topic": "Eclipse attacks",
+      "source_url": "https://bitcoinops.org/en/topics/eclipse-attacks/"
+    },
+    {
+      "topic": "Eltoo",
+      "source_url": "https://bitcoinops.org/en/topics/eltoo/"
+    },
+    {
+      "topic": "Endogenous fees",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/"
+    },
+    {
+      "topic": "Ephemeral anchors",
+      "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/"
+    },
+    {
+      "topic": "Ephemeral dust",
+      "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/"
+    },
+    {
+      "topic": "Erlay",
+      "source_url": "https://bitcoinops.org/en/topics/erlay/"
+    },
+    {
+      "topic": "Exfiltration-resistant signing",
+      "source_url": "https://bitcoinops.org/en/topics/exfiltration-resistant-signing/"
+    },
+    {
+      "topic": "Exogenous fees",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/"
+    },
+    {
+      "topic": "Expiration floods",
+      "source_url": "https://bitcoinops.org/en/topics/expiration-floods/"
+    },
+    {
+      "topic": "Fee estimation",
+      "source_url": "https://bitcoinops.org/en/topics/fee-estimation/"
+    },
+    {
+      "topic": "Fee sniping",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sniping/"
+    },
+    {
+      "topic": "Fee sourcing",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sourcing/"
+    },
+    {
+      "topic": "Fee sponsorship",
+      "source_url": "https://bitcoinops.org/en/topics/fee-sponsorship/"
+    },
+    {
+      "topic": "Flood and loot",
+      "source_url": "https://bitcoinops.org/en/topics/expiration-floods/"
+    },
+    {
+      "topic": "Forced expiration spam",
+      "source_url": "https://bitcoinops.org/en/topics/expiration-floods/"
+    },
+    {
+      "topic": "Free relay",
+      "source_url": "https://bitcoinops.org/en/topics/free-relay/"
+    },
+    {
+      "topic": "Full-RBF",
+      "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/"
+    },
+    {
+      "topic": "Gap limits",
+      "source_url": "https://bitcoinops.org/en/topics/gap-limits/"
+    },
+    {
+      "topic": "Generic signmessage",
+      "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/"
+    },
+    {
+      "topic": "Gitian",
+      "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/"
+    },
+    {
+      "topic": "Gossip (LN)",
+      "source_url": "https://bitcoinops.org/en/topics/channel-announcements/"
+    },
+    {
+      "topic": "Guix",
+      "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/"
+    },
+    {
+      "topic": "Half aggregation",
+      "source_url": "https://bitcoinops.org/en/topics/cross-input-signature-aggregation/"
+    },
+    {
+      "topic": "Hardware wallet interface (HWI)",
+      "source_url": "https://bitcoinops.org/en/topics/hwi/"
+    },
+    {
+      "topic": "Hash Time Locked Contract (HTLC)",
+      "source_url": "https://bitcoinops.org/en/topics/htlc/"
+    },
+    {
+      "topic": "HD key generation",
+      "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/"
+    },
+    {
+      "topic": "HD wallets",
+      "source_url": "https://bitcoinops.org/en/topics/hd-key-generation/"
+    },
+    {
+      "topic": "Hidden destinations",
+      "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/"
+    },
+    {
+      "topic": "Hold invoices",
+      "source_url": "https://bitcoinops.org/en/topics/hold-invoices/"
+    },
+    {
+      "topic": "HTLC endorsement",
+      "source_url": "https://bitcoinops.org/en/topics/htlc-endorsement/"
+    },
+    {
+      "topic": "I2P",
+      "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/"
+    },
+    {
+      "topic": "Inbound forwarding fees",
+      "source_url": "https://bitcoinops.org/en/topics/inbound-forwarding-fees/"
+    },
+    {
+      "topic": "Interactive funding protocol",
+      "source_url": "https://bitcoinops.org/en/topics/dual-funding/"
+    },
+    {
+      "topic": "Joinpools",
+      "source_url": "https://bitcoinops.org/en/topics/joinpools/"
+    },
+    {
+      "topic": "Just-In-Time (JIT) channels",
+      "source_url": "https://bitcoinops.org/en/topics/jit-channels/"
+    },
+    {
+      "topic": "Just-in-time (JIT) routing",
+      "source_url": "https://bitcoinops.org/en/topics/jit-routing/"
+    },
+    {
+      "topic": "Keysend",
+      "source_url": "https://bitcoinops.org/en/topics/spontaneous-payments/"
+    },
+    {
+      "topic": "Kindred replace by fee",
+      "source_url": "https://bitcoinops.org/en/topics/kindred-replace-by-fee/"
+    },
+    {
+      "topic": "Large channels",
+      "source_url": "https://bitcoinops.org/en/topics/large-channels/"
+    },
+    {
+      "topic": "Libminisketch",
+      "source_url": "https://bitcoinops.org/en/topics/minisketch/"
+    },
+    {
+      "topic": "Lightning Addresses",
+      "source_url": "https://bitcoinops.org/en/topics/lnurl/"
+    },
+    {
+      "topic": "Liquidity advertisements",
+      "source_url": "https://bitcoinops.org/en/topics/liquidity-advertisements/"
+    },
+    {
+      "topic": "LN-Penalty",
+      "source_url": "https://bitcoinops.org/en/topics/ln-penalty/"
+    },
+    {
+      "topic": "LN-Symmetry",
+      "source_url": "https://bitcoinops.org/en/topics/eltoo/"
+    },
+    {
+      "topic": "LNURL",
+      "source_url": "https://bitcoinops.org/en/topics/lnurl/"
+    },
+    {
+      "topic": "Low-r grinding",
+      "source_url": "https://bitcoinops.org/en/topics/low-r-grinding/"
+    },
+    {
+      "topic": "MAST",
+      "source_url": "https://bitcoinops.org/en/topics/mast/"
+    },
+    {
+      "topic": "MATT",
+      "source_url": "https://bitcoinops.org/en/topics/matt/"
+    },
+    {
+      "topic": "Merkle tree vulnerabilities",
+      "source_url": "https://bitcoinops.org/en/topics/merkle-tree-vulnerabilities/"
+    },
+    {
+      "topic": "Miniscript",
+      "source_url": "https://bitcoinops.org/en/topics/miniscript/"
+    },
+    {
+      "topic": "Minisketch",
+      "source_url": "https://bitcoinops.org/en/topics/minisketch/"
+    },
+    {
+      "topic": "Multipart payments",
+      "source_url": "https://bitcoinops.org/en/topics/multipath-payments/"
+    },
+    {
+      "topic": "Multipath payments",
+      "source_url": "https://bitcoinops.org/en/topics/multipath-payments/"
+    },
+    {
+      "topic": "MuSig",
+      "source_url": "https://bitcoinops.org/en/topics/musig/"
+    },
+    {
+      "topic": "Native segwit address",
+      "source_url": "https://bitcoinops.org/en/topics/bech32/"
+    },
+    {
+      "topic": "Neutrino protocol",
+      "source_url": "https://bitcoinops.org/en/topics/compact-block-filters/"
+    },
+    {
+      "topic": "Oblivious shares",
+      "source_url": "https://bitcoinops.org/en/topics/block-withholding/"
+    },
+    {
+      "topic": "Offers",
+      "source_url": "https://bitcoinops.org/en/topics/offers/"
+    },
+    {
+      "topic": "Onion messages",
+      "source_url": "https://bitcoinops.org/en/topics/onion-messages/"
+    },
+    {
+      "topic": "OP_CAT",
+      "source_url": "https://bitcoinops.org/en/topics/op_cat/"
+    },
+    {
+      "topic": "OP_CHECKCONTRACTVERIFY",
+      "source_url": "https://bitcoinops.org/en/topics/matt/"
+    },
+    {
+      "topic": "OP_CHECKSIGFROMSTACK",
+      "source_url": "https://bitcoinops.org/en/topics/op_checksigfromstack/"
+    },
+    {
+      "topic": "OP_CHECKTEMPLATEVERIFY",
+      "source_url": "https://bitcoinops.org/en/topics/op_checktemplateverify/"
+    },
+    {
+      "topic": "OP_CODESEPARATOR",
+      "source_url": "https://bitcoinops.org/en/topics/op_codeseparator/"
+    },
+    {
+      "topic": "Opt-in Replace-by-Fee",
+      "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/"
+    },
+    {
+      "topic": "Out-of-band fees",
+      "source_url": "https://bitcoinops.org/en/topics/out-of-band-fees/"
+    },
+    {
+      "topic": "Output linking",
+      "source_url": "https://bitcoinops.org/en/topics/output-linking/"
+    },
+    {
+      "topic": "Output script descriptors",
+      "source_url": "https://bitcoinops.org/en/topics/output-script-descriptors/"
+    },
+    {
+      "topic": "Overt ASICBoost",
+      "source_url": "https://bitcoinops.org/en/topics/asicboost/"
+    },
+    {
+      "topic": "Package relay",
+      "source_url": "https://bitcoinops.org/en/topics/package-relay/"
+    },
+    {
+      "topic": "Partially signed bitcoin transactions",
+      "source_url": "https://bitcoinops.org/en/topics/psbt/"
+    },
+    {
+      "topic": "Pay-to-Anchor (P2A)",
+      "source_url": "https://bitcoinops.org/en/topics/ephemeral-anchors/"
+    },
+    {
+      "topic": "Pay-to-Contract (P2C) protocols",
+      "source_url": "https://bitcoinops.org/en/topics/pay-to-contract-outputs/"
+    },
+    {
+      "topic": "Pay-to-EndPoint",
+      "source_url": "https://bitcoinops.org/en/topics/payjoin/"
+    },
+    {
+      "topic": "Payjoin",
+      "source_url": "https://bitcoinops.org/en/topics/payjoin/"
+    },
+    {
+      "topic": "Payment batching",
+      "source_url": "https://bitcoinops.org/en/topics/payment-batching/"
+    },
+    {
+      "topic": "Payment pools",
+      "source_url": "https://bitcoinops.org/en/topics/joinpools/"
+    },
+    {
+      "topic": "Payment probes",
+      "source_url": "https://bitcoinops.org/en/topics/payment-probes/"
+    },
+    {
+      "topic": "Payment secrets",
+      "source_url": "https://bitcoinops.org/en/topics/payment-secrets/"
+    },
+    {
+      "topic": "Peer storage",
+      "source_url": "https://bitcoinops.org/en/topics/peer-storage/"
+    },
+    {
+      "topic": "Point Time Locked Contracts (PTLCs)",
+      "source_url": "https://bitcoinops.org/en/topics/ptlc/"
+    },
+    {
+      "topic": "Pooled mining",
+      "source_url": "https://bitcoinops.org/en/topics/pooled-mining/"
+    },
+    {
+      "topic": "Post-quantum cryptography",
+      "source_url": "https://bitcoinops.org/en/topics/quantum-resistance/"
+    },
+    {
+      "topic": "Private channels",
+      "source_url": "https://bitcoinops.org/en/topics/unannounced-channels/"
+    },
+    {
+      "topic": "Probabilistic payments",
+      "source_url": "https://bitcoinops.org/en/topics/probabilistic-payments/"
+    },
+    {
+      "topic": "Probing",
+      "source_url": "https://bitcoinops.org/en/topics/payment-probes/"
+    },
+    {
+      "topic": "Proof of payment",
+      "source_url": "https://bitcoinops.org/en/topics/proof-of-payment/"
+    },
+    {
+      "topic": "Proof of reserves",
+      "source_url": "https://bitcoinops.org/en/topics/proof-of-reserves/"
+    },
+    {
+      "topic": "Proofs of discrete log equivalency (PODLE)",
+      "source_url": "https://bitcoinops.org/en/topics/discrete-log-equivalency/"
+    },
+    {
+      "topic": "PSBT",
+      "source_url": "https://bitcoinops.org/en/topics/psbt/"
+    },
+    {
+      "topic": "Quantum resistance",
+      "source_url": "https://bitcoinops.org/en/topics/quantum-resistance/"
+    },
+    {
+      "topic": "Redundant overpayments",
+      "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/"
+    },
+    {
+      "topic": "Rendez-vous routing",
+      "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/"
+    },
+    {
+      "topic": "Replace-by-fee (RBF)",
+      "source_url": "https://bitcoinops.org/en/topics/replace-by-fee/"
+    },
+    {
+      "topic": "Replacement cycling",
+      "source_url": "https://bitcoinops.org/en/topics/replacement-cycling/"
+    },
+    {
+      "topic": "Reproducible builds",
+      "source_url": "https://bitcoinops.org/en/topics/reproducible-builds/"
+    },
+    {
+      "topic": "Responsible disclosures",
+      "source_url": "https://bitcoinops.org/en/topics/responsible-disclosures/"
+    },
+    {
+      "topic": "Reuse avoidance",
+      "source_url": "https://bitcoinops.org/en/topics/output-linking/"
+    },
+    {
+      "topic": "RGB",
+      "source_url": "https://bitcoinops.org/en/topics/client-side-validation/"
+    },
+    {
+      "topic": "Route blinding",
+      "source_url": "https://bitcoinops.org/en/topics/rendez-vous-routing/"
+    },
+    {
+      "topic": "Schnorr signatures",
+      "source_url": "https://bitcoinops.org/en/topics/schnorr-signatures/"
+    },
+    {
+      "topic": "Scriptless multisignatures",
+      "source_url": "https://bitcoinops.org/en/topics/multisignature/"
+    },
+    {
+      "topic": "Scriptless scripts",
+      "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/"
+    },
+    {
+      "topic": "Segregated witness",
+      "source_url": "https://bitcoinops.org/en/topics/segregated-witness/"
+    },
+    {
+      "topic": "Selfish mining",
+      "source_url": "https://bitcoinops.org/en/topics/selfish-mining/"
+    },
+    {
+      "topic": "Shielded CSV",
+      "source_url": "https://bitcoinops.org/en/topics/client-side-validation/"
+    },
+    {
+      "topic": "Sibling eviction",
+      "source_url": "https://bitcoinops.org/en/topics/kindred-replace-by-fee/"
+    },
+    {
+      "topic": "Side channels",
+      "source_url": "https://bitcoinops.org/en/topics/side-channels/"
+    },
+    {
+      "topic": "Sidechains",
+      "source_url": "https://bitcoinops.org/en/topics/sidechains/"
+    },
+    {
+      "topic": "SIGHASH_ANYPREVOUT",
+      "source_url": "https://bitcoinops.org/en/topics/sighash_anyprevout/"
+    },
+    {
+      "topic": "SIGHASH_NOINPUT",
+      "source_url": "https://bitcoinops.org/en/topics/sighash_anyprevout/"
+    },
+    {
+      "topic": "Signature adaptors",
+      "source_url": "https://bitcoinops.org/en/topics/adaptor-signatures/"
+    },
+    {
+      "topic": "Signature grinding",
+      "source_url": "https://bitcoinops.org/en/topics/low-r-grinding/"
+    },
+    {
+      "topic": "Signer delegation",
+      "source_url": "https://bitcoinops.org/en/topics/signer-delegation/"
+    },
+    {
+      "topic": "Signet",
+      "source_url": "https://bitcoinops.org/en/topics/signet/"
+    },
+    {
+      "topic": "Signmessage",
+      "source_url": "https://bitcoinops.org/en/topics/generic-signmessage/"
+    },
+    {
+      "topic": "Silent payments",
+      "source_url": "https://bitcoinops.org/en/topics/silent-payments/"
+    },
+    {
+      "topic": "Simple taproot channels",
+      "source_url": "https://bitcoinops.org/en/topics/simple-taproot-channels/"
+    },
+    {
+      "topic": "Simplicity",
+      "source_url": "https://bitcoinops.org/en/topics/simplicity/"
+    },
+    {
+      "topic": "Simplified commitments",
+      "source_url": "https://bitcoinops.org/en/topics/anchor-outputs/"
+    },
+    {
+      "topic": "Simplified multipath payments",
+      "source_url": "https://bitcoinops.org/en/topics/multipath-payments/"
+    },
+    {
+      "topic": "Soft fork activation",
+      "source_url": "https://bitcoinops.org/en/topics/soft-fork-activation/"
+    },
+    {
+      "topic": "Splicing",
+      "source_url": "https://bitcoinops.org/en/topics/splicing/"
+    },
+    {
+      "topic": "Spontaneous payments",
+      "source_url": "https://bitcoinops.org/en/topics/spontaneous-payments/"
+    },
+    {
+      "topic": "Statechains",
+      "source_url": "https://bitcoinops.org/en/topics/statechains/"
+    },
+    {
+      "topic": "Stateless invoices",
+      "source_url": "https://bitcoinops.org/en/topics/stateless-invoices/"
+    },
+    {
+      "topic": "Static channel backups",
+      "source_url": "https://bitcoinops.org/en/topics/static-channel-backups/"
+    },
+    {
+      "topic": "Stratum",
+      "source_url": "https://bitcoinops.org/en/topics/pooled-mining/"
+    },
+    {
+      "topic": "Stratum v2",
+      "source_url": "https://bitcoinops.org/en/topics/pooled-mining/"
+    },
+    {
+      "topic": "Stuckless payments",
+      "source_url": "https://bitcoinops.org/en/topics/redundant-overpayments/"
+    },
+    {
+      "topic": "Submarine swaps",
+      "source_url": "https://bitcoinops.org/en/topics/submarine-swaps/"
+    },
+    {
+      "topic": "Swap-in Potentiam (SIP)",
+      "source_url": "https://bitcoinops.org/en/topics/swap-in-potentiam/"
+    },
+    {
+      "topic": "symbll",
+      "source_url": "https://bitcoinops.org/en/topics/basic-bitcoin-lisp-language/"
+    },
+    {
+      "topic": "Taproot",
+      "source_url": "https://bitcoinops.org/en/topics/taproot/"
+    },
+    {
+      "topic": "Taproot Assets",
+      "source_url": "https://bitcoinops.org/en/topics/client-side-validation/"
+    },
+    {
+      "topic": "Tapscript",
+      "source_url": "https://bitcoinops.org/en/topics/tapscript/"
+    },
+    {
+      "topic": "Taro",
+      "source_url": "https://bitcoinops.org/en/topics/client-side-validation/"
+    },
+    {
+      "topic": "Testnet",
+      "source_url": "https://bitcoinops.org/en/topics/testnet/"
+    },
+    {
+      "topic": "Testnet3",
+      "source_url": "https://bitcoinops.org/en/topics/testnet/"
+    },
+    {
+      "topic": "Testnet4",
+      "source_url": "https://bitcoinops.org/en/topics/testnet/"
+    },
+    {
+      "topic": "Threshold signature",
+      "source_url": "https://bitcoinops.org/en/topics/threshold-signature/"
+    },
+    {
+      "topic": "Time warp",
+      "source_url": "https://bitcoinops.org/en/topics/time-warp/"
+    },
+    {
+      "topic": "Timelocks",
+      "source_url": "https://bitcoinops.org/en/topics/timelocks/"
+    },
+    {
+      "topic": "Timeout trees",
+      "source_url": "https://bitcoinops.org/en/topics/timeout-trees/"
+    },
+    {
+      "topic": "Topologically Restricted Until Confirmation (TRUC)",
+      "source_url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/"
+    },
+    {
+      "topic": "Tor",
+      "source_url": "https://bitcoinops.org/en/topics/anonymity-networks/"
+    },
+    {
+      "topic": "Trampoline payments",
+      "source_url": "https://bitcoinops.org/en/topics/trampoline-payments/"
+    },
+    {
+      "topic": "Transaction bloom filtering",
+      "source_url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/"
+    },
+    {
+      "topic": "Transaction origin privacy",
+      "source_url": "https://bitcoinops.org/en/topics/transaction-origin-privacy/"
+    },
+    {
+      "topic": "Transaction pinning",
+      "source_url": "https://bitcoinops.org/en/topics/transaction-pinning/"
+    },
+    {
+      "topic": "Transitory soft forks",
+      "source_url": "https://bitcoinops.org/en/topics/transitory-soft-forks/"
+    },
+    {
+      "topic": "Trimmed HTLC",
+      "source_url": "https://bitcoinops.org/en/topics/trimmed-htlc/"
+    },
+    {
+      "topic": "Two-Party ECDSA (2pECDSA)",
+      "source_url": "https://bitcoinops.org/en/topics/multisignature/"
+    },
+    {
+      "topic": "Unannounced channels",
+      "source_url": "https://bitcoinops.org/en/topics/unannounced-channels/"
+    },
+    {
+      "topic": "Uneconomical outputs",
+      "source_url": "https://bitcoinops.org/en/topics/uneconomical-outputs/"
+    },
+    {
+      "topic": "Utreexo",
+      "source_url": "https://bitcoinops.org/en/topics/utreexo/"
+    },
+    {
+      "topic": "V3 commitments",
+      "source_url": "https://bitcoinops.org/en/topics/v3-commitments/"
+    },
+    {
+      "topic": "Vaults",
+      "source_url": "https://bitcoinops.org/en/topics/vaults/"
+    },
+    {
+      "topic": "Version 2 P2P transport",
+      "source_url": "https://bitcoinops.org/en/topics/v2-p2p-transport/"
+    },
+    {
+      "topic": "Version 3 transaction relay",
+      "source_url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/"
+    },
+    {
+      "topic": "Wallet labels",
+      "source_url": "https://bitcoinops.org/en/topics/wallet-labels/"
+    },
+    {
+      "topic": "Watchtowers",
+      "source_url": "https://bitcoinops.org/en/topics/watchtowers/"
+    },
+    {
+      "topic": "Wumbo",
+      "source_url": "https://bitcoinops.org/en/topics/large-channels/"
+    },
+    {
+      "topic": "X-only public keys",
+      "source_url": "https://bitcoinops.org/en/topics/x-only-public-keys/"
+    },
+    {
+      "topic": "Zero-conf channels",
+      "source_url": "https://bitcoinops.org/en/topics/zero-conf-channels/"
+    },
+    {
+      "topic": "Zero-fee commitments",
+      "source_url": "https://bitcoinops.org/en/topics/v3-commitments/"
+    }
+  ],
+  "devphilosophy_topics": [
+    {
+      "topic": "About this book",
+      "source_url": "https://bitcoindevphilosophy.com/#readme"
+    },
+    {
+      "topic": "What to expect?",
+      "source_url": "https://bitcoindevphilosophy.com/#_what_to_expect"
+    },
+    {
+      "topic": "Who wrote this?",
+      "source_url": "https://bitcoindevphilosophy.com/#_who_wrote_this"
+    },
+    {
+      "topic": "How is this organized?",
+      "source_url": "https://bitcoindevphilosophy.com/#_how_is_this_organized"
+    },
+    {
+      "topic": "1. Decentralization",
+      "source_url": "https://bitcoindevphilosophy.com/#decentralization"
+    },
+    {
+      "topic": "1.1. Miner decentralization",
+      "source_url": "https://bitcoindevphilosophy.com/#minerdecentralization"
+    },
+    {
+      "topic": "1.2. Full node decentralization",
+      "source_url": "https://bitcoindevphilosophy.com/#fullnodedecentralization"
+    },
+    {
+      "topic": "1.3. Neutrality",
+      "source_url": "https://bitcoindevphilosophy.com/#neutrality"
+    },
+    {
+      "topic": "1.4. Grokking decentralization",
+      "source_url": "https://bitcoindevphilosophy.com/#_grokking_decentralization"
+    },
+    {
+      "topic": "1.5. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion"
+    },
+    {
+      "topic": "2. Trustlessness",
+      "source_url": "https://bitcoindevphilosophy.com/#trustlessness"
+    },
+    {
+      "topic": "2.1. Don\u2019t trust, verify",
+      "source_url": "https://bitcoindevphilosophy.com/#donttrustverify"
+    },
+    {
+      "topic": "2.2. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_2"
+    },
+    {
+      "topic": "3. Privacy",
+      "source_url": "https://bitcoindevphilosophy.com/#privacy"
+    },
+    {
+      "topic": "3.1. What does privacy mean?",
+      "source_url": "https://bitcoindevphilosophy.com/#_what_does_privacy_mean"
+    },
+    {
+      "topic": "3.2. Why is privacy important?",
+      "source_url": "https://bitcoindevphilosophy.com/#whyprivacyimportant"
+    },
+    {
+      "topic": "3.3. Pseudonymity",
+      "source_url": "https://bitcoindevphilosophy.com/#pseudonymity"
+    },
+    {
+      "topic": "3.4. Blockchain privacy",
+      "source_url": "https://bitcoindevphilosophy.com/#blockchainprivacy"
+    },
+    {
+      "topic": "3.5. Non-blockchain privacy",
+      "source_url": "https://bitcoindevphilosophy.com/#nonblockchainprivacy"
+    },
+    {
+      "topic": "3.6. Fungibility",
+      "source_url": "https://bitcoindevphilosophy.com/#fungibility"
+    },
+    {
+      "topic": "3.7. Privacy measures",
+      "source_url": "https://bitcoindevphilosophy.com/#privacymeasures"
+    },
+    {
+      "topic": "3.8. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_3"
+    },
+    {
+      "topic": "4. Finite supply",
+      "source_url": "https://bitcoindevphilosophy.com/#finitesupply"
+    },
+    {
+      "topic": "4.1. Block subsidy and transaction fees",
+      "source_url": "https://bitcoindevphilosophy.com/#_block_subsidy_and_transaction_fees"
+    },
+    {
+      "topic": "4.2. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_4"
+    },
+    {
+      "topic": "5. Upgrading",
+      "source_url": "https://bitcoindevphilosophy.com/#upgrading"
+    },
+    {
+      "topic": "5.1. Vocabulary",
+      "source_url": "https://bitcoindevphilosophy.com/#_vocabulary"
+    },
+    {
+      "topic": "5.2. Historic upgrades",
+      "source_url": "https://bitcoindevphilosophy.com/#historic-upgrades"
+    },
+    {
+      "topic": "5.2.1. Segwit upgrade",
+      "source_url": "https://bitcoindevphilosophy.com/#segwit-upgrade"
+    },
+    {
+      "topic": "5.2.2. Post-Segwit discussion",
+      "source_url": "https://bitcoindevphilosophy.com/#_post_segwit_discussion"
+    },
+    {
+      "topic": "5.2.3. Taproot upgrade - Speedy Trial",
+      "source_url": "https://bitcoindevphilosophy.com/#taproot-deployment"
+    },
+    {
+      "topic": "5.2.4. Future deployment mechanisms",
+      "source_url": "https://bitcoindevphilosophy.com/#_future_deployment_mechanisms"
+    },
+    {
+      "topic": "5.3. Risks",
+      "source_url": "https://bitcoindevphilosophy.com/#upgrading-risks"
+    },
+    {
+      "topic": "5.3.1. Costs of a split",
+      "source_url": "https://bitcoindevphilosophy.com/#_costs_of_a_split"
+    },
+    {
+      "topic": "5.4. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_5"
+    },
+    {
+      "topic": "6. Adversarial thinking",
+      "source_url": "https://bitcoindevphilosophy.com/#adversarialthinking"
+    },
+    {
+      "topic": "6.1. Not only for Bitcoin experts",
+      "source_url": "https://bitcoindevphilosophy.com/#_not_only_for_bitcoin_experts"
+    },
+    {
+      "topic": "6.2. Threats",
+      "source_url": "https://bitcoindevphilosophy.com/#threats"
+    },
+    {
+      "topic": "6.3. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_6"
+    },
+    {
+      "topic": "7. Open Source",
+      "source_url": "https://bitcoindevphilosophy.com/#opensource"
+    },
+    {
+      "topic": "7.1. Software maintenance",
+      "source_url": "https://bitcoindevphilosophy.com/#softwaremaintenance"
+    },
+    {
+      "topic": "7.2. Permissionless development",
+      "source_url": "https://bitcoindevphilosophy.com/#_permissionless_development"
+    },
+    {
+      "topic": "7.3. Pseudonymous development",
+      "source_url": "https://bitcoindevphilosophy.com/#_pseudonymous_development"
+    },
+    {
+      "topic": "7.4. Selection cryptography",
+      "source_url": "https://bitcoindevphilosophy.com/#selectioncryptography"
+    },
+    {
+      "topic": "7.5. Review",
+      "source_url": "https://bitcoindevphilosophy.com/#review"
+    },
+    {
+      "topic": "7.6. Funding",
+      "source_url": "https://bitcoindevphilosophy.com/#_funding"
+    },
+    {
+      "topic": "7.7. Culture shock",
+      "source_url": "https://bitcoindevphilosophy.com/#_culture_shock"
+    },
+    {
+      "topic": "7.8. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_7"
+    },
+    {
+      "topic": "8. Scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#scaling"
+    },
+    {
+      "topic": "8.1. History",
+      "source_url": "https://bitcoindevphilosophy.com/#_history"
+    },
+    {
+      "topic": "8.2. Scaling approaches",
+      "source_url": "https://bitcoindevphilosophy.com/#_scaling_approaches"
+    },
+    {
+      "topic": "8.2.1. Vertical scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#verticalscaling"
+    },
+    {
+      "topic": "8.2.2. Horizontal scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#_horizontal_scaling"
+    },
+    {
+      "topic": "8.2.3. Inward scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#_inward_scaling"
+    },
+    {
+      "topic": "8.2.4. Layered scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#layeredscaling"
+    },
+    {
+      "topic": "8.3. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_8"
+    },
+    {
+      "topic": "9. When shit hits the fan",
+      "source_url": "https://bitcoindevphilosophy.com/#whenshithitsthefan"
+    },
+    {
+      "topic": "9.1. Responsible disclosure",
+      "source_url": "https://bitcoindevphilosophy.com/#responsible-disclosure"
+    },
+    {
+      "topic": "9.2. Traumatic childhood",
+      "source_url": "https://bitcoindevphilosophy.com/#_traumatic_childhood"
+    },
+    {
+      "topic": "9.2.1. 2010-07-28: Spend anyone\u2019s coins (CVE-2010-5141)",
+      "source_url": "https://bitcoindevphilosophy.com/#cve-2010-5141"
+    },
+    {
+      "topic": "9.2.2. 2010-08-15 Combined output overflow (CVE-2010-5139)",
+      "source_url": "https://bitcoindevphilosophy.com/#combined-output-overflow"
+    },
+    {
+      "topic": "9.2.3. 2013-03-11 DB locks issue 0.7.2 - 0.8.0 (CVE-2013-3220)",
+      "source_url": "https://bitcoindevphilosophy.com/#march2013split"
+    },
+    {
+      "topic": "9.2.4. BIP66",
+      "source_url": "https://bitcoindevphilosophy.com/#bip66-splits"
+    },
+    {
+      "topic": "9.3. Conclusion",
+      "source_url": "https://bitcoindevphilosophy.com/#_conclusion_9"
+    },
+    {
+      "topic": "Appendix A: Discussion Questions",
+      "source_url": "https://bitcoindevphilosophy.com/#appendixdiscussion"
+    },
+    {
+      "topic": "A.1. Decentralization",
+      "source_url": "https://bitcoindevphilosophy.com/#_decentralization"
+    },
+    {
+      "topic": "A.2. Trustlessness",
+      "source_url": "https://bitcoindevphilosophy.com/#_trustlessness"
+    },
+    {
+      "topic": "A.3. Privacy",
+      "source_url": "https://bitcoindevphilosophy.com/#_privacy"
+    },
+    {
+      "topic": "A.4. Finite supply",
+      "source_url": "https://bitcoindevphilosophy.com/#_finite_supply"
+    },
+    {
+      "topic": "A.5. Upgrading",
+      "source_url": "https://bitcoindevphilosophy.com/#_upgrading"
+    },
+    {
+      "topic": "A.6. Adversarial thinking",
+      "source_url": "https://bitcoindevphilosophy.com/#_adversarial_thinking"
+    },
+    {
+      "topic": "A.7. Open source",
+      "source_url": "https://bitcoindevphilosophy.com/#_open_source"
+    },
+    {
+      "topic": "A.8. Scaling",
+      "source_url": "https://bitcoindevphilosophy.com/#_scaling"
+    },
+    {
+      "topic": "Appendix B: Feedback and contribution",
+      "source_url": "https://bitcoindevphilosophy.com/#appendixbuild"
+    },
+    {
+      "topic": "B.1. Build",
+      "source_url": "https://bitcoindevphilosophy.com/#_build"
+    },
+    {
+      "topic": "B.1.1. Manually using asciidoctor",
+      "source_url": "https://bitcoindevphilosophy.com/#_manually_using_asciidoctor"
+    },
+    {
+      "topic": "B.1.2. Using Gnu make",
+      "source_url": "https://bitcoindevphilosophy.com/#_using_gnu_make"
+    },
+    {
+      "topic": "B.1.3. Build a PDF",
+      "source_url": "https://bitcoindevphilosophy.com/#_build_a_pdf"
+    }
+  ]
+}

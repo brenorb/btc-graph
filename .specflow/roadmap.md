@@ -144,3 +144,45 @@ Exit criteria:
 - `npm test` passes.
 - `npm run check:links` passes.
 - `npm run build` passes.
+
+## Phase 11: Topic Specificity and Source Coverage Expansion
+Goal: process full topic indexes from requested external websites, add all graph-suitable missing concepts, and tighten resource precision with concise node descriptions.
+
+Deliverables:
+- Raw extraction artifacts for:
+  - `btctranscripts` topics
+  - `bitcoinops` topics
+  - `bitcoindevphilosophy` table-of-contents topics
+  - `opcodeexplained` opcode/script topics
+  - `covenants.info` proposal/use-case/extra topics
+- Curated keep/drop mapping over extracted topics with reasons and node mapping.
+- 22 additional concept nodes for missing high-signal topics (policy, Lightning extensions, custody, privacy, mining, and security philosophy).
+- Two-sentence-max descriptions on all newly added nodes.
+- Focused resource links per node (topic page/deep link, no broad landing pages) plus relevant Amazon books where useful.
+- Phase-specific tests enforcing required node IDs, prerequisite quality, concise descriptions, and resource precision.
+- Independent no-context review plus fix pass documented in `.specflow/phases/phase-11/`.
+
+Exit criteria:
+- `npm run build:data` passes.
+- `npm test` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.
+
+## Phase 11: Layout, Accessibility, and Foundations Math Expansion
+Goal: resolve remaining graph usability bugs (layout/label readability/category bulk filtering/dark-mode contrast) and add missing foundational math/cryptography prerequisites for Bitcoin learners using the project source catalog.
+
+Deliverables:
+- Graph layout tuning for stronger vertical hierarchy and reduced horizontal sprawl.
+- Label readability improvements to avoid dense overlap and improve contrast in both themes.
+- Replace label bulk controls with category bulk controls (`Select all categories` / `Deselect all categories`).
+- Dark-mode text readability fixes for graph labels and resource links.
+- New foundational nodes for modular arithmetic, finite fields, Fermat's little theorem, discrete logarithms, elliptic-curve cryptography, secp256k1, and signature primitives.
+- Phase-specific tests for UI helpers/config and required foundational node IDs/prerequisites.
+- Independent no-context review and fix-pass docs in `.specflow/phases/phase-11/`.
+
+Exit criteria:
+- `npm test` passes.
+- `npm run build:data` passes.
+- `npm run check:links` passes.
+- `npm run build` passes.
+- Site is deployed on GitHub Pages with phase-11 updates.

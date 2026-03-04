@@ -1,0 +1,658 @@
+[
+  {
+    "topic": "2025",
+    "source_url": "https://btctranscripts.com/search?filter_tags=2025"
+  },
+  {
+    "topic": "Adaptor signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=adaptor-signatures"
+  },
+  {
+    "topic": "altcoins",
+    "source_url": "https://btctranscripts.com/search?filter_tags=altcoins"
+  },
+  {
+    "topic": "Anchor outputs",
+    "source_url": "https://btctranscripts.com/search?filter_tags=anchor-outputs"
+  },
+  {
+    "topic": "Anonymity networks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=anonymity-networks"
+  },
+  {
+    "topic": "Ark",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ark"
+  },
+  {
+    "topic": "asmap",
+    "source_url": "https://btctranscripts.com/search?filter_tags=asmap"
+  },
+  {
+    "topic": "AssumeUTXO",
+    "source_url": "https://btctranscripts.com/search?filter_tags=assumeutxo"
+  },
+  {
+    "topic": "atlanta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=atlanta"
+  },
+  {
+    "topic": "Atomic multipath payments (AMPs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=amp"
+  },
+  {
+    "topic": "Bandwidth Reduction (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bandwidth-reduction"
+  },
+  {
+    "topic": "batch-validation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=batch-validation"
+  },
+  {
+    "topic": "BDK",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bdk"
+  },
+  {
+    "topic": "bdk-floresta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bdk-floresta"
+  },
+  {
+    "topic": "Bech32(m)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bech32"
+  },
+  {
+    "topic": "benchmarking",
+    "source_url": "https://btctranscripts.com/search?filter_tags=benchmarking"
+  },
+  {
+    "topic": "bitcoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin"
+  },
+  {
+    "topic": "Bitcoin development",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-development"
+  },
+  {
+    "topic": "Bitcoin wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-wallet"
+  },
+  {
+    "topic": "bitcoin-core",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoin-core"
+  },
+  {
+    "topic": "bitcoinconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoinconf"
+  },
+  {
+    "topic": "bitcoinconference",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoinconference"
+  },
+  {
+    "topic": "bitcoindev",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoindev"
+  },
+  {
+    "topic": "bitcoineducation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bitcoineducation"
+  },
+  {
+    "topic": "BLS signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bls-signatures"
+  },
+  {
+    "topic": "btcplusplus",
+    "source_url": "https://btctranscripts.com/search?filter_tags=btcplusplus"
+  },
+  {
+    "topic": "build-system",
+    "source_url": "https://btctranscripts.com/search?filter_tags=build-system"
+  },
+  {
+    "topic": "build-systems",
+    "source_url": "https://btctranscripts.com/search?filter_tags=build-systems"
+  },
+  {
+    "topic": "c-lightning",
+    "source_url": "https://btctranscripts.com/search?filter_tags=c-lightning"
+  },
+  {
+    "topic": "career",
+    "source_url": "https://btctranscripts.com/search?filter_tags=career"
+  },
+  {
+    "topic": "Channel factories",
+    "source_url": "https://btctranscripts.com/search?filter_tags=channel-factories"
+  },
+  {
+    "topic": "Child pays for parent (CPFP)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cpfp"
+  },
+  {
+    "topic": "Client-side validation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=client-side-validation"
+  },
+  {
+    "topic": "Cluster mempool",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cluster-mempool"
+  },
+  {
+    "topic": "cmake",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cmake"
+  },
+  {
+    "topic": "Codex32",
+    "source_url": "https://btctranscripts.com/search?filter_tags=codex32"
+  },
+  {
+    "topic": "Coin selection",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coin-selection"
+  },
+  {
+    "topic": "Coinjoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coinjoin"
+  },
+  {
+    "topic": "Coinswap",
+    "source_url": "https://btctranscripts.com/search?filter_tags=coinswap"
+  },
+  {
+    "topic": "Compact block filters",
+    "source_url": "https://btctranscripts.com/search?filter_tags=compact-block-filters"
+  },
+  {
+    "topic": "Compact block relay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=compact-block-relay"
+  },
+  {
+    "topic": "conference",
+    "source_url": "https://btctranscripts.com/search?filter_tags=conference"
+  },
+  {
+    "topic": "Consensus cleanup soft fork",
+    "source_url": "https://btctranscripts.com/search?filter_tags=consensus-cleanup"
+  },
+  {
+    "topic": "Consensus Enforcement (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=consensus-enforcement"
+  },
+  {
+    "topic": "Contract Protocols (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=contract-protocols"
+  },
+  {
+    "topic": "Covenants",
+    "source_url": "https://btctranscripts.com/search?filter_tags=covenants"
+  },
+  {
+    "topic": "CPFP carve out",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cpfp-carve-out"
+  },
+  {
+    "topic": "Cross-input signature aggregation (CISA)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cisa"
+  },
+  {
+    "topic": "cryptography",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cryptography"
+  },
+  {
+    "topic": "CVE-2018-17144",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cve-2018-17144"
+  },
+  {
+    "topic": "CVEs (various)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cves"
+  },
+  {
+    "topic": "cypherpunks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=cypherpunks"
+  },
+  {
+    "topic": "Dandelion",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dandelion"
+  },
+  {
+    "topic": "devconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=devconf"
+  },
+  {
+    "topic": "developer",
+    "source_url": "https://btctranscripts.com/search?filter_tags=developer"
+  },
+  {
+    "topic": "Developer Tools (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=developer-tools"
+  },
+  {
+    "topic": "Discreet Log Contracts (DLCs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dlc"
+  },
+  {
+    "topic": "Dual funding",
+    "source_url": "https://btctranscripts.com/search?filter_tags=dual-funding"
+  },
+  {
+    "topic": "Ecash",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ecash"
+  },
+  {
+    "topic": "Eclipse attacks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=eclipse-attacks"
+  },
+  {
+    "topic": "Eltoo",
+    "source_url": "https://btctranscripts.com/search?filter_tags=eltoo"
+  },
+  {
+    "topic": "Ephemeral anchors",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ephemeral-anchors"
+  },
+  {
+    "topic": "Erlay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=erlay"
+  },
+  {
+    "topic": "ethereum",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ethereum"
+  },
+  {
+    "topic": "Fee Management (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=fee-management"
+  },
+  {
+    "topic": "Floresta",
+    "source_url": "https://btctranscripts.com/search?filter_tags=floresta"
+  },
+  {
+    "topic": "fuzz-testing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=fuzz-testing"
+  },
+  {
+    "topic": "Generic signmessage",
+    "source_url": "https://btctranscripts.com/search?filter_tags=generic-signmessage"
+  },
+  {
+    "topic": "gui",
+    "source_url": "https://btctranscripts.com/search?filter_tags=gui"
+  },
+  {
+    "topic": "Hardware wallet interface (HWI)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hwi"
+  },
+  {
+    "topic": "hardware-wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hardware-wallet"
+  },
+  {
+    "topic": "Hash Time Locked Contract (HTLC)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=htlc"
+  },
+  {
+    "topic": "HD key generation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=bip32"
+  },
+  {
+    "topic": "Hold invoices",
+    "source_url": "https://btctranscripts.com/search?filter_tags=hold-invoices"
+  },
+  {
+    "topic": "ibd",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ibd"
+  },
+  {
+    "topic": "incentives",
+    "source_url": "https://btctranscripts.com/search?filter_tags=incentives"
+  },
+  {
+    "topic": "libbitcoinkernel",
+    "source_url": "https://btctranscripts.com/search?filter_tags=libbitcoinkernel"
+  },
+  {
+    "topic": "libsecp256k1",
+    "source_url": "https://btctranscripts.com/search?filter_tags=libsecp256k1"
+  },
+  {
+    "topic": "Lightning Network (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lightning"
+  },
+  {
+    "topic": "Lightweight Client Support (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lightweight-client"
+  },
+  {
+    "topic": "lnd",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lnd"
+  },
+  {
+    "topic": "LNURL",
+    "source_url": "https://btctranscripts.com/search?filter_tags=lnurl"
+  },
+  {
+    "topic": "MAST",
+    "source_url": "https://btctranscripts.com/search?filter_tags=mast"
+  },
+  {
+    "topic": "merkle",
+    "source_url": "https://btctranscripts.com/search?filter_tags=merkle"
+  },
+  {
+    "topic": "Mining (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=mining"
+  },
+  {
+    "topic": "Miniscript",
+    "source_url": "https://btctranscripts.com/search?filter_tags=miniscript"
+  },
+  {
+    "topic": "Minisketch",
+    "source_url": "https://btctranscripts.com/search?filter_tags=minisketch"
+  },
+  {
+    "topic": "multiparty channel",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multiparty-channel"
+  },
+  {
+    "topic": "Multipath payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multipath-payments"
+  },
+  {
+    "topic": "multiprocess",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multiprocess"
+  },
+  {
+    "topic": "MuSig",
+    "source_url": "https://btctranscripts.com/search?filter_tags=musig"
+  },
+  {
+    "topic": "niftynei",
+    "source_url": "https://btctranscripts.com/search?filter_tags=niftynei"
+  },
+  {
+    "topic": "Offers",
+    "source_url": "https://btctranscripts.com/search?filter_tags=offers"
+  },
+  {
+    "topic": "OP_CAT",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-cat"
+  },
+  {
+    "topic": "OP_CHECKSIGFROMSTACK",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-checksigfromstack"
+  },
+  {
+    "topic": "OP_CHECKTEMPLATEVERIFY",
+    "source_url": "https://btctranscripts.com/search?filter_tags=op-checktemplateverify"
+  },
+  {
+    "topic": "Output linking",
+    "source_url": "https://btctranscripts.com/search?filter_tags=output-linking"
+  },
+  {
+    "topic": "Output script descriptors",
+    "source_url": "https://btctranscripts.com/search?filter_tags=descriptors"
+  },
+  {
+    "topic": "P2P Network Protocol (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=p2p"
+  },
+  {
+    "topic": "Package relay",
+    "source_url": "https://btctranscripts.com/search?filter_tags=package-relay"
+  },
+  {
+    "topic": "Partially signed bitcoin transactions",
+    "source_url": "https://btctranscripts.com/search?filter_tags=psbt"
+  },
+  {
+    "topic": "pathfinding",
+    "source_url": "https://btctranscripts.com/search?filter_tags=pathfinding"
+  },
+  {
+    "topic": "Pay-to-Contract (P2C) protocols",
+    "source_url": "https://btctranscripts.com/search?filter_tags=p2c"
+  },
+  {
+    "topic": "Payjoin",
+    "source_url": "https://btctranscripts.com/search?filter_tags=payjoin"
+  },
+  {
+    "topic": "Payment batching",
+    "source_url": "https://btctranscripts.com/search?filter_tags=payment-batching"
+  },
+  {
+    "topic": "Point Time Locked Contracts (PTLCs)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ptlc"
+  },
+  {
+    "topic": "Pooled mining",
+    "source_url": "https://btctranscripts.com/search?filter_tags=pooled-mining"
+  },
+  {
+    "topic": "privacy",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy"
+  },
+  {
+    "topic": "Privacy Enhancements (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy-enhancements"
+  },
+  {
+    "topic": "Privacy Problems (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=privacy-problems"
+  },
+  {
+    "topic": "Proof of payment",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-of-payment"
+  },
+  {
+    "topic": "proof-of-stake",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-of-stake"
+  },
+  {
+    "topic": "proof-systems",
+    "source_url": "https://btctranscripts.com/search?filter_tags=proof-systems"
+  },
+  {
+    "topic": "quantum",
+    "source_url": "https://btctranscripts.com/search?filter_tags=quantum"
+  },
+  {
+    "topic": "Quantum resistance",
+    "source_url": "https://btctranscripts.com/search?filter_tags=quantum-resistance"
+  },
+  {
+    "topic": "regulation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=regulation"
+  },
+  {
+    "topic": "Rendez-vous routing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rv-routing"
+  },
+  {
+    "topic": "Replace-by-fee (RBF)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rbf"
+  },
+  {
+    "topic": "Reproducible builds",
+    "source_url": "https://btctranscripts.com/search?filter_tags=reproducible-builds"
+  },
+  {
+    "topic": "research",
+    "source_url": "https://btctranscripts.com/search?filter_tags=research"
+  },
+  {
+    "topic": "routing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=routing"
+  },
+  {
+    "topic": "rpc",
+    "source_url": "https://btctranscripts.com/search?filter_tags=rpc"
+  },
+  {
+    "topic": "scalability",
+    "source_url": "https://btctranscripts.com/search?filter_tags=scalability"
+  },
+  {
+    "topic": "Schnorr signatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=schnorr-signatures"
+  },
+  {
+    "topic": "Scriptless multisignatures",
+    "source_url": "https://btctranscripts.com/search?filter_tags=multisignature"
+  },
+  {
+    "topic": "Scripts and Addresses (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=scripts-addresses"
+  },
+  {
+    "topic": "security",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security"
+  },
+  {
+    "topic": "Security Enhancements (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security-enhancements"
+  },
+  {
+    "topic": "Security Problems (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=security-problems"
+  },
+  {
+    "topic": "Segregated witness",
+    "source_url": "https://btctranscripts.com/search?filter_tags=segwit"
+  },
+  {
+    "topic": "Sidechains",
+    "source_url": "https://btctranscripts.com/search?filter_tags=sidechains"
+  },
+  {
+    "topic": "SIGHASH_ANYPREVOUT",
+    "source_url": "https://btctranscripts.com/search?filter_tags=sighash-anyprevout"
+  },
+  {
+    "topic": "signature-aggregation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=signature-aggregation"
+  },
+  {
+    "topic": "Signet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=signet"
+  },
+  {
+    "topic": "Silent payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=silent-payments"
+  },
+  {
+    "topic": "Simple taproot channels",
+    "source_url": "https://btctranscripts.com/search?filter_tags=simple-taproot-channels"
+  },
+  {
+    "topic": "Simplicity",
+    "source_url": "https://btctranscripts.com/search?filter_tags=simplicity"
+  },
+  {
+    "topic": "soft fork",
+    "source_url": "https://btctranscripts.com/search?filter_tags=soft-fork"
+  },
+  {
+    "topic": "Soft fork activation",
+    "source_url": "https://btctranscripts.com/search?filter_tags=soft-fork-activation"
+  },
+  {
+    "topic": "Splicing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=splicing"
+  },
+  {
+    "topic": "Statechains",
+    "source_url": "https://btctranscripts.com/search?filter_tags=statechains"
+  },
+  {
+    "topic": "stratum-v2",
+    "source_url": "https://btctranscripts.com/search?filter_tags=stratum-v2"
+  },
+  {
+    "topic": "Submarine swaps",
+    "source_url": "https://btctranscripts.com/search?filter_tags=submarine-swaps"
+  },
+  {
+    "topic": "tabconf",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tabconf"
+  },
+  {
+    "topic": "tabconf 7",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tabconf-7"
+  },
+  {
+    "topic": "Taproot",
+    "source_url": "https://btctranscripts.com/search?filter_tags=taproot"
+  },
+  {
+    "topic": "Tapscript",
+    "source_url": "https://btctranscripts.com/search?filter_tags=tapscript"
+  },
+  {
+    "topic": "technology",
+    "source_url": "https://btctranscripts.com/search?filter_tags=technology"
+  },
+  {
+    "topic": "testing",
+    "source_url": "https://btctranscripts.com/search?filter_tags=testing"
+  },
+  {
+    "topic": "Threshold signature",
+    "source_url": "https://btctranscripts.com/search?filter_tags=threshold-signature"
+  },
+  {
+    "topic": "Timelocks",
+    "source_url": "https://btctranscripts.com/search?filter_tags=timelocks"
+  },
+  {
+    "topic": "topology",
+    "source_url": "https://btctranscripts.com/search?filter_tags=topology"
+  },
+  {
+    "topic": "Trampoline payments",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trampoline-payments"
+  },
+  {
+    "topic": "Transaction pinning",
+    "source_url": "https://btctranscripts.com/search?filter_tags=transaction-pinning"
+  },
+  {
+    "topic": "Transaction Relay Policy (Miscellaneous)",
+    "source_url": "https://btctranscripts.com/search?filter_tags=transaction-relay-policy"
+  },
+  {
+    "topic": "Trimmed HTLC",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trimmed-htlc"
+  },
+  {
+    "topic": "trustless wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=trustless-wallet"
+  },
+  {
+    "topic": "Utreexo",
+    "source_url": "https://btctranscripts.com/search?filter_tags=utreexo"
+  },
+  {
+    "topic": "ux",
+    "source_url": "https://btctranscripts.com/search?filter_tags=ux"
+  },
+  {
+    "topic": "Vaults",
+    "source_url": "https://btctranscripts.com/search?filter_tags=vaults"
+  },
+  {
+    "topic": "Version 2 P2P transport",
+    "source_url": "https://btctranscripts.com/search?filter_tags=v2-p2p-transport"
+  },
+  {
+    "topic": "wallet",
+    "source_url": "https://btctranscripts.com/search?filter_tags=wallet"
+  },
+  {
+    "topic": "Watchtowers",
+    "source_url": "https://btctranscripts.com/search?filter_tags=watchtowers"
+  },
+  {
+    "topic": "Zero-conf channels",
+    "source_url": "https://btctranscripts.com/search?filter_tags=zero-conf-channels"
+  }
+]
