@@ -1,0 +1,39 @@
+{
+  "id": "custody.musig2-descriptors",
+  "title": "MuSig2 Descriptor Workflows",
+  "description": "How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.",
+  "category": "Self-Custody",
+  "prerequisites": [
+    "custody.multisig",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 327: MuSig2",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki",
+      "notes": "Canonical MuSig2 key-aggregation and signing specification."
+    },
+    {
+      "type": "article",
+      "title": "BIP 380: Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+      "notes": "Descriptor format needed to express advanced script/key policies."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "Wallet-side tracking model for descriptor-driven outputs."
+    }
+  ],
+  "estimatedTime": "90m",
+  "tags": [
+    "self-custody",
+    "multisig"
+  ],
+  "aliases": [
+    "musig2",
+    "aggregated multisig"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "protocol.csv-bip112",
+  "title": "CHECKSEQUENCEVERIFY (BIP 112)",
+  "description": "Script opcode that enforces relative locktime conditions using sequence-based spending constraints.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 112: OP_CHECKSEQUENCEVERIFY",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki",
+      "notes": "Canonical CSV specification and design intent."
+    },
+    {
+      "type": "article",
+      "title": "BIP 68: Relative lock-time semantics",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki",
+      "notes": "Consensus-level relative locktime interpretation used by CSV."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Contracts",
+      "url": "https://developer.bitcoin.org/devguide/contracts.html",
+      "notes": "Practical contract composition patterns using timelock opcodes."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "script",
+    "timelocks"
+  ],
+  "aliases": [
+    "csv",
+    "bip112"
+  ]
+}

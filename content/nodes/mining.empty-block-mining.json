@@ -1,0 +1,38 @@
+{
+  "id": "mining.empty-block-mining",
+  "title": "Empty-Block Mining Strategy",
+  "description": "Why miners occasionally produce low-fee or empty blocks and how this impacts network fee dynamics.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.block-template-selection"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Baseline template construction and block assembly workflow."
+    },
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Mining",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "notes": "Economic and operational incentives in block production."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Fee Sniping",
+      "url": "https://bitcoinops.org/en/topics/fee-sniping/",
+      "notes": "Related incentive analysis for short-horizon block template strategies."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "mining",
+    "fees"
+  ],
+  "aliases": [
+    "empty blocks",
+    "template lag strategy"
+  ]
+}

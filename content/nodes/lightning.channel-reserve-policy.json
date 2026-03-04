@@ -1,0 +1,38 @@
+{
+  "id": "lightning.channel-reserve-policy",
+  "title": "Channel Reserve and Dust Limits",
+  "description": "Channel-level reserve and dust constraints that preserve safety margins and spendability under fee pressure.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.payment-channels"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 02: Peer Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
+      "notes": "Defines reserve constraints and channel parameter negotiation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Lightning Liquidity",
+      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
+      "notes": "Operational consequences of reserve constraints for users."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anchor Outputs",
+      "url": "https://bitcoinops.org/en/topics/anchor-outputs/",
+      "notes": "Modern channel commitment designs and fee-management context."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "lightning",
+    "liquidity"
+  ],
+  "aliases": [
+    "channel reserve",
+    "lightning dust limits"
+  ]
+}

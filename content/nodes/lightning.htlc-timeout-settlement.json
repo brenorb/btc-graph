@@ -1,0 +1,38 @@
+{
+  "id": "lightning.htlc-timeout-settlement",
+  "title": "HTLC Timeout Settlement Paths",
+  "description": "On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.htlc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 03: Transactions and Channel States",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+      "notes": "HTLC-success and HTLC-timeout transaction constructions."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 05: On-chain Handling",
+      "url": "https://github.com/lightning/bolts/blob/master/05-onchain.md",
+      "notes": "Required timing and watch behavior for channel safety."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Contracts",
+      "url": "https://developer.bitcoin.org/devguide/contracts.html",
+      "notes": "Base script and timeout primitives used by HTLC logic."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "lightning",
+    "htlc"
+  ],
+  "aliases": [
+    "htlc timeout flow",
+    "timeout settlement"
+  ]
+}

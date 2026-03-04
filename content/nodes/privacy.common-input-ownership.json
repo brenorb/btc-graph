@@ -1,0 +1,38 @@
+{
+  "id": "privacy.common-input-ownership",
+  "title": "Common-Input Ownership Heuristic",
+  "description": "Heuristic that clusters addresses by assuming inputs in one transaction are controlled by the same entity.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.chain-analysis-heuristics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Linking",
+      "url": "https://bitcoinops.org/en/topics/output-linking/",
+      "notes": "Covers clustering and transaction-linking techniques."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy Resources",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Survey of practical privacy leakage vectors and mitigations."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Wallet behavior patterns that can reinforce or reduce clustering."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "privacy",
+    "chain analysis"
+  ],
+  "aliases": [
+    "CIOH",
+    "input clustering"
+  ]
+}

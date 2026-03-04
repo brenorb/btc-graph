@@ -1,0 +1,38 @@
+{
+  "id": "protocol.cltv-bip65",
+  "title": "CHECKLOCKTIMEVERIFY (BIP 65)",
+  "description": "Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 65: OP_CHECKLOCKTIMEVERIFY",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki",
+      "notes": "Canonical CLTV specification and activation details."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Contracts",
+      "url": "https://developer.bitcoin.org/devguide/contracts.html",
+      "notes": "Examples of locktime-driven script constructions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Changes",
+      "url": "https://bitcoincore.academy/consensus-changes.html",
+      "notes": "Context on softfork deployment mechanics for opcode upgrades."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "script",
+    "timelocks"
+  ],
+  "aliases": [
+    "cltv",
+    "bip65"
+  ]
+}

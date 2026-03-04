@@ -1,0 +1,38 @@
+{
+  "id": "ops.peer-eviction-protection",
+  "title": "Peer Eviction Protection",
+  "description": "Inbound and outbound peer eviction logic designed to retain high-value peers and resist DoS/eclipsing behavior.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.peer-discovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: P2P Attacks",
+      "url": "https://bitcoincore.academy/p2p-attacks.html",
+      "notes": "Threat model for eclipse and connection-layer abuse."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Connection behavior and message-layer assumptions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin P2P Networking Reference",
+      "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
+      "notes": "Message-layer and peer-behavior reference context for connection protection."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "node ops",
+    "security"
+  ],
+  "aliases": [
+    "peer eviction",
+    "connection hardening"
+  ]
+}

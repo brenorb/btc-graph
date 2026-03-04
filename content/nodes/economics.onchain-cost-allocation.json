@@ -1,0 +1,38 @@
+{
+  "id": "economics.onchain-cost-allocation",
+  "title": "On-Chain Cost Allocation",
+  "description": "Frameworks for allocating shared transaction costs across recipients, channels, and operational workflows.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.transaction-batching-economics"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "Cost and privacy impacts of input/output selection policy."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Fee Estimation Resources",
+      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+      "notes": "Fee-market context used in practical cost allocation decisions."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction-size and fee-accounting primitives used in shared-cost models."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "fees"
+  ],
+  "aliases": [
+    "cost attribution",
+    "shared fee allocation"
+  ]
+}

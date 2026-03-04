@@ -1,0 +1,38 @@
+{
+  "id": "lightning.revocation-penalty-keys",
+  "title": "Revocation and Penalty Keys",
+  "description": "Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.",
+  "category": "Lightning",
+  "prerequisites": [
+    "lightning.commitment-transactions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 03: Transactions and Channel States",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+      "notes": "Defines commitment and revocation key derivation semantics."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 05: On-chain Handling",
+      "url": "https://github.com/lightning/bolts/blob/master/05-onchain.md",
+      "notes": "Penalty-path behavior when outdated states are broadcast."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Pinning Attacks",
+      "url": "https://bitcoincore.academy/pinning-attacks.html",
+      "notes": "Fee-pinning context that affects practical penalty enforcement."
+    }
+  ],
+  "estimatedTime": "85m",
+  "tags": [
+    "lightning",
+    "security"
+  ],
+  "aliases": [
+    "revocation keys",
+    "penalty transactions"
+  ]
+}

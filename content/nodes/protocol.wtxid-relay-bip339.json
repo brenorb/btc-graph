@@ -1,0 +1,38 @@
+{
+  "id": "protocol.wtxid-relay-bip339",
+  "title": "WTXID Relay (BIP 339)",
+  "description": "Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.transaction-relay-inv-getdata"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 339: WTXID-based transaction relay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0339.mediawiki",
+      "notes": "Specification for wtxid relay negotiation and behavior."
+    },
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Introduces witness data and witness transaction identifiers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Transaction Tracking",
+      "url": "https://bitcoincore.academy/transaction-tracking.html",
+      "notes": "How nodes track transaction identifiers and relay state."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "p2p",
+    "relay"
+  ],
+  "aliases": [
+    "bip339",
+    "witness txid relay"
+  ]
+}

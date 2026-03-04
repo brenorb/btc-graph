@@ -1,0 +1,37 @@
+{
+  "id": "dev.fundrawtransaction-rpc",
+  "title": "fundrawtransaction RPC",
+  "description": "RPC for coin selection and fee funding of partially constructed transactions.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: fundrawtransaction",
+      "url": "https://developer.bitcoin.org/reference/rpc/fundrawtransaction.html",
+      "notes": "Reference behavior for automatic input and fee selection."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html",
+      "notes": "Wallet architecture context for transaction funding workflows."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "User-facing implications of automated funding decisions."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "rpc",
+    "wallets"
+  ],
+  "aliases": [
+    "transaction funding rpc"
+  ]
+}

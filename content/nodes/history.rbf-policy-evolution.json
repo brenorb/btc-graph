@@ -1,0 +1,38 @@
+{
+  "id": "history.rbf-policy-evolution",
+  "title": "RBF Policy Evolution",
+  "description": "Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.",
+  "category": "History",
+  "prerequisites": [
+    "protocol.rbf"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 125: Opt-in Full Replace-by-Fee Signaling",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki",
+      "notes": "Canonical specification for modern opt-in RBF policy."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Replace-by-Fee",
+      "url": "https://bitcoinops.org/en/topics/replace-by-fee/",
+      "notes": "Historical timeline and implementation-policy changes."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin History Resources",
+      "url": "https://www.lopp.net/bitcoin-information/history.html",
+      "notes": "Broader historical context for fee-management policy debates."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "history",
+    "policy"
+  ],
+  "aliases": [
+    "rbf history",
+    "fee bumping policy evolution"
+  ]
+}

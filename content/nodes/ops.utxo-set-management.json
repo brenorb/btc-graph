@@ -1,0 +1,38 @@
+{
+  "id": "ops.utxo-set-management",
+  "title": "UTXO Set Management",
+  "description": "Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "protocol.utxo-model"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Bootstrapping",
+      "url": "https://bitcoincore.academy/bootstrapping.html",
+      "notes": "Chainstate handling and sync implications for UTXO management."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Pruned and archival operating tradeoffs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: AssumeUTXO",
+      "url": "https://bitcoinops.org/en/topics/assumeutxo/",
+      "notes": "Operational shortcuts and validation staging for chainstate setup."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "node ops",
+    "utxo"
+  ],
+  "aliases": [
+    "chainstate operations",
+    "utxo set size"
+  ]
+}

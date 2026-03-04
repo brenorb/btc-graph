@@ -1,0 +1,38 @@
+{
+  "id": "privacy.change-avoidance",
+  "title": "Change Avoidance Strategies",
+  "description": "Wallet spending techniques that minimize change output creation to reduce linkage and future privacy leakage.",
+  "category": "Privacy",
+  "prerequisites": [
+    "privacy.change-detection"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Design-level rationale for reducing deterministic change behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "Algorithm tradeoffs for privacy, fees, and UTXO control."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Payjoin",
+      "url": "https://bitcoinops.org/en/topics/payjoin/",
+      "notes": "Collaborative transaction patterns that reduce heuristic certainty."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "privacy",
+    "wallet behavior"
+  ],
+  "aliases": [
+    "change minimization",
+    "change suppression"
+  ]
+}

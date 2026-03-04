@@ -1,0 +1,38 @@
+{
+  "id": "protocol.dust-policy",
+  "title": "Dust Policy",
+  "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Transaction structure and relay-policy framing for tiny outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Policy admission context relevant to dust-like outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Wallet-level consequences of creating uneconomical outputs."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "policy",
+    "fees"
+  ],
+  "aliases": [
+    "dust outputs",
+    "uneconomical outputs"
+  ]
+}

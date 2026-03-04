@@ -1,0 +1,37 @@
+{
+  "id": "dev.testmempoolaccept-rpc",
+  "title": "testmempoolaccept RPC",
+  "description": "RPC workflow to pre-check transaction acceptance against local mempool and policy rules.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: testmempoolaccept",
+      "url": "https://developer.bitcoin.org/reference/rpc/testmempoolaccept.html",
+      "notes": "Official RPC reference and return fields."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Admission and replacement context behind acceptance results."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Package Relay",
+      "url": "https://bitcoinops.org/en/topics/package-relay/",
+      "notes": "Why package-level checks matter for policy simulation."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "rpc",
+    "mempool"
+  ],
+  "aliases": [
+    "preflight mempool check"
+  ]
+}

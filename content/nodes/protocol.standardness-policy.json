@@ -1,0 +1,38 @@
+{
+  "id": "protocol.standardness-policy",
+  "title": "Standardness Policy",
+  "description": "Node relay and mempool policy rules that constrain which valid transactions are considered standard.",
+  "category": "Protocol",
+  "prerequisites": [
+    "ops.mempool-policy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Policy-level transaction relay constraints versus consensus validity."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "How standardness rules affect mempool admission and relay."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Hardcoded Consensus Values",
+      "url": "https://bitcoincore.academy/hardcoded-consensus-values.html",
+      "notes": "Useful contrast between immutable consensus limits and node policy."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "policy",
+    "mempool"
+  ],
+  "aliases": [
+    "standard tx policy",
+    "relay standardness"
+  ]
+}

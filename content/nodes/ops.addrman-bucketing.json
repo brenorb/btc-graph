@@ -1,0 +1,38 @@
+{
+  "id": "ops.addrman-bucketing",
+  "title": "AddrMan Bucketing",
+  "description": "Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.",
+  "category": "Node Operations",
+  "prerequisites": [
+    "ops.peer-discovery"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: AddrMan",
+      "url": "https://bitcoincore.academy/addrman.html",
+      "notes": "Detailed explanation of address manager internals."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "P2P topology and peer exchange background."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anonymity Networks",
+      "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+      "notes": "Connectivity-hardening context for peer-selection strategy."
+    }
+  ],
+  "estimatedTime": "65m",
+  "tags": [
+    "node ops",
+    "networking"
+  ],
+  "aliases": [
+    "addrman",
+    "peer bucketing"
+  ]
+}

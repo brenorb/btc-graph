@@ -1,0 +1,38 @@
+{
+  "id": "protocol.sequence-locks-bip68",
+  "title": "Sequence Locks (BIP 68)",
+  "description": "Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.",
+  "category": "Protocol",
+  "prerequisites": [
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 68: Relative lock-time using consensus-enforced sequence numbers",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki",
+      "notes": "Specification for sequence-lock based relative timelocks."
+    },
+    {
+      "type": "article",
+      "title": "BIP 113: Median time-past lock-point endpoint",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki",
+      "notes": "Defines time-evaluation behavior used with sequence locks."
+    },
+    {
+      "type": "article",
+      "title": "Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Operational transaction fields and locktime context."
+    }
+  ],
+  "estimatedTime": "80m",
+  "tags": [
+    "timelocks",
+    "consensus"
+  ],
+  "aliases": [
+    "relative timelocks",
+    "bip68"
+  ]
+}

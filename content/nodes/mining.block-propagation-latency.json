@@ -1,0 +1,38 @@
+{
+  "id": "mining.block-propagation-latency",
+  "title": "Block Propagation Latency",
+  "description": "How network propagation speed affects stale risk, template quality, and mining profitability.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.stale-blocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Block Relay",
+      "url": "https://bitcoincore.academy/block-relay.html",
+      "notes": "Relay mechanisms and tradeoffs in block dissemination."
+    },
+    {
+      "type": "article",
+      "title": "BIP 152: Compact Block Relay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki",
+      "notes": "Bandwidth and latency optimization for block propagation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Compact Block Relay",
+      "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
+      "notes": "Operational updates and implementation insights."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "mining",
+    "networking"
+  ],
+  "aliases": [
+    "propagation delay",
+    "relay latency"
+  ]
+}

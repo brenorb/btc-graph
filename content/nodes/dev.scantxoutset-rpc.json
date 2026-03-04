@@ -1,0 +1,38 @@
+{
+  "id": "dev.scantxoutset-rpc",
+  "title": "scantxoutset RPC",
+  "description": "RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.",
+  "category": "Development",
+  "prerequisites": [
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: scantxoutset",
+      "url": "https://developer.bitcoin.org/reference/rpc/scantxoutset.html",
+      "notes": "Reference usage for descriptor-driven UTXO scanning."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "Descriptor and wallet tracking structures relevant to scanning."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Transaction Identification",
+      "url": "https://bitcoincore.academy/transaction-identification.html",
+      "notes": "How outputs and transactions are tracked for lookup and reporting."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "rpc",
+    "utxo"
+  ],
+  "aliases": [
+    "utxo set scan",
+    "descriptor scan"
+  ]
+}
