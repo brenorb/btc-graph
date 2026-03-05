@@ -1,0 +1,35 @@
+{
+  "id": "economics.schelling-points",
+  "title": "Schelling Points",
+  "description": "Schelling points are focal outcomes people coordinate on without explicit communication. In Bitcoin, social convergence on rules and symbols often follows this game-theoretic pattern.",
+  "category": "Economics",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "book",
+      "title": "The Art of Strategy (Dixit, Nalebuff)",
+      "url": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/",
+      "notes": "Game-theory framing for coordination dynamics and focal equilibria."
+    },
+    {
+      "type": "article",
+      "title": "Focal Point (Game Theory)",
+      "url": "https://en.wikipedia.org/wiki/Focal_point_(game_theory)",
+      "notes": "Quick conceptual definition and examples of Schelling coordination."
+    },
+    {
+      "type": "article",
+      "title": "BIP 9: Versionbits with Timeout and Delay",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+      "notes": "Shows coordination mechanics around soft-fork signaling and activation."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "economics",
+    "game theory"
+  ],
+  "aliases": [
+    "focal points"
+  ]
+}

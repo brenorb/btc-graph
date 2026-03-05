@@ -1,6 +1,6 @@
 {
   "id": "mining.stratum",
-  "title": "Stratum Basics",
+  "title": "Stratum",
   "description": "Mining communication protocol concepts and architecture.",
   "category": "Mining",
   "prerequisites": [
@@ -31,6 +31,6 @@
     "mining"
   ],
   "aliases": [
-    "stratum basics"
+    "stratum protocol"
   ]
 }

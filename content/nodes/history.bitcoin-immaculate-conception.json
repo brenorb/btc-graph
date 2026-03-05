@@ -1,0 +1,46 @@
+{
+  "id": "history.bitcoin-immaculate-conception",
+  "title": "Bitcoin Immaculate Conception",
+  "description": "Bitcoin's birth context is unusual: early digital currencies had little market value, Satoshi's identity was unknown, anyone with commodity hardware could mine, and faucet distribution made coins widely available. This origin story matters for understanding Bitcoin's perceived fairness and decentralization culture.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.pre-bitcoin-digital-cash",
+    "history.early-bitcoin"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin v0.1 Announcement (2009)",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html",
+      "notes": "Primary source for launch-era context and initial release framing."
+    },
+    {
+      "type": "article",
+      "title": "Satoshi Nakamoto",
+      "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
+      "notes": "Background on the unresolved identity of Bitcoin's creator."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin History",
+      "url": "https://www.lopp.net/bitcoin-information/history.html",
+      "notes": "Timeline coverage of early mining, distribution, and adoption milestones."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Faucet",
+      "url": "https://en.wikipedia.org/wiki/Bitcoin#History",
+      "notes": "Historical overview including early faucet and zero-price era context."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "history",
+    "origins"
+  ],
+  "aliases": [
+    "concepcao imaculada",
+    "bitcoin birth circumstances",
+    "immaculate conception"
+  ]
+}

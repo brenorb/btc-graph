@@ -1,0 +1,40 @@
+{
+  "id": "economics.bitcoin-supply-demand",
+  "title": "Bitcoin Supply and Demand",
+  "description": "Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.scarcity",
+    "economics.monetization-process",
+    "protocol.halving"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+      "notes": "Consensus-level reference for Bitcoin's finite issuance design."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Background on issuance mechanics and chain-level monetary rules."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible explanations linking scarcity, demand, and price behavior."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "economics",
+    "supply-demand"
+  ],
+  "aliases": [
+    "fixed supply demand dynamics",
+    "bitcoin static supply"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "history.monetary-contact-shocks",
+  "title": "Monetary Contact Shocks",
+  "description": "When previously separate civilizations begin trading, a local money can lose scarcity if outsiders replicate it at lower cost. This helps explain monetary inflation episodes tied to technology and trade contact.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.rai-stones",
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Aggry Beads and West African Currency Traditions",
+      "url": "https://en.wikipedia.org/wiki/Aggry_beads",
+      "notes": "Historical anchor for bead-money and value shifts under foreign manufacture."
+    },
+    {
+      "type": "article",
+      "title": "Rai Stones (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rai_stones",
+      "notes": "Parallel example of technology and transport changing monetary dynamics."
+    },
+    {
+      "type": "book",
+      "title": "The Ascent of Money",
+      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+      "notes": "Comparative context for currency disruption events across regions."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "history",
+    "monetary-history"
+  ],
+  "aliases": [
+    "civilizational monetary collisions",
+    "glass bead inflation episodes"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "protocol.mempool",
   "title": "Mempool",
-  "description": "Unconfirmed transaction relay and node policy behavior.",
+  "description": "How unconfirmed transactions propagate, queue, and get filtered by local node policy.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.transaction-lifecycle"
@@ -32,6 +32,7 @@
     "protocol"
   ],
   "aliases": [
+    "mempool",
     "mempool"
   ]
 }

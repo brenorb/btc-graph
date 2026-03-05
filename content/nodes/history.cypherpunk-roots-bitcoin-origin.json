@@ -1,0 +1,39 @@
+{
+  "id": "history.cypherpunk-roots-bitcoin-origin",
+  "title": "Cypherpunk Roots and Bitcoin Origin",
+  "description": "Bitcoin emerged from cypherpunk ideas about privacy, digital cash, and open-source coordination. This topic connects pre-Bitcoin experiments to the 2008-2009 launch context.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.cypherpunks",
+    "history.bitcoin-whitepaper"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Whitepaper PDF",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "Primary source text for design goals and threat model assumptions."
+    },
+    {
+      "type": "article",
+      "title": "Original Whitepaper Announcement (Metzdowd)",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+      "notes": "Contemporaneous context from the cryptography mailing list."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "Modern explanation of ideas introduced in early Bitcoin design."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "history",
+    "cypherpunk"
+  ],
+  "aliases": [
+    "bitcoin origin story",
+    "cypherpunk roots"
+  ]
+}

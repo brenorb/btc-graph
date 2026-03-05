@@ -1,0 +1,37 @@
+{
+  "id": "custody.custody-vs-self-custody-law",
+  "title": "Custody vs Self-Custody Legal Framing",
+  "description": "Legal obligations and risk shift depending on whether funds are held by an intermediary or controlled directly by the user. Understanding this split is essential for consumer protection and compliance posture.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.self-custody"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "Wallet UX tradeoffs around user control and delegated custody."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "High-level custody and responsibility primers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Operational wallet practices that influence custody risk profiles."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "custody",
+    "legal"
+  ],
+  "aliases": [
+    "custodial vs non-custodial legal risk"
+  ]
+}

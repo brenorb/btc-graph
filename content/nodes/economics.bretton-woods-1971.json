@@ -1,0 +1,38 @@
+{
+  "id": "economics.bretton-woods-1971",
+  "title": "Bretton Woods and 1971",
+  "description": "The 1971 suspension of dollar-gold convertibility marked the transition to the modern fiat era. This event is central to debates about monetary discretion, inflation, and hard-money alternatives.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Nixon Shock",
+      "url": "https://en.wikipedia.org/wiki/Nixon_shock",
+      "notes": "Overview of the 1971 policy shift and global monetary consequences."
+    },
+    {
+      "type": "article",
+      "title": "Federal Reserve History: Closing the Gold Window",
+      "url": "https://www.federalreservehistory.org/essays/gold-convertibility-ends",
+      "notes": "Institutional perspective on the end of convertibility."
+    },
+    {
+      "type": "book",
+      "title": "The Ascent of Money",
+      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+      "notes": "Long-run history framing before and after Bretton Woods."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "economics",
+    "monetary-history"
+  ],
+  "aliases": [
+    "1971 gold window",
+    "nixon shock"
+  ]
+}

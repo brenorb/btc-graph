@@ -1,0 +1,40 @@
+{
+  "id": "fundamentals.diffie-hellman-key-exchange",
+  "title": "Diffie-Hellman Key Exchange",
+  "description": "Diffie-Hellman lets two parties derive a shared secret over a public channel using group exponentiation. In Bitcoin systems, elliptic-curve variants appear in encrypted transport and protocol design patterns.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.modular-exponentiation",
+    "fundamentals.cyclic-groups",
+    "fundamentals.discrete-log-problem",
+    "fundamentals.finite-fields"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 324: v2 P2P Transport Protocol",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki",
+      "notes": "Shows how modern Bitcoin transport uses ECDH-derived shared secrets."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 ECDH API",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/include/secp256k1_ecdh.h",
+      "notes": "Concrete library interface for ECDH over secp256k1."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: P2P Attacks",
+      "url": "https://bitcoincore.academy/p2p-attacks.html",
+      "notes": "Threat-model context for why encrypted and authenticated transport matters."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "cryptography",
+    "key exchange"
+  ],
+  "aliases": [
+    "dh key exchange"
+  ]
+}

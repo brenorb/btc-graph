@@ -1,0 +1,38 @@
+{
+  "id": "economics.monetary-vs-price-inflation",
+  "title": "Monetary Inflation vs Price Inflation",
+  "description": "Monetary inflation tracks supply expansion of money, while price inflation describes observed changes in goods and services prices. Distinguishing them clarifies policy narratives and Bitcoin thesis claims.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.inflation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Introductory distinction between monetary base expansion and CPI-like indicators."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Context for how fee markets and issuance schedules differ from fiat policy tools."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User education framing for inflation terminology."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "economics",
+    "inflation"
+  ],
+  "aliases": [
+    "money supply vs CPI",
+    "monetary vs price inflation"
+  ]
+}

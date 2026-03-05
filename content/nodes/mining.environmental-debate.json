@@ -1,0 +1,39 @@
+{
+  "id": "mining.environmental-debate",
+  "title": "Mining Environmental Debate",
+  "description": "Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.energy-accounting",
+    "mining.grid-balancing-demand-response"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Diverse source collection across environmental and economic viewpoints."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Protocol baseline to avoid category errors in environmental arguments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Beginner-friendly framing before diving into adversarial debate material."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "mining",
+    "environment"
+  ],
+  "aliases": [
+    "bitcoin environmental impact",
+    "mining climate debate"
+  ]
+}

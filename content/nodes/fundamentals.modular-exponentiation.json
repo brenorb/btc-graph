@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.modular-exponentiation",
+  "title": "Modular Exponentiation",
+  "description": "Fast exponentiation under a modulus is the core operation behind key exchange and signature verification. It turns repeated multiplication into tractable computation on large numbers.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.modular-arithmetic"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Introduces modular exponentiation in Bitcoin key math."
+    },
+    {
+      "type": "article",
+      "title": "Programming Bitcoin: Finite Fields",
+      "url": "https://github.com/jimmysong/programmingbitcoin/blob/master/ch03.asciidoc",
+      "notes": "Walks through exponentiation behavior in finite fields."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures for secp256k1",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Spec-level context where modular exponentiation underpins group operations."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "mathematics",
+    "cryptography"
+  ],
+  "aliases": [
+    "mod exp"
+  ]
+}

@@ -4,7 +4,7 @@
   "description": "Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.",
   "category": "Extension Systems",
   "prerequisites": [
-    "privacy.coinjoin-basics",
+    "privacy.coinjoin",
     "protocol.timelocks"
   ],
   "resources": [

@@ -5,7 +5,7 @@
   "category": "Wallets",
   "prerequisites": [
     "custody.self-custody",
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

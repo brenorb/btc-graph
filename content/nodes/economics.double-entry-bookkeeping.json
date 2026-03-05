@@ -1,0 +1,35 @@
+{
+  "id": "economics.double-entry-bookkeeping",
+  "title": "Double-Entry Bookkeeping",
+  "description": "Double-entry bookkeeping tracks every economic event as balanced debits and credits across accounts. It provides the accounting lens needed to compare legacy ledgers with Bitcoin's UTXO accounting model.",
+  "category": "Economics",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "book",
+      "title": "The Ascent of Money (Niall Ferguson)",
+      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+      "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure."
+    },
+    {
+      "type": "article",
+      "title": "Investopedia: Double Entry",
+      "url": "https://www.investopedia.com/terms/d/double-entry.asp",
+      "notes": "Practical introduction to debit/credit logic and balance constraints."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Useful contrast between account-based intuition and UTXO-based accounting."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "economics",
+    "accounting"
+  ],
+  "aliases": [
+    "double-entry accounting"
+  ]
+}

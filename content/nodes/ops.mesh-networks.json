@@ -1,0 +1,38 @@
+{
+  "id": "ops.mesh-networks",
+  "title": "Mesh Networks",
+  "description": "Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mesh Networking",
+      "url": "https://en.wikipedia.org/wiki/Mesh_networking",
+      "notes": "General networking primer for decentralized mesh routing."
+    },
+    {
+      "type": "article",
+      "title": "goTenna",
+      "url": "https://gotenna.com/",
+      "notes": "Commercial mesh communication context often referenced in off-grid Bitcoin discussions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Networking fundamentals needed before mesh-specific tradeoffs."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "network",
+    "resilience"
+  ],
+  "aliases": [
+    "off-grid bitcoin networking",
+    "mesh networking"
+  ]
+}

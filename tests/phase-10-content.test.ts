@@ -44,7 +44,7 @@ const PHASE_10_NODE_IDS = [
 const REQUIRED_PHASE_10_PREREQUISITES: Record<string, string[]> = {
   "protocol.anyprevout": ["protocol.sighash-flags", "protocol.taproot"],
   "protocol.op-checktemplateverify": ["protocol.timelocks", "protocol.covenants"],
-  "protocol.op-cat": ["protocol.script-basics"],
+  "protocol.op-cat": ["protocol.script"],
   "extension.bitvm": ["protocol.taproot", "protocol.matt-ccv"],
   "lightning.eltoo": ["protocol.anyprevout", "lightning.commitment-transactions"],
   "lightning.ptlc": ["lightning.htlc", "protocol.adaptor-signatures"],

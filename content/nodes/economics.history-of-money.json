@@ -1,0 +1,38 @@
+{
+  "id": "economics.history-of-money",
+  "title": "History of Money",
+  "description": "From commodity monies to credit money and modern fiat regimes. This history frames why monetary institutions and trust models evolve over time.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.barter-limitations"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "The Ascent of Money",
+      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+      "notes": "Long-run financial history context for how monetary systems changed across eras."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Market-competition perspective on state versus non-state money."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible summaries that connect monetary history to Bitcoin."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "economics",
+    "monetary-history"
+  ],
+  "aliases": [
+    "commodity to fiat",
+    "monetary history"
+  ]
+}

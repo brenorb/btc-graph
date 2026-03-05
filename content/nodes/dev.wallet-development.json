@@ -1,6 +1,6 @@
 {
   "id": "dev.wallet-development",
-  "title": "Wallet Development Basics",
+  "title": "Wallet Development",
   "description": "Building safer wallet UX around signing and policy constraints.",
   "category": "Wallets",
   "prerequisites": [
@@ -32,6 +32,6 @@
     "development"
   ],
   "aliases": [
-    "wallet development basics"
+    "wallet development"
   ]
 }

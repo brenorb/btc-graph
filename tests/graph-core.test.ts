@@ -27,7 +27,7 @@ function sampleData(): GraphData {
         aliases: ["sound money"],
       },
       {
-        id: "fundamentals.hash-basics",
+        id: "fundamentals.hash-functions",
         title: "Hash Functions",
         description: "One-way functions and collision resistance.",
         category: "Fundamentals",
@@ -50,7 +50,7 @@ function sampleData(): GraphData {
         title: "Block Validation",
         description: "Consensus checks performed by full nodes.",
         category: "Bitcoin Protocol",
-        prerequisites: ["fundamentals.hash-basics", "bitcoin.utxo"],
+        prerequisites: ["fundamentals.hash-functions", "bitcoin.utxo"],
         resources: [],
         estimatedTime: "60m",
       },
@@ -137,7 +137,7 @@ describe("validateGraphData", () => {
 
 describe("detectGaps", () => {
   it("returns no gaps when concept has no prerequisites", () => {
-    const gaps = detectGaps(sampleData(), emptyProgress, "fundamentals.hash-basics");
+    const gaps = detectGaps(sampleData(), emptyProgress, "fundamentals.hash-functions");
     expect(gaps).toEqual([]);
   });
 
@@ -145,7 +145,7 @@ describe("detectGaps", () => {
     const gaps = detectGaps(sampleData(), emptyProgress, "lightning.htlc");
     expect(gaps).toEqual([
       "bitcoin.block-validation",
-      "fundamentals.hash-basics",
+      "fundamentals.hash-functions",
       "bitcoin.utxo",
       "fundamentals.money-properties",
     ]);
@@ -153,7 +153,7 @@ describe("detectGaps", () => {
 
   it("ignores prerequisites already marked as know_it", () => {
     const progress: NodeProgressState = {
-      "fundamentals.hash-basics": { state: "know_it", updatedAt: "2026-03-03" },
+      "fundamentals.hash-functions": { state: "know_it", updatedAt: "2026-03-03" },
       "bitcoin.utxo": { state: "know_it", updatedAt: "2026-03-03" },
       "fundamentals.money-properties": { state: "know_it", updatedAt: "2026-03-03" },
     };
@@ -175,7 +175,7 @@ describe("filterGraphByCategories", () => {
     );
     const ids = contextualNodes.map((node) => node.id);
     expect(ids).toContain("fundamentals.money-properties");
-    expect(ids).toContain("fundamentals.hash-basics");
+    expect(ids).toContain("fundamentals.hash-functions");
   });
 });
 

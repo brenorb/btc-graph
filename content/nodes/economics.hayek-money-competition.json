@@ -1,0 +1,36 @@
+{
+  "id": "economics.hayek-money-competition",
+  "title": "Hayek's Money Competition",
+  "description": "Hayek's money competition thesis argues that currencies should compete rather than be monopolized by the state. It frames Bitcoin as a market alternative in monetary selection.",
+  "category": "Economics",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "book",
+      "title": "The Road to Serfdom (F. A. Hayek)",
+      "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+      "notes": "Hayek's broader framework for why decentralized market coordination matters."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Accessible edition and context for the argument."
+    },
+    {
+      "type": "article",
+      "title": "Hayek: The Use of Knowledge in Society",
+      "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+      "notes": "Background on Hayek's coordination argument that informs monetary competition thinking."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "economics",
+    "monetary theory"
+  ],
+  "aliases": [
+    "denationalisation of money",
+    "currency competition"
+  ]
+}

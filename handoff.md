@@ -106,7 +106,7 @@
   - `fundamentals.elliptic-curve-cryptography`
   - `fundamentals.scalar-multiplication`
   - `fundamentals.secp256k1`
-  - `fundamentals.ecdsa-basics`
+  - `fundamentals.ecdsa`
   - `fundamentals.schnorr-signatures`
 - Rewired existing prerequisites:
   - `fundamentals.public-private-keys`

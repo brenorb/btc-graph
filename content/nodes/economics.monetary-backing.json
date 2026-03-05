@@ -1,0 +1,39 @@
+{
+  "id": "economics.monetary-backing",
+  "title": "Monetary Backing (Lastro)",
+  "description": "Monetary backing describes what, if anything, anchors confidence in a currency's purchasing power. Bitcoin's framing emphasizes verifiable scarcity and settlement finality rather than redeemability claims.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.money-properties",
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Commodity Money",
+      "url": "https://en.wikipedia.org/wiki/Commodity_money",
+      "notes": "Reference on historical backing models and redeemability mechanisms."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Supply and Demand",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible bridge from backing narratives to scarcity narratives."
+    },
+    {
+      "type": "article",
+      "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+      "notes": "Protocol-level source for Bitcoin's finite supply assurance."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "economics",
+    "money"
+  ],
+  "aliases": [
+    "lastro monetario",
+    "monetary anchor"
+  ]
+}

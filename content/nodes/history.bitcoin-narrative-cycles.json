@@ -1,0 +1,39 @@
+{
+  "id": "history.bitcoin-narrative-cycles",
+  "title": "Bitcoin Narrative Cycles",
+  "description": "Public narratives around Bitcoin shift across boom-bust phases, regulation headlines, and technology milestones. Learning to separate narrative heat from structural signal improves judgment.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.early-bitcoin",
+    "economics.volatility-psychology-risk-sizing"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Beginner-friendly historical framing of market and media cycles."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Signal-rich updates that help anchor narratives in protocol reality."
+    },
+    {
+      "type": "article",
+      "title": "Original Whitepaper Announcement (Metzdowd)",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+      "notes": "Primary-source baseline for comparing early framing to later narratives."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "history",
+    "market-psychology"
+  ],
+  "aliases": [
+    "bull bear narrative cycles",
+    "media framing cycles"
+  ]
+}

@@ -46,6 +46,10 @@ A task is done when all of the following are true:
 - Preserve issue-based contribution entry points (`Suggest change`, `Add concept`, `Generic change`).
 - Favor file and schema changes that produce clean, reviewable diffs.
 
+## Naming Hygiene
+- Never create branches named `codex/...`.
+- Do not mention `codex` in commit messages, PR titles/descriptions, issue comments, code comments, or docs unless explicitly required by external tooling.
+
 ## Suggested Additions For Work Quality
 - Add CI checks for:
   - schema validation

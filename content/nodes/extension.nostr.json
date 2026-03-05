@@ -1,0 +1,38 @@
+{
+  "id": "extension.nostr",
+  "title": "Nostr",
+  "description": "Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "fundamentals.public-private-keys",
+    "fundamentals.peer-to-peer-network"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Nostr NIPs Repository",
+      "url": "https://github.com/nostr-protocol/nips",
+      "notes": "Canonical protocol specifications and evolution process."
+    },
+    {
+      "type": "article",
+      "title": "Nostr: Notes and Other Stuff Transmitted by Relays",
+      "url": "https://nostr.com/",
+      "notes": "High-level protocol overview and ecosystem entry point."
+    },
+    {
+      "type": "article",
+      "title": "NIP-01: Basic Protocol Flow",
+      "url": "https://github.com/nostr-protocol/nips/blob/master/01.md",
+      "notes": "Minimal baseline for events, signatures, and relay behavior."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "social",
+    "protocol"
+  ],
+  "aliases": [
+    "nostr protocol"
+  ]
+}

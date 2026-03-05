@@ -1,0 +1,39 @@
+{
+  "id": "mining.asics",
+  "title": "ASICs",
+  "description": "ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.mining-hardware",
+    "history.gpu-to-asic-era"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Application-specific Integrated Circuit",
+      "url": "https://en.wikipedia.org/wiki/Application-specific_integrated_circuit",
+      "notes": "General concept and design constraints for specialized chips."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining Resources",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Curated references on miner hardware and industry structure."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: ASICBoost",
+      "url": "https://bitcoinops.org/en/topics/asicboost/",
+      "notes": "ASIC-level optimization context and policy implications."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "mining",
+    "hardware"
+  ],
+  "aliases": [
+    "asic miners",
+    "application specific integrated circuit"
+  ]
+}

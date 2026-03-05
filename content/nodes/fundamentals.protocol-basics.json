@@ -1,0 +1,38 @@
+{
+  "id": "fundamentals.protocol-basics",
+  "title": "What Is a Protocol?",
+  "description": "A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.peer-to-peer-network"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: P2P Network",
+      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+      "notes": "Concrete example of protocol rules in a peer network."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Consensus Model",
+      "url": "https://bitcoincore.academy/consensus-model.html",
+      "notes": "How protocol rules produce shared canonical state."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Network: Wire Protocol",
+      "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
+      "notes": "Developer-oriented protocol message walkthrough."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "protocol",
+    "fundamentals"
+  ],
+  "aliases": [
+    "protocol definition",
+    "what is protocol"
+  ]
+}

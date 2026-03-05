@@ -1,0 +1,39 @@
+{
+  "id": "economics.volatility-psychology-risk-sizing",
+  "title": "Volatility Psychology and Risk Sizing",
+  "description": "Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.time-preference",
+    "economics.monetary-premium"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "Practical user-facing guidance that can reduce impulsive behavior during volatility."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible framing of cyclical drawdowns and long-horizon thinking."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Fee Estimates",
+      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+      "notes": "Operational uncertainty example useful for risk budgeting habits."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "economics",
+    "behavior"
+  ],
+  "aliases": [
+    "position sizing",
+    "volatility behavior"
+  ]
+}

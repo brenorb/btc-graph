@@ -1,0 +1,39 @@
+{
+  "id": "mining.grid-balancing-demand-response",
+  "title": "Grid Balancing and Demand Response",
+  "description": "Flexible mining loads can curtail or ramp based on grid conditions and price signals. This introduces potential value in balancing intermittent generation and constrained transmission.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.energy-accounting"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Miner operating constraints that shape responsiveness to power prices."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Operational references including discussions of power-market dynamics."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Background context for mining policy and economics discussions."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "mining",
+    "energy",
+    "grid"
+  ],
+  "aliases": [
+    "demand response",
+    "grid services from mining"
+  ]
+}

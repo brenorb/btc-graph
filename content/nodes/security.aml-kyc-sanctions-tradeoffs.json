@@ -1,0 +1,39 @@
+{
+  "id": "security.aml-kyc-sanctions-tradeoffs",
+  "title": "AML/KYC and Sanctions Tradeoffs",
+  "description": "Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.",
+  "category": "Security",
+  "prerequisites": [
+    "privacy.kyc-tradeoffs",
+    "fundamentals.censorship-resistance"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User safety and privacy constraints under regulated onboarding models."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Anonymity Networks",
+      "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+      "notes": "Network privacy primitives relevant to censorship and surveillance pressure."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Tor Documentation",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
+      "notes": "Implementation-level tooling for reducing network-level metadata leakage."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "security",
+    "regulation"
+  ],
+  "aliases": [
+    "compliance tradeoffs",
+    "sanctions and bitcoin"
+  ]
+}

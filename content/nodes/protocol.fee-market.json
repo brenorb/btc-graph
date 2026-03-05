@@ -1,7 +1,7 @@
 {
   "id": "protocol.fee-market",
   "title": "Fee Market",
-  "description": "Blockspace auction dynamics and confirmation priority.",
+  "description": "How users bid for blockspace and why confirmation priority follows fee rates under congestion.",
   "category": "Economics",
   "prerequisites": [
     "protocol.mempool"
@@ -32,6 +32,7 @@
     "protocol"
   ],
   "aliases": [
+    "fee market",
     "fee market"
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "id": "privacy.pseudonymity",
+  "title": "Pseudonymity (Not Anonymity)",
+  "description": "Bitcoin is pseudonymous, not anonymous: addresses are public identifiers that can be linked to real identities through behavior, counterparties, and metadata. Privacy requires active operational practices rather than default assumptions.",
+  "category": "Security",
+  "prerequisites": [
+    "protocol.addresses-outputs",
+    "fundamentals.public-private-keys"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Pseudonymity",
+      "url": "https://en.wikipedia.org/wiki/Pseudonymity",
+      "notes": "Conceptual baseline distinguishing pseudonymity from anonymity."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Privacy",
+      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+      "notes": "Practical privacy failures and defensive techniques for Bitcoin users."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Linking",
+      "url": "https://bitcoinops.org/en/topics/output-linking/",
+      "notes": "How transaction graph patterns deanonymize pseudonymous activity."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "privacy",
+    "security"
+  ],
+  "aliases": [
+    "bitcoin is not anonymous",
+    "pseudonimity",
+    "pseudonymity"
+  ]
+}

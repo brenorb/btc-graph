@@ -1,6 +1,6 @@
 {
-  "id": "fundamentals.ecdsa-basics",
-  "title": "ECDSA Basics",
+  "id": "fundamentals.ecdsa",
+  "title": "ECDSA",
   "description": "ECDSA is the legacy Bitcoin signature algorithm used by pre-Taproot outputs and many wallets. Understanding its nonce and inverse terms explains key leak risks and malleability-era constraints.",
   "category": "Security",
   "prerequisites": [

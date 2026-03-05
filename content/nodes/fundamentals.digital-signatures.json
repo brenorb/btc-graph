@@ -5,7 +5,7 @@
   "category": "Security",
   "prerequisites": [
     "fundamentals.public-private-keys",
-    "fundamentals.ecdsa-basics"
+    "fundamentals.ecdsa"
   ],
   "resources": [
     {

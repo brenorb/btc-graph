@@ -1,0 +1,39 @@
+{
+  "id": "history.social-consensus-technology",
+  "title": "Bitcoin as Social Technology",
+  "description": "Bitcoin works through social consensus around rule enforcement, not just code execution. Like contracts, the social layer determines legitimacy when disputes or edge cases appear.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "economics.schelling-points",
+    "history.block-size-war"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Block Size War",
+      "url": "https://bitcoinops.org/en/topics/segregated-witness/",
+      "notes": "Historical case of social coordination shaping protocol path."
+    },
+    {
+      "type": "article",
+      "title": "BIP 148: UASF SegWit Activation",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+      "notes": "Primary source showing node-driven social enforcement."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Whitepaper PDF",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "Original technical design, interpreted through social adoption reality."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "history",
+    "governance"
+  ],
+  "aliases": [
+    "social layer",
+    "bitcoin social technology"
+  ]
+}

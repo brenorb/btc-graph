@@ -4,7 +4,7 @@
   "description": "Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

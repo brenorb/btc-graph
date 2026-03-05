@@ -1,6 +1,6 @@
 {
-  "id": "privacy.coinjoin-basics",
-  "title": "CoinJoin Basics",
+  "id": "privacy.coinjoin",
+  "title": "CoinJoin",
   "description": "Collaborative transaction construction to reduce heuristics.",
   "category": "Security",
   "prerequisites": [
@@ -32,6 +32,6 @@
     "privacy"
   ],
   "aliases": [
-    "coinjoin basics"
+    "coinjoin"
   ]
 }

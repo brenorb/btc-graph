@@ -4,7 +4,7 @@
   "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.digital-scarcity",
+  "title": "Digital Scarcity",
+  "description": "Digital scarcity is the ability to make digital units costly to forge and impossible to validly spend twice under shared rules. Bitcoin's breakthrough is combining cryptography, networking, and consensus to enforce that scarcity.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "history.double-spend-problem",
+    "protocol.proof-of-work"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Whitepaper PDF",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "Primary source for digital cash design and double-spend resistance."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Mechanics of blocks, confirmation, and chain selection."
+    },
+    {
+      "type": "article",
+      "title": "Double-spending",
+      "url": "https://en.wikipedia.org/wiki/Double-spending",
+      "notes": "General framing of digital scarcity constraints and attacks."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "fundamentals",
+    "consensus"
+  ],
+  "aliases": [
+    "escassez digital",
+    "digital money scarcity"
+  ]
+}

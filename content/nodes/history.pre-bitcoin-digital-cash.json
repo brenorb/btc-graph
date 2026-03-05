@@ -1,0 +1,46 @@
+{
+  "id": "history.pre-bitcoin-digital-cash",
+  "title": "Pre-Bitcoin Digital Cash Attempts",
+  "description": "Before Bitcoin, multiple designs tried to create digital money, including DigiCash, Hashcash, b-money, and bit gold. Studying these attempts clarifies what Bitcoin solved and what tradeoffs remained unresolved.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.cypherpunks",
+    "history.double-spend-problem"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "b-money",
+      "url": "https://en.wikipedia.org/wiki/B-money",
+      "notes": "Historical overview of Wei Dai's proposal and its relation to Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "Nick Szabo: Bit Gold",
+      "url": "https://unenumerated.blogspot.com/2005/12/bit-gold.html",
+      "notes": "Primary proposal for bit gold, a key precursor concept."
+    },
+    {
+      "type": "article",
+      "title": "Hashcash",
+      "url": "https://en.wikipedia.org/wiki/Hashcash",
+      "notes": "Background on proof-of-work used in anti-spam and later adapted by Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "DigiCash",
+      "url": "https://en.wikipedia.org/wiki/DigiCash",
+      "notes": "Early private digital cash system and its centralization tradeoffs."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "history",
+    "digital-cash"
+  ],
+  "aliases": [
+    "pre-historia do bitcoin",
+    "pre-bitcoin monetary experiments",
+    "digital cash precursors"
+  ]
+}

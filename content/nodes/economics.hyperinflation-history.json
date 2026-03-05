@@ -1,0 +1,39 @@
+{
+  "id": "economics.hyperinflation-history",
+  "title": "Hyperinflation History",
+  "description": "Hyperinflation episodes show how confidence collapse, fiscal dominance, and monetary over-expansion can destroy currency function. Historical case studies clarify why monetary credibility is fragile.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.inflation",
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Hyperinflation (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Hyperinflation",
+      "notes": "Comparative timeline and references for major historical cases."
+    },
+    {
+      "type": "article",
+      "title": "What Is Hyperinflation? (St. Louis Fed)",
+      "url": "https://www.stlouisfed.org/open-vault/2022/july/what-is-hyperinflation",
+      "notes": "Policy-oriented overview with historical examples and definitions."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Alternative institutional lens on currency competition and credibility."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "economics",
+    "inflation"
+  ],
+  "aliases": [
+    "historical hyperinflation",
+    "currency collapse history"
+  ]
+}

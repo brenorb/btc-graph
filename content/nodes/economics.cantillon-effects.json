@@ -1,0 +1,37 @@
+{
+  "id": "economics.cantillon-effects",
+  "title": "Cantillon Effects",
+  "description": "New money enters economies through specific channels, changing relative prices unevenly. Distribution effects depend on who receives new liquidity first.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.inflation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Hayek: The Use of Knowledge in Society",
+      "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+      "notes": "Context for decentralized price coordination and information dispersion."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible inflation and distribution-effect explainers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "Practical user-facing framing of monetary policy impacts."
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "economics",
+    "monetary-policy"
+  ],
+  "aliases": [
+    "distribution effects of money creation"
+  ]
+}

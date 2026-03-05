@@ -1,0 +1,39 @@
+{
+  "id": "economics.token-basics",
+  "title": "Token Basics",
+  "description": "A token is a digitally represented unit with rules defined by a protocol or issuer. In Bitcoin education, this topic clarifies differences between native bitcoin units and tokenized or custodial claims.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.protocol-basics",
+    "protocol.addresses-outputs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Cryptocurrency",
+      "url": "https://en.wikipedia.org/wiki/Cryptocurrency",
+      "notes": "Baseline terminology for coins, tokens, and blockchain-native units."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: eCash",
+      "url": "https://bitcoinops.org/en/topics/ecash/",
+      "notes": "Bitcoin-adjacent token-like systems and trust assumptions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Sidechains",
+      "url": "https://bitcoinops.org/en/topics/sidechains/",
+      "notes": "How external assets and rulesets can anchor to Bitcoin."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "economics",
+    "assets"
+  ],
+  "aliases": [
+    "token",
+    "coins vs tokens"
+  ]
+}

@@ -17,6 +17,13 @@ import {
   reconcileViewState,
 } from "./core/url-state";
 import {
+  buildNodeAssistantTemplatePrompt,
+  renderNodeAssistantSection,
+  resolveNodeAssistantContext,
+  toggleNodeAssistant,
+  type NodeAssistantTemplate,
+} from "./core/node-assistant";
+import {
   applyCategoryBulkAction,
   deriveNextProgressState,
   resolveGraphColorPalette,
@@ -64,7 +71,11 @@ interface AppState {
   categories: string[];
   categoryColors: Map<string, string>;
   storage: StorageLike | undefined;
+  assistantOpenNodeId: string | null;
+  assistantDraftPrompts: Record<string, string>;
 }
+
+const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -253,6 +264,10 @@ function setProgress(state: AppState, nodeId: string, next: ProgressState) {
   saveProgressState(state.storage, state.progress);
 }
 
+function buildNodeAssistantChatHref(prompt: string) {
+  return `${NODE_ASSISTANT_CHAT_URL}${encodeURIComponent(prompt)}`;
+}
+
 function renderLegend(state: AppState, root: HTMLElement, onChange: () => void) {
   const legend = root.querySelector<HTMLElement>("#legend");
   if (!legend) return;
@@ -282,6 +297,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
   if (!detail || !panel) return;
 
   if (!state.selectedId) {
+    state.assistantOpenNodeId = null;
     panel.classList.remove("open");
     detail.className = "meta";
     detail.textContent = "Select a node to inspect prerequisites, resources, and progress.";
@@ -297,6 +313,20 @@ function renderDetails(state: AppState, root: HTMLElement) {
 
   const currentState = state.progress[node.id]?.state ?? null;
   const gaps = detectGaps(state.data, state.progress, node.id);
+  const assistantContext = resolveNodeAssistantContext({
+    data: state.data,
+    node,
+    progressState: currentState,
+    gaps,
+  });
+  const fallbackAssistantPrompt = buildNodeAssistantTemplatePrompt(assistantContext, "summarize");
+  const currentAssistantPrompt = state.assistantDraftPrompts[node.id] ?? fallbackAssistantPrompt;
+  state.assistantDraftPrompts[node.id] = currentAssistantPrompt;
+  const assistantSection = renderNodeAssistantSection(assistantContext, {
+    open: state.assistantOpenNodeId === node.id,
+    promptValue: currentAssistantPrompt,
+    openChatHref: buildNodeAssistantChatHref(currentAssistantPrompt),
+  });
 
   const resources =
     node.resources.length > 0
@@ -366,6 +396,8 @@ function renderDetails(state: AppState, root: HTMLElement) {
       </div>
     </div>
 
+    ${assistantSection}
+
     <div>
       <h3>Resources</h3>
       ${resources}
@@ -380,6 +412,56 @@ function renderDetails(state: AppState, root: HTMLElement) {
       syncNodeClasses(state);
     });
   });
+
+  detail.querySelector<HTMLButtonElement>(`[data-node-ai-toggle="${node.id}"]`)?.addEventListener(
+    "click",
+    () => {
+      state.assistantOpenNodeId = toggleNodeAssistant(state.assistantOpenNodeId, node.id);
+      renderDetails(state, root);
+    },
+  );
+
+  if (state.assistantOpenNodeId === node.id) {
+    const promptInput = detail.querySelector<HTMLTextAreaElement>("#node-ai-prompt");
+    const openChatLink = detail.querySelector<HTMLAnchorElement>(
+      `[data-node-ai-open-chat="${node.id}"]`,
+    );
+
+    const syncAssistantPrompt = (nextPrompt: string) => {
+      state.assistantDraftPrompts[node.id] = nextPrompt;
+      if (promptInput && promptInput.value !== nextPrompt) {
+        promptInput.value = nextPrompt;
+      }
+      if (openChatLink) {
+        openChatLink.href = buildNodeAssistantChatHref(nextPrompt);
+      }
+    };
+
+    promptInput?.addEventListener("input", () => {
+      syncAssistantPrompt(promptInput.value);
+    });
+
+    detail.querySelectorAll<HTMLButtonElement>("[data-node-ai-template]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const template = button.dataset.nodeAiTemplate as NodeAssistantTemplate | undefined;
+        if (!template) return;
+        syncAssistantPrompt(buildNodeAssistantTemplatePrompt(assistantContext, template));
+        promptInput?.focus();
+      });
+    });
+
+    detail
+      .querySelector<HTMLButtonElement>(`[data-node-ai-copy="${node.id}"]`)
+      ?.addEventListener("click", async () => {
+        const value = promptInput?.value ?? state.assistantDraftPrompts[node.id];
+        syncAssistantPrompt(value);
+        try {
+          await navigator.clipboard.writeText(value);
+        } catch {
+          window.prompt("Copy your node prompt:", value);
+        }
+      });
+  }
 }
 
 function syncNodeClasses(state: AppState) {
@@ -441,6 +523,7 @@ function renderSearch(state: AppState, root: HTMLElement) {
     button.textContent = formatNodeOption(node);
     button.type = "button";
     button.addEventListener("click", () => {
+      state.assistantOpenNodeId = null;
       state.selectedId = node.id;
       const graphNode = state.cy.getElementById(node.id);
       if (graphNode.nonempty()) {
@@ -585,7 +668,11 @@ function syncUrlState(state: AppState) {
 
 function rerenderGraph(state: AppState, root: HTMLElement) {
   const elements = computeElements(state);
+  const previousSelectedId = state.selectedId;
   state.selectedId = reconcileSelection(state.selectedId, elements.strictVisibleIds);
+  if (state.selectedId !== previousSelectedId) {
+    state.assistantOpenNodeId = null;
+  }
   state.cy.elements().remove();
   state.cy.add([...elements.nodes, ...elements.edges]);
   syncNodeClasses(state);
@@ -602,6 +689,9 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
 function wireInteractions(state: AppState, root: HTMLElement) {
   state.cy.on("tap", "node", (event) => {
     const id = event.target.id();
+    if (state.selectedId !== id) {
+      state.assistantOpenNodeId = null;
+    }
     state.selectedId = id;
     renderDetails(state, root);
     refreshLabels(state);
@@ -659,6 +749,7 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     const fromUrl = readViewStateFromUrl(state);
     state.selectedId = fromUrl.selectedId;
     state.hiddenCategories = fromUrl.hiddenCategories;
+    state.assistantOpenNodeId = null;
     rerenderGraph(state, root);
   });
 }
@@ -764,6 +855,8 @@ export async function bootstrapApp(root: HTMLElement | null) {
     categories,
     categoryColors,
     storage,
+    assistantOpenNodeId: null,
+    assistantDraftPrompts: {},
   };
 
   const fromUrl = readViewStateFromUrl(state);

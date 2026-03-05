@@ -5,7 +5,7 @@
   "category": "Wallets",
   "prerequisites": [
     "custody.address-types",
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

@@ -14,7 +14,7 @@ const PHASE_12_NODE_IDS = [
   "fundamentals.elliptic-curve-cryptography",
   "fundamentals.scalar-multiplication",
   "fundamentals.secp256k1",
-  "fundamentals.ecdsa-basics",
+  "fundamentals.ecdsa",
   "fundamentals.schnorr-signatures",
 ] as const;
 
@@ -35,7 +35,7 @@ const REQUIRED_PHASE_12_PREREQUISITES: Record<string, string[]> = {
     "fundamentals.elliptic-curve-cryptography",
     "fundamentals.finite-fields",
   ],
-  "fundamentals.ecdsa-basics": [
+  "fundamentals.ecdsa": [
     "fundamentals.secp256k1",
     "fundamentals.modular-inverse",
     "fundamentals.scalar-multiplication",
@@ -52,7 +52,7 @@ const REQUIRED_EXISTING_UPDATES: Record<string, string[]> = {
     "fundamentals.elliptic-curve-cryptography",
     "fundamentals.discrete-log-problem",
   ],
-  "fundamentals.digital-signatures": ["fundamentals.ecdsa-basics"],
+  "fundamentals.digital-signatures": ["fundamentals.ecdsa"],
   "protocol.taproot": ["fundamentals.schnorr-signatures"],
   "protocol.op-checksigadd": ["fundamentals.schnorr-signatures"],
 };

@@ -190,6 +190,43 @@
       ]
     },
     {
+      "id": "custody.custody-vs-self-custody-law",
+      "title": "Custody vs Self-Custody Legal Framing",
+      "description": "Legal obligations and risk shift depending on whether funds are held by an intermediary or controlled directly by the user. Understanding this split is essential for consumer protection and compliance posture.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "Wallet UX tradeoffs around user control and delegated custody."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "High-level custody and responsibility primers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Operational wallet practices that influence custody risk profiles."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "custody",
+        "legal"
+      ],
+      "aliases": [
+        "custodial vs non-custodial legal risk"
+      ]
+    },
+    {
       "id": "custody.hardware-wallets",
       "title": "Hardware Wallets",
       "description": "Isolated signing environments and practical security tradeoffs.",
@@ -306,7 +343,7 @@
       "category": "Wallets",
       "prerequisites": [
         "custody.self-custody",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -868,7 +905,7 @@
       "category": "Wallets",
       "prerequisites": [
         "custody.address-types",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -1313,7 +1350,7 @@
     },
     {
       "id": "dev.wallet-development",
-      "title": "Wallet Development Basics",
+      "title": "Wallet Development",
       "description": "Building safer wallet UX around signing and policy constraints.",
       "category": "Wallets",
       "prerequisites": [
@@ -1345,7 +1382,160 @@
         "development"
       ],
       "aliases": [
-        "wallet development basics"
+        "wallet development"
+      ]
+    },
+    {
+      "id": "economics.bitcoin-supply-demand",
+      "title": "Bitcoin Supply and Demand",
+      "description": "Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.scarcity",
+        "economics.monetization-process",
+        "protocol.halving"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+          "notes": "Consensus-level reference for Bitcoin's finite issuance design."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Block Chain",
+          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+          "notes": "Background on issuance mechanics and chain-level monetary rules."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible explanations linking scarcity, demand, and price behavior."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "economics",
+        "supply-demand"
+      ],
+      "aliases": [
+        "fixed supply demand dynamics",
+        "bitcoin static supply"
+      ]
+    },
+    {
+      "id": "economics.bretton-woods-1971",
+      "title": "Bretton Woods and 1971",
+      "description": "The 1971 suspension of dollar-gold convertibility marked the transition to the modern fiat era. This event is central to debates about monetary discretion, inflation, and hard-money alternatives.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Nixon Shock",
+          "url": "https://en.wikipedia.org/wiki/Nixon_shock",
+          "notes": "Overview of the 1971 policy shift and global monetary consequences."
+        },
+        {
+          "type": "article",
+          "title": "Federal Reserve History: Closing the Gold Window",
+          "url": "https://www.federalreservehistory.org/essays/gold-convertibility-ends",
+          "notes": "Institutional perspective on the end of convertibility."
+        },
+        {
+          "type": "book",
+          "title": "The Ascent of Money",
+          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "notes": "Long-run history framing before and after Bretton Woods."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "economics",
+        "monetary-history"
+      ],
+      "aliases": [
+        "1971 gold window",
+        "nixon shock"
+      ]
+    },
+    {
+      "id": "economics.cantillon-effects",
+      "title": "Cantillon Effects",
+      "description": "New money enters economies through specific channels, changing relative prices unevenly. Distribution effects depend on who receives new liquidity first.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.inflation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Hayek: The Use of Knowledge in Society",
+          "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+          "notes": "Context for decentralized price coordination and information dispersion."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible inflation and distribution-effect explainers."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "Practical user-facing framing of monetary policy impacts."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "economics",
+        "monetary-policy"
+      ],
+      "aliases": [
+        "distribution effects of money creation"
+      ]
+    },
+    {
+      "id": "economics.central-bank-basics",
+      "title": "Central Bank Basics",
+      "description": "Central banks manage base money, lender-of-last-resort functions, and policy rates within modern fiat systems. Understanding their role is required for comparing Bitcoin to state monetary institutions.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Central Bank",
+          "url": "https://en.wikipedia.org/wiki/Central_bank",
+          "notes": "Foundational overview of mandates and policy tools."
+        },
+        {
+          "type": "article",
+          "title": "Federal Reserve: Monetary Policy",
+          "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+          "notes": "Primary-source institutional explanation of policy framework."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Competing perspective on central-bank monopoly versus currency competition."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "economics",
+        "institutions"
+      ],
+      "aliases": [
+        "central bank role",
+        "monetary authority"
       ]
     },
     {
@@ -1385,6 +1575,41 @@
       ]
     },
     {
+      "id": "economics.double-entry-bookkeeping",
+      "title": "Double-Entry Bookkeeping",
+      "description": "Double-entry bookkeeping tracks every economic event as balanced debits and credits across accounts. It provides the accounting lens needed to compare legacy ledgers with Bitcoin's UTXO accounting model.",
+      "category": "Economics",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "book",
+          "title": "The Ascent of Money (Niall Ferguson)",
+          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure."
+        },
+        {
+          "type": "article",
+          "title": "Investopedia: Double Entry",
+          "url": "https://www.investopedia.com/terms/d/double-entry.asp",
+          "notes": "Practical introduction to debit/credit logic and balance constraints."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Useful contrast between account-based intuition and UTXO-based accounting."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "economics",
+        "accounting"
+      ],
+      "aliases": [
+        "double-entry accounting"
+      ]
+    },
+    {
       "id": "economics.fee-pressure-cycles",
       "title": "Fee Pressure Cycles",
       "description": "Recurring phases of low and high blockspace demand that impact confirmation expectations and wallet behavior.",
@@ -1421,6 +1646,157 @@
       "aliases": [
         "blockspace demand cycles",
         "fee volatility cycles"
+      ]
+    },
+    {
+      "id": "economics.hayek-money-competition",
+      "title": "Hayek's Money Competition",
+      "description": "Hayek's money competition thesis argues that currencies should compete rather than be monopolized by the state. It frames Bitcoin as a market alternative in monetary selection.",
+      "category": "Economics",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "book",
+          "title": "The Road to Serfdom (F. A. Hayek)",
+          "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+          "notes": "Hayek's broader framework for why decentralized market coordination matters."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Accessible edition and context for the argument."
+        },
+        {
+          "type": "article",
+          "title": "Hayek: The Use of Knowledge in Society",
+          "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+          "notes": "Background on Hayek's coordination argument that informs monetary competition thinking."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "economics",
+        "monetary theory"
+      ],
+      "aliases": [
+        "denationalisation of money",
+        "currency competition"
+      ]
+    },
+    {
+      "id": "economics.hayek-spontaneous-order",
+      "title": "Hayek and Spontaneous Order",
+      "description": "Hayek's spontaneous-order view explains how institutions like money, law, and language emerge from repeated coordination rather than central design. Bitcoin is often analyzed through this lens as an emergent monetary institution.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.hayek-money-competition"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Hayek: The Use of Knowledge in Society",
+          "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+          "notes": "Core text on decentralized knowledge and emergent order."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Money-competition extension of spontaneous-order reasoning."
+        },
+        {
+          "type": "article",
+          "title": "Schelling Points",
+          "url": "https://en.wikipedia.org/wiki/Focal_point_(game_theory)",
+          "notes": "Game-theory bridge for spontaneous institutional convergence."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "economics",
+        "institutions"
+      ],
+      "aliases": [
+        "spontaneous order",
+        "hayek institutions"
+      ]
+    },
+    {
+      "id": "economics.history-of-money",
+      "title": "History of Money",
+      "description": "From commodity monies to credit money and modern fiat regimes. This history frames why monetary institutions and trust models evolve over time.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.barter-limitations"
+      ],
+      "resources": [
+        {
+          "type": "book",
+          "title": "The Ascent of Money",
+          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "notes": "Long-run financial history context for how monetary systems changed across eras."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Market-competition perspective on state versus non-state money."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible summaries that connect monetary history to Bitcoin."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "economics",
+        "monetary-history"
+      ],
+      "aliases": [
+        "commodity to fiat",
+        "monetary history"
+      ]
+    },
+    {
+      "id": "economics.hyperinflation-history",
+      "title": "Hyperinflation History",
+      "description": "Hyperinflation episodes show how confidence collapse, fiscal dominance, and monetary over-expansion can destroy currency function. Historical case studies clarify why monetary credibility is fragile.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.inflation",
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Hyperinflation (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Hyperinflation",
+          "notes": "Comparative timeline and references for major historical cases."
+        },
+        {
+          "type": "article",
+          "title": "What Is Hyperinflation? (St. Louis Fed)",
+          "url": "https://www.stlouisfed.org/open-vault/2022/july/what-is-hyperinflation",
+          "notes": "Policy-oriented overview with historical examples and definitions."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Alternative institutional lens on currency competition and credibility."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "economics",
+        "inflation"
+      ],
+      "aliases": [
+        "historical hyperinflation",
+        "currency collapse history"
       ]
     },
     {
@@ -1501,6 +1877,45 @@
       ]
     },
     {
+      "id": "economics.monetary-backing",
+      "title": "Monetary Backing (Lastro)",
+      "description": "Monetary backing describes what, if anything, anchors confidence in a currency's purchasing power. Bitcoin's framing emphasizes verifiable scarcity and settlement finality rather than redeemability claims.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.money-properties",
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Commodity Money",
+          "url": "https://en.wikipedia.org/wiki/Commodity_money",
+          "notes": "Reference on historical backing models and redeemability mechanisms."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Supply and Demand",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible bridge from backing narratives to scarcity narratives."
+        },
+        {
+          "type": "article",
+          "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
+          "notes": "Protocol-level source for Bitcoin's finite supply assurance."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "economics",
+        "money"
+      ],
+      "aliases": [
+        "lastro monetario",
+        "monetary anchor"
+      ]
+    },
+    {
       "id": "economics.monetary-premium",
       "title": "Monetary Premium",
       "description": "How market participants price liquidity and store-of-value properties.",
@@ -1534,6 +1949,163 @@
       ],
       "aliases": [
         "monetary premium"
+      ]
+    },
+    {
+      "id": "economics.monetary-vs-price-inflation",
+      "title": "Monetary Inflation vs Price Inflation",
+      "description": "Monetary inflation tracks supply expansion of money, while price inflation describes observed changes in goods and services prices. Distinguishing them clarifies policy narratives and Bitcoin thesis claims.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.inflation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Introductory distinction between monetary base expansion and CPI-like indicators."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Context for how fee markets and issuance schedules differ from fiat policy tools."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User education framing for inflation terminology."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "economics",
+        "inflation"
+      ],
+      "aliases": [
+        "money supply vs CPI",
+        "monetary vs price inflation"
+      ]
+    },
+    {
+      "id": "economics.monetization-process",
+      "title": "Monetization Process",
+      "description": "How an asset moves from collectible demand toward broader use as savings and settlement money. Monetization is path-dependent and shaped by social coordination.",
+      "category": "Economics",
+      "prerequisites": [
+        "economics.history-of-money",
+        "fundamentals.money-properties",
+        "economics.scarcity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Introductory framing of monetary emergence and adoption stages."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Applied context for how adoption pressure shows up in protocol usage."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User behavior lens for moving from speculative to utility-driven usage."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "economics",
+        "adoption"
+      ],
+      "aliases": [
+        "asset monetization",
+        "monetary adoption process"
+      ]
+    },
+    {
+      "id": "economics.need-for-inflation",
+      "title": "Need for Inflation?",
+      "description": "Mainstream policy frameworks argue for low positive inflation targets to reduce deflation risk and support wage and debt adjustment. Competing schools argue these benefits are overstated and can hide distributional costs.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.inflation",
+        "economics.central-bank-basics",
+        "economics.monetary-vs-price-inflation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Federal Reserve FAQ: Why Does the Fed Aim for 2 Percent Inflation?",
+          "url": "https://www.federalreserve.gov/faqs/economy_14400.htm",
+          "notes": "Primary-source rationale for a positive inflation target."
+        },
+        {
+          "type": "article",
+          "title": "Inflation Targeting",
+          "url": "https://en.wikipedia.org/wiki/Inflation_targeting",
+          "notes": "Comparative background across central-bank frameworks."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Competing perspective challenging discretionary inflation policy."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "economics",
+        "monetary-policy"
+      ],
+      "aliases": [
+        "is inflation necessary",
+        "need for inflation"
+      ]
+    },
+    {
+      "id": "economics.neutral-money-vs-political-money",
+      "title": "Neutral Money vs Political Money",
+      "description": "Neutral money minimizes discretionary favoritism, while political money embeds policy preferences and selective intervention. This contrast helps explain why credible neutrality matters for global settlement assets.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.neutrality",
+        "economics.hayek-money-competition"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Neutrality",
+          "url": "https://bitcoindevphilosophy.com/#neutrality",
+          "notes": "Direct framing of neutrality as a system design goal."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Competition-based argument against politically monopolized currency."
+        },
+        {
+          "type": "book",
+          "title": "The Road to Serfdom",
+          "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+          "notes": "Background on centralized economic control and institutional incentives."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "economics",
+        "political-economy"
+      ],
+      "aliases": [
+        "apolitical money",
+        "state money vs market money"
       ]
     },
     {
@@ -1575,6 +2147,45 @@
       ]
     },
     {
+      "id": "economics.savings-vs-investment",
+      "title": "Savings vs Investment",
+      "description": "Savings prioritizes preserving purchasing power with minimal dependence on counterparties, while investment takes additional risk for expected yield. Bitcoin is best understood as savings technology first, with investment-like behavior as a secondary market expression.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.time-preference",
+        "economics.volatility-psychology-risk-sizing"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Beginner-friendly framing for savings behavior and monetary choices."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "Practical user guidance for long-term custody and risk-aware behavior."
+        },
+        {
+          "type": "article",
+          "title": "Mises Library: Denationalisation of Money",
+          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "notes": "Monetary-competition lens for evaluating money as savings infrastructure."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "economics",
+        "behavior"
+      ],
+      "aliases": [
+        "bitcoin as savings technology",
+        "saving vs investing"
+      ]
+    },
+    {
       "id": "economics.scarcity",
       "title": "Scarcity and Sound Money",
       "description": "Why scarce assets can accumulate monetary premium.",
@@ -1608,6 +2219,41 @@
       ],
       "aliases": [
         "scarcity and sound money"
+      ]
+    },
+    {
+      "id": "economics.schelling-points",
+      "title": "Schelling Points",
+      "description": "Schelling points are focal outcomes people coordinate on without explicit communication. In Bitcoin, social convergence on rules and symbols often follows this game-theoretic pattern.",
+      "category": "Economics",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "book",
+          "title": "The Art of Strategy (Dixit, Nalebuff)",
+          "url": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/",
+          "notes": "Game-theory framing for coordination dynamics and focal equilibria."
+        },
+        {
+          "type": "article",
+          "title": "Focal Point (Game Theory)",
+          "url": "https://en.wikipedia.org/wiki/Focal_point_(game_theory)",
+          "notes": "Quick conceptual definition and examples of Schelling coordination."
+        },
+        {
+          "type": "article",
+          "title": "BIP 9: Versionbits with Timeout and Delay",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki",
+          "notes": "Shows coordination mechanics around soft-fork signaling and activation."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "economics",
+        "game theory"
+      ],
+      "aliases": [
+        "focal points"
       ]
     },
     {
@@ -1649,6 +2295,45 @@
       ]
     },
     {
+      "id": "economics.token-basics",
+      "title": "Token Basics",
+      "description": "A token is a digitally represented unit with rules defined by a protocol or issuer. In Bitcoin education, this topic clarifies differences between native bitcoin units and tokenized or custodial claims.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.protocol-basics",
+        "protocol.addresses-outputs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cryptocurrency",
+          "url": "https://en.wikipedia.org/wiki/Cryptocurrency",
+          "notes": "Baseline terminology for coins, tokens, and blockchain-native units."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: eCash",
+          "url": "https://bitcoinops.org/en/topics/ecash/",
+          "notes": "Bitcoin-adjacent token-like systems and trust assumptions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Sidechains",
+          "url": "https://bitcoinops.org/en/topics/sidechains/",
+          "notes": "How external assets and rulesets can anchor to Bitcoin."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "economics",
+        "assets"
+      ],
+      "aliases": [
+        "token",
+        "coins vs tokens"
+      ]
+    },
+    {
       "id": "economics.transaction-batching-economics",
       "title": "Transaction Batching Economics",
       "description": "Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.",
@@ -1687,6 +2372,45 @@
       ]
     },
     {
+      "id": "economics.volatility-psychology-risk-sizing",
+      "title": "Volatility Psychology and Risk Sizing",
+      "description": "Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.time-preference",
+        "economics.monetary-premium"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "Practical user-facing guidance that can reduce impulsive behavior during volatility."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible framing of cyclical drawdowns and long-horizon thinking."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Fee Estimates",
+          "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
+          "notes": "Operational uncertainty example useful for risk budgeting habits."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "economics",
+        "behavior"
+      ],
+      "aliases": [
+        "position sizing",
+        "volatility behavior"
+      ]
+    },
+    {
       "id": "extension.ark",
       "title": "Ark Protocol",
       "description": "Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.",
@@ -1722,6 +2446,45 @@
       ],
       "aliases": [
         "ark protocol"
+      ]
+    },
+    {
+      "id": "extension.bitchat",
+      "title": "Bitchat",
+      "description": "Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "ops.mesh-networks",
+        "extension.nostr"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Nostr NIPs Repository",
+          "url": "https://github.com/nostr-protocol/nips",
+          "notes": "Reference base for relay messaging design patterns adjacent to Bitchat-like systems."
+        },
+        {
+          "type": "article",
+          "title": "Mesh Networking",
+          "url": "https://en.wikipedia.org/wiki/Mesh_networking",
+          "notes": "Networking context for decentralized chat transport models."
+        },
+        {
+          "type": "article",
+          "title": "Cypherpunk Movement",
+          "url": "https://en.wikipedia.org/wiki/Cypherpunk",
+          "notes": "Historical roots of private and censorship-resistant messaging systems."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "social",
+        "messaging"
+      ],
+      "aliases": [
+        "bitcoin chat layers",
+        "bitchat messaging"
       ]
     },
     {
@@ -1844,7 +2607,7 @@
       "description": "Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.",
       "category": "Extension Systems",
       "prerequisites": [
-        "privacy.coinjoin-basics",
+        "privacy.coinjoin",
         "protocol.timelocks"
       ],
       "resources": [
@@ -2034,7 +2797,7 @@
       "description": "The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.",
       "category": "Extension Systems",
       "prerequisites": [
-        "protocol.script-basics",
+        "protocol.script",
         "protocol.op-cat"
       ],
       "resources": [
@@ -2102,6 +2865,44 @@
       ],
       "aliases": [
         "lnurl-pay"
+      ]
+    },
+    {
+      "id": "extension.nostr",
+      "title": "Nostr",
+      "description": "Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.peer-to-peer-network"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Nostr NIPs Repository",
+          "url": "https://github.com/nostr-protocol/nips",
+          "notes": "Canonical protocol specifications and evolution process."
+        },
+        {
+          "type": "article",
+          "title": "Nostr: Notes and Other Stuff Transmitted by Relays",
+          "url": "https://nostr.com/",
+          "notes": "High-level protocol overview and ecosystem entry point."
+        },
+        {
+          "type": "article",
+          "title": "NIP-01: Basic Protocol Flow",
+          "url": "https://github.com/nostr-protocol/nips/blob/master/01.md",
+          "notes": "Minimal baseline for events, signatures, and relay behavior."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "social",
+        "protocol"
+      ],
+      "aliases": [
+        "nostr protocol"
       ]
     },
     {
@@ -2478,13 +3279,129 @@
       ]
     },
     {
+      "id": "fundamentals.cyclic-groups",
+      "title": "Cyclic Groups",
+      "description": "Cyclic groups model repeated application of an operation from a generator and are the algebraic setting for many Bitcoin cryptographic constructions. They define why private scalars can map to public points in a structured way.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-arithmetic"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Introduces generator-based point multiplication in secp256k1."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Defines group operations and notation used for signatures."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 README",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+          "notes": "Implementation-oriented context for cyclic group operations on curve points."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "algebra",
+        "cryptography"
+      ],
+      "aliases": [
+        "generator groups"
+      ]
+    },
+    {
+      "id": "fundamentals.diffie-hellman-key-exchange",
+      "title": "Diffie-Hellman Key Exchange",
+      "description": "Diffie-Hellman lets two parties derive a shared secret over a public channel using group exponentiation. In Bitcoin systems, elliptic-curve variants appear in encrypted transport and protocol design patterns.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-exponentiation",
+        "fundamentals.cyclic-groups",
+        "fundamentals.discrete-log-problem",
+        "fundamentals.finite-fields"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 324: v2 P2P Transport Protocol",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki",
+          "notes": "Shows how modern Bitcoin transport uses ECDH-derived shared secrets."
+        },
+        {
+          "type": "article",
+          "title": "secp256k1 ECDH API",
+          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/include/secp256k1_ecdh.h",
+          "notes": "Concrete library interface for ECDH over secp256k1."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: P2P Attacks",
+          "url": "https://bitcoincore.academy/p2p-attacks.html",
+          "notes": "Threat-model context for why encrypted and authenticated transport matters."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "cryptography",
+        "key exchange"
+      ],
+      "aliases": [
+        "dh key exchange"
+      ]
+    },
+    {
+      "id": "fundamentals.digital-scarcity",
+      "title": "Digital Scarcity",
+      "description": "Digital scarcity is the ability to make digital units costly to forge and impossible to validly spend twice under shared rules. Bitcoin's breakthrough is combining cryptography, networking, and consensus to enforce that scarcity.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "history.double-spend-problem",
+        "protocol.proof-of-work"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Whitepaper PDF",
+          "url": "https://bitcoin.org/bitcoin.pdf",
+          "notes": "Primary source for digital cash design and double-spend resistance."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Block Chain",
+          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+          "notes": "Mechanics of blocks, confirmation, and chain selection."
+        },
+        {
+          "type": "article",
+          "title": "Double-spending",
+          "url": "https://en.wikipedia.org/wiki/Double-spending",
+          "notes": "General framing of digital scarcity constraints and attacks."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "fundamentals",
+        "consensus"
+      ],
+      "aliases": [
+        "escassez digital",
+        "digital money scarcity"
+      ]
+    },
+    {
       "id": "fundamentals.digital-signatures",
       "title": "Digital Signatures",
       "description": "Verifiable authorization without revealing private keys.",
       "category": "Security",
       "prerequisites": [
         "fundamentals.public-private-keys",
-        "fundamentals.ecdsa-basics"
+        "fundamentals.ecdsa"
       ],
       "resources": [
         {
@@ -2553,7 +3470,7 @@
     },
     {
       "id": "fundamentals.distributed-systems",
-      "title": "Distributed Systems Basics",
+      "title": "Distributed Systems",
       "description": "Replication, fault tolerance, and coordination in decentralized networks.",
       "category": "Network, Relay & Client Sync",
       "prerequisites": [],
@@ -2582,12 +3499,12 @@
         "fundamentals"
       ],
       "aliases": [
-        "distributed systems basics"
+        "distributed systems"
       ]
     },
     {
-      "id": "fundamentals.ecdsa-basics",
-      "title": "ECDSA Basics",
+      "id": "fundamentals.ecdsa",
+      "title": "ECDSA",
       "description": "ECDSA is the legacy Bitcoin signature algorithm used by pre-Taproot outputs and many wallets. Understanding its nonce and inverse terms explains key leak risks and malleability-era constraints.",
       "category": "Security",
       "prerequisites": [
@@ -2766,7 +3683,7 @@
     },
     {
       "id": "fundamentals.inflation",
-      "title": "Inflation Basics",
+      "title": "Inflation",
       "description": "How monetary expansion changes purchasing power and incentives.",
       "category": "Economics",
       "prerequisites": [
@@ -2797,7 +3714,7 @@
         "fundamentals"
       ],
       "aliases": [
-        "inflation basics"
+        "inflation"
       ]
     },
     {
@@ -2869,6 +3786,43 @@
       ],
       "aliases": [
         "mod arithmetic"
+      ]
+    },
+    {
+      "id": "fundamentals.modular-exponentiation",
+      "title": "Modular Exponentiation",
+      "description": "Fast exponentiation under a modulus is the core operation behind key exchange and signature verification. It turns repeated multiplication into tractable computation on large numbers.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.modular-arithmetic"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Keys and Addresses",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Introduces modular exponentiation in Bitcoin key math."
+        },
+        {
+          "type": "article",
+          "title": "Programming Bitcoin: Finite Fields",
+          "url": "https://github.com/jimmysong/programmingbitcoin/blob/master/ch03.asciidoc",
+          "notes": "Walks through exponentiation behavior in finite fields."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Spec-level context where modular exponentiation underpins group operations."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "mathematics",
+        "cryptography"
+      ],
+      "aliases": [
+        "mod exp"
       ]
     },
     {
@@ -3018,6 +3972,44 @@
       ],
       "aliases": [
         "p2p network"
+      ]
+    },
+    {
+      "id": "fundamentals.protocol-basics",
+      "title": "What Is a Protocol?",
+      "description": "A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.peer-to-peer-network"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: P2P Network",
+          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+          "notes": "Concrete example of protocol rules in a peer network."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Consensus Model",
+          "url": "https://bitcoincore.academy/consensus-model.html",
+          "notes": "How protocol rules produce shared canonical state."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Network: Wire Protocol",
+          "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
+          "notes": "Developer-oriented protocol message walkthrough."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "protocol",
+        "fundamentals"
+      ],
+      "aliases": [
+        "protocol definition",
+        "what is protocol"
       ]
     },
     {
@@ -3283,6 +4275,130 @@
       ]
     },
     {
+      "id": "history.bitcoin-anarchism",
+      "title": "Bitcoin and Anarchism",
+      "description": "Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.nodes-vs-miners",
+        "fundamentals.censorship-resistance"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "The Crypto Anarchist Manifesto",
+          "url": "https://nakamotoinstitute.org/library/crypto-anarchist-manifesto/",
+          "notes": "Foundational cypherpunk framing for non-state digital coordination."
+        },
+        {
+          "type": "article",
+          "title": "BIP 148: UASF SegWit Activation",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+          "notes": "Practical case where rule enforcement came from node operators."
+        },
+        {
+          "type": "article",
+          "title": "Cypherpunk Movement",
+          "url": "https://en.wikipedia.org/wiki/Cypherpunk",
+          "notes": "Context for the political philosophy around Bitcoin's origins."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "history",
+        "governance"
+      ],
+      "aliases": [
+        "bitcoin is not democracy",
+        "anarchism and bitcoin"
+      ]
+    },
+    {
+      "id": "history.bitcoin-immaculate-conception",
+      "title": "Bitcoin Immaculate Conception",
+      "description": "Bitcoin's birth context is unusual: early digital currencies had little market value, Satoshi's identity was unknown, anyone with commodity hardware could mine, and faucet distribution made coins widely available. This origin story matters for understanding Bitcoin's perceived fairness and decentralization culture.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "history.pre-bitcoin-digital-cash",
+        "history.early-bitcoin"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin v0.1 Announcement (2009)",
+          "url": "https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html",
+          "notes": "Primary source for launch-era context and initial release framing."
+        },
+        {
+          "type": "article",
+          "title": "Satoshi Nakamoto",
+          "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
+          "notes": "Background on the unresolved identity of Bitcoin's creator."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin History",
+          "url": "https://www.lopp.net/bitcoin-information/history.html",
+          "notes": "Timeline coverage of early mining, distribution, and adoption milestones."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Faucet",
+          "url": "https://en.wikipedia.org/wiki/Bitcoin#History",
+          "notes": "Historical overview including early faucet and zero-price era context."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "history",
+        "origins"
+      ],
+      "aliases": [
+        "concepcao imaculada",
+        "bitcoin birth circumstances",
+        "immaculate conception"
+      ]
+    },
+    {
+      "id": "history.bitcoin-narrative-cycles",
+      "title": "Bitcoin Narrative Cycles",
+      "description": "Public narratives around Bitcoin shift across boom-bust phases, regulation headlines, and technology milestones. Learning to separate narrative heat from structural signal improves judgment.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "history.early-bitcoin",
+        "economics.volatility-psychology-risk-sizing"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Beginner-friendly historical framing of market and media cycles."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Signal-rich updates that help anchor narratives in protocol reality."
+        },
+        {
+          "type": "article",
+          "title": "Original Whitepaper Announcement (Metzdowd)",
+          "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+          "notes": "Primary-source baseline for comparing early framing to later narratives."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "history",
+        "market-psychology"
+      ],
+      "aliases": [
+        "bull bear narrative cycles",
+        "media framing cycles"
+      ]
+    },
+    {
       "id": "history.bitcoin-whitepaper",
       "title": "Bitcoin Whitepaper",
       "description": "Original system design framing for decentralized digital cash and double-spend resistance.",
@@ -3355,6 +4471,45 @@
       ],
       "aliases": [
         "blocksize war"
+      ]
+    },
+    {
+      "id": "history.cypherpunk-roots-bitcoin-origin",
+      "title": "Cypherpunk Roots and Bitcoin Origin",
+      "description": "Bitcoin emerged from cypherpunk ideas about privacy, digital cash, and open-source coordination. This topic connects pre-Bitcoin experiments to the 2008-2009 launch context.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "history.cypherpunks",
+        "history.bitcoin-whitepaper"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Whitepaper PDF",
+          "url": "https://bitcoin.org/bitcoin.pdf",
+          "notes": "Primary source text for design goals and threat model assumptions."
+        },
+        {
+          "type": "article",
+          "title": "Original Whitepaper Announcement (Metzdowd)",
+          "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+          "notes": "Contemporaneous context from the cryptography mailing list."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Consensus Model",
+          "url": "https://bitcoincore.academy/consensus-model.html",
+          "notes": "Modern explanation of ideas introduced in early Bitcoin design."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "history",
+        "cypherpunk"
+      ],
+      "aliases": [
+        "bitcoin origin story",
+        "cypherpunk roots"
       ]
     },
     {
@@ -3545,6 +4700,129 @@
       ]
     },
     {
+      "id": "history.monetary-contact-shocks",
+      "title": "Monetary Contact Shocks",
+      "description": "When previously separate civilizations begin trading, a local money can lose scarcity if outsiders replicate it at lower cost. This helps explain monetary inflation episodes tied to technology and trade contact.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "history.rai-stones",
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Aggry Beads and West African Currency Traditions",
+          "url": "https://en.wikipedia.org/wiki/Aggry_beads",
+          "notes": "Historical anchor for bead-money and value shifts under foreign manufacture."
+        },
+        {
+          "type": "article",
+          "title": "Rai Stones (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Rai_stones",
+          "notes": "Parallel example of technology and transport changing monetary dynamics."
+        },
+        {
+          "type": "book",
+          "title": "The Ascent of Money",
+          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "notes": "Comparative context for currency disruption events across regions."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "history",
+        "monetary-history"
+      ],
+      "aliases": [
+        "civilizational monetary collisions",
+        "glass bead inflation episodes"
+      ]
+    },
+    {
+      "id": "history.pre-bitcoin-digital-cash",
+      "title": "Pre-Bitcoin Digital Cash Attempts",
+      "description": "Before Bitcoin, multiple designs tried to create digital money, including DigiCash, Hashcash, b-money, and bit gold. Studying these attempts clarifies what Bitcoin solved and what tradeoffs remained unresolved.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "history.cypherpunks",
+        "history.double-spend-problem"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "b-money",
+          "url": "https://en.wikipedia.org/wiki/B-money",
+          "notes": "Historical overview of Wei Dai's proposal and its relation to Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "Nick Szabo: Bit Gold",
+          "url": "https://unenumerated.blogspot.com/2005/12/bit-gold.html",
+          "notes": "Primary proposal for bit gold, a key precursor concept."
+        },
+        {
+          "type": "article",
+          "title": "Hashcash",
+          "url": "https://en.wikipedia.org/wiki/Hashcash",
+          "notes": "Background on proof-of-work used in anti-spam and later adapted by Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "DigiCash",
+          "url": "https://en.wikipedia.org/wiki/DigiCash",
+          "notes": "Early private digital cash system and its centralization tradeoffs."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "history",
+        "digital-cash"
+      ],
+      "aliases": [
+        "pre-historia do bitcoin",
+        "pre-bitcoin monetary experiments",
+        "digital cash precursors"
+      ]
+    },
+    {
+      "id": "history.rai-stones",
+      "title": "Rai Stones",
+      "description": "Rai stones from Yap are a classic case of socially recognized monetary ownership where transfer can occur without physically moving the asset. They illustrate that money depends on shared ledgers and social consensus.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "economics.history-of-money"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Rai Stones (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Rai_stones",
+          "notes": "Historical overview and references for Yap stone money."
+        },
+        {
+          "type": "book",
+          "title": "The Ascent of Money",
+          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "notes": "Broad monetary-history context that includes unusual money forms."
+        },
+        {
+          "type": "article",
+          "title": "History of Money",
+          "url": "https://bitcoin.page",
+          "notes": "Accessible bridge from historical money forms to Bitcoin thinking."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "history",
+        "money"
+      ],
+      "aliases": [
+        "yap stones",
+        "stone money"
+      ]
+    },
+    {
       "id": "history.rbf-policy-evolution",
       "title": "RBF Policy Evolution",
       "description": "Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.",
@@ -3619,6 +4897,45 @@
       "aliases": [
         "segwit rollout",
         "segwit activation history"
+      ]
+    },
+    {
+      "id": "history.social-consensus-technology",
+      "title": "Bitcoin as Social Technology",
+      "description": "Bitcoin works through social consensus around rule enforcement, not just code execution. Like contracts, the social layer determines legitimacy when disputes or edge cases appear.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "economics.schelling-points",
+        "history.block-size-war"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Block Size War",
+          "url": "https://bitcoinops.org/en/topics/segregated-witness/",
+          "notes": "Historical case of social coordination shaping protocol path."
+        },
+        {
+          "type": "article",
+          "title": "BIP 148: UASF SegWit Activation",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+          "notes": "Primary source showing node-driven social enforcement."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Whitepaper PDF",
+          "url": "https://bitcoin.org/bitcoin.pdf",
+          "notes": "Original technical design, interpreted through social adoption reality."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "history",
+        "governance"
+      ],
+      "aliases": [
+        "social layer",
+        "bitcoin social technology"
       ]
     },
     {
@@ -4717,6 +6034,45 @@
       ]
     },
     {
+      "id": "mining.asics",
+      "title": "ASICs",
+      "description": "ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.mining-hardware",
+        "history.gpu-to-asic-era"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Application-specific Integrated Circuit",
+          "url": "https://en.wikipedia.org/wiki/Application-specific_integrated_circuit",
+          "notes": "General concept and design constraints for specialized chips."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Mining Resources",
+          "url": "https://www.lopp.net/bitcoin-information/mining.html",
+          "notes": "Curated references on miner hardware and industry structure."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: ASICBoost",
+          "url": "https://bitcoinops.org/en/topics/asicboost/",
+          "notes": "ASIC-level optimization context and policy implications."
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "mining",
+        "hardware"
+      ],
+      "aliases": [
+        "asic miners",
+        "application specific integrated circuit"
+      ]
+    },
+    {
       "id": "mining.block-propagation-latency",
       "title": "Block Propagation Latency",
       "description": "How network propagation speed affects stale risk, template quality, and mining profitability.",
@@ -4831,6 +6187,130 @@
       ]
     },
     {
+      "id": "mining.energy-accounting",
+      "title": "Mining Energy Accounting",
+      "description": "Energy analysis depends on boundaries and assumptions, especially the difference between marginal and average accounting. Good analysis distinguishes physical grid effects from narrative shortcuts.",
+      "category": "Mining",
+      "prerequisites": [
+        "protocol.proof-of-work",
+        "economics.cost-of-production"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html",
+          "notes": "Mechanics of PoW and miner incentives as a base for energy accounting discussions."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Mining",
+          "url": "https://www.lopp.net/bitcoin-information/mining.html",
+          "notes": "Curated references on mining economics, infrastructure, and research."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin: Mining and Consensus",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "notes": "Protocol-level treatment of work, cost, and security."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "mining",
+        "energy"
+      ],
+      "aliases": [
+        "marginal vs average energy",
+        "bitcoin energy accounting"
+      ]
+    },
+    {
+      "id": "mining.environmental-co-benefits",
+      "title": "Environmental Co-Benefits",
+      "description": "Bitcoin mining can use renewable energy well, can be a good demand response load, can recycle heat, can reduce methane emissions, and can use lost energy that would otherwise be wasted.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.energy-accounting",
+        "mining.grid-balancing-demand-response"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Demand Response",
+          "url": "https://en.wikipedia.org/wiki/Demand_response",
+          "notes": "Grid flexibility mechanics relevant to interruptible mining load."
+        },
+        {
+          "type": "article",
+          "title": "Waste Heat",
+          "url": "https://en.wikipedia.org/wiki/Waste_heat",
+          "notes": "Background on capturing and reusing rejected thermal energy."
+        },
+        {
+          "type": "article",
+          "title": "Methane Emissions",
+          "url": "https://en.wikipedia.org/wiki/Methane_emissions",
+          "notes": "Context for flare mitigation and methane-to-power pathways."
+        },
+        {
+          "type": "article",
+          "title": "Curtailment (Electricity)",
+          "url": "https://en.wikipedia.org/wiki/Curtailment_(electricity)",
+          "notes": "Background on energy that is produced but not consumed due to grid constraints."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mining",
+        "environment",
+        "energy"
+      ],
+      "aliases": [
+        "bitcoin environmental positives",
+        "environmental benefits of mining"
+      ]
+    },
+    {
+      "id": "mining.environmental-debate",
+      "title": "Mining Environmental Debate",
+      "description": "Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.energy-accounting",
+        "mining.grid-balancing-demand-response"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Mining",
+          "url": "https://www.lopp.net/bitcoin-information/mining.html",
+          "notes": "Diverse source collection across environmental and economic viewpoints."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html",
+          "notes": "Protocol baseline to avoid category errors in environmental arguments."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin.page",
+          "url": "https://bitcoin.page",
+          "notes": "Beginner-friendly framing before diving into adversarial debate material."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "mining",
+        "environment"
+      ],
+      "aliases": [
+        "bitcoin environmental impact",
+        "mining climate debate"
+      ]
+    },
+    {
       "id": "mining.fee-sniping",
       "title": "Fee Sniping",
       "description": "Miner strategy of re-mining recent blocks to capture high-fee transactions, with reorg and incentive tradeoffs.",
@@ -4905,6 +6385,45 @@
       ],
       "aliases": [
         "gbt"
+      ]
+    },
+    {
+      "id": "mining.grid-balancing-demand-response",
+      "title": "Grid Balancing and Demand Response",
+      "description": "Flexible mining loads can curtail or ramp based on grid conditions and price signals. This introduces potential value in balancing intermittent generation and constrained transmission.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.energy-accounting"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html",
+          "notes": "Miner operating constraints that shape responsiveness to power prices."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Mining",
+          "url": "https://www.lopp.net/bitcoin-information/mining.html",
+          "notes": "Operational references including discussions of power-market dynamics."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech",
+          "url": "https://bitcoinops.org/",
+          "notes": "Background context for mining policy and economics discussions."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "mining",
+        "energy",
+        "grid"
+      ],
+      "aliases": [
+        "demand response",
+        "grid services from mining"
       ]
     },
     {
@@ -5059,7 +6578,7 @@
     },
     {
       "id": "mining.stratum",
-      "title": "Stratum Basics",
+      "title": "Stratum",
       "description": "Mining communication protocol concepts and architecture.",
       "category": "Mining",
       "prerequisites": [
@@ -5090,7 +6609,7 @@
         "mining"
       ],
       "aliases": [
-        "stratum basics"
+        "stratum protocol"
       ]
     },
     {
@@ -5470,6 +6989,44 @@
       ],
       "aliases": [
         "mempool policy"
+      ]
+    },
+    {
+      "id": "ops.mesh-networks",
+      "title": "Mesh Networks",
+      "description": "Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "fundamentals.peer-to-peer-network"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mesh Networking",
+          "url": "https://en.wikipedia.org/wiki/Mesh_networking",
+          "notes": "General networking primer for decentralized mesh routing."
+        },
+        {
+          "type": "article",
+          "title": "goTenna",
+          "url": "https://gotenna.com/",
+          "notes": "Commercial mesh communication context often referenced in off-grid Bitcoin discussions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: P2P Network",
+          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
+          "notes": "Networking fundamentals needed before mesh-specific tradeoffs."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "network",
+        "resilience"
+      ],
+      "aliases": [
+        "off-grid bitcoin networking",
+        "mesh networking"
       ]
     },
     {
@@ -6111,8 +7668,8 @@
       ]
     },
     {
-      "id": "privacy.coinjoin-basics",
-      "title": "CoinJoin Basics",
+      "id": "privacy.coinjoin",
+      "title": "CoinJoin",
       "description": "Collaborative transaction construction to reduce heuristics.",
       "category": "Security",
       "prerequisites": [
@@ -6144,7 +7701,7 @@
         "privacy"
       ],
       "aliases": [
-        "coinjoin basics"
+        "coinjoin"
       ]
     },
     {
@@ -6369,6 +7926,46 @@
       ],
       "aliases": [
         "p2ep"
+      ]
+    },
+    {
+      "id": "privacy.pseudonymity",
+      "title": "Pseudonymity (Not Anonymity)",
+      "description": "Bitcoin is pseudonymous, not anonymous: addresses are public identifiers that can be linked to real identities through behavior, counterparties, and metadata. Privacy requires active operational practices rather than default assumptions.",
+      "category": "Security",
+      "prerequisites": [
+        "protocol.addresses-outputs",
+        "fundamentals.public-private-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Pseudonymity",
+          "url": "https://en.wikipedia.org/wiki/Pseudonymity",
+          "notes": "Conceptual baseline distinguishing pseudonymity from anonymity."
+        },
+        {
+          "type": "article",
+          "title": "Lopp: Bitcoin Privacy",
+          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
+          "notes": "Practical privacy failures and defensive techniques for Bitcoin users."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Linking",
+          "url": "https://bitcoinops.org/en/topics/output-linking/",
+          "notes": "How transaction graph patterns deanonymize pseudonymous activity."
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "privacy",
+        "security"
+      ],
+      "aliases": [
+        "bitcoin is not anonymous",
+        "pseudonimity",
+        "pseudonymity"
       ]
     },
     {
@@ -6645,7 +8242,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.taproot",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -7142,7 +8739,7 @@
       "description": "Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics",
+        "protocol.script",
         "protocol.taproot"
       ],
       "resources": [
@@ -7369,7 +8966,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.covenants",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -7555,7 +9152,7 @@
     {
       "id": "protocol.fee-market",
       "title": "Fee Market",
-      "description": "Blockspace auction dynamics and confirmation priority.",
+      "description": "How users bid for blockspace and why confirmation priority follows fee rates under congestion.",
       "category": "Economics",
       "prerequisites": [
         "protocol.mempool"
@@ -7586,6 +9183,7 @@
         "protocol"
       ],
       "aliases": [
+        "fee market",
         "fee market"
       ]
     },
@@ -7783,7 +9381,7 @@
     {
       "id": "protocol.mempool",
       "title": "Mempool",
-      "description": "Unconfirmed transaction relay and node policy behavior.",
+      "description": "How unconfirmed transactions propagate, queue, and get filtered by local node policy.",
       "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.transaction-lifecycle"
@@ -7814,6 +9412,7 @@
         "protocol"
       ],
       "aliases": [
+        "mempool",
         "mempool"
       ]
     },
@@ -7861,7 +9460,7 @@
       "description": "OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -7899,7 +9498,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.taproot",
-        "protocol.script-basics",
+        "protocol.script",
         "fundamentals.schnorr-signatures"
       ],
       "resources": [
@@ -7937,7 +9536,7 @@
       "description": "OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics",
+        "protocol.script",
         "protocol.taproot"
       ],
       "resources": [
@@ -8014,7 +9613,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.sighash-flags",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -8051,7 +9650,7 @@
       "description": "Provably unspendable script outputs used for bounded data commitments on-chain.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -8122,7 +9721,7 @@
       "description": "Output type where spending conditions are committed as a script hash and revealed at spend time.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -8156,7 +9755,7 @@
     {
       "id": "protocol.proof-of-work",
       "title": "Proof of Work",
-      "description": "Energy-based sybil resistance and chain security.",
+      "description": "Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.",
       "category": "Protocol & Consensus",
       "prerequisites": [
         "fundamentals.hash-functions",
@@ -8268,8 +9867,8 @@
       ]
     },
     {
-      "id": "protocol.script-basics",
-      "title": "Bitcoin Script Basics",
+      "id": "protocol.script",
+      "title": "Bitcoin Script",
       "description": "Locking and unlocking conditions for UTXO spending.",
       "category": "Protocol & Consensus",
       "prerequisites": [
@@ -8302,7 +9901,7 @@
         "protocol"
       ],
       "aliases": [
-        "bitcoin script basics"
+        "bitcoin script"
       ]
     },
     {
@@ -8386,7 +9985,7 @@
       "description": "Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -8537,7 +10136,7 @@
       "description": "Timelock primitives used to constrain when funds can be spent in script contracts.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -8613,7 +10212,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.utxo-model",
-        "protocol.script-basics"
+        "protocol.script"
       ],
       "resources": [
         {
@@ -9023,6 +10622,45 @@
       ],
       "aliases": [
         "threat modeling"
+      ]
+    },
+    {
+      "id": "security.aml-kyc-sanctions-tradeoffs",
+      "title": "AML/KYC and Sanctions Tradeoffs",
+      "description": "Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.",
+      "category": "Security",
+      "prerequisites": [
+        "privacy.kyc-tradeoffs",
+        "fundamentals.censorship-resistance"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design",
+          "url": "https://bitcoin.design/",
+          "notes": "User safety and privacy constraints under regulated onboarding models."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Anonymity Networks",
+          "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
+          "notes": "Network privacy primitives relevant to censorship and surveillance pressure."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Tor Documentation",
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
+          "notes": "Implementation-level tooling for reducing network-level metadata leakage."
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "security",
+        "regulation"
+      ],
+      "aliases": [
+        "compliance tradeoffs",
+        "sanctions and bitcoin"
       ]
     },
     {

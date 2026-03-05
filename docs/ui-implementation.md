@@ -49,6 +49,14 @@
 2. Add subtle node-entry animation when filters change.
 3. Add an explicit “learning streak” stat once progress dates are used in UI.
 
+## Node Sidebar AI (current behavior)
+- Node detail sidebar now includes `Ask AI about this node` (collapsed by default).
+- Expanding the section reveals:
+  - quick actions (`Summarize`, `Explain simply`, `What next?`, `Quiz me`)
+  - editable prompt textarea prefilled with node context
+  - `Copy prompt` and `Open chat` actions
+- Context includes selected node metadata, prerequisites, post-requisites, detected gaps, and current progress state.
+
 ## Iteration 2 improvements (post-merge polish)
 1. Graph readability
 - Increased dagre spacing and added viewport fitting after each graph rerender to avoid compressed “bottom strip” rendering.

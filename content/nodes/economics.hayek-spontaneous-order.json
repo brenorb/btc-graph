@@ -1,0 +1,38 @@
+{
+  "id": "economics.hayek-spontaneous-order",
+  "title": "Hayek and Spontaneous Order",
+  "description": "Hayek's spontaneous-order view explains how institutions like money, law, and language emerge from repeated coordination rather than central design. Bitcoin is often analyzed through this lens as an emergent monetary institution.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.hayek-money-competition"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Hayek: The Use of Knowledge in Society",
+      "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+      "notes": "Core text on decentralized knowledge and emergent order."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Money-competition extension of spontaneous-order reasoning."
+    },
+    {
+      "type": "article",
+      "title": "Schelling Points",
+      "url": "https://en.wikipedia.org/wiki/Focal_point_(game_theory)",
+      "notes": "Game-theory bridge for spontaneous institutional convergence."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "institutions"
+  ],
+  "aliases": [
+    "spontaneous order",
+    "hayek institutions"
+  ]
+}

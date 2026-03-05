@@ -1,0 +1,46 @@
+{
+  "id": "mining.environmental-co-benefits",
+  "title": "Environmental Co-Benefits",
+  "description": "Bitcoin mining can use renewable energy well, can be a good demand response load, can recycle heat, can reduce methane emissions, and can use lost energy that would otherwise be wasted.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.energy-accounting",
+    "mining.grid-balancing-demand-response"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Demand Response",
+      "url": "https://en.wikipedia.org/wiki/Demand_response",
+      "notes": "Grid flexibility mechanics relevant to interruptible mining load."
+    },
+    {
+      "type": "article",
+      "title": "Waste Heat",
+      "url": "https://en.wikipedia.org/wiki/Waste_heat",
+      "notes": "Background on capturing and reusing rejected thermal energy."
+    },
+    {
+      "type": "article",
+      "title": "Methane Emissions",
+      "url": "https://en.wikipedia.org/wiki/Methane_emissions",
+      "notes": "Context for flare mitigation and methane-to-power pathways."
+    },
+    {
+      "type": "article",
+      "title": "Curtailment (Electricity)",
+      "url": "https://en.wikipedia.org/wiki/Curtailment_(electricity)",
+      "notes": "Background on energy that is produced but not consumed due to grid constraints."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "mining",
+    "environment",
+    "energy"
+  ],
+  "aliases": [
+    "bitcoin environmental positives",
+    "environmental benefits of mining"
+  ]
+}

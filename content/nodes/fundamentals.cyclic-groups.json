@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.cyclic-groups",
+  "title": "Cyclic Groups",
+  "description": "Cyclic groups model repeated application of an operation from a generator and are the algebraic setting for many Bitcoin cryptographic constructions. They define why private scalars can map to public points in a structured way.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.modular-arithmetic"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Keys and Addresses",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Introduces generator-based point multiplication in secp256k1."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures for secp256k1",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Defines group operations and notation used for signatures."
+    },
+    {
+      "type": "article",
+      "title": "secp256k1 README",
+      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
+      "notes": "Implementation-oriented context for cyclic group operations on curve points."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "algebra",
+    "cryptography"
+  ],
+  "aliases": [
+    "generator groups"
+  ]
+}

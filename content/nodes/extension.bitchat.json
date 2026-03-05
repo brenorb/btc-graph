@@ -1,0 +1,39 @@
+{
+  "id": "extension.bitchat",
+  "title": "Bitchat",
+  "description": "Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "ops.mesh-networks",
+    "extension.nostr"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Nostr NIPs Repository",
+      "url": "https://github.com/nostr-protocol/nips",
+      "notes": "Reference base for relay messaging design patterns adjacent to Bitchat-like systems."
+    },
+    {
+      "type": "article",
+      "title": "Mesh Networking",
+      "url": "https://en.wikipedia.org/wiki/Mesh_networking",
+      "notes": "Networking context for decentralized chat transport models."
+    },
+    {
+      "type": "article",
+      "title": "Cypherpunk Movement",
+      "url": "https://en.wikipedia.org/wiki/Cypherpunk",
+      "notes": "Historical roots of private and censorship-resistant messaging systems."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "social",
+    "messaging"
+  ],
+  "aliases": [
+    "bitcoin chat layers",
+    "bitchat messaging"
+  ]
+}

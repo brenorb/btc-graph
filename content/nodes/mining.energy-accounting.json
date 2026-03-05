@@ -1,0 +1,39 @@
+{
+  "id": "mining.energy-accounting",
+  "title": "Mining Energy Accounting",
+  "description": "Energy analysis depends on boundaries and assumptions, especially the difference between marginal and average accounting. Good analysis distinguishes physical grid effects from narrative shortcuts.",
+  "category": "Mining",
+  "prerequisites": [
+    "protocol.proof-of-work",
+    "economics.cost-of-production"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html",
+      "notes": "Mechanics of PoW and miner incentives as a base for energy accounting discussions."
+    },
+    {
+      "type": "article",
+      "title": "Lopp: Bitcoin Mining",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "notes": "Curated references on mining economics, infrastructure, and research."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin: Mining and Consensus",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "notes": "Protocol-level treatment of work, cost, and security."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "mining",
+    "energy"
+  ],
+  "aliases": [
+    "marginal vs average energy",
+    "bitcoin energy accounting"
+  ]
+}

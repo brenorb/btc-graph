@@ -4,7 +4,7 @@
   "description": "OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script-basics",
+    "protocol.script",
     "protocol.taproot"
   ],
   "resources": [

@@ -5,7 +5,7 @@
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.utxo-model",
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

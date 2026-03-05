@@ -1,0 +1,39 @@
+{
+  "id": "economics.savings-vs-investment",
+  "title": "Savings vs Investment",
+  "description": "Savings prioritizes preserving purchasing power with minimal dependence on counterparties, while investment takes additional risk for expected yield. Bitcoin is best understood as savings technology first, with investment-like behavior as a secondary market expression.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.time-preference",
+    "economics.volatility-psychology-risk-sizing"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Beginner-friendly framing for savings behavior and monetary choices."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "Practical user guidance for long-term custody and risk-aware behavior."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Monetary-competition lens for evaluating money as savings infrastructure."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "economics",
+    "behavior"
+  ],
+  "aliases": [
+    "bitcoin as savings technology",
+    "saving vs investing"
+  ]
+}

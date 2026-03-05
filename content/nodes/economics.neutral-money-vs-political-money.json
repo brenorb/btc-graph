@@ -1,0 +1,39 @@
+{
+  "id": "economics.neutral-money-vs-political-money",
+  "title": "Neutral Money vs Political Money",
+  "description": "Neutral money minimizes discretionary favoritism, while political money embeds policy preferences and selective intervention. This contrast helps explain why credible neutrality matters for global settlement assets.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.neutrality",
+    "economics.hayek-money-competition"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Neutrality",
+      "url": "https://bitcoindevphilosophy.com/#neutrality",
+      "notes": "Direct framing of neutrality as a system design goal."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Competition-based argument against politically monopolized currency."
+    },
+    {
+      "type": "book",
+      "title": "The Road to Serfdom",
+      "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+      "notes": "Background on centralized economic control and institutional incentives."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "political-economy"
+  ],
+  "aliases": [
+    "apolitical money",
+    "state money vs market money"
+  ]
+}

@@ -4,7 +4,7 @@
   "description": "OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

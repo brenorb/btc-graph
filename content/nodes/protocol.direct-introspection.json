@@ -5,7 +5,7 @@
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.covenants",
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

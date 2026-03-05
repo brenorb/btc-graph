@@ -1,6 +1,6 @@
 {
   "id": "fundamentals.distributed-systems",
-  "title": "Distributed Systems Basics",
+  "title": "Distributed Systems",
   "description": "Replication, fault tolerance, and coordination in decentralized networks.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [],
@@ -29,6 +29,6 @@
     "fundamentals"
   ],
   "aliases": [
-    "distributed systems basics"
+    "distributed systems"
   ]
 }

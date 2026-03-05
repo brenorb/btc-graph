@@ -1,0 +1,40 @@
+{
+  "id": "economics.need-for-inflation",
+  "title": "Need for Inflation?",
+  "description": "Mainstream policy frameworks argue for low positive inflation targets to reduce deflation risk and support wage and debt adjustment. Competing schools argue these benefits are overstated and can hide distributional costs.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.inflation",
+    "economics.central-bank-basics",
+    "economics.monetary-vs-price-inflation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Federal Reserve FAQ: Why Does the Fed Aim for 2 Percent Inflation?",
+      "url": "https://www.federalreserve.gov/faqs/economy_14400.htm",
+      "notes": "Primary-source rationale for a positive inflation target."
+    },
+    {
+      "type": "article",
+      "title": "Inflation Targeting",
+      "url": "https://en.wikipedia.org/wiki/Inflation_targeting",
+      "notes": "Comparative background across central-bank frameworks."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Competing perspective challenging discretionary inflation policy."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "monetary-policy"
+  ],
+  "aliases": [
+    "is inflation necessary",
+    "need for inflation"
+  ]
+}

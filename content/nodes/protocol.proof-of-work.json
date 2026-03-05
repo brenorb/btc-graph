@@ -1,7 +1,7 @@
 {
   "id": "protocol.proof-of-work",
   "title": "Proof of Work",
-  "description": "Energy-based sybil resistance and chain security.",
+  "description": "Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.",
   "category": "Protocol & Consensus",
   "prerequisites": [
     "fundamentals.hash-functions",

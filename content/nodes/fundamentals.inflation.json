@@ -1,6 +1,6 @@
 {
   "id": "fundamentals.inflation",
-  "title": "Inflation Basics",
+  "title": "Inflation",
   "description": "How monetary expansion changes purchasing power and incentives.",
   "category": "Economics",
   "prerequisites": [
@@ -31,6 +31,6 @@
     "fundamentals"
   ],
   "aliases": [
-    "inflation basics"
+    "inflation"
   ]
 }

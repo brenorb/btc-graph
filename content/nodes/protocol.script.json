@@ -1,6 +1,6 @@
 {
-  "id": "protocol.script-basics",
-  "title": "Bitcoin Script Basics",
+  "id": "protocol.script",
+  "title": "Bitcoin Script",
   "description": "Locking and unlocking conditions for UTXO spending.",
   "category": "Protocol & Consensus",
   "prerequisites": [
@@ -33,6 +33,6 @@
     "protocol"
   ],
   "aliases": [
-    "bitcoin script basics"
+    "bitcoin script"
   ]
 }

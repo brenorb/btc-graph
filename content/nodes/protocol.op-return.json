@@ -4,7 +4,7 @@
   "description": "Provably unspendable script outputs used for bounded data commitments on-chain.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script-basics"
+    "protocol.script"
   ],
   "resources": [
     {

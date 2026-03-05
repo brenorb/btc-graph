@@ -1,0 +1,40 @@
+{
+  "id": "economics.monetization-process",
+  "title": "Monetization Process",
+  "description": "How an asset moves from collectible demand toward broader use as savings and settlement money. Monetization is path-dependent and shaped by social coordination.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.history-of-money",
+    "fundamentals.money-properties",
+    "economics.scarcity"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin.page",
+      "url": "https://bitcoin.page",
+      "notes": "Introductory framing of monetary emergence and adoption stages."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech",
+      "url": "https://bitcoinops.org/",
+      "notes": "Applied context for how adoption pressure shows up in protocol usage."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design",
+      "url": "https://bitcoin.design/",
+      "notes": "User behavior lens for moving from speculative to utility-driven usage."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "economics",
+    "adoption"
+  ],
+  "aliases": [
+    "asset monetization",
+    "monetary adoption process"
+  ]
+}

@@ -31,10 +31,10 @@ const PHASE_11_NODE_IDS = [
 ] as const;
 
 const REQUIRED_PHASE_11_PREREQUISITES: Record<string, string[]> = {
-  "protocol.annex": ["protocol.taproot", "protocol.script-basics"],
+  "protocol.annex": ["protocol.taproot", "protocol.script"],
   "mining.asicboost": ["mining.mining-hardware", "protocol.proof-of-work"],
   "extension.channel-factories": ["lightning.payment-channels", "lightning.liquidity"],
-  "extension.coinswap": ["privacy.coinjoin-basics", "protocol.timelocks"],
+  "extension.coinswap": ["privacy.coinjoin", "protocol.timelocks"],
   "extension.ecash": ["fundamentals.digital-signatures", "protocol.utxo-model"],
   "privacy.silent-payments": ["protocol.taproot", "privacy.address-reuse"],
   "ops.utreexo": ["ops.utxo-set-management", "protocol.utxo-model"],

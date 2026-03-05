@@ -273,6 +273,58 @@ input {
   gap: 6px;
 }
 
+.node-ai-block {
+  border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--panel-border));
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.node-ai-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.node-ai-header h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.node-ai-panel {
+  border-top: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--panel-border));
+  padding-top: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.node-ai-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.node-ai-prompt {
+  width: 100%;
+  min-height: 144px;
+  resize: vertical;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: var(--control-bg);
+  color: var(--text);
+  padding: 10px;
+  font: 500 0.82rem/1.45 "IBM Plex Sans", sans-serif;
+}
+
+.node-ai-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .resource {
   border: 1px solid var(--panel-border);
   border-radius: 10px;

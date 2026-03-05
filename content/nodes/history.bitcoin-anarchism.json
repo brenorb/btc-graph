@@ -1,0 +1,39 @@
+{
+  "id": "history.bitcoin-anarchism",
+  "title": "Bitcoin and Anarchism",
+  "description": "Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "protocol.nodes-vs-miners",
+    "fundamentals.censorship-resistance"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "The Crypto Anarchist Manifesto",
+      "url": "https://nakamotoinstitute.org/library/crypto-anarchist-manifesto/",
+      "notes": "Foundational cypherpunk framing for non-state digital coordination."
+    },
+    {
+      "type": "article",
+      "title": "BIP 148: UASF SegWit Activation",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki",
+      "notes": "Practical case where rule enforcement came from node operators."
+    },
+    {
+      "type": "article",
+      "title": "Cypherpunk Movement",
+      "url": "https://en.wikipedia.org/wiki/Cypherpunk",
+      "notes": "Context for the political philosophy around Bitcoin's origins."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "history",
+    "governance"
+  ],
+  "aliases": [
+    "bitcoin is not democracy",
+    "anarchism and bitcoin"
+  ]
+}

@@ -28,6 +28,8 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - graph view shows concept names
   - node labels are shown by default and can be toggled with explicit `Show all labels` / `Hide all labels` controls
   - click a node to open details in a right sidebar
+  - node details include an in-sidebar `Ask AI about this node` action (collapsed by default)
+  - when expanded, AI helper is contextual to the selected node (description, prerequisites, gaps, and progress state) and offers quick prompt actions
   - details include a curated set of resources:
     - links/articles
     - videos
@@ -105,7 +107,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
 
 ## Draft Node Data Model
 Each node should minimally support:
-- `id` (stable slug, e.g. `wallets.utxo-basics`)
+- `id` (stable slug, e.g. `wallets.utxo-model`)
 - `title`
 - `description` (short)
 - `prerequisites` (array of node ids)

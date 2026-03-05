@@ -1,0 +1,38 @@
+{
+  "id": "economics.central-bank-basics",
+  "title": "Central Bank Basics",
+  "description": "Central banks manage base money, lender-of-last-resort functions, and policy rates within modern fiat systems. Understanding their role is required for comparing Bitcoin to state monetary institutions.",
+  "category": "Economics",
+  "prerequisites": [
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Central Bank",
+      "url": "https://en.wikipedia.org/wiki/Central_bank",
+      "notes": "Foundational overview of mandates and policy tools."
+    },
+    {
+      "type": "article",
+      "title": "Federal Reserve: Monetary Policy",
+      "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+      "notes": "Primary-source institutional explanation of policy framework."
+    },
+    {
+      "type": "article",
+      "title": "Mises Library: Denationalisation of Money",
+      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "notes": "Competing perspective on central-bank monopoly versus currency competition."
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "economics",
+    "institutions"
+  ],
+  "aliases": [
+    "central bank role",
+    "monetary authority"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "history.rai-stones",
+  "title": "Rai Stones",
+  "description": "Rai stones from Yap are a classic case of socially recognized monetary ownership where transfer can occur without physically moving the asset. They illustrate that money depends on shared ledgers and social consensus.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "economics.history-of-money"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Rai Stones (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rai_stones",
+      "notes": "Historical overview and references for Yap stone money."
+    },
+    {
+      "type": "book",
+      "title": "The Ascent of Money",
+      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+      "notes": "Broad monetary-history context that includes unusual money forms."
+    },
+    {
+      "type": "article",
+      "title": "History of Money",
+      "url": "https://bitcoin.page",
+      "notes": "Accessible bridge from historical money forms to Bitcoin thinking."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "history",
+    "money"
+  ],
+  "aliases": [
+    "yap stones",
+    "stone money"
+  ]
+}
