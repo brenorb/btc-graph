@@ -173,7 +173,7 @@ input {
   box-shadow: var(--shadow);
   background: var(--panel);
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto auto minmax(0, 1fr);
   overflow: hidden;
   position: relative;
   min-height: 0;
@@ -210,6 +210,10 @@ input {
 
 .mobile-tools-panel {
   display: contents;
+}
+
+.graph-controls {
+  display: none;
 }
 
 .legend-item {
@@ -674,6 +678,15 @@ input {
     z-index: 1;
   }
 
+  .detail-heading {
+    display: grid;
+    gap: 10px;
+  }
+
+  .detail-heading .btn {
+    width: 100%;
+  }
+
   .detail-close-btn,
   .detail-backdrop {
     display: block;
@@ -684,6 +697,19 @@ input {
     inset: 0;
     z-index: 24;
     background: rgba(14, 20, 33, 0.34);
+  }
+
+  .graph-controls {
+    display: flex;
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 18;
+    gap: 8px;
+  }
+
+  .graph-fit-btn {
+    min-width: 52px;
   }
 
   .mobile-sheet-handle {

@@ -3,6 +3,7 @@ import type { ProgressState } from "./types";
 export type LabelVisibilityMode = "all" | "none";
 export type ThemeMode = "light" | "dark";
 export type CategoryBulkAction = "select_all" | "deselect_all";
+export type ViewportMode = "desktop" | "mobile";
 
 export interface GraphLayoutSettings {
   name: "dagre";
@@ -74,7 +75,21 @@ export function applyCategoryBulkAction(
   return new Set(categories);
 }
 
-export function resolveGraphLayoutSettings(): GraphLayoutSettings {
+export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop"): GraphLayoutSettings {
+  if (viewportMode === "mobile") {
+    return {
+      name: "dagre",
+      rankDir: "BT",
+      ranker: "tight-tree",
+      nodeSep: 4,
+      rankSep: 110,
+      edgeSep: 2,
+      spacingFactor: 0.82,
+      nodeDimensionsIncludeLabels: false,
+      animate: false,
+    };
+  }
+
   return {
     name: "dagre",
     rankDir: "BT",

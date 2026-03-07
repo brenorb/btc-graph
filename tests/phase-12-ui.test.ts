@@ -31,6 +31,17 @@ describe("phase 12 ui helpers", () => {
       expect(layout.nodeDimensionsIncludeLabels).toBe(true);
       expect(layout.animate).toBe(false);
     });
+
+    it("packs the graph more tightly on mobile viewports", () => {
+      const desktop = resolveGraphLayoutSettings();
+      const mobile = resolveGraphLayoutSettings("mobile");
+
+      expect(mobile.rankDir).toBe("BT");
+      expect(mobile.rankSep).toBeLessThan(desktop.rankSep);
+      expect(mobile.nodeSep).toBeLessThan(desktop.nodeSep);
+      expect(mobile.spacingFactor).toBeLessThan(desktop.spacingFactor);
+      expect(mobile.nodeDimensionsIncludeLabels).toBe(false);
+    });
   });
 
   describe("resolveGraphColorPalette", () => {

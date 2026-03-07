@@ -194,6 +194,11 @@ function createLayout(root: HTMLElement) {
           </div>
         </div>
         <div id="graph"></div>
+        <div class="graph-controls mobile-only">
+          <button class="icon-btn" id="graph-zoom-in" type="button" aria-label="Zoom in">+</button>
+          <button class="icon-btn" id="graph-zoom-out" type="button" aria-label="Zoom out">-</button>
+          <button class="btn graph-fit-btn" id="graph-zoom-fit" type="button">Fit</button>
+        </div>
       </section>
 
       <div class="detail-backdrop" id="detail-backdrop" hidden></div>
@@ -766,6 +771,7 @@ function syncUrlState(state: AppState) {
 }
 
 function rerenderGraph(state: AppState, root: HTMLElement) {
+  state.viewportMode = resolveViewportMode(window.innerWidth);
   const elements = computeElements(state);
   const previousSelectedId = state.selectedId;
   state.selectedId = reconcileSelection(state.selectedId, elements.strictVisibleIds);
@@ -776,7 +782,8 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
   state.cy.add([...elements.nodes, ...elements.edges]);
   syncNodeClasses(state);
 
-  state.cy.layout(resolveGraphLayoutSettings()).run();
+  state.cy.resize();
+  state.cy.layout(resolveGraphLayoutSettings(state.viewportMode)).run();
 
   refreshLabels(state);
   renderCategoryBulkControls(state, root);
@@ -849,6 +856,21 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     });
   });
 
+  root.querySelector<HTMLButtonElement>("#graph-zoom-in")?.addEventListener("click", () => {
+    state.cy.zoom(state.cy.zoom() * 1.22);
+    refreshLabels(state);
+  });
+
+  root.querySelector<HTMLButtonElement>("#graph-zoom-out")?.addEventListener("click", () => {
+    state.cy.zoom(state.cy.zoom() / 1.22);
+    refreshLabels(state);
+  });
+
+  root.querySelector<HTMLButtonElement>("#graph-zoom-fit")?.addEventListener("click", () => {
+    state.cy.fit();
+    refreshLabels(state);
+  });
+
   root.querySelector<HTMLButtonElement>("#mobile-tools-toggle")?.addEventListener("click", () => {
     setMobileToolsOpen(!state.mobileToolsOpen);
   });
@@ -885,7 +907,15 @@ function wireInteractions(state: AppState, root: HTMLElement) {
   });
 
   window.addEventListener("resize", () => {
+    const previousMode = state.viewportMode;
     syncResponsiveLayout(state, root);
+    state.cy.resize();
+    if (state.viewportMode !== previousMode) {
+      rerenderGraph(state, root);
+      return;
+    }
+
+    refreshLabels(state);
   });
 
   document.addEventListener("keydown", (event) => {

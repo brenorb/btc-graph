@@ -85,6 +85,8 @@ class FakeEdge {
 class FakeCy {
   private nodeList: FakeNode[] = [];
   private edgeList: FakeEdge[] = [];
+  private currentZoom = 1;
+  fitCalls = 0;
 
   elements() {
     return {
@@ -122,8 +124,12 @@ class FakeCy {
     };
   }
 
-  zoom() {
-    return 1;
+  zoom(level?: number) {
+    if (typeof level === "number") {
+      this.currentZoom = level;
+    }
+
+    return this.currentZoom;
   }
 
   on() {
@@ -134,14 +140,28 @@ class FakeCy {
     return undefined;
   }
 
+  resize() {
+    return undefined;
+  }
+
+  fit() {
+    this.fitCalls += 1;
+    return undefined;
+  }
+
   getElementById(id: string) {
     const match = this.nodeList.find((node) => node.id() === id);
     return match ?? { nonempty: () => false };
   }
 }
 
+let lastCy: FakeCy | null = null;
+
 vi.mock("cytoscape", () => {
-  const factory = () => new FakeCy();
+  const factory = () => {
+    lastCy = new FakeCy();
+    return lastCy;
+  };
   return {
     default: Object.assign(factory, {
       use: vi.fn(),
@@ -232,5 +252,15 @@ describe("mobile app shell", () => {
     close?.click();
     expect(panel?.classList.contains("open")).toBe(false);
     expect(toggle?.getAttribute("aria-expanded")).toBe("false");
+  });
+
+  it("adds mobile graph zoom controls", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    document.querySelector<HTMLButtonElement>("#graph-zoom-in")?.click();
+    expect(lastCy?.zoom()).toBeGreaterThan(1);
+
+    document.querySelector<HTMLButtonElement>("#graph-zoom-fit")?.click();
+    expect(lastCy?.fitCalls).toBe(1);
   });
 });
