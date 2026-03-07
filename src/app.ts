@@ -73,9 +73,12 @@ interface AppState {
   storage: StorageLike | undefined;
   assistantOpenNodeId: string | null;
   assistantDraftPrompts: Record<string, string>;
+  viewportMode: "desktop" | "mobile";
+  mobileToolsOpen: boolean;
 }
 
 const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
+const MOBILE_BREAKPOINT = 820;
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -112,6 +115,10 @@ function formatNodeOption(node: GraphNode) {
   return `${node.title} (${node.category})`;
 }
 
+function resolveViewportMode(width: number): "desktop" | "mobile" {
+  return width <= MOBILE_BREAKPOINT ? "mobile" : "desktop";
+}
+
 function createLayout(root: HTMLElement) {
   root.innerHTML = `
     <div class="layout">
@@ -121,34 +128,82 @@ function createLayout(root: HTMLElement) {
           <div class="brand-subtitle">Map your understanding, expose gaps, keep moving.</div>
         </div>
         <div class="header-actions">
-          <a class="btn" target="_blank" rel="noreferrer" id="add-concept-link">Add concept</a>
-          <a class="btn" target="_blank" rel="noreferrer" id="generic-change-link">Generic change</a>
-          <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+          <div class="header-link-group">
+            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
+            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+          </div>
           <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">◐</button>
         </div>
       </header>
 
       <section class="main-panel">
-        <div class="controls">
+        <div class="controls primary-controls">
           <div class="floating">
             <input type="search" id="search-input" placeholder="Search concepts..." autocomplete="off" />
             <div id="search-results" class="search-results" role="listbox"></div>
           </div>
           <button class="btn" id="clear-filters">Reset filters</button>
-          <div class="label-controls">
-            <button class="btn" id="select-all-categories" type="button">Select all categories</button>
-            <button class="btn" id="deselect-all-categories" type="button">Deselect all categories</button>
-          </div>
-          <button class="btn" id="export-progress">Export progress</button>
-          <label class="btn" for="import-progress-input">Import progress</label>
-          <input id="import-progress-input" type="file" accept="application/json" hidden />
+          <button
+            class="btn mobile-only"
+            id="mobile-tools-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-tools-panel"
+          >
+            Filters & actions
+          </button>
         </div>
-        <div class="controls legend" id="legend"></div>
+        <div class="mobile-tools-overlay" id="mobile-tools-overlay" hidden></div>
+        <div class="mobile-tools-panel" id="mobile-tools-panel">
+          <div class="mobile-tools-header">
+            <div class="footer-title">Filters & actions</div>
+            <button
+              class="icon-btn"
+              id="mobile-tools-close"
+              type="button"
+              aria-label="Close filters and actions"
+            >
+              ✕
+            </button>
+          </div>
+          <div class="controls secondary-controls">
+            <div class="label-controls">
+              <button class="btn" id="select-all-categories" type="button">Select all categories</button>
+              <button class="btn" id="deselect-all-categories" type="button">Deselect all categories</button>
+            </div>
+            <button class="btn" id="export-progress">Export progress</button>
+            <label class="btn" id="import-progress-label" for="import-progress-input">Import progress</label>
+            <input id="import-progress-input" type="file" accept="application/json" hidden />
+          </div>
+          <div class="controls legend" id="legend"></div>
+          <div class="mobile-shortcuts">
+            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
+            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
+            <a
+              class="btn"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md"
+            >
+              Contribute
+            </a>
+          </div>
+        </div>
         <div id="graph"></div>
       </section>
 
+      <div class="detail-backdrop" id="detail-backdrop" hidden></div>
       <aside class="detail-panel" id="detail-panel">
-        <div class="mobile-sheet-handle"></div>
+        <div class="detail-panel-top">
+          <div class="mobile-sheet-handle"></div>
+          <button class="icon-btn detail-close-btn" id="detail-close" type="button" aria-label="Close details">
+            ✕
+          </button>
+        </div>
         <div id="detail-content" class="meta">Select a node to inspect prerequisites, resources, and progress.</div>
       </aside>
 
@@ -184,11 +239,8 @@ function createLayout(root: HTMLElement) {
     </div>
   `;
 
-  const addConceptLink = root.querySelector<HTMLAnchorElement>("#add-concept-link");
-  const genericChangeLink = root.querySelector<HTMLAnchorElement>("#generic-change-link");
-
-  if (addConceptLink) {
-    addConceptLink.href = buildIssueUrl(
+  root.querySelectorAll<HTMLAnchorElement>('[data-issue-link="add-concept"]').forEach((link) => {
+    link.href = buildIssueUrl(
       "Add concept",
       [
         "## New concept",
@@ -205,10 +257,10 @@ function createLayout(root: HTMLElement) {
         "- Resource links:",
       ].join("\n"),
     );
-  }
+  });
 
-  if (genericChangeLink) {
-    genericChangeLink.href = buildIssueUrl(
+  root.querySelectorAll<HTMLAnchorElement>('[data-issue-link="generic-change"]').forEach((link) => {
+    link.href = buildIssueUrl(
       "Generic graph change",
       [
         "## What should change?",
@@ -219,7 +271,7 @@ function createLayout(root: HTMLElement) {
         "",
       ].join("\n"),
     );
-  }
+  });
 }
 
 function getSafeStorage(): StorageLike | undefined {
@@ -291,6 +343,50 @@ function renderLegend(state: AppState, root: HTMLElement, onChange: () => void) 
   }
 }
 
+function syncResponsiveLayout(state: AppState, root: HTMLElement) {
+  state.viewportMode = resolveViewportMode(window.innerWidth);
+  if (state.viewportMode === "desktop") {
+    state.mobileToolsOpen = false;
+  }
+
+  const layout = root.querySelector<HTMLElement>(".layout");
+  const detailBackdrop = root.querySelector<HTMLElement>("#detail-backdrop");
+  const mobileToolsOverlay = root.querySelector<HTMLElement>("#mobile-tools-overlay");
+  const mobileToolsPanel = root.querySelector<HTMLElement>("#mobile-tools-panel");
+  const mobileToolsToggle = root.querySelector<HTMLButtonElement>("#mobile-tools-toggle");
+
+  const detailOpen = state.viewportMode === "mobile" && Boolean(state.selectedId);
+  const mobileToolsVisible = state.viewportMode === "mobile" && state.mobileToolsOpen;
+
+  layout?.setAttribute("data-viewport-mode", state.viewportMode);
+
+  if (detailBackdrop) {
+    detailBackdrop.hidden = !detailOpen;
+    detailBackdrop.classList.toggle("open", detailOpen);
+  }
+
+  if (mobileToolsOverlay) {
+    mobileToolsOverlay.hidden = !mobileToolsVisible;
+    mobileToolsOverlay.classList.toggle("open", mobileToolsVisible);
+  }
+
+  mobileToolsPanel?.classList.toggle("open", mobileToolsVisible);
+  mobileToolsToggle?.setAttribute("aria-expanded", String(mobileToolsVisible));
+  document.body.classList.toggle("overlay-open", detailOpen || mobileToolsVisible);
+}
+
+function closeDetails(state: AppState, root: HTMLElement) {
+  if (!state.selectedId) {
+    return;
+  }
+
+  state.selectedId = null;
+  state.assistantOpenNodeId = null;
+  renderDetails(state, root);
+  refreshLabels(state);
+  syncUrlState(state);
+}
+
 function renderDetails(state: AppState, root: HTMLElement) {
   const detail = root.querySelector<HTMLElement>("#detail-content");
   const panel = root.querySelector<HTMLElement>("#detail-panel");
@@ -301,6 +397,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
     panel.classList.remove("open");
     detail.className = "meta";
     detail.textContent = "Select a node to inspect prerequisites, resources, and progress.";
+    syncResponsiveLayout(state, root);
     return;
   }
 
@@ -310,6 +407,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
   }
 
   panel.classList.add("open");
+  syncResponsiveLayout(state, root);
 
   const currentState = state.progress[node.id]?.state ?? null;
   const gaps = detectGaps(state.data, state.progress, node.id);
@@ -525,6 +623,7 @@ function renderSearch(state: AppState, root: HTMLElement) {
     button.addEventListener("click", () => {
       state.assistantOpenNodeId = null;
       state.selectedId = node.id;
+      state.mobileToolsOpen = false;
       const graphNode = state.cy.getElementById(node.id);
       if (graphNode.nonempty()) {
         state.cy.animate({
@@ -687,15 +786,27 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
 }
 
 function wireInteractions(state: AppState, root: HTMLElement) {
+  const setMobileToolsOpen = (open: boolean) => {
+    state.mobileToolsOpen = state.viewportMode === "mobile" ? open : false;
+    syncResponsiveLayout(state, root);
+  };
+
   state.cy.on("tap", "node", (event) => {
     const id = event.target.id();
     if (state.selectedId !== id) {
       state.assistantOpenNodeId = null;
     }
     state.selectedId = id;
+    state.mobileToolsOpen = false;
     renderDetails(state, root);
     refreshLabels(state);
     syncUrlState(state);
+  });
+
+  state.cy.on("tap", (event) => {
+    if (event.target === state.cy && state.viewportMode === "mobile") {
+      closeDetails(state, root);
+    }
   });
 
   state.cy.on("mouseover", "node", (event) => {
@@ -738,6 +849,26 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     });
   });
 
+  root.querySelector<HTMLButtonElement>("#mobile-tools-toggle")?.addEventListener("click", () => {
+    setMobileToolsOpen(!state.mobileToolsOpen);
+  });
+
+  root.querySelector<HTMLButtonElement>("#mobile-tools-close")?.addEventListener("click", () => {
+    setMobileToolsOpen(false);
+  });
+
+  root.querySelector<HTMLElement>("#mobile-tools-overlay")?.addEventListener("click", () => {
+    setMobileToolsOpen(false);
+  });
+
+  root.querySelector<HTMLButtonElement>("#detail-close")?.addEventListener("click", () => {
+    closeDetails(state, root);
+  });
+
+  root.querySelector<HTMLElement>("#detail-backdrop")?.addEventListener("click", () => {
+    closeDetails(state, root);
+  });
+
   document.addEventListener("click", (event) => {
     const target = event.target as HTMLElement;
     if (!target.closest(".floating")) {
@@ -751,6 +882,23 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     state.hiddenCategories = fromUrl.hiddenCategories;
     state.assistantOpenNodeId = null;
     rerenderGraph(state, root);
+  });
+
+  window.addEventListener("resize", () => {
+    syncResponsiveLayout(state, root);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    if (state.mobileToolsOpen) {
+      setMobileToolsOpen(false);
+      return;
+    }
+
+    closeDetails(state, root);
   });
 }
 
@@ -857,6 +1005,8 @@ export async function bootstrapApp(root: HTMLElement | null) {
     storage,
     assistantOpenNodeId: null,
     assistantDraftPrompts: {},
+    viewportMode: resolveViewportMode(window.innerWidth),
+    mobileToolsOpen: false,
   };
 
   const fromUrl = readViewStateFromUrl(state);
