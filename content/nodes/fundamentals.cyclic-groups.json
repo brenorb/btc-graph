@@ -4,7 +4,7 @@
   "description": "Cyclic groups model repeated application of an operation from a generator and are the algebraic setting for many Bitcoin cryptographic constructions. They define why private scalars can map to public points in a structured way.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.modular-arithmetic"
+    "fundamentals.finite-fields"
   ],
   "resources": [
     {

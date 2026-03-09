@@ -499,12 +499,12 @@ function renderDetails(state: AppState, root: HTMLElement) {
       </div>
     </div>
 
-    ${assistantSection}
-
     <div>
       <h3>Resources</h3>
       ${resources}
     </div>
+
+    ${assistantSection}
   `;
 
   detail.querySelectorAll<HTMLButtonElement>("[data-state]").forEach((button) => {

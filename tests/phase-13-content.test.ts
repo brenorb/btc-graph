@@ -16,7 +16,7 @@ const PHASE_13_NODE_IDS = [
 
 const REQUIRED_PHASE_13_PREREQUISITES: Record<string, string[]> = {
   "fundamentals.modular-exponentiation": ["fundamentals.modular-arithmetic"],
-  "fundamentals.cyclic-groups": ["fundamentals.modular-arithmetic"],
+  "fundamentals.cyclic-groups": ["fundamentals.finite-fields"],
   "fundamentals.diffie-hellman-key-exchange": [
     "fundamentals.modular-exponentiation",
     "fundamentals.cyclic-groups",
