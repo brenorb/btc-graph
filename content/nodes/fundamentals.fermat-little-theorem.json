@@ -4,7 +4,7 @@
   "description": "Fermat's little theorem is used to reason about inverses in prime fields used by Bitcoin cryptography. It helps explain why modular inversion works for non-zero elements.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.modular-arithmetic"
+    "fundamentals.modular-exponentiation"
   ],
   "resources": [
     {

@@ -20,12 +20,15 @@ const PHASE_12_NODE_IDS = [
 
 const REQUIRED_PHASE_12_PREREQUISITES: Record<string, string[]> = {
   "fundamentals.finite-fields": ["fundamentals.modular-arithmetic"],
-  "fundamentals.fermat-little-theorem": ["fundamentals.modular-arithmetic"],
+  "fundamentals.fermat-little-theorem": ["fundamentals.modular-exponentiation"],
   "fundamentals.modular-inverse": [
     "fundamentals.modular-arithmetic",
     "fundamentals.fermat-little-theorem",
   ],
-  "fundamentals.discrete-log-problem": ["fundamentals.finite-fields"],
+  "fundamentals.discrete-log-problem": [
+    "fundamentals.finite-fields",
+    "fundamentals.modular-exponentiation",
+  ],
   "fundamentals.elliptic-curve-cryptography": [
     "fundamentals.finite-fields",
     "fundamentals.discrete-log-problem",

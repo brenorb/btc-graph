@@ -13,7 +13,13 @@ const sampleData = {
       description: "Consensus via hashing.",
       estimatedTime: "30m",
       prerequisites: [],
-      resources: [],
+      resources: [
+        {
+          type: "article",
+          title: "Whitepaper",
+          url: "https://bitcoin.org/bitcoin.pdf",
+        },
+      ],
     },
     {
       id: "mining.asics",
@@ -262,5 +268,18 @@ describe("mobile app shell", () => {
 
     document.querySelector<HTMLButtonElement>("#graph-zoom-fit")?.click();
     expect(lastCy?.fitCalls).toBe(1);
+  });
+
+  it("renders the node assistant below resources in the detail panel", async () => {
+    window.history.replaceState({}, "", "/?selected=protocol.proof-of-work");
+
+    await bootstrapApp(document.querySelector("#app"));
+
+    const detailText = document.querySelector<HTMLElement>("#detail-content")?.textContent ?? "";
+    const resourcesIndex = detailText.indexOf("Resources");
+    const assistantIndex = detailText.indexOf("Node assistant");
+
+    expect(resourcesIndex).toBeGreaterThan(-1);
+    expect(assistantIndex).toBeGreaterThan(resourcesIndex);
   });
 });
