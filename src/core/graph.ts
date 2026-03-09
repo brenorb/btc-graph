@@ -123,6 +123,12 @@ export function detectGaps(
   return gaps;
 }
 
+export function getDirectDependents(data: GraphData, nodeId: string): GraphNode[] {
+  return data.nodes
+    .filter((candidate) => candidate.prerequisites.includes(nodeId))
+    .sort((left, right) => left.title.localeCompare(right.title));
+}
+
 export function filterGraphByCategories(
   data: GraphData,
   hiddenCategories: Set<string>,

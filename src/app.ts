@@ -4,6 +4,7 @@ import dagre from "cytoscape-dagre";
 import {
   detectGaps,
   filterGraphByCategories,
+  getDirectDependents,
   loadProgressState,
   reconcileSelection,
   sanitizeProgressState,
@@ -325,6 +326,61 @@ function buildNodeAssistantChatHref(prompt: string) {
   return `${NODE_ASSISTANT_CHAT_URL}${encodeURIComponent(prompt)}`;
 }
 
+function buildNodeSelectionHref(state: AppState, nodeId: string) {
+  const hiddenCategories = new Set(state.hiddenCategories);
+  const node = state.nodeById.get(nodeId);
+  if (node) {
+    hiddenCategories.delete(node.category);
+  }
+
+  return encodeViewStateToQuery({
+    selectedId: nodeId,
+    hiddenCategories,
+  });
+}
+
+function renderNodeReferences(state: AppState, nodeIds: string[]) {
+  if (nodeIds.length === 0) {
+    return "None";
+  }
+
+  return nodeIds
+    .map((id) => {
+      const node = state.nodeById.get(id);
+      const label = node?.title ?? id;
+      return `<a href="${buildNodeSelectionHref(state, id)}" data-node-link-id="${id}">${label}</a>`;
+    })
+    .join(", ");
+}
+
+function focusNodeInGraph(state: AppState, nodeId: string) {
+  const graphNode = state.cy.getElementById(nodeId);
+  if (graphNode.nonempty()) {
+    state.cy.animate({
+      center: { eles: graphNode },
+      zoom: Math.max(state.cy.zoom(), 1.25),
+      duration: 280,
+    });
+  }
+}
+
+function selectNode(state: AppState, root: HTMLElement, nodeId: string) {
+  const node = state.nodeById.get(nodeId);
+  if (!node) {
+    return;
+  }
+
+  if (state.selectedId !== nodeId) {
+    state.assistantOpenNodeId = null;
+  }
+
+  state.hiddenCategories.delete(node.category);
+  state.selectedId = nodeId;
+  state.mobileToolsOpen = false;
+  rerenderGraph(state, root);
+  focusNodeInGraph(state, nodeId);
+}
+
 function renderLegend(state: AppState, root: HTMLElement, onChange: () => void) {
   const legend = root.querySelector<HTMLElement>("#legend");
   if (!legend) return;
@@ -445,6 +501,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
           )
           .join("")}</div>`
       : `<div class="meta">No resources curated yet.</div>`;
+  const dependents = getDirectDependents(state.data, node.id);
 
   detail.className = "";
   detail.innerHTML = `
@@ -470,11 +527,11 @@ function renderDetails(state: AppState, root: HTMLElement) {
       )}">Suggest change</a>
     </div>
     <p>${node.description}</p>
-    <div class="meta"><strong>Prerequisites:</strong> ${node.prerequisites.join(", ") || "None"}</div>
-    <div class="meta"><strong>Post-requisites (depends on this concept):</strong> ${state.data.nodes
-      .filter((candidate) => candidate.prerequisites.includes(node.id))
-      .map((candidate) => candidate.id)
-      .join(", ") || "None"}</div>
+    <div class="meta"><strong>Prerequisites:</strong> ${renderNodeReferences(state, node.prerequisites)}</div>
+    <div class="meta"><strong>Dependents:</strong> ${renderNodeReferences(
+      state,
+      dependents.map((candidate) => candidate.id),
+    )}</div>
 
     ${
       gaps.length > 0
@@ -565,6 +622,18 @@ function renderDetails(state: AppState, root: HTMLElement) {
         }
       });
   }
+
+  detail.querySelectorAll<HTMLAnchorElement>("[data-node-link-id]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const nodeId = link.dataset.nodeLinkId;
+      if (!nodeId) {
+        return;
+      }
+
+      selectNode(state, root, nodeId);
+    });
+  });
 }
 
 function syncNodeClasses(state: AppState) {
@@ -626,22 +695,9 @@ function renderSearch(state: AppState, root: HTMLElement) {
     button.textContent = formatNodeOption(node);
     button.type = "button";
     button.addEventListener("click", () => {
-      state.assistantOpenNodeId = null;
-      state.selectedId = node.id;
-      state.mobileToolsOpen = false;
-      const graphNode = state.cy.getElementById(node.id);
-      if (graphNode.nonempty()) {
-        state.cy.animate({
-          center: { eles: graphNode },
-          zoom: Math.max(state.cy.zoom(), 1.25),
-          duration: 280,
-        });
-      }
-      renderDetails(state, root);
-      refreshLabels(state);
+      selectNode(state, root, node.id);
       list.classList.remove("open");
       input.value = "";
-      syncUrlState(state);
     });
     list.appendChild(button);
   }
@@ -799,15 +855,7 @@ function wireInteractions(state: AppState, root: HTMLElement) {
   };
 
   state.cy.on("tap", "node", (event) => {
-    const id = event.target.id();
-    if (state.selectedId !== id) {
-      state.assistantOpenNodeId = null;
-    }
-    state.selectedId = id;
-    state.mobileToolsOpen = false;
-    renderDetails(state, root);
-    refreshLabels(state);
-    syncUrlState(state);
+    selectNode(state, root, event.target.id());
   });
 
   state.cy.on("tap", (event) => {
