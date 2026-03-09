@@ -1,10 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import { writeNodeInfoPages } from "./lib/node-info-pages.mjs";
+
 const repoRoot = process.cwd();
 const sourceDir = path.join(repoRoot, "content", "nodes");
 const outputDir = path.join(repoRoot, "public", "data");
 const outputFile = path.join(outputDir, "graph.json");
+const infoPagesOutputDir = path.join(repoRoot, "public", "nodes");
 
 const requiredFields = [
   "id",
@@ -127,5 +130,8 @@ const graph = { nodes: nodes.sort((a, b) => a.id.localeCompare(b.id)) };
 
 fs.mkdirSync(outputDir, { recursive: true });
 fs.writeFileSync(outputFile, JSON.stringify(graph, null, 2));
+writeNodeInfoPages(graph, infoPagesOutputDir);
 
-console.log(`Built ${graph.nodes.length} nodes -> ${path.relative(repoRoot, outputFile)}`);
+console.log(
+  `Built ${graph.nodes.length} nodes -> ${path.relative(repoRoot, outputFile)} and ${path.relative(repoRoot, infoPagesOutputDir)}`,
+);

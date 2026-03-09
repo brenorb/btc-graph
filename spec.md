@@ -28,6 +28,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - graph view shows concept names
   - node labels are shown by default and can be toggled with explicit `Show all labels` / `Hide all labels` controls
   - click a node to open details in a right sidebar
+  - each node also has a plain static `/info` page for audit-friendly traversal of direct prerequisites and dependents
   - node details include an in-sidebar `Ask AI about this node` action (collapsed by default)
   - when expanded, AI helper is contextual to the selected node (description, prerequisites, gaps, and progress state) and offers quick prompt actions
   - details include a curated set of resources:
