@@ -33,13 +33,13 @@ export interface ProgressStroke {
 
 const CATEGORY_COLOR_MAP: Record<string, string> = {
   Economics: "#d97706",
-  "Extension Systems": "#2563eb",
+  "Extension Systems": "#c026d3",
   "History & Governance": "#7c3aed",
   Mining: "#b45309",
-  "Network, Relay & Client Sync": "#0ea5e9",
+  "Network, Relay & Client Sync": "#0284c7",
   "Protocol & Consensus": "#0f766e",
   Security: "#dc2626",
-  Wallets: "#059669",
+  Wallets: "#65a30d",
 };
 
 const FALLBACK_CATEGORY_COLORS = [
@@ -55,8 +55,8 @@ const FALLBACK_CATEGORY_COLORS = [
 
 const PROGRESS_STROKES: Record<ProgressState, ProgressStroke> = {
   need_to_learn: {
-    borderColor: "#2563eb",
-    borderWidth: 3,
+    borderColor: "#60a5fa",
+    borderWidth: 2,
   },
   learning: {
     borderColor: "#f59e0b",
@@ -130,6 +130,14 @@ export function resolveProgressStroke(progress: ProgressState): ProgressStroke {
   return PROGRESS_STROKES[progress];
 }
 
+export function resolveProgressClass(progress: ProgressState | null): string | null {
+  if (!progress) {
+    return null;
+  }
+
+  return `state-${progress}`;
+}
+
 export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop"): GraphLayoutSettings {
   if (viewportMode === "mobile") {
     return {
@@ -174,7 +182,7 @@ export function resolveGraphColorPalette(theme: ThemeMode): GraphColorPalette {
     nodeLabel: "#243041",
     labelBackground: "#f8fbff",
     edge: "#b4becf",
-    nodeBorder: "#ffffff",
+    nodeBorder: "#cbd5e1",
     contextualNodeFill: "#9ca3af",
     link: "#0f766e",
   };

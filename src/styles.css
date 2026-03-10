@@ -40,7 +40,7 @@ body,
   margin: 0;
   width: 100%;
   min-height: 100%;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Archivo", sans-serif;
   color: var(--text);
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 .brand-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -273,7 +273,7 @@ input {
 }
 
 .detail-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 1.2rem;
   margin: 0;
 }
@@ -373,7 +373,7 @@ input {
   background: var(--control-bg);
   color: var(--text);
   padding: 10px;
-  font: 500 0.82rem/1.45 "IBM Plex Sans", sans-serif;
+  font: 500 0.82rem/1.45 "Archivo", sans-serif;
 }
 
 .node-ai-actions {
@@ -466,7 +466,7 @@ input {
 }
 
 .footer-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 0.98rem;
   font-weight: 700;
 }
