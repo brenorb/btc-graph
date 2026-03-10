@@ -2,8 +2,10 @@ import { describe, expect, it } from "vitest";
 
 import {
   applyCategoryBulkAction,
+  resolveCategoryColor,
   resolveGraphColorPalette,
   resolveGraphLayoutSettings,
+  resolveProgressStroke,
 } from "../src/core/ui-state";
 
 describe("phase 12 ui helpers", () => {
@@ -56,6 +58,41 @@ describe("phase 12 ui helpers", () => {
       const colors = resolveGraphColorPalette("light");
       expect(colors.nodeLabel).toBe("#243041");
       expect(colors.link).toBe("#0f766e");
+    });
+  });
+
+  describe("resolveCategoryColor", () => {
+    it("keeps economics and history visually distinct and gives security the red slot", () => {
+      expect(resolveCategoryColor("Economics")).toBe("#d97706");
+      expect(resolveCategoryColor("History & Governance")).toBe("#7c3aed");
+      expect(resolveCategoryColor("Economics")).not.toBe(resolveCategoryColor("History & Governance"));
+      expect(resolveCategoryColor("Security")).toBe("#dc2626");
+      expect(resolveCategoryColor("Protocol & Consensus")).toBe("#0f766e");
+    });
+
+    it("avoids using a disabled gray for extension systems", () => {
+      expect(resolveCategoryColor("Extension Systems")).toBe("#2563eb");
+      expect(resolveCategoryColor("Extension Systems")).not.toBe("#7f7f7f");
+    });
+  });
+
+  describe("resolveProgressStroke", () => {
+    it("gives need-to-learn its own visible border treatment", () => {
+      expect(resolveProgressStroke("need_to_learn")).toEqual({
+        borderColor: "#2563eb",
+        borderWidth: 3,
+      });
+    });
+
+    it("keeps learning and know-it visually distinct", () => {
+      expect(resolveProgressStroke("learning")).toEqual({
+        borderColor: "#f59e0b",
+        borderWidth: 3,
+      });
+      expect(resolveProgressStroke("know_it")).toEqual({
+        borderColor: "#16a34a",
+        borderWidth: 3,
+      });
     });
   });
 });

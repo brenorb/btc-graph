@@ -27,10 +27,12 @@ import {
 import {
   applyCategoryBulkAction,
   deriveNextProgressState,
+  resolveCategoryColor,
   resolveGraphColorPalette,
   resolveGraphLayoutSettings,
   resolveLabelText,
   resolveInitialTheme,
+  resolveProgressStroke,
   resolveNextTheme,
 } from "./core/ui-state";
 import type {
@@ -42,19 +44,6 @@ import type {
 } from "./core/types";
 
 cytoscape.use(dagre);
-
-const CATEGORY_PALETTE = [
-  "#1f77b4",
-  "#ff7f0e",
-  "#2ca02c",
-  "#d62728",
-  "#9467bd",
-  "#8c564b",
-  "#e377c2",
-  "#17becf",
-  "#bcbd22",
-  "#7f7f7f",
-];
 
 const PROGRESS_LABELS: Record<ProgressState, string> = {
   need_to_learn: "Need to learn",
@@ -74,6 +63,7 @@ interface AppState {
   storage: StorageLike | undefined;
   assistantOpenNodeId: string | null;
   assistantDraftPrompts: Record<string, string>;
+  expandedGapNodeIds: Set<string>;
   viewportMode: "desktop" | "mobile";
   mobileToolsOpen: boolean;
 }
@@ -90,8 +80,7 @@ function getCategoryColor(category: string, map: Map<string, string>) {
     return map.get(category)!;
   }
 
-  const hash = [...category].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  const color = CATEGORY_PALETTE[hash % CATEGORY_PALETTE.length];
+  const color = resolveCategoryColor(category);
   map.set(category, color);
   return color;
 }
@@ -353,6 +342,39 @@ function renderNodeReferences(state: AppState, nodeIds: string[]) {
     .join(", ");
 }
 
+function renderGapDisclosure(state: AppState, nodeId: string, gaps: string[]) {
+  if (gaps.length === 0) {
+    return "";
+  }
+
+  const expanded = state.expandedGapNodeIds.has(nodeId);
+  const visibleGaps = expanded ? gaps : gaps.slice(0, 2);
+  const hiddenCount = Math.max(0, gaps.length - visibleGaps.length);
+
+  return `
+    <div class="gaps detail-section">
+      <h3>Gaps to fill</h3>
+      <div class="gaps-content">
+        <div>${renderNodeReferences(state, visibleGaps)}</div>
+        ${
+          hiddenCount > 0 || expanded
+            ? `
+              <button
+                class="btn gaps-toggle"
+                type="button"
+                data-gap-toggle="${nodeId}"
+                aria-expanded="${expanded ? "true" : "false"}"
+              >
+                ${expanded ? "Show less" : `... ${hiddenCount} more`}
+              </button>
+            `
+            : ""
+        }
+      </div>
+    </div>
+  `;
+}
+
 function focusNodeInGraph(state: AppState, nodeId: string) {
   const graphNode = state.cy.getElementById(nodeId);
   if (graphNode.nonempty()) {
@@ -503,7 +525,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
       : `<div class="meta">No resources curated yet.</div>`;
   const dependents = getDirectDependents(state.data, node.id);
 
-  detail.className = "";
+  detail.className = "detail-stack";
   detail.innerHTML = `
     <div class="detail-heading">
       <div>
@@ -527,26 +549,18 @@ function renderDetails(state: AppState, root: HTMLElement) {
       )}">Suggest change</a>
     </div>
     <p>${node.description}</p>
-    <div class="meta"><strong>Prerequisites:</strong> ${renderNodeReferences(state, node.prerequisites)}</div>
-    <div class="meta"><strong>Dependents:</strong> ${renderNodeReferences(
-      state,
-      dependents.map((candidate) => candidate.id),
-    )}</div>
+    <div class="detail-adjacency">
+      <div class="meta"><strong>Prerequisites:</strong> ${renderNodeReferences(state, node.prerequisites)}</div>
+      <div class="meta"><strong>Dependents:</strong> ${renderNodeReferences(
+        state,
+        dependents.map((candidate) => candidate.id),
+      )}</div>
+    </div>
 
-    ${
-      gaps.length > 0
-        ? `<div class="gaps"><h3>Gaps to fill</h3><div>${gaps.join(", ")}</div></div>`
-        : ""
-    }
+    ${renderGapDisclosure(state, node.id, gaps)}
 
-    <div>
-      <div class="meta">Progress state</div>
-      <div class="meta">${
-        currentState
-          ? `Selected: ${PROGRESS_LABELS[currentState]}`
-          : "No explicit state selected (default graph style is Need to learn)."
-      }</div>
-      <div class="progress-controls">
+    <div class="detail-section">
+      <div class="progress-controls" role="group" aria-label="Progress state">
         ${Object.entries(PROGRESS_LABELS)
           .map(([value, label]) => {
             const active = currentState === value;
@@ -556,7 +570,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
       </div>
     </div>
 
-    <div>
+    <div class="detail-section">
       <h3>Resources</h3>
       ${resources}
     </div>
@@ -577,6 +591,18 @@ function renderDetails(state: AppState, root: HTMLElement) {
     "click",
     () => {
       state.assistantOpenNodeId = toggleNodeAssistant(state.assistantOpenNodeId, node.id);
+      renderDetails(state, root);
+    },
+  );
+
+  detail.querySelector<HTMLButtonElement>(`[data-gap-toggle="${node.id}"]`)?.addEventListener(
+    "click",
+    () => {
+      if (state.expandedGapNodeIds.has(node.id)) {
+        state.expandedGapNodeIds.delete(node.id);
+      } else {
+        state.expandedGapNodeIds.add(node.id);
+      }
       renderDetails(state, root);
     },
   );
@@ -1028,22 +1054,22 @@ function createGraph(container: HTMLElement) {
       {
         selector: ".state-need_to_learn",
         style: {
-          "border-width": 2,
-          "border-color": "#cbd5e1",
+          "border-width": resolveProgressStroke("need_to_learn").borderWidth,
+          "border-color": resolveProgressStroke("need_to_learn").borderColor,
         },
       },
       {
         selector: ".state-learning",
         style: {
-          "border-width": 3,
-          "border-color": "#f59e0b",
+          "border-width": resolveProgressStroke("learning").borderWidth,
+          "border-color": resolveProgressStroke("learning").borderColor,
         },
       },
       {
         selector: ".state-know_it",
         style: {
-          "border-width": 3,
-          "border-color": "#16a34a",
+          "border-width": resolveProgressStroke("know_it").borderWidth,
+          "border-color": resolveProgressStroke("know_it").borderColor,
         },
       },
     ],
@@ -1083,6 +1109,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     storage,
     assistantOpenNodeId: null,
     assistantDraftPrompts: {},
+    expandedGapNodeIds: new Set<string>(),
     viewportMode: resolveViewportMode(window.innerWidth),
     mobileToolsOpen: false,
   };

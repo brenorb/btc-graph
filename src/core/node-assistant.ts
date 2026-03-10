@@ -113,11 +113,14 @@ export function renderNodeAssistantSection(
   options: NodeAssistantSectionOptions,
 ) {
   const toggleLabel = options.open ? "Hide AI assistant" : "Ask AI about this node";
-  const summaryLine = [
-    `Progress: ${context.progressLabel}`,
-    `Prereqs: ${context.prerequisites.join(", ") || "None"}`,
-    `Gaps: ${context.gaps.join(", ") || "None"}`,
-  ].join(" | ");
+
+  if (!options.open) {
+    return `
+      <section class="node-ai-collapsed">
+        <button class="btn" type="button" data-node-ai-toggle="${escapeHtml(context.nodeId)}">${toggleLabel}</button>
+      </section>
+    `;
+  }
 
   const base = `
     <section class="node-ai-block">
@@ -125,27 +128,23 @@ export function renderNodeAssistantSection(
         <h3>Node assistant</h3>
         <button class="btn" type="button" data-node-ai-toggle="${escapeHtml(context.nodeId)}">${toggleLabel}</button>
       </div>
-      <div class="meta">${escapeHtml(summaryLine)}</div>
-      ${
-        options.open
-          ? `
-            <div class="node-ai-panel" data-node-ai-panel="${escapeHtml(context.nodeId)}">
-              <div class="node-ai-quick-actions">
-                <button class="progress-btn" type="button" data-node-ai-template="summarize">Summarize</button>
-                <button class="progress-btn" type="button" data-node-ai-template="explain_like_beginner">Explain simply</button>
-                <button class="progress-btn" type="button" data-node-ai-template="next_steps">What next?</button>
-                <button class="progress-btn" type="button" data-node-ai-template="quiz_me">Quiz me</button>
-              </div>
-              <label class="meta" for="node-ai-prompt">Prompt</label>
-              <textarea id="node-ai-prompt" class="node-ai-prompt" rows="7">${escapeHtml(options.promptValue)}</textarea>
-              <div class="node-ai-actions">
-                <button class="btn" type="button" data-node-ai-copy="${escapeHtml(context.nodeId)}">Copy prompt</button>
-                <a class="btn primary" target="_blank" rel="noreferrer" data-node-ai-open-chat="${escapeHtml(context.nodeId)}" href="${escapeHtml(options.openChatHref)}">Open chat</a>
-              </div>
-            </div>
-          `
-          : ""
-      }
+      <div class="node-ai-panel" data-node-ai-panel="${escapeHtml(context.nodeId)}">
+        <div class="meta">
+          ${escapeHtml(`Progress: ${context.progressLabel} | Prereqs: ${context.prerequisites.join(", ") || "None"} | Gaps: ${context.gaps.join(", ") || "None"}`)}
+        </div>
+        <div class="node-ai-quick-actions">
+          <button class="progress-btn" type="button" data-node-ai-template="summarize">Summarize</button>
+          <button class="progress-btn" type="button" data-node-ai-template="explain_like_beginner">Explain simply</button>
+          <button class="progress-btn" type="button" data-node-ai-template="next_steps">What next?</button>
+          <button class="progress-btn" type="button" data-node-ai-template="quiz_me">Quiz me</button>
+        </div>
+        <label class="meta" for="node-ai-prompt">Prompt</label>
+        <textarea id="node-ai-prompt" class="node-ai-prompt" rows="7">${escapeHtml(options.promptValue)}</textarea>
+        <div class="node-ai-actions">
+          <button class="btn" type="button" data-node-ai-copy="${escapeHtml(context.nodeId)}">Copy prompt</button>
+          <a class="btn primary" target="_blank" rel="noreferrer" data-node-ai-open-chat="${escapeHtml(context.nodeId)}" href="${escapeHtml(options.openChatHref)}">Open chat</a>
+        </div>
+      </div>
     </section>
   `;
 

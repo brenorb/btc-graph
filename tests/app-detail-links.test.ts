@@ -7,12 +7,43 @@ import { bootstrapApp } from "../src/app";
 const sampleData = {
   nodes: [
     {
+      id: "fundamentals.hash-functions",
+      title: "Hash Functions",
+      category: "Security",
+      description: "One-way functions used across Bitcoin.",
+      estimatedTime: "20m",
+      prerequisites: [],
+      resources: [],
+    },
+    {
+      id: "fundamentals.distributed-systems",
+      title: "Distributed Systems",
+      category: "Protocol & Consensus",
+      description: "Shared-state coordination without central control.",
+      estimatedTime: "25m",
+      prerequisites: [],
+      resources: [],
+    },
+    {
+      id: "fundamentals.sybil-resistance",
+      title: "Sybil Resistance",
+      category: "Security",
+      description: "Preventing fake-identity attacks in open systems.",
+      estimatedTime: "25m",
+      prerequisites: [],
+      resources: [],
+    },
+    {
       id: "protocol.proof-of-work",
       title: "Proof of Work",
       category: "Protocol & Consensus",
       description: "Consensus via hashing.",
       estimatedTime: "30m",
-      prerequisites: [],
+      prerequisites: [
+        "fundamentals.hash-functions",
+        "fundamentals.distributed-systems",
+        "fundamentals.sybil-resistance",
+      ],
       resources: [],
     },
     {
@@ -204,6 +235,50 @@ describe("node detail links", () => {
     expect(detail?.textContent).not.toContain("Post-requisites");
     expect(dependentLink?.getAttribute("href")).toContain("?selected=mining.asics");
     expect(dependentLink?.textContent).toContain("ASICs");
+  });
+
+  it("shows only the first two gaps by default and expands the rest on demand", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    const detail = document.querySelector<HTMLElement>("#detail-content");
+    const gaps = detail?.querySelector<HTMLElement>(".gaps");
+    const gapLinks = gaps?.querySelectorAll<HTMLAnchorElement>('a[data-node-link-id]');
+    const toggle = gaps?.querySelector<HTMLButtonElement>("[data-gap-toggle]");
+
+    expect(gapLinks).toHaveLength(2);
+    expect(gaps?.textContent).toContain("Hash Functions");
+    expect(gaps?.textContent).toContain("Distributed Systems");
+    expect(gaps?.textContent).not.toContain("Sybil Resistance");
+    expect(toggle?.textContent).toContain("...");
+
+    toggle?.click();
+
+    const expandedGaps = detail?.querySelector<HTMLElement>(".gaps");
+    const expandedGapLinks = expandedGaps?.querySelectorAll<HTMLAnchorElement>(
+      'a[data-node-link-id]',
+    );
+    expect(expandedGapLinks).toHaveLength(3);
+    expect(expandedGaps?.textContent).toContain("Sybil Resistance");
+  });
+
+  it("keeps only the progress buttons and collapses the assistant to a single action by default", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    const detail = document.querySelector<HTMLElement>("#detail-content");
+    const progressButtons = detail?.querySelectorAll<HTMLButtonElement>(".progress-controls [data-state]");
+    const assistantToggle = detail?.querySelector<HTMLButtonElement>("[data-node-ai-toggle]");
+
+    expect(progressButtons).toHaveLength(3);
+    expect(detail?.textContent).not.toContain("Progress state");
+    expect(detail?.textContent).not.toContain("Selected:");
+    expect(assistantToggle?.textContent).toBe("Ask AI about this node");
+    expect(detail?.textContent).not.toContain("Node assistant");
+    expect(detail?.querySelector("[data-node-ai-panel]")).toBeNull();
+
+    assistantToggle?.click();
+
+    expect(detail?.querySelector("[data-node-ai-panel]")).not.toBeNull();
+    expect(detail?.textContent).toContain("Node assistant");
   });
 
   it("selects linked nodes from the detail panel and reveals their category when needed", async () => {
