@@ -115,7 +115,7 @@ function createLayout(root: HTMLElement) {
     <div class="layout">
       <header class="header">
         <div class="brand">
-          <div class="brand-title">Bitcoin Learning Graph</div>
+          <h1 class="brand-title">Bitcoin Learning Graph</h1>
           <div class="brand-subtitle">Map your understanding, expose gaps, keep moving.</div>
         </div>
         <div class="header-actions">
@@ -123,6 +123,7 @@ function createLayout(root: HTMLElement) {
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
           </div>
           <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">◐</button>
         </div>
@@ -172,6 +173,7 @@ function createLayout(root: HTMLElement) {
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+            <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
             <a
@@ -209,6 +211,7 @@ function createLayout(root: HTMLElement) {
           <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
         </div>
         <div class="footer-links">
+          <a class="footer-link" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
