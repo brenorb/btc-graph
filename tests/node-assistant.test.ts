@@ -120,6 +120,9 @@ describe("renderNodeAssistantSection", () => {
     });
 
     expect(html).toContain('data-node-ai-toggle="protocol.utxo-model"');
+    expect(html).toContain("Ask AI about this node");
+    expect(html).not.toContain("Node assistant");
+    expect(html).not.toContain("Progress:");
     expect(html).not.toContain("data-node-ai-panel");
   });
 

@@ -26,6 +26,48 @@ export interface GraphColorPalette {
   link: string;
 }
 
+export interface ProgressStroke {
+  borderColor: string;
+  borderWidth: number;
+}
+
+const CATEGORY_COLOR_MAP: Record<string, string> = {
+  Economics: "#d97706",
+  "Extension Systems": "#2563eb",
+  "History & Governance": "#7c3aed",
+  Mining: "#b45309",
+  "Network, Relay & Client Sync": "#0ea5e9",
+  "Protocol & Consensus": "#0f766e",
+  Security: "#dc2626",
+  Wallets: "#059669",
+};
+
+const FALLBACK_CATEGORY_COLORS = [
+  "#0f766e",
+  "#2563eb",
+  "#d97706",
+  "#dc2626",
+  "#7c3aed",
+  "#0891b2",
+  "#059669",
+  "#b45309",
+];
+
+const PROGRESS_STROKES: Record<ProgressState, ProgressStroke> = {
+  need_to_learn: {
+    borderColor: "#2563eb",
+    borderWidth: 3,
+  },
+  learning: {
+    borderColor: "#f59e0b",
+    borderWidth: 3,
+  },
+  know_it: {
+    borderColor: "#16a34a",
+    borderWidth: 3,
+  },
+};
+
 export function resolveLabelText(
   mode: LabelVisibilityMode,
   title: string,
@@ -73,6 +115,19 @@ export function applyCategoryBulkAction(
   }
 
   return new Set(categories);
+}
+
+export function resolveCategoryColor(category: string): string {
+  if (category in CATEGORY_COLOR_MAP) {
+    return CATEGORY_COLOR_MAP[category];
+  }
+
+  const hash = [...category].reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return FALLBACK_CATEGORY_COLORS[hash % FALLBACK_CATEGORY_COLORS.length];
+}
+
+export function resolveProgressStroke(progress: ProgressState): ProgressStroke {
+  return PROGRESS_STROKES[progress];
 }
 
 export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop"): GraphLayoutSettings {

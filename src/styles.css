@@ -283,6 +283,21 @@ input {
   font-size: 0.84rem;
 }
 
+.detail-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-adjacency {
+  display: grid;
+  gap: 6px;
+}
+
+.detail-section {
+  display: grid;
+  gap: 8px;
+}
+
 .gaps {
   border: 1px solid color-mix(in srgb, var(--danger) 34%, transparent);
   background: color-mix(in srgb, var(--danger) 10%, transparent);
@@ -296,9 +311,23 @@ input {
   color: var(--danger);
 }
 
+.gaps-content {
+  display: grid;
+  gap: 8px;
+}
+
+.gaps-toggle {
+  justify-self: start;
+}
+
 .resources {
   display: grid;
   gap: 6px;
+}
+
+.node-ai-collapsed {
+  display: grid;
+  justify-items: start;
 }
 
 .node-ai-block {

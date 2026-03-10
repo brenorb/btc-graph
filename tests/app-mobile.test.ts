@@ -270,14 +270,14 @@ describe("mobile app shell", () => {
     expect(lastCy?.fitCalls).toBe(1);
   });
 
-  it("renders the node assistant below resources in the detail panel", async () => {
+  it("renders the ask-ai action below resources in the detail panel", async () => {
     window.history.replaceState({}, "", "/?selected=protocol.proof-of-work");
 
     await bootstrapApp(document.querySelector("#app"));
 
     const detailText = document.querySelector<HTMLElement>("#detail-content")?.textContent ?? "";
     const resourcesIndex = detailText.indexOf("Resources");
-    const assistantIndex = detailText.indexOf("Node assistant");
+    const assistantIndex = detailText.indexOf("Ask AI about this node");
 
     expect(resourcesIndex).toBeGreaterThan(-1);
     expect(assistantIndex).toBeGreaterThan(resourcesIndex);
