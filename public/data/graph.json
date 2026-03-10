@@ -455,7 +455,8 @@
       "description": "Optional passphrase extension for mnemonic seeds and its recovery risk tradeoffs.",
       "category": "Wallets",
       "prerequisites": [
-        "custody.seed-phrases"
+        "custody.seed-phrases",
+        "dev.bip39"
       ],
       "resources": [
         {
@@ -5035,7 +5036,7 @@
       "category": "Extension Systems",
       "prerequisites": [
         "lightning.invoices",
-        "lightning.onion-routing"
+        "lightning.route-blinding"
       ],
       "resources": [
         {
@@ -5750,7 +5751,7 @@
       "description": "A privacy technique where receivers hide destination topology by providing blinded route hints.",
       "category": "Extension Systems",
       "prerequisites": [
-        "lightning.bolt12-offers"
+        "lightning.onion-routing"
       ],
       "resources": [
         {
@@ -7981,7 +7982,8 @@
       "category": "Security",
       "prerequisites": [
         "protocol.taproot",
-        "privacy.address-reuse"
+        "privacy.address-reuse",
+        "fundamentals.diffie-hellman-key-exchange"
       ],
       "resources": [
         {
@@ -10388,7 +10390,8 @@
       "category": "Network, Relay & Client Sync",
       "prerequisites": [
         "protocol.transaction-relay-inv-getdata",
-        "protocol.addr-v2-bip155"
+        "protocol.addr-v2-bip155",
+        "fundamentals.diffie-hellman-key-exchange"
       ],
       "resources": [
         {

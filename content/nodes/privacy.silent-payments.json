@@ -5,7 +5,8 @@
   "category": "Security",
   "prerequisites": [
     "protocol.taproot",
-    "privacy.address-reuse"
+    "privacy.address-reuse",
+    "fundamentals.diffie-hellman-key-exchange"
   ],
   "resources": [
     {

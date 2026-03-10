@@ -5,7 +5,8 @@
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "protocol.transaction-relay-inv-getdata",
-    "protocol.addr-v2-bip155"
+    "protocol.addr-v2-bip155",
+    "fundamentals.diffie-hellman-key-exchange"
   ],
   "resources": [
     {

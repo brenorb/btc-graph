@@ -5,7 +5,7 @@
   "category": "Extension Systems",
   "prerequisites": [
     "lightning.invoices",
-    "lightning.onion-routing"
+    "lightning.route-blinding"
   ],
   "resources": [
     {
