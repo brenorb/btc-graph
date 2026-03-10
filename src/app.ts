@@ -32,6 +32,7 @@ import {
   resolveGraphLayoutSettings,
   resolveLabelText,
   resolveInitialTheme,
+  resolveProgressClass,
   resolveProgressStroke,
   resolveNextTheme,
 } from "./core/ui-state";
@@ -667,8 +668,10 @@ function syncNodeClasses(state: AppState) {
     node.removeClass("state-need_to_learn state-learning state-know_it contextual");
 
     const id = node.id();
-    const progress = state.progress[id]?.state ?? "need_to_learn";
-    node.addClass(`state-${progress}`);
+    const progressClass = resolveProgressClass(state.progress[id]?.state ?? null);
+    if (progressClass) {
+      node.addClass(progressClass);
+    }
     if (node.data("contextual")) {
       node.addClass("contextual");
     }

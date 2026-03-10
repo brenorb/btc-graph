@@ -5,6 +5,7 @@ import {
   resolveCategoryColor,
   resolveGraphColorPalette,
   resolveGraphLayoutSettings,
+  resolveProgressClass,
   resolveProgressStroke,
 } from "../src/core/ui-state";
 
@@ -62,16 +63,21 @@ describe("phase 12 ui helpers", () => {
   });
 
   describe("resolveCategoryColor", () => {
-    it("keeps economics and history visually distinct and gives security the red slot", () => {
+    it("keeps the nearby categories visually distinct and gives security the red slot", () => {
       expect(resolveCategoryColor("Economics")).toBe("#d97706");
       expect(resolveCategoryColor("History & Governance")).toBe("#7c3aed");
       expect(resolveCategoryColor("Economics")).not.toBe(resolveCategoryColor("History & Governance"));
+      expect(resolveCategoryColor("Extension Systems")).not.toBe(
+        resolveCategoryColor("Network, Relay & Client Sync"),
+      );
+      expect(resolveCategoryColor("Protocol & Consensus")).not.toBe(resolveCategoryColor("Wallets"));
       expect(resolveCategoryColor("Security")).toBe("#dc2626");
       expect(resolveCategoryColor("Protocol & Consensus")).toBe("#0f766e");
     });
 
-    it("avoids using a disabled gray for extension systems", () => {
-      expect(resolveCategoryColor("Extension Systems")).toBe("#2563eb");
+    it("avoids using a disabled gray for extension systems or a second near-blue beside network sync", () => {
+      expect(resolveCategoryColor("Extension Systems")).toBe("#c026d3");
+      expect(resolveCategoryColor("Network, Relay & Client Sync")).toBe("#0284c7");
       expect(resolveCategoryColor("Extension Systems")).not.toBe("#7f7f7f");
     });
   });
@@ -79,8 +85,8 @@ describe("phase 12 ui helpers", () => {
   describe("resolveProgressStroke", () => {
     it("gives need-to-learn its own visible border treatment", () => {
       expect(resolveProgressStroke("need_to_learn")).toEqual({
-        borderColor: "#2563eb",
-        borderWidth: 3,
+        borderColor: "#60a5fa",
+        borderWidth: 2,
       });
     });
 
@@ -93,6 +99,13 @@ describe("phase 12 ui helpers", () => {
         borderColor: "#16a34a",
         borderWidth: 3,
       });
+    });
+  });
+
+  describe("resolveProgressClass", () => {
+    it("keeps the default unset state visually distinct from explicit need-to-learn", () => {
+      expect(resolveProgressClass(null)).toBeNull();
+      expect(resolveProgressClass("need_to_learn")).toBe("state-need_to_learn");
     });
   });
 });
