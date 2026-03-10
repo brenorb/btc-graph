@@ -62,4 +62,20 @@ describe("leaf-node audit prerequisites", () => {
     expect(offers.prerequisites).toContain("lightning.route-blinding");
     expect(offers.prerequisites).not.toContain("lightning.onion-routing");
   });
+
+  it("models segwit as the malleability fix that Lightning builds on", () => {
+    const segwit = byId.get("protocol.segregated-witness");
+    const paymentChannels = byId.get("lightning.payment-channels");
+
+    expect(segwit).toBeTruthy();
+    expect(paymentChannels).toBeTruthy();
+    if (!segwit || !paymentChannels) return;
+
+    expect(segwit.prerequisites).toContain("protocol.transaction-malleability");
+
+    expect(paymentChannels.prerequisites).toContain("protocol.segregated-witness");
+    expect(paymentChannels.prerequisites).not.toContain(
+      "protocol.transaction-lifecycle",
+    );
+  });
 });

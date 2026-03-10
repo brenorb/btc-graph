@@ -4,7 +4,7 @@
   "description": "Off-chain bilateral channels secured by on-chain contracts.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.transaction-lifecycle",
+    "protocol.segregated-witness",
     "custody.multisig"
   ],
   "resources": [

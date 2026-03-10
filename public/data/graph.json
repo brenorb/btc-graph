@@ -5599,7 +5599,7 @@
       "description": "Off-chain bilateral channels secured by on-chain contracts.",
       "category": "Extension Systems",
       "prerequisites": [
-        "protocol.transaction-lifecycle",
+        "protocol.segregated-witness",
         "custody.multisig"
       ],
       "resources": [
@@ -9864,7 +9864,7 @@
       "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.transaction-lifecycle"
+        "protocol.transaction-malleability"
       ],
       "resources": [
         {

@@ -4,7 +4,7 @@
   "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.transaction-lifecycle"
+    "protocol.transaction-malleability"
   ],
   "resources": [
     {
