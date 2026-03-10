@@ -4,7 +4,6 @@
   "description": "Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.script",
     "protocol.taproot"
   ],
   "resources": [

@@ -4,7 +4,6 @@
   "description": "LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.",
   "category": "Extension Systems",
   "prerequisites": [
-    "lightning.invoices",
     "lightning.bolt12-offers"
   ],
   "resources": [

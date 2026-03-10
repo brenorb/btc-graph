@@ -4,7 +4,6 @@
   "description": "Codex32 is a checksummed seed-sharing format designed for human-verifiable backup workflows. It focuses on robustness against transcription and partial-share handling mistakes.",
   "category": "Wallets",
   "prerequisites": [
-    "custody.seed-phrases",
     "custody.backups-recovery"
   ],
   "resources": [

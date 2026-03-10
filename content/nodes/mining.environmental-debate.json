@@ -4,7 +4,6 @@
   "description": "Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.",
   "category": "Mining",
   "prerequisites": [
-    "mining.energy-accounting",
     "mining.grid-balancing-demand-response"
   ],
   "resources": [

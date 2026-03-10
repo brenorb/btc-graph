@@ -4,8 +4,7 @@
   "description": "Asymmetric cryptography foundations for ownership proofs.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.elliptic-curve-cryptography",
-    "fundamentals.discrete-log-problem"
+    "fundamentals.elliptic-curve-cryptography"
   ],
   "resources": [
     {

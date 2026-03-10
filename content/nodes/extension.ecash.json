@@ -4,7 +4,6 @@
   "description": "Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
   "category": "Extension Systems",
   "prerequisites": [
-    "fundamentals.digital-signatures",
     "protocol.utxo-model"
   ],
   "resources": [

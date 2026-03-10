@@ -4,8 +4,7 @@
   "description": "Locking and unlocking conditions for UTXO spending.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.utxo-model",
-    "fundamentals.digital-signatures"
+    "protocol.utxo-model"
   ],
   "resources": [
     {

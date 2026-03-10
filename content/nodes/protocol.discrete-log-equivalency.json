@@ -4,7 +4,6 @@
   "description": "DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, and scriptless constructions.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "fundamentals.digital-signatures",
     "protocol.adaptor-signatures"
   ],
   "resources": [

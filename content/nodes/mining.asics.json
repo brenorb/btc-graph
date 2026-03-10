@@ -4,7 +4,6 @@
   "description": "ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.",
   "category": "Mining",
   "prerequisites": [
-    "mining.mining-hardware",
     "history.gpu-to-asic-era"
   ],
   "resources": [

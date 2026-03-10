@@ -4,8 +4,7 @@
   "description": "Responsible disclosure coordinates vulnerability reporting and patching to reduce exploit windows. In Bitcoin, disclosure timing and communication quality can have ecosystem-wide impact.",
   "category": "Security",
   "prerequisites": [
-    "security.adversarial-thinking",
-    "ops.run-full-node"
+    "security.adversarial-thinking"
   ],
   "resources": [
     {

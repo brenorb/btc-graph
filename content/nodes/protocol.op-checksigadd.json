@@ -4,9 +4,7 @@
   "description": "OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.taproot",
-    "protocol.script",
-    "fundamentals.schnorr-signatures"
+    "protocol.taproot"
   ],
   "resources": [
     {

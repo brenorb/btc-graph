@@ -4,8 +4,7 @@
   "description": "Validation rules that define Bitcoin’s canonical state.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.proof-of-work",
-    "fundamentals.distributed-systems"
+    "protocol.proof-of-work"
   ],
   "resources": [
     {

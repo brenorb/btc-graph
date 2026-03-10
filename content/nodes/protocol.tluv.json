@@ -4,7 +4,6 @@
   "description": "TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.covenants",
     "protocol.op-checktemplateverify"
   ],
   "resources": [

@@ -45,11 +45,11 @@ const REQUIRED_PHASE_10_PREREQUISITES: Record<string, string[]> = {
   "protocol.anyprevout": ["protocol.sighash-flags", "protocol.taproot"],
   "protocol.op-checktemplateverify": ["protocol.timelocks", "protocol.covenants"],
   "protocol.op-cat": ["protocol.script"],
-  "extension.bitvm": ["protocol.taproot", "protocol.matt-ccv"],
+  "extension.bitvm": ["protocol.matt-ccv"],
   "lightning.eltoo": ["protocol.anyprevout", "lightning.commitment-transactions"],
   "lightning.ptlc": ["lightning.htlc", "protocol.adaptor-signatures"],
   "protocol.erlay": ["protocol.transaction-relay-inv-getdata"],
-  "protocol.cluster-mempool": ["protocol.mempool", "ops.mempool-policy"],
+  "protocol.cluster-mempool": ["ops.mempool-policy"],
 };
 
 const ALLOWED_RESOURCE_DOMAINS = [

@@ -4,7 +4,6 @@
   "description": "Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.mempool",
     "protocol.package-relay"
   ],
   "resources": [

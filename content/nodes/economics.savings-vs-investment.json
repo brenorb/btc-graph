@@ -4,7 +4,6 @@
   "description": "Savings prioritizes preserving purchasing power with minimal dependence on counterparties, while investment takes additional risk for expected yield. Bitcoin is best understood as savings technology first, with investment-like behavior as a secondary market expression.",
   "category": "Economics",
   "prerequisites": [
-    "fundamentals.time-preference",
     "economics.volatility-psychology-risk-sizing"
   ],
   "resources": [

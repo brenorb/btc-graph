@@ -4,7 +4,6 @@
   "description": "Bitcoin mining can use renewable energy well, can be a good demand response load, can recycle heat, can reduce methane emissions, and can use lost energy that would otherwise be wasted.",
   "category": "Mining",
   "prerequisites": [
-    "mining.energy-accounting",
     "mining.grid-balancing-demand-response"
   ],
   "resources": [

@@ -4,7 +4,6 @@
   "description": "Modular inversion is required in Bitcoin signature equations for both key and nonce terms. Understanding inversion clarifies why bad nonce handling can leak private keys.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.modular-arithmetic",
     "fundamentals.fermat-little-theorem"
   ],
   "resources": [

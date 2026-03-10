@@ -23,10 +23,7 @@ const PHASE_15_NODE_IDS = [
 
 const REQUIRED_PHASE_15_PREREQUISITES: Record<string, string[]> = {
   "fundamentals.protocol-basics": ["fundamentals.peer-to-peer-network"],
-  "history.bitcoin-anarchism": [
-    "protocol.nodes-vs-miners",
-    "fundamentals.censorship-resistance",
-  ],
+  "history.bitcoin-anarchism": ["fundamentals.censorship-resistance"],
   "extension.nostr": [
     "fundamentals.public-private-keys",
     "fundamentals.peer-to-peer-network",
@@ -35,7 +32,7 @@ const REQUIRED_PHASE_15_PREREQUISITES: Record<string, string[]> = {
   "ops.mesh-networks": ["fundamentals.peer-to-peer-network"],
   "economics.hayek-spontaneous-order": ["economics.hayek-money-competition"],
   "history.rai-stones": ["economics.history-of-money"],
-  "history.monetary-contact-shocks": ["history.rai-stones", "economics.history-of-money"],
+  "history.monetary-contact-shocks": ["history.rai-stones"],
   "economics.hyperinflation-history": ["fundamentals.inflation", "economics.history-of-money"],
   "economics.bretton-woods-1971": ["economics.history-of-money"],
   "economics.monetary-backing": [

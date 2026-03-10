@@ -4,7 +4,6 @@
   "description": "Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.",
   "category": "History & Governance",
   "prerequisites": [
-    "protocol.nodes-vs-miners",
     "fundamentals.censorship-resistance"
   ],
   "resources": [

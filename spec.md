@@ -20,6 +20,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - no server-side runtime or dynamic backend in v1
 - Learning model:
   - strict prerequisite graph (dependencies matter)
+  - prerequisites should be direct only; avoid redundant transitive edges when one prerequisite already implies another
   - users are not blocked from marking progress out of order; prerequisites are guidance and gap detection, not hard gates
   - each node represents one specific concept
   - beginner/intermediate/advanced are represented by different nodes, not by labels inside one node

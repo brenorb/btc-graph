@@ -31,26 +31,20 @@ const PHASE_11_NODE_IDS = [
 ] as const;
 
 const REQUIRED_PHASE_11_PREREQUISITES: Record<string, string[]> = {
-  "protocol.annex": ["protocol.taproot", "protocol.script"],
-  "mining.asicboost": ["mining.mining-hardware", "protocol.proof-of-work"],
-  "extension.channel-factories": ["lightning.payment-channels", "lightning.liquidity"],
+  "protocol.annex": ["protocol.taproot"],
+  "mining.asicboost": ["mining.mining-hardware"],
+  "extension.channel-factories": ["lightning.liquidity"],
   "extension.coinswap": ["privacy.coinjoin", "protocol.timelocks"],
-  "extension.ecash": ["fundamentals.digital-signatures", "protocol.utxo-model"],
+  "extension.ecash": ["protocol.utxo-model"],
   "privacy.silent-payments": ["protocol.taproot", "privacy.address-reuse"],
-  "ops.utreexo": ["ops.utxo-set-management", "protocol.utxo-model"],
-  "protocol.transaction-pinning": ["protocol.mempool", "protocol.package-relay"],
-  "security.exfiltration-resistant-signing": [
-    "custody.air-gapped-signing",
-    "fundamentals.digital-signatures",
-  ],
-  "protocol.fee-sponsorship": ["protocol.cpfp", "protocol.transaction-lifecycle"],
-  "protocol.discrete-log-equivalency": [
-    "fundamentals.digital-signatures",
-    "protocol.adaptor-signatures",
-  ],
+  "ops.utreexo": ["ops.utxo-set-management"],
+  "protocol.transaction-pinning": ["protocol.package-relay"],
+  "security.exfiltration-resistant-signing": ["custody.air-gapped-signing"],
+  "protocol.fee-sponsorship": ["protocol.cpfp"],
+  "protocol.discrete-log-equivalency": ["protocol.adaptor-signatures"],
   "fundamentals.trustlessness": ["ops.run-full-node", "fundamentals.censorship-resistance"],
   "privacy.fungibility": ["privacy.chain-analysis-heuristics", "fundamentals.money-properties"],
-  "security.adversarial-thinking": ["security.eclipse-attacks", "fundamentals.distributed-systems"],
+  "security.adversarial-thinking": ["security.eclipse-attacks"],
 };
 
 const ALLOWED_RESOURCE_DOMAINS = [

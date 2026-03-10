@@ -4,8 +4,7 @@
   "description": "Direct introspection proposals expose transaction fields to Script for covenant enforcement. They increase expressiveness while raising complexity and review-surface tradeoffs.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.covenants",
-    "protocol.script"
+    "protocol.covenants"
   ],
   "resources": [
     {

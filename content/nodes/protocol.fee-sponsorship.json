@@ -4,8 +4,7 @@
   "description": "Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.cpfp",
-    "protocol.transaction-lifecycle"
+    "protocol.cpfp"
   ],
   "resources": [
     {

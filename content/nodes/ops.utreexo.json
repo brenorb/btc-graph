@@ -4,8 +4,7 @@
   "description": "Utreexo compresses UTXO commitments using accumulator proofs to reduce full-node state costs. It shifts part of the burden to proof generation and verification pipelines.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "ops.utxo-set-management",
-    "protocol.utxo-model"
+    "ops.utxo-set-management"
   ],
   "resources": [
     {

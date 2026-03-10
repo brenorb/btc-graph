@@ -4,7 +4,6 @@
   "description": "Mainstream policy frameworks argue for low positive inflation targets to reduce deflation risk and support wage and debt adjustment. Competing schools argue these benefits are overstated and can hide distributional costs.",
   "category": "Economics",
   "prerequisites": [
-    "fundamentals.inflation",
     "economics.central-bank-basics",
     "economics.monetary-vs-price-inflation"
   ],

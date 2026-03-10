@@ -4,10 +4,8 @@
   "description": "Diffie-Hellman lets two parties derive a shared secret over a public channel using group exponentiation. In Bitcoin systems, elliptic-curve variants appear in encrypted transport and protocol design patterns.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.modular-exponentiation",
     "fundamentals.cyclic-groups",
-    "fundamentals.discrete-log-problem",
-    "fundamentals.finite-fields"
+    "fundamentals.discrete-log-problem"
   ],
   "resources": [
     {
