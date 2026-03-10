@@ -4,8 +4,7 @@
   "description": "When previously separate civilizations begin trading, a local money can lose scarcity if outsiders replicate it at lower cost. This helps explain monetary inflation episodes tied to technology and trade contact.",
   "category": "History & Governance",
   "prerequisites": [
-    "history.rai-stones",
-    "economics.history-of-money"
+    "history.rai-stones"
   ],
   "resources": [
     {

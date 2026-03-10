@@ -4,7 +4,6 @@
   "description": "BitVM enables optimistic computation protocols anchored to Bitcoin settlement. It trades covenant requirements for interactive proofs and operational complexity.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.taproot",
     "protocol.matt-ccv"
   ],
   "resources": [

@@ -5,7 +5,6 @@
   "category": "Economics",
   "prerequisites": [
     "economics.history-of-money",
-    "fundamentals.money-properties",
     "economics.scarcity"
   ],
   "resources": [

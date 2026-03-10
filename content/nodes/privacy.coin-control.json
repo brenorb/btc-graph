@@ -4,7 +4,6 @@
   "description": "Manual UTXO selection to optimize privacy and fee outcomes.",
   "category": "Security",
   "prerequisites": [
-    "protocol.utxo-model",
     "protocol.fee-market"
   ],
   "resources": [

@@ -4,7 +4,6 @@
   "description": "Recovery drills, inheritance planning, and backup hygiene.",
   "category": "Wallets",
   "prerequisites": [
-    "custody.seed-phrases",
     "custody.self-custody"
   ],
   "resources": [

@@ -30,20 +30,15 @@ const REQUIRED_TOPIC_NODE_IDS = [
 const REQUIRED_NEW_PREREQUISITES: Record<string, string[]> = {
   "economics.monetization-process": [
     "economics.history-of-money",
-    "fundamentals.money-properties",
     "economics.scarcity",
   ],
   "economics.bitcoin-supply-demand": [
-    "economics.scarcity",
     "economics.monetization-process",
     "protocol.halving",
   ],
   "economics.cantillon-effects": ["fundamentals.inflation"],
   "economics.monetary-vs-price-inflation": ["fundamentals.inflation"],
-  "economics.savings-vs-investment": [
-    "fundamentals.time-preference",
-    "economics.volatility-psychology-risk-sizing",
-  ],
+  "economics.savings-vs-investment": ["economics.volatility-psychology-risk-sizing"],
   "economics.neutral-money-vs-political-money": [
     "fundamentals.neutrality",
     "economics.hayek-money-competition",
@@ -55,10 +50,7 @@ const REQUIRED_NEW_PREREQUISITES: Record<string, string[]> = {
   ],
   "mining.energy-accounting": ["protocol.proof-of-work", "economics.cost-of-production"],
   "mining.grid-balancing-demand-response": ["mining.energy-accounting"],
-  "mining.environmental-debate": [
-    "mining.energy-accounting",
-    "mining.grid-balancing-demand-response",
-  ],
+  "mining.environmental-debate": ["mining.grid-balancing-demand-response"],
   "history.cypherpunk-roots-bitcoin-origin": [
     "history.cypherpunks",
     "history.bitcoin-whitepaper",

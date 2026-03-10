@@ -4,8 +4,7 @@
   "description": "CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.cpfp",
-    "protocol.mempool"
+    "protocol.cpfp"
   ],
   "resources": [
     {

@@ -4,8 +4,7 @@
   "description": "The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.taproot",
-    "protocol.script"
+    "protocol.taproot"
   ],
   "resources": [
     {

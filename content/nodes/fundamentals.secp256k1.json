@@ -4,8 +4,7 @@
   "description": "secp256k1 is Bitcoin's elliptic curve and fixed parameter set for key generation and signatures. Its field, generator point, and group order determine valid key and nonce ranges.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.elliptic-curve-cryptography",
-    "fundamentals.finite-fields"
+    "fundamentals.elliptic-curve-cryptography"
   ],
   "resources": [
     {

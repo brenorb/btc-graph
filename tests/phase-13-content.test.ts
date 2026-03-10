@@ -18,10 +18,8 @@ const REQUIRED_PHASE_13_PREREQUISITES: Record<string, string[]> = {
   "fundamentals.modular-exponentiation": ["fundamentals.modular-arithmetic"],
   "fundamentals.cyclic-groups": ["fundamentals.finite-fields"],
   "fundamentals.diffie-hellman-key-exchange": [
-    "fundamentals.modular-exponentiation",
     "fundamentals.cyclic-groups",
     "fundamentals.discrete-log-problem",
-    "fundamentals.finite-fields",
   ],
 };
 

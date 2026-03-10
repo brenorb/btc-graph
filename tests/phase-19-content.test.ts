@@ -7,10 +7,7 @@ import type { GraphNode } from "../src/core/types";
 
 const PHASE_19_NODE_ID = "privacy.pseudonymity" as const;
 
-const REQUIRED_PREREQUISITES = [
-  "protocol.addresses-outputs",
-  "fundamentals.public-private-keys",
-] as const;
+const REQUIRED_PREREQUISITES = ["protocol.addresses-outputs"] as const;
 
 function loadNodes(): GraphNode[] {
   const repoRoot = process.cwd();

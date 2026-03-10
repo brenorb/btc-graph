@@ -7,10 +7,7 @@ import type { GraphNode } from "../src/core/types";
 
 const PHASE_21_NODE_ID = "mining.asics" as const;
 
-const REQUIRED_PREREQUISITES = [
-  "mining.mining-hardware",
-  "history.gpu-to-asic-era",
-] as const;
+const REQUIRED_PREREQUISITES = ["history.gpu-to-asic-era"] as const;
 
 function loadNodes(): GraphNode[] {
   const repoRoot = process.cwd();

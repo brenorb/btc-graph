@@ -4,7 +4,6 @@
   "description": "Channel factories let multiple users share one on-chain UTXO to open and rebalance many off-chain channels. They trade coordination complexity for better on-chain footprint and liquidity efficiency.",
   "category": "Extension Systems",
   "prerequisites": [
-    "lightning.payment-channels",
     "lightning.liquidity"
   ],
   "resources": [

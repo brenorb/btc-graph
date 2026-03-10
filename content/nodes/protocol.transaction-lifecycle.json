@@ -4,7 +4,6 @@
   "description": "From creation and propagation to confirmation and settlement.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.utxo-model",
     "protocol.script"
   ],
   "resources": [

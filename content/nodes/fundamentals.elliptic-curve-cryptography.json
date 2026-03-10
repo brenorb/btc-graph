@@ -4,7 +4,6 @@
   "description": "Elliptic curve cryptography maps finite-field arithmetic into group operations used for Bitcoin keys and signatures. It is the practical cryptographic system behind secp256k1.",
   "category": "Security",
   "prerequisites": [
-    "fundamentals.finite-fields",
     "fundamentals.discrete-log-problem"
   ],
   "resources": [

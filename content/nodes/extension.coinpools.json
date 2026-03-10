@@ -4,8 +4,7 @@
   "description": "Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.",
   "category": "Extension Systems",
   "prerequisites": [
-    "extension.payment-pools",
-    "protocol.covenants"
+    "extension.payment-pools"
   ],
   "resources": [
     {

@@ -4,8 +4,7 @@
   "description": "Exfiltration-resistant signing protocols prevent compromised signers from leaking key material through nonce channels. They are particularly important in multi-device and hardware-assisted setups.",
   "category": "Security",
   "prerequisites": [
-    "custody.air-gapped-signing",
-    "fundamentals.digital-signatures"
+    "custody.air-gapped-signing"
   ],
   "resources": [
     {

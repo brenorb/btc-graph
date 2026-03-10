@@ -4,8 +4,7 @@
   "description": "ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.",
   "category": "Mining",
   "prerequisites": [
-    "mining.mining-hardware",
-    "protocol.proof-of-work"
+    "mining.mining-hardware"
   ],
   "resources": [
     {

@@ -4,7 +4,6 @@
   "description": "Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "fundamentals.digital-signatures",
     "protocol.taproot"
   ],
   "resources": [

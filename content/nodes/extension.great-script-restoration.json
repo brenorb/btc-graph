@@ -4,7 +4,6 @@
   "description": "The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.script",
     "protocol.op-cat"
   ],
   "resources": [

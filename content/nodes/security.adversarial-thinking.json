@@ -4,8 +4,7 @@
   "description": "Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.",
   "category": "Security",
   "prerequisites": [
-    "security.eclipse-attacks",
-    "fundamentals.distributed-systems"
+    "security.eclipse-attacks"
   ],
   "resources": [
     {

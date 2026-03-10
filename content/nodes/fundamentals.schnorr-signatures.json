@@ -5,7 +5,6 @@
   "category": "Security",
   "prerequisites": [
     "fundamentals.secp256k1",
-    "fundamentals.discrete-log-problem",
     "fundamentals.hash-functions"
   ],
   "resources": [

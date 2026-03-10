@@ -21,43 +21,27 @@ const PHASE_12_NODE_IDS = [
 const REQUIRED_PHASE_12_PREREQUISITES: Record<string, string[]> = {
   "fundamentals.finite-fields": ["fundamentals.modular-arithmetic"],
   "fundamentals.fermat-little-theorem": ["fundamentals.modular-exponentiation"],
-  "fundamentals.modular-inverse": [
-    "fundamentals.modular-arithmetic",
-    "fundamentals.fermat-little-theorem",
-  ],
+  "fundamentals.modular-inverse": ["fundamentals.fermat-little-theorem"],
   "fundamentals.discrete-log-problem": [
     "fundamentals.finite-fields",
     "fundamentals.modular-exponentiation",
   ],
-  "fundamentals.elliptic-curve-cryptography": [
-    "fundamentals.finite-fields",
-    "fundamentals.discrete-log-problem",
-  ],
+  "fundamentals.elliptic-curve-cryptography": ["fundamentals.discrete-log-problem"],
   "fundamentals.scalar-multiplication": ["fundamentals.elliptic-curve-cryptography"],
-  "fundamentals.secp256k1": [
-    "fundamentals.elliptic-curve-cryptography",
-    "fundamentals.finite-fields",
-  ],
+  "fundamentals.secp256k1": ["fundamentals.elliptic-curve-cryptography"],
   "fundamentals.ecdsa": [
     "fundamentals.secp256k1",
     "fundamentals.modular-inverse",
     "fundamentals.scalar-multiplication",
   ],
-  "fundamentals.schnorr-signatures": [
-    "fundamentals.secp256k1",
-    "fundamentals.discrete-log-problem",
-    "fundamentals.hash-functions",
-  ],
+  "fundamentals.schnorr-signatures": ["fundamentals.secp256k1", "fundamentals.hash-functions"],
 };
 
 const REQUIRED_EXISTING_UPDATES: Record<string, string[]> = {
-  "fundamentals.public-private-keys": [
-    "fundamentals.elliptic-curve-cryptography",
-    "fundamentals.discrete-log-problem",
-  ],
+  "fundamentals.public-private-keys": ["fundamentals.elliptic-curve-cryptography"],
   "fundamentals.digital-signatures": ["fundamentals.ecdsa"],
   "protocol.taproot": ["fundamentals.schnorr-signatures"],
-  "protocol.op-checksigadd": ["fundamentals.schnorr-signatures"],
+  "protocol.op-checksigadd": ["protocol.taproot"],
 };
 
 const ALLOWED_RESOURCE_DOMAINS = [
@@ -136,6 +120,10 @@ describe("phase 12 foundational math and cryptography expansion", () => {
       const node = byId.get(nodeId);
       expect(node, `${nodeId} should exist`).toBeTruthy();
       if (!node) continue;
+
+      if (nodeId === "fundamentals.modular-arithmetic") {
+        expect(node.title).toBe("Modular Arithmetic Basics");
+      }
 
       expect(isDescriptionTooLong(node.description), `${nodeId} should use max 2 sentences`).toBe(
         false,

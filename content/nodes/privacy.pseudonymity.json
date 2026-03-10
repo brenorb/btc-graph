@@ -4,8 +4,7 @@
   "description": "Bitcoin is pseudonymous, not anonymous: addresses are public identifiers that can be linked to real identities through behavior, counterparties, and metadata. Privacy requires active operational practices rather than default assumptions.",
   "category": "Security",
   "prerequisites": [
-    "protocol.addresses-outputs",
-    "fundamentals.public-private-keys"
+    "protocol.addresses-outputs"
   ],
   "resources": [
     {

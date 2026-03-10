@@ -4,7 +4,6 @@
   "description": "Digital scarcity is the ability to make digital units costly to forge and impossible to validly spend twice under shared rules. Bitcoin's breakthrough is combining cryptography, networking, and consensus to enforce that scarcity.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "history.double-spend-problem",
     "protocol.proof-of-work"
   ],
   "resources": [

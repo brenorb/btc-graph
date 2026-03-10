@@ -18,9 +18,8 @@ const PHASE_16_REQUESTED_TOPICS = [
 
 const REQUIRED_PHASE_16_PREREQUISITES: Record<string, string[]> = {
   "economics.token-basics": ["fundamentals.protocol-basics", "protocol.addresses-outputs"],
-  "fundamentals.digital-scarcity": ["history.double-spend-problem", "protocol.proof-of-work"],
+  "fundamentals.digital-scarcity": ["protocol.proof-of-work"],
   "economics.need-for-inflation": [
-    "fundamentals.inflation",
     "economics.central-bank-basics",
     "economics.monetary-vs-price-inflation",
   ],

@@ -4,8 +4,7 @@
   "description": "Different responsibilities and power boundaries in the network.",
   "category": "History & Governance",
   "prerequisites": [
-    "protocol.consensus-rules",
-    "protocol.proof-of-work"
+    "protocol.consensus-rules"
   ],
   "resources": [
     {

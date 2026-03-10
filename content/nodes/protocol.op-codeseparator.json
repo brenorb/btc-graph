@@ -4,8 +4,7 @@
   "description": "OP_CODESEPARATOR changes the script segment committed by signature hashing. Its behavior is subtle and historically important for advanced script correctness.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.sighash-flags",
-    "protocol.script"
+    "protocol.sighash-flags"
   ],
   "resources": [
     {

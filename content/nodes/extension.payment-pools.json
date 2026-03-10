@@ -4,8 +4,7 @@
   "description": "Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.",
   "category": "Extension Systems",
   "prerequisites": [
-    "extension.transaction-templating",
-    "protocol.covenants"
+    "extension.transaction-templating"
   ],
   "resources": [
     {

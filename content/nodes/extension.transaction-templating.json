@@ -4,8 +4,7 @@
   "description": "Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.op-checktemplateverify",
-    "protocol.covenants"
+    "protocol.op-checktemplateverify"
   ],
   "resources": [
     {

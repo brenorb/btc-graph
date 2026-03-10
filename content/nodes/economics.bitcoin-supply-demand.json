@@ -4,7 +4,6 @@
   "description": "Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.",
   "category": "Economics",
   "prerequisites": [
-    "economics.scarcity",
     "economics.monetization-process",
     "protocol.halving"
   ],

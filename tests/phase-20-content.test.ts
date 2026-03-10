@@ -7,10 +7,7 @@ import type { GraphNode } from "../src/core/types";
 
 const PHASE_20_NODE_ID = "mining.environmental-co-benefits" as const;
 
-const REQUIRED_PREREQUISITES = [
-  "mining.energy-accounting",
-  "mining.grid-balancing-demand-response",
-] as const;
+const REQUIRED_PREREQUISITES = ["mining.grid-balancing-demand-response"] as const;
 
 function loadNodes(): GraphNode[] {
   const repoRoot = process.cwd();

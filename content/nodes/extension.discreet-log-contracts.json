@@ -4,8 +4,7 @@
   "description": "DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.adaptor-signatures",
-    "fundamentals.digital-signatures"
+    "protocol.adaptor-signatures"
   ],
   "resources": [
     {

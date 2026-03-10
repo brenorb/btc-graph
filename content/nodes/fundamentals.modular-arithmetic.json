@@ -1,6 +1,6 @@
 {
   "id": "fundamentals.modular-arithmetic",
-  "title": "Modular Arithmetic",
+  "title": "Modular Arithmetic Basics",
   "description": "Modular arithmetic is clock-style math over a fixed modulus and is the base of Bitcoin signature calculations. It defines addition, subtraction, and multiplication inside finite fields.",
   "category": "Security",
   "prerequisites": [],

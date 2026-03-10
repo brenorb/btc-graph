@@ -4,7 +4,6 @@
   "description": "Cluster mempool tracks package relationships to improve policy decisions and package relay behavior. It aims to make ancestor/descendant handling more predictable under load.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.mempool",
     "ops.mempool-policy"
   ],
   "resources": [

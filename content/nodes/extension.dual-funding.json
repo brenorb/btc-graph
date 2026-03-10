@@ -4,7 +4,6 @@
   "description": "Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.",
   "category": "Extension Systems",
   "prerequisites": [
-    "lightning.payment-channels",
     "lightning.commitment-transactions"
   ],
   "resources": [
