@@ -62,9 +62,11 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
   - short description
   - prerequisites
   - clear "gaps to fill" list when prerequisites are missing
+  - if more than 2 gaps exist, show the first 2 by default with an explicit expand control for the rest
   - next concepts unlocked
   - curated resources
   - estimated time
+  - progress state is conveyed by the selected state button itself; no redundant plain-text summary is needed
   - selecting a search result centers/zooms graph to the node and opens details
 - Layout direction:
   - hierarchical learning flow (not free-form force layout)
@@ -93,6 +95,7 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
     - `Generic change` action for cross-cutting feedback
   - no direct `Quick edit PR` flow in v1 (issue flow only)
   - contribution flow should not require local coding setup
+  - AI helper should stay collapsed behind `Ask AI about this node` until explicitly opened
 - Moderation:
   - no extra project-specific moderation rules required in v1
 
