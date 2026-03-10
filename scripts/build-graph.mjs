@@ -2,12 +2,24 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { writeNodeInfoPages } from "./lib/node-info-pages.mjs";
+import {
+  writeLibraryPage,
+  writeLlmsFullText,
+  writeLlmsTxt,
+  writeRobotsTxt,
+  writeSitemap,
+} from "./lib/site-discovery.mjs";
 
 const repoRoot = process.cwd();
 const sourceDir = path.join(repoRoot, "content", "nodes");
 const outputDir = path.join(repoRoot, "public", "data");
 const outputFile = path.join(outputDir, "graph.json");
 const infoPagesOutputDir = path.join(repoRoot, "public", "nodes");
+const libraryOutputFile = path.join(repoRoot, "public", "library", "index.html");
+const sitemapOutputFile = path.join(repoRoot, "public", "sitemap.xml");
+const robotsOutputFile = path.join(repoRoot, "public", "robots.txt");
+const llmsOutputFile = path.join(repoRoot, "public", "llms.txt");
+const llmsFullTextOutputFile = path.join(repoRoot, "public", "llms-full-text.txt");
 
 const requiredFields = [
   "id",
@@ -127,11 +139,17 @@ if (errors.length > 0) {
 }
 
 const graph = { nodes: nodes.sort((a, b) => a.id.localeCompare(b.id)) };
+const buildTimestamp = new Date().toISOString();
 
 fs.mkdirSync(outputDir, { recursive: true });
 fs.writeFileSync(outputFile, JSON.stringify(graph, null, 2));
 writeNodeInfoPages(graph, infoPagesOutputDir);
+writeLibraryPage(graph, libraryOutputFile);
+writeSitemap(graph, sitemapOutputFile, buildTimestamp);
+writeRobotsTxt(robotsOutputFile);
+writeLlmsTxt(llmsOutputFile);
+writeLlmsFullText(graph, llmsFullTextOutputFile);
 
 console.log(
-  `Built ${graph.nodes.length} nodes -> ${path.relative(repoRoot, outputFile)} and ${path.relative(repoRoot, infoPagesOutputDir)}`,
+  `Built ${graph.nodes.length} nodes -> ${path.relative(repoRoot, outputFile)}, ${path.relative(repoRoot, infoPagesOutputDir)}, ${path.relative(repoRoot, libraryOutputFile)}, ${path.relative(repoRoot, sitemapOutputFile)}, ${path.relative(repoRoot, robotsOutputFile)}, ${path.relative(repoRoot, llmsOutputFile)}, and ${path.relative(repoRoot, llmsFullTextOutputFile)}`,
 );

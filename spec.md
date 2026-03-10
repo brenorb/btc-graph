@@ -153,6 +153,15 @@ Each resource entry should minimally support:
 ## Language (decided)
 - v1 content and UI in English only
 
+## Discovery And SEO (decided)
+- the public site ships crawlable discovery assets for both traditional search engines and AI agents:
+  - canonical metadata on the homepage
+  - robots.txt with AI crawler allows
+  - sitemap.xml for the homepage, library, and node info pages
+  - llms.txt and llms-full-text.txt
+- each node `/info` page remains static HTML and is indexable
+- the site also publishes a text-first `/library/` page listing all concepts by category
+
 ## Non-Goals (v1)
 - user accounts and cloud sync
 - social/community features

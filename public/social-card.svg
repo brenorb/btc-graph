@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Bitcoin Learning Graph</title>
+  <desc id="desc">Structured Bitcoin self-study with prerequisites, curated resources, and crawlable concept pages.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4f7ff" />
+      <stop offset="55%" stop-color="#ecfdf5" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="32" />
+  <g fill="none" stroke="#0f766e" stroke-opacity="0.18">
+    <circle cx="180" cy="180" r="96" />
+    <circle cx="1010" cy="470" r="124" />
+    <path d="M180 180L410 300L625 190L840 310L1010 470" stroke-width="10" />
+  </g>
+  <g fill="#0f172a">
+    <text x="88" y="116" font-family="Syne, Arial, sans-serif" font-size="38" font-weight="700">Bitcoin Learning Graph</text>
+    <text x="88" y="238" font-family="Syne, Arial, sans-serif" font-size="86" font-weight="800">Structured</text>
+    <text x="88" y="328" font-family="Syne, Arial, sans-serif" font-size="86" font-weight="800">Bitcoin</text>
+    <text x="88" y="418" font-family="Syne, Arial, sans-serif" font-size="86" font-weight="800">Self-Study</text>
+  </g>
+  <g fill="#1f2937" font-family="Archivo, Arial, sans-serif" font-size="30">
+    <text x="88" y="498">Prerequisites, curated resources, static concept pages, and plain-text AI summaries.</text>
+    <text x="88" y="550">brenorb.com/btc-graph</text>
+  </g>
+  <g fill="#0f766e">
+    <circle cx="410" cy="300" r="18" />
+    <circle cx="625" cy="190" r="18" />
+    <circle cx="840" cy="310" r="18" />
+  </g>
+</svg>

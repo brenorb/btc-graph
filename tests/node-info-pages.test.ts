@@ -41,7 +41,14 @@ describe("writeNodeInfoPages", () => {
           description: "Legacy Bitcoin signature algorithm.",
           category: "Security",
           prerequisites: ["fundamentals.modular-arithmetic"],
-          resources: [],
+          resources: [
+            {
+              type: "article",
+              title: "ECDSA primer",
+              url: "https://example.com/ecdsa",
+              notes: "Short walk-through.",
+            },
+          ],
           estimatedTime: "70m",
         },
         {
@@ -62,11 +69,15 @@ describe("writeNodeInfoPages", () => {
     const html = fs.readFileSync(ecdsaInfoPath, "utf8");
     expect(html).toContain("<h1>ECDSA</h1>");
     expect(html).toContain("<p class=\"node-id\">fundamentals.ecdsa</p>");
+    expect(html).toContain("Curated resources (1)");
     expect(html).toContain("Direct prerequisites (1)");
     expect(html).toContain("Direct dependents (1)");
     expect(html).toContain("../../fundamentals.modular-arithmetic/info/");
     expect(html).toContain("../../fundamentals.digital-signatures/info/");
     expect(html).toContain("../../../?selected=fundamentals.ecdsa");
+    expect(html).toContain("https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/");
+    expect(html).toContain("Browse the concept library");
+    expect(html).toContain("ECDSA primer");
   });
 
   it("renders empty adjacency lists explicitly when a node has no direct neighbors", () => {
@@ -91,6 +102,7 @@ describe("writeNodeInfoPages", () => {
       "utf8",
     );
 
+    expect(html).toContain("Resources for this concept have not been curated yet.");
     expect(html).toContain("Direct prerequisites (0)");
     expect(html).toContain("<li>None</li>");
     expect(html).toContain("Direct dependents (0)");

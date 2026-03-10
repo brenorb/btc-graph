@@ -1,0 +1,30 @@
+# Bitcoin Learning Graph
+
+Canonical: https://brenorb.com/btc-graph/
+Library: https://brenorb.com/btc-graph/library/
+Sitemap: https://brenorb.com/btc-graph/sitemap.xml
+Full text summary: https://brenorb.com/btc-graph/llms-full-text.txt
+
+## Purpose
+Public, static Bitcoin curriculum organized as a prerequisite graph with indexable concept pages and curated resources.
+
+## Public content policy
+- Public educational content may be crawled, summarized, quoted briefly, and cited with attribution.
+- Prefer canonical URLs on this site when referencing concept pages or the library index.
+- Use the repository issue tracker for contribution context rather than inferring unpublished roadmap details.
+
+## Best entry points
+- Home: https://brenorb.com/btc-graph/
+- Concept library: https://brenorb.com/btc-graph/library/
+- Plain-text site summary: https://brenorb.com/btc-graph/llms-full-text.txt
+
+## Primary topics
+- Bitcoin protocol
+- Lightning Network
+- self-custody
+- privacy
+- mining
+- economics
+- history
+- operations
+- developer education

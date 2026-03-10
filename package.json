@@ -15,14 +15,20 @@
     "type": "git",
     "url": "git+https://github.com/brenorb/btc-graph.git"
   },
-  "keywords": [],
+  "keywords": [
+    "bitcoin",
+    "learning-graph",
+    "education",
+    "lightning-network",
+    "seo"
+  ],
   "author": "",
   "license": "MIT",
   "type": "module",
   "bugs": {
     "url": "https://github.com/brenorb/btc-graph/issues"
   },
-  "homepage": "https://github.com/brenorb/btc-graph#readme",
+  "homepage": "https://brenorb.com/btc-graph/",
   "devDependencies": {
     "@types/node": "^25.3.3",
     "eslint": "^10.0.2",
