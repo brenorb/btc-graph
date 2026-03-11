@@ -67,10 +67,15 @@ interface AppState {
   expandedGapNodeIds: Set<string>;
   viewportMode: "desktop" | "mobile";
   mobileToolsOpen: boolean;
+  donateModalOpen: boolean;
 }
 
 const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
 const MOBILE_BREAKPOINT = 820;
+const LIGHTNING_ADDRESS = "breno@bipa.app";
+const LIGHTNING_URI = `lightning:${LIGHTNING_ADDRESS}`;
+const DONATION_QR_IMAGE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=svg&data=${encodeURIComponent(LIGHTNING_URI)}`;
+const DEFAULT_DONATION_COMMENT = "Support Bitcoin Learning Graph";
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -122,7 +127,7 @@ function createLayout(root: HTMLElement) {
           <div class="header-link-group">
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
-            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+            <button class="btn" type="button" data-donate-trigger="header">Donate</button>
             <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
           </div>
           <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -172,7 +177,7 @@ function createLayout(root: HTMLElement) {
           <div class="mobile-shortcuts">
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
-            <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+            <button class="btn" type="button" data-donate-trigger="mobile">Donate</button>
             <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
@@ -204,6 +209,39 @@ function createLayout(root: HTMLElement) {
         </div>
         <div id="detail-content" class="meta">Select a node to inspect prerequisites, resources, and progress.</div>
       </aside>
+      <div class="donate-backdrop" id="donate-backdrop" hidden></div>
+      <section class="donate-modal" id="donate-modal" role="dialog" aria-modal="true" aria-labelledby="donate-title" hidden>
+        <div class="donate-modal-header">
+          <div>
+            <div class="footer-title" id="donate-title">Support the project</div>
+            <div class="meta">Scan the QR code or use the Lightning address below.</div>
+          </div>
+          <button class="icon-btn" id="donate-close" type="button" aria-label="Close donation dialog">✕</button>
+        </div>
+        <img
+          class="donate-qr"
+          id="donate-qr"
+          src="${DONATION_QR_IMAGE_URL}"
+          alt="Lightning donation QR code for ${LIGHTNING_ADDRESS}"
+          loading="lazy"
+        />
+        <div class="donate-address-block">
+          <div class="resource-type">Lightning Address</div>
+          <code class="donate-address" id="donate-address">${LIGHTNING_ADDRESS}</code>
+        </div>
+        <div class="donate-actions">
+          <button class="btn primary" id="donate-copy" type="button">Copy address</button>
+          <a class="btn" id="donate-open-wallet" href="${LIGHTNING_URI}">Open wallet</a>
+        </div>
+        <div class="donate-address-block">
+          <div class="resource-type">Suggested message</div>
+          <code class="donate-address" id="donate-comment">${DEFAULT_DONATION_COMMENT}</code>
+          <div class="meta">If your wallet asks for a comment while paying the Lightning Address, use this.</div>
+        </div>
+        <div class="donate-actions">
+          <button class="btn" id="donate-copy-comment" type="button">Copy message</button>
+        </div>
+      </section>
 
       <footer class="site-footer">
         <div class="footer-main">
@@ -215,7 +253,7 @@ function createLayout(root: HTMLElement) {
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
-          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/sponsors/brenorb">Donate</a>
+          <button class="footer-link footer-link-button" type="button" data-donate-trigger="footer">Donate</button>
         </div>
         <div class="footer-socials" aria-label="Social links">
           <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph" aria-label="GitHub">
@@ -223,12 +261,12 @@ function createLayout(root: HTMLElement) {
               <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.31 6.84 9.66.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.74-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .08 1.53 1.05 1.53 1.05.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.09 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.06A9.36 9.36 0 0 1 12 6.84c.85 0 1.7.12 2.5.35 1.91-1.34 2.75-1.06 2.75-1.06.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.77 0 3.96-2.35 4.82-4.58 5.08.36.31.67.93.67 1.87 0 1.35-.01 2.43-.01 2.76 0 .27.18.6.69.49A10.22 10.22 0 0 0 22 12.22C22 6.58 17.52 2 12 2z"/>
             </svg>
           </a>
-          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://nostr.com" aria-label="Nostr">
+          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://brenorb.com" aria-label="Personal website">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 2.2 6.9 3.84L12 11.9 5.1 8.04 12 4.2zm-7 5.51 6 3.34v6.78l-6-3.33V9.71zm14 0v6.79l-6 3.33v-6.78l6-3.34z"/>
+              <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2zm6.93 9h-3.11a15.74 15.74 0 0 0-1.38-5A8.04 8.04 0 0 1 18.93 11zM12 4.04c1.09 1.31 1.93 3.32 2.26 5.96H9.74C10.07 7.36 10.91 5.35 12 4.04zM9.56 6a15.74 15.74 0 0 0-1.38 5H5.07A8.04 8.04 0 0 1 9.56 6zM4.26 13h3.92a16.9 16.9 0 0 0 1.06 5.1A8.04 8.04 0 0 1 4.26 13zm7.74 6.96c-1.09-1.31-1.93-3.32-2.26-5.96h4.52c-.33 2.64-1.17 4.65-2.26 5.96zM14.44 18.1A16.9 16.9 0 0 0 15.5 13h3.92a8.04 8.04 0 0 1-4.98 5.1z"/>
             </svg>
           </a>
-          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://x.com/search?q=btc%20graph" aria-label="X (Twitter)">
+          <a class="footer-social-link" target="_blank" rel="noreferrer" href="https://x.com/brenorb" aria-label="X (Twitter)">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18.9 2H22l-6.77 7.73L23.2 22h-6.27l-4.91-6.43L6.4 22H3.3l7.24-8.26L.8 2h6.43l4.45 5.88L18.9 2zm-1.1 18h1.73L6.33 3.9H4.48L17.8 20z"/>
             </svg>
@@ -438,6 +476,8 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
 
   const layout = root.querySelector<HTMLElement>(".layout");
   const detailBackdrop = root.querySelector<HTMLElement>("#detail-backdrop");
+  const donateBackdrop = root.querySelector<HTMLElement>("#donate-backdrop");
+  const donateModal = root.querySelector<HTMLElement>("#donate-modal");
   const mobileToolsOverlay = root.querySelector<HTMLElement>("#mobile-tools-overlay");
   const mobileToolsPanel = root.querySelector<HTMLElement>("#mobile-tools-panel");
   const mobileToolsToggle = root.querySelector<HTMLButtonElement>("#mobile-tools-toggle");
@@ -457,9 +497,30 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
     mobileToolsOverlay.classList.toggle("open", mobileToolsVisible);
   }
 
+  if (donateBackdrop) {
+    donateBackdrop.hidden = !state.donateModalOpen;
+    donateBackdrop.classList.toggle("open", state.donateModalOpen);
+  }
+
+  if (donateModal) {
+    donateModal.hidden = !state.donateModalOpen;
+    donateModal.classList.toggle("open", state.donateModalOpen);
+  }
+
   mobileToolsPanel?.classList.toggle("open", mobileToolsVisible);
   mobileToolsToggle?.setAttribute("aria-expanded", String(mobileToolsVisible));
-  document.body.classList.toggle("overlay-open", detailOpen || mobileToolsVisible);
+  document.body.classList.toggle(
+    "overlay-open",
+    detailOpen || mobileToolsVisible || state.donateModalOpen,
+  );
+}
+
+function setDonateModalOpen(state: AppState, root: HTMLElement, open: boolean) {
+  state.donateModalOpen = open;
+  if (open) {
+    state.mobileToolsOpen = false;
+  }
+  syncResponsiveLayout(state, root);
 }
 
 function closeDetails(state: AppState, root: HTMLElement) {
@@ -963,6 +1024,36 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     setMobileToolsOpen(false);
   });
 
+  root.querySelectorAll<HTMLElement>("[data-donate-trigger]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      setDonateModalOpen(state, root, true);
+    });
+  });
+
+  root.querySelector<HTMLButtonElement>("#donate-close")?.addEventListener("click", () => {
+    setDonateModalOpen(state, root, false);
+  });
+
+  root.querySelector<HTMLElement>("#donate-backdrop")?.addEventListener("click", () => {
+    setDonateModalOpen(state, root, false);
+  });
+
+  root.querySelector<HTMLButtonElement>("#donate-copy")?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(LIGHTNING_ADDRESS);
+    } catch {
+      window.prompt("Copy the Lightning address:", LIGHTNING_ADDRESS);
+    }
+  });
+
+  root.querySelector<HTMLButtonElement>("#donate-copy-comment")?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(DEFAULT_DONATION_COMMENT);
+    } catch {
+      window.prompt("Copy the donation message:", DEFAULT_DONATION_COMMENT);
+    }
+  });
+
   root.querySelector<HTMLButtonElement>("#detail-close")?.addEventListener("click", () => {
     closeDetails(state, root);
   });
@@ -983,6 +1074,7 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     state.selectedId = fromUrl.selectedId;
     state.hiddenCategories = fromUrl.hiddenCategories;
     state.assistantOpenNodeId = null;
+    state.donateModalOpen = false;
     rerenderGraph(state, root);
   });
 
@@ -1000,6 +1092,11 @@ function wireInteractions(state: AppState, root: HTMLElement) {
 
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") {
+      return;
+    }
+
+    if (state.donateModalOpen) {
+      setDonateModalOpen(state, root, false);
       return;
     }
 
@@ -1118,6 +1215,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     expandedGapNodeIds: new Set<string>(),
     viewportMode: resolveViewportMode(window.innerWidth),
     mobileToolsOpen: false,
+    donateModalOpen: false,
   };
 
   const fromUrl = readViewStateFromUrl(state);

@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User education framing for inflation terminology."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Clear Bitcoin-side distinction between money-supply expansion and consumer-price changes."
     }
   ],
   "estimatedTime": "35m",

@@ -25,6 +25,12 @@
       "title": "Bitcoin Optech",
       "url": "https://bitcoinops.org/",
       "notes": "Advanced guidance and implementation notes."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Detailed wallet and transaction-construction context for multipart signing workflows."
     }
   ],
   "estimatedTime": "55m",

@@ -24,6 +24,12 @@
       "title": "Double-spending",
       "url": "https://en.wikipedia.org/wiki/Double-spending",
       "notes": "General framing of digital scarcity constraints and attacks."
+    },
+    {
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly technical explanation of how Bitcoin makes digital scarcity credible."
     }
   ],
   "estimatedTime": "40m",

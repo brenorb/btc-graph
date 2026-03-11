@@ -25,6 +25,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "UX and product considerations for Lightning apps."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Core reference for channel architecture, commitments, and base Lightning security model."
     }
   ],
   "estimatedTime": "70m",

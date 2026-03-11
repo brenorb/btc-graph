@@ -25,6 +25,12 @@
       "title": "BOLT 03: Transaction and Channel States",
       "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
       "notes": "Funding and commitment transaction transitions relevant to splicing."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Technical context for channel lifecycle updates that keep channels open while changing capacity."
     }
   ],
   "estimatedTime": "80m",

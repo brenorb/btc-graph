@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "Practical user-facing framing of monetary policy impacts."
+    },
+    {
+      "type": "book",
+      "title": "Broken Money",
+      "url": "https://amzn.to/4sxMnc0",
+      "notes": "Bitcoin-vs-fiat framing for how new money changes purchasing power unevenly across the economy."
     }
   ],
   "estimatedTime": "40m",

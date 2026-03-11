@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User-centered framing for applied learning."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Broad intellectual background on the privacy and monetary ideas that fed into Bitcoin."
     }
   ],
   "estimatedTime": "35m",

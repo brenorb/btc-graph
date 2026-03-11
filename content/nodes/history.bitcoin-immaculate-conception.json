@@ -16,12 +16,6 @@
     },
     {
       "type": "article",
-      "title": "Satoshi Nakamoto",
-      "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
-      "notes": "Background on the unresolved identity of Bitcoin's creator."
-    },
-    {
-      "type": "article",
       "title": "Lopp: Bitcoin History",
       "url": "https://www.lopp.net/bitcoin-information/history.html",
       "notes": "Timeline coverage of early mining, distribution, and adoption milestones."
@@ -31,6 +25,12 @@
       "title": "Bitcoin Faucet",
       "url": "https://en.wikipedia.org/wiki/Bitcoin#History",
       "notes": "Historical overview including early faucet and zero-price era context."
+    },
+    {
+      "type": "book",
+      "title": "The Book of Satoshi",
+      "url": "https://amzn.to/4lvhhQ8",
+      "notes": "Primary-source compilation that captures launch-era communication, distribution ethos, and early priorities."
     }
   ],
   "estimatedTime": "40m",

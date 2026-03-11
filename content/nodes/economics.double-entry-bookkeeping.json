@@ -22,6 +22,12 @@
       "title": "Bitcoin Developer Guide: Transactions",
       "url": "https://developer.bitcoin.org/devguide/transactions.html",
       "notes": "Useful contrast between account-based intuition and UTXO-based accounting."
+    },
+    {
+      "type": "book",
+      "title": "Layered Money",
+      "url": "https://amzn.to/46QsdSd",
+      "notes": "Good bridge between legacy ledger layers, banking abstractions, and Bitcoin's accounting model."
     }
   ],
   "estimatedTime": "35m",

@@ -24,6 +24,12 @@
       "title": "Bitcoin Dev Network",
       "url": "https://bitcoindev.network/",
       "notes": "Practical implementation context."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Historical proof that miners propose blocks but nodes define validity and social legitimacy."
     }
   ],
   "estimatedTime": "45m",

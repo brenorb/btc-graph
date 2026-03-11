@@ -14,9 +14,9 @@
       "notes": "Long-run financial history context for how monetary systems changed across eras."
     },
     {
-      "type": "article",
-      "title": "Mises Library: Denationalisation of Money",
-      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
       "notes": "Market-competition perspective on state versus non-state money."
     },
     {
@@ -24,6 +24,12 @@
       "title": "Bitcoin.page",
       "url": "https://bitcoin.page",
       "notes": "Accessible summaries that connect monetary history to Bitcoin."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Bitcoin-centric survey of monetary evolution from commodity money to fiat."
     }
   ],
   "estimatedTime": "55m",

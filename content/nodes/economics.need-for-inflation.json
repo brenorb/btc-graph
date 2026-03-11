@@ -15,16 +15,22 @@
       "notes": "Primary-source rationale for a positive inflation target."
     },
     {
-      "type": "article",
-      "title": "Inflation Targeting",
-      "url": "https://en.wikipedia.org/wiki/Inflation_targeting",
-      "notes": "Comparative background across central-bank frameworks."
+      "type": "book",
+      "title": "The Price of Tomorrow",
+      "url": "https://amzn.to/46Tdru0",
+      "notes": "Deflation-focused argument against the assumption that healthy economies require steady inflation."
     },
     {
-      "type": "article",
-      "title": "Mises Library: Denationalisation of Money",
-      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
       "notes": "Competing perspective challenging discretionary inflation policy."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Bitcoin-oriented critique of the claim that economies require steady inflation."
     }
   ],
   "estimatedTime": "50m",

@@ -24,6 +24,12 @@
       "title": "BOLT 2 Peer Protocol",
       "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
       "notes": "Channel establishment message flow and negotiation context."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Practical reference for channel-opening flows, funding negotiations, and liquidity coordination."
     }
   ],
   "estimatedTime": "65m",

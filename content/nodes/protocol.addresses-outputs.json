@@ -24,6 +24,12 @@
       "title": "Bitcoin Dev Network",
       "url": "https://bitcoindev.network/",
       "notes": "Practical implementation context."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Hands-on walkthrough of outputs, script templates, and address encoding from raw transactions."
     }
   ],
   "estimatedTime": "45m",

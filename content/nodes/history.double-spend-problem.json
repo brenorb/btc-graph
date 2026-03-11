@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User-centered framing for applied learning."
+    },
+    {
+      "type": "book",
+      "title": "Genesis Book",
+      "url": "https://amzn.to/4bjOd9C",
+      "notes": "Useful prehistory framing for why solving double spending was the central unsolved design problem."
     }
   ],
   "estimatedTime": "35m",

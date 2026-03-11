@@ -59,6 +59,7 @@ const ALLOWED_RESOURCE_DOMAINS = [
   "covenants.info",
   "github.com",
   "developer.bitcoin.org",
+  "amzn.to",
   "amazon.com",
 ];
 

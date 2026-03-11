@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "UX and product considerations for Lightning apps."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Strong technical treatment of pathfinding, forwarding constraints, and routing reliability."
     }
   ],
   "estimatedTime": "65m",

@@ -24,6 +24,12 @@
       "title": "Bitcoin Optech",
       "url": "https://bitcoinops.org/",
       "notes": "Advanced guidance and implementation notes."
+    },
+    {
+      "type": "book",
+      "title": "The Little Bitcoin Book",
+      "url": "https://amzn.to/4sJ3wjb",
+      "notes": "Human-rights lens on identity, surveillance, and open access to money."
     }
   ],
   "estimatedTime": "45m",

@@ -205,6 +205,7 @@ input {
 .mobile-shortcuts,
 .mobile-tools-overlay,
 .detail-backdrop,
+.donate-backdrop,
 .detail-close-btn {
   display: none;
 }
@@ -448,6 +449,86 @@ input {
   display: none !important;
 }
 
+.donate-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 29;
+  background: rgba(14, 20, 33, 0.44);
+}
+
+.donate-backdrop.open {
+  display: block;
+}
+
+.donate-modal {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  width: min(92vw, 380px);
+  z-index: 30;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.donate-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.donate-modal-header,
+.donate-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.donate-modal-header {
+  align-items: flex-start;
+}
+
+.donate-qr {
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  justify-self: center;
+  border-radius: 16px;
+  border: 1px solid var(--panel-border);
+  background: white;
+  padding: 12px;
+}
+
+.donate-address-block {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  background: color-mix(in srgb, var(--control-bg) 88%, transparent);
+}
+
+.donate-address {
+  display: block;
+  overflow-wrap: anywhere;
+  font: 600 0.92rem/1.4 "Archivo", sans-serif;
+}
+
+.donate-actions {
+  flex-wrap: wrap;
+}
+
+.donate-actions .btn {
+  flex: 1 1 140px;
+}
+
 .site-footer {
   grid-column: 1 / -1;
   border: 1px solid var(--panel-border);
@@ -486,6 +567,12 @@ input {
   padding: 6px 10px;
   font-size: 0.82rem;
   line-height: 1;
+}
+
+.footer-link-button {
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
 }
 
 .footer-link:hover {
@@ -601,7 +688,8 @@ input {
   }
 
   .mobile-tools-overlay.open,
-  .detail-backdrop.open {
+  .detail-backdrop.open,
+  .donate-backdrop.open {
     display: block;
   }
 
@@ -760,5 +848,11 @@ input {
   .footer-social-link {
     width: 32px;
     height: 32px;
+  }
+
+  .donate-modal {
+    width: min(94vw, 360px);
+    padding: 14px;
+    border-radius: 18px;
   }
 }

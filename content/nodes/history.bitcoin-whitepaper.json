@@ -24,6 +24,12 @@
       "title": "Bitcoin Core Academy: Consensus Model",
       "url": "https://bitcoincore.academy/consensus-model.html",
       "notes": "Modern explanation of the consensus ideas introduced in the whitepaper."
+    },
+    {
+      "type": "book",
+      "title": "Genesis Book",
+      "url": "https://amzn.to/4bjOd9C",
+      "notes": "Adds broader prehistory and launch-context framing around the whitepaper moment."
     }
   ],
   "estimatedTime": "45m",

@@ -24,6 +24,12 @@
       "title": "Bitcoin Core Academy: Consensus Model",
       "url": "https://bitcoincore.academy/consensus-model.html",
       "notes": "Consensus implications of pre-confirmation tx mutation."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Useful transaction-level treatment of txids, witness data, and malleability fixes."
     }
   ],
   "estimatedTime": "65m",

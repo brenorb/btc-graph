@@ -24,6 +24,12 @@
       "title": "Bitcoin Dev Network",
       "url": "https://bitcoindev.network/",
       "notes": "Practical implementation context."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Concrete historical case for why soft-fork and hard-fork tradeoffs are social as well as technical."
     }
   ],
   "estimatedTime": "55m",

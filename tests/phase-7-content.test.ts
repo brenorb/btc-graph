@@ -41,6 +41,7 @@ const ALLOWED_RESOURCE_DOMAINS = [
   "developer.bitcoin.org",
   "mempool.space",
   "bitcoin.org",
+  "amzn.to",
 ];
 
 const REQUIRED_PHASE_7_PREREQUISITES: Record<string, string[]> = {

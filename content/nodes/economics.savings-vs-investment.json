@@ -20,10 +20,16 @@
       "notes": "Practical user guidance for long-term custody and risk-aware behavior."
     },
     {
-      "type": "article",
-      "title": "Mises Library: Denationalisation of Money",
-      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
       "notes": "Monetary-competition lens for evaluating money as savings infrastructure."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Popular framing of Bitcoin primarily as long-term savings technology rather than yield-seeking investment."
     }
   ],
   "estimatedTime": "35m",

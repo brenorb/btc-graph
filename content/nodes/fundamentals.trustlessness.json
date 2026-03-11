@@ -23,8 +23,14 @@
     {
       "type": "book",
       "title": "Mastering Bitcoin",
-      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "url": "https://amzn.to/4ro0NdG",
       "notes": "Protocol mechanics behind independent verification."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Pairs well with the philosophical side of verification, trust minimization, and rule enforcement."
     }
   ],
   "estimatedTime": "45m",

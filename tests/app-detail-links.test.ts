@@ -194,9 +194,16 @@ describe("node detail links", () => {
 
     vi.stubGlobal(
       "fetch",
-      vi.fn().mockResolvedValue({
-        ok: true,
-        json: async () => sampleData,
+      vi.fn().mockImplementation(async (input: string | URL) => {
+        const url = String(input);
+        if (!url.includes("/data/graph.json")) {
+          throw new Error(`Unexpected fetch: ${url}`);
+        }
+
+        return {
+          ok: true,
+          json: async () => sampleData,
+        };
       }),
     );
 
@@ -219,6 +226,13 @@ describe("node detail links", () => {
       value: {
         getItem: vi.fn().mockReturnValue(null),
         setItem: vi.fn(),
+      },
+    });
+
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: vi.fn().mockResolvedValue(undefined),
       },
     });
   });
@@ -295,5 +309,46 @@ describe("node detail links", () => {
     expect(document.querySelector<HTMLElement>("#detail-content")?.textContent).toContain(
       "Prerequisites:",
     );
+  });
+
+  it("uses the updated social links and opens a Lightning donation modal", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    const siteLink = document.querySelector<HTMLAnchorElement>(
+      '.footer-social-link[aria-label="Personal website"]',
+    );
+    const twitterLink = document.querySelector<HTMLAnchorElement>(
+      '.footer-social-link[aria-label="X (Twitter)"]',
+    );
+    const donateButton = document.querySelector<HTMLButtonElement>('[data-donate-trigger="footer"]');
+
+    expect(siteLink?.href).toBe("https://brenorb.com/");
+    expect(twitterLink?.href).toBe("https://x.com/brenorb");
+    expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(true);
+
+    donateButton?.click();
+
+    const donateModal = document.querySelector<HTMLElement>("#donate-modal");
+    const qrImage = document.querySelector<HTMLImageElement>("#donate-qr");
+    const address = document.querySelector<HTMLElement>("#donate-address");
+    const walletLink = document.querySelector<HTMLAnchorElement>("#donate-open-wallet");
+
+    expect(donateModal?.hidden).toBe(false);
+    expect(qrImage?.src).toContain(encodeURIComponent("lightning:breno@bipa.app"));
+    expect(address?.textContent).toBe("breno@bipa.app");
+    expect(walletLink?.getAttribute("href")).toBe("lightning:breno@bipa.app");
+    expect(document.querySelector<HTMLElement>("#donate-comment")?.textContent).toBe(
+      "Support Bitcoin Learning Graph",
+    );
+  });
+
+  it("offers a copyable donation message alongside the Lightning address", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    document.querySelector<HTMLButtonElement>('[data-donate-trigger="footer"]')?.click();
+
+    document.querySelector<HTMLButtonElement>("#donate-copy-comment")?.click();
+
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith("Support Bitcoin Learning Graph");
   });
 });

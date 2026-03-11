@@ -23,8 +23,14 @@
     {
       "type": "book",
       "title": "Mastering Bitcoin",
-      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "url": "https://amzn.to/4ro0NdG",
       "notes": "Money-property context for evaluating fungibility tradeoffs."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Useful monetary framing for why interchangeable units matter for sound money."
     }
   ],
   "estimatedTime": "55m",

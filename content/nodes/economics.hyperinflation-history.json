@@ -21,10 +21,16 @@
       "notes": "Policy-oriented overview with historical examples and definitions."
     },
     {
-      "type": "article",
-      "title": "Mises Library: Denationalisation of Money",
-      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
       "notes": "Alternative institutional lens on currency competition and credibility."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Bitcoin-oriented case for how inflationary breakdowns damage monetary credibility."
     }
   ],
   "estimatedTime": "60m",

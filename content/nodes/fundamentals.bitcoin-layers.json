@@ -21,10 +21,10 @@
       "notes": "How Lightning builds on top of Bitcoin."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Lightning Services",
-      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-      "notes": "User-facing view of Lightning as a higher-layer payment system."
+      "type": "book",
+      "title": "Layered Money",
+      "url": "https://amzn.to/46QsdSd",
+      "notes": "Useful framing for how settlement layers stack and why Bitcoin can serve as a deeper monetary base."
     }
   ],
   "estimatedTime": "45m",
