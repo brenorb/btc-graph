@@ -128,15 +128,19 @@
       </header>
       <main class="seo-shell-main">
         <figure class="seo-shell-figure">
-          <img
-            class="seo-shell-image"
-            src="/social-card.webp"
-            width="1200"
-            height="630"
-            alt="Preview card for the Bitcoin Learning Graph website."
-            loading="eager"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="/social-card.avif" type="image/avif" />
+            <source srcset="/social-card.webp" type="image/webp" />
+            <img
+              class="seo-shell-image"
+              src="/social-card.webp"
+              width="1200"
+              height="630"
+              alt="Preview card for the Bitcoin Learning Graph website."
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </figure>
         <p>
           Use the interactive graph to inspect prerequisites, mark progress, discover knowledge
