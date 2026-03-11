@@ -20,6 +20,8 @@ describe("homepage SEO shell", () => {
     expect(html).toContain("<h1>Bitcoin Learning Graph</h1>");
     expect(html).toContain("<h2>What you can study</h2>");
     expect(html).toContain("Browse the concept library");
+    expect(html).toContain('srcset="/social-card.avif" type="image/avif"');
+    expect(html).toContain('srcset="/social-card.webp" type="image/webp"');
     expect(html).toContain('src="/social-card.webp"');
     expect(html).toContain('alt="Preview card for the Bitcoin Learning Graph website."');
     expect(fallbackStyles).toContain("@media screen and (max-width: 820px)");
