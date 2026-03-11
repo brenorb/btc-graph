@@ -1,0 +1,88 @@
+.seo-shell {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 1.5rem 1.25rem 3rem;
+  color: #1f2937;
+  font-family: "Archivo", sans-serif;
+}
+
+.seo-shell-header h1 {
+  margin: 0.25rem 0 0.75rem;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+}
+
+.seo-shell-header p:first-child {
+  margin-bottom: 0.35rem;
+  color: #0f766e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.seo-shell-header p:last-child,
+.seo-shell-main > p {
+  max-width: 56rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.seo-shell-figure {
+  margin: 1.5rem 0;
+}
+
+.seo-shell-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+}
+
+.seo-shell-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.seo-shell-nav a {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.seo-shell-section {
+  margin-top: 1.5rem;
+}
+
+.seo-shell-section h2 {
+  margin-bottom: 0.6rem;
+  font-family: "Syne", sans-serif;
+  font-size: 1.4rem;
+}
+
+.seo-shell-section ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+@media screen and (max-width: 820px) {
+  .seo-shell {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .seo-shell-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .seo-shell-header p:last-child,
+  .seo-shell-main > p {
+    font-size: 0.98rem;
+  }
+
+  .seo-shell-nav {
+    flex-direction: column;
+  }
+}

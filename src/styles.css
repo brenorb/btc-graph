@@ -466,6 +466,22 @@ input {
   gap: 2px;
 }
 
+.footer-preview {
+  display: inline-flex;
+  max-width: 196px;
+  margin-top: 8px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+}
+
+.footer-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .footer-title {
   font-family: "Syne", sans-serif;
   font-size: 0.98rem;
@@ -554,6 +570,11 @@ input {
   .footer-links,
   .footer-main .meta {
     display: none;
+  }
+
+  .footer-preview {
+    max-width: 100%;
+    margin-top: 6px;
   }
 
   .brand-title {
