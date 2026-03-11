@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.zk-snarks",
+  "title": "zk-SNARKs",
+  "description": "zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.zero-knowledge-proofs",
+    "fundamentals.finite-fields"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Zcash Learn: What are zk-SNARKs?",
+      "url": "https://z.cash/learn/what-are-zk-snarks/",
+      "notes": "High-level explanation of succinct non-interactive proofs and why they matter."
+    },
+    {
+      "type": "article",
+      "title": "Pinocchio zk-SNARK MPC Whitepaper",
+      "url": "https://download.z.cash/downloads/mpc_whitepaper.pdf",
+      "notes": "Primary-source reference for trusted-setup considerations in deployed zk-SNARK systems."
+    },
+    {
+      "type": "article",
+      "title": "Zcash Learn: What are zero-knowledge proofs?",
+      "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+      "notes": "Foundational refresher for the zero-knowledge property SNARKs inherit."
+    }
+  ],
+  "estimatedTime": "70m",
+  "tags": [
+    "cryptography",
+    "proof-systems"
+  ],
+  "aliases": [
+    "snarks",
+    "zk snarks"
+  ]
+}

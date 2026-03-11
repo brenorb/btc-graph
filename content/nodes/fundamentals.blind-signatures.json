@@ -1,0 +1,37 @@
+{
+  "id": "fundamentals.blind-signatures",
+  "title": "Blind Signatures",
+  "description": "Blind signatures let a signer authorize a token without seeing its final contents, enabling ecash mints to issue privately spendable proofs. They build directly on digital-signature verification.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.digital-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Cashu NUT-00: Nutshell",
+      "url": "https://github.com/cashubtc/nuts/blob/main/00.md",
+      "notes": "Protocol overview for blinded ecash issuance and redemption."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Ecash",
+      "url": "https://bitcoinops.org/en/topics/ecash/",
+      "notes": "Bitcoin-specific context for blind-signature-based ecash systems."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts Tag: Ecash",
+      "url": "https://btctranscripts.com/search?filter_tags=ecash",
+      "notes": "Workshop and protocol discussions around blind-signature mint designs."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "cryptography",
+    "privacy"
+  ],
+  "aliases": [
+    "blinded signatures"
+  ]
+}

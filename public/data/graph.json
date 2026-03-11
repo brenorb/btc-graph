@@ -2658,6 +2658,43 @@
       ]
     },
     {
+      "id": "extension.cashu",
+      "title": "Cashu",
+      "description": "Cashu is a Bitcoin-backed ecash protocol and wallet ecosystem built around blind-signature mints. It improves privacy and transaction speed while preserving explicit mint trust tradeoffs.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.ecash"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cashu Wallet README",
+          "url": "https://github.com/cashubtc/cashu.me/blob/main/README.md",
+          "notes": "Project overview for the user-facing Cashu wallet and ecosystem."
+        },
+        {
+          "type": "article",
+          "title": "Cashu NUT Specifications",
+          "url": "https://github.com/cashubtc/nuts/blob/main/README.md",
+          "notes": "Canonical protocol specifications for interoperable Cashu mints and wallets."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ecash",
+          "url": "https://bitcoinops.org/en/topics/ecash/",
+          "notes": "Bitcoin ecosystem context for Cashu-style ecash deployments."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "ecash",
+        "privacy"
+      ],
+      "aliases": [
+        "cashu wallet"
+      ]
+    },
+    {
       "id": "extension.channel-factories",
       "title": "Channel Factories",
       "description": "Channel factories let multiple users share one on-chain UTXO to open and rebalance many off-chain channels. They trade coordination complexity for better on-chain footprint and liquidity efficiency.",
@@ -2890,10 +2927,11 @@
     {
       "id": "extension.ecash",
       "title": "Bitcoin-Backed Ecash Systems",
-      "description": "Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
+      "description": "Bitcoin-backed ecash mints use blind signatures to trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
       "category": "Extension Systems",
       "prerequisites": [
-        "protocol.utxo-model"
+        "protocol.utxo-model",
+        "fundamentals.blind-signatures"
       ],
       "resources": [
         {
@@ -2922,6 +2960,43 @@
       ],
       "aliases": [
         "federated ecash"
+      ]
+    },
+    {
+      "id": "extension.fedi",
+      "title": "Fedi",
+      "description": "Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.ecash"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Fedi Alpha README",
+          "url": "https://github.com/fedibtc/fedi-alpha/blob/master/README.md",
+          "notes": "Product-level overview of Fedi's federated wallet experience."
+        },
+        {
+          "type": "article",
+          "title": "Fedimint README",
+          "url": "https://github.com/fedibtc/fedimint/blob/master/README.md",
+          "notes": "Underlying federated ecash protocol and implementation context."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ecash",
+          "url": "https://bitcoinops.org/en/topics/ecash/",
+          "notes": "Higher-level context for ecash systems that Fedi builds on."
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "ecash",
+        "federation"
+      ],
+      "aliases": [
+        "fedi alpha"
       ]
     },
     {
@@ -3343,6 +3418,43 @@
       "aliases": [
         "layered bitcoin",
         "layered architecture"
+      ]
+    },
+    {
+      "id": "fundamentals.blind-signatures",
+      "title": "Blind Signatures",
+      "description": "Blind signatures let a signer authorize a token without seeing its final contents, enabling ecash mints to issue privately spendable proofs. They build directly on digital-signature verification.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.digital-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cashu NUT-00: Nutshell",
+          "url": "https://github.com/cashubtc/nuts/blob/main/00.md",
+          "notes": "Protocol overview for blinded ecash issuance and redemption."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Ecash",
+          "url": "https://bitcoinops.org/en/topics/ecash/",
+          "notes": "Bitcoin-specific context for blind-signature-based ecash systems."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts Tag: Ecash",
+          "url": "https://btctranscripts.com/search?filter_tags=ecash",
+          "notes": "Workshop and protocol discussions around blind-signature mint designs."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "cryptography",
+        "privacy"
+      ],
+      "aliases": [
+        "blinded signatures"
       ]
     },
     {
@@ -4454,6 +4566,121 @@
       ],
       "aliases": [
         "dont trust verify"
+      ]
+    },
+    {
+      "id": "fundamentals.zero-knowledge-proofs",
+      "title": "Zero-Knowledge Proofs",
+      "description": "Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.",
+      "category": "Security",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Zcash Learn: What are zero-knowledge proofs?",
+          "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+          "notes": "Clear introduction to the core prove-without-revealing idea."
+        },
+        {
+          "type": "article",
+          "title": "Zcash Learn: What are zk-SNARKs?",
+          "url": "https://z.cash/learn/what-are-zk-snarks/",
+          "notes": "Bridges the generic zero-knowledge concept to practical proof systems."
+        },
+        {
+          "type": "article",
+          "title": "STARK paper",
+          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "notes": "Primary-source paper for scalable transparent proof systems."
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "cryptography",
+        "privacy"
+      ],
+      "aliases": [
+        "zk proofs",
+        "zkp"
+      ]
+    },
+    {
+      "id": "fundamentals.zk-snarks",
+      "title": "zk-SNARKs",
+      "description": "zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.zero-knowledge-proofs",
+        "fundamentals.finite-fields"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Zcash Learn: What are zk-SNARKs?",
+          "url": "https://z.cash/learn/what-are-zk-snarks/",
+          "notes": "High-level explanation of succinct non-interactive proofs and why they matter."
+        },
+        {
+          "type": "article",
+          "title": "Pinocchio zk-SNARK MPC Whitepaper",
+          "url": "https://download.z.cash/downloads/mpc_whitepaper.pdf",
+          "notes": "Primary-source reference for trusted-setup considerations in deployed zk-SNARK systems."
+        },
+        {
+          "type": "article",
+          "title": "Zcash Learn: What are zero-knowledge proofs?",
+          "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+          "notes": "Foundational refresher for the zero-knowledge property SNARKs inherit."
+        }
+      ],
+      "estimatedTime": "70m",
+      "tags": [
+        "cryptography",
+        "proof-systems"
+      ],
+      "aliases": [
+        "snarks",
+        "zk snarks"
+      ]
+    },
+    {
+      "id": "fundamentals.zk-starks",
+      "title": "zk-STARKs",
+      "description": "zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.zero-knowledge-proofs",
+        "fundamentals.finite-fields",
+        "fundamentals.merkle-trees"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "STARK paper",
+          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "notes": "Primary-source paper introducing scalable transparent computational integrity."
+        },
+        {
+          "type": "article",
+          "title": "StarkWare STARK paper mirror",
+          "url": "https://starkware.co/wp-content/uploads/2022/05/STARK-paper.pdf",
+          "notes": "Accessible mirror for the canonical STARK paper."
+        },
+        {
+          "type": "article",
+          "title": "Zcash Learn: What are zero-knowledge proofs?",
+          "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+          "notes": "Foundational zero-knowledge refresher before contrasting STARK design choices."
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "cryptography",
+        "proof-systems"
+      ],
+      "aliases": [
+        "starks",
+        "zk starks"
       ]
     },
     {

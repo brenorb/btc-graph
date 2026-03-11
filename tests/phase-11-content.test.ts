@@ -35,7 +35,7 @@ const REQUIRED_PHASE_11_PREREQUISITES: Record<string, string[]> = {
   "mining.asicboost": ["mining.mining-hardware"],
   "extension.channel-factories": ["lightning.liquidity"],
   "extension.coinswap": ["privacy.coinjoin", "protocol.timelocks"],
-  "extension.ecash": ["protocol.utxo-model"],
+  "extension.ecash": ["protocol.utxo-model", "fundamentals.blind-signatures"],
   "privacy.silent-payments": ["protocol.taproot", "privacy.address-reuse"],
   "ops.utreexo": ["ops.utxo-set-management"],
   "protocol.transaction-pinning": ["protocol.package-relay"],

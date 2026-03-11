@@ -1,0 +1,37 @@
+{
+  "id": "extension.fedi",
+  "title": "Fedi",
+  "description": "Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.ecash"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Fedi Alpha README",
+      "url": "https://github.com/fedibtc/fedi-alpha/blob/master/README.md",
+      "notes": "Product-level overview of Fedi's federated wallet experience."
+    },
+    {
+      "type": "article",
+      "title": "Fedimint README",
+      "url": "https://github.com/fedibtc/fedimint/blob/master/README.md",
+      "notes": "Underlying federated ecash protocol and implementation context."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Ecash",
+      "url": "https://bitcoinops.org/en/topics/ecash/",
+      "notes": "Higher-level context for ecash systems that Fedi builds on."
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "ecash",
+    "federation"
+  ],
+  "aliases": [
+    "fedi alpha"
+  ]
+}
