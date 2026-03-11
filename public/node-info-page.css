@@ -1,0 +1,71 @@
+:root {
+  color-scheme: light dark;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 3rem;
+  background: #f5f1e8;
+  color: #1f2937;
+}
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+a {
+  color: #0f766e;
+}
+
+a:hover {
+  color: #115e59;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.eyebrow,
+.node-id,
+.visual-link,
+.description,
+.meta {
+  margin: 0 0 1rem;
+}
+
+.eyebrow,
+.node-id,
+.visual-link {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+ul {
+  margin: 0 0 1.5rem 1.25rem;
+  padding: 0;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    padding: 1.5rem 1rem 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111827;
+    color: #e5e7eb;
+  }
+
+  a {
+    color: #7dd3fc;
+  }
+
+  a:hover {
+    color: #bae6fd;
+  }
+}

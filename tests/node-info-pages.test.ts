@@ -75,6 +75,7 @@ describe("writeNodeInfoPages", () => {
     expect(html).toContain("../../fundamentals.modular-arithmetic/info/");
     expect(html).toContain("../../fundamentals.digital-signatures/info/");
     expect(html).toContain("../../../?selected=fundamentals.ecdsa");
+    expect(html).toContain('href="/btc-graph/node-info-page.css"');
     expect(html).toContain("https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/");
     expect(html).toContain("Browse the concept library");
     expect(html).toContain("ECDSA primer");

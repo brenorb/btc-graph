@@ -8,7 +8,7 @@ export const SITE_URL = new URL(SITE_BASE_PATH, SITE_ORIGIN).toString();
 export const SITE_LIBRARY_PATH = "library/";
 export const SITE_SOCIAL_IMAGE_PATH = "social-card.svg";
 export const SITE_SOCIAL_IMAGE_URL = new URL(SITE_SOCIAL_IMAGE_PATH, SITE_URL).toString();
-export const SITE_DESCRIPTION = "Explore a Bitcoin prerequisite graph with curated resources, indexable concept pages, and plain-text summaries for structured self-study.";
+export const SITE_DESCRIPTION = "Structured Bitcoin self-study graph with prerequisites, resources, and concept pages.";
 export const SITE_KEYWORDS = [
   "bitcoin learning graph",
   "bitcoin education",
@@ -127,6 +127,10 @@ function buildCanonicalUrl(relativePath = "") {
   return new URL(relativePath.replace(/^\//, ""), SITE_URL).toString();
 }
 
+function buildAssetPath(fileName) {
+  return `${SITE_BASE_PATH}${fileName}`;
+}
+
 function buildDescription(text, fallback = SITE_DESCRIPTION) {
   const normalized = String(text ?? "")
     .replace(/\s+/g, " ")
@@ -180,118 +184,7 @@ function renderHtmlPage({
     <link rel="canonical" href="${escapeXml(canonicalUrl)}" />
     <link rel="alternate" type="text/plain" href="${escapeXml(buildCanonicalUrl("llms.txt"))}" title="LLMs policy" />
     <link rel="alternate" type="text/plain" href="${escapeXml(buildCanonicalUrl("llms-full-text.txt"))}" title="LLMs full text summary" />
-    <style>
-      :root {
-        color-scheme: light dark;
-        font-family: Georgia, "Times New Roman", serif;
-        line-height: 1.6;
-      }
-
-      body {
-        margin: 0;
-        background: #f5f1e8;
-        color: #1f2937;
-      }
-
-      main {
-        max-width: 68rem;
-        margin: 0 auto;
-        padding: 2.5rem 1.25rem 3rem;
-      }
-
-      a {
-        color: #0f766e;
-      }
-
-      a:hover {
-        color: #115e59;
-      }
-
-      h1,
-      h2,
-      h3 {
-        line-height: 1.2;
-      }
-
-      .eyebrow,
-      .meta,
-      .lede {
-        color: #4b5563;
-      }
-
-      .eyebrow,
-      .meta {
-        font-size: 0.95rem;
-      }
-
-      .lede {
-        max-width: 56rem;
-      }
-
-      .link-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        margin: 1.5rem 0 2rem;
-      }
-
-      .panel-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-        gap: 1rem;
-        margin: 1.5rem 0 2rem;
-      }
-
-      .panel {
-        border: 1px solid rgba(15, 118, 110, 0.18);
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.72);
-        padding: 1rem 1.1rem;
-      }
-
-      .category-list,
-      .resource-list {
-        margin: 0;
-        padding-left: 1.25rem;
-      }
-
-      .resource-list li + li,
-      .category-list li + li {
-        margin-top: 0.45rem;
-      }
-
-      @media (max-width: 720px) {
-        .link-row {
-          flex-direction: column;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: #111827;
-          color: #e5e7eb;
-        }
-
-        a {
-          color: #7dd3fc;
-        }
-
-        a:hover {
-          color: #bae6fd;
-        }
-
-        .eyebrow,
-        .meta,
-        .lede {
-          color: #cbd5e1;
-        }
-
-        .panel {
-          background: rgba(17, 24, 39, 0.8);
-          border-color: rgba(125, 211, 252, 0.22);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="${escapeXml(buildAssetPath("crawl-pages.css"))}" />
     <script type="application/ld+json">${escapeJsonLd(structuredData)}</script>
   </head>
   <body>

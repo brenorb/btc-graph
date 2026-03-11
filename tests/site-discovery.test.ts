@@ -95,6 +95,7 @@ describe("site discovery assets", () => {
     const fullText = fs.readFileSync(llmsFullTextFile, "utf8");
 
     expect(libraryHtml).toContain("<h1>Bitcoin Learning Graph Library</h1>");
+    expect(libraryHtml).toContain('href="/btc-graph/crawl-pages.css"');
     expect(libraryHtml).toContain("Hash Functions");
     expect(libraryHtml).toContain("https://brenorb.com/btc-graph/nodes/lightning.payment-channels/info/");
 
