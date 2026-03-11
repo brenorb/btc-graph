@@ -24,6 +24,12 @@
       "title": "Bitcoin Optech",
       "url": "https://bitcoinops.org/",
       "notes": "Operational wallet practices that influence custody risk profiles."
+    },
+    {
+      "type": "book",
+      "title": "The Little Bitcoin Book",
+      "url": "https://amzn.to/4sJ3wjb",
+      "notes": "Accessible human-rights argument for why direct control of funds changes the user's position."
     }
   ],
   "estimatedTime": "45m",

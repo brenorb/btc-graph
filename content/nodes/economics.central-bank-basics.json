@@ -20,10 +20,16 @@
       "notes": "Primary-source institutional explanation of policy framework."
     },
     {
-      "type": "article",
-      "title": "Mises Library: Denationalisation of Money",
-      "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
       "notes": "Competing perspective on central-bank monopoly versus currency competition."
+    },
+    {
+      "type": "book",
+      "title": "Broken Money",
+      "url": "https://amzn.to/4sxMnc0",
+      "notes": "Readable critique of fiat institutions, settlement frictions, and the role central banks play in the modern system."
     }
   ],
   "estimatedTime": "50m",

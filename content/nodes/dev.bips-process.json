@@ -25,6 +25,12 @@
       "title": "Bitcoin Developer Guide",
       "url": "https://developer.bitcoin.org/devguide/",
       "notes": "Reference documentation for implementation."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Helpful background for understanding why Bitcoin development norms prioritize review, restraint, and consensus."
     }
   ],
   "estimatedTime": "65m",

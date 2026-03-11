@@ -174,7 +174,7 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Backup and key-management context for evaluating codex32 workflows."
         }
       ],
@@ -213,6 +213,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Operational wallet practices that influence custody risk profiles."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Accessible human-rights argument for why direct control of funds changes the user's position."
         }
       ],
       "estimatedTime": "45m",
@@ -250,6 +256,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Advanced guidance and implementation notes."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Technical reference for signing devices, key handling, and wallet architecture tradeoffs."
         }
       ],
       "estimatedTime": "45m",
@@ -286,6 +298,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Advanced guidance and implementation notes."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Clear technical walkthrough of deterministic key derivation and wallet tree structure."
         }
       ],
       "estimatedTime": "45m",
@@ -514,6 +532,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Advanced guidance and implementation notes."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Detailed wallet and transaction-construction context for multipart signing workflows."
         }
       ],
       "estimatedTime": "55m",
@@ -624,6 +648,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Advanced guidance and implementation notes."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Clear human-centered introduction to why self-custody matters beyond price speculation."
         }
       ],
       "estimatedTime": "50m",
@@ -812,6 +842,12 @@
           "title": "Bitcoin Developer Guide",
           "url": "https://developer.bitcoin.org/devguide/",
           "notes": "Reference documentation for implementation."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Helpful background for understanding why Bitcoin development norms prioritize review, restraint, and consensus."
         }
       ],
       "estimatedTime": "65m",
@@ -924,6 +960,12 @@
           "title": "Bitcoin Developer Guide",
           "url": "https://developer.bitcoin.org/devguide/",
           "notes": "Reference documentation for implementation."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Useful wallet-engineering background for script templates, spending policies, and address handling."
         }
       ],
       "estimatedTime": "70m",
@@ -1374,6 +1416,12 @@
           "title": "Bitcoin Developer Guide",
           "url": "https://developer.bitcoin.org/devguide/",
           "notes": "Reference documentation for implementation."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Comprehensive implementation reference for wallet architecture, transactions, and script handling."
         }
       ],
       "estimatedTime": "80m",
@@ -1411,6 +1459,12 @@
           "title": "Bitcoin.page",
           "url": "https://bitcoin.page",
           "notes": "Accessible explanations linking scarcity, demand, and price behavior."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Accessible thesis for how fixed supply interacts with rising monetary demand."
         }
       ],
       "estimatedTime": "30m",
@@ -1449,6 +1503,12 @@
           "title": "The Ascent of Money",
           "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
           "notes": "Long-run history framing before and after Bretton Woods."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-oriented interpretation of the post-1971 fiat transition and hard-money debate."
         }
       ],
       "estimatedTime": "45m",
@@ -1487,6 +1547,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "Practical user-facing framing of monetary policy impacts."
+        },
+        {
+          "type": "book",
+          "title": "Broken Money",
+          "url": "https://amzn.to/4sxMnc0",
+          "notes": "Bitcoin-vs-fiat framing for how new money changes purchasing power unevenly across the economy."
         }
       ],
       "estimatedTime": "40m",
@@ -1520,10 +1586,16 @@
           "notes": "Primary-source institutional explanation of policy framework."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Competing perspective on central-bank monopoly versus currency competition."
+        },
+        {
+          "type": "book",
+          "title": "Broken Money",
+          "url": "https://amzn.to/4sxMnc0",
+          "notes": "Readable critique of fiat institutions, settlement frictions, and the role central banks play in the modern system."
         }
       ],
       "estimatedTime": "50m",
@@ -1596,6 +1668,12 @@
           "title": "Bitcoin Developer Guide: Transactions",
           "url": "https://developer.bitcoin.org/devguide/transactions.html",
           "notes": "Useful contrast between account-based intuition and UTXO-based accounting."
+        },
+        {
+          "type": "book",
+          "title": "Layered Money",
+          "url": "https://amzn.to/46QsdSd",
+          "notes": "Good bridge between legacy ledger layers, banking abstractions, and Bitcoin's accounting model."
         }
       ],
       "estimatedTime": "35m",
@@ -1660,9 +1738,9 @@
           "notes": "Hayek's broader framework for why decentralized market coordination matters."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Accessible edition and context for the argument."
         },
         {
@@ -1698,9 +1776,9 @@
           "notes": "Core text on decentralized knowledge and emergent order."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Money-competition extension of spontaneous-order reasoning."
         },
         {
@@ -1736,9 +1814,9 @@
           "notes": "Long-run financial history context for how monetary systems changed across eras."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Market-competition perspective on state versus non-state money."
         },
         {
@@ -1746,6 +1824,12 @@
           "title": "Bitcoin.page",
           "url": "https://bitcoin.page",
           "notes": "Accessible summaries that connect monetary history to Bitcoin."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-centric survey of monetary evolution from commodity money to fiat."
         }
       ],
       "estimatedTime": "55m",
@@ -1781,10 +1865,16 @@
           "notes": "Policy-oriented overview with historical examples and definitions."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Alternative institutional lens on currency competition and credibility."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-oriented case for how inflationary breakdowns damage monetary credibility."
         }
       ],
       "estimatedTime": "60m",
@@ -1901,6 +1991,12 @@
           "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
           "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
           "notes": "Protocol-level source for Bitcoin's finite supply assurance."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Frames monetary trust around salability and scarcity rather than redeemability promises."
         }
       ],
       "estimatedTime": "40m",
@@ -1939,6 +2035,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Popular explanation of why scarce assets can earn store-of-value premium."
         }
       ],
       "estimatedTime": "40m",
@@ -1975,6 +2077,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User education framing for inflation terminology."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Clear Bitcoin-side distinction between money-supply expansion and consumer-price changes."
         }
       ],
       "estimatedTime": "35m",
@@ -2014,6 +2122,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User behavior lens for moving from speculative to utility-driven usage."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Widely cited Bitcoin framing of monetization as a staged social-adoption process."
         }
       ],
       "estimatedTime": "45m",
@@ -2043,16 +2157,22 @@
           "notes": "Primary-source rationale for a positive inflation target."
         },
         {
-          "type": "article",
-          "title": "Inflation Targeting",
-          "url": "https://en.wikipedia.org/wiki/Inflation_targeting",
-          "notes": "Comparative background across central-bank frameworks."
+          "type": "book",
+          "title": "The Price of Tomorrow",
+          "url": "https://amzn.to/46Tdru0",
+          "notes": "Deflation-focused argument against the assumption that healthy economies require steady inflation."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Competing perspective challenging discretionary inflation policy."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-oriented critique of the claim that economies require steady inflation."
         }
       ],
       "estimatedTime": "50m",
@@ -2082,9 +2202,9 @@
           "notes": "Direct framing of neutrality as a system design goal."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Competition-based argument against politically monopolized currency."
         },
         {
@@ -2092,6 +2212,12 @@
           "title": "The Road to Serfdom",
           "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
           "notes": "Background on centralized economic control and institutional incentives."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-oriented argument for neutral money over discretionary monetary control."
         }
       ],
       "estimatedTime": "50m",
@@ -2164,10 +2290,16 @@
           "notes": "Practical user guidance for long-term custody and risk-aware behavior."
         },
         {
-          "type": "article",
-          "title": "Mises Library: Denationalisation of Money",
-          "url": "https://mises.org/library/book/denationalisation-money-argument-refined",
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
           "notes": "Monetary-competition lens for evaluating money as savings infrastructure."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Popular framing of Bitcoin primarily as long-term savings technology rather than yield-seeking investment."
         }
       ],
       "estimatedTime": "35m",
@@ -2206,6 +2338,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-centric explanation of scarcity, salability, and sound-money accumulation."
         }
       ],
       "estimatedTime": "45m",
@@ -2543,7 +2681,7 @@
         {
           "type": "book",
           "title": "Mastering the Lightning Network",
-          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "url": "https://amzn.to/40V421t",
           "notes": "Lightning channel design patterns and protocol internals."
         }
       ],
@@ -2579,8 +2717,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -2618,7 +2756,7 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "UTXO and script primitives used by swap constructions."
         }
       ],
@@ -2655,8 +2793,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -2732,6 +2870,12 @@
           "title": "BOLT 2 Peer Protocol",
           "url": "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md",
           "notes": "Channel establishment message flow and negotiation context."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Practical reference for channel-opening flows, funding negotiations, and liquidity coordination."
         }
       ],
       "estimatedTime": "65m",
@@ -2803,8 +2947,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -2915,8 +3059,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -2991,8 +3135,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -3068,6 +3212,12 @@
           "title": "Boltz Backend",
           "url": "https://github.com/BoltzExchange/boltz-backend",
           "notes": "Production swap implementation to study protocol flow in practice."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Detailed treatment of cross-layer payment flows, HTLC mechanics, and swap-style liquidity movement."
         }
       ],
       "estimatedTime": "65m",
@@ -3102,8 +3252,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -3140,6 +3290,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Popular hard-money framing for why barter limitations push societies toward monetary media."
         }
       ],
       "estimatedTime": "30m",
@@ -3173,10 +3329,10 @@
           "notes": "How Lightning builds on top of Bitcoin."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Lightning Services",
-          "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-          "notes": "User-facing view of Lightning as a higher-layer payment system."
+          "type": "book",
+          "title": "Layered Money",
+          "url": "https://amzn.to/46QsdSd",
+          "notes": "Useful framing for how settlement layers stack and why Bitcoin can serve as a deeper monetary base."
         }
       ],
       "estimatedTime": "45m",
@@ -3252,6 +3408,12 @@
           "title": "Bitcoin Optech Topic: Anonymity Networks",
           "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
           "notes": "Network-layer privacy techniques that improve censorship resistance."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Human-rights framing for why open monetary access and resistance to exclusion matter."
         }
       ],
       "estimatedTime": "40m",
@@ -3364,6 +3526,12 @@
           "title": "Double-spending",
           "url": "https://en.wikipedia.org/wiki/Double-spending",
           "notes": "General framing of digital scarcity constraints and attacks."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly technical explanation of how Bitcoin makes digital scarcity credible."
         }
       ],
       "estimatedTime": "40m",
@@ -3689,6 +3857,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-oriented critique of monetary expansion and its incentive effects."
         }
       ],
       "estimatedTime": "35m",
@@ -3870,6 +4044,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-centric treatment of salability, scarcity, and other monetary properties."
         }
       ],
       "estimatedTime": "40m",
@@ -3905,8 +4085,14 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Consensus-rule perspective needed to evaluate neutrality tradeoffs."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Directly aligned with neutrality as a design goal and cultural constraint in Bitcoin development."
         }
       ],
       "estimatedTime": "45m",
@@ -3981,6 +4167,12 @@
           "title": "Bitcoin Dev Network: Wire Protocol",
           "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
           "notes": "Developer-oriented protocol message walkthrough."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Accessible first technical mental model for protocol rules, nodes, and consensus."
         }
       ],
       "estimatedTime": "30m",
@@ -4204,6 +4396,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Popular Bitcoin framing of low time preference and long-term savings behavior."
         }
       ],
       "estimatedTime": "35m",
@@ -4239,8 +4437,14 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Protocol mechanics behind independent verification."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Pairs well with the philosophical side of verification, trust minimization, and rule enforcement."
         }
       ],
       "estimatedTime": "45m",
@@ -4308,12 +4512,6 @@
         },
         {
           "type": "article",
-          "title": "Satoshi Nakamoto",
-          "url": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto",
-          "notes": "Background on the unresolved identity of Bitcoin's creator."
-        },
-        {
-          "type": "article",
           "title": "Lopp: Bitcoin History",
           "url": "https://www.lopp.net/bitcoin-information/history.html",
           "notes": "Timeline coverage of early mining, distribution, and adoption milestones."
@@ -4323,6 +4521,12 @@
           "title": "Bitcoin Faucet",
           "url": "https://en.wikipedia.org/wiki/Bitcoin#History",
           "notes": "Historical overview including early faucet and zero-price era context."
+        },
+        {
+          "type": "book",
+          "title": "The Book of Satoshi",
+          "url": "https://amzn.to/4lvhhQ8",
+          "notes": "Primary-source compilation that captures launch-era communication, distribution ethos, and early priorities."
         }
       ],
       "estimatedTime": "40m",
@@ -4401,6 +4605,12 @@
           "title": "Bitcoin Core Academy: Consensus Model",
           "url": "https://bitcoincore.academy/consensus-model.html",
           "notes": "Modern explanation of the consensus ideas introduced in the whitepaper."
+        },
+        {
+          "type": "book",
+          "title": "Genesis Book",
+          "url": "https://amzn.to/4bjOd9C",
+          "notes": "Adds broader prehistory and launch-context framing around the whitepaper moment."
         }
       ],
       "estimatedTime": "45m",
@@ -4439,6 +4649,12 @@
           "title": "BIP 91: Reduced Threshold SegWit MASF",
           "url": "https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki",
           "notes": "Primary-source activation mechanism that shaped the conflict timeline."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Definitive narrative history of the scaling conflict, coalition dynamics, and UASF era."
         }
       ],
       "estimatedTime": "70m",
@@ -4477,6 +4693,12 @@
           "title": "Bitcoin Core Academy: Consensus Model",
           "url": "https://bitcoincore.academy/consensus-model.html",
           "notes": "Modern explanation of ideas introduced in early Bitcoin design."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Broad historical account linking cypherpunk monetary ideas to Bitcoin's launch."
         }
       ],
       "estimatedTime": "50m",
@@ -4515,6 +4737,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Broad intellectual background on the privacy and monetary ideas that fed into Bitcoin."
         }
       ],
       "estimatedTime": "35m",
@@ -4552,6 +4780,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "User-centered framing for applied learning."
+        },
+        {
+          "type": "book",
+          "title": "Genesis Book",
+          "url": "https://amzn.to/4bjOd9C",
+          "notes": "Useful prehistory framing for why solving double spending was the central unsolved design problem."
         }
       ],
       "estimatedTime": "35m",
@@ -4585,10 +4819,16 @@
           "notes": "High-signal explainers and updates."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "User-centered framing for applied learning."
+          "type": "book",
+          "title": "The Book of Satoshi",
+          "url": "https://amzn.to/4lvhhQ8",
+          "notes": "Primary-source collection covering the vocabulary, design intent, and debates of Bitcoin's first years."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Bitcoin-centric narrative of the launch era, early adoption, and monetary framing."
         }
       ],
       "estimatedTime": "45m",
@@ -4622,10 +4862,16 @@
           "notes": "High-signal explainers and updates."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "User-centered framing for applied learning."
+          "type": "book",
+          "title": "Genesis Book",
+          "url": "https://amzn.to/4bjOd9C",
+          "notes": "Directly relevant history of Bitcoin's prehistory, launch conditions, and genesis-block symbolism."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Connects the genesis-block message to the broader monetary critique behind Bitcoin's release."
         }
       ],
       "estimatedTime": "30m",
@@ -4702,6 +4948,12 @@
           "title": "The Ascent of Money",
           "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
           "notes": "Comparative context for currency disruption events across regions."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Uses monetary-history case studies to show how technology can collapse a money's scarcity."
         }
       ],
       "estimatedTime": "45m",
@@ -4786,6 +5038,12 @@
           "title": "History of Money",
           "url": "https://bitcoin.page",
           "notes": "Accessible bridge from historical money forms to Bitcoin thinking."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Uses Yap stone money as a memorable case study in social consensus and monetary history."
         }
       ],
       "estimatedTime": "30m",
@@ -4863,6 +5121,12 @@
           "title": "Bitcoin Optech: Soft Fork Activation",
           "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
           "notes": "Comparative context across activation strategies and lessons learned."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Best long-form narrative for the signaling drama, coordination failures, and activation outcome."
         }
       ],
       "estimatedTime": "70m",
@@ -4902,6 +5166,12 @@
           "title": "Bitcoin Whitepaper PDF",
           "url": "https://bitcoin.org/bitcoin.pdf",
           "notes": "Original technical design, interpreted through social adoption reality."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Strong case study in how social consensus, not just code, determines legitimate protocol change."
         }
       ],
       "estimatedTime": "55m",
@@ -4979,6 +5249,12 @@
           "title": "Lopp: Bitcoin History",
           "url": "https://www.lopp.net/bitcoin-information/history.html",
           "notes": "Historical timeline and primary references around governance conflicts."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Directly covers the emergence, strategy, and consequences of the UASF movement."
         }
       ],
       "estimatedTime": "75m",
@@ -5056,6 +5332,12 @@
           "title": "BOLT 11: Payment Request Format",
           "url": "https://github.com/lightning/bolts/blob/master/11-payment-encoding.md",
           "notes": "Legacy invoice format baseline for comparing BOLT12 offers."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Solid technical bridge for invoices, offers, and evolving Lightning payment-request flows."
         }
       ],
       "estimatedTime": "75m",
@@ -5094,6 +5376,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Operational reference for channel state, recovery limitations, and backup strategy."
         }
       ],
       "estimatedTime": "60m",
@@ -5355,10 +5643,10 @@
           "notes": "Peer state machine and channel message flow dependencies."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Lightning Services",
-          "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-          "notes": "Product-level implications of channel graph and service routing."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Technical background for graph announcements, routing policy propagation, and node-level networking behavior."
         }
       ],
       "estimatedTime": "85m",
@@ -5472,6 +5760,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Technical walkthrough of invoice encoding, payment flow, and invoice-driven UX constraints."
         }
       ],
       "estimatedTime": "50m",
@@ -5509,6 +5803,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Strong technical reference for inbound and outbound capacity management."
         }
       ],
       "estimatedTime": "70m",
@@ -5582,6 +5882,12 @@
           "title": "Bitcoin Optech Topic: Route Blinding",
           "url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
           "notes": "Privacy-preserving routing patterns related to onion message paths."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Useful technical background for Sphinx packets, forwarding privacy, and routing tradeoffs."
         }
       ],
       "estimatedTime": "85m",
@@ -5620,6 +5926,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Core reference for channel architecture, commitments, and base Lightning security model."
         }
       ],
       "estimatedTime": "70m",
@@ -5693,8 +6005,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering the Lightning Network (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
           "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics."
         }
       ],
@@ -5809,6 +6121,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Strong technical treatment of pathfinding, forwarding constraints, and routing reliability."
         }
       ],
       "estimatedTime": "65m",
@@ -5846,6 +6164,12 @@
           "title": "BOLT 03: Transaction and Channel States",
           "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
           "notes": "Funding and commitment transaction transitions relevant to splicing."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Technical context for channel lifecycle updates that keep channels open while changing capacity."
         }
       ],
       "estimatedTime": "80m",
@@ -5922,6 +6246,12 @@
           "title": "Bitcoin Design",
           "url": "https://bitcoin.design/",
           "notes": "UX and product considerations for Lightning apps."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Operational and protocol-level treatment of penalty monitoring and outsourced watchtower services."
         }
       ],
       "estimatedTime": "55m",
@@ -5995,7 +6325,7 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Mining mechanics and block construction fundamentals."
         }
       ],
@@ -7736,8 +8066,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -7775,8 +8105,14 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Money-property context for evaluating fungibility tradeoffs."
+        },
+        {
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4dlkHCG",
+          "notes": "Useful monetary framing for why interchangeable units matter for sound money."
         }
       ],
       "estimatedTime": "55m",
@@ -7814,6 +8150,12 @@
           "title": "Bitcoin Optech",
           "url": "https://bitcoinops.org/",
           "notes": "Advanced guidance and implementation notes."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Human-rights lens on identity, surveillance, and open access to money."
         }
       ],
       "estimatedTime": "45m",
@@ -8115,8 +8457,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -8193,6 +8535,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Hands-on walkthrough of outputs, script templates, and address encoding from raw transactions."
         }
       ],
       "estimatedTime": "45m",
@@ -8228,7 +8576,7 @@
         {
           "type": "book",
           "title": "Programming Bitcoin",
-          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "url": "https://amzn.to/4b5xUhC",
           "notes": "Script and witness structure background for Taproot-era spending."
         }
       ],
@@ -8381,6 +8729,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Clear introductory walkthrough of headers, blocks, and why block structure matters."
         }
       ],
       "estimatedTime": "45m",
@@ -8722,8 +9076,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -8833,8 +9187,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -8945,8 +9299,8 @@
         },
         {
           "type": "book",
-          "title": "Programming Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
           "notes": "Practical walkthrough of Script and transaction construction from first principles."
         }
       ],
@@ -8983,7 +9337,7 @@
         {
           "type": "book",
           "title": "Mastering the Lightning Network",
-          "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+          "url": "https://amzn.to/40V421t",
           "notes": "Useful context on scriptless protocols that use DLEQ-like constructs."
         }
       ],
@@ -9285,8 +9639,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -9402,6 +9756,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Historical proof that miners propose blocks but nodes define validity and social legitimacy."
         }
       ],
       "estimatedTime": "45m",
@@ -9510,8 +9870,8 @@
         },
         {
           "type": "book",
-          "title": "Programming Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Programming-Bitcoin-Learn-Program-Open/dp/1492031496/",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
           "notes": "Practical walkthrough of Script and transaction construction from first principles."
         }
       ],
@@ -9686,6 +10046,12 @@
           "notes": "Canonical P2SH consensus and policy behavior."
         },
         {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Concrete walkthrough of redeem scripts, script hashes, and spend-time revelation."
+        },
+        {
           "type": "article",
           "title": "Bitcoin Dev Network: Bitcoin Script 101",
           "url": "https://bitcoindev.network/bitcoin-script-101/",
@@ -9735,6 +10101,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Strong beginner technical explanation of why Proof of Work secures ordering and issuance."
         }
       ],
       "estimatedTime": "60m",
@@ -9847,6 +10219,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Hands-on introduction to Script evaluation, transactions, and spending conditions."
         }
       ],
       "estimatedTime": "60m",
@@ -9884,6 +10262,12 @@
           "title": "Bitcoin Dev Network: Native SegWit Guide",
           "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
           "notes": "Implementation-oriented walkthrough."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Good bridge from raw transaction serialization to witness-era script behavior."
         }
       ],
       "estimatedTime": "75m",
@@ -9955,10 +10339,10 @@
           "notes": "Taproot-era signature digest and script path verification semantics."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network: Bitcoin Script 101",
-          "url": "https://bitcoindev.network/bitcoin-script-101/",
-          "notes": "Foundational script execution context for interpreting SIGHASH behavior."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Worked examples for digest construction and signature-authorization edge cases."
         }
       ],
       "estimatedTime": "90m",
@@ -9997,6 +10381,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Concrete historical case for why soft-fork and hard-fork tradeoffs are social as well as technical."
         }
       ],
       "estimatedTime": "55m",
@@ -10073,6 +10463,12 @@
           "title": "Bitcoin Optech Topic: Taproot",
           "url": "https://bitcoinops.org/en/topics/taproot/",
           "notes": "Activation and practical ecosystem usage."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Advanced technical reference for how Taproot changes script paths, keys, and transaction construction."
         }
       ],
       "estimatedTime": "85m",
@@ -10110,6 +10506,12 @@
           "title": "Bitcoin Developer Guide: Contracts",
           "url": "https://developer.bitcoin.org/devguide/contracts.html",
           "notes": "Practical contract templates and usage."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Concrete examples of timelocked scripts and transaction flows built from raw primitives."
         }
       ],
       "estimatedTime": "70m",
@@ -10144,8 +10546,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -10184,6 +10586,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Gentle technical walkthrough of how transactions move from creation to confirmation."
         }
       ],
       "estimatedTime": "55m",
@@ -10221,6 +10629,12 @@
           "title": "Bitcoin Core Academy: Consensus Model",
           "url": "https://bitcoincore.academy/consensus-model.html",
           "notes": "Consensus implications of pre-confirmation tx mutation."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Useful transaction-level treatment of txids, witness data, and malleability fixes."
         }
       ],
       "estimatedTime": "65m",
@@ -10332,8 +10746,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],
@@ -10372,6 +10786,12 @@
           "title": "Bitcoin Dev Network",
           "url": "https://bitcoindev.network/",
           "notes": "Practical implementation context."
+        },
+        {
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Clear beginner technical explanation of spendable outputs and the UTXO accounting model."
         }
       ],
       "estimatedTime": "50m",
@@ -10449,6 +10869,12 @@
           "title": "Bitcoin Core Academy: Consensus Changes",
           "url": "https://bitcoincore.academy/consensus-changes.html",
           "notes": "Consensus upgrade lifecycle and operational concerns."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Historical explanation of how versionbits signaling behaved under real political pressure."
         }
       ],
       "estimatedTime": "65m",
@@ -10602,6 +11028,12 @@
           "title": "Bitcoin Core Tor Documentation",
           "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
           "notes": "Implementation-level tooling for reducing network-level metadata leakage."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Useful for framing the civil-liberties costs of surveillance-heavy compliance systems."
         }
       ],
       "estimatedTime": "50m",
@@ -10675,7 +11107,7 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Key-management and signing model fundamentals for custody systems."
         }
       ],
@@ -10713,8 +11145,8 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin (Amazon)",
-          "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
         }
       ],

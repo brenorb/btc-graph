@@ -24,6 +24,12 @@
       "title": "Bitcoin Dev Network: Wire Protocol",
       "url": "https://bitcoindev.network/bitcoin-wire-protocol/",
       "notes": "Developer-oriented protocol message walkthrough."
+    },
+    {
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Accessible first technical mental model for protocol rules, nodes, and consensus."
     }
   ],
   "estimatedTime": "30m",

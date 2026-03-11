@@ -24,6 +24,12 @@
       "title": "Bitcoin Dev Network: Native SegWit Guide",
       "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
       "notes": "Implementation-oriented walkthrough."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Good bridge from raw transaction serialization to witness-era script behavior."
     }
   ],
   "estimatedTime": "75m",

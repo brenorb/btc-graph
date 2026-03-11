@@ -20,10 +20,16 @@
       "notes": "High-signal explainers and updates."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design",
-      "url": "https://bitcoin.design/",
-      "notes": "User-centered framing for applied learning."
+      "type": "book",
+      "title": "The Book of Satoshi",
+      "url": "https://amzn.to/4lvhhQ8",
+      "notes": "Primary-source collection covering the vocabulary, design intent, and debates of Bitcoin's first years."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Bitcoin-centric narrative of the launch era, early adoption, and monetary framing."
     }
   ],
   "estimatedTime": "45m",

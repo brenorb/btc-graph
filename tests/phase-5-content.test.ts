@@ -36,10 +36,17 @@ const ALLOWED_RESOURCE_DOMAINS = [
   "github.com",
   "developer.bitcoin.org",
   "mempool.space",
+  "amzn.to",
 ];
 
 const REQUIRED_PHASE_5_PREREQUISITES: Record<string, string[]> = {
   "mining.51-percent-attack": ["mining.pool-vs-solo", "protocol.reorgs-finality"],
+};
+
+const MAX_RESOURCE_COUNT_BY_NODE: Partial<Record<(typeof PHASE_5_NODE_IDS)[number], number>> = {
+  "history.user-activated-soft-fork": 4,
+  "protocol.pay-to-script-hash": 4,
+  "protocol.versionbits": 4,
 };
 
 function loadNodes(): GraphNode[] {
@@ -129,10 +136,15 @@ describe("phase 5 content coverage", () => {
         ).toContain(requiredPrerequisite);
       }
 
-      expect(node.resources.length, `${nodeId} should have 2-3 resources`).toBeGreaterThanOrEqual(
-        2,
-      );
-      expect(node.resources.length, `${nodeId} should have 2-3 resources`).toBeLessThanOrEqual(3);
+      const maxResources = MAX_RESOURCE_COUNT_BY_NODE[nodeId] ?? 3;
+      expect(
+        node.resources.length,
+        `${nodeId} should have 2-${maxResources} resources`,
+      ).toBeGreaterThanOrEqual(2);
+      expect(
+        node.resources.length,
+        `${nodeId} should have 2-${maxResources} resources`,
+      ).toBeLessThanOrEqual(maxResources);
 
       for (const resource of node.resources) {
         const host = new URL(resource.url).hostname.replace(/^www\./, "");

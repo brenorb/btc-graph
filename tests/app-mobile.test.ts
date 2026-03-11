@@ -222,6 +222,13 @@ describe("mobile app shell", () => {
         setItem: vi.fn(),
       },
     });
+
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: vi.fn().mockResolvedValue(undefined),
+      },
+    });
   });
 
   it("opens the detail sheet from the URL and closes it from the close button on mobile", async () => {
@@ -281,5 +288,20 @@ describe("mobile app shell", () => {
 
     expect(resourcesIndex).toBeGreaterThan(-1);
     expect(assistantIndex).toBeGreaterThan(resourcesIndex);
+  });
+
+  it("opens the Lightning donation modal from the mobile tools drawer", async () => {
+    await bootstrapApp(document.querySelector("#app"));
+
+    document.querySelector<HTMLButtonElement>("#mobile-tools-toggle")?.click();
+    document.querySelector<HTMLButtonElement>('[data-donate-trigger="mobile"]')?.click();
+
+    expect(document.querySelector<HTMLElement>("#mobile-tools-panel")?.classList.contains("open")).toBe(
+      false,
+    );
+    expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(false);
+    expect(document.querySelector<HTMLElement>("#donate-address")?.textContent).toBe(
+      "breno@bipa.app",
+    );
   });
 });

@@ -14,6 +14,12 @@
       "notes": "Canonical P2SH consensus and policy behavior."
     },
     {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Concrete walkthrough of redeem scripts, script hashes, and spend-time revelation."
+    },
+    {
       "type": "article",
       "title": "Bitcoin Dev Network: Bitcoin Script 101",
       "url": "https://bitcoindev.network/bitcoin-script-101/",

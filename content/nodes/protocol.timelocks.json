@@ -24,6 +24,12 @@
       "title": "Bitcoin Developer Guide: Contracts",
       "url": "https://developer.bitcoin.org/devguide/contracts.html",
       "notes": "Practical contract templates and usage."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Concrete examples of timelocked scripts and transaction flows built from raw primitives."
     }
   ],
   "estimatedTime": "70m",

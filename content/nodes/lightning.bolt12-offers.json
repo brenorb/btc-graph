@@ -25,6 +25,12 @@
       "title": "BOLT 11: Payment Request Format",
       "url": "https://github.com/lightning/bolts/blob/master/11-payment-encoding.md",
       "notes": "Legacy invoice format baseline for comparing BOLT12 offers."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Solid technical bridge for invoices, offers, and evolving Lightning payment-request flows."
     }
   ],
   "estimatedTime": "75m",

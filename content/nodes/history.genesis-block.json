@@ -20,10 +20,16 @@
       "notes": "High-signal explainers and updates."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design",
-      "url": "https://bitcoin.design/",
-      "notes": "User-centered framing for applied learning."
+      "type": "book",
+      "title": "Genesis Book",
+      "url": "https://amzn.to/4bjOd9C",
+      "notes": "Directly relevant history of Bitcoin's prehistory, launch conditions, and genesis-block symbolism."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Connects the genesis-block message to the broader monetary critique behind Bitcoin's release."
     }
   ],
   "estimatedTime": "30m",

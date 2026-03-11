@@ -25,6 +25,12 @@
       "title": "Bitcoin Optech Topic: Taproot",
       "url": "https://bitcoinops.org/en/topics/taproot/",
       "notes": "Activation and practical ecosystem usage."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Advanced technical reference for how Taproot changes script paths, keys, and transaction construction."
     }
   ],
   "estimatedTime": "85m",

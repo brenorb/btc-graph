@@ -26,6 +26,12 @@
       "title": "Bitcoin Dev Network",
       "url": "https://bitcoindev.network/",
       "notes": "Practical implementation context."
+    },
+    {
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Strong beginner technical explanation of why Proof of Work secures ordering and issuance."
     }
   ],
   "estimatedTime": "60m",

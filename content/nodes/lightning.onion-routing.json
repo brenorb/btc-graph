@@ -24,6 +24,12 @@
       "title": "Bitcoin Optech Topic: Route Blinding",
       "url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
       "notes": "Privacy-preserving routing patterns related to onion message paths."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Useful technical background for Sphinx packets, forwarding privacy, and routing tradeoffs."
     }
   ],
   "estimatedTime": "85m",

@@ -25,6 +25,12 @@
       "title": "Bitcoin Developer Guide",
       "url": "https://developer.bitcoin.org/devguide/",
       "notes": "Reference documentation for implementation."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Comprehensive implementation reference for wallet architecture, transactions, and script handling."
     }
   ],
   "estimatedTime": "80m",

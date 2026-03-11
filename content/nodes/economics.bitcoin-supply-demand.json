@@ -25,6 +25,12 @@
       "title": "Bitcoin.page",
       "url": "https://bitcoin.page",
       "notes": "Accessible explanations linking scarcity, demand, and price behavior."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Accessible thesis for how fixed supply interacts with rising monetary demand."
     }
   ],
   "estimatedTime": "30m",

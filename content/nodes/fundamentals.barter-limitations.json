@@ -22,6 +22,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User-centered framing for applied learning."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Popular hard-money framing for why barter limitations push societies toward monetary media."
     }
   ],
   "estimatedTime": "30m",

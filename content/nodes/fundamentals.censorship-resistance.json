@@ -25,6 +25,12 @@
       "title": "Bitcoin Optech Topic: Anonymity Networks",
       "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
       "notes": "Network-layer privacy techniques that improve censorship resistance."
+    },
+    {
+      "type": "book",
+      "title": "The Little Bitcoin Book",
+      "url": "https://amzn.to/4sJ3wjb",
+      "notes": "Human-rights framing for why open monetary access and resistance to exclusion matter."
     }
   ],
   "estimatedTime": "40m",

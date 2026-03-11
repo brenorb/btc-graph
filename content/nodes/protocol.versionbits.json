@@ -25,6 +25,12 @@
       "title": "Bitcoin Core Academy: Consensus Changes",
       "url": "https://bitcoincore.academy/consensus-changes.html",
       "notes": "Consensus upgrade lifecycle and operational concerns."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Historical explanation of how versionbits signaling behaved under real political pressure."
     }
   ],
   "estimatedTime": "65m",

@@ -23,8 +23,14 @@
     {
       "type": "book",
       "title": "Mastering Bitcoin",
-      "url": "https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388/",
+      "url": "https://amzn.to/4ro0NdG",
       "notes": "Consensus-rule perspective needed to evaluate neutrality tradeoffs."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Directly aligned with neutrality as a design goal and cultural constraint in Bitcoin development."
     }
   ],
   "estimatedTime": "45m",

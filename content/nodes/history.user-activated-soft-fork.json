@@ -24,6 +24,12 @@
       "title": "Lopp: Bitcoin History",
       "url": "https://www.lopp.net/bitcoin-information/history.html",
       "notes": "Historical timeline and primary references around governance conflicts."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Directly covers the emergence, strategy, and consequences of the UASF movement."
     }
   ],
   "estimatedTime": "75m",

@@ -25,6 +25,12 @@
       "title": "Bitcoin Dev Network",
       "url": "https://bitcoindev.network/",
       "notes": "Practical implementation context."
+    },
+    {
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Clear introductory walkthrough of headers, blocks, and why block structure matters."
     }
   ],
   "estimatedTime": "45m",

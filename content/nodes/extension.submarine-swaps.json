@@ -25,6 +25,12 @@
       "title": "Boltz Backend",
       "url": "https://github.com/BoltzExchange/boltz-backend",
       "notes": "Production swap implementation to study protocol flow in practice."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Detailed treatment of cross-layer payment flows, HTLC mechanics, and swap-style liquidity movement."
     }
   ],
   "estimatedTime": "65m",

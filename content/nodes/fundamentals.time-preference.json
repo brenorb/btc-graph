@@ -24,6 +24,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User-centered framing for applied learning."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Popular Bitcoin framing of low time preference and long-term savings behavior."
     }
   ],
   "estimatedTime": "35m",

@@ -22,8 +22,8 @@
     },
     {
       "type": "book",
-      "title": "Mastering the Lightning Network (Amazon)",
-      "url": "https://www.amazon.com/Mastering-Lightning-Building-Bitcoin-Protocols/dp/1492054860/",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
       "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics."
     }
   ],

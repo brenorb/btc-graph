@@ -25,6 +25,12 @@
       "title": "BIP 91: Reduced Threshold SegWit MASF",
       "url": "https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki",
       "notes": "Primary-source activation mechanism that shaped the conflict timeline."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Definitive narrative history of the scaling conflict, coalition dynamics, and UASF era."
     }
   ],
   "estimatedTime": "70m",

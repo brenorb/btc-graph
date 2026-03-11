@@ -21,10 +21,10 @@
       "notes": "Peer state machine and channel message flow dependencies."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Lightning Services",
-      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-      "notes": "Product-level implications of channel graph and service routing."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Technical background for graph announcements, routing policy propagation, and node-level networking behavior."
     }
   ],
   "estimatedTime": "85m",

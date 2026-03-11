@@ -25,6 +25,12 @@
       "title": "Bitcoin Optech: Soft Fork Activation",
       "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
       "notes": "Comparative context across activation strategies and lessons learned."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Best long-form narrative for the signaling drama, coordination failures, and activation outcome."
     }
   ],
   "estimatedTime": "70m",

@@ -25,6 +25,12 @@
       "title": "Bitcoin Core Tor Documentation",
       "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/tor.md",
       "notes": "Implementation-level tooling for reducing network-level metadata leakage."
+    },
+    {
+      "type": "book",
+      "title": "The Little Bitcoin Book",
+      "url": "https://amzn.to/4sJ3wjb",
+      "notes": "Useful for framing the civil-liberties costs of surveillance-heavy compliance systems."
     }
   ],
   "estimatedTime": "50m",

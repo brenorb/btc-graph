@@ -25,6 +25,12 @@
       "title": "Bitcoin Whitepaper PDF",
       "url": "https://bitcoin.org/bitcoin.pdf",
       "notes": "Original technical design, interpreted through social adoption reality."
+    },
+    {
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Strong case study in how social consensus, not just code, determines legitimate protocol change."
     }
   ],
   "estimatedTime": "55m",

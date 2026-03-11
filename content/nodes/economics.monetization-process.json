@@ -25,6 +25,12 @@
       "title": "Bitcoin Design",
       "url": "https://bitcoin.design/",
       "notes": "User behavior lens for moving from speculative to utility-driven usage."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Widely cited Bitcoin framing of monetization as a staged social-adoption process."
     }
   ],
   "estimatedTime": "45m",

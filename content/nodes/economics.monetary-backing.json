@@ -25,6 +25,12 @@
       "title": "BIP 42: A Finite Monetary Supply for Bitcoin",
       "url": "https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki",
       "notes": "Protocol-level source for Bitcoin's finite supply assurance."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Frames monetary trust around salability and scarcity rather than redeemability promises."
     }
   ],
   "estimatedTime": "40m",

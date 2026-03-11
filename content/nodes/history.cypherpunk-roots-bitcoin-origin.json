@@ -25,6 +25,12 @@
       "title": "Bitcoin Core Academy: Consensus Model",
       "url": "https://bitcoincore.academy/consensus-model.html",
       "notes": "Modern explanation of ideas introduced in early Bitcoin design."
+    },
+    {
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4dlkHCG",
+      "notes": "Broad historical account linking cypherpunk monetary ideas to Bitcoin's launch."
     }
   ],
   "estimatedTime": "50m",
