@@ -14,6 +14,8 @@ describe("homepage SEO shell", () => {
     expect(html).toContain('name="twitter:card"');
     expect(html).toContain('rel="canonical" href="https://brenorb.com/btc-graph/"');
     expect(html).toContain('href="https://brenorb.com/btc-graph/llms.txt"');
+    expect(html).toContain('https://www.googletagmanager.com/gtag/js?id=G-SV5TS1L0K9');
+    expect(html).toContain('gtag("config", "G-SV5TS1L0K9")');
     expect(html).toContain('"@type": "Organization"');
     expect(html).toContain("<h1>Bitcoin Learning Graph</h1>");
     expect(html).toContain("<h2>What you can study</h2>");

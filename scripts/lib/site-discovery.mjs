@@ -8,7 +8,7 @@ export const SITE_URL = new URL(SITE_BASE_PATH, SITE_ORIGIN).toString();
 export const SITE_LIBRARY_PATH = "library/";
 export const SITE_SOCIAL_IMAGE_PATH = "social-card.svg";
 export const SITE_SOCIAL_IMAGE_URL = new URL(SITE_SOCIAL_IMAGE_PATH, SITE_URL).toString();
-export const SITE_DESCRIPTION = "Structured Bitcoin self-study graph with prerequisites, resources, and concept pages.";
+export const SITE_DESCRIPTION = "Interactive Bitcoin knowledge graph with prerequisites, curated resources, and structured topic pages.";
 export const SITE_KEYWORDS = [
   "bitcoin learning graph",
   "bitcoin education",
