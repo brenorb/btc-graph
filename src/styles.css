@@ -109,6 +109,7 @@ body {
 .progress-btn,
 .icon-btn,
 select {
+  font-family: inherit;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -571,7 +572,6 @@ input {
 .footer-link-button {
   background: transparent;
   cursor: pointer;
-  font: inherit;
 }
 
 .footer-link:hover {

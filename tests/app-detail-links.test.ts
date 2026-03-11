@@ -320,10 +320,15 @@ describe("node detail links", () => {
     const twitterLink = document.querySelector<HTMLAnchorElement>(
       '.footer-social-link[aria-label="X (Twitter)"]',
     );
+    const footerLinks = Array.from(
+      document.querySelectorAll<HTMLElement>(".footer-links .footer-link"),
+      (link) => link.textContent?.trim() ?? "",
+    );
     const donateButton = document.querySelector<HTMLButtonElement>('[data-donate-trigger="footer"]');
 
     expect(siteLink?.href).toBe("https://brenorb.com/");
     expect(twitterLink?.href).toBe("https://x.com/brenorb");
+    expect(footerLinks).toEqual(["Library", "Contribute", "Donate"]);
     expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(true);
 
     donateButton?.click();

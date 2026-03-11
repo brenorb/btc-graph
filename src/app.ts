@@ -246,7 +246,6 @@ function createLayout(root: HTMLElement) {
         </div>
         <div class="footer-links">
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
-          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
           <button class="footer-link footer-link-button" type="button" data-donate-trigger="footer">Donate</button>
         </div>
