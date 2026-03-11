@@ -209,6 +209,16 @@ function createLayout(root: HTMLElement) {
         <div class="footer-main">
           <div class="footer-title">Bitcoin Learning Graph</div>
           <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
+          <a class="footer-preview" href="https://brenorb.com/btc-graph/library/" target="_blank" rel="noreferrer">
+            <img
+              src="https://brenorb.com/btc-graph/social-card.webp"
+              alt="Preview card for the Bitcoin Learning Graph website."
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
         </div>
         <div class="footer-links">
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
@@ -1015,7 +1025,6 @@ function wireInteractions(state: AppState, root: HTMLElement) {
 function createGraph(container: HTMLElement) {
   return cytoscape({
     container,
-    wheelSensitivity: 0.18,
     style: [
       {
         selector: "node",
