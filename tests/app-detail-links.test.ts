@@ -330,25 +330,26 @@ describe("node detail links", () => {
 
     const donateModal = document.querySelector<HTMLElement>("#donate-modal");
     const qrImage = document.querySelector<HTMLImageElement>("#donate-qr");
-    const address = document.querySelector<HTMLElement>("#donate-address");
     const walletLink = document.querySelector<HTMLAnchorElement>("#donate-open-wallet");
 
     expect(donateModal?.hidden).toBe(false);
     expect(qrImage?.src).toContain(encodeURIComponent("lightning:breno@bipa.app"));
-    expect(address?.textContent).toBe("breno@bipa.app");
     expect(walletLink?.getAttribute("href")).toBe("lightning:breno@bipa.app");
-    expect(document.querySelector<HTMLElement>("#donate-comment")?.textContent).toBe(
-      "Support Bitcoin Learning Graph",
-    );
+    expect(document.querySelector("#donate-qr-copy")).not.toBeNull();
+    expect(document.querySelector("#donate-address")).toBeNull();
   });
 
-  it("offers a copyable donation message alongside the Lightning address", async () => {
+  it("copies the Lightning address when the QR code is clicked", async () => {
     await bootstrapApp(document.querySelector("#app"));
 
     document.querySelector<HTMLButtonElement>('[data-donate-trigger="footer"]')?.click();
+    document.querySelector<HTMLButtonElement>("#donate-qr-copy")?.click();
+    await Promise.resolve();
 
-    document.querySelector<HTMLButtonElement>("#donate-copy-comment")?.click();
-
-    expect(navigator.clipboard.writeText).toHaveBeenCalledWith("Support Bitcoin Learning Graph");
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith("breno@bipa.app");
+    expect(document.querySelector<HTMLElement>("#donate-copy-feedback")?.textContent).toBe(
+      "LN address copied",
+    );
+    expect(document.querySelector<HTMLElement>("#donate-copy-feedback")?.hidden).toBe(false);
   });
 });

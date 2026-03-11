@@ -300,8 +300,7 @@ describe("mobile app shell", () => {
       false,
     );
     expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(false);
-    expect(document.querySelector<HTMLElement>("#donate-address")?.textContent).toBe(
-      "breno@bipa.app",
-    );
+    expect(document.querySelector<HTMLButtonElement>("#donate-qr-copy")).not.toBeNull();
+    expect(document.querySelector<HTMLElement>("#donate-address")).toBeNull();
   });
 });

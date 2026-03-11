@@ -68,6 +68,7 @@ interface AppState {
   viewportMode: "desktop" | "mobile";
   mobileToolsOpen: boolean;
   donateModalOpen: boolean;
+  donateFeedbackResetHandle: number | null;
 }
 
 const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
@@ -75,7 +76,6 @@ const MOBILE_BREAKPOINT = 820;
 const LIGHTNING_ADDRESS = "breno@bipa.app";
 const LIGHTNING_URI = `lightning:${LIGHTNING_ADDRESS}`;
 const DONATION_QR_IMAGE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=svg&data=${encodeURIComponent(LIGHTNING_URI)}`;
-const DEFAULT_DONATION_COMMENT = "Support Bitcoin Learning Graph";
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -218,29 +218,25 @@ function createLayout(root: HTMLElement) {
           </div>
           <button class="icon-btn" id="donate-close" type="button" aria-label="Close donation dialog">✕</button>
         </div>
-        <img
-          class="donate-qr"
-          id="donate-qr"
-          src="${DONATION_QR_IMAGE_URL}"
-          alt="Lightning donation QR code for ${LIGHTNING_ADDRESS}"
-          loading="lazy"
-        />
-        <div class="donate-address-block">
-          <div class="resource-type">Lightning Address</div>
-          <code class="donate-address" id="donate-address">${LIGHTNING_ADDRESS}</code>
-        </div>
+        <button
+          class="donate-qr-trigger"
+          id="donate-qr-copy"
+          type="button"
+          aria-label="Copy Lightning address"
+          title="Copy Lightning address"
+        >
+          <img
+            class="donate-qr"
+            id="donate-qr"
+            src="${DONATION_QR_IMAGE_URL}"
+            alt="Lightning donation QR code for ${LIGHTNING_ADDRESS}"
+            loading="lazy"
+          />
+        </button>
         <div class="donate-actions">
-          <button class="btn primary" id="donate-copy" type="button">Copy address</button>
           <a class="btn" id="donate-open-wallet" href="${LIGHTNING_URI}">Open wallet</a>
         </div>
-        <div class="donate-address-block">
-          <div class="resource-type">Suggested message</div>
-          <code class="donate-address" id="donate-comment">${DEFAULT_DONATION_COMMENT}</code>
-          <div class="meta">If your wallet asks for a comment while paying the Lightning Address, use this.</div>
-        </div>
-        <div class="donate-actions">
-          <button class="btn" id="donate-copy-comment" type="button">Copy message</button>
-        </div>
+        <div class="meta donate-feedback" id="donate-copy-feedback" aria-live="polite" hidden></div>
       </section>
 
       <footer class="site-footer">
@@ -250,7 +246,6 @@ function createLayout(root: HTMLElement) {
         </div>
         <div class="footer-links">
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
-          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
           <button class="footer-link footer-link-button" type="button" data-donate-trigger="footer">Donate</button>
@@ -517,8 +512,17 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
 
 function setDonateModalOpen(state: AppState, root: HTMLElement, open: boolean) {
   state.donateModalOpen = open;
+  if (state.donateFeedbackResetHandle !== null) {
+    window.clearTimeout(state.donateFeedbackResetHandle);
+    state.donateFeedbackResetHandle = null;
+  }
   if (open) {
     state.mobileToolsOpen = false;
+  }
+  const donateFeedback = root.querySelector<HTMLElement>("#donate-copy-feedback");
+  if (donateFeedback) {
+    donateFeedback.hidden = true;
+    donateFeedback.textContent = "";
   }
   syncResponsiveLayout(state, root);
 }
@@ -1038,19 +1042,26 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     setDonateModalOpen(state, root, false);
   });
 
-  root.querySelector<HTMLButtonElement>("#donate-copy")?.addEventListener("click", async () => {
+  root.querySelector<HTMLButtonElement>("#donate-qr-copy")?.addEventListener("click", async () => {
+    const donateFeedback = root.querySelector<HTMLElement>("#donate-copy-feedback");
     try {
       await navigator.clipboard.writeText(LIGHTNING_ADDRESS);
+      if (state.donateFeedbackResetHandle !== null) {
+        window.clearTimeout(state.donateFeedbackResetHandle);
+      }
+      if (donateFeedback) {
+        donateFeedback.textContent = "LN address copied";
+        donateFeedback.hidden = false;
+      }
+      state.donateFeedbackResetHandle = window.setTimeout(() => {
+        if (donateFeedback) {
+          donateFeedback.hidden = true;
+          donateFeedback.textContent = "";
+        }
+        state.donateFeedbackResetHandle = null;
+      }, 1600);
     } catch {
       window.prompt("Copy the Lightning address:", LIGHTNING_ADDRESS);
-    }
-  });
-
-  root.querySelector<HTMLButtonElement>("#donate-copy-comment")?.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(DEFAULT_DONATION_COMMENT);
-    } catch {
-      window.prompt("Copy the donation message:", DEFAULT_DONATION_COMMENT);
     }
   });
 
@@ -1216,6 +1227,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     viewportMode: resolveViewportMode(window.innerWidth),
     mobileToolsOpen: false,
     donateModalOpen: false,
+    donateFeedbackResetHandle: null,
   };
 
   const fromUrl = readViewStateFromUrl(state);

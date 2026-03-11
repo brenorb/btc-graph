@@ -496,6 +496,14 @@ input {
   align-items: flex-start;
 }
 
+.donate-qr-trigger {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  justify-self: center;
+}
+
 .donate-qr {
   width: min(100%, 280px);
   aspect-ratio: 1;
@@ -506,27 +514,18 @@ input {
   padding: 12px;
 }
 
-.donate-address-block {
-  display: grid;
-  gap: 4px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--panel-border);
-  background: color-mix(in srgb, var(--control-bg) 88%, transparent);
-}
-
-.donate-address {
-  display: block;
-  overflow-wrap: anywhere;
-  font: 600 0.92rem/1.4 "Archivo", sans-serif;
-}
-
 .donate-actions {
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .donate-actions .btn {
-  flex: 1 1 140px;
+  flex: 0 1 180px;
+}
+
+.donate-feedback {
+  min-height: 1.2rem;
+  text-align: center;
 }
 
 .site-footer {
