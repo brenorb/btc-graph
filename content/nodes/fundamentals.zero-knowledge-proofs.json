@@ -1,0 +1,36 @@
+{
+  "id": "fundamentals.zero-knowledge-proofs",
+  "title": "Zero-Knowledge Proofs",
+  "description": "Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.",
+  "category": "Security",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Zcash Learn: What are zero-knowledge proofs?",
+      "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+      "notes": "Clear introduction to the core prove-without-revealing idea."
+    },
+    {
+      "type": "article",
+      "title": "Zcash Learn: What are zk-SNARKs?",
+      "url": "https://z.cash/learn/what-are-zk-snarks/",
+      "notes": "Bridges the generic zero-knowledge concept to practical proof systems."
+    },
+    {
+      "type": "article",
+      "title": "STARK paper",
+      "url": "https://eprint.iacr.org/2018/046.pdf",
+      "notes": "Primary-source paper for scalable transparent proof systems."
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "cryptography",
+    "privacy"
+  ],
+  "aliases": [
+    "zk proofs",
+    "zkp"
+  ]
+}

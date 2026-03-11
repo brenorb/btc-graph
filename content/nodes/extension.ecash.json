@@ -1,10 +1,11 @@
 {
   "id": "extension.ecash",
   "title": "Bitcoin-Backed Ecash Systems",
-  "description": "Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
+  "description": "Bitcoin-backed ecash mints use blind signatures to trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.",
   "category": "Extension Systems",
   "prerequisites": [
-    "protocol.utxo-model"
+    "protocol.utxo-model",
+    "fundamentals.blind-signatures"
   ],
   "resources": [
     {

@@ -54,13 +54,14 @@ Economics (32 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (45 concepts)
+Extension Systems (47 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
-- Bitcoin-Backed Ecash Systems: Bitcoin-backed ecash mints trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.
+- Bitcoin-Backed Ecash Systems: Bitcoin-backed ecash mints use blind signatures to trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.
 - BitVM: BitVM enables optimistic computation protocols anchored to Bitcoin settlement. It trades covenant requirements for interactive proofs and operational complexity.
 - BOLT12 Offers: Next-generation Lightning request format for reusable, richer, and more private payment intents.
+- Cashu: Cashu is a Bitcoin-backed ecash protocol and wallet ecosystem built around blind-signature mints. It improves privacy and transaction speed while preserving explicit mint trust tradeoffs.
 - Channel Backups: Static channel backups and operational recovery steps.
 - Channel Factories: Channel factories let multiple users share one on-chain UTXO to open and rebalance many off-chain channels. They trade coordination complexity for better on-chain footprint and liquidity efficiency.
 - Channel Reserve and Dust Limits: Channel-level reserve and dust constraints that preserve safety margins and spendability under fee pressure.
@@ -70,6 +71,7 @@ Extension Systems (45 concepts)
 - Discreet Log Contracts (DLCs): DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
+- Fedi: Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.
 - HTLC Timeout Settlement Paths: On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.
 - HTLCs: Conditional forwarding using hashlocks and timelocks.
 - Invoices and Payment Requests: BOLT11 request format and payment execution flow.
@@ -243,11 +245,12 @@ Protocol & Consensus (48 concepts)
 - UTXO Model: State model based on spendable outputs instead of account balances.
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 
-Security (45 concepts)
+Security (49 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
 - Amount Correlation: How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.
+- Blind Signatures: Blind signatures let a signer authorize a token without seeing its final contents, enabling ecash mints to issue privately spendable proofs. They build directly on digital-signature verification.
 - Censorship Resistance: Why open participation and distributed validation make transaction censorship costly and fragile.
 - Chain Analysis Heuristics: Common heuristics used to cluster addresses and infer ownership from on-chain behavior.
 - Change Avoidance Strategies: Wallet spending techniques that minimize change output creation to reduce linkage and future privacy leakage.
@@ -289,6 +292,9 @@ Security (45 concepts)
 - Trustlessness: Trustlessness in Bitcoin means security comes from verification and incentives rather than trusted operators. You can reduce counterparty risk by validating rules locally.
 - UTXO Consolidation Tradeoffs: Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.
 - XPUB Leakage: Privacy and security risks from sharing extended public keys with third-party services.
+- Zero-Knowledge Proofs: Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.
+- zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
+- zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
 Wallets (30 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.

@@ -1,0 +1,40 @@
+{
+  "id": "fundamentals.zk-starks",
+  "title": "zk-STARKs",
+  "description": "zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.zero-knowledge-proofs",
+    "fundamentals.finite-fields",
+    "fundamentals.merkle-trees"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "STARK paper",
+      "url": "https://eprint.iacr.org/2018/046.pdf",
+      "notes": "Primary-source paper introducing scalable transparent computational integrity."
+    },
+    {
+      "type": "article",
+      "title": "StarkWare STARK paper mirror",
+      "url": "https://starkware.co/wp-content/uploads/2022/05/STARK-paper.pdf",
+      "notes": "Accessible mirror for the canonical STARK paper."
+    },
+    {
+      "type": "article",
+      "title": "Zcash Learn: What are zero-knowledge proofs?",
+      "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
+      "notes": "Foundational zero-knowledge refresher before contrasting STARK design choices."
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "cryptography",
+    "proof-systems"
+  ],
+  "aliases": [
+    "starks",
+    "zk starks"
+  ]
+}
