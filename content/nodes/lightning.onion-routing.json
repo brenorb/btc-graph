@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Useful technical background for Sphinx packets, forwarding privacy, and routing tradeoffs."
+      "notes": "Useful technical background for Sphinx packets, forwarding privacy, and routing tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "85m",

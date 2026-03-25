@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Genesis Book",
       "url": "https://amzn.to/4bjOd9C",
-      "notes": "Useful prehistory framing for why solving double spending was the central unsolved design problem."
+      "notes": "Useful prehistory framing for why solving double spending was the central unsolved design problem.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41xvliA"
+      }
     }
   ],
   "estimatedTime": "35m",

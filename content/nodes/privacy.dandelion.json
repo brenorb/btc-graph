@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design."
+      "notes": "Comprehensive reference for Script, transactions, and advanced protocol design.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Comprehensive implementation reference for wallet architecture, transactions, and script handling."
+      "notes": "Comprehensive implementation reference for wallet architecture, transactions, and script handling.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "80m",

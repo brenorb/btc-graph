@@ -17,7 +17,10 @@
       "type": "book",
       "title": "The Ascent of Money",
       "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
-      "notes": "Broad monetary-history context that includes unusual money forms."
+      "notes": "Broad monetary-history context that includes unusual money forms.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41unemY"
+      }
     },
     {
       "type": "article",
@@ -29,7 +32,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Uses Yap stone money as a memorable case study in social consensus and monetary history."
+      "notes": "Uses Yap stone money as a memorable case study in social consensus and monetary history.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "30m",

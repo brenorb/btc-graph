@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Detailed wallet and transaction-construction context for multipart signing workflows."
+      "notes": "Detailed wallet and transaction-construction context for multipart signing workflows.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

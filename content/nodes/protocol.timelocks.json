@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Programming Bitcoin",
       "url": "https://amzn.to/4b5xUhC",
-      "notes": "Concrete examples of timelocked scripts and transaction flows built from raw primitives."
+      "notes": "Concrete examples of timelocked scripts and transaction flows built from raw primitives.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "70m",

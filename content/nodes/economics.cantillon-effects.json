@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Broken Money",
       "url": "https://amzn.to/4sxMnc0",
-      "notes": "Bitcoin-vs-fiat framing for how new money changes purchasing power unevenly across the economy."
+      "notes": "Bitcoin-vs-fiat framing for how new money changes purchasing power unevenly across the economy.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dKG5S5"
+      }
     }
   ],
   "estimatedTime": "40m",

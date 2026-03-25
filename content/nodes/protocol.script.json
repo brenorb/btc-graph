@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Programming Bitcoin",
       "url": "https://amzn.to/4b5xUhC",
-      "notes": "Hands-on introduction to Script evaluation, transactions, and spending conditions."
+      "notes": "Hands-on introduction to Script evaluation, transactions, and spending conditions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "60m",

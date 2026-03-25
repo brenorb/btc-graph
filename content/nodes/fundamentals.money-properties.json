@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-centric treatment of salability, scarcity, and other monetary properties."
+      "notes": "Bitcoin-centric treatment of salability, scarcity, and other monetary properties.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "40m",

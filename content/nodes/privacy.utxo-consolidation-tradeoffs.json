@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering Bitcoin: Transaction Fees",
       "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
-      "notes": "Economic mechanics behind fee pressure and input management."
+      "notes": "Economic mechanics behind fee pressure and input management.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "65m",

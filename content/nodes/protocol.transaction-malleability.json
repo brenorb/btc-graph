@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Programming Bitcoin",
       "url": "https://amzn.to/4b5xUhC",
-      "notes": "Useful transaction-level treatment of txids, witness data, and malleability fixes."
+      "notes": "Useful transaction-level treatment of txids, witness data, and malleability fixes.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "65m",

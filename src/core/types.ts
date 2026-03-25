@@ -4,6 +4,7 @@ export interface NodeResource {
   type: "article" | "video" | "book" | "tool" | "other";
   title: string;
   url: string;
+  regionalUrls?: Record<string, string>;
   notes?: string;
 }
 

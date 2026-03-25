@@ -18,19 +18,28 @@
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Competition-based argument against politically monopolized currency."
+      "notes": "Competition-based argument against politically monopolized currency.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "book",
       "title": "The Road to Serfdom",
       "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
-      "notes": "Background on centralized economic control and institutional incentives."
+      "notes": "Background on centralized economic control and institutional incentives.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/47IRe2j"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-oriented argument for neutral money over discretionary monetary control."
+      "notes": "Bitcoin-oriented argument for neutral money over discretionary monetary control.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "50m",

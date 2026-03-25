@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Accessible thesis for how fixed supply interacts with rising monetary demand."
+      "notes": "Accessible thesis for how fixed supply interacts with rising monetary demand.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "30m",

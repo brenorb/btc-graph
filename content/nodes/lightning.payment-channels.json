@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Core reference for channel architecture, commitments, and base Lightning security model."
+      "notes": "Core reference for channel architecture, commitments, and base Lightning security model.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "70m",

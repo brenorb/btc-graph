@@ -23,13 +23,19 @@
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Monetary-competition lens for evaluating money as savings infrastructure."
+      "notes": "Monetary-competition lens for evaluating money as savings infrastructure.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Popular framing of Bitcoin primarily as long-term savings technology rather than yield-seeking investment."
+      "notes": "Popular framing of Bitcoin primarily as long-term savings technology rather than yield-seeking investment.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "35m",

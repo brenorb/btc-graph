@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Clear technical walkthrough of deterministic key derivation and wallet tree structure."
+      "notes": "Clear technical walkthrough of deterministic key derivation and wallet tree structure.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "45m",

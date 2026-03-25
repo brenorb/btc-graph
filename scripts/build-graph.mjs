@@ -31,6 +31,16 @@ const requiredFields = [
   "estimatedTime",
 ];
 
+function isValidRegionalUrls(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return false;
+  }
+
+  return Object.entries(value).every(
+    ([key, url]) => typeof key === "string" && key.length > 0 && typeof url === "string" && url.length > 0,
+  );
+}
+
 function loadNodes() {
   const files = fs
     .readdirSync(sourceDir)
@@ -71,6 +81,15 @@ function validate(nodes) {
 
     if (!Array.isArray(node.resources)) {
       errors.push(`Node ${node.id} has invalid resources type`);
+    }
+
+    for (const resource of Array.isArray(node.resources) ? node.resources : []) {
+      if (
+        resource.regionalUrls !== undefined &&
+        !isValidRegionalUrls(resource.regionalUrls)
+      ) {
+        errors.push(`Node ${node.id} has invalid regionalUrls for resource ${resource.title ?? "<unknown>"}`);
+      }
     }
   }
 

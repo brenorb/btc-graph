@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Inventing Bitcoin",
       "url": "https://amzn.to/3Njwy9P",
-      "notes": "Clear beginner technical explanation of spendable outputs and the UTXO accounting model."
+      "notes": "Clear beginner technical explanation of spendable outputs and the UTXO accounting model.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "50m",

@@ -23,13 +23,19 @@
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Competing perspective on central-bank monopoly versus currency competition."
+      "notes": "Competing perspective on central-bank monopoly versus currency competition.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "book",
       "title": "Broken Money",
       "url": "https://amzn.to/4sxMnc0",
-      "notes": "Readable critique of fiat institutions, settlement frictions, and the role central banks play in the modern system."
+      "notes": "Readable critique of fiat institutions, settlement frictions, and the role central banks play in the modern system.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dKG5S5"
+      }
     }
   ],
   "estimatedTime": "50m",

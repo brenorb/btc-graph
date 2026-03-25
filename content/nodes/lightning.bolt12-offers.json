@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Solid technical bridge for invoices, offers, and evolving Lightning payment-request flows."
+      "notes": "Solid technical bridge for invoices, offers, and evolving Lightning payment-request flows.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "75m",

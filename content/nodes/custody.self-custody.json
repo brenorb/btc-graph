@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Little Bitcoin Book",
       "url": "https://amzn.to/4sJ3wjb",
-      "notes": "Clear human-centered introduction to why self-custody matters beyond price speculation."
+      "notes": "Clear human-centered introduction to why self-custody matters beyond price speculation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NMybNF"
+      }
     }
   ],
   "estimatedTime": "50m",

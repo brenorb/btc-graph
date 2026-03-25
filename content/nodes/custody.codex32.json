@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Backup and key-management context for evaluating codex32 workflows."
+      "notes": "Backup and key-management context for evaluating codex32 workflows.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

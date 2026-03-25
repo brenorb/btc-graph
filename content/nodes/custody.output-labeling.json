@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering Bitcoin: Wallets",
       "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
-      "notes": "Wallet data-management and control patterns for advanced users."
+      "notes": "Wallet data-management and control patterns for advanced users.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "45m",

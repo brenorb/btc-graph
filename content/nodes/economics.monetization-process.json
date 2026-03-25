@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Widely cited Bitcoin framing of monetization as a staged social-adoption process."
+      "notes": "Widely cited Bitcoin framing of monetization as a staged social-adoption process.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "45m",

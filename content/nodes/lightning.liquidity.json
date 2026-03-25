@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Strong technical reference for inbound and outbound capacity management."
+      "notes": "Strong technical reference for inbound and outbound capacity management.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "70m",

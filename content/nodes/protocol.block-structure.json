@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Inventing Bitcoin",
       "url": "https://amzn.to/3Njwy9P",
-      "notes": "Clear introductory walkthrough of headers, blocks, and why block structure matters."
+      "notes": "Clear introductory walkthrough of headers, blocks, and why block structure matters.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "45m",

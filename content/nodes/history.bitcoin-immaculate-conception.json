@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Book of Satoshi",
       "url": "https://amzn.to/4lvhhQ8",
-      "notes": "Primary-source compilation that captures launch-era communication, distribution ethos, and early priorities."
+      "notes": "Primary-source compilation that captures launch-era communication, distribution ethos, and early priorities.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NWFpyF"
+      }
     }
   ],
   "estimatedTime": "40m",

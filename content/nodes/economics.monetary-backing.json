@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Frames monetary trust around salability and scarcity rather than redeemability promises."
+      "notes": "Frames monetary trust around salability and scarcity rather than redeemability promises.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "40m",

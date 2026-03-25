@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Blocksize War",
       "url": "https://amzn.to/4b64b8s",
-      "notes": "Concrete historical case for why soft-fork and hard-fork tradeoffs are social as well as technical."
+      "notes": "Concrete historical case for why soft-fork and hard-fork tradeoffs are social as well as technical.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rXhk90"
+      }
     }
   ],
   "estimatedTime": "55m",

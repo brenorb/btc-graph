@@ -11,13 +11,19 @@
       "type": "book",
       "title": "The Ascent of Money",
       "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
-      "notes": "Long-run financial history context for how monetary systems changed across eras."
+      "notes": "Long-run financial history context for how monetary systems changed across eras.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41unemY"
+      }
     },
     {
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Market-competition perspective on state versus non-state money."
+      "notes": "Market-competition perspective on state versus non-state money.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "article",
@@ -29,7 +35,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-centric survey of monetary evolution from commodity money to fiat."
+      "notes": "Bitcoin-centric survey of monetary evolution from commodity money to fiat.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "55m",

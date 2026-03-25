@@ -44,7 +44,16 @@ const sampleData = {
         "fundamentals.distributed-systems",
         "fundamentals.sybil-resistance",
       ],
-      resources: [],
+      resources: [
+        {
+          type: "book",
+          title: "Mastering Bitcoin",
+          url: "https://www.amazon.com/dp/1491954388",
+          regionalUrls: {
+            BR: "https://www.amazon.com.br/dp/1491954388",
+          },
+        },
+      ],
     },
     {
       id: "mining.asics",
@@ -249,6 +258,24 @@ describe("node detail links", () => {
     expect(detail?.textContent).not.toContain("Post-requisites");
     expect(dependentLink?.getAttribute("href")).toContain("?selected=mining.asics");
     expect(dependentLink?.textContent).toContain("ASICs");
+  });
+
+  it("prefers a regional resource link when the browser locale matches", async () => {
+    Object.defineProperty(navigator, "language", {
+      configurable: true,
+      value: "pt-BR",
+    });
+    Object.defineProperty(navigator, "languages", {
+      configurable: true,
+      value: ["pt-BR", "pt", "en-US"],
+    });
+
+    await bootstrapApp(document.querySelector("#app"));
+
+    const resourceLink = document.querySelector<HTMLAnchorElement>(".resources .resource a");
+
+    expect(resourceLink?.textContent).toBe("Mastering Bitcoin");
+    expect(resourceLink?.getAttribute("href")).toBe("https://www.amazon.com.br/dp/1491954388");
   });
 
   it("shows only the first two gaps by default and expands the rest on demand", async () => {

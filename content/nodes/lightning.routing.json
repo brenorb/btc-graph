@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Strong technical treatment of pathfinding, forwarding constraints, and routing reliability."
+      "notes": "Strong technical treatment of pathfinding, forwarding constraints, and routing reliability.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "65m",

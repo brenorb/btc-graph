@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Layered Money",
       "url": "https://amzn.to/46QsdSd",
-      "notes": "Useful framing for how settlement layers stack and why Bitcoin can serve as a deeper monetary base."
+      "notes": "Useful framing for how settlement layers stack and why Bitcoin can serve as a deeper monetary base.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rUSLcM"
+      }
     }
   ],
   "estimatedTime": "45m",

@@ -20,6 +20,16 @@ const REQUIRED_NODE_FIELDS = [
   "estimatedTime",
 ] as const;
 
+function isValidRegionalUrls(value: unknown): value is Record<string, string> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return false;
+  }
+
+  return Object.entries(value).every(
+    ([key, url]) => typeof key === "string" && key.length > 0 && typeof url === "string" && url.length > 0,
+  );
+}
+
 export function validateGraphData(data: GraphData): ValidationResult {
   const errors: string[] = [];
   const nodes = data.nodes ?? [];
@@ -36,6 +46,15 @@ export function validateGraphData(data: GraphData): ValidationResult {
       errors.push(`Duplicate node id: ${node.id}`);
     } else {
       byId.set(node.id, node);
+    }
+
+    for (const resource of Array.isArray(node.resources) ? node.resources : []) {
+      if (
+        resource.regionalUrls !== undefined &&
+        !isValidRegionalUrls(resource.regionalUrls)
+      ) {
+        errors.push(`Node "${node.id}" has invalid regionalUrls for resource "${resource.title}"`);
+      }
     }
   }
 

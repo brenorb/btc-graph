@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Inventing Bitcoin",
       "url": "https://amzn.to/3Njwy9P",
-      "notes": "Accessible first technical mental model for protocol rules, nodes, and consensus."
+      "notes": "Accessible first technical mental model for protocol rules, nodes, and consensus.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "30m",

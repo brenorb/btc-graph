@@ -18,7 +18,10 @@
       "type": "book",
       "title": "Mastering Bitcoin: Mining",
       "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-      "notes": "Mining incentive framework and block-template decision context."
+      "notes": "Mining incentive framework and block-template decision context.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

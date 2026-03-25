@@ -9,7 +9,10 @@
       "type": "book",
       "title": "The Art of Strategy (Dixit, Nalebuff)",
       "url": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/",
-      "notes": "Game-theory framing for coordination dynamics and focal equilibria."
+      "notes": "Game-theory framing for coordination dynamics and focal equilibria.",
+      "regionalUrls": {
+        "BR": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/"
+      }
     },
     {
       "type": "article",

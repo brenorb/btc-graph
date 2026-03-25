@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering Bitcoin: Wallets",
       "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
-      "notes": "Wallet architecture context for descriptor-based design."
+      "notes": "Wallet architecture context for descriptor-based design.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "75m",

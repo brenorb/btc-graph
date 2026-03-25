@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Lightning channel design patterns and protocol internals."
+      "notes": "Lightning channel design patterns and protocol internals.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "75m",

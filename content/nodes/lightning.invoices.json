@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Technical walkthrough of invoice encoding, payment flow, and invoice-driven UX constraints."
+      "notes": "Technical walkthrough of invoice encoding, payment flow, and invoice-driven UX constraints.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "50m",

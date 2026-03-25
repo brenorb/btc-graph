@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Bitcoin Development Philosophy",
       "url": "https://amzn.to/4s33eUd",
-      "notes": "Helpful background for understanding why Bitcoin development norms prioritize review, restraint, and consensus."
+      "notes": "Helpful background for understanding why Bitcoin development norms prioritize review, restraint, and consensus.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4uRjb1v"
+      }
     }
   ],
   "estimatedTime": "65m",

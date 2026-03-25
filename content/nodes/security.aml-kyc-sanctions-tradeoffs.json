@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Little Bitcoin Book",
       "url": "https://amzn.to/4sJ3wjb",
-      "notes": "Useful for framing the civil-liberties costs of surveillance-heavy compliance systems."
+      "notes": "Useful for framing the civil-liberties costs of surveillance-heavy compliance systems.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NMybNF"
+      }
     }
   ],
   "estimatedTime": "50m",

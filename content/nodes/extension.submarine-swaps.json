@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Detailed treatment of cross-layer payment flows, HTLC mechanics, and swap-style liquidity movement."
+      "notes": "Detailed treatment of cross-layer payment flows, HTLC mechanics, and swap-style liquidity movement.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "65m",

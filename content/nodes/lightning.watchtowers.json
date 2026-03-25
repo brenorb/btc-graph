@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Operational and protocol-level treatment of penalty monitoring and outsourced watchtower services."
+      "notes": "Operational and protocol-level treatment of penalty monitoring and outsourced watchtower services.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "55m",

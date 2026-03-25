@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "UTXO and script primitives used by swap constructions."
+      "notes": "UTXO and script primitives used by swap constructions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "70m",

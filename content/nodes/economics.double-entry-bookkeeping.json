@@ -27,7 +27,10 @@
       "type": "book",
       "title": "Layered Money",
       "url": "https://amzn.to/46QsdSd",
-      "notes": "Good bridge between legacy ledger layers, banking abstractions, and Bitcoin's accounting model."
+      "notes": "Good bridge between legacy ledger layers, banking abstractions, and Bitcoin's accounting model.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rUSLcM"
+      }
     }
   ],
   "estimatedTime": "35m",

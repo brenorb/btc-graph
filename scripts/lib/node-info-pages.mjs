@@ -73,6 +73,95 @@ function buildNodeKeywords(node, prerequisites, dependents) {
   ])].join(", ");
 }
 
+function serializeRegionalUrls(regionalUrls) {
+  if (!regionalUrls || typeof regionalUrls !== "object" || Array.isArray(regionalUrls)) {
+    return "";
+  }
+
+  return escapeHtml(JSON.stringify(regionalUrls));
+}
+
+function buildResourceUrlResolverScript() {
+  return `<script>
+    (() => {
+      function normalizeRegionalUrlKey(value) {
+        return String(value ?? "").trim().replaceAll("_", "-").toLowerCase();
+      }
+
+      function readLocalePreferences(localeSource) {
+        return [...(localeSource?.languages ?? []), localeSource?.language ?? ""]
+          .filter((value) => typeof value === "string")
+          .map((value) => value.trim())
+          .filter(Boolean);
+      }
+
+      function buildRegionalUrlCandidates(localePreferences) {
+        const candidates = [];
+        const seen = new Set();
+
+        const addCandidate = (value) => {
+          if (!value || seen.has(value)) {
+            return;
+          }
+
+          seen.add(value);
+          candidates.push(value);
+        };
+
+        for (const locale of localePreferences) {
+          const exact = normalizeRegionalUrlKey(locale);
+          const parts = exact.split("-").filter(Boolean);
+          addCandidate(exact);
+          addCandidate(parts.length > 1 ? parts.at(-1) : "");
+          addCandidate(parts[0] ?? "");
+        }
+
+        return candidates;
+      }
+
+      function resolveResourceUrl(defaultUrl, regionalUrls, localePreferences) {
+        if (!regionalUrls || typeof regionalUrls !== "object" || Array.isArray(regionalUrls)) {
+          return defaultUrl;
+        }
+
+        const normalizedMap = new Map(
+          Object.entries(regionalUrls)
+            .filter(([, value]) => typeof value === "string" && value.length > 0)
+            .map(([key, value]) => [normalizeRegionalUrlKey(key), value]),
+        );
+
+        for (const candidate of buildRegionalUrlCandidates(localePreferences)) {
+          if (normalizedMap.has(candidate)) {
+            return normalizedMap.get(candidate);
+          }
+        }
+
+        return defaultUrl;
+      }
+
+      const localePreferences = readLocalePreferences(window.navigator);
+      for (const link of document.querySelectorAll("[data-resource-link]")) {
+        const defaultUrl = link.getAttribute("data-default-url");
+        if (!defaultUrl) {
+          continue;
+        }
+
+        let regionalUrls = {};
+        const rawRegionalUrls = link.getAttribute("data-regional-urls");
+        if (rawRegionalUrls) {
+          try {
+            regionalUrls = JSON.parse(rawRegionalUrls);
+          } catch {
+            regionalUrls = {};
+          }
+        }
+
+        link.setAttribute("href", resolveResourceUrl(defaultUrl, regionalUrls, localePreferences));
+      }
+    })();
+  </script>`;
+}
+
 function renderNodeList(items, fromNodeId) {
   if (items.length === 0) {
     return "<li>None</li>";
@@ -94,7 +183,7 @@ function renderResourceList(resources) {
   return resources
     .map((resource) => {
       const notes = resource.notes ? ` <span class="meta">${escapeHtml(resource.notes)}</span>` : "";
-      return `<li><a href="${escapeHtml(resource.url)}" rel="noreferrer">${escapeHtml(resource.title)}</a> <span class="meta">(${escapeHtml(resource.type)})</span>${notes}</li>`;
+      return `<li><a href="${escapeHtml(resource.url)}" rel="noreferrer" data-resource-link data-default-url="${escapeHtml(resource.url)}" data-regional-urls="${serializeRegionalUrls(resource.regionalUrls)}">${escapeHtml(resource.title)}</a> <span class="meta">(${escapeHtml(resource.type)})</span>${notes}</li>`;
     })
     .join("");
 }
@@ -176,6 +265,7 @@ function renderNodeInfoPage(node, prerequisites, dependents) {
 
       <p class="meta">Canonical site description: ${escapeHtml(SITE_DESCRIPTION)}</p>
     </main>
+    ${buildResourceUrlResolverScript()}
   </body>
 </html>
 `;

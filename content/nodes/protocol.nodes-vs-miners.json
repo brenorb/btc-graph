@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Blocksize War",
       "url": "https://amzn.to/4b64b8s",
-      "notes": "Historical proof that miners propose blocks but nodes define validity and social legitimacy."
+      "notes": "Historical proof that miners propose blocks but nodes define validity and social legitimacy.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rXhk90"
+      }
     }
   ],
   "estimatedTime": "45m",

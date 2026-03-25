@@ -24,13 +24,19 @@
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Alternative institutional lens on currency competition and credibility."
+      "notes": "Alternative institutional lens on currency competition and credibility.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-oriented case for how inflationary breakdowns damage monetary credibility."
+      "notes": "Bitcoin-oriented case for how inflationary breakdowns damage monetary credibility.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "60m",

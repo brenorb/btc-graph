@@ -27,7 +27,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Popular hard-money framing for why barter limitations push societies toward monetary media."
+      "notes": "Popular hard-money framing for why barter limitations push societies toward monetary media.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "30m",

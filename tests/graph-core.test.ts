@@ -114,6 +114,25 @@ describe("validateGraphData", () => {
     ).toBe(true);
   });
 
+  it("rejects malformed regionalUrls maps", () => {
+    const data = sampleData();
+    data.nodes[0].resources = [
+      {
+        type: "book",
+        title: "Broken regional url map",
+        url: "https://example.com/book",
+        // @ts-expect-error malformed value for validation test
+        regionalUrls: ["https://example.com.br/book"],
+      },
+    ];
+
+    const result = validateGraphData(data);
+    expect(result.valid).toBe(false);
+    expect(
+      result.errors.some((error) => error.includes("invalid regionalUrls")),
+    ).toBe(true);
+  });
+
   it("rejects unknown prerequisites", () => {
     const data = sampleData();
     data.nodes[0].prerequisites = ["does-not-exist"];

@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Key-management and signing model fundamentals for custody systems."
+      "notes": "Key-management and signing model fundamentals for custody systems.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "65m",

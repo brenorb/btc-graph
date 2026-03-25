@@ -24,13 +24,19 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Protocol mechanics behind independent verification."
+      "notes": "Protocol mechanics behind independent verification.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "book",
       "title": "Bitcoin Development Philosophy",
       "url": "https://amzn.to/4s33eUd",
-      "notes": "Pairs well with the philosophical side of verification, trust minimization, and rule enforcement."
+      "notes": "Pairs well with the philosophical side of verification, trust minimization, and rule enforcement.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4uRjb1v"
+      }
     }
   ],
   "estimatedTime": "45m",

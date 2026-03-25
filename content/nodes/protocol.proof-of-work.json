@@ -31,7 +31,10 @@
       "type": "book",
       "title": "Inventing Bitcoin",
       "url": "https://amzn.to/3Njwy9P",
-      "notes": "Strong beginner technical explanation of why Proof of Work secures ordering and issuance."
+      "notes": "Strong beginner technical explanation of why Proof of Work secures ordering and issuance.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "60m",

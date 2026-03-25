@@ -18,7 +18,10 @@
       "type": "book",
       "title": "Mastering Bitcoin: Mining",
       "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-      "notes": "Technical and economic context for mining hardware evolution."
+      "notes": "Technical and economic context for mining hardware evolution.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

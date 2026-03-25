@@ -18,19 +18,28 @@
       "type": "book",
       "title": "The Price of Tomorrow",
       "url": "https://amzn.to/46Tdru0",
-      "notes": "Deflation-focused argument against the assumption that healthy economies require steady inflation."
+      "notes": "Deflation-focused argument against the assumption that healthy economies require steady inflation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3O1yHHB"
+      }
     },
     {
       "type": "book",
       "title": "Denationalisation of Money",
       "url": "https://amzn.to/4uiDGEh",
-      "notes": "Competing perspective challenging discretionary inflation policy."
+      "notes": "Competing perspective challenging discretionary inflation policy.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-oriented critique of the claim that economies require steady inflation."
+      "notes": "Bitcoin-oriented critique of the claim that economies require steady inflation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "50m",

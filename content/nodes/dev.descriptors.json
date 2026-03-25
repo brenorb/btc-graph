@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Useful wallet-engineering background for script templates, spending policies, and address handling."
+      "notes": "Useful wallet-engineering background for script templates, spending policies, and address handling.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "70m",

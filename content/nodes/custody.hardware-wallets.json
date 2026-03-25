@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Technical reference for signing devices, key handling, and wallet architecture tradeoffs."
+      "notes": "Technical reference for signing devices, key handling, and wallet architecture tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "45m",

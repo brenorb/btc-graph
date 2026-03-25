@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-centric explanation of scarcity, salability, and sound-money accumulation."
+      "notes": "Bitcoin-centric explanation of scarcity, salability, and sound-money accumulation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "45m",

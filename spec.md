@@ -2,7 +2,7 @@
 
 ## Status
 - Draft version: 1.0
-- Last updated: 2026-03-03
+- Last updated: 2026-03-25
 - Purpose: capture ongoing product decisions during brainstorming
 
 ## Vision
@@ -125,6 +125,7 @@ Each resource entry should minimally support:
 - `type` (`article` | `video` | `book` | `tool` | `other`)
 - `title`
 - `url`
+- `regionalUrls` (optional locale/country overrides such as `pt-BR`, `BR`, or `pt`, with browser-side fallback to `url`)
 - `notes` (optional)
 - no hard cap on number of resources, but maintain strict curation quality
 

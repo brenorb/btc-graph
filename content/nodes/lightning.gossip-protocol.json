@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Technical background for graph announcements, routing policy propagation, and node-level networking behavior."
+      "notes": "Technical background for graph announcements, routing policy propagation, and node-level networking behavior.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "85m",

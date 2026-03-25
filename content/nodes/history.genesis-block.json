@@ -23,13 +23,19 @@
       "type": "book",
       "title": "Genesis Book",
       "url": "https://amzn.to/4bjOd9C",
-      "notes": "Directly relevant history of Bitcoin's prehistory, launch conditions, and genesis-block symbolism."
+      "notes": "Directly relevant history of Bitcoin's prehistory, launch conditions, and genesis-block symbolism.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41xvliA"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Connects the genesis-block message to the broader monetary critique behind Bitcoin's release."
+      "notes": "Connects the genesis-block message to the broader monetary critique behind Bitcoin's release.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "30m",

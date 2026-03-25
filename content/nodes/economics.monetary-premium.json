@@ -29,7 +29,10 @@
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Popular explanation of why scarce assets can earn store-of-value premium."
+      "notes": "Popular explanation of why scarce assets can earn store-of-value premium.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "40m",

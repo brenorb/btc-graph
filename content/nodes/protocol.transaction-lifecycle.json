@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Inventing Bitcoin",
       "url": "https://amzn.to/3Njwy9P",
-      "notes": "Gentle technical walkthrough of how transactions move from creation to confirmation."
+      "notes": "Gentle technical walkthrough of how transactions move from creation to confirmation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "55m",

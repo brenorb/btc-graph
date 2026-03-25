@@ -24,7 +24,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics."
+      "notes": "Implementation-focused reference for advanced Lightning channel and routing mechanics.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "80m",

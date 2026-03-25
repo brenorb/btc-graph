@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Technical context for channel lifecycle updates that keep channels open while changing capacity."
+      "notes": "Technical context for channel lifecycle updates that keep channels open while changing capacity.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "80m",

@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Mining mechanics and block construction fundamentals."
+      "notes": "Mining mechanics and block construction fundamentals.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "60m",

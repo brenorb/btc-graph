@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering Bitcoin",
       "url": "https://amzn.to/4ro0NdG",
-      "notes": "Advanced technical reference for how Taproot changes script paths, keys, and transaction construction."
+      "notes": "Advanced technical reference for how Taproot changes script paths, keys, and transaction construction.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "85m",

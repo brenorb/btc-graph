@@ -23,7 +23,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Useful context on scriptless protocols that use DLEQ-like constructs."
+      "notes": "Useful context on scriptless protocols that use DLEQ-like constructs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "60m",

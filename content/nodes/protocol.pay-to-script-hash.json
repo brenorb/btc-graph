@@ -17,7 +17,10 @@
       "type": "book",
       "title": "Programming Bitcoin",
       "url": "https://amzn.to/4b5xUhC",
-      "notes": "Concrete walkthrough of redeem scripts, script hashes, and spend-time revelation."
+      "notes": "Concrete walkthrough of redeem scripts, script hashes, and spend-time revelation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

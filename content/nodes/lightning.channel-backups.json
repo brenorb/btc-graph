@@ -30,7 +30,10 @@
       "type": "book",
       "title": "Mastering the Lightning Network",
       "url": "https://amzn.to/40V421t",
-      "notes": "Operational reference for channel state, recovery limitations, and backup strategy."
+      "notes": "Operational reference for channel state, recovery limitations, and backup strategy.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "60m",

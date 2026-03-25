@@ -23,13 +23,19 @@
       "type": "book",
       "title": "The Ascent of Money",
       "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
-      "notes": "Comparative context for currency disruption events across regions."
+      "notes": "Comparative context for currency disruption events across regions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41unemY"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Uses monetary-history case studies to show how technology can collapse a money's scarcity."
+      "notes": "Uses monetary-history case studies to show how technology can collapse a money's scarcity.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "45m",

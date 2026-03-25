@@ -29,7 +29,10 @@
       "type": "book",
       "title": "Genesis Book",
       "url": "https://amzn.to/4bjOd9C",
-      "notes": "Adds broader prehistory and launch-context framing around the whitepaper moment."
+      "notes": "Adds broader prehistory and launch-context framing around the whitepaper moment.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/41xvliA"
+      }
     }
   ],
   "estimatedTime": "45m",

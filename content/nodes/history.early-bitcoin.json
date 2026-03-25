@@ -23,13 +23,19 @@
       "type": "book",
       "title": "The Book of Satoshi",
       "url": "https://amzn.to/4lvhhQ8",
-      "notes": "Primary-source collection covering the vocabulary, design intent, and debates of Bitcoin's first years."
+      "notes": "Primary-source collection covering the vocabulary, design intent, and debates of Bitcoin's first years.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NWFpyF"
+      }
     },
     {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4dlkHCG",
-      "notes": "Bitcoin-centric narrative of the launch era, early adoption, and monetary framing."
+      "notes": "Bitcoin-centric narrative of the launch era, early adoption, and monetary framing.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     }
   ],
   "estimatedTime": "45m",

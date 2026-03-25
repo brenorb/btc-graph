@@ -30,7 +30,10 @@
       "type": "book",
       "title": "The Blocksize War",
       "url": "https://amzn.to/4b64b8s",
-      "notes": "Strong case study in how social consensus, not just code, determines legitimate protocol change."
+      "notes": "Strong case study in how social consensus, not just code, determines legitimate protocol change.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rXhk90"
+      }
     }
   ],
   "estimatedTime": "55m",

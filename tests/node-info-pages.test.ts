@@ -2,6 +2,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
+import { JSDOM } from "jsdom";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { writeNodeInfoPages } from "../scripts/lib/node-info-pages.mjs";
@@ -46,6 +47,9 @@ describe("writeNodeInfoPages", () => {
               type: "article",
               title: "ECDSA primer",
               url: "https://example.com/ecdsa",
+              regionalUrls: {
+                BR: "https://example.com.br/ecdsa",
+              },
               notes: "Short walk-through.",
             },
           ],
@@ -79,6 +83,57 @@ describe("writeNodeInfoPages", () => {
     expect(html).toContain("https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/");
     expect(html).toContain("Browse the concept library");
     expect(html).toContain("ECDSA primer");
+  });
+
+  it("resolves regional resource links in static /info pages at runtime", () => {
+    const outputDir = createTempDir();
+
+    writeNodeInfoPages({
+      nodes: [
+        {
+          id: "fundamentals.ecdsa",
+          title: "ECDSA",
+          description: "Legacy Bitcoin signature algorithm.",
+          category: "Security",
+          prerequisites: [],
+          resources: [
+            {
+              type: "book",
+              title: "Mastering Bitcoin",
+              url: "https://www.amazon.com/dp/1491954388",
+              regionalUrls: {
+                BR: "https://www.amazon.com.br/dp/1491954388",
+              },
+            },
+          ],
+          estimatedTime: "70m",
+        },
+      ],
+    }, outputDir);
+
+    const html = fs.readFileSync(
+      path.join(outputDir, "fundamentals.ecdsa", "info", "index.html"),
+      "utf8",
+    );
+
+    const dom = new JSDOM(html, {
+      runScripts: "dangerously",
+      url: "https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/",
+      beforeParse(window) {
+        Object.defineProperty(window.navigator, "language", {
+          configurable: true,
+          value: "pt-BR",
+        });
+        Object.defineProperty(window.navigator, "languages", {
+          configurable: true,
+          value: ["pt-BR", "pt", "en-US"],
+        });
+      },
+    });
+
+    const resourceLink = dom.window.document.querySelector<HTMLAnchorElement>("[data-resource-link]");
+
+    expect(resourceLink?.getAttribute("href")).toBe("https://www.amazon.com.br/dp/1491954388");
   });
 
   it("renders empty adjacency lists explicitly when a node has no direct neighbors", () => {

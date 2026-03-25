@@ -12,6 +12,7 @@ import {
   searchNodes,
   validateGraphData,
 } from "./core/graph";
+import { readLocalePreferences, resolveResourceUrl } from "./core/resource-links";
 import {
   decodeViewStateFromUrl,
   encodeViewStateToQuery,
@@ -113,6 +114,10 @@ function formatNodeOption(node: GraphNode) {
 
 function resolveViewportMode(width: number): "desktop" | "mobile" {
   return width <= MOBILE_BREAKPOINT ? "mobile" : "desktop";
+}
+
+function resolveResourceHref(resource: GraphNode["resources"][number]) {
+  return resolveResourceUrl(resource, readLocalePreferences(navigator));
 }
 
 function createLayout(root: HTMLElement) {
@@ -584,7 +589,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
             (resource) => `
               <div class="resource">
                 <div class="resource-type">${resource.type}</div>
-                <a href="${resource.url}" target="_blank" rel="noreferrer">${resource.title}</a>
+                <a href="${resolveResourceHref(resource)}" target="_blank" rel="noreferrer">${resource.title}</a>
                 ${resource.notes ? `<div class="meta">${resource.notes}</div>` : ""}
               </div>
             `,
