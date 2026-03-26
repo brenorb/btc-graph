@@ -245,7 +245,7 @@ Protocol & Consensus (48 concepts)
 - UTXO Model: State model based on spendable outputs instead of account balances.
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 
-Security (49 concepts)
+Security (50 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -257,6 +257,7 @@ Security (49 concepts)
 - Change Output Detection: How analysts identify probable change outputs and why output structure discipline matters for privacy.
 - Coin Control: Manual UTXO selection to optimize privacy and fee outcomes.
 - CoinJoin: Collaborative transaction construction to reduce heuristics.
+- Commitment Schemes: Commitment schemes let someone bind to a value now and reveal it later. Bitcoin and adjacent cryptographic systems use commitments to anchor later verification without exposing all underlying data upfront.
 - Common-Input Ownership Heuristic: Heuristic that clusters addresses by assuming inputs in one transaction are controlled by the same entity.
 - Cyclic Groups: Cyclic groups model repeated application of an operation from a generator and are the algebraic setting for many Bitcoin cryptographic constructions. They define why private scalars can map to public points in a structured way.
 - Dandelion Transaction Propagation: Dandelion-style relay separates diffusion phases to reduce origin-linkability. It is a network-level privacy strategy with deployment and adversarial-model tradeoffs.

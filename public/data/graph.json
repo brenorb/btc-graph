@@ -3703,6 +3703,42 @@
       ]
     },
     {
+      "id": "fundamentals.commitment-schemes",
+      "title": "Commitment Schemes",
+      "description": "Commitment schemes let someone bind to a value now and reveal it later. Bitcoin and adjacent cryptographic systems use commitments to anchor later verification without exposing all underlying data upfront.",
+      "category": "Security",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Commitment Scheme",
+          "url": "https://en.wikipedia.org/wiki/Commitment_scheme",
+          "notes": "Compact overview of the hiding and binding properties."
+        },
+        {
+          "type": "article",
+          "title": "BIP 141: Segregated Witness",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+          "notes": "Concrete Bitcoin example of a witness commitment embedded in consensus rules."
+        },
+        {
+          "type": "article",
+          "title": "STARK paper",
+          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "notes": "Shows how hash-based commitments appear inside modern proof systems."
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "cryptography",
+        "commitments"
+      ],
+      "aliases": [
+        "cryptographic commitments",
+        "commitment primitives"
+      ]
+    },
+    {
       "id": "fundamentals.cyclic-groups",
       "title": "Cyclic Groups",
       "description": "Cyclic groups model repeated application of an operation from a generator and are the algebraic setting for many Bitcoin cryptographic constructions. They define why private scalars can map to public points in a structured way.",
@@ -4803,6 +4839,7 @@
       "category": "Security",
       "prerequisites": [
         "fundamentals.zero-knowledge-proofs",
+        "fundamentals.commitment-schemes",
         "fundamentals.finite-fields"
       ],
       "resources": [
@@ -4842,6 +4879,7 @@
       "category": "Security",
       "prerequisites": [
         "fundamentals.zero-knowledge-proofs",
+        "fundamentals.commitment-schemes",
         "fundamentals.finite-fields",
         "fundamentals.merkle-trees"
       ],
