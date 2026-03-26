@@ -4,7 +4,6 @@
   "description": "Recurring phases of low and high blockspace demand that impact confirmation expectations and wallet behavior.",
   "category": "Economics",
   "prerequisites": [
-    "protocol.fee-market",
     "economics.security-budget"
   ],
   "resources": [

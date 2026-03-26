@@ -50,7 +50,7 @@ const REQUIRED_NEW_PREREQUISITES: Record<string, string[]> = {
   ],
   "mining.energy-accounting": ["protocol.proof-of-work", "economics.cost-of-production"],
   "mining.grid-balancing-demand-response": ["mining.energy-accounting"],
-  "mining.environmental-debate": ["mining.grid-balancing-demand-response"],
+  "mining.environmental-debate": ["mining.environmental-co-benefits"],
   "history.cypherpunk-roots-bitcoin-origin": [
     "history.cypherpunks",
     "history.bitcoin-whitepaper",
@@ -58,6 +58,11 @@ const REQUIRED_NEW_PREREQUISITES: Record<string, string[]> = {
   "economics.volatility-psychology-risk-sizing": [
     "fundamentals.time-preference",
     "economics.monetary-premium",
+    "economics.bitcoin-supply-demand",
+  ],
+  "economics.security-budget": [
+    "economics.cost-of-production",
+    "economics.miner-revenue-composition",
   ],
   "history.bitcoin-narrative-cycles": [
     "history.early-bitcoin",

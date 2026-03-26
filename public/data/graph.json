@@ -1745,7 +1745,6 @@
       "description": "Recurring phases of low and high blockspace demand that impact confirmation expectations and wallet behavior.",
       "category": "Economics",
       "prerequisites": [
-        "protocol.fee-market",
         "economics.security-budget"
       ],
       "resources": [
@@ -2350,7 +2349,8 @@
       "description": "Frameworks for allocating shared transaction costs across recipients, channels, and operational workflows.",
       "category": "Economics",
       "prerequisites": [
-        "economics.transaction-batching-economics"
+        "economics.transaction-batching-economics",
+        "fundamentals.bitcoin-layers"
       ],
       "resources": [
         {
@@ -2521,8 +2521,8 @@
       "description": "How subsidy decline and fee revenue together influence miner incentives and chain security.",
       "category": "Economics",
       "prerequisites": [
-        "protocol.halving",
-        "economics.cost-of-production"
+        "economics.cost-of-production",
+        "economics.miner-revenue-composition"
       ],
       "resources": [
         {
@@ -2637,7 +2637,8 @@
       "category": "Economics",
       "prerequisites": [
         "fundamentals.time-preference",
-        "economics.monetary-premium"
+        "economics.monetary-premium",
+        "economics.bitcoin-supply-demand"
       ],
       "resources": [
         {
@@ -7130,7 +7131,7 @@
       "description": "Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.",
       "category": "Mining",
       "prerequisites": [
-        "mining.grid-balancing-demand-response"
+        "mining.environmental-co-benefits"
       ],
       "resources": [
         {
@@ -8302,7 +8303,7 @@
       "description": "How reuse harms financial privacy and graph analysis resistance.",
       "category": "Security",
       "prerequisites": [
-        "custody.address-types"
+        "privacy.pseudonymity"
       ],
       "resources": [
         {
@@ -9485,7 +9486,6 @@
       "description": "Special first transaction in each block that collects subsidy and transaction fees.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.block-structure",
         "protocol.halving"
       ],
       "resources": [
@@ -10137,7 +10137,8 @@
       "description": "Programmed issuance reductions and long-term security implications.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.difficulty-adjustment"
+        "protocol.difficulty-adjustment",
+        "protocol.block-height"
       ],
       "resources": [
         {
@@ -11537,7 +11538,7 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.segregated-witness",
-        "fundamentals.merkle-trees"
+        "protocol.block-structure"
       ],
       "resources": [
         {

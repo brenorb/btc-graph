@@ -5,7 +5,8 @@
   "category": "Economics",
   "prerequisites": [
     "fundamentals.time-preference",
-    "economics.monetary-premium"
+    "economics.monetary-premium",
+    "economics.bitcoin-supply-demand"
   ],
   "resources": [
     {

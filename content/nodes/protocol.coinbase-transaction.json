@@ -4,7 +4,6 @@
   "description": "Special first transaction in each block that collects subsidy and transaction fees.",
   "category": "Protocol & Consensus",
   "prerequisites": [
-    "protocol.block-structure",
     "protocol.halving"
   ],
   "resources": [

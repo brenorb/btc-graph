@@ -4,7 +4,8 @@
   "description": "Frameworks for allocating shared transaction costs across recipients, channels, and operational workflows.",
   "category": "Economics",
   "prerequisites": [
-    "economics.transaction-batching-economics"
+    "economics.transaction-batching-economics",
+    "fundamentals.bitcoin-layers"
   ],
   "resources": [
     {

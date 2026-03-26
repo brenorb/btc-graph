@@ -4,8 +4,8 @@
   "description": "How subsidy decline and fee revenue together influence miner incentives and chain security.",
   "category": "Economics",
   "prerequisites": [
-    "protocol.halving",
-    "economics.cost-of-production"
+    "economics.cost-of-production",
+    "economics.miner-revenue-composition"
   ],
   "resources": [
     {

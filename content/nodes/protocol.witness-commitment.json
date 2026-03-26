@@ -5,7 +5,7 @@
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.segregated-witness",
-    "fundamentals.merkle-trees"
+    "protocol.block-structure"
   ],
   "resources": [
     {
