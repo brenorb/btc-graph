@@ -11,7 +11,7 @@ const PHASE_6_NODE_IDS = [
   "protocol.bloom-filters-bip37",
   "protocol.witness-commitment",
   "dev.psbt-v2",
-  "dev.output-script-descriptors",
+  "dev.descriptors",
   "lightning.route-blinding",
   "lightning.trampoline-routing",
   "lightning.channel-jamming",

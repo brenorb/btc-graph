@@ -4,7 +4,7 @@
   "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",
   "category": "Wallets",
   "prerequisites": [
-    "dev.output-script-descriptors",
+    "dev.descriptors",
     "dev.bip32"
   ],
   "resources": [
