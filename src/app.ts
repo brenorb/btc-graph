@@ -204,7 +204,7 @@ function createLayout(root: HTMLElement) {
           </div>
         </div>
         <div id="graph"></div>
-        <div class="graph-controls mobile-only">
+        <div class="graph-controls">
           <button class="icon-btn" id="graph-zoom-in" type="button" aria-label="Zoom in">+</button>
           <button class="icon-btn" id="graph-zoom-out" type="button" aria-label="Zoom out">-</button>
           <button class="btn graph-fit-btn" id="graph-zoom-fit" type="button">Fit</button>
@@ -1032,6 +1032,7 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
 
   state.cy.resize();
   state.cy.layout(resolveGraphLayoutSettings(state.viewportMode)).run();
+  state.cy.fit(undefined, state.viewportMode === "mobile" ? 18 : 32);
 
   refreshLabels(state);
   renderCategoryBulkControls(state, root);

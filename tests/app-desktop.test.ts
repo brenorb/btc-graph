@@ -13,13 +13,7 @@ const sampleData = {
       description: "Consensus via hashing.",
       estimatedTime: "30m",
       prerequisites: [],
-      resources: [
-        {
-          type: "article",
-          title: "Whitepaper",
-          url: "https://bitcoin.org/bitcoin.pdf",
-        },
-      ],
+      resources: [],
     },
     {
       id: "mining.asics",
@@ -179,19 +173,16 @@ vi.mock("cytoscape-dagre", () => ({
   default: {},
 }));
 
-function setViewportWidth(width: number) {
-  Object.defineProperty(window, "innerWidth", {
-    configurable: true,
-    writable: true,
-    value: width,
-  });
-}
-
-describe("mobile app shell", () => {
+describe("desktop app shell", () => {
   beforeEach(() => {
     document.body.innerHTML = `<div id="app"></div>`;
     window.history.replaceState({}, "", "/");
-    setViewportWidth(390);
+
+    Object.defineProperty(window, "innerWidth", {
+      configurable: true,
+      writable: true,
+      value: 1280,
+    });
 
     vi.stubGlobal(
       "fetch",
@@ -218,7 +209,7 @@ describe("mobile app shell", () => {
     Object.defineProperty(window, "localStorage", {
       configurable: true,
       value: {
-        getItem: vi.fn().mockReturnValue(null),
+        getItem: vi.fn().mockReturnValue("1"),
         setItem: vi.fn(),
       },
     });
@@ -231,78 +222,17 @@ describe("mobile app shell", () => {
     });
   });
 
-  it("opens the detail sheet from the URL and closes it from the close button on mobile", async () => {
-    window.history.replaceState({}, "", "/?selected=protocol.proof-of-work");
-
+  it("shows graph zoom controls on desktop and fits the graph on first render", async () => {
     await bootstrapApp(document.querySelector("#app"));
 
-    const panel = document.querySelector<HTMLElement>("#detail-panel");
-    const closeButton = document.querySelector<HTMLButtonElement>("#detail-close");
+    const controls = document.querySelector<HTMLElement>(".graph-controls");
 
-    expect(document.querySelector<HTMLElement>(".layout")?.dataset.viewportMode).toBe("mobile");
-    expect(panel?.classList.contains("open")).toBe(true);
-    expect(closeButton).not.toBeNull();
-
-    closeButton?.click();
-
-    expect(panel?.classList.contains("open")).toBe(false);
-    expect(window.location.search).toBe("");
-  });
-
-  it("opens and closes the mobile tools drawer", async () => {
-    await bootstrapApp(document.querySelector("#app"));
-
-    const toggle = document.querySelector<HTMLButtonElement>("#mobile-tools-toggle");
-    const close = document.querySelector<HTMLButtonElement>("#mobile-tools-close");
-    const panel = document.querySelector<HTMLElement>("#mobile-tools-panel");
-
-    expect(toggle?.getAttribute("aria-expanded")).toBe("false");
-
-    toggle?.click();
-    expect(panel?.classList.contains("open")).toBe(true);
-    expect(toggle?.getAttribute("aria-expanded")).toBe("true");
-
-    close?.click();
-    expect(panel?.classList.contains("open")).toBe(false);
-    expect(toggle?.getAttribute("aria-expanded")).toBe("false");
-  });
-
-  it("adds mobile graph zoom controls", async () => {
-    await bootstrapApp(document.querySelector("#app"));
-
+    expect(document.querySelector<HTMLElement>(".layout")?.dataset.viewportMode).toBe("desktop");
+    expect(controls).not.toBeNull();
+    expect(controls?.classList.contains("mobile-only")).toBe(false);
+    expect(document.querySelector<HTMLButtonElement>("#graph-zoom-in")).not.toBeNull();
+    expect(document.querySelector<HTMLButtonElement>("#graph-zoom-out")).not.toBeNull();
+    expect(document.querySelector<HTMLButtonElement>("#graph-zoom-fit")).not.toBeNull();
     expect(lastCy?.fitCalls).toBe(1);
-
-    document.querySelector<HTMLButtonElement>("#graph-zoom-in")?.click();
-    expect(lastCy?.zoom()).toBeGreaterThan(1);
-
-    document.querySelector<HTMLButtonElement>("#graph-zoom-fit")?.click();
-    expect(lastCy?.fitCalls).toBe(2);
-  });
-
-  it("renders the ask-ai action below resources in the detail panel", async () => {
-    window.history.replaceState({}, "", "/?selected=protocol.proof-of-work");
-
-    await bootstrapApp(document.querySelector("#app"));
-
-    const detailText = document.querySelector<HTMLElement>("#detail-content")?.textContent ?? "";
-    const resourcesIndex = detailText.indexOf("Resources");
-    const assistantIndex = detailText.indexOf("Ask AI about this node");
-
-    expect(resourcesIndex).toBeGreaterThan(-1);
-    expect(assistantIndex).toBeGreaterThan(resourcesIndex);
-  });
-
-  it("opens the Lightning donation modal from the mobile tools drawer", async () => {
-    await bootstrapApp(document.querySelector("#app"));
-
-    document.querySelector<HTMLButtonElement>("#mobile-tools-toggle")?.click();
-    document.querySelector<HTMLButtonElement>('[data-donate-trigger="mobile"]')?.click();
-
-    expect(document.querySelector<HTMLElement>("#mobile-tools-panel")?.classList.contains("open")).toBe(
-      false,
-    );
-    expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(false);
-    expect(document.querySelector<HTMLButtonElement>("#donate-qr-copy")).not.toBeNull();
-    expect(document.querySelector<HTMLElement>("#donate-address")).toBeNull();
   });
 });

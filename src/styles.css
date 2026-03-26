@@ -224,7 +224,18 @@ input {
 }
 
 .graph-controls {
-  display: none;
+  display: flex;
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 18;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+  backdrop-filter: blur(10px);
 }
 
 .legend-item {
@@ -939,12 +950,8 @@ input {
   }
 
   .graph-controls {
-    display: flex;
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    z-index: 18;
-    gap: 8px;
+    right: 12px;
+    bottom: 12px;
   }
 
   .graph-fit-btn {

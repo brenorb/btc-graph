@@ -31,7 +31,9 @@ describe("phase 12 ui helpers", () => {
       expect(layout.name).toBe("dagre");
       expect(layout.rankDir).toBe("BT");
       expect(layout.rankSep).toBeGreaterThan(layout.nodeSep);
-      expect(layout.nodeDimensionsIncludeLabels).toBe(true);
+      expect(layout.rankSep).toBeLessThan(150);
+      expect(layout.spacingFactor).toBeLessThan(1);
+      expect(layout.nodeDimensionsIncludeLabels).toBe(false);
       expect(layout.animate).toBe(false);
     });
 
