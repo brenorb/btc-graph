@@ -298,7 +298,7 @@ Security (51 concepts)
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
 - zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
-Wallets (30 concepts)
+Wallets (29 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.
 - Air-Gapped Signing: Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.
 - Backups and Recovery: Recovery drills, inheritance planning, and backup hygiene.
@@ -317,8 +317,7 @@ Wallets (30 concepts)
 - Miniscript: Safer script composition and policy analysis.
 - Multisig Wallets: Threshold signing policies for resilience and governance.
 - MuSig2 Descriptor Workflows: How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.
-- Output Descriptors: Policy expression for wallet script templates and scanning.
-- Output Script Descriptors: Descriptor expressions that precisely describe script templates and key origins for wallets and tooling.
+- Output Descriptors: Descriptor expressions that describe script templates, key origins, and wallet scanning behavior.
 - PSBT v2: The v2 evolution of PSBT that improves transaction construction semantics and interoperability.
 - PSBT Workflow: Partially signed transaction flow for safer collaborative signing.
 - scantxoutset RPC: RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.

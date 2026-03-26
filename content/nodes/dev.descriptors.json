@@ -1,7 +1,7 @@
 {
   "id": "dev.descriptors",
   "title": "Output Descriptors",
-  "description": "Policy expression for wallet script templates and scanning.",
+  "description": "Descriptor expressions that describe script templates, key origins, and wallet scanning behavior.",
   "category": "Wallets",
   "prerequisites": [
     "custody.address-types",
@@ -10,37 +10,35 @@
   "resources": [
     {
       "type": "article",
-      "title": "Bitcoin Dev Network",
-      "url": "https://bitcoindev.network/",
-      "notes": "Developer-focused learning paths and tools."
+      "title": "BIP 380: Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+      "notes": "Canonical descriptor syntax, checksum rules, and script-expression grammar."
     },
     {
       "type": "article",
-      "title": "Bitcoin Core Academy",
-      "url": "https://bitcoincore.academy/",
-      "notes": "Structured technical lessons."
-    },
-    {
-      "type": "article",
-      "title": "Bitcoin Developer Guide",
-      "url": "https://developer.bitcoin.org/devguide/",
-      "notes": "Reference documentation for implementation."
+      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "How Core maps descriptors to wallet script management internals."
     },
     {
       "type": "book",
-      "title": "Mastering Bitcoin",
-      "url": "https://amzn.to/4ro0NdG",
-      "notes": "Useful wallet-engineering background for script templates, spending policies, and address handling.",
+      "title": "Mastering Bitcoin: Wallets",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+      "notes": "Wallet architecture context for descriptor-based design and address handling.",
       "regionalUrls": {
         "BR": "https://amzn.to/4te47JX"
       }
     }
   ],
-  "estimatedTime": "70m",
+  "estimatedTime": "75m",
   "tags": [
-    "development"
+    "development",
+    "descriptors",
+    "wallet-internals"
   ],
   "aliases": [
-    "output descriptors"
+    "output descriptors",
+    "output script descriptors",
+    "script descriptors"
   ]
 }
