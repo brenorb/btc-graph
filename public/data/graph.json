@@ -1496,7 +1496,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Accessible thesis for how fixed supply interacts with rising monetary demand.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -1546,7 +1546,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-oriented interpretation of the post-1971 fiat transition and hard-money debate.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -1710,9 +1710,9 @@
         },
         {
           "type": "article",
-          "title": "Investopedia: Double Entry",
-          "url": "https://www.investopedia.com/terms/d/double-entry.asp",
-          "notes": "Practical introduction to debit/credit logic and balance constraints."
+          "title": "Wikipedia: Double-entry Bookkeeping",
+          "url": "https://en.wikipedia.org/wiki/Double-entry_bookkeeping",
+          "notes": "Practical introduction to debit/credit logic, balancing constraints, and the historical accounting model."
         },
         {
           "type": "article",
@@ -1900,7 +1900,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-centric survey of monetary evolution from commodity money to fiat.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -1951,7 +1951,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-oriented case for how inflationary breakdowns damage monetary credibility.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2079,7 +2079,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Frames monetary trust around salability and scarcity rather than redeemability promises.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2126,7 +2126,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Popular explanation of why scarce assets can earn store-of-value premium.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2171,7 +2171,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Clear Bitcoin-side distinction between money-supply expansion and consumer-price changes.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2219,7 +2219,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Widely cited Bitcoin framing of monetization as a staged social-adoption process.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2273,7 +2273,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-oriented critique of the claim that economies require steady inflation.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2327,7 +2327,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-oriented argument for neutral money over discretionary monetary control.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2415,7 +2415,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Popular framing of Bitcoin primarily as long-term savings technology rather than yield-seeking investment.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -2462,7 +2462,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-centric explanation of scarcity, salability, and sound-money accumulation.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -3525,7 +3525,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Popular hard-money framing for why barter limitations push societies toward monetary media.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -4141,7 +4141,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-oriented critique of monetary expansion and its incentive effects.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -4331,7 +4331,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-centric treatment of salability, scarcity, and other monetary properties.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -4695,7 +4695,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Popular Bitcoin framing of low time preference and long-term savings behavior.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5125,7 +5125,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Broad historical account linking cypherpunk monetary ideas to Bitcoin's launch.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5172,7 +5172,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Broad intellectual background on the privacy and monetary ideas that fed into Bitcoin.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5267,7 +5267,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Bitcoin-centric narrative of the launch era, early adoption, and monetary framing.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5316,7 +5316,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Connects the genesis-block message to the broader monetary critique behind Bitcoin's release.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5407,7 +5407,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Uses monetary-history case studies to show how technology can collapse a money's scarcity.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -5503,7 +5503,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Uses Yap stone money as a memorable case study in social consensus and monetary history.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
@@ -8632,7 +8632,7 @@
         {
           "type": "book",
           "title": "The Bitcoin Standard",
-          "url": "https://amzn.to/4dlkHCG",
+          "url": "https://www.amazon.com/dp/1119473861",
           "notes": "Useful monetary framing for why interchangeable units matter for sound money.",
           "regionalUrls": {
             "BR": "https://amzn.to/4byFMZo"
