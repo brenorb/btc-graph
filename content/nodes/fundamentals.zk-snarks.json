@@ -5,6 +5,7 @@
   "category": "Security",
   "prerequisites": [
     "fundamentals.zero-knowledge-proofs",
+    "fundamentals.commitment-schemes",
     "fundamentals.finite-fields"
   ],
   "resources": [
