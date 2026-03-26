@@ -70,6 +70,7 @@ interface AppState {
   mobileToolsOpen: boolean;
   donateModalOpen: boolean;
   donateFeedbackResetHandle: number | null;
+  helpModalOpen: boolean;
 }
 
 const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
@@ -77,6 +78,7 @@ const MOBILE_BREAKPOINT = 820;
 const LIGHTNING_ADDRESS = "breno@bipa.app";
 const LIGHTNING_URI = `lightning:${LIGHTNING_ADDRESS}`;
 const DONATION_QR_IMAGE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=svg&data=${encodeURIComponent(LIGHTNING_URI)}`;
+const HELP_MODAL_STORAGE_KEY = "btc-graph-help-seen";
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -131,10 +133,17 @@ function createLayout(root: HTMLElement) {
         <div class="header-actions">
           <div class="header-link-group">
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
-            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
             <button class="btn" type="button" data-donate-trigger="header">Donate</button>
-            <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
           </div>
+          <button
+            class="icon-btn help-toggle"
+            id="help-toggle"
+            type="button"
+            aria-label="Open the site guide"
+            title="How to use this site"
+          >
+            ?
+          </button>
           <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">◐</button>
         </div>
       </header>
@@ -181,9 +190,7 @@ function createLayout(root: HTMLElement) {
           <div class="controls legend" id="legend"></div>
           <div class="mobile-shortcuts">
             <a class="btn" target="_blank" rel="noreferrer" data-issue-link="add-concept">Add concept</a>
-            <a class="btn" target="_blank" rel="noreferrer" data-issue-link="generic-change">Generic change</a>
             <button class="btn" type="button" data-donate-trigger="mobile">Donate</button>
-            <a class="btn" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph">Repository</a>
             <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/issues">Issues</a>
             <a
@@ -214,6 +221,52 @@ function createLayout(root: HTMLElement) {
         </div>
         <div id="detail-content" class="meta">Select a node to inspect prerequisites, resources, and progress.</div>
       </aside>
+      <div class="help-backdrop" id="help-backdrop" hidden></div>
+      <section class="help-modal" id="help-modal" role="dialog" aria-modal="true" aria-label="How to use this site" hidden>
+        <div class="help-modal-header">
+          <div>
+            <div class="help-kicker">Quick guide</div>
+          </div>
+          <button class="icon-btn" id="help-close" type="button" aria-label="Close site guide">✕</button>
+        </div>
+        <div class="help-intro">
+          <p>
+            <strong>Bitcoin Learning Graph</strong> is a public learning guide for Bitcoin
+            self-study. It helps you see what to learn next, what can wait, and where your gaps
+            are, using a concept map organized by prerequisite relationships.
+          </p>
+        </div>
+        <div class="help-steps">
+          <div class="help-step">
+            <span class="help-step-index" aria-hidden="true">1</span>
+            <div>
+              <strong>Explore the graph.</strong>
+              <div class="meta">Each node is one concept. Follow the arrows upward to see what each concept unlocks.</div>
+            </div>
+          </div>
+          <div class="help-step">
+            <span class="help-step-index" aria-hidden="true">2</span>
+            <div>
+              <strong>Learn the topic.</strong>
+              <div class="meta">Open any node to read the summary, browse curated resources, and use the AI helper to dig deeper.</div>
+            </div>
+          </div>
+          <div class="help-step">
+            <span class="help-step-index" aria-hidden="true">3</span>
+            <div>
+              <strong>Track your progress.</strong>
+              <div class="meta">Use Need to learn, Learning, and Know it to track progress, discover your gaps, and decide what to study next.</div>
+            </div>
+          </div>
+        </div>
+        <div class="help-callout">
+          This is a community-driven education project. Bitcoin never stops evolving, so
+          contribute to help keep the graph and its learning resources improving.
+        </div>
+        <div class="help-actions">
+          <button class="btn primary" id="help-dismiss" type="button">Start exploring</button>
+        </div>
+      </section>
       <div class="donate-backdrop" id="donate-backdrop" hidden></div>
       <section class="donate-modal" id="donate-modal" role="dialog" aria-modal="true" aria-labelledby="donate-title" hidden>
         <div class="donate-modal-header">
@@ -250,8 +303,8 @@ function createLayout(root: HTMLElement) {
           <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
         </div>
         <div class="footer-links">
+          <a class="footer-link" target="_blank" rel="noreferrer" data-issue-link="generic-change">Suggest change</a>
           <a class="footer-link" target="_blank" rel="noreferrer" href="https://brenorb.com/btc-graph/library/">Library</a>
-          <a class="footer-link" target="_blank" rel="noreferrer" href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">Contribute</a>
           <button class="footer-link footer-link-button" type="button" data-donate-trigger="footer">Donate</button>
         </div>
         <div class="footer-socials" aria-label="Social links">
@@ -297,7 +350,7 @@ function createLayout(root: HTMLElement) {
 
   root.querySelectorAll<HTMLAnchorElement>('[data-issue-link="generic-change"]').forEach((link) => {
     link.href = buildIssueUrl(
-      "Generic graph change",
+      "Suggest change",
       [
         "## What should change?",
         "",
@@ -318,9 +371,29 @@ function getSafeStorage(): StorageLike | undefined {
   }
 }
 
+function readStorageItem(storage: StorageLike | undefined, key: string) {
+  try {
+    return storage?.getItem(key) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStorageItem(storage: StorageLike | undefined, key: string, value: string) {
+  try {
+    storage?.setItem(key, value);
+  } catch {
+    // Ignore storage write failures (private mode, quota, policy).
+  }
+}
+
+function shouldAutoOpenHelpModal(storage: StorageLike | undefined) {
+  return readStorageItem(storage, HELP_MODAL_STORAGE_KEY) !== "1";
+}
+
 function themeSetup(storage: StorageLike | undefined) {
   const themeRoot = document.documentElement;
-  const stored = storage?.getItem("btc-graph-theme") ?? null;
+  const stored = readStorageItem(storage, "btc-graph-theme");
   const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const theme = resolveInitialTheme(stored, preferredDark);
   themeRoot.dataset.theme = theme;
@@ -330,11 +403,7 @@ function themeSetup(storage: StorageLike | undefined) {
     const currentTheme = themeRoot.dataset.theme === "dark" ? "dark" : "light";
     const nextTheme = resolveNextTheme(currentTheme);
     themeRoot.dataset.theme = nextTheme;
-    try {
-      storage?.setItem("btc-graph-theme", nextTheme);
-    } catch {
-      // Ignore storage write failures (private mode, quota, policy).
-    }
+    writeStorageItem(storage, "btc-graph-theme", nextTheme);
   });
 }
 
@@ -475,6 +544,8 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
 
   const layout = root.querySelector<HTMLElement>(".layout");
   const detailBackdrop = root.querySelector<HTMLElement>("#detail-backdrop");
+  const helpBackdrop = root.querySelector<HTMLElement>("#help-backdrop");
+  const helpModal = root.querySelector<HTMLElement>("#help-modal");
   const donateBackdrop = root.querySelector<HTMLElement>("#donate-backdrop");
   const donateModal = root.querySelector<HTMLElement>("#donate-modal");
   const mobileToolsOverlay = root.querySelector<HTMLElement>("#mobile-tools-overlay");
@@ -496,6 +567,16 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
     mobileToolsOverlay.classList.toggle("open", mobileToolsVisible);
   }
 
+  if (helpBackdrop) {
+    helpBackdrop.hidden = !state.helpModalOpen;
+    helpBackdrop.classList.toggle("open", state.helpModalOpen);
+  }
+
+  if (helpModal) {
+    helpModal.hidden = !state.helpModalOpen;
+    helpModal.classList.toggle("open", state.helpModalOpen);
+  }
+
   if (donateBackdrop) {
     donateBackdrop.hidden = !state.donateModalOpen;
     donateBackdrop.classList.toggle("open", state.donateModalOpen);
@@ -510,8 +591,17 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
   mobileToolsToggle?.setAttribute("aria-expanded", String(mobileToolsVisible));
   document.body.classList.toggle(
     "overlay-open",
-    detailOpen || mobileToolsVisible || state.donateModalOpen,
+    detailOpen || mobileToolsVisible || state.helpModalOpen || state.donateModalOpen,
   );
+}
+
+function setHelpModalOpen(state: AppState, root: HTMLElement, open: boolean) {
+  state.helpModalOpen = open;
+  if (open) {
+    state.mobileToolsOpen = false;
+    state.donateModalOpen = false;
+  }
+  syncResponsiveLayout(state, root);
 }
 
 function setDonateModalOpen(state: AppState, root: HTMLElement, open: boolean) {
@@ -522,6 +612,7 @@ function setDonateModalOpen(state: AppState, root: HTMLElement, open: boolean) {
   }
   if (open) {
     state.mobileToolsOpen = false;
+    state.helpModalOpen = false;
   }
   const donateFeedback = root.querySelector<HTMLElement>("#donate-copy-feedback");
   if (donateFeedback) {
@@ -1028,6 +1119,22 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     setMobileToolsOpen(false);
   });
 
+  root.querySelector<HTMLButtonElement>("#help-toggle")?.addEventListener("click", () => {
+    setHelpModalOpen(state, root, true);
+  });
+
+  root.querySelector<HTMLButtonElement>("#help-close")?.addEventListener("click", () => {
+    setHelpModalOpen(state, root, false);
+  });
+
+  root.querySelector<HTMLButtonElement>("#help-dismiss")?.addEventListener("click", () => {
+    setHelpModalOpen(state, root, false);
+  });
+
+  root.querySelector<HTMLElement>("#help-backdrop")?.addEventListener("click", () => {
+    setHelpModalOpen(state, root, false);
+  });
+
   root.querySelector<HTMLElement>("#mobile-tools-overlay")?.addEventListener("click", () => {
     setMobileToolsOpen(false);
   });
@@ -1089,6 +1196,7 @@ function wireInteractions(state: AppState, root: HTMLElement) {
     state.selectedId = fromUrl.selectedId;
     state.hiddenCategories = fromUrl.hiddenCategories;
     state.assistantOpenNodeId = null;
+    state.helpModalOpen = false;
     state.donateModalOpen = false;
     rerenderGraph(state, root);
   });
@@ -1107,6 +1215,11 @@ function wireInteractions(state: AppState, root: HTMLElement) {
 
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") {
+      return;
+    }
+
+    if (state.helpModalOpen) {
+      setHelpModalOpen(state, root, false);
       return;
     }
 
@@ -1199,6 +1312,10 @@ export async function bootstrapApp(root: HTMLElement | null) {
 
   createLayout(root);
   const storage = getSafeStorage();
+  const autoOpenHelpModal = shouldAutoOpenHelpModal(storage);
+  if (autoOpenHelpModal) {
+    writeStorageItem(storage, HELP_MODAL_STORAGE_KEY, "1");
+  }
   themeSetup(storage);
 
   let data: GraphData;
@@ -1232,6 +1349,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     mobileToolsOpen: false,
     donateModalOpen: false,
     donateFeedbackResetHandle: null,
+    helpModalOpen: autoOpenHelpModal,
   };
 
   const fromUrl = readViewStateFromUrl(state);

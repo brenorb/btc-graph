@@ -351,11 +351,16 @@ describe("node detail links", () => {
       document.querySelectorAll<HTMLElement>(".footer-links .footer-link"),
       (link) => link.textContent?.trim() ?? "",
     );
+    const headerLinks = Array.from(
+      document.querySelectorAll<HTMLElement>(".header-link-group .btn"),
+      (link) => link.textContent?.trim() ?? "",
+    );
     const donateButton = document.querySelector<HTMLButtonElement>('[data-donate-trigger="footer"]');
 
     expect(siteLink?.href).toBe("https://brenorb.com/");
     expect(twitterLink?.href).toBe("https://x.com/brenorb");
-    expect(footerLinks).toEqual(["Library", "Contribute", "Donate"]);
+    expect(headerLinks).toEqual(["Add concept", "Donate"]);
+    expect(footerLinks).toEqual(["Suggest change", "Library", "Donate"]);
     expect(document.querySelector<HTMLElement>("#donate-modal")?.hidden).toBe(true);
 
     donateButton?.click();
