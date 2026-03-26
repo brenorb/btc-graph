@@ -1,4 +1,4 @@
-import type { ProgressState } from "./types";
+import type { GraphData, ProgressState } from "./types";
 
 export type LabelVisibilityMode = "all" | "none";
 export type ThemeMode = "light" | "dark";
@@ -8,13 +8,19 @@ export type ViewportMode = "desktop" | "mobile";
 export interface GraphLayoutSettings {
   name: "dagre";
   rankDir: "BT";
-  ranker: "tight-tree";
+  ranker: "network-simplex" | "tight-tree" | "longest-path";
   nodeSep: number;
   rankSep: number;
   edgeSep: number;
   spacingFactor: number;
   nodeDimensionsIncludeLabels: boolean;
   animate: false;
+}
+
+export interface GraphNodePosition {
+  id: string;
+  x: number;
+  y: number;
 }
 
 export interface GraphColorPalette {
@@ -143,7 +149,7 @@ export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop
     return {
       name: "dagre",
       rankDir: "BT",
-      ranker: "tight-tree",
+      ranker: "network-simplex",
       nodeSep: 3,
       rankSep: 96,
       edgeSep: 2,
@@ -156,7 +162,7 @@ export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop
   return {
     name: "dagre",
     rankDir: "BT",
-    ranker: "tight-tree",
+    ranker: "network-simplex",
     nodeSep: 5,
     rankSep: 136,
     edgeSep: 3,
@@ -164,6 +170,60 @@ export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop
     nodeDimensionsIncludeLabels: false,
     animate: false,
   };
+}
+
+function resolveGraphNodeDepths(data: GraphData) {
+  const prerequisitesById = new Map(data.nodes.map((node) => [node.id, node.prerequisites]));
+  const memo = new Map<string, number>();
+  const visiting = new Set<string>();
+
+  const visit = (nodeId: string): number => {
+    if (memo.has(nodeId)) {
+      return memo.get(nodeId)!;
+    }
+
+    if (visiting.has(nodeId)) {
+      return 0;
+    }
+
+    visiting.add(nodeId);
+    const prerequisites = prerequisitesById.get(nodeId) ?? [];
+    const depth = prerequisites.length
+      ? 1 + Math.max(...prerequisites.map((prerequisite) => visit(prerequisite)))
+      : 0;
+    visiting.delete(nodeId);
+    memo.set(nodeId, depth);
+    return depth;
+  };
+
+  for (const node of data.nodes) {
+    visit(node.id);
+  }
+
+  return memo;
+}
+
+function resolveGraphRowGap(viewportMode: ViewportMode) {
+  return viewportMode === "mobile" ? 82 : 96;
+}
+
+export function normalizeGraphNodeRows(
+  data: GraphData,
+  nodes: GraphNodePosition[],
+  viewportMode: ViewportMode = "desktop",
+): GraphNodePosition[] {
+  if (nodes.length === 0) {
+    return [];
+  }
+
+  const depths = resolveGraphNodeDepths(data);
+  const maxDepth = Math.max(...depths.values(), 0);
+  const rowGap = resolveGraphRowGap(viewportMode);
+
+  return nodes.map((node) => ({
+    ...node,
+    y: (maxDepth - (depths.get(node.id) ?? 0)) * rowGap,
+  }));
 }
 
 export function resolveGraphColorPalette(theme: ThemeMode): GraphColorPalette {

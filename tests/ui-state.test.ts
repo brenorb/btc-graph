@@ -2,12 +2,13 @@ import { describe, expect, it } from "vitest";
 
 import {
   deriveNextProgressState,
+  normalizeGraphNodeRows,
   resolveLabelText,
   resolveInitialTheme,
   resolveNextTheme,
   type LabelVisibilityMode,
 } from "../src/core/ui-state";
-import type { ProgressState } from "../src/core/types";
+import type { GraphData, ProgressState } from "../src/core/types";
 
 describe("resolveLabelText", () => {
   const title = "UTXO Model";
@@ -56,5 +57,90 @@ describe("theme helpers", () => {
   it("toggles to the opposite theme", () => {
     expect(resolveNextTheme("dark")).toBe("light");
     expect(resolveNextTheme("light")).toBe("dark");
+  });
+});
+
+describe("normalizeGraphNodeRows", () => {
+  const data: GraphData = {
+    nodes: [
+      {
+        id: "root-a",
+        title: "Root A",
+        description: "",
+        category: "Fundamentals",
+        estimatedTime: "10m",
+        prerequisites: [],
+        resources: [],
+      },
+      {
+        id: "root-b",
+        title: "Root B",
+        description: "",
+        category: "Fundamentals",
+        estimatedTime: "10m",
+        prerequisites: [],
+        resources: [],
+      },
+      {
+        id: "mid-a",
+        title: "Mid A",
+        description: "",
+        category: "Fundamentals",
+        estimatedTime: "10m",
+        prerequisites: ["root-a"],
+        resources: [],
+      },
+      {
+        id: "mid-b",
+        title: "Mid B",
+        description: "",
+        category: "Fundamentals",
+        estimatedTime: "10m",
+        prerequisites: ["root-a", "root-b"],
+        resources: [],
+      },
+      {
+        id: "top",
+        title: "Top",
+        description: "",
+        category: "Fundamentals",
+        estimatedTime: "10m",
+        prerequisites: ["mid-a"],
+        resources: [],
+      },
+    ],
+  };
+
+  const positionedNodes = [
+    { id: "root-a", x: 80, y: 640 },
+    { id: "root-b", x: 320, y: 1180 },
+    { id: "mid-a", x: 100, y: 460 },
+    { id: "mid-b", x: 280, y: 720 },
+    { id: "top", x: 160, y: 120 },
+  ];
+
+  it("snaps nodes with the same prerequisite depth onto the same row", () => {
+    const normalized = normalizeGraphNodeRows(data, positionedNodes, "desktop");
+    const byId = new Map(normalized.map((node) => [node.id, node]));
+
+    expect(byId.get("root-a")?.x).toBe(80);
+    expect(byId.get("root-b")?.x).toBe(320);
+    expect(byId.get("root-a")?.y).toBe(byId.get("root-b")?.y);
+    expect(byId.get("mid-a")?.y).toBe(byId.get("mid-b")?.y);
+    expect(byId.get("mid-a")?.y).toBeLessThan(byId.get("root-a")?.y ?? Infinity);
+    expect(byId.get("top")?.y).toBeLessThan(byId.get("mid-a")?.y ?? Infinity);
+  });
+
+  it("uses tighter row spacing on mobile", () => {
+    const desktop = normalizeGraphNodeRows(data, positionedNodes, "desktop");
+    const mobile = normalizeGraphNodeRows(data, positionedNodes, "mobile");
+    const desktopById = new Map(desktop.map((node) => [node.id, node]));
+    const mobileById = new Map(mobile.map((node) => [node.id, node]));
+
+    const desktopGap =
+      (desktopById.get("root-a")?.y ?? 0) - (desktopById.get("mid-a")?.y ?? 0);
+    const mobileGap = (mobileById.get("root-a")?.y ?? 0) - (mobileById.get("mid-a")?.y ?? 0);
+
+    expect(mobileGap).toBeLessThan(desktopGap);
   });
 });

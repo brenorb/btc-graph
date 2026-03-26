@@ -30,6 +30,7 @@ describe("phase 12 ui helpers", () => {
 
       expect(layout.name).toBe("dagre");
       expect(layout.rankDir).toBe("BT");
+      expect(layout.ranker).toBe("network-simplex");
       expect(layout.rankSep).toBeGreaterThan(layout.nodeSep);
       expect(layout.rankSep).toBeLessThan(150);
       expect(layout.spacingFactor).toBeLessThan(1);

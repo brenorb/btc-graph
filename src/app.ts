@@ -33,6 +33,7 @@ import {
   resolveGraphLayoutSettings,
   resolveLabelText,
   resolveInitialTheme,
+  normalizeGraphNodeRows,
   resolveProgressClass,
   resolveProgressStroke,
   resolveNextTheme,
@@ -1032,6 +1033,43 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
 
   state.cy.resize();
   state.cy.layout(resolveGraphLayoutSettings(state.viewportMode)).run();
+  const normalizedRows = normalizeGraphNodeRows(
+    state.data,
+    Array.from(state.cy.nodes())
+      .filter((node) => typeof node.position === "function")
+      .map((node) => ({
+        id: node.id(),
+        x: node.position("x"),
+        y: node.position("y"),
+      })),
+    state.viewportMode,
+  );
+  if (normalizedRows.length > 0) {
+    const positionById = new Map(normalizedRows.map((node) => [node.id, node]));
+    const applyNormalizedRows = () => {
+      for (const node of state.cy.nodes()) {
+        if (typeof node.position !== "function") {
+          continue;
+        }
+
+        const nextPosition = positionById.get(node.id());
+        if (!nextPosition) {
+          continue;
+        }
+
+        node.position({
+          x: nextPosition.x,
+          y: nextPosition.y,
+        });
+      }
+    };
+
+    if (typeof state.cy.batch === "function") {
+      state.cy.batch(applyNormalizedRows);
+    } else {
+      applyNormalizedRows();
+    }
+  }
   state.cy.fit(undefined, state.viewportMode === "mobile" ? 18 : 32);
 
   refreshLabels(state);
