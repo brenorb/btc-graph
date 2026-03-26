@@ -1,0 +1,36 @@
+{
+  "id": "fundamentals.interactive-proofs",
+  "title": "Interactive Proofs",
+  "description": "Interactive proofs model verification as a dialogue between a prover and a verifier. They matter because many zero-knowledge protocols start from this challenge-response structure before later non-interactive variants compress the interaction.",
+  "category": "Security",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "MIT OCW: Lecture 25 - Interactive Proof Systems, IP",
+      "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec25-1/",
+      "notes": "Structured lecture notes on prover-verifier protocols, completeness, and soundness."
+    },
+    {
+      "type": "article",
+      "title": "Proofs, Arguments, and Zero-Knowledge",
+      "url": "https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.html",
+      "notes": "Accessible bridge from interactive proofs to modern argument systems and zero-knowledge."
+    },
+    {
+      "type": "article",
+      "title": "The Knowledge Complexity of Interactive Proof Systems",
+      "url": "https://doi.org/10.1137/0218012",
+      "notes": "Primary-source paper that formalized interactive proof systems and introduced zero-knowledge."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "cryptography",
+    "proof-systems"
+  ],
+  "aliases": [
+    "interactive proof systems",
+    "prover-verifier protocols"
+  ]
+}

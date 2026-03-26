@@ -3,7 +3,9 @@
   "title": "Zero-Knowledge Proofs",
   "description": "Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.",
   "category": "Security",
-  "prerequisites": [],
+  "prerequisites": [
+    "fundamentals.interactive-proofs"
+  ],
   "resources": [
     {
       "type": "article",

@@ -7,6 +7,7 @@ import type { GraphNode } from "../src/core/types";
 
 const PHASE_23_NODE_IDS = [
   "fundamentals.commitment-schemes",
+  "fundamentals.interactive-proofs",
   "fundamentals.zero-knowledge-proofs",
   "fundamentals.zk-snarks",
   "fundamentals.zk-starks",
@@ -26,27 +27,33 @@ function loadNodes(): GraphNode[] {
   });
 }
 
-describe("phase 23 commitment and zero-knowledge proof-system expansion", () => {
+describe("phase 23 interactive, commitment, and zero-knowledge proof-system expansion", () => {
   const nodes = loadNodes();
   const byId = new Map(nodes.map((node) => [node.id, node]));
 
-  it("adds commitment, zero-knowledge, zk-SNARK, and zk-STARK nodes", () => {
+  it("adds interactive, commitment, zero-knowledge, zk-SNARK, and zk-STARK nodes", () => {
     for (const nodeId of PHASE_23_NODE_IDS) {
       expect(byId.has(nodeId), `${nodeId} should exist`).toBe(true);
     }
   });
 
-  it("anchors SNARKs and STARKs in both zero-knowledge and commitment fundamentals", () => {
+  it("anchors zero-knowledge in interactive proofs and downstream systems in the right fundamentals", () => {
     const commitments = byId.get("fundamentals.commitment-schemes");
+    const interactiveProofs = byId.get("fundamentals.interactive-proofs");
+    const zeroKnowledge = byId.get("fundamentals.zero-knowledge-proofs");
     const snarks = byId.get("fundamentals.zk-snarks");
     const starks = byId.get("fundamentals.zk-starks");
 
     expect(commitments).toBeTruthy();
+    expect(interactiveProofs).toBeTruthy();
+    expect(zeroKnowledge).toBeTruthy();
     expect(snarks).toBeTruthy();
     expect(starks).toBeTruthy();
-    if (!commitments || !snarks || !starks) return;
+    if (!commitments || !interactiveProofs || !zeroKnowledge || !snarks || !starks) return;
 
     expect(commitments.prerequisites).toEqual([]);
+    expect(interactiveProofs.prerequisites).toEqual([]);
+    expect(zeroKnowledge.prerequisites).toContain("fundamentals.interactive-proofs");
     expect(snarks.prerequisites).toContain("fundamentals.zero-knowledge-proofs");
     expect(snarks.prerequisites).toContain("fundamentals.commitment-schemes");
     expect(starks.prerequisites).toContain("fundamentals.zero-knowledge-proofs");
@@ -56,17 +63,21 @@ describe("phase 23 commitment and zero-knowledge proof-system expansion", () => 
 
   it("describes the main tradeoffs clearly", () => {
     const commitments = byId.get("fundamentals.commitment-schemes");
+    const interactiveProofs = byId.get("fundamentals.interactive-proofs");
     const zeroKnowledge = byId.get("fundamentals.zero-knowledge-proofs");
     const snarks = byId.get("fundamentals.zk-snarks");
     const starks = byId.get("fundamentals.zk-starks");
 
     expect(commitments).toBeTruthy();
+    expect(interactiveProofs).toBeTruthy();
     expect(zeroKnowledge).toBeTruthy();
     expect(snarks).toBeTruthy();
     expect(starks).toBeTruthy();
-    if (!commitments || !zeroKnowledge || !snarks || !starks) return;
+    if (!commitments || !interactiveProofs || !zeroKnowledge || !snarks || !starks) return;
 
     expect(commitments.description.toLowerCase()).toContain("bind");
+    expect(interactiveProofs.description.toLowerCase()).toContain("prover");
+    expect(interactiveProofs.description.toLowerCase()).toContain("verifier");
     expect(zeroKnowledge.description.toLowerCase()).toContain("without revealing");
     expect(snarks.description.toLowerCase()).toContain("trusted");
     expect(starks.description.toLowerCase()).toContain("transparent");
