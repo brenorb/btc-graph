@@ -3683,7 +3683,7 @@
         {
           "type": "article",
           "title": "STARK paper",
-          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "url": "https://eprint.iacr.org/2018/046",
           "notes": "Shows how hash-based commitments appear inside modern proof systems."
         }
       ],
@@ -4172,9 +4172,9 @@
         },
         {
           "type": "article",
-          "title": "The Knowledge Complexity of Interactive Proof Systems",
-          "url": "https://doi.org/10.1137/0218012",
-          "notes": "Primary-source paper that formalized interactive proof systems and introduced zero-knowledge."
+          "title": "Wikipedia: Interactive Proof System",
+          "url": "https://en.wikipedia.org/wiki/Interactive_proof_system",
+          "notes": "High-level reference on prover-verifier structure, completeness, and soundness."
         }
       ],
       "estimatedTime": "45m",
@@ -4815,7 +4815,7 @@
         {
           "type": "article",
           "title": "STARK paper",
-          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "url": "https://eprint.iacr.org/2018/046",
           "notes": "Primary-source paper for scalable transparent proof systems."
         }
       ],
@@ -4884,7 +4884,7 @@
         {
           "type": "article",
           "title": "STARK paper",
-          "url": "https://eprint.iacr.org/2018/046.pdf",
+          "url": "https://eprint.iacr.org/2018/046",
           "notes": "Primary-source paper introducing scalable transparent computational integrity."
         },
         {

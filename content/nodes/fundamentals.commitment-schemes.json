@@ -20,7 +20,7 @@
     {
       "type": "article",
       "title": "STARK paper",
-      "url": "https://eprint.iacr.org/2018/046.pdf",
+      "url": "https://eprint.iacr.org/2018/046",
       "notes": "Shows how hash-based commitments appear inside modern proof systems."
     }
   ],
