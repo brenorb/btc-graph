@@ -85,10 +85,29 @@ body {
   gap: 2px;
 }
 
+.brand-mark-badge,
+.footer-mark-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #1f2b3d 0%, #172131 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 18px rgba(9, 18, 31, 0.18);
+}
+
+.brand-mark-badge {
+  width: 52px;
+  height: 52px;
+}
+
 .brand-mark {
-  width: 40px;
+  width: 34px;
   height: auto;
   flex: 0 0 auto;
+}
+
+.brand-mark-white {
+  transform: translateY(1px);
 }
 
 .brand-title {
@@ -692,10 +711,20 @@ input {
   gap: 10px;
 }
 
+.footer-mark-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
 .footer-mark {
-  width: 30px;
+  width: 26px;
   height: auto;
   flex: 0 0 auto;
+}
+
+.footer-mark-white {
+  transform: translateY(1px);
 }
 
 .footer-title {
