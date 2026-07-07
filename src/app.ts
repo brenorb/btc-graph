@@ -28,6 +28,7 @@ import {
 import {
   applyCategoryBulkAction,
   deriveNextProgressState,
+  type LabelVisibilityMode,
   resolveCategoryColor,
   resolveGraphColorPalette,
   resolveGraphLayoutSettings,
@@ -68,6 +69,7 @@ interface AppState {
   assistantDraftPrompts: Record<string, string>;
   expandedGapNodeIds: Set<string>;
   viewportMode: "desktop" | "mobile";
+  labelMode: LabelVisibilityMode;
   mobileToolsOpen: boolean;
   donateModalOpen: boolean;
   donateFeedbackResetHandle: number | null;
@@ -187,6 +189,8 @@ function createLayout(root: HTMLElement) {
             <div class="label-controls">
               <button class="btn" id="select-all-categories" type="button">Select all categories</button>
               <button class="btn" id="deselect-all-categories" type="button">Deselect all categories</button>
+              <button class="btn" id="show-labels" type="button">Show all labels</button>
+              <button class="btn" id="hide-labels" type="button">Hide all labels</button>
             </div>
             <button class="btn" id="export-progress">Export progress</button>
             <label class="btn" id="import-progress-label" for="import-progress-input">Import progress</label>
@@ -850,14 +854,14 @@ function syncNodeClasses(state: AppState) {
 }
 
 function refreshLabels(state: AppState) {
-  const denseLabelThreshold = 1.4;
-  const showDenseLabels = state.cy.zoom() >= denseLabelThreshold;
-
   for (const node of state.cy.nodes()) {
     const title = node.data("title");
     const isHovered = Boolean(node.data("hovered"));
     const isSelected = node.id() === state.selectedId;
-    const mode = showDenseLabels || isHovered || isSelected ? "all" : "none";
+    const mode =
+      state.labelMode === "all" || ((isHovered || isSelected) && state.labelMode !== "all")
+        ? "all"
+        : "none";
     node.data("label", resolveLabelText(mode, title, isHovered));
   }
 }
@@ -865,10 +869,14 @@ function refreshLabels(state: AppState) {
 function renderCategoryBulkControls(state: AppState, root: HTMLElement) {
   const selectAllButton = root.querySelector<HTMLButtonElement>("#select-all-categories");
   const deselectAllButton = root.querySelector<HTMLButtonElement>("#deselect-all-categories");
-  if (!selectAllButton || !deselectAllButton) return;
+  const showLabelsButton = root.querySelector<HTMLButtonElement>("#show-labels");
+  const hideLabelsButton = root.querySelector<HTMLButtonElement>("#hide-labels");
+  if (!selectAllButton || !deselectAllButton || !showLabelsButton || !hideLabelsButton) return;
 
   selectAllButton.classList.toggle("primary", state.hiddenCategories.size === 0);
   deselectAllButton.classList.toggle("primary", state.hiddenCategories.size === state.categories.length);
+  showLabelsButton.classList.toggle("primary", state.labelMode === "all");
+  hideLabelsButton.classList.toggle("primary", state.labelMode === "none");
 }
 
 function renderSearch(state: AppState, root: HTMLElement) {
@@ -884,7 +892,6 @@ function renderSearch(state: AppState, root: HTMLElement) {
   }
 
   const results = searchNodes(state.data, value)
-    .filter((node) => !state.hiddenCategories.has(node.category))
     .slice(0, 20);
   list.innerHTML = "";
   list.classList.toggle("open", results.length > 0);
@@ -1133,6 +1140,18 @@ function wireInteractions(state: AppState, root: HTMLElement) {
   root.querySelector<HTMLButtonElement>("#deselect-all-categories")?.addEventListener("click", () => {
     state.hiddenCategories = applyCategoryBulkAction(state.categories, "deselect_all");
     rerenderGraph(state, root);
+  });
+
+  root.querySelector<HTMLButtonElement>("#show-labels")?.addEventListener("click", () => {
+    state.labelMode = "all";
+    refreshLabels(state);
+    renderCategoryBulkControls(state, root);
+  });
+
+  root.querySelector<HTMLButtonElement>("#hide-labels")?.addEventListener("click", () => {
+    state.labelMode = "none";
+    refreshLabels(state);
+    renderCategoryBulkControls(state, root);
   });
 
   root.querySelector<HTMLButtonElement>("#theme-toggle")?.addEventListener("click", () => {
@@ -1392,6 +1411,7 @@ export async function bootstrapApp(root: HTMLElement | null) {
     assistantDraftPrompts: {},
     expandedGapNodeIds: new Set<string>(),
     viewportMode: resolveViewportMode(window.innerWidth),
+    labelMode: "all",
     mobileToolsOpen: false,
     donateModalOpen: false,
     donateFeedbackResetHandle: null,
