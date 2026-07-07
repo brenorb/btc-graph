@@ -41,8 +41,13 @@ describe("foundational graph connectivity", () => {
       "economics.onchain-cost-allocation": ["fundamentals.bitcoin-layers"],
       "mining.environmental-debate": ["mining.environmental-co-benefits"],
       "privacy.address-reuse": ["privacy.pseudonymity"],
+      "protocol.segregated-witness": ["protocol.block-structure"],
       "protocol.halving": ["protocol.block-height"],
-      "protocol.witness-commitment": ["protocol.block-structure"],
+      "protocol.witness-commitment": [
+        "protocol.op-return",
+        "fundamentals.commitment-schemes",
+        "fundamentals.merkle-trees",
+      ],
     };
 
     for (const [nodeId, prerequisites] of Object.entries(expectedDirectEdges)) {
@@ -65,6 +70,7 @@ describe("foundational graph connectivity", () => {
       "fundamentals.bitcoin-layers",
       "mining.environmental-co-benefits",
       "privacy.pseudonymity",
+      "protocol.op-return",
       "protocol.block-height",
       "protocol.block-structure",
     ] as const;
@@ -75,5 +81,19 @@ describe("foundational graph connectivity", () => {
         `${nodeId} should unlock at least one downstream concept`,
       ).toBeGreaterThan(0);
     }
+  });
+
+  it("avoids leaving redundant direct edges after the rewiring", () => {
+    const addressReuse = byId.get("privacy.address-reuse");
+    const environmentalDebate = byId.get("mining.environmental-debate");
+
+    expect(addressReuse).toBeTruthy();
+    expect(environmentalDebate).toBeTruthy();
+    if (!addressReuse || !environmentalDebate) return;
+
+    expect(addressReuse.prerequisites).not.toContain("custody.address-types");
+    expect(environmentalDebate.prerequisites).not.toContain(
+      "mining.grid-balancing-demand-response",
+    );
   });
 });

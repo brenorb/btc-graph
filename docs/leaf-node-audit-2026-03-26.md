@@ -8,8 +8,9 @@ Applied changes:
 - `fundamentals.bitcoin-layers` now feeds into `economics.onchain-cost-allocation`.
 - `mining.environmental-debate` now depends on `mining.environmental-co-benefits`.
 - `privacy.address-reuse` now depends on `privacy.pseudonymity`.
+- `protocol.segregated-witness` now depends on `protocol.block-structure`.
 - `protocol.halving` now depends on `protocol.block-height`.
-- `protocol.witness-commitment` now depends on `protocol.block-structure`.
+- `protocol.witness-commitment` now depends on `protocol.op-return`, `fundamentals.commitment-schemes`, and `fundamentals.merkle-trees`.
 
 Redundant direct edges removed:
 - `economics.fee-pressure-cycles` no longer directly depends on `protocol.fee-market`.

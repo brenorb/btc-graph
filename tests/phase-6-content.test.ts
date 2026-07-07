@@ -43,10 +43,20 @@ const ALLOWED_RESOURCE_DOMAINS = [
 
 const REQUIRED_PHASE_6_PREREQUISITES: Record<string, string[]> = {
   "protocol.assumevalid": ["ops.initial-block-download"],
+  "protocol.witness-commitment": [
+    "protocol.segregated-witness",
+    "protocol.op-return",
+    "fundamentals.commitment-schemes",
+    "fundamentals.merkle-trees",
+  ],
   "lightning.channel-jamming": ["lightning.liquidity"],
   "mining.block-template-selection": ["mining.getblocktemplate", "protocol.fee-market"],
   "custody.air-gapped-signing": ["custody.psbt", "custody.watch-only-wallets"],
   "history.segwit-activation": ["history.block-size-war", "protocol.segregated-witness"],
+};
+
+const ALLOWED_INTENTIONAL_REDUNDANT_PREREQUISITES: Partial<Record<(typeof PHASE_6_NODE_IDS)[number], string[]>> = {
+  "protocol.witness-commitment": ["fundamentals.merkle-trees"],
 };
 
 const MAX_RESOURCE_COUNT_BY_NODE: Partial<Record<(typeof PHASE_6_NODE_IDS)[number], number>> = {
@@ -76,6 +86,7 @@ function hasTransitiveRedundantPrerequisite(
   byId: Map<string, GraphNode>,
 ): boolean {
   const direct = new Set(node.prerequisites);
+  const allowedRedundant = new Set(ALLOWED_INTENTIONAL_REDUNDANT_PREREQUISITES[node.id] ?? []);
 
   function reaches(fromId: string, targetId: string, seen: Set<string>): boolean {
     if (fromId === targetId) {
@@ -102,6 +113,10 @@ function hasTransitiveRedundantPrerequisite(
   }
 
   for (const prerequisite of node.prerequisites) {
+    if (allowedRedundant.has(prerequisite)) {
+      continue;
+    }
+
     for (const other of direct) {
       if (other === prerequisite) {
         continue;

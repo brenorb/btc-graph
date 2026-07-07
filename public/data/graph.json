@@ -10849,7 +10849,8 @@
       "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.transaction-malleability"
+        "protocol.transaction-malleability",
+        "protocol.block-structure"
       ],
       "resources": [
         {
@@ -11534,7 +11535,9 @@
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.segregated-witness",
-        "protocol.block-structure"
+        "protocol.op-return",
+        "fundamentals.commitment-schemes",
+        "fundamentals.merkle-trees"
       ],
       "resources": [
         {
