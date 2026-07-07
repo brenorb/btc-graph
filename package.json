@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/brenorb/btc-graph/issues"
   },
-  "homepage": "https://brenorb.com/btc-graph/",
+  "homepage": "https://btc-graph.brenorb.com/",
   "devDependencies": {
     "@types/node": "^25.3.3",
     "eslint": "^10.0.2",

@@ -79,8 +79,8 @@ describe("writeNodeInfoPages", () => {
     expect(html).toContain("../../fundamentals.modular-arithmetic/info/");
     expect(html).toContain("../../fundamentals.digital-signatures/info/");
     expect(html).toContain("../../../?selected=fundamentals.ecdsa");
-    expect(html).toContain('href="/btc-graph/node-info-page.css"');
-    expect(html).toContain("https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/");
+    expect(html).toContain('href="/node-info-page.css"');
+    expect(html).toContain("https://btc-graph.brenorb.com/nodes/fundamentals.ecdsa/info/");
     expect(html).toContain("Browse the concept library");
     expect(html).toContain("ECDSA primer");
   });
@@ -118,7 +118,7 @@ describe("writeNodeInfoPages", () => {
 
     const dom = new JSDOM(html, {
       runScripts: "dangerously",
-      url: "https://brenorb.com/btc-graph/nodes/fundamentals.ecdsa/info/",
+      url: "https://btc-graph.brenorb.com/nodes/fundamentals.ecdsa/info/",
       beforeParse(window) {
         Object.defineProperty(window.navigator, "language", {
           configurable: true,

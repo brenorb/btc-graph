@@ -57,9 +57,9 @@ describe("site discovery assets", () => {
     writeSitemap(sampleGraph, outputFile, "2026-03-10T00:00:00.000Z");
 
     const xml = fs.readFileSync(outputFile, "utf8");
-    expect(xml).toContain("https://brenorb.com/btc-graph/");
-    expect(xml).toContain("https://brenorb.com/btc-graph/library/");
-    expect(xml).toContain("https://brenorb.com/btc-graph/nodes/fundamentals.hash-functions/info/");
+    expect(xml).toContain("https://btc-graph.brenorb.com/");
+    expect(xml).toContain("https://btc-graph.brenorb.com/library/");
+    expect(xml).toContain("https://btc-graph.brenorb.com/nodes/fundamentals.hash-functions/info/");
     expect(xml).toContain("<lastmod>2026-03-10T00:00:00.000Z</lastmod>");
   });
 
@@ -76,10 +76,10 @@ describe("site discovery assets", () => {
 
     expect(robots).toContain("User-agent: GPTBot");
     expect(robots).toContain("User-agent: ClaudeBot");
-    expect(robots).toContain("Sitemap: https://brenorb.com/btc-graph/sitemap.xml");
+    expect(robots).toContain("Sitemap: https://btc-graph.brenorb.com/sitemap.xml");
 
-    expect(llms).toContain("Canonical: https://brenorb.com/btc-graph/");
-    expect(llms).toContain("Full text summary: https://brenorb.com/btc-graph/llms-full-text.txt");
+    expect(llms).toContain("Canonical: https://btc-graph.brenorb.com/");
+    expect(llms).toContain("Full text summary: https://btc-graph.brenorb.com/llms-full-text.txt");
     expect(llms).toContain("Bitcoin protocol");
   });
 
@@ -95,9 +95,9 @@ describe("site discovery assets", () => {
     const fullText = fs.readFileSync(llmsFullTextFile, "utf8");
 
     expect(libraryHtml).toContain("<h1>Bitcoin Learning Graph Library</h1>");
-    expect(libraryHtml).toContain('href="/btc-graph/crawl-pages.css"');
+    expect(libraryHtml).toContain('href="/crawl-pages.css"');
     expect(libraryHtml).toContain("Hash Functions");
-    expect(libraryHtml).toContain("https://brenorb.com/btc-graph/nodes/lightning.payment-channels/info/");
+    expect(libraryHtml).toContain("https://btc-graph.brenorb.com/nodes/lightning.payment-channels/info/");
 
     expect(fullText).toContain("Bitcoin Learning Graph is a public static website");
     expect(fullText).toContain("Fundamentals (1 concepts)");

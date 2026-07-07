@@ -125,4 +125,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://brenorb.com/btc-graph/sitemap.xml
+Sitemap: https://btc-graph.brenorb.com/sitemap.xml

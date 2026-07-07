@@ -75,8 +75,20 @@ body {
 
 .brand {
   display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-copy {
+  display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+.brand-mark {
+  width: 40px;
+  height: auto;
+  flex: 0 0 auto;
 }
 
 .brand-title {
@@ -675,8 +687,15 @@ input {
 }
 
 .footer-main {
-  display: grid;
-  gap: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-mark {
+  width: 30px;
+  height: auto;
+  flex: 0 0 auto;
 }
 
 .footer-title {

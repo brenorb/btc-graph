@@ -2,9 +2,9 @@
 
 Interactive, static Bitcoin learning graph built for GitHub Pages.
 
-Live site: https://brenorb.com/btc-graph/
+Live site: https://btc-graph.brenorb.com/
 
-Search-friendly library: https://brenorb.com/btc-graph/library/
+Search-friendly library: https://btc-graph.brenorb.com/library/
 
 ## Local development
 

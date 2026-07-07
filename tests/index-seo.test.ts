@@ -12,8 +12,8 @@ describe("homepage SEO shell", () => {
     expect(html).toContain('name="keywords"');
     expect(html).toContain('property="og:title"');
     expect(html).toContain('name="twitter:card"');
-    expect(html).toContain('rel="canonical" href="https://brenorb.com/btc-graph/"');
-    expect(html).toContain('href="https://brenorb.com/btc-graph/llms.txt"');
+    expect(html).toContain('rel="canonical" href="https://btc-graph.brenorb.com/"');
+    expect(html).toContain('href="https://btc-graph.brenorb.com/llms.txt"');
     expect(html).toContain('https://www.googletagmanager.com/gtag/js?id=G-SV5TS1L0K9');
     expect(html).toContain('gtag("config", "G-SV5TS1L0K9")');
     expect(html).toContain('"@type": "Organization"');

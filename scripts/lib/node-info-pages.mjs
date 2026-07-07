@@ -238,8 +238,13 @@ function renderNodeInfoPage(node, prerequisites, dependents) {
     <meta name="twitter:title" content="${escapeHtml(pageTitle)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
     <meta name="twitter:image" content="${escapeHtml(SITE_SOCIAL_IMAGE_URL)}" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
     <link rel="alternate" type="text/plain" href="${escapeHtml(buildSiteUrl("llms-full-text.txt"))}" title="LLMs full text summary" />
+    <link rel="icon" type="image/png" sizes="32x32" href="${escapeHtml(`${SITE_BASE_PATH}favicon-32x32.png`)}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="${escapeHtml(`${SITE_BASE_PATH}favicon-16x16.png`)}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="${escapeHtml(`${SITE_BASE_PATH}apple-touch-icon.png`)}" />
+    <link rel="manifest" href="${escapeHtml(`${SITE_BASE_PATH}site.webmanifest`)}" />
     <link rel="stylesheet" href="${escapeHtml(`${SITE_BASE_PATH}node-info-page.css`)}" />
     <script type="application/ld+json">${structuredData}</script>
   </head>

@@ -1,8 +1,8 @@
 Bitcoin Learning Graph
 
-Canonical URL: https://brenorb.com/btc-graph/
-Library URL: https://brenorb.com/btc-graph/library/
-Sitemap URL: https://brenorb.com/btc-graph/sitemap.xml
+Canonical URL: https://btc-graph.brenorb.com/
+Library URL: https://btc-graph.brenorb.com/library/
+Sitemap URL: https://btc-graph.brenorb.com/sitemap.xml
 
 Summary:
 Bitcoin Learning Graph is a public static website for structured Bitcoin self-study. It combines an interactive prerequisite graph with crawlable HTML concept pages, a text-first library index, and curated external resources.
@@ -14,9 +14,9 @@ Keywords:
 bitcoin learning graph, bitcoin education, bitcoin curriculum, bitcoin prerequisite map, lightning network learning, bitcoin protocol concepts, bitcoin self-study, bitcoin glossary
 
 Site sections:
-- Home: https://brenorb.com/btc-graph/
-- Library: https://brenorb.com/btc-graph/library/
-- Node info pages: https://brenorb.com/btc-graph/nodes/%3Cnode-id%3E/info/
+- Home: https://btc-graph.brenorb.com/
+- Library: https://btc-graph.brenorb.com/library/
+- Node info pages: https://btc-graph.brenorb.com/nodes/%3Cnode-id%3E/info/
 
 Topics by category:
 

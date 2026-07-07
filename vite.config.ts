@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
-const base = process.env.BASE_PATH ?? "/btc-graph/";
+const base = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({
   base,

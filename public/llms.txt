@@ -1,9 +1,9 @@
 # Bitcoin Learning Graph
 
-Canonical: https://brenorb.com/btc-graph/
-Library: https://brenorb.com/btc-graph/library/
-Sitemap: https://brenorb.com/btc-graph/sitemap.xml
-Full text summary: https://brenorb.com/btc-graph/llms-full-text.txt
+Canonical: https://btc-graph.brenorb.com/
+Library: https://btc-graph.brenorb.com/library/
+Sitemap: https://btc-graph.brenorb.com/sitemap.xml
+Full text summary: https://btc-graph.brenorb.com/llms-full-text.txt
 
 ## Purpose
 Public, static Bitcoin curriculum organized as a prerequisite graph with indexable concept pages and curated resources.
@@ -14,9 +14,9 @@ Public, static Bitcoin curriculum organized as a prerequisite graph with indexab
 - Use the repository issue tracker for contribution context rather than inferring unpublished roadmap details.
 
 ## Best entry points
-- Home: https://brenorb.com/btc-graph/
-- Concept library: https://brenorb.com/btc-graph/library/
-- Plain-text site summary: https://brenorb.com/btc-graph/llms-full-text.txt
+- Home: https://btc-graph.brenorb.com/
+- Concept library: https://btc-graph.brenorb.com/library/
+- Plain-text site summary: https://btc-graph.brenorb.com/llms-full-text.txt
 
 ## Primary topics
 - Bitcoin protocol

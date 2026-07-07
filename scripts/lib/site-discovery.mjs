@@ -2,11 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 export const SITE_NAME = "Bitcoin Learning Graph";
-export const SITE_ORIGIN = "https://brenorb.com";
-export const SITE_BASE_PATH = "/btc-graph/";
+export const SITE_ORIGIN = "https://btc-graph.brenorb.com";
+export const SITE_BASE_PATH = "/";
 export const SITE_URL = new URL(SITE_BASE_PATH, SITE_ORIGIN).toString();
 export const SITE_LIBRARY_PATH = "library/";
-export const SITE_SOCIAL_IMAGE_PATH = "social-card.svg";
+export const SITE_SOCIAL_IMAGE_PATH = "social-card.png";
 export const SITE_SOCIAL_IMAGE_URL = new URL(SITE_SOCIAL_IMAGE_PATH, SITE_URL).toString();
 export const SITE_DESCRIPTION = "Interactive Bitcoin knowledge graph with prerequisites, curated resources, and structured topic pages.";
 export const SITE_KEYWORDS = [
@@ -181,9 +181,14 @@ function renderHtmlPage({
     <meta name="twitter:title" content="${escapeXml(title)}" />
     <meta name="twitter:description" content="${escapeXml(buildDescription(description))}" />
     <meta name="twitter:image" content="${escapeXml(SITE_SOCIAL_IMAGE_URL)}" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="canonical" href="${escapeXml(canonicalUrl)}" />
     <link rel="alternate" type="text/plain" href="${escapeXml(buildCanonicalUrl("llms.txt"))}" title="LLMs policy" />
     <link rel="alternate" type="text/plain" href="${escapeXml(buildCanonicalUrl("llms-full-text.txt"))}" title="LLMs full text summary" />
+    <link rel="icon" type="image/png" sizes="32x32" href="${escapeXml(buildAssetPath("favicon-32x32.png"))}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="${escapeXml(buildAssetPath("favicon-16x16.png"))}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="${escapeXml(buildAssetPath("apple-touch-icon.png"))}" />
+    <link rel="manifest" href="${escapeXml(buildAssetPath("site.webmanifest"))}" />
     <link rel="stylesheet" href="${escapeXml(buildAssetPath("crawl-pages.css"))}" />
     <script type="application/ld+json">${escapeJsonLd(structuredData)}</script>
   </head>
