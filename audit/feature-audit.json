@@ -312,14 +312,14 @@
       "feature": "Export progress file",
       "userStory": "As a learner, I can export my progress to a JSON file.",
       "expectedBehavior": "The export action serializes the in-memory progress map to a btc-graph-progress.json download without requiring a backend.",
-      "evidence": "src/app.ts",
+      "evidence": "src/app.ts; tests/app-import-export-and-error.test.ts",
       "baselineMethod": "Code review + manual browser check",
       "storyStatus": "Identified",
-      "baselineTestStatus": "Partial",
-      "errorStatus": "Not tested",
+      "baselineTestStatus": "Pass",
+      "errorStatus": "No issues",
       "fixStatus": "N/A",
       "retestStatus": "N/A",
-      "notes": "The export control is present, but blob-download capture could not be observed in the in-app browser runtime."
+      "notes": "Download behavior is covered by jsdom integration tests that assert blob URL creation, anchor click, and cleanup."
     },
     {
       "id": "PROG-05",
@@ -328,14 +328,14 @@
       "feature": "Import progress file",
       "userStory": "As a learner, I can import a progress JSON file back into the app.",
       "expectedBehavior": "The import action reads a selected JSON file, sanitizes the parsed progress payload, merges only valid known-node entries into the current progress map, persists the result, rerenders details and node classes, and alerts on invalid files.",
-      "evidence": "src/app.ts; src/core/graph.ts",
+      "evidence": "src/app.ts; src/core/graph.ts; tests/app-import-export-and-error.test.ts",
       "baselineMethod": "Code review + manual browser check",
       "storyStatus": "Identified",
-      "baselineTestStatus": "Partial",
-      "errorStatus": "Not tested",
+      "baselineTestStatus": "Pass",
+      "errorStatus": "No issues",
       "fixStatus": "N/A",
       "retestStatus": "N/A",
-      "notes": "File-upload import was not exercised end-to-end in this browser runtime; code path was reviewed but not live-driven."
+      "notes": "Import behavior is covered by jsdom integration tests for valid-node merge behavior."
     },
     {
       "id": "HELP-01",
@@ -536,14 +536,14 @@
       "feature": "Load failure fallback",
       "userStory": "As a learner, I still get a useful error message if the graph data cannot load.",
       "expectedBehavior": "If graph fetch or validation fails, the detail area switches to an Unable to load graph error state and the app does not crash silently.",
-      "evidence": "src/app.ts",
+      "evidence": "src/app.ts; tests/app-import-export-and-error.test.ts",
       "baselineMethod": "Code review + manual browser check",
       "storyStatus": "Identified",
-      "baselineTestStatus": "Partial",
-      "errorStatus": "Not tested",
+      "baselineTestStatus": "Pass",
+      "errorStatus": "No issues",
       "fixStatus": "N/A",
       "retestStatus": "N/A",
-      "notes": "Failure-state UI was not injected live; current status is based on code review only."
+      "notes": "Failure-state UI is covered by an integration test that injects a 500 graph fetch response."
     },
     {
       "id": "KEY-01",
