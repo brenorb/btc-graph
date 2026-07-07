@@ -8,7 +8,7 @@
     "check:links": "node scripts/check-links.mjs",
     "build": "npm run build:data && vite build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "npm run build:data && vitest run",
     "test:watch": "vitest"
   },
   "repository": {
