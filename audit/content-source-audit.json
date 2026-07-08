@@ -52,8 +52,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 9,
       "conceptsExtracted": 20,
-      "conceptsNormalized": 3,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy."
+      "conceptsNormalized": 4,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy. Implemented from this source in the current branch: fundamentals.validation-sovereignty."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -69,8 +69,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
       "conceptsExtracted": 20,
-      "conceptsNormalized": 4,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts."
+      "conceptsNormalized": 5,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -316,7 +316,7 @@
     {
       "id": "fundamentals.validation-sovereignty",
       "title": "Validation Sovereignty",
-      "category": "History & Governance",
+      "category": "Security",
       "sourceId": "source.bitcoin-dev-philosophy",
       "sourceUrl": "https://bitcoindevphilosophy.com/",
       "sourceContext": "Trustlessness chapter and dont trust verify framing",
@@ -339,7 +339,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "medium",
-      "notes": "Useful bridge between philosophy and node behavior."
+      "notes": "Implemented in the current branch as the philosophy-side bridge between trustlessness and practical self-validation."
     },
     {
       "id": "protocol.consensus-vs-policy",
@@ -457,7 +457,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "medium",
-      "notes": "Defer until there is more dependent surface around full-node versus light-client learning paths."
+      "notes": "Implemented in the current branch as a thin conceptual bridge without rewiring older phase-locked neighbor nodes."
     },
     {
       "id": "security.nonce-reuse-attack",
@@ -717,6 +717,24 @@
       "rationale": "Validation sovereignty is an applied consequence of trustlessness and verification culture.",
       "sourceId": "source.bitcoin-dev-philosophy",
       "notes": "Bridge edge inferred from philosophy sequencing."
+    },
+    {
+      "from": "ops.run-full-node",
+      "to": "protocol.light-client-trust-model",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the full-node baseline before they can understand which validation guarantees a light client gives up.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Bridge edge inferred from full-node versus lightweight-client contrast."
+    },
+    {
+      "from": "protocol.compact-block-filters",
+      "to": "protocol.light-client-trust-model",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Compact block filters provide the modern filtered-client mechanism that anchors the trust-model comparison.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Kept additive and conceptual instead of rewiring older light-client mechanism leaves in the same slice."
     }
   ],
   "decisions": [
@@ -958,6 +976,26 @@
         "source.btctranscripts-topics"
       ],
       "notes": "Kept this slice additive for now instead of rewiring deeper descendants like protocol.ephemeral-anchors until the relay-policy branch grows further."
+    },
+    {
+      "id": "decision.validation-light-client-slice",
+      "type": "scope",
+      "subject": "validation-and-light-client-bridges",
+      "status": "resolved",
+      "rationale": "The next thin branch after the relay-policy slice is the trust and verification path. fundamentals.validation-sovereignty is the cleanest philosophy-side dependent to add now, and protocol.light-client-trust-model can be introduced as a narrow conceptual bridge without forcing rewires onto older phase-locked light-client nodes.",
+      "relatedConceptIds": [
+        "fundamentals.validation-sovereignty",
+        "protocol.light-client-trust-model",
+        "fundamentals.trustlessness",
+        "ops.run-full-node",
+        "protocol.compact-block-filters",
+        "protocol.bloom-filters-bip37"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy",
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Kept this slice additive after subagent review showed that rewiring legacy neighbors like protocol.bloom-filters-bip37 would add overlap without enough downstream surface yet."
     }
   ]
 }

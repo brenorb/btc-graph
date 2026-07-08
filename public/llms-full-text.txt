@@ -149,7 +149,7 @@ Mining (19 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (46 concepts)
+Network, Relay & Client Sync (47 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -171,6 +171,7 @@ Network, Relay & Client Sync (46 concepts)
 - Fee Estimation RPC: How wallet and node software estimate feerates from mempool and historical confirmation data.
 - Headers-First Synchronization: How nodes download and validate block headers before fetching full blocks during initial sync.
 - Initial Block Download: How a new node bootstraps chainstate safely and reaches current tip.
+- Light Client Trust Model: Light clients reduce bandwidth and storage costs by delegating part of validation to full nodes and peers, which changes what they can verify for themselves. Understanding this trust model clarifies the tradeoffs between full nodes, legacy SPV, and compact-filter clients.
 - Mempool: How unconfirmed transactions propagate, queue, and get filtered by local node policy.
 - Mempool Policy: Standardness, relay policy, and transaction propagation behavior.
 - Mesh Networks: Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.
@@ -252,7 +253,7 @@ Protocol & Consensus (53 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (51 concepts)
+Security (52 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -300,6 +301,7 @@ Security (51 concepts)
 - Silent Payments: Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.
 - Trustlessness: Trustlessness in Bitcoin means security comes from verification and incentives rather than trusted operators. You can reduce counterparty risk by validating rules locally.
 - UTXO Consolidation Tradeoffs: Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.
+- Validation Sovereignty: Validation sovereignty means deciding Bitcoin's rules by verifying them yourself instead of outsourcing validation to a wallet provider, service, or remote node. It is the practical user-facing consequence of don't trust, verify.
 - XPUB Leakage: Privacy and security risks from sharing extended public keys with third-party services.
 - Zero-Knowledge Proofs: Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
