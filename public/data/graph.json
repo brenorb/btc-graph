@@ -4075,32 +4075,36 @@
     {
       "id": "fundamentals.hash-functions",
       "title": "Hash Functions",
-      "description": "One-way functions, preimage resistance, and collision resistance.",
+      "description": "Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.",
       "category": "Security",
       "prerequisites": [],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4woCZcK",
+          "regionalUrls": {
+            "BR": "https://link.amazon/B060bSZFu"
+          },
+          "notes": "Introduces hashes alongside Bitcoin keys, addresses, and transaction identifiers."
         },
         {
           "type": "article",
-          "title": "Bitcoin Optech",
-          "url": "https://bitcoinops.org/",
-          "notes": "High-signal explainers and updates."
+          "title": "Bitcoin Developer Guide: Block Chain",
+          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+          "notes": "Shows where hashing appears in block headers, merkle roots, and proof-of-work."
         },
         {
           "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "User-centered framing for applied learning."
+          "title": "Bitcoin Core Academy: Script",
+          "url": "https://bitcoincore.academy/script.html",
+          "notes": "Connects hashing to practical Bitcoin validation and script-era design choices."
         }
       ],
       "estimatedTime": "45m",
       "tags": [
-        "fundamentals"
+        "cryptography",
+        "hashing"
       ],
       "aliases": [
         "hash functions"

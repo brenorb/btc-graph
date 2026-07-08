@@ -271,7 +271,7 @@ Security (51 concepts)
 - Fermat's Little Theorem: Fermat's little theorem is used to reason about inverses in prime fields used by Bitcoin cryptography. It helps explain why modular inversion works for non-zero elements.
 - Finite Fields: Finite fields define the arithmetic space where Bitcoin elliptic-curve operations occur. Prime-field constraints make key operations deterministic and secure.
 - Fungibility: Fungibility means each unit is equally acceptable regardless of its transaction history. Weak fungibility raises censorship and surveillance risk even when base-layer ownership remains valid.
-- Hash Functions: One-way functions, preimage resistance, and collision resistance.
+- Hash Functions: Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.
 - Interactive Proofs: Interactive proofs model verification as a dialogue between a prover and a verifier. They matter because many zero-knowledge protocols start from this challenge-response structure before later non-interactive variants compress the interaction.
 - KYC and Privacy Tradeoffs: Identity linkage risks and mitigation strategies.
 - Merkle Trees: Efficient integrity proofs for large sets of transactions.
