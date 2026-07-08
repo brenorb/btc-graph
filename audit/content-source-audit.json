@@ -18,8 +18,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
       "conceptsExtracted": 25,
-      "conceptsNormalized": 4,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys and protocol.version-3-transaction-relay."
+      "conceptsNormalized": 5,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, and protocol.tapscript."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -310,6 +310,37 @@
       "estimatedTime": "25m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a narrow upgrade-risk bridge between protocol.softfork-hardfork and the existing activation-history case studies."
+    },
+    {
+      "id": "protocol.tapscript",
+      "title": "Tapscript",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/",
+      "sourceContext": "Topics alias normalization around Tapscript and Taproot script-path rules",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is the specific Taproot-era script ruleset, narrower than Taproot and cleaner than a broad script-path-spends explainer.",
+      "candidatePrerequisites": [
+        "protocol.taproot",
+        "protocol.script"
+      ],
+      "chosenPrerequisites": [
+        "protocol.taproot"
+      ],
+      "prerequisiteRationale": "The direct learner need is the Taproot spend context. The base Script model is already inherited transitively through the SegWit and transaction-lifecycle path, so adding protocol.script directly would be redundant in the current graph.",
+      "aliases": [
+        "taproot script rules",
+        "bip342"
+      ],
+      "tags": [
+        "taproot",
+        "script",
+        "opcodes"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the next additive Taproot bridge without rewiring older phase-locked descendants such as protocol.op-checksigadd."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -864,6 +895,15 @@
       "notes": "Direct edge chosen over activation-history case studies because those are downstream examples, not prerequisites."
     },
     {
+      "from": "protocol.taproot",
+      "to": "protocol.tapscript",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Tapscript is a Taproot-specific script version, so learners need the Taproot spend context before its rule changes make sense.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct edge keeps the node scoped to the Taproot family without collapsing it into a generic script refresher."
+    },
+    {
       "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
@@ -1286,6 +1326,26 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Chosen over a broader future-deployment-mechanisms wrapper because the split-cost concept is more atomic and easier to place cleanly in the current graph."
+    },
+    {
+      "id": "decision.tapscript-slice",
+      "type": "scope",
+      "subject": "protocol.tapscript",
+      "status": "resolved",
+      "rationale": "The cleanest next Taproot-derived additive slice is protocol.tapscript. It captures the specific BIP342 script ruleset without duplicating generic Taproot overview material or forcing rewires onto older phase-locked descendants such as protocol.op-checksigadd.",
+      "relatedConceptIds": [
+        "protocol.tapscript",
+        "protocol.taproot",
+        "protocol.op-checksigadd",
+        "protocol.taptree",
+        "protocol.tapleaf-inclusion-proofs"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics",
+        "source.btctranscripts-topics",
+        "source.optech-schnorr-taproot-workshop"
+      ],
+      "notes": "Chosen over a synthetic taproot-script-path-spends wrapper because Tapscript is a canonical source-native concept with cleaner boundaries in the current graph. The direct protocol.script edge was dropped after the redundancy check showed it was already inherited transitively through the Taproot branch."
     },
     {
       "id": "decision.decoding-script-history-slice",

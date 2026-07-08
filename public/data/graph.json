@@ -12197,6 +12197,54 @@
       ]
     },
     {
+      "id": "protocol.tapscript",
+      "title": "Tapscript",
+      "description": "Tapscript is the script version used for Taproot script-path spends. It keeps the basic Script model but changes signature rules, replaces CHECKMULTISIG with CHECKSIGADD, and adds upgrade hooks such as OP_SUCCESSx.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 342: Validation of Taproot Scripts",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki",
+          "notes": "Primary specification for Taproot script-path execution rules, opcode changes, and resource limits."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Tapscript",
+          "url": "https://bitcoinops.org/en/topics/tapscript/",
+          "notes": "Canonical terminology and ecosystem references for Tapscript-related implementation work."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop context for how Taproot keys, TapTrees, and Tapscript fit together."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Practical grounding for Script execution, witness semantics, and spending-condition design.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "taproot",
+        "script",
+        "opcodes"
+      ],
+      "aliases": [
+        "taproot script rules",
+        "bip342"
+      ]
+    },
+    {
       "id": "protocol.taptree",
       "title": "TapTree",
       "description": "A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.",
