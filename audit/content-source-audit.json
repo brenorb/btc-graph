@@ -52,8 +52,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 9,
       "conceptsExtracted": 20,
-      "conceptsNormalized": 4,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy. Implemented from this source in the current branch: fundamentals.validation-sovereignty."
+      "conceptsNormalized": 5,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, and protocol.chain-split-risk."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -280,6 +280,36 @@
       "estimatedTime": "20m",
       "confidence": "medium",
       "notes": "Implemented in the current branch as the last explicit pending workshop optimization concept."
+    },
+    {
+      "id": "protocol.chain-split-risk",
+      "title": "Chain Split Risk",
+      "category": "History & Governance",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/",
+      "sourceContext": "Upgrading chapter 5.3.1 Costs of a split",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific upgrade-risk concept about the costs of incompatible rule sets continuing in parallel, not a broad deployment-mechanisms umbrella.",
+      "candidatePrerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "chosenPrerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "prerequisiteRationale": "Learners need the compatibility distinction between soft forks and hard forks before the consequences of a persistent split make sense.",
+      "aliases": [
+        "costs of a split",
+        "chain split costs"
+      ],
+      "tags": [
+        "governance",
+        "forks",
+        "upgrades"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as a narrow upgrade-risk bridge between protocol.softfork-hardfork and the existing activation-history case studies."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -825,6 +855,15 @@
       "notes": "Source-driven bridge edge."
     },
     {
+      "from": "protocol.softfork-hardfork",
+      "to": "protocol.chain-split-risk",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Split risk is a downstream consequence of incompatible upgrade paths, so learners should understand the compatibility boundary first.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Direct edge chosen over activation-history case studies because those are downstream examples, not prerequisites."
+    },
+    {
       "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
@@ -1229,6 +1268,24 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Chosen over further light-client neighbor rewires because phase-5, phase-6, and phase-11 constraints make those edits more brittle than adding a new downstream consumer."
+    },
+    {
+      "id": "decision.chain-split-risk-slice",
+      "type": "scope",
+      "subject": "protocol.chain-split-risk",
+      "status": "resolved",
+      "rationale": "The cleanest next philosophy-derived additive slice is protocol.chain-split-risk. It isolates one specific upgrade-risk outcome from the broader deployment-mechanisms discussion and creates a bridge from protocol.softfork-hardfork to the existing activation-history case studies without duplicating them.",
+      "relatedConceptIds": [
+        "protocol.chain-split-risk",
+        "protocol.softfork-hardfork",
+        "history.block-size-war",
+        "history.segwit-activation",
+        "history.taproot-activation"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Chosen over a broader future-deployment-mechanisms wrapper because the split-cost concept is more atomic and easier to place cleanly in the current graph."
     },
     {
       "id": "decision.decoding-script-history-slice",

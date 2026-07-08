@@ -9985,6 +9985,48 @@
       ]
     },
     {
+      "id": "protocol.chain-split-risk",
+      "title": "Chain Split Risk",
+      "description": "Chain split risk is the ecosystem cost created when a contentious protocol upgrade leaves incompatible rule sets active at the same time. Persistent splits can impose replay, reorg, infrastructure, and coordination costs even when each side keeps producing blocks.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Costs of a Split",
+          "url": "https://bitcoindevphilosophy.com/#_costs_of_a_split",
+          "notes": "Direct conceptual framing for why incompatible upgrade outcomes impose lasting costs on users and infrastructure."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: Socialized Costs Of Hard Forks",
+          "url": "https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks",
+          "notes": "Concrete examples of replay, privacy, reorg, and coordination costs created by contentious splits."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Best long-form case study for how split risk and activation conflict spill across wallets, exchanges, miners, and users.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "governance",
+        "forks",
+        "upgrades"
+      ],
+      "aliases": [
+        "costs of a split",
+        "chain split costs"
+      ]
+    },
+    {
       "id": "protocol.cltv-bip65",
       "title": "CHECKLOCKTIMEVERIFY (BIP 65)",
       "description": "Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.",
