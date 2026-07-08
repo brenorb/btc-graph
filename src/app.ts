@@ -82,7 +82,7 @@ const LIGHTNING_ADDRESS = "breno@bipa.app";
 const LIGHTNING_URI = `lightning:${LIGHTNING_ADDRESS}`;
 const DONATION_QR_IMAGE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=svg&data=${encodeURIComponent(LIGHTNING_URI)}`;
 const HELP_MODAL_STORAGE_KEY = "btc-graph-help-seen";
-const LOGO_MARK_WHITE_URL = `${import.meta.env.BASE_URL}brand/logo-mark-white.png`;
+const LOGO_MARK_MASK_URL = `${import.meta.env.BASE_URL}brand/logo-mark.png`;
 
 function buildIssueUrl(title: string, body: string) {
   return `https://github.com/brenorb/btc-graph/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -132,7 +132,7 @@ function createLayout(root: HTMLElement) {
       <header class="header">
         <div class="brand">
           <span class="brand-mark-badge" aria-hidden="true">
-            <img class="brand-mark brand-mark-white" src="${LOGO_MARK_WHITE_URL}" alt="" width="40" height="52" />
+            <span class="brand-mark brand-mark-mask" style="--logo-mark-url: url('${LOGO_MARK_MASK_URL}')"></span>
           </span>
           <div class="brand-copy">
             <h1 class="brand-title">Bitcoin Learning Graph</h1>
@@ -311,7 +311,7 @@ function createLayout(root: HTMLElement) {
       <footer class="site-footer">
         <div class="footer-main">
           <span class="footer-mark-badge" aria-hidden="true">
-            <img class="footer-mark footer-mark-white" src="${LOGO_MARK_WHITE_URL}" alt="" width="30" height="39" />
+            <span class="footer-mark footer-mark-mask" style="--logo-mark-url: url('${LOGO_MARK_MASK_URL}')"></span>
           </span>
           <div>
             <div class="footer-title">Bitcoin Learning Graph</div>
