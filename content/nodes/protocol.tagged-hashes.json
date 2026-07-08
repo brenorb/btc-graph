@@ -1,0 +1,38 @@
+{
+  "id": "protocol.tagged-hashes",
+  "title": "Tagged Hashes",
+  "description": "Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.hash-functions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures for secp256k1",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Canonical definition of the tagged hashing construction used by Schnorr signatures."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop module 0.3 introduces tagged hashes in the Taproot preparation sequence."
+    },
+    {
+      "type": "article",
+      "title": "Decoding Bitcoin",
+      "url": "https://bitcoindevs.xyz/decoding",
+      "notes": "Taproot module includes a learner-friendly tagged-hashes lesson in a broader prerequisite path."
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "taproot",
+    "schnorr",
+    "cryptography"
+  ],
+  "aliases": [
+    "tagged hashing"
+  ]
+}

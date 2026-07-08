@@ -1,0 +1,40 @@
+{
+  "id": "protocol.taptweak",
+  "title": "TapTweak",
+  "description": "TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.tagged-hashes",
+    "protocol.x-only-public-keys"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Canonical definition of Taproot output key tweaking and script commitments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop module 2.2 explains how key tweaks commit to arbitrary data in Taproot outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Taproot",
+      "url": "https://bitcoinops.org/en/topics/taproot/",
+      "notes": "Practical ecosystem context for where TapTweak fits inside deployed Taproot usage."
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "taproot",
+    "keys",
+    "scripts"
+  ],
+  "aliases": [
+    "tap tweak"
+  ]
+}

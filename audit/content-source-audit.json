@@ -18,8 +18,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
       "conceptsExtracted": 25,
-      "conceptsNormalized": 2,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source."
+      "conceptsNormalized": 3,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -87,7 +87,7 @@
       "pageClustersTracked": 12,
       "conceptsExtracted": 15,
       "conceptsNormalized": 5,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, and tapleaf inclusion proofs."
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, and tapleaf inclusion proofs. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -135,7 +135,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "Likely additive and pedagogically useful across Taproot-related nodes."
+      "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
     },
     {
       "id": "protocol.x-only-public-keys",
@@ -165,7 +165,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "High-value bridge concept with no direct current match."
+      "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
     },
     {
       "id": "protocol.taptweak",
@@ -185,7 +185,7 @@
         "protocol.tagged-hashes",
         "protocol.x-only-public-keys"
       ],
-      "prerequisiteRationale": "The tweak mechanism uses tagged hashes and x-only public keys directly.",
+      "prerequisiteRationale": "The tweak mechanism is a Taproot-specific key derivation step that directly depends on Taproot context, tagged hashing, and x-only key encoding.",
       "aliases": [
         "tap tweak"
       ],
@@ -194,7 +194,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "Strong additive candidate from the workshop."
+      "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
     },
     {
       "id": "protocol.taptree",
@@ -207,13 +207,13 @@
       "status": "new",
       "atomicityRationale": "Specific Taproot script-tree structure, distinct from generic Merkle trees and from Taproot overall.",
       "candidatePrerequisites": [
-        "protocol.taproot",
-        "protocol.merkle-trees"
+        "protocol.taptweak",
+        "fundamentals.merkle-trees"
       ],
       "chosenPrerequisites": [
-        "protocol.taproot"
+        "protocol.taptweak"
       ],
-      "prerequisiteRationale": "TapTree is best taught as a Taproot-internal structure. Merkle-tree knowledge may be implicit in a later bridge decision.",
+      "prerequisiteRationale": "TapTree is best taught immediately after TapTweak. Merkle-tree knowledge remains useful context but is already reached transitively through the Taproot path, so the direct edge would be redundant.",
       "aliases": [
         "tap tree"
       ],
@@ -223,7 +223,7 @@
       ],
       "estimatedTime": "25m",
       "confidence": "high",
-      "notes": "May imply a missing Merkle-tree bridge concept review."
+      "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
     },
     {
       "id": "protocol.tapleaf-inclusion-proofs",
@@ -251,7 +251,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "Likely additive and useful for script-path mental models."
+      "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
     },
     {
       "id": "protocol.huffman-optimized-taptrees",
@@ -312,7 +312,7 @@
       ],
       "estimatedTime": "25m",
       "confidence": "medium",
-      "notes": "Alias normalization is mandatory here because Optech names and implementation jargon vary."
+      "notes": "Defer until protocol.consensus-vs-policy exists. Alias normalization is mandatory here because Optech names and implementation jargon vary."
     },
     {
       "id": "fundamentals.validation-sovereignty",
@@ -368,7 +368,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "High-value bridge concept mentioned across multiple source families."
+      "notes": "Highest-priority next add after the Taproot-internal slice. This is the cleanest conceptual parent for the existing policy and relay cluster."
     },
     {
       "id": "privacy.address-reuse-harms",
@@ -377,8 +377,8 @@
       "sourceId": "source.mastering-bitcoin-book-map",
       "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
       "sourceContext": "Wallet, privacy, and address-format clusters; reinforced by philosophy privacy chapter",
-      "existingNodeId": "",
-      "status": "new",
+      "existingNodeId": "privacy.address-reuse",
+      "status": "merge",
       "atomicityRationale": "Narrow user-facing privacy consequence that is more actionable than a broad privacy umbrella.",
       "candidatePrerequisites": [
         "protocol.addresses-outputs",
@@ -398,7 +398,7 @@
       ],
       "estimatedTime": "15m",
       "confidence": "medium",
-      "notes": "Could also connect to a future change-output basics bridge concept."
+      "notes": "Do not add as a separate node. Fold any improved copy or resources into privacy.address-reuse."
     },
     {
       "id": "protocol.timelock-taxonomy",
@@ -407,8 +407,8 @@
       "sourceId": "source.mastering-bitcoin-book-map",
       "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
       "sourceContext": "Authorization and transaction chapters covering CLTV, CSV, and sequence-based relative timelocks",
-      "existingNodeId": "",
-      "status": "new",
+      "existingNodeId": "protocol.timelocks",
+      "status": "merge",
       "atomicityRationale": "A useful bridge concept that organizes multiple already-existing timelock mechanisms into one mental model.",
       "candidatePrerequisites": [
         "protocol.timelocks",
@@ -428,7 +428,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "medium",
-      "notes": "May reduce learner confusion across CLTV, CSV, and sequence semantics."
+      "notes": "Do not add as a separate node. Enrich protocol.timelocks to make the taxonomy more explicit."
     },
     {
       "id": "protocol.light-client-trust-model",
@@ -458,7 +458,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "medium",
-      "notes": "Likely bridge concept rather than a leaf concept."
+      "notes": "Defer until there is more dependent surface around full-node versus light-client learning paths."
     },
     {
       "id": "security.nonce-reuse-attack",
@@ -755,6 +755,26 @@
       "notes": "This source is narrower but pedagogically stronger than the general topics index."
     },
     {
+      "id": "decision.first-node-slice-taproot-internals",
+      "type": "bridge-concept",
+      "subject": "implemented-first-node-slice",
+      "status": "resolved",
+      "rationale": "Start implementation with the tightest coherent subgraph: Taproot internal bridge concepts that were repeatedly surfaced across Optech and Decoding and had the lowest duplicate risk.",
+      "relatedConceptIds": [
+        "protocol.tagged-hashes",
+        "protocol.x-only-public-keys",
+        "protocol.taptweak",
+        "protocol.taptree",
+        "protocol.tapleaf-inclusion-proofs"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics",
+        "source.optech-schnorr-taproot-workshop",
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "Implemented in the current branch before the broader policy-bridge slice."
+    },
+    {
       "id": "decision.btctranscripts-role",
       "type": "scope",
       "subject": "source.btctranscripts-topics",
@@ -834,6 +854,55 @@
         "source.btctranscripts-topics"
       ],
       "notes": "This is a core dedupe rule for the loop."
+    },
+    {
+      "id": "decision.policy-bridge-priority",
+      "type": "bridge-concept",
+      "subject": "protocol.consensus-vs-policy",
+      "status": "resolved",
+      "rationale": "The next bridge node after the Taproot-internal slice should be protocol.consensus-vs-policy because it gives the existing mempool and relay branch a missing conceptual parent without duplicating existing leaves.",
+      "relatedConceptIds": [
+        "protocol.consensus-vs-policy",
+        "protocol.version-3-transaction-relay",
+        "protocol.light-client-trust-model"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy",
+        "source.mastering-bitcoin-book-map",
+        "source.bitcoinops-topics"
+      ],
+      "notes": "version-3 transaction relay and light-client trust model remain queued behind this bridge concept."
+    },
+    {
+      "id": "decision.merge-address-reuse-harms",
+      "type": "merge",
+      "subject": "privacy.address-reuse-harms",
+      "status": "resolved",
+      "rationale": "The existing privacy.address-reuse node already occupies the exact bridge position this candidate wants and already teaches the harm model.",
+      "relatedConceptIds": [
+        "privacy.address-reuse-harms",
+        "privacy.address-reuse"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map",
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Future work should refine the existing node instead of minting a duplicate."
+    },
+    {
+      "id": "decision.merge-timelock-taxonomy",
+      "type": "merge",
+      "subject": "protocol.timelock-taxonomy",
+      "status": "resolved",
+      "rationale": "protocol.timelocks already acts as the central bridge node for the absolute versus relative timelock family, so a second taxonomy wrapper would be redundant.",
+      "relatedConceptIds": [
+        "protocol.timelock-taxonomy",
+        "protocol.timelocks"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Future work should enrich protocol.timelocks copy and resources instead of adding a second node."
     }
   ]
 }
