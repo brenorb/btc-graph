@@ -89,15 +89,21 @@ body {
 .footer-mark-stack {
   position: relative;
   flex: 0 0 auto;
+  display: block;
+  line-height: 0;
 }
 
 .brand-mark-stack {
   width: 40px;
+  height: 53px;
 }
 
 .brand-mark {
-  width: 40px;
-  height: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -719,11 +725,15 @@ input {
 
 .footer-mark-stack {
   width: 30px;
+  height: 40px;
 }
 
 .footer-mark {
-  width: 30px;
-  height: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
