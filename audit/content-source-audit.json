@@ -11,15 +11,15 @@
       "sourceType": "topic-index",
       "priority": "P0",
       "scope": "Topic index covering protocol, wallet, Lightning, fee, relay, and operational concepts.",
-      "clusterStrategy": "Track major topic buckets and individual topic pages as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track the index views plus individual topic pages for canonical naming, aliases, see-also links, and primary docs.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 157,
+      "conceptsExtracted": 25,
+      "conceptsNormalized": 2,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -28,15 +28,15 @@
       "sourceType": "topic-index",
       "priority": "P0",
       "scope": "Topic index into transcript-backed technical discussions and workshops.",
-      "clusterStrategy": "Track top-level topic pages and transcript collections as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track Topics, Categories, Types, and Sources as separate provenance surfaces before drilling into individual transcript families.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 4,
+      "conceptsExtracted": 11,
+      "conceptsNormalized": 5,
+      "notes": "Use mainly for provenance and terminology normalization. Topic labels should not be imported 1:1."
     },
     {
       "id": "source.bitcoin-dev-philosophy",
@@ -45,15 +45,15 @@
       "sourceType": "article-collection",
       "priority": "P0",
       "scope": "Conceptual and systems-thinking source likely to surface bridge concepts and framing gaps.",
-      "clusterStrategy": "Track major essays or sections as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track 9 chapter-level rows first, with later splits for dense chapters 5, 7, 8, and 9.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 9,
+      "conceptsExtracted": 20,
+      "conceptsNormalized": 3,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -62,15 +62,15 @@
       "sourceType": "book-outline",
       "priority": "P0",
       "scope": "Structured chapter map for foundational and implementation-oriented concept coverage.",
-      "clusterStrategy": "Track parts, chapters, and dense section groups as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track 14 chapter rows first, grouping chapters 4 to 12 as the primary extraction surface.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 14,
+      "conceptsExtracted": 20,
+      "conceptsNormalized": 4,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -79,15 +79,15 @@
       "sourceType": "workshop",
       "priority": "P0",
       "scope": "Focused advanced curriculum around Schnorr, Taproot, and related prerequisite chains.",
-      "clusterStrategy": "Track workshop modules and linked lesson pages as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track the 12 module pages plus shared assets once per source.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 12,
+      "conceptsExtracted": 15,
+      "conceptsNormalized": 5,
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, and tapleaf inclusion proofs."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -96,18 +96,744 @@
       "sourceType": "course",
       "priority": "P0",
       "scope": "Structured educational material that may reveal curriculum-style prerequisite bundles.",
-      "clusterStrategy": "Track seasons, modules, or lessons as page clusters.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
-      "pageClustersTracked": 0,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Mandatory starting source."
+      "clusterStrategy": "Track the Introduction, Tools, Transactions, Scripts, and Taproot module groups before lesson-level expansion.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 5,
+      "conceptsExtracted": 15,
+      "conceptsNormalized": 3,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery."
     }
   ],
-  "concepts": [],
-  "edges": [],
-  "decisions": []
+  "concepts": [
+    {
+      "id": "protocol.tagged-hashes",
+      "title": "Tagged Hashes",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 0.3 Tagged Hashes",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A narrow cryptographic construction repeatedly used in Taproot and Schnorr material, distinct from generic hash functions.",
+      "candidatePrerequisites": [
+        "fundamentals.hash-functions"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.hash-functions"
+      ],
+      "prerequisiteRationale": "Learners need the base hash-function mental model before namespace-separated tagged hashing makes sense.",
+      "aliases": [
+        "tagged hashing"
+      ],
+      "tags": [
+        "taproot",
+        "schnorr",
+        "cryptography"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Likely additive and pedagogically useful across Taproot-related nodes."
+    },
+    {
+      "id": "protocol.x-only-public-keys",
+      "title": "X-Only Public Keys",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/",
+      "sourceContext": "Topics index and Taproot-related topic pages",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is a specific key representation concept that bridges Schnorr math to Taproot output keys.",
+      "candidatePrerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.schnorr-signatures"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.schnorr-signatures"
+      ],
+      "prerequisiteRationale": "The concept depends on both general key knowledge and the Schnorr/Taproot context in which x-only keys matter.",
+      "aliases": [
+        "x only pubkeys"
+      ],
+      "tags": [
+        "taproot",
+        "keys"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "High-value bridge concept with no direct current match."
+    },
+    {
+      "id": "protocol.taptweak",
+      "title": "TapTweak",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 2.2 Taptweak",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A concrete Taproot mechanism that is smaller than Taproot as a whole and useful for gap diagnosis.",
+      "candidatePrerequisites": [
+        "protocol.tagged-hashes",
+        "protocol.x-only-public-keys"
+      ],
+      "chosenPrerequisites": [
+        "protocol.tagged-hashes",
+        "protocol.x-only-public-keys"
+      ],
+      "prerequisiteRationale": "The tweak mechanism uses tagged hashes and x-only public keys directly.",
+      "aliases": [
+        "tap tweak"
+      ],
+      "tags": [
+        "taproot"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Strong additive candidate from the workshop."
+    },
+    {
+      "id": "protocol.taptree",
+      "title": "TapTree",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 2.4 Taptree",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Specific Taproot script-tree structure, distinct from generic Merkle trees and from Taproot overall.",
+      "candidatePrerequisites": [
+        "protocol.taproot",
+        "protocol.merkle-trees"
+      ],
+      "chosenPrerequisites": [
+        "protocol.taproot"
+      ],
+      "prerequisiteRationale": "TapTree is best taught as a Taproot-internal structure. Merkle-tree knowledge may be implicit in a later bridge decision.",
+      "aliases": [
+        "tap tree"
+      ],
+      "tags": [
+        "taproot",
+        "scripts"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "May imply a missing Merkle-tree bridge concept review."
+    },
+    {
+      "id": "protocol.tapleaf-inclusion-proofs",
+      "title": "TapLeaf Inclusion Proofs",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 2.4 Taptree",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A concrete proof object within script-path spends, narrower than Taproot and narrower than TapTree.",
+      "candidatePrerequisites": [
+        "protocol.taptree"
+      ],
+      "chosenPrerequisites": [
+        "protocol.taptree"
+      ],
+      "prerequisiteRationale": "The proof only makes sense after the learner understands the TapTree structure it proves against.",
+      "aliases": [
+        "tapleaf proofs"
+      ],
+      "tags": [
+        "taproot",
+        "proofs"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Likely additive and useful for script-path mental models."
+    },
+    {
+      "id": "protocol.huffman-optimized-taptrees",
+      "title": "Huffman-Optimized TapTrees",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 2.5 Huffman Construction",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is a narrow optimization concept that explains one specific design tradeoff inside Taproot trees.",
+      "candidatePrerequisites": [
+        "protocol.taptree"
+      ],
+      "chosenPrerequisites": [
+        "protocol.taptree"
+      ],
+      "prerequisiteRationale": "The optimization is about arranging TapTree leaves, so the base tree concept is direct.",
+      "aliases": [
+        "huffman taptrees"
+      ],
+      "tags": [
+        "taproot",
+        "optimization"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "medium",
+      "notes": "Advanced but likely missing in the current graph."
+    },
+    {
+      "id": "protocol.version-3-transaction-relay",
+      "title": "Version 3 Transaction Relay",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/",
+      "sourceContext": "Topics alias normalization around TRUC and version 3 relay",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is a distinct relay-policy concept that should not be collapsed into the broader package relay bucket.",
+      "candidatePrerequisites": [
+        "protocol.consensus-vs-policy",
+        "protocol.package-relay",
+        "protocol.transaction-pinning"
+      ],
+      "chosenPrerequisites": [
+        "protocol.consensus-vs-policy",
+        "protocol.transaction-pinning"
+      ],
+      "prerequisiteRationale": "The core learner need is to understand that relay policy is distinct from consensus, and that v3 exists to constrain pinning-related behavior.",
+      "aliases": [
+        "TRUC",
+        "v3 relay"
+      ],
+      "tags": [
+        "mempool",
+        "policy",
+        "relay"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "medium",
+      "notes": "Alias normalization is mandatory here because Optech names and implementation jargon vary."
+    },
+    {
+      "id": "fundamentals.validation-sovereignty",
+      "title": "Validation Sovereignty",
+      "category": "History & Governance",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/",
+      "sourceContext": "Trustlessness chapter and dont trust verify framing",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A precise learner outcome about why running or relying on validation matters, not just a broad philosophy label.",
+      "candidatePrerequisites": [
+        "fundamentals.trustlessness"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.trustlessness"
+      ],
+      "prerequisiteRationale": "It is a narrower applied consequence of trustlessness and verification culture.",
+      "aliases": [
+        "validation independence"
+      ],
+      "tags": [
+        "verification",
+        "philosophy"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "medium",
+      "notes": "Useful bridge between philosophy and node behavior."
+    },
+    {
+      "id": "protocol.consensus-vs-policy",
+      "title": "Consensus vs Policy",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/",
+      "sourceContext": "Upgrade and split-risk discussion, reinforced by policy-heavy material in Mastering Bitcoin",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A precise distinction that explains multiple later topics like relay, fee bumping, and upgrades.",
+      "candidatePrerequisites": [
+        "protocol.consensus-rules"
+      ],
+      "chosenPrerequisites": [
+        "protocol.consensus-rules"
+      ],
+      "prerequisiteRationale": "Learners need the base idea of consensus rules before contrasting them with local relay policy.",
+      "aliases": [
+        "policy vs consensus"
+      ],
+      "tags": [
+        "mempool",
+        "upgrades"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "High-value bridge concept mentioned across multiple source families."
+    },
+    {
+      "id": "privacy.address-reuse-harms",
+      "title": "Address Reuse Harms",
+      "category": "Wallets",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Wallet, privacy, and address-format clusters; reinforced by philosophy privacy chapter",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Narrow user-facing privacy consequence that is more actionable than a broad privacy umbrella.",
+      "candidatePrerequisites": [
+        "protocol.addresses-outputs",
+        "privacy.pseudonymity"
+      ],
+      "chosenPrerequisites": [
+        "protocol.addresses-outputs",
+        "privacy.pseudonymity"
+      ],
+      "prerequisiteRationale": "The harm is best understood once the learner knows what addresses are and why pseudonymity is fragile.",
+      "aliases": [
+        "address reuse risks"
+      ],
+      "tags": [
+        "privacy",
+        "wallets"
+      ],
+      "estimatedTime": "15m",
+      "confidence": "medium",
+      "notes": "Could also connect to a future change-output basics bridge concept."
+    },
+    {
+      "id": "protocol.timelock-taxonomy",
+      "title": "Timelock Taxonomy",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Authorization and transaction chapters covering CLTV, CSV, and sequence-based relative timelocks",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A useful bridge concept that organizes multiple already-existing timelock mechanisms into one mental model.",
+      "candidatePrerequisites": [
+        "protocol.timelocks",
+        "protocol.cltv-bip65",
+        "protocol.csv-bip112"
+      ],
+      "chosenPrerequisites": [
+        "protocol.timelocks"
+      ],
+      "prerequisiteRationale": "The taxonomy should hang off the existing general timelock node rather than duplicate specific mechanism nodes.",
+      "aliases": [
+        "timelock types"
+      ],
+      "tags": [
+        "scripts",
+        "contracts"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "medium",
+      "notes": "May reduce learner confusion across CLTV, CSV, and sequence semantics."
+    },
+    {
+      "id": "protocol.light-client-trust-model",
+      "title": "Light Client Trust Model",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Network and blockchain chapters covering SPV, compact block filters, and lightweight-client tradeoffs",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is a specific tradeoff concept that bridges full-node verification to lightweight client behavior.",
+      "candidatePrerequisites": [
+        "ops.run-full-node",
+        "protocol.compact-block-filters"
+      ],
+      "chosenPrerequisites": [
+        "ops.run-full-node",
+        "protocol.compact-block-filters"
+      ],
+      "prerequisiteRationale": "The trust model only makes sense once the learner can contrast full-node guarantees with filtered-client shortcuts.",
+      "aliases": [
+        "SPV trust model"
+      ],
+      "tags": [
+        "network",
+        "verification"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "medium",
+      "notes": "Likely bridge concept rather than a leaf concept."
+    },
+    {
+      "id": "security.nonce-reuse-attack",
+      "title": "Nonce Reuse Attack",
+      "category": "Security",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding",
+      "sourceContext": "Taproot module page Nonce Reuse Attack",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Specific failure mode inside Schnorr signing, small enough to diagnose as its own knowledge gap.",
+      "candidatePrerequisites": [
+        "fundamentals.schnorr-signatures"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.schnorr-signatures"
+      ],
+      "prerequisiteRationale": "The learner needs the signature flow before the nonce leakage failure is meaningful.",
+      "aliases": [
+        "reused nonce attack"
+      ],
+      "tags": [
+        "schnorr",
+        "signing"
+      ],
+      "estimatedTime": "15m",
+      "confidence": "medium",
+      "notes": "Good candidate for a concise security bridge node."
+    },
+    {
+      "id": "protocol.p2pk",
+      "title": "Pay to Public Key (P2PK)",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding",
+      "sourceContext": "Scripts module page P2PK",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Specific historical script pattern that should not be hidden inside broader script umbrella nodes.",
+      "candidatePrerequisites": [
+        "protocol.script",
+        "fundamentals.public-private-keys"
+      ],
+      "chosenPrerequisites": [
+        "protocol.script",
+        "fundamentals.public-private-keys"
+      ],
+      "prerequisiteRationale": "The spending pattern combines script basics with key-based authorization.",
+      "aliases": [
+        "pay to pubkey"
+      ],
+      "tags": [
+        "scripts",
+        "history"
+      ],
+      "estimatedTime": "15m",
+      "confidence": "medium",
+      "notes": "Potential bridge node for the script ladder from P2PK to P2SH."
+    },
+    {
+      "id": "protocol.p2ms",
+      "title": "Pay to Multisig (P2MS)",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding",
+      "sourceContext": "Scripts module page P2MS",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Specific bare multisig pattern, narrower than generic multisig and distinct from P2SH-based multisig.",
+      "candidatePrerequisites": [
+        "protocol.p2pk",
+        "custody.multisig"
+      ],
+      "chosenPrerequisites": [
+        "protocol.p2pk",
+        "custody.multisig"
+      ],
+      "prerequisiteRationale": "The learner benefits from understanding both single-key script patterns and multisig policy intent.",
+      "aliases": [
+        "bare multisig"
+      ],
+      "tags": [
+        "scripts",
+        "multisig"
+      ],
+      "estimatedTime": "15m",
+      "confidence": "medium",
+      "notes": "Useful historical bridge that current graph may be missing."
+    },
+    {
+      "id": "protocol.cluster-mempool",
+      "title": "Cluster Mempool",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.btctranscripts-topics",
+      "sourceUrl": "https://btctranscripts.com/topics",
+      "sourceContext": "Topics index cluster mempool",
+      "existingNodeId": "protocol.cluster-mempool",
+      "status": "existing",
+      "atomicityRationale": "The source confirms this is already a stable concept in the graph, so the work here is provenance and aliasing rather than a new node.",
+      "candidatePrerequisites": [],
+      "chosenPrerequisites": [],
+      "prerequisiteRationale": "",
+      "aliases": [
+        "cluster mempool"
+      ],
+      "tags": [
+        "mempool"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Duplicate detected. Use the source as enrichment only."
+    },
+    {
+      "id": "privacy.silent-payments",
+      "title": "Silent Payments",
+      "category": "Wallets",
+      "sourceId": "source.btctranscripts-topics",
+      "sourceUrl": "https://btctranscripts.com/topics",
+      "sourceContext": "Topics index silent payments",
+      "existingNodeId": "privacy.silent-payments",
+      "status": "existing",
+      "atomicityRationale": "Already present locally, so the source should improve aliases, provenance, or resources rather than create a new node.",
+      "candidatePrerequisites": [],
+      "chosenPrerequisites": [],
+      "prerequisiteRationale": "",
+      "aliases": [
+        "silent payments"
+      ],
+      "tags": [
+        "privacy"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Duplicate detected."
+    },
+    {
+      "id": "protocol.package-relay",
+      "title": "Package Relay",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.btctranscripts-topics",
+      "sourceUrl": "https://btctranscripts.com/topics",
+      "sourceContext": "Topics index package relay",
+      "existingNodeId": "protocol.package-relay",
+      "status": "existing",
+      "atomicityRationale": "Already in the graph. The new work is to map related sources and separate it cleanly from v3 relay and cluster mempool.",
+      "candidatePrerequisites": [],
+      "chosenPrerequisites": [],
+      "prerequisiteRationale": "",
+      "aliases": [
+        "package relay"
+      ],
+      "tags": [
+        "relay"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Duplicate detected."
+    },
+    {
+      "id": "dev.miniscript",
+      "title": "Miniscript",
+      "category": "Wallets",
+      "sourceId": "source.btctranscripts-topics",
+      "sourceUrl": "https://btctranscripts.com/topics",
+      "sourceContext": "Topics index Miniscript",
+      "existingNodeId": "dev.miniscript",
+      "status": "existing",
+      "atomicityRationale": "Already represented. The source is useful for enrichment and related-source mapping.",
+      "candidatePrerequisites": [],
+      "chosenPrerequisites": [],
+      "prerequisiteRationale": "",
+      "aliases": [
+        "miniscript"
+      ],
+      "tags": [
+        "wallet policy"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Duplicate detected."
+    },
+    {
+      "id": "lightning.bolt12-offers",
+      "title": "BOLT12 Offers",
+      "category": "Extension Systems",
+      "sourceId": "source.btctranscripts-topics",
+      "sourceUrl": "https://btctranscripts.com/topics",
+      "sourceContext": "Topics index Offers",
+      "existingNodeId": "lightning.bolt12-offers",
+      "status": "existing",
+      "atomicityRationale": "Existing node confirmed. The source is valuable for terminology normalization from Offers to BOLT12 Offers.",
+      "candidatePrerequisites": [],
+      "chosenPrerequisites": [],
+      "prerequisiteRationale": "",
+      "aliases": [
+        "offers"
+      ],
+      "tags": [
+        "lightning"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Duplicate detected."
+    }
+  ],
+  "edges": [
+    {
+      "from": "protocol.tagged-hashes",
+      "to": "protocol.taptweak",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "TapTweak is defined using tagged hashes directly in Taproot key tweaking.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.x-only-public-keys",
+      "to": "protocol.taptweak",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "TapTweak operates on x-only public keys in the Taproot construction.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.taptree",
+      "to": "protocol.tapleaf-inclusion-proofs",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The inclusion proof only makes sense after the learner understands the TapTree structure.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.taptree",
+      "to": "protocol.huffman-optimized-taptrees",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Huffman optimization is a refinement of how TapTree leaves are arranged.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.consensus-vs-policy",
+      "to": "protocol.version-3-transaction-relay",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners should understand policy as distinct from consensus before v3 relay design tradeoffs.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Bridge edge inferred from policy-heavy source overlap."
+    },
+    {
+      "from": "fundamentals.trustlessness",
+      "to": "fundamentals.validation-sovereignty",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Validation sovereignty is an applied consequence of trustlessness and verification culture.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Bridge edge inferred from philosophy sequencing."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision.optech-topics-role",
+      "type": "scope",
+      "subject": "source.bitcoinops-topics",
+      "status": "resolved",
+      "rationale": "Use Bitcoin Optech Topics as a canonical naming registry, alias map, related-topic graph, and update feed rather than as a bulk node importer.",
+      "relatedConceptIds": [
+        "protocol.x-only-public-keys",
+        "protocol.version-3-transaction-relay"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Heavy existing reuse means most value is in dedupe and alias normalization."
+    },
+    {
+      "id": "decision.optech-workshop-gap-cluster",
+      "type": "bridge-concept",
+      "subject": "taproot-internal-bridge-concepts",
+      "status": "resolved",
+      "rationale": "Prioritize missing Taproot bridge nodes from the workshop instead of broad Taproot duplicates.",
+      "relatedConceptIds": [
+        "protocol.tagged-hashes",
+        "protocol.taptweak",
+        "protocol.taptree",
+        "protocol.tapleaf-inclusion-proofs",
+        "protocol.huffman-optimized-taptrees"
+      ],
+      "relatedSourceIds": [
+        "source.optech-schnorr-taproot-workshop"
+      ],
+      "notes": "This source is narrower but pedagogically stronger than the general topics index."
+    },
+    {
+      "id": "decision.btctranscripts-role",
+      "type": "scope",
+      "subject": "source.btctranscripts-topics",
+      "status": "resolved",
+      "rationale": "Use BTC Transcripts for provenance, source-family mapping, and terminology normalization before minting new nodes.",
+      "relatedConceptIds": [
+        "protocol.cluster-mempool",
+        "privacy.silent-payments",
+        "protocol.package-relay",
+        "dev.miniscript",
+        "lightning.bolt12-offers"
+      ],
+      "relatedSourceIds": [
+        "source.btctranscripts-topics"
+      ],
+      "notes": "The topic index mixes concept nodes with source-format artifacts and organizations."
+    },
+    {
+      "id": "decision.decoding-role",
+      "type": "scope",
+      "subject": "source.bitcoindevs-decoding",
+      "status": "resolved",
+      "rationale": "Use Decoding as a sequencing and prerequisite-ordering source first, and only mint nodes from narrow lesson pages that survive dedupe.",
+      "relatedConceptIds": [
+        "protocol.p2pk",
+        "protocol.p2ms",
+        "security.nonce-reuse-attack"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "The strongest value is clean educational boundaries and beginner-to-intermediate ordering."
+    },
+    {
+      "id": "decision.bdp-containerization",
+      "type": "split",
+      "subject": "source.bitcoin-dev-philosophy",
+      "status": "resolved",
+      "rationale": "Track the source by chapter containers rather than turning chapter titles into nodes. Split dense chapters later only when needed.",
+      "relatedConceptIds": [
+        "fundamentals.validation-sovereignty",
+        "protocol.consensus-vs-policy"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Broad philosophy headers are too umbrella-like for direct ingestion."
+    },
+    {
+      "id": "decision.mastering-bitcoin-containerization",
+      "type": "split",
+      "subject": "source.mastering-bitcoin-book-map",
+      "status": "resolved",
+      "rationale": "Track Mastering Bitcoin by chapter first and treat chapters as extraction containers, not node candidates.",
+      "relatedConceptIds": [
+        "privacy.address-reuse-harms",
+        "protocol.timelock-taxonomy",
+        "protocol.light-client-trust-model"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "The book already has heavy overlap in current resources, so the main value is bridge concepts and prerequisite ladders."
+    },
+    {
+      "id": "decision.alias-normalization-before-ingestion",
+      "type": "merge",
+      "subject": "source-alias-normalization",
+      "status": "resolved",
+      "rationale": "Normalize aliases before adding nodes so jargon variants such as TRUC versus version 3 transaction relay and Offers versus BOLT12 Offers do not create duplicates.",
+      "relatedConceptIds": [
+        "protocol.version-3-transaction-relay",
+        "lightning.bolt12-offers"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics",
+        "source.btctranscripts-topics"
+      ],
+      "notes": "This is a core dedupe rule for the loop."
+    }
+  ]
 }
