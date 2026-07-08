@@ -61,7 +61,7 @@ Use this loop when the goal is to expand `btc-graph` from educational sources wi
   - candidate aliases
   - candidate tags
   - candidate estimated time
-  - 1 to 3 high-signal resource candidates
+  - final resource plan: 1 to 3 high-signal resources, with at least one Amazon-linked book that will ship on the node
   - confidence
   - notes
 
@@ -76,7 +76,7 @@ Use this loop when the goal is to expand `btc-graph` from educational sources wi
 - dedupe aggressively:
   - before adding any node, check whether the concept already exists under a different title, alias, wording, scope, or neighboring prerequisite pattern
   - compare every candidate against existing nodes by title, aliases, description, and surrounding prerequisites
-  - if a concept already exists, improve its metadata or resources instead of cloning it
+  - if a concept already exists, improve that node's metadata or resources instead of cloning it, and do not leave it without an Amazon-linked book resource
   - if two candidates are near-duplicates, merge them and preserve useful aliases
   - record every merge, split, or exclusion in `Decisions`
 
@@ -100,6 +100,7 @@ Use this loop when the goal is to expand `btc-graph` from educational sources wi
 - quality bar:
   - favor canonical and long-lived educational sources
   - keep resources curated, not exhaustive
+  - every node touched in the run, whether new or existing, must end with at least one Amazon-linked book resource; if a node is already at the resource cap, replace the weakest non-book resource instead of adding another item
   - write concise descriptions
   - optimize for helping a learner diagnose gaps from zero to hero
   - optimize equally for graph completeness and graph teachability
