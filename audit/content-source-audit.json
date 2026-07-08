@@ -103,8 +103,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
       "conceptsExtracted": 15,
-      "conceptsNormalized": 5,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk and security.nonce-reuse-attack."
+      "conceptsNormalized": 6,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, and protocol.p2pkh."
     }
   ],
   "concepts": [
@@ -579,6 +579,38 @@
       "notes": "Useful historical bridge that current graph may be missing."
     },
     {
+      "id": "protocol.p2pkh",
+      "title": "Pay to Public Key Hash (P2PKH)",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding",
+      "sourceContext": "Scripts module page P2PKH",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "Specific legacy output template that is narrower than broad address or script overviews and distinct from both P2PK and P2SH.",
+      "candidatePrerequisites": [
+        "protocol.p2pk",
+        "fundamentals.hash-functions"
+      ],
+      "chosenPrerequisites": [
+        "protocol.p2pk",
+        "fundamentals.hash-functions"
+      ],
+      "prerequisiteRationale": "The learner benefits from first seeing the simpler direct-public-key output and then adding the hash-based locking step that differentiates P2PKH.",
+      "aliases": [
+        "p2pkh",
+        "pay to public key hash"
+      ],
+      "tags": [
+        "scripts",
+        "outputs",
+        "addresses"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the next Decoding-derived output-template slice."
+    },
+    {
       "id": "protocol.cluster-mempool",
       "title": "Cluster Mempool",
       "category": "Network, Relay & Client Sync",
@@ -802,6 +834,24 @@
       "rationale": "The nonce-reuse failure only makes sense after the learner understands the Schnorr signing flow that produces the nonce and signature pair.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Chosen as a narrow additive security slice without bundling it to custody-side defenses."
+    },
+    {
+      "from": "protocol.p2pk",
+      "to": "protocol.p2pkh",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "P2PKH is easiest to understand as the hashed-public-key refinement of a direct public-key output.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Chosen to preserve the output-template ladder without repeating the broader Script prerequisite directly."
+    },
+    {
+      "from": "fundamentals.hash-functions",
+      "to": "protocol.p2pkh",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Hash-based locking only makes sense once the learner understands what a hash commits to and why it can stand in for the public key until spend time.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Required to keep the node about public-key hashing rather than just script syntax."
     }
   ],
   "decisions": [
@@ -1116,6 +1166,24 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "Kept additive and separate from security.exfiltration-resistant-signing so the graph distinguishes the failure mode from the defense pattern."
+    },
+    {
+      "id": "decision.decoding-p2pkh-slice",
+      "type": "scope",
+      "subject": "protocol.p2pkh",
+      "status": "resolved",
+      "rationale": "The next clean Decoding-derived output-template slice is protocol.p2pkh. It fills an important historical and conceptual gap between direct public-key locking and later script-hash patterns without collapsing into wallet UX or broad address-format overviews.",
+      "relatedConceptIds": [
+        "protocol.p2pkh",
+        "protocol.p2pk",
+        "fundamentals.hash-functions",
+        "protocol.pay-to-script-hash",
+        "protocol.p2ms"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "This does not resolve the protocol-side bridge for protocol.p2ms by itself. The likely next comparison remains protocol.op-checkmultisig versus protocol.p2ms directly."
     }
   ]
 }
