@@ -17,9 +17,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
-      "conceptsExtracted": 26,
-      "conceptsNormalized": 6,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, and dev.taproot-psbt-fields."
+      "conceptsExtracted": 27,
+      "conceptsNormalized": 7,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, and protocol.accidental-confiscation."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -374,6 +374,38 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a narrow wallet-development bridge between generic PSBT workflows and Taproot-specific signing metadata."
+    },
+    {
+      "id": "protocol.accidental-confiscation",
+      "title": "Accidental Confiscation",
+      "category": "History & Governance",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/accidental-confiscation/",
+      "sourceContext": "Optech topic page on soft-fork designs that can accidentally make old funds unspendable",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific upgrade-risk failure mode about spendability loss under new soft-fork restrictions, not a broad activation or governance wrapper.",
+      "candidatePrerequisites": [
+        "protocol.softfork-hardfork",
+        "protocol.chain-split-risk",
+        "protocol.standardness-policy"
+      ],
+      "chosenPrerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "prerequisiteRationale": "Learners need the soft-fork restriction model before this failure mode makes sense. The chain-split and standardness-policy branches add useful context but are not direct prerequisites for the core concept.",
+      "aliases": [
+        "confiscatory soft fork risk",
+        "soft fork confiscation"
+      ],
+      "tags": [
+        "softforks",
+        "upgrades",
+        "scripts"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as a narrow upgrade-risk leaf after protocol.chain-split-risk, without forcing policy or activation-history rewires."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -955,6 +987,15 @@
       "notes": "The direct dev.psbt-v2 edge was intentionally dropped because BIP371 applies to PSBTv0 and PSBTv2."
     },
     {
+      "from": "protocol.softfork-hardfork",
+      "to": "protocol.accidental-confiscation",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Accidental confiscation is a failure mode caused by new soft-fork restrictions, so learners need the soft-fork compatibility model before the risk is intelligible.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct edge chosen over chain-split-risk and standardness-policy because those branches add context but are not required for the core failure mode."
+    },
+    {
       "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
@@ -1414,6 +1455,24 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Implemented in the current branch after protocol.tapscript as the next narrow Taproot-adjacent wallet-development slice. The direct dev.psbt-v2 edge was dropped because BIP371 applies to PSBTv0 and PSBTv2."
+    },
+    {
+      "id": "decision.accidental-confiscation-slice",
+      "type": "scope",
+      "subject": "protocol.accidental-confiscation",
+      "status": "resolved",
+      "rationale": "The cleanest next upgrade-risk slice from the audited source set is protocol.accidental-confiscation. It captures one specific soft-fork failure mode without expanding back into the broader activation-mechanism or governance-history wrappers already represented elsewhere in the graph.",
+      "relatedConceptIds": [
+        "protocol.accidental-confiscation",
+        "protocol.softfork-hardfork",
+        "protocol.chain-split-risk",
+        "protocol.standardness-policy",
+        "history.user-activated-soft-fork"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Chosen over a broader soft-fork-activation wrapper because accidental confiscation is narrower, source-native, and easier to place without duplicating versionbits and activation-history leaves."
     },
     {
       "id": "decision.decoding-script-history-slice",

@@ -9571,6 +9571,54 @@
       ]
     },
     {
+      "id": "protocol.accidental-confiscation",
+      "title": "Accidental Confiscation",
+      "description": "Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Accidental Confiscation",
+          "url": "https://bitcoinops.org/en/topics/accidental-confiscation/",
+          "notes": "Canonical source for the risk model, including reserved upgrade features, presigned transactions, and committed scripts."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Soft Fork Activation",
+          "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+          "notes": "Broader activation context for why new consensus restrictions can create coordination and safety failures."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Consensus Cleanup Soft Fork",
+          "url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+          "notes": "Concrete example of upgrade discussions where old feature usage and backward compatibility become spendability concerns."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Long-form history of why activation design, backward compatibility, and consensus safety have social and economic consequences.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "softforks",
+        "upgrades",
+        "scripts"
+      ],
+      "aliases": [
+        "confiscatory soft fork risk",
+        "soft fork confiscation"
+      ]
+    },
+    {
       "id": "protocol.adaptor-signatures",
       "title": "Adaptor Signatures",
       "description": "Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.",

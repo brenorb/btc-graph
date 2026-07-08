@@ -103,7 +103,8 @@ Extension Systems (47 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (24 concepts)
+History & Governance (25 concepts)
+- Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
 - Bitcoin as Social Technology: Bitcoin works through social consensus around rule enforcement, not just code execution. Like contracts, the social layer determines legitimacy when disputes or edge cases appear.
