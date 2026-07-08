@@ -9643,6 +9643,44 @@
       ]
     },
     {
+      "id": "protocol.consensus-vs-policy",
+      "title": "Consensus vs Policy",
+      "description": "Consensus rules determine whether a block or transaction is valid for the whole network, while policy rules determine what an individual node will relay, mine, or keep in its mempool. A transaction can be consensus-valid yet still be non-standard or locally rejected by policy.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.consensus-rules"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Hardcoded Consensus Values",
+          "url": "https://bitcoincore.academy/hardcoded-consensus-values.html",
+          "notes": "Clear contrast between immutable consensus validation and implementation-specific rule boundaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Lifecycle",
+          "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+          "notes": "Shows where local relay and admission policy diverge from raw consensus validity."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Practical transaction relay context for understanding standardness and local node policy."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "consensus",
+        "policy",
+        "mempool"
+      ],
+      "aliases": [
+        "policy vs consensus"
+      ]
+    },
+    {
       "id": "protocol.covenants",
       "title": "Bitcoin Covenants",
       "description": "Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.",
@@ -11067,6 +11105,76 @@
       ]
     },
     {
+      "id": "protocol.tagged-hashes",
+      "title": "Tagged Hashes",
+      "description": "Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Canonical definition of the tagged hashing construction used by Schnorr signatures."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 0.3 introduces tagged hashes in the Taproot preparation sequence."
+        },
+        {
+          "type": "article",
+          "title": "Decoding Bitcoin",
+          "url": "https://bitcoindevs.xyz/decoding",
+          "notes": "Taproot module includes a learner-friendly tagged-hashes lesson in a broader prerequisite path."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "schnorr",
+        "cryptography"
+      ],
+      "aliases": [
+        "tagged hashing"
+      ]
+    },
+    {
+      "id": "protocol.tapleaf-inclusion-proofs",
+      "title": "TapLeaf Inclusion Proofs",
+      "description": "TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptree"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Formal witness rules for proving a tapleaf was part of the committed TapTree."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.4 walks through spending with one script and providing proof it was in the committed tree."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "proofs",
+        "scripts"
+      ],
+      "aliases": [
+        "tapleaf proofs"
+      ]
+    },
+    {
       "id": "protocol.taproot",
       "title": "Taproot",
       "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
@@ -11111,6 +11219,85 @@
       ],
       "aliases": [
         "taproot upgrade"
+      ]
+    },
+    {
+      "id": "protocol.taptree",
+      "title": "TapTree",
+      "description": "A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptweak"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Defines Taproot script tree commitments and script-path witness structure."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.4 demonstrates constructing a TapTree and spending via one revealed script."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Taproot",
+          "url": "https://bitcoinops.org/en/topics/taproot/",
+          "notes": "Higher-level context for why Taproot script trees improve privacy and flexibility."
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "taproot",
+        "scripts",
+        "merkle"
+      ],
+      "aliases": [
+        "taptree",
+        "tap tree"
+      ]
+    },
+    {
+      "id": "protocol.taptweak",
+      "title": "TapTweak",
+      "description": "TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.tagged-hashes",
+        "protocol.x-only-public-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Canonical definition of Taproot output key tweaking and script commitments."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.2 explains how key tweaks commit to arbitrary data in Taproot outputs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Taproot",
+          "url": "https://bitcoinops.org/en/topics/taproot/",
+          "notes": "Practical ecosystem context for where TapTweak fits inside deployed Taproot usage."
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "taproot",
+        "keys",
+        "scripts"
+      ],
+      "aliases": [
+        "tap tweak"
       ]
     },
     {
@@ -11618,6 +11805,45 @@
       "aliases": [
         "bip339",
         "witness txid relay"
+      ]
+    },
+    {
+      "id": "protocol.x-only-public-keys",
+      "title": "X-Only Public Keys",
+      "description": "X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.schnorr-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: X-only public keys",
+          "url": "https://bitcoinops.org/en/topics/x-only-public-keys/",
+          "notes": "Focused explanation of x-only encoding, parity constraints, and Taproot usage."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Defines the x-only key format used by Bitcoin Schnorr signatures."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Shows how x-only keys appear in Taproot internal keys and output keys."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "keys",
+        "schnorr"
+      ],
+      "aliases": [
+        "x only pubkeys"
       ]
     },
     {

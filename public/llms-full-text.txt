@@ -149,7 +149,7 @@ Mining (19 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (44 concepts)
+Network, Relay & Client Sync (45 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -162,6 +162,7 @@ Network, Relay & Client Sync (44 concepts)
 - Compact Block Filters: Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.
 - Compact Block Relay: Bandwidth-efficient block propagation using short transaction identifiers.
 - Compact Blocks vs Compact Filters: Operational differences between block propagation optimization and lightweight-client block filtering protocols.
+- Consensus vs Policy: Consensus rules determine whether a block or transaction is valid for the whole network, while policy rules determine what an individual node will relay, mine, or keep in its mempool. A transaction can be consensus-valid yet still be non-standard or locally rejected by policy.
 - Distributed Systems: Replication, fault tolerance, and coordination in decentralized networks.
 - DNS Seeds: Bootstrap mechanism that gives new nodes initial peers before ongoing address gossip takes over.
 - Dust Policy: Policy thresholds for economically unspendable outputs and their impact on transaction construction.
@@ -195,7 +196,7 @@ Network, Relay & Client Sync (44 concepts)
 - Verify Node Sync: Validation checkpoints and trust-minimized sync checks.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (48 concepts)
+Protocol & Consensus (53 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
@@ -234,8 +235,12 @@ Protocol & Consensus (48 concepts)
 - Sequence Locks (BIP 68): Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.
 - SIGHASH Flags: Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.
 - SIGHASH_ANYPREVOUT: ANYPREVOUT changes signature commitment semantics so updates can bind less history. It is a key enabler for eltoo-style channel update protocols.
+- Tagged Hashes: Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.
+- TapLeaf Inclusion Proofs: TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.
 - Taproot: Protocol upgrade enabling more private and efficient key/script spending conditions.
 - Taproot Annex: The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.
+- TapTree: A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.
+- TapTweak: TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.
 - TLUV Proposal: TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.
 - Transaction Confirmations: How confirmation depth affects settlement confidence for different payment risk profiles.
 - Transaction Lifecycle: From creation and propagation to confirmation and settlement.
@@ -244,6 +249,7 @@ Protocol & Consensus (48 concepts)
 - TXHASH Proposal: TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.
 - UTXO Model: State model based on spendable outputs instead of account balances.
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
+- X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
 Security (51 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.

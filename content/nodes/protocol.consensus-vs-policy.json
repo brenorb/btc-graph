@@ -1,0 +1,38 @@
+{
+  "id": "protocol.consensus-vs-policy",
+  "title": "Consensus vs Policy",
+  "description": "Consensus rules determine whether a block or transaction is valid for the whole network, while policy rules determine what an individual node will relay, mine, or keep in its mempool. A transaction can be consensus-valid yet still be non-standard or locally rejected by policy.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "protocol.consensus-rules"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Hardcoded Consensus Values",
+      "url": "https://bitcoincore.academy/hardcoded-consensus-values.html",
+      "notes": "Clear contrast between immutable consensus validation and implementation-specific rule boundaries."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Mempool Lifecycle",
+      "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+      "notes": "Shows where local relay and admission policy diverge from raw consensus validity."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Practical transaction relay context for understanding standardness and local node policy."
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "consensus",
+    "policy",
+    "mempool"
+  ],
+  "aliases": [
+    "policy vs consensus"
+  ]
+}

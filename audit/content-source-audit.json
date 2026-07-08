@@ -368,7 +368,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "Highest-priority next add after the Taproot-internal slice. This is the cleanest conceptual parent for the existing policy and relay cluster."
+      "notes": "Implemented in the current branch after the Taproot-internal slice. This is the cleanest conceptual parent for the existing policy and relay cluster."
     },
     {
       "id": "privacy.address-reuse-harms",
