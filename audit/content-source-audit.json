@@ -102,9 +102,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
-      "conceptsExtracted": 15,
-      "conceptsNormalized": 9,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, protocol.p2ms, and protocol.bare-multisig-standardness."
+      "conceptsExtracted": 16,
+      "conceptsNormalized": 10,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
     }
   ],
   "concepts": [
@@ -471,6 +471,38 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a clean descriptor-side Taproot leaf without reopening PSBT transport or MuSig workflow rewires."
+    },
+    {
+      "id": "protocol.musig",
+      "title": "MuSig",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding/musig",
+      "sourceContext": "Taproot module page MuSig, reinforced by the Optech MuSig topic page and related BTC Transcripts discussions",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "MuSig is one specific aggregated-signature protocol, narrower than generic threshold signatures and narrower than downstream MuSig2 descriptor workflows.",
+      "candidatePrerequisites": [
+        "fundamentals.schnorr-signatures",
+        "custody.multisig",
+        "protocol.taproot"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.schnorr-signatures"
+      ],
+      "prerequisiteRationale": "Learners need the Schnorr signature model first. Wallet-level multisig and Taproot are useful comparison or deployment contexts, but they are not required to make the core aggregation concept intelligible.",
+      "aliases": [
+        "musig",
+        "aggregated signatures"
+      ],
+      "tags": [
+        "schnorr",
+        "multisig",
+        "aggregation"
+      ],
+      "estimatedTime": "50m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the next shared Decoding, Optech, and BTC Transcripts slice without broadening into threshold-signature umbrella material or MuSig2-specific wallet rewires."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -1212,6 +1244,15 @@
       "rationale": "This node is a concrete application of standard transaction policy, so the general standardness concept should come first.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Policy-boundary prerequisite inherited through the existing mempool-policy branch."
+    },
+    {
+      "from": "fundamentals.schnorr-signatures",
+      "to": "protocol.musig",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "MuSig is a Schnorr aggregation protocol, so learners need the underlying Schnorr key and signature model before the combined-key protocol makes sense.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Direct parent kept narrow; wallet-level multisig and Taproot remain context rather than prerequisites."
     }
   ],
   "decisions": [
@@ -1710,6 +1751,25 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "Kept protocol.consensus-vs-policy out of the direct prerequisites because that boundary is already inherited through protocol.standardness-policy."
+    },
+    {
+      "id": "decision.musig-aggregation-slice",
+      "type": "scope",
+      "subject": "protocol.musig",
+      "status": "resolved",
+      "rationale": "The cleanest next shared Decoding, Optech, and transcript-backed slice is protocol.musig. It captures aggregated Schnorr multisignatures directly without drifting into threshold-signature generality, Taproot wrapper material, or MuSig2-specific descriptor workflows.",
+      "relatedConceptIds": [
+        "protocol.musig",
+        "fundamentals.schnorr-signatures",
+        "custody.musig2-descriptors",
+        "protocol.taproot"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding",
+        "source.bitcoinops-topics",
+        "source.btctranscripts-topics"
+      ],
+      "notes": "Left custody.musig2-descriptors unchanged for now so this stays an additive protocol concept slice instead of reopening older wallet-workflow prerequisite wiring."
     }
   ]
 }

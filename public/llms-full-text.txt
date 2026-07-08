@@ -201,7 +201,7 @@ Network, Relay & Client Sync (48 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (60 concepts)
+Protocol & Consensus (61 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -227,6 +227,7 @@ Protocol & Consensus (60 concepts)
 - Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.
 - MATT and CCV: MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.
 - Median Time Past: Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.
+- MuSig: MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
 - OP_CHECKMULTISIG: Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.
 - OP_CHECKSIGADD: OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.
