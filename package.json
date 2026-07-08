@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build:data": "node scripts/build-graph.mjs",
+    "build:content-audit": "node scripts/build-content-source-audit.mjs --out outputs/content-source-audit/btc-graph-content-source-audit.xlsx",
     "check:links": "node scripts/check-links.mjs",
     "build": "npm run build:data && vite build",
     "preview": "vite preview",
