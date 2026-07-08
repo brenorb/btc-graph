@@ -199,7 +199,7 @@ Network, Relay & Client Sync (48 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (55 concepts)
+Protocol & Consensus (57 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
@@ -224,11 +224,13 @@ Protocol & Consensus (55 concepts)
 - MATT and CCV: MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.
 - Median Time Past: Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
+- OP_CHECKMULTISIG: Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.
 - OP_CHECKSIGADD: OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.
 - OP_CHECKSIGFROMSTACK: OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.
 - OP_CHECKTEMPLATEVERIFY (CTV): CTV restricts spending transactions to a committed template hash. This enables deterministic spending trees and scalable pre-planned transaction structures.
 - OP_CODESEPARATOR: OP_CODESEPARATOR changes the script segment committed by signature hashing. Its behavior is subtle and historically important for advanced script correctness.
 - OP_RETURN Outputs: Provably unspendable script outputs used for bounded data commitments on-chain.
+- Pay-to-Multisig (P2MS): Legacy bare multisig output template that places multiple public keys and an m-of-n threshold directly in the locking script. It spends through OP_CHECKMULTISIG and predates the more flexible P2SH-based multisig pattern.
 - Pay-to-Public-Key (P2PK): Legacy output type that locks coins directly to a full public key and spends them with a matching signature. It is simpler than P2PKH, but it reveals the recipient public key at receive time and mainly matters today as an early script template reference point.
 - Pay-to-Public-Key-Hash (P2PKH): Legacy output type that locks coins to a hash of the recipient public key instead of the full key itself. It hides the public key until spend time and became the dominant template for classic Bitcoin addresses and script-based payments.
 - Pay-to-Script-Hash (P2SH): Output type where spending conditions are committed as a script hash and revealed at spend time.

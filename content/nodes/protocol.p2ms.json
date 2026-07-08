@@ -1,0 +1,42 @@
+{
+  "id": "protocol.p2ms",
+  "title": "Pay-to-Multisig (P2MS)",
+  "description": "Legacy bare multisig output template that places multiple public keys and an m-of-n threshold directly in the locking script. It spends through OP_CHECKMULTISIG and predates the more flexible P2SH-based multisig pattern.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.op-checkmultisig"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "P2MS - Pay To Multisig",
+      "url": "https://bitcoindevs.xyz/decoding/p2ms",
+      "notes": "Decoding walkthrough for the bare multisig locking script, unlocking script, and legacy spending flow."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Canonical multisig script reference covering the m-of-n template and how it differs from P2SH multisig."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Script-level reference for legacy multisig templates, stack evaluation, and spending conditions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "scripts",
+    "multisig",
+    "outputs"
+  ],
+  "aliases": [
+    "p2ms",
+    "bare multisig"
+  ]
+}

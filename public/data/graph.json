@@ -11092,6 +11092,47 @@
       ]
     },
     {
+      "id": "protocol.op-checkmultisig",
+      "title": "OP_CHECKMULTISIG",
+      "description": "Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding walkthrough showing how OP_CHECKMULTISIG appears in bare multisig locking scripts and why OP_0 is required when spending them."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical description of multisig scripts, the extra stack item bug, and the standard script form used with OP_CHECKMULTISIG."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for opcode behavior, stack evaluation, and legacy multisig spending patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "opcodes",
+        "scripts",
+        "multisig"
+      ],
+      "aliases": [
+        "checkmultisig"
+      ]
+    },
+    {
       "id": "protocol.op-checksigadd",
       "title": "OP_CHECKSIGADD",
       "description": "OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.",
@@ -11291,6 +11332,48 @@
       "aliases": [
         "nulldata outputs",
         "data commitments"
+      ]
+    },
+    {
+      "id": "protocol.p2ms",
+      "title": "Pay-to-Multisig (P2MS)",
+      "description": "Legacy bare multisig output template that places multiple public keys and an m-of-n threshold directly in the locking script. It spends through OP_CHECKMULTISIG and predates the more flexible P2SH-based multisig pattern.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.op-checkmultisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding walkthrough for the bare multisig locking script, unlocking script, and legacy spending flow."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical multisig script reference covering the m-of-n template and how it differs from P2SH multisig."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for legacy multisig templates, stack evaluation, and spending conditions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "scripts",
+        "multisig",
+        "outputs"
+      ],
+      "aliases": [
+        "p2ms",
+        "bare multisig"
       ]
     },
     {
