@@ -80,6 +80,8 @@ describe("writeNodeInfoPages", () => {
     expect(html).toContain("../../fundamentals.digital-signatures/info/");
     expect(html).toContain("../../../?selected=fundamentals.ecdsa");
     expect(html).toContain('href="/node-info-page.css"');
+    expect(html).toContain('href="/safari-pinned-tab.svg"');
+    expect(html).toContain('content="/browserconfig.xml"');
     expect(html).toContain("https://btc-graph.brenorb.com/nodes/fundamentals.ecdsa/info/");
     expect(html).toContain("Browse the concept library");
     expect(html).toContain("ECDSA primer");

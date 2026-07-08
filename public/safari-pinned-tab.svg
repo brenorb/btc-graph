@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30">
+    <line x1="82" y1="84" x2="82" y2="428" />
+    <line x1="82" y1="84" x2="252" y2="84" />
+    <line x1="82" y1="212" x2="174" y2="212" />
+    <line x1="82" y1="340" x2="242" y2="340" />
+    <line x1="82" y1="428" x2="288" y2="428" />
+    <line x1="174" y1="212" x2="252" y2="84" />
+    <line x1="174" y1="212" x2="306" y2="298" />
+    <line x1="252" y1="84" x2="378" y2="250" />
+    <line x1="242" y1="340" x2="306" y2="298" />
+    <line x1="242" y1="340" x2="308" y2="426" />
+    <line x1="308" y1="426" x2="378" y2="250" />
+    <line x1="306" y1="298" x2="378" y2="298" />
+    <path d="M286 84c110 0 148 60 152 128" />
+    <path d="M378 298c48 24 74 72 74 128 0 52-22 98-62 128" />
+  </g>
+  <g fill="#000">
+    <circle cx="82" cy="84" r="24" />
+    <circle cx="82" cy="212" r="24" />
+    <circle cx="82" cy="340" r="24" />
+    <circle cx="82" cy="428" r="24" />
+    <circle cx="174" cy="212" r="24" />
+    <circle cx="252" cy="84" r="24" />
+    <circle cx="242" cy="340" r="24" />
+    <circle cx="306" cy="298" r="24" />
+    <circle cx="308" cy="426" r="24" />
+    <circle cx="378" cy="250" r="24" />
+  </g>
+</svg>

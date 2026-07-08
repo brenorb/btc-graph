@@ -188,7 +188,10 @@ function renderHtmlPage({
     <link rel="icon" type="image/png" sizes="32x32" href="${escapeXml(buildAssetPath("favicon-32x32.png"))}" />
     <link rel="icon" type="image/png" sizes="16x16" href="${escapeXml(buildAssetPath("favicon-16x16.png"))}" />
     <link rel="apple-touch-icon" sizes="180x180" href="${escapeXml(buildAssetPath("apple-touch-icon.png"))}" />
+    <link rel="mask-icon" href="${escapeXml(buildAssetPath("safari-pinned-tab.svg"))}" color="#0f766e" />
     <link rel="manifest" href="${escapeXml(buildAssetPath("site.webmanifest"))}" />
+    <meta name="msapplication-TileColor" content="#0f766e" />
+    <meta name="msapplication-config" content="${escapeXml(buildAssetPath("browserconfig.xml"))}" />
     <link rel="stylesheet" href="${escapeXml(buildAssetPath("crawl-pages.css"))}" />
     <script type="application/ld+json">${escapeJsonLd(structuredData)}</script>
   </head>

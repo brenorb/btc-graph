@@ -96,6 +96,8 @@ describe("site discovery assets", () => {
 
     expect(libraryHtml).toContain("<h1>Bitcoin Learning Graph Library</h1>");
     expect(libraryHtml).toContain('href="/crawl-pages.css"');
+    expect(libraryHtml).toContain('href="/safari-pinned-tab.svg"');
+    expect(libraryHtml).toContain('content="/browserconfig.xml"');
     expect(libraryHtml).toContain("Hash Functions");
     expect(libraryHtml).toContain("https://btc-graph.brenorb.com/nodes/lightning.payment-channels/info/");
 

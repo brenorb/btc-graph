@@ -13,6 +13,8 @@ describe("homepage SEO shell", () => {
     expect(html).toContain('property="og:title"');
     expect(html).toContain('name="twitter:card"');
     expect(html).toContain('rel="canonical" href="https://btc-graph.brenorb.com/"');
+    expect(html).toContain('rel="mask-icon" href="/safari-pinned-tab.svg"');
+    expect(html).toContain('name="msapplication-config" content="/browserconfig.xml"');
     expect(html).toContain('href="https://btc-graph.brenorb.com/llms.txt"');
     expect(html).toContain('https://www.googletagmanager.com/gtag/js?id=G-SV5TS1L0K9');
     expect(html).toContain('gtag("config", "G-SV5TS1L0K9")');

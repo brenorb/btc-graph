@@ -244,7 +244,10 @@ function renderNodeInfoPage(node, prerequisites, dependents) {
     <link rel="icon" type="image/png" sizes="32x32" href="${escapeHtml(`${SITE_BASE_PATH}favicon-32x32.png`)}" />
     <link rel="icon" type="image/png" sizes="16x16" href="${escapeHtml(`${SITE_BASE_PATH}favicon-16x16.png`)}" />
     <link rel="apple-touch-icon" sizes="180x180" href="${escapeHtml(`${SITE_BASE_PATH}apple-touch-icon.png`)}" />
+    <link rel="mask-icon" href="${escapeHtml(`${SITE_BASE_PATH}safari-pinned-tab.svg`)}" color="#0f766e" />
     <link rel="manifest" href="${escapeHtml(`${SITE_BASE_PATH}site.webmanifest`)}" />
+    <meta name="msapplication-TileColor" content="#0f766e" />
+    <meta name="msapplication-config" content="${escapeHtml(`${SITE_BASE_PATH}browserconfig.xml`)}" />
     <link rel="stylesheet" href="${escapeHtml(`${SITE_BASE_PATH}node-info-page.css`)}" />
     <script type="application/ld+json">${structuredData}</script>
   </head>
