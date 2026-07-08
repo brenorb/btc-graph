@@ -1,0 +1,48 @@
+{
+  "id": "custody.coin-selection",
+  "title": "Coin Selection",
+  "description": "Coin selection is the process a wallet uses to choose which UTXOs fund a payment. It balances fee cost, change creation, and privacy tradeoffs before signing or broadcasting a transaction.",
+  "category": "Wallets",
+  "prerequisites": [
+    "protocol.fee-market"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Coin Selection",
+      "url": "https://bitcoinops.org/en/topics/coin-selection/",
+      "notes": "Concise overview of why wallets choose different UTXO sets and how fee and privacy pressures shape the algorithms."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design Guide: Coin Selection",
+      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+      "notes": "Clear product and UX framing for the tradeoffs wallets expose or hide from users."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core RPC: fundrawtransaction",
+      "url": "https://developer.bitcoin.org/reference/rpc/fundrawtransaction.html",
+      "notes": "Concrete implementation surface where automatic funding and selection behavior becomes visible."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for UTXOs, change outputs, and wallet transaction construction.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "wallets",
+    "utxos",
+    "fees"
+  ],
+  "aliases": [
+    "utxo selection",
+    "input selection"
+  ]
+}

@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 20,
-      "conceptsNormalized": 6,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model and ops.full-node-vs-lightweight-wallet."
+      "conceptsExtracted": 21,
+      "conceptsNormalized": 7,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, and custody.coin-selection."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -406,6 +406,38 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a narrow upgrade-risk leaf after protocol.chain-split-risk, without forcing policy or activation-history rewires."
+    },
+    {
+      "id": "custody.coin-selection",
+      "title": "Coin Selection",
+      "category": "Wallets",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Chapter 2 overview: making change and coin selection during wallet transaction construction",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific wallet decision layer about choosing which UTXOs fund a payment, narrower than wallet management and broader than any one privacy heuristic or RPC surface.",
+      "candidatePrerequisites": [
+        "protocol.utxo-model",
+        "protocol.fee-market",
+        "privacy.coin-control"
+      ],
+      "chosenPrerequisites": [
+        "protocol.fee-market"
+      ],
+      "prerequisiteRationale": "The direct learner need is fee pressure and transaction-size tradeoffs. The UTXO model is already inherited transitively through the fee-market branch, and manual coin control is a downstream application of coin selection rather than a prerequisite.",
+      "aliases": [
+        "utxo selection",
+        "input selection"
+      ],
+      "tags": [
+        "wallets",
+        "utxos",
+        "fees"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as a wallet-construction bridge that parents several existing privacy and funding leaves conceptually, without rewiring those older phase-locked nodes yet."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -996,6 +1028,15 @@
       "notes": "Direct edge chosen over chain-split-risk and standardness-policy because those branches add context but are not required for the core failure mode."
     },
     {
+      "from": "protocol.fee-market",
+      "to": "custody.coin-selection",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Wallets choose different UTXO sets partly to minimize transaction size and fee cost, so fee pressure is a direct part of the concept.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct edge keeps the node connected to transaction-cost tradeoffs rather than only to wallet UX."
+    },
+    {
       "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
@@ -1473,6 +1514,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Chosen over a broader soft-fork-activation wrapper because accidental confiscation is narrower, source-native, and easier to place without duplicating versionbits and activation-history leaves."
+    },
+    {
+      "id": "decision.coin-selection-slice",
+      "type": "scope",
+      "subject": "custody.coin-selection",
+      "status": "resolved",
+      "rationale": "The cleanest next wallet-side bridge from the audited source set is custody.coin-selection. It isolates the wallet's UTXO-choice layer without collapsing into manual coin-control UX, privacy heuristics, or implementation-specific RPC behavior.",
+      "relatedConceptIds": [
+        "custody.coin-selection",
+        "protocol.fee-market",
+        "privacy.coin-control",
+        "privacy.change-detection",
+        "privacy.change-avoidance",
+        "dev.fundrawtransaction-rpc"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Chosen over philosophy-side wrappers such as full-node decentralization because coin selection has clearer boundaries and stronger immediate downstream leverage in the current graph. The direct protocol.utxo-model edge was dropped after the redundancy check showed it was already inherited through the fee-market branch."
     },
     {
       "id": "decision.decoding-script-history-slice",
