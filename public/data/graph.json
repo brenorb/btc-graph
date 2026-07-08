@@ -1495,10 +1495,10 @@
         {
           "type": "book",
           "title": "The Ascent of Money",
-          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "url": "https://amzn.to/4eSQHig",
           "notes": "Long-run history framing before and after Bretton Woods.",
           "regionalUrls": {
-            "BR": "https://amzn.to/41unemY"
+            "BR": "https://link.amazon/B0j0dwMtg"
           }
         },
         {
@@ -1663,8 +1663,11 @@
         {
           "type": "book",
           "title": "The Ascent of Money (Niall Ferguson)",
-          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
-          "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure."
+          "url": "https://amzn.to/4eSQHig",
+          "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure.",
+          "regionalUrls": {
+            "BR": "https://link.amazon/B0j0dwMtg"
+          }
         },
         {
           "type": "article",
@@ -1748,10 +1751,10 @@
         {
           "type": "book",
           "title": "The Road to Serfdom (F. A. Hayek)",
-          "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+          "url": "https://amzn.to/3R1uIMQ",
           "notes": "Hayek's broader framework for why decentralized market coordination matters.",
           "regionalUrls": {
-            "BR": "https://amzn.to/47IRe2j"
+            "BR": "https://link.amazon/B04h36HHN"
           }
         },
         {
@@ -1833,10 +1836,10 @@
         {
           "type": "book",
           "title": "The Ascent of Money",
-          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "url": "https://amzn.to/4eSQHig",
           "notes": "Long-run financial history context for how monetary systems changed across eras.",
           "regionalUrls": {
-            "BR": "https://amzn.to/41unemY"
+            "BR": "https://link.amazon/B0j0dwMtg"
           }
         },
         {
@@ -2275,10 +2278,10 @@
         {
           "type": "book",
           "title": "The Road to Serfdom",
-          "url": "https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553/",
+          "url": "https://amzn.to/3R1uIMQ",
           "notes": "Background on centralized economic control and institutional incentives.",
           "regionalUrls": {
-            "BR": "https://amzn.to/47IRe2j"
+            "BR": "https://link.amazon/B04h36HHN"
           }
         },
         {
@@ -2444,12 +2447,18 @@
       "resources": [
         {
           "type": "book",
-          "title": "The Art of Strategy (Dixit, Nalebuff)",
-          "url": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/",
-          "notes": "Game-theory framing for coordination dynamics and focal equilibria.",
+          "title": "The Strategy of Conflict",
+          "url": "https://amzn.to/3SSJGFo",
+          "notes": "Canonical source for focal points, tacit coordination, and equilibrium selection.",
           "regionalUrls": {
-            "BR": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/"
+            "BR": "https://link.amazon/B0ggWGwrD"
           }
+        },
+        {
+          "type": "article",
+          "title": "Shelling Out: The Origins of Money",
+          "url": "https://nakamotoinstitute.org/library/shelling-out",
+          "notes": "Nick Szabo's classic essay connecting monetary emergence to salability, convergence, and Schelling-like coordination."
         },
         {
           "type": "article",
@@ -5437,10 +5446,10 @@
         {
           "type": "book",
           "title": "The Ascent of Money",
-          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "url": "https://amzn.to/4eSQHig",
           "notes": "Comparative context for currency disruption events across regions.",
           "regionalUrls": {
-            "BR": "https://amzn.to/41unemY"
+            "BR": "https://link.amazon/B0j0dwMtg"
           }
         },
         {
@@ -5527,10 +5536,10 @@
         {
           "type": "book",
           "title": "The Ascent of Money",
-          "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
+          "url": "https://amzn.to/4eSQHig",
           "notes": "Broad monetary-history context that includes unusual money forms.",
           "regionalUrls": {
-            "BR": "https://amzn.to/41unemY"
+            "BR": "https://link.amazon/B0j0dwMtg"
           }
         },
         {

@@ -7,12 +7,18 @@
   "resources": [
     {
       "type": "book",
-      "title": "The Art of Strategy (Dixit, Nalebuff)",
-      "url": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/",
-      "notes": "Game-theory framing for coordination dynamics and focal equilibria.",
+      "title": "The Strategy of Conflict",
+      "url": "https://amzn.to/3SSJGFo",
+      "notes": "Canonical source for focal points, tacit coordination, and equilibrium selection.",
       "regionalUrls": {
-        "BR": "https://www.amazon.com/Art-Strategy-Theorists-Success-Business/dp/0393337170/"
+        "BR": "https://link.amazon/B0ggWGwrD"
       }
+    },
+    {
+      "type": "article",
+      "title": "Shelling Out: The Origins of Money",
+      "url": "https://nakamotoinstitute.org/library/shelling-out",
+      "notes": "Nick Szabo's classic essay connecting monetary emergence to salability, convergence, and Schelling-like coordination."
     },
     {
       "type": "article",

@@ -51,7 +51,11 @@ function hasAmazonBookResource(node: GraphNode): boolean {
 
     const url = new URL(resource.url);
     const host = url.hostname.replace(/^www\./, "");
-    return host === "amazon.com" && url.pathname.includes("/dp/");
+    return (
+      host === "amzn.to" ||
+      host === "link.amazon" ||
+      (host.startsWith("amazon.") && url.pathname.includes("/dp/"))
+    );
   });
 }
 

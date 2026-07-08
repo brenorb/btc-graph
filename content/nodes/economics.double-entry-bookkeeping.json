@@ -8,8 +8,11 @@
     {
       "type": "book",
       "title": "The Ascent of Money (Niall Ferguson)",
-      "url": "https://www.amazon.com/Ascent-Money-Financial-History-World/dp/0143116177/",
-      "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure."
+      "url": "https://amzn.to/4eSQHig",
+      "notes": "Historical finance context, including bookkeeping evolution and monetary infrastructure.",
+      "regionalUrls": {
+        "BR": "https://link.amazon/B0j0dwMtg"
+      }
     },
     {
       "type": "article",
