@@ -1,0 +1,49 @@
+{
+  "id": "dev.descriptor-wallet-policies",
+  "title": "Descriptor Wallet Policies",
+  "description": "Descriptor wallet policies define a wallet as a descriptor template plus key information items, making account structure portable across software and hardware signers. They standardize how external signers can register, verify, and later derive the same wallet without relying on custom wallet-specific side data.",
+  "category": "Wallets",
+  "prerequisites": [
+    "dev.descriptors",
+    "dev.bip32"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 388: Wallet Policies for Descriptor Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki",
+      "notes": "Canonical definition of descriptor wallet policies, descriptor templates, and key information vectors."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Script Descriptors",
+      "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+      "notes": "Tracks the descriptor ecosystem changes that surfaced wallet policies as a distinct standard."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Hardware Wallet Interface (HWI)",
+      "url": "https://bitcoinops.org/en/topics/hwi/",
+      "notes": "Shows why a portable wallet-policy format matters for external signers that combine descriptors with hardware-device coordination."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for HD keys, descriptors, and wallet interoperability tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": [
+    "descriptors",
+    "wallets",
+    "external-signers"
+  ],
+  "aliases": [
+    "bip388",
+    "wallet policies"
+  ]
+}

@@ -17,9 +17,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
-      "conceptsExtracted": 28,
-      "conceptsNormalized": 8,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, and dev.taproot-descriptors."
+      "conceptsExtracted": 29,
+      "conceptsNormalized": 9,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, dev.taproot-descriptors, and dev.descriptor-wallet-policies."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -471,6 +471,40 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a clean descriptor-side Taproot leaf without reopening PSBT transport or MuSig workflow rewires."
+    },
+    {
+      "id": "dev.descriptor-wallet-policies",
+      "title": "Descriptor Wallet Policies",
+      "category": "Wallets",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+      "sourceContext": "Output script descriptors topic page mention of BIP388 wallet policies for descriptor wallets, reinforced by the HWI topic's external-signer use of descriptors",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates the BIP388 wallet-policy abstraction, narrower than generic descriptor wallets and distinct from descriptor import or PSBT signing flows.",
+      "candidatePrerequisites": [
+        "dev.descriptors",
+        "dev.bip32",
+        "dev.descriptor-wallet-imports",
+        "custody.psbt"
+      ],
+      "chosenPrerequisites": [
+        "dev.descriptors",
+        "dev.bip32"
+      ],
+      "prerequisiteRationale": "Learners need the descriptor grammar and HD key-derivation structure first. Import flows and PSBT transport are downstream consumers of the wallet-policy format rather than prerequisites for understanding the policy abstraction itself.",
+      "aliases": [
+        "bip388",
+        "wallet policies"
+      ],
+      "tags": [
+        "descriptors",
+        "wallets",
+        "external-signers"
+      ],
+      "estimatedTime": "55m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the clean BIP388 slice after concluding that the broader descriptor-wallets label would duplicate the existing descriptor-wallet-imports alias."
     },
     {
       "id": "protocol.musig",
@@ -1253,6 +1287,24 @@
       "rationale": "MuSig is a Schnorr aggregation protocol, so learners need the underlying Schnorr key and signature model before the combined-key protocol makes sense.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Direct parent kept narrow; wallet-level multisig and Taproot remain context rather than prerequisites."
+    },
+    {
+      "from": "dev.descriptors",
+      "to": "dev.descriptor-wallet-policies",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Wallet policies are built as descriptor templates, so the base descriptor language and template structure must come first.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct parent kept above import or signer flows because the node is about the representation itself."
+    },
+    {
+      "from": "dev.bip32",
+      "to": "dev.descriptor-wallet-policies",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "BIP388 key information items package xpubs and derivation origins, so learners need the HD derivation model before the portable wallet-policy format makes sense.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Non-redundant alongside dev.descriptors because neither concept implies the other in the current graph."
     }
   ],
   "decisions": [
@@ -1770,6 +1822,25 @@
         "source.btctranscripts-topics"
       ],
       "notes": "Left custody.musig2-descriptors unchanged for now so this stays an additive protocol concept slice instead of reopening older wallet-workflow prerequisite wiring."
+    },
+    {
+      "id": "decision.descriptor-wallet-policies-slice",
+      "type": "scope",
+      "subject": "dev.descriptor-wallet-policies",
+      "status": "resolved",
+      "rationale": "The cleanest next Optech-side wallet slice is dev.descriptor-wallet-policies. It captures the BIP388 abstraction directly without duplicating the broader descriptor-wallets label already attached to descriptor-wallet-imports, and without collapsing into PSBT or hardware-signer transport workflows.",
+      "relatedConceptIds": [
+        "dev.descriptor-wallet-policies",
+        "dev.descriptor-wallet-imports",
+        "dev.descriptors",
+        "dev.bip32",
+        "dev.hwi-psbt-flow",
+        "custody.psbt"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Kept the node additive and left degrading multisig for a later wallet-policy slice rather than combining two different policy families in one commit."
     }
   ]
 }
