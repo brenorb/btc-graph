@@ -20,10 +20,13 @@
       "notes": "Defines time-evaluation behavior used with sequence locks."
     },
     {
-      "type": "article",
-      "title": "Developer Guide: Transactions",
-      "url": "https://developer.bitcoin.org/devguide/transactions.html",
-      "notes": "Operational transaction fields and locktime context."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "80m",

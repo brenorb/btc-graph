@@ -14,10 +14,13 @@
       "notes": "Canonical derivation scheme specification."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Wallets",
-      "url": "https://developer.bitcoin.org/devguide/wallets.html",
-      "notes": "Implementation concepts and key management context."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

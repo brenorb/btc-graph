@@ -20,10 +20,13 @@
       "notes": "Practical case where rule enforcement came from node operators."
     },
     {
-      "type": "article",
-      "title": "Cypherpunk Movement",
-      "url": "https://en.wikipedia.org/wiki/Cypherpunk",
-      "notes": "Context for the political philosophy around Bitcoin's origins."
+      "type": "book",
+      "title": "The Book of Satoshi",
+      "url": "https://amzn.to/4lvhhQ8",
+      "notes": "Primary-source writing that helps anchor the historical and philosophical context around this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NWFpyF"
+      }
     }
   ],
   "estimatedTime": "45m",

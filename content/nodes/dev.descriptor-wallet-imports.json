@@ -15,10 +15,13 @@
       "notes": "Core wallet internals behind descriptor and script management."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Wallets",
-      "url": "https://developer.bitcoin.org/devguide/wallets.html",
-      "notes": "Wallet model context for importing and tracking scripts."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

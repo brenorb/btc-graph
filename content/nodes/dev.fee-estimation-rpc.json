@@ -21,10 +21,13 @@
       "notes": "Why mempool state drives fee estimation quality."
     },
     {
-      "type": "article",
-      "title": "Lopp: Fee Estimates",
-      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
-      "notes": "Practical fee estimation tools and background references."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

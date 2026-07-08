@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: P2P Network",
-      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-      "notes": "Core networking behavior and message flow."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     },
     {
       "type": "article",

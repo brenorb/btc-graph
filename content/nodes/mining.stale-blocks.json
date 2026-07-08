@@ -21,10 +21,13 @@
       "notes": "Bandwidth and latency optimizations that reduce stale races."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Block Chain",
-      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
-      "notes": "Chain race and reorganization background."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "60m",

@@ -49,6 +49,7 @@ const ALLOWED_RESOURCE_DOMAINS = [
   "developer.bitcoin.org",
   "bitcoindev.network",
   "bitcoincore.academy",
+  "amzn.to",
 ];
 
 function loadNodes(): GraphNode[] {

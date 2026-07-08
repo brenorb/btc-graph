@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin RPC Reference: getblocktemplate",
-      "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
-      "notes": "Template fields and policy knobs exposed to mining software."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: X-only public keys",
-      "url": "https://bitcoinops.org/en/topics/x-only-public-keys/",
-      "notes": "Focused explanation of x-only encoding, parity constraints, and Taproot usage."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

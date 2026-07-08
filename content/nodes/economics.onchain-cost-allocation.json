@@ -15,10 +15,13 @@
       "notes": "Cost and privacy impacts of input/output selection policy."
     },
     {
-      "type": "article",
-      "title": "Lopp: Fee Estimation Resources",
-      "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
-      "notes": "Fee-market context used in practical cost allocation decisions."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

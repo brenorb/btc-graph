@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Mastering Bitcoin: Keys and Addresses",
-      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-      "notes": "Covers inversion in the signature construction flow."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

@@ -20,10 +20,13 @@
       "notes": "Technical tradeoff analysis from active researchers."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: MATT",
-      "url": "https://bitcoinops.org/en/topics/matt/",
-      "notes": "Adjacent discussion relevant to BitVM design comparisons."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "90m",

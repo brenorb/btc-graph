@@ -21,10 +21,13 @@
       "notes": "Packet structure relevant to delegated routing hops."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Lightning Services",
-      "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-      "notes": "Wallet UX context for abstracting route construction complexity."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "75m",

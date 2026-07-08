@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "secp256k1 README",
-      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
-      "notes": "Canonical implementation reference for the curve used by Bitcoin."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

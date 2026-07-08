@@ -16,11 +16,11 @@
     },
     {
       "type": "book",
-      "title": "Mastering Bitcoin: Mining",
-      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-      "notes": "Technical and economic context for mining hardware evolution.",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Historical narrative for how this topic showed up in Bitcoin's scaling and governance debates.",
       "regionalUrls": {
-        "BR": "https://amzn.to/4te47JX"
+        "BR": "https://amzn.to/4rXhk90"
       }
     },
     {

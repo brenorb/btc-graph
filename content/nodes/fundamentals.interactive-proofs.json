@@ -18,10 +18,13 @@
       "notes": "Accessible bridge from interactive proofs to modern argument systems and zero-knowledge."
     },
     {
-      "type": "article",
-      "title": "Wikipedia: Interactive Proof System",
-      "url": "https://en.wikipedia.org/wiki/Interactive_proof_system",
-      "notes": "High-level reference on prover-verifier structure, completeness, and soundness."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     }
   ],
   "estimatedTime": "45m",

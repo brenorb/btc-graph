@@ -20,10 +20,13 @@
       "notes": "Implementation details for fast and constant-time scalar multiplication."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
-      "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
-      "notes": "Engineering perspective for how libraries expose key math operations."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "60m",

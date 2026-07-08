@@ -21,10 +21,13 @@
       "notes": "Enhanced PSBT format used in modern wallet and signing stacks."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Private Key Management Overview",
-      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-      "notes": "Security and UX guidance for device-assisted key handling."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "80m",

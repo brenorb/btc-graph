@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin.page",
-      "url": "https://bitcoin.page",
-      "notes": "Beginner-friendly historical framing of market and media cycles."
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4h1H0iK",
+      "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     },
     {
       "type": "article",

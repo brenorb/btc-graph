@@ -16,10 +16,13 @@
       "notes": "Walkthrough of ECDSA signing and verification flow."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Transactions",
-      "url": "https://developer.bitcoin.org/devguide/transactions.html",
-      "notes": "Transaction-level context where signatures authorize spends."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

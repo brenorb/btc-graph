@@ -21,10 +21,13 @@
       "notes": "How address gossip works and where poisoning risks appear."
     },
     {
-      "type": "article",
-      "title": "Bitcoin P2P Networking Reference",
-      "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
-      "notes": "Reference for version, addr, and related network messages."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "65m",

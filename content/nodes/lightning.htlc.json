@@ -21,10 +21,13 @@
       "notes": "Practical Lightning-focused developer content."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design",
-      "url": "https://bitcoin.design/",
-      "notes": "UX and product considerations for Lightning apps."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "70m",

@@ -21,10 +21,13 @@
       "notes": "Wallet architecture and signing separation."
     },
     {
-      "type": "article",
-      "title": "Lopp: Recommended Wallets",
-      "url": "https://www.lopp.net/bitcoin-information/recommended-wallets.html",
-      "notes": "Practical wallet tooling references with watch-only capabilities."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "40m",

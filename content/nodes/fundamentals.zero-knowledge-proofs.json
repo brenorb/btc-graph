@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Zcash Learn: What are zero-knowledge proofs?",
-      "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
-      "notes": "Clear introduction to the core prove-without-revealing idea."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     },
     {
       "type": "article",

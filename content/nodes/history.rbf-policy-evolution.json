@@ -20,10 +20,13 @@
       "notes": "Historical timeline and implementation-policy changes."
     },
     {
-      "type": "article",
-      "title": "Lopp: Bitcoin History Resources",
-      "url": "https://www.lopp.net/bitcoin-information/history.html",
-      "notes": "Broader historical context for fee-management policy debates."
+      "type": "book",
+      "title": "The Blocksize War",
+      "url": "https://amzn.to/4b64b8s",
+      "notes": "Historical narrative for how this topic showed up in Bitcoin's scaling and governance debates.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rXhk90"
+      }
     }
   ],
   "estimatedTime": "45m",

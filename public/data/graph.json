@@ -10,10 +10,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -48,10 +51,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design: Private Key Management Overview",
-          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-          "notes": "Threat model and key-isolation design patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -85,10 +91,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -134,10 +143,13 @@
           "notes": "Implementation context for inter-wallet metadata handoffs and signer interoperability."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Private Key Management",
-          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-          "notes": "Design and operational context for distributed key management."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -349,10 +361,13 @@
           "notes": "Neutral custody security framework applicable to succession planning controls."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Backup and Recovery",
-          "url": "https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/landing-page/",
-          "notes": "Human-centered recovery flow design for non-technical heirs and operators."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -375,10 +390,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -424,10 +442,13 @@
           "notes": "Descriptor format needed to express advanced script/key policies."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Core Academy: ScriptPubKey Managers",
-          "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
-          "notes": "Wallet-side tracking model for descriptor-driven outputs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "90m",
@@ -464,9 +485,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Wallets",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
-          "notes": "Wallet data-management and control patterns for advanced users.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -499,10 +520,13 @@
           "notes": "Specification for mnemonic + passphrase derivation."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Backups",
-          "url": "https://bitcoin.design/guide/how-it-works/backups/",
-          "notes": "Human factors and backup strategy guidance."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -576,10 +600,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -618,10 +645,13 @@
           "notes": "Seed phrase foundations needed before any entropy-splitting method."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Backups",
-          "url": "https://bitcoin.design/guide/how-it-works/backups/",
-          "notes": "Backup design patterns and user-risk framing for distributed secret storage."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -708,10 +738,13 @@
           "notes": "Wallet architecture and signing separation."
         },
         {
-          "type": "article",
-          "title": "Lopp: Recommended Wallets",
-          "url": "https://www.lopp.net/bitcoin-information/recommended-wallets.html",
-          "notes": "Practical wallet tooling references with watch-only capabilities."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "40m",
@@ -740,10 +773,13 @@
           "notes": "Canonical derivation scheme specification."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Wallets",
-          "url": "https://developer.bitcoin.org/devguide/wallets.html",
-          "notes": "Implementation concepts and key management context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -777,10 +813,13 @@
           "notes": "Wordlist + checksum + seed derivation spec."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Backups",
-          "url": "https://bitcoin.design/guide/how-it-works/backups/",
-          "notes": "Human-centered guidance on backup handling."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -821,10 +860,13 @@
           "notes": "Example extension illustrating how BIP44-style hierarchy evolved for SegWit."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network: Native SegWit",
-          "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
-          "notes": "Applied derivation and script-type implementation."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "65m",
@@ -904,10 +946,13 @@
           "notes": "Structured technical lessons."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide",
-          "url": "https://developer.bitcoin.org/devguide/",
-          "notes": "Reference documentation for implementation."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "65m",
@@ -935,10 +980,13 @@
           "notes": "Core wallet internals behind descriptor and script management."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Wallets",
-          "url": "https://developer.bitcoin.org/devguide/wallets.html",
-          "notes": "Wallet model context for importing and tracking scripts."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -981,9 +1029,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Wallets",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
-          "notes": "Wallet architecture context for descriptor-based design and address handling.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -1024,10 +1072,13 @@
           "notes": "Why mempool state drives fee estimation quality."
         },
         {
-          "type": "article",
-          "title": "Lopp: Fee Estimates",
-          "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
-          "notes": "Practical fee estimation tools and background references."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -1062,10 +1113,13 @@
           "notes": "Wallet architecture context for transaction funding workflows."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "User-facing implications of automated funding decisions."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -1100,10 +1154,13 @@
           "notes": "Enhanced PSBT format used in modern wallet and signing stacks."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Private Key Management Overview",
-          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-          "notes": "Security and UX guidance for device-assisted key handling."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -1138,10 +1195,13 @@
           "notes": "Structured technical lessons."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide",
-          "url": "https://developer.bitcoin.org/devguide/",
-          "notes": "Reference documentation for implementation."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -1163,10 +1223,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Reference: P2P Networking",
-          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
-          "notes": "Message definitions and wire formats."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -1213,10 +1276,13 @@
           "notes": "Defines PSBT v2 fields and behavior changes."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Core Academy: Wallet Interfaces",
-          "url": "https://bitcoincore.academy/wallet-interfaces.html",
-          "notes": "Implementation context for wallet data flow and signing interfaces."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -1239,10 +1305,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Reproducible Builds",
-          "url": "https://bitcoinops.org/en/topics/reproducible-builds/",
-          "notes": "Ecosystem context and ongoing engineering work."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -1276,10 +1345,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Core RPC: scantxoutset",
-          "url": "https://developer.bitcoin.org/reference/rpc/scantxoutset.html",
-          "notes": "Reference usage for descriptor-driven UTXO scanning."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -1314,10 +1386,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Core RPC: testmempoolaccept",
-          "url": "https://developer.bitcoin.org/reference/rpc/testmempoolaccept.html",
-          "notes": "Official RPC reference and return fields."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -1363,10 +1438,13 @@
           "notes": "Structured technical lessons."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide",
-          "url": "https://developer.bitcoin.org/devguide/",
-          "notes": "Reference documentation for implementation."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -1627,10 +1705,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -1711,9 +1792,9 @@
       "resources": [
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Transaction Fees",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
-          "notes": "Economic background for fee dynamics and bidding strategies.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -1945,10 +2026,13 @@
           "notes": "Consensus fix preserving long-term issuance cap assumptions."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin History",
-          "url": "https://www.lopp.net/bitcoin-information/history.html",
-          "notes": "Historical incidents that led to permanently inaccessible supply."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -1990,9 +2074,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Mining and Consensus",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-          "notes": "Detailed treatment of economic incentives for miners.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -2321,10 +2405,13 @@
           "notes": "Cost and privacy impacts of input/output selection policy."
         },
         {
-          "type": "article",
-          "title": "Lopp: Fee Estimation Resources",
-          "url": "https://www.lopp.net/bitcoin-information/fee-estimates.html",
-          "notes": "Fee-market context used in practical cost allocation decisions."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -2493,10 +2580,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Mining",
-          "url": "https://developer.bitcoin.org/devguide/mining.html",
-          "notes": "Miner reward composition and incentives."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -2531,10 +2621,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Cryptocurrency",
-          "url": "https://en.wikipedia.org/wiki/Cryptocurrency",
-          "notes": "Baseline terminology for coins, tokens, and blockchain-native units."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -2569,10 +2662,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Transaction structure fundamentals behind batching tradeoffs."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -2609,10 +2705,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "Practical user-facing guidance that can reduce impulsive behavior during volatility."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -2654,10 +2753,13 @@
           "notes": "Ark motivation and mechanism summary."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ark",
-          "url": "https://bitcoinops.org/en/topics/ark/",
-          "notes": "Ecosystem updates and implementation notes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -2692,10 +2794,13 @@
           "notes": "Reference base for relay messaging design patterns adjacent to Bitchat-like systems."
         },
         {
-          "type": "article",
-          "title": "Mesh Networking",
-          "url": "https://en.wikipedia.org/wiki/Mesh_networking",
-          "notes": "Networking context for decentralized chat transport models."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -2736,10 +2841,13 @@
           "notes": "Technical tradeoff analysis from active researchers."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: MATT",
-          "url": "https://bitcoinops.org/en/topics/matt/",
-          "notes": "Adjacent discussion relevant to BitVM design comparisons."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "90m",
@@ -2773,10 +2881,13 @@
           "notes": "Canonical protocol specifications for interoperable Cashu mints and wallets."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ecash",
-          "url": "https://bitcoinops.org/en/topics/ecash/",
-          "notes": "Bitcoin ecosystem context for Cashu-style ecash deployments."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -2966,10 +3077,13 @@
           "notes": "DLC framing within covenant-related contract use cases."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Discreet Log Contracts",
-          "url": "https://bitcoinops.org/en/topics/discreet-log-contracts/",
-          "notes": "Protocol updates and integration lessons."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -3044,10 +3158,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ecash",
-          "url": "https://bitcoinops.org/en/topics/ecash/",
-          "notes": "Survey of ecash protocols and their integration points with Bitcoin."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -3093,10 +3210,13 @@
           "notes": "Underlying federated ecash protocol and implementation context."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ecash",
-          "url": "https://bitcoinops.org/en/topics/ecash/",
-          "notes": "Higher-level context for ecash systems that Fedi builds on."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -3158,10 +3278,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: LNURL",
-          "url": "https://bitcoinops.org/en/topics/lnurl/",
-          "notes": "Operational and security considerations around LNURL workflows."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -3202,10 +3325,13 @@
           "notes": "Canonical protocol specifications and evolution process."
         },
         {
-          "type": "article",
-          "title": "Nostr: Notes and Other Stuff Transmitted by Relays",
-          "url": "https://nostr.com/",
-          "notes": "High-level protocol overview and ecosystem entry point."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -3274,10 +3400,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Sidechains",
-          "url": "https://bitcoinops.org/en/topics/sidechains/",
-          "notes": "Tradeoff overview across federated and miner-assisted designs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -3358,10 +3487,13 @@
           "notes": "Statechain model and limitations."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Statechains",
-          "url": "https://bitcoinops.org/en/topics/statechains/",
-          "notes": "Recent protocol work and critiques."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -3566,10 +3698,13 @@
           "notes": "Protocol overview for blinded ecash issuance and redemption."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ecash",
-          "url": "https://bitcoinops.org/en/topics/ecash/",
-          "notes": "Bitcoin-specific context for blind-signature-based ecash systems."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3597,10 +3732,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -3678,10 +3816,13 @@
       "prerequisites": [],
       "resources": [
         {
-          "type": "article",
-          "title": "Commitment Scheme",
-          "url": "https://en.wikipedia.org/wiki/Commitment_scheme",
-          "notes": "Compact overview of the hiding and binding properties."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -3716,10 +3857,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mastering Bitcoin: Keys and Addresses",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-          "notes": "Introduces generator-based point multiplication in secp256k1."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3760,10 +3904,13 @@
           "notes": "Shows how modern Bitcoin transport uses ECDH-derived shared secrets."
         },
         {
-          "type": "article",
-          "title": "secp256k1 ECDH API",
-          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/include/secp256k1_ecdh.h",
-          "notes": "Concrete library interface for ECDH over secp256k1."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3845,10 +3992,13 @@
           "notes": "Detailed explanation of signing and verification flow in Bitcoin."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Transaction authorization context for digital signatures in scripts."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3882,10 +4032,13 @@
           "notes": "Explains why reversing public keys to private keys is computationally hard."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
-          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
-          "notes": "Developer-facing context for cryptographic assumptions in tooling and libraries."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3911,10 +4064,13 @@
       "prerequisites": [],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -3955,10 +4111,13 @@
           "notes": "Walkthrough of ECDSA signing and verification flow."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Transaction-level context where signatures authorize spends."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -3986,10 +4145,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mastering Bitcoin: Keys and Addresses",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-          "notes": "Structured introduction to curve arithmetic and key derivation."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4033,6 +4195,15 @@
           "title": "secp256k1 README",
           "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
           "notes": "Practical notes for inversion and field operations in real code paths."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -4054,10 +4225,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mastering Bitcoin: Keys and Addresses",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-          "notes": "Explains finite fields as the mathematical setting for secp256k1."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4184,10 +4358,13 @@
           "notes": "Accessible bridge from interactive proofs to modern argument systems and zero-knowledge."
         },
         {
-          "type": "article",
-          "title": "Wikipedia: Interactive Proof System",
-          "url": "https://en.wikipedia.org/wiki/Interactive_proof_system",
-          "notes": "High-level reference on prover-verifier structure, completeness, and soundness."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -4210,10 +4387,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Accessible concept summaries."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4256,10 +4436,13 @@
           "notes": "Shows arithmetic and numeric constraints in Bitcoin Script execution."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
-          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
-          "notes": "Practical engineering context that links math primitives to implementation details."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -4281,10 +4464,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mastering Bitcoin: Keys and Addresses",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-          "notes": "Introduces modular exponentiation in Bitcoin key math."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4318,10 +4504,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mastering Bitcoin: Keys and Addresses",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
-          "notes": "Covers inversion in the signature construction flow."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4450,10 +4639,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: P2P Network",
-          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-          "notes": "Core networking behavior and message flow."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -4540,10 +4732,13 @@
           "notes": "Core walkthrough of how private and public keys are represented and used."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Wallets",
-          "url": "https://developer.bitcoin.org/devguide/wallets.html",
-          "notes": "Shows where key material and signing behavior appear in wallet systems."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4582,10 +4777,13 @@
           "notes": "Implementation details for fast and constant-time scalar multiplication."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network: A Primer for Libbitcoin",
-          "url": "https://bitcoindev.network/a-primer-for-libbitcoin/",
-          "notes": "Engineering perspective for how libraries expose key math operations."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -4620,10 +4818,13 @@
           "notes": "Defines how Schnorr keys and scripts are used in Taproot outputs."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Core Academy: Script",
-          "url": "https://bitcoincore.academy/script.html",
-          "notes": "Connects Schnorr-era script execution to practical Bitcoin validation."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "70m",
@@ -4645,10 +4846,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "secp256k1 README",
-          "url": "https://github.com/bitcoin-core/secp256k1/blob/master/README.md",
-          "notes": "Canonical implementation reference for the curve used by Bitcoin."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4682,10 +4886,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Block Chain",
-          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
-          "notes": "How blocks and confirmations establish confidence."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -4814,10 +5021,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Zcash Learn: What are zero-knowledge proofs?",
-          "url": "https://z.cash/learn/what-are-zero-knowledge-proofs/",
-          "notes": "Clear introduction to the core prove-without-revealing idea."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -4854,10 +5064,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Zcash Learn: What are zk-SNARKs?",
-          "url": "https://z.cash/learn/what-are-zk-snarks/",
-          "notes": "High-level explanation of succinct non-interactive proofs and why they matter."
+          "type": "book",
+          "title": "Inventing Bitcoin",
+          "url": "https://amzn.to/3Njwy9P",
+          "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rTB6C8"
+          }
         },
         {
           "type": "article",
@@ -4895,10 +5108,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "STARK paper",
-          "url": "https://eprint.iacr.org/2018/046",
-          "notes": "Primary-source paper introducing scalable transparent computational integrity."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -4945,10 +5161,13 @@
           "notes": "Practical case where rule enforcement came from node operators."
         },
         {
-          "type": "article",
-          "title": "Cypherpunk Movement",
-          "url": "https://en.wikipedia.org/wiki/Cypherpunk",
-          "notes": "Context for the political philosophy around Bitcoin's origins."
+          "type": "book",
+          "title": "The Book of Satoshi",
+          "url": "https://amzn.to/4lvhhQ8",
+          "notes": "Primary-source writing that helps anchor the historical and philosophical context around this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/3NWFpyF"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -5021,10 +5240,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin.page",
-          "url": "https://bitcoin.page",
-          "notes": "Beginner-friendly historical framing of market and media cycles."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -5398,11 +5620,11 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Mining",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-          "notes": "Technical and economic context for mining hardware evolution.",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Historical narrative for how this topic showed up in Bitcoin's scaling and governance debates.",
           "regionalUrls": {
-            "BR": "https://amzn.to/4te47JX"
+            "BR": "https://amzn.to/4rXhk90"
           }
         },
         {
@@ -5483,10 +5705,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "b-money",
-          "url": "https://en.wikipedia.org/wiki/B-money",
-          "notes": "Historical overview of Wei Dai's proposal and its relation to Bitcoin."
+          "type": "book",
+          "title": "The Bitcoin Standard",
+          "url": "https://amzn.to/4h1H0iK",
+          "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4byFMZo"
+          }
         },
         {
           "type": "article",
@@ -5590,10 +5815,13 @@
           "notes": "Historical timeline and implementation-policy changes."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin History Resources",
-          "url": "https://www.lopp.net/bitcoin-information/history.html",
-          "notes": "Broader historical context for fee-management policy debates."
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Historical narrative for how this topic showed up in Bitcoin's scaling and governance debates.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -5713,10 +5941,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Taproot",
-          "url": "https://bitcoinops.org/en/topics/taproot/",
-          "notes": "Activation chronology and ecosystem rollout updates."
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Historical narrative for how this topic showed up in Bitcoin's scaling and governance debates.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
         },
         {
           "type": "article",
@@ -5799,10 +6030,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Anchor Outputs",
-          "url": "https://bitcoinops.org/en/topics/anchor-outputs/",
-          "notes": "Design rationale and operational implications."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -5935,10 +6169,13 @@
           "notes": "Defines fee fields and update propagation for channel policies."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Liquidity",
-          "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-          "notes": "Operational and product tradeoffs in channel liquidity management."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -5967,10 +6204,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Channel Jamming Attacks",
-          "url": "https://bitcoinops.org/en/topics/channel-jamming-attacks/",
-          "notes": "Attack taxonomy and mitigation tracking."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6010,10 +6250,13 @@
           "notes": "Defines reserve constraints and channel parameter negotiation."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Lightning Liquidity",
-          "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-          "notes": "Operational consequences of reserve constraints for users."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6055,10 +6298,13 @@
           "notes": "State update protocol between channel peers."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Liquidity",
-          "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-          "notes": "Practical liquidity and channel management context."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -6081,10 +6327,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Eltoo",
-          "url": "https://bitcoinops.org/en/topics/eltoo/",
-          "notes": "Historical and current status of eltoo research."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6131,10 +6380,13 @@
           "notes": "Operational risks and monitoring strategies."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Liquidity",
-          "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-          "notes": "Channel availability and closure impact in user-facing products."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "70m",
@@ -6212,10 +6464,13 @@
           "notes": "Practical Lightning-focused developer content."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design",
-          "url": "https://bitcoin.design/",
-          "notes": "UX and product considerations for Lightning apps."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "70m",
@@ -6248,10 +6503,13 @@
           "notes": "Required timing and watch behavior for channel safety."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: Contracts",
-          "url": "https://developer.bitcoin.org/devguide/contracts.html",
-          "notes": "Base script and timeout primitives used by HTLC logic."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "75m",
@@ -6371,10 +6629,13 @@
           "notes": "Technical basis for multi-part delivery."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Multipath Payments",
-          "url": "https://bitcoinops.org/en/topics/multipath-payments/",
-          "notes": "Tradeoffs and implementation progress."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6507,10 +6768,13 @@
           "notes": "Threat-model framing for adversarial network behavior."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin Privacy",
-          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
-          "notes": "Curated references for practical privacy defenses."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "75m",
@@ -6574,10 +6838,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "BOLT 03: Transactions and Channel States",
-          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
-          "notes": "Defines commitment and revocation key derivation semantics."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6612,10 +6879,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Rendez-vous Routing",
-          "url": "https://bitcoinops.org/en/topics/rendez-vous-routing/",
-          "notes": "Conceptual background and deployment updates for blinded routing."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -6755,10 +7025,13 @@
           "notes": "Packet structure relevant to delegated routing hops."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Lightning Services",
-          "url": "https://bitcoin.design/guide/how-it-works/lightning-services/",
-          "notes": "Wallet UX context for abstracting route construction complexity."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         }
       ],
       "estimatedTime": "75m",
@@ -6833,10 +7106,13 @@
           "notes": "Attack surfaces and defensive assumptions around network and consensus."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Block Chain",
-          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
-          "notes": "Chain selection and reorganization fundamentals."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -6905,10 +7181,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Application-specific Integrated Circuit",
-          "url": "https://en.wikipedia.org/wiki/Application-specific_integrated_circuit",
-          "notes": "General concept and design constraints for specialized chips."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -6955,10 +7234,13 @@
           "notes": "Bandwidth and latency optimization for block propagation."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Compact Block Relay",
-          "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
-          "notes": "Operational updates and implementation insights."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -6982,10 +7264,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin RPC Reference: getblocktemplate",
-          "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
-          "notes": "Template fields and policy knobs exposed to mining software."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7019,10 +7304,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Developer Guide: Mining",
-          "url": "https://developer.bitcoin.org/devguide/mining.html",
-          "notes": "Baseline template construction and block assembly workflow."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7071,9 +7359,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Mining and Consensus",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-          "notes": "Protocol-level treatment of work, cost, and security.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -7099,10 +7387,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Demand Response",
-          "url": "https://en.wikipedia.org/wiki/Demand_response",
-          "notes": "Grid flexibility mechanics relevant to interruptible mining load."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7144,10 +7435,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin Mining",
-          "url": "https://www.lopp.net/bitcoin-information/mining.html",
-          "notes": "Diverse source collection across environmental and economic viewpoints."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7190,9 +7484,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Mining",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
-          "notes": "Mining incentive framework and block-template decision context.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -7231,10 +7525,13 @@
           "notes": "RPC spec for block template construction."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Mining",
-          "url": "https://developer.bitcoin.org/devguide/mining.html",
-          "notes": "Mining architecture and template logic overview."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7268,10 +7565,13 @@
           "notes": "Miner operating constraints that shape responsiveness to power prices."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin Mining",
-          "url": "https://www.lopp.net/bitcoin-information/mining.html",
-          "notes": "Operational references including discussions of power-market dynamics."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7315,10 +7615,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -7351,10 +7654,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -7388,10 +7694,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -7425,10 +7734,13 @@
           "notes": "Bandwidth and latency optimizations that reduce stale races."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Block Chain",
-          "url": "https://developer.bitcoin.org/devguide/block_chain.html",
-          "notes": "Chain race and reorganization background."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -7463,10 +7775,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -7493,10 +7808,13 @@
           "notes": "Canonical Stratum V2 protocol docs."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Pooled Mining",
-          "url": "https://bitcoinops.org/en/topics/pooled-mining/",
-          "notes": "Mining pool architecture discussions including Stratum V2 developments."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7530,10 +7848,13 @@
           "notes": "Canonical interface between miners and full nodes for block templates."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Core RPC: getblocktemplate",
-          "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
-          "notes": "RPC details that shape practical template assembly behavior."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7568,10 +7889,13 @@
           "notes": "Detailed explanation of address manager internals."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: P2P Network",
-          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-          "notes": "P2P topology and peer exchange background."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7612,10 +7936,13 @@
           "notes": "Network-level message and peer lifecycle background."
         },
         {
-          "type": "article",
-          "title": "Lopp: Full Node Resources",
-          "url": "https://www.lopp.net/bitcoin-information/full-node.html",
-          "notes": "Operational hardening references and node security materials."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -7639,10 +7966,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech: AssumeUTXO",
-          "url": "https://bitcoinops.org/en/topics/assumeutxo/",
-          "notes": "Design and implementation status tracking."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7677,10 +8007,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Compact Block Relay",
-          "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
-          "notes": "Background on BIP152 relay for full-node block propagation."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7714,10 +8047,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: P2P Network",
-          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-          "notes": "Bootstrap flow and role of seed peers in initial discovery."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7758,10 +8094,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7802,10 +8141,13 @@
           "notes": "Tradeoffs across node operation modes during and after sync."
         },
         {
-          "type": "article",
-          "title": "Lopp: Full Node Resources",
-          "url": "https://www.lopp.net/bitcoin-information/full-node.html",
-          "notes": "Operational references for node deployment and maintenance."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -7836,10 +8178,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7867,10 +8212,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Mesh Networking",
-          "url": "https://en.wikipedia.org/wiki/Mesh_networking",
-          "notes": "General networking primer for decentralized mesh routing."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7911,10 +8259,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -7955,10 +8306,13 @@
           "notes": "How address gossip works and where poisoning risks appear."
         },
         {
-          "type": "article",
-          "title": "Bitcoin P2P Networking Reference",
-          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
-          "notes": "Reference for version, addr, and related network messages."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "65m",
@@ -7987,10 +8341,13 @@
           "notes": "Threat model for eclipse and connection-layer abuse."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: P2P Network",
-          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-          "notes": "Connection behavior and message-layer assumptions."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8025,10 +8382,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8062,10 +8422,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8099,10 +8462,13 @@
           "notes": "When to choose regtest, testnet, or signet."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Signet",
-          "url": "https://bitcoinops.org/en/topics/signet/",
-          "notes": "Network usage and ecosystem support updates."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8136,10 +8502,13 @@
           "notes": "Canonical node configuration guidance for Tor."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Anonymity Networks",
-          "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
-          "notes": "Node-level anonymity network tradeoffs and deployment notes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8167,10 +8536,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin RPC Reference: getrawtransaction",
-          "url": "https://developer.bitcoin.org/reference/rpc/getrawtransaction.html",
-          "notes": "Documents txindex requirement for arbitrary historical lookups."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8204,10 +8576,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Utreexo",
-          "url": "https://bitcoinops.org/en/topics/utreexo/",
-          "notes": "Operational and protocol implications for accumulator-based nodes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8247,10 +8622,13 @@
           "notes": "Chainstate handling and sync implications for UTXO management."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: Operating Modes",
-          "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
-          "notes": "Pruned and archival operating tradeoffs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8286,10 +8664,13 @@
           "notes": "Operational and protocol-centric lessons."
         },
         {
-          "type": "article",
-          "title": "Mempool Documentation",
-          "url": "https://mempool.space/docs",
-          "notes": "Operational view of mempool and blockspace."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8317,10 +8698,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8360,10 +8744,13 @@
           "notes": "Input selection patterns that shape amount linkage risk."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "User-facing coin selection tradeoffs affecting privacy outcomes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8398,10 +8785,13 @@
           "notes": "How transaction patterns can leak relationship signals."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "Wallet behavior choices that impact privacy."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8429,10 +8819,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "Design-level rationale for reducing deterministic change behavior."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8468,10 +8861,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "Wallet-side output and UTXO behavior that influences change patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8505,10 +8901,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8542,10 +8941,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8584,10 +8986,13 @@
           "notes": "Covers clustering and transaction-linking techniques."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin Privacy Resources",
-          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
-          "notes": "Survey of practical privacy leakage vectors and mitigations."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8752,10 +9157,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Design Guide",
-          "url": "https://bitcoin.design/",
-          "notes": "Wallet UX and user safety patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8801,10 +9209,13 @@
           "notes": "Implementation guidance and known caveats."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "Selection strategy implications for privacy tools."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -8826,10 +9237,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Pseudonymity",
-          "url": "https://en.wikipedia.org/wiki/Pseudonymity",
-          "notes": "Conceptual baseline distinguishing pseudonymity from anonymity."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8877,10 +9291,13 @@
           "notes": "Wallet address/script behavior fundamentals relevant to fingerprinting."
         },
         {
-          "type": "article",
-          "title": "Lopp: Bitcoin Privacy",
-          "url": "https://www.lopp.net/bitcoin-information/privacy.html",
-          "notes": "Practical mitigation resources for script and wallet metadata leaks."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -8905,10 +9322,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Silent Payments",
-          "url": "https://bitcoinops.org/en/topics/silent-payments/",
-          "notes": "Protocol mechanics and wallet integration tradeoffs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -8956,9 +9376,9 @@
         },
         {
           "type": "book",
-          "title": "Mastering Bitcoin: Transaction Fees",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
-          "notes": "Economic mechanics behind fee pressure and input management.",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
           }
@@ -8997,10 +9417,13 @@
           "notes": "Wallet architecture patterns relevant to key exposure."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Private Key Management Overview",
-          "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-          "notes": "User-facing key management and account model implications."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -9069,10 +9492,13 @@
           "notes": "Canonical specification for addrv2 address relay serialization."
         },
         {
-          "type": "article",
-          "title": "Bitcoin P2P Networking Reference",
-          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
-          "notes": "Reference for address-related P2P messages and relay behavior."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -9194,10 +9620,13 @@
           "notes": "Proposal framing and relation to other covenant primitives."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: SIGHASH_ANYPREVOUT",
-          "url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
-          "notes": "Implementation and deployment considerations."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -9237,10 +9666,13 @@
           "notes": "Context for validation shortcuts used during initial chain sync."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Full Node Operating Modes",
-          "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
-          "notes": "Describes full validation behavior and tradeoffs in node operation."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -9268,10 +9700,13 @@
           "notes": "Defines coinbase height commitments."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Reference: Block Chain",
-          "url": "https://developer.bitcoin.org/reference/block_chain.html",
-          "notes": "Canonical block-header and chain reference fields."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -9354,10 +9789,13 @@
           "notes": "Weight metric and witness discount definition."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Transaction sizing and fee calculation context."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -9393,10 +9831,13 @@
           "notes": "Canonical protocol definition for bloom-filtered transaction relay."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Transaction Bloom Filtering",
-          "url": "https://bitcoinops.org/en/topics/transaction-bloom-filtering/",
-          "notes": "Security and privacy limitations with historical context."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -9431,10 +9872,13 @@
           "notes": "Canonical CLTV specification and activation details."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: Contracts",
-          "url": "https://developer.bitcoin.org/devguide/contracts.html",
-          "notes": "Examples of locktime-driven script constructions."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -9463,10 +9907,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Cluster Mempool",
-          "url": "https://bitcoinops.org/en/topics/cluster-mempool/",
-          "notes": "Implementation status and policy impact."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -9500,10 +9947,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Mining",
-          "url": "https://developer.bitcoin.org/devguide/mining.html",
-          "notes": "Coinbase construction and miner incentives."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -9550,10 +10000,13 @@
           "notes": "Filter encoding and matching behavior."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Compact Block Filters",
-          "url": "https://bitcoinops.org/en/topics/compact-block-filters/",
-          "notes": "Operational coverage and deployment context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "70m",
@@ -9584,10 +10037,13 @@
           "notes": "Wire protocol specification for compact blocks."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech: Compact Block Relay",
-          "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
-          "notes": "Implementation and policy history with operational notes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -9628,10 +10084,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "60m",
@@ -9665,10 +10124,13 @@
           "notes": "Shows where local relay and admission policy diverge from raw consensus validity."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Practical transaction relay context for understanding standardness and local node policy."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "20m",
@@ -9731,10 +10193,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Child Pays For Parent",
-          "url": "https://bitcoinops.org/en/topics/cpfp/",
-          "notes": "Operational use-cases and tradeoffs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -9769,10 +10234,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: CPFP Carve Out",
-          "url": "https://bitcoinops.org/en/topics/cpfp-carve-out/",
-          "notes": "Policy rationale and Lightning-specific fee-bump behavior."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -9858,10 +10326,13 @@
           "notes": "Consensus-level relative locktime interpretation used by CSV."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: Contracts",
-          "url": "https://developer.bitcoin.org/devguide/contracts.html",
-          "notes": "Practical contract composition patterns using timelock opcodes."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "75m",
@@ -9896,10 +10367,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -10014,10 +10488,13 @@
           "notes": "Policy admission context relevant to dust-like outputs."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Design: Coin Selection",
-          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-          "notes": "Wallet-level consequences of creating uneconomical outputs."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "55m",
@@ -10041,10 +10518,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Ephemeral Anchors",
-          "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
-          "notes": "Policy motivation and deployment details."
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
         },
         {
           "type": "article",
@@ -10079,10 +10559,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Erlay",
-          "url": "https://bitcoinops.org/en/topics/erlay/",
-          "notes": "Design and rollout considerations."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -10128,10 +10611,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -10154,10 +10640,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Fee Sponsorship",
-          "url": "https://bitcoinops.org/en/topics/fee-sponsorship/",
-          "notes": "Current proposals and policy constraints for sponsorship schemes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -10204,10 +10693,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "40m",
@@ -10236,10 +10728,13 @@
           "notes": "Walks through peer synchronization stages in node startup."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Guide: P2P Network",
-          "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-          "notes": "Explains message-level sync behavior and peer coordination."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -10317,10 +10812,13 @@
           "notes": "Defines MTP usage for locktime evaluation."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Reference: Block Chain",
-          "url": "https://developer.bitcoin.org/reference/block_chain.html",
-          "notes": "Timestamp fields and consensus constraints."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -10360,10 +10858,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -10438,10 +10939,13 @@
           "notes": "Byte-level semantics and execution behavior."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: OP_CAT",
-          "url": "https://bitcoinops.org/en/topics/op_cat/",
-          "notes": "Activation and policy discussion."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -10469,10 +10973,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Opcode Explained: OP_CHECKSIGADD",
-          "url": "https://opcodeexplained.com/opcodes/op_checksigadd",
-          "notes": "Execution semantics and stack behavior."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -10553,10 +11060,13 @@
           "notes": "Proposal details and covenant motivations."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: OP_CHECKTEMPLATEVERIFY",
-          "url": "https://bitcoinops.org/en/topics/op_checktemplateverify/",
-          "notes": "Ecosystem progress and deployment discussion."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -10584,10 +11094,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Opcode Explained: OP_CODESEPARATOR",
-          "url": "https://opcodeexplained.com/opcodes/op_codeseparator",
-          "notes": "Exact execution and signature-hash effects."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -10631,6 +11144,15 @@
           "title": "Bitcoin Developer Guide: Transactions (Null Data)",
           "url": "https://developer.bitcoin.org/devguide/transactions.html#null-data",
           "notes": "Policy constraints and transaction usage patterns."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "45m",
@@ -10654,10 +11176,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Package Relay",
-          "url": "https://bitcoinops.org/en/topics/package-relay/",
-          "notes": "Status updates and design tradeoffs around package acceptance and relay."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -10793,10 +11318,13 @@
           "notes": "Canonical policy rules."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Replace-by-Fee",
-          "url": "https://bitcoinops.org/en/topics/replace-by-fee/",
-          "notes": "Wallet/service operational guidance."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -10837,10 +11365,13 @@
           "notes": "Canonical specification source for standards."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Dev Network",
-          "url": "https://bitcoindev.network/",
-          "notes": "Practical implementation context."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -10967,10 +11498,13 @@
           "notes": "Defines time-evaluation behavior used with sequence locks."
         },
         {
-          "type": "article",
-          "title": "Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Operational transaction fields and locktime context."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "80m",
@@ -11080,10 +11614,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Developer Guide: Transactions",
-          "url": "https://developer.bitcoin.org/devguide/transactions.html",
-          "notes": "Policy-level transaction relay constraints versus consensus validity."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -11124,10 +11661,13 @@
           "notes": "Canonical definition of the tagged hashing construction used by Schnorr signatures."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
-          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
-          "notes": "Workshop module 0.3 introduces tagged hashes in the Taproot preparation sequence."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -11166,6 +11706,15 @@
           "title": "Bitcoin Optech Schnorr/Taproot Workshop",
           "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
           "notes": "Workshop module 2.4 walks through spending with one script and providing proof it was in the committed tree."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "20m",
@@ -11247,10 +11796,13 @@
           "notes": "Workshop module 2.4 demonstrates constructing a TapTree and spending via one revealed script."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Taproot",
-          "url": "https://bitcoinops.org/en/topics/taproot/",
-          "notes": "Higher-level context for why Taproot script trees improve privacy and flexibility."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "25m",
@@ -11288,10 +11840,13 @@
           "notes": "Workshop module 2.2 explains how key tweaks commit to arbitrary data in Taproot outputs."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Taproot",
-          "url": "https://bitcoinops.org/en/topics/taproot/",
-          "notes": "Practical ecosystem context for where TapTweak fits inside deployed Taproot usage."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         }
       ],
       "estimatedTime": "25m",
@@ -11492,10 +12047,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Transaction Pinning",
-          "url": "https://bitcoinops.org/en/topics/transaction-pinning/",
-          "notes": "Detailed taxonomy of pinning vectors and mitigation proposals."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -11530,10 +12088,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin P2P Networking Reference",
-          "url": "https://developer.bitcoin.org/reference/p2p_networking.html",
-          "notes": "Message-level behavior for inventory announcements and requests."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -11657,10 +12218,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: V2 P2P Transport",
-          "url": "https://bitcoinops.org/en/topics/v2-p2p-transport/",
-          "notes": "Deployment guidance and compatibility notes."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -11751,10 +12315,13 @@
           "notes": "Defines witness commitment structure and validation rules."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Developer Reference: Block Chain",
-          "url": "https://developer.bitcoin.org/reference/block_chain.html",
-          "notes": "Reference for block and coinbase data fields used by commitments."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -11795,10 +12362,13 @@
           "notes": "Introduces witness data and witness transaction identifiers."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Core Academy: Transaction Tracking",
-          "url": "https://bitcoincore.academy/transaction-tracking.html",
-          "notes": "How nodes track transaction identifiers and relay state."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "70m",
@@ -11822,10 +12392,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: X-only public keys",
-          "url": "https://bitcoinops.org/en/topics/x-only-public-keys/",
-          "notes": "Focused explanation of x-only encoding, parity constraints, and Taproot usage."
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
         },
         {
           "type": "article",
@@ -11872,10 +12445,13 @@
           "notes": "Concrete examples of modeling attack surfaces in Bitcoin."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Expiration Floods",
-          "url": "https://bitcoinops.org/en/topics/expiration-floods/",
-          "notes": "Example of threat modeling for Lightning-related attack patterns."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         }
       ],
       "estimatedTime": "50m",
@@ -11946,10 +12522,13 @@
       ],
       "resources": [
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: Eclipse Attacks",
-          "url": "https://bitcoinops.org/en/topics/eclipse-attacks/",
-          "notes": "Attack mechanics and mitigation guidance."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",
@@ -12070,10 +12649,13 @@
           "notes": "Process guidance from historical incidents and response lessons."
         },
         {
-          "type": "article",
-          "title": "Bitcoin Optech Topic: CVEs (various)",
-          "url": "https://bitcoinops.org/en/topics/cve/",
-          "notes": "Catalog of vulnerability classes and publication history."
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
         },
         {
           "type": "article",

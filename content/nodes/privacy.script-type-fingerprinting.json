@@ -20,10 +20,13 @@
       "notes": "Wallet address/script behavior fundamentals relevant to fingerprinting."
     },
     {
-      "type": "article",
-      "title": "Lopp: Bitcoin Privacy",
-      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
-      "notes": "Practical mitigation resources for script and wallet metadata leaks."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

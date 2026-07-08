@@ -15,10 +15,13 @@
       "notes": "Walks through peer synchronization stages in node startup."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: P2P Network",
-      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-      "notes": "Explains message-level sync behavior and peer coordination."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

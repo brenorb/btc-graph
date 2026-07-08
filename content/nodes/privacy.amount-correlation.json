@@ -15,10 +15,13 @@
       "notes": "Input selection patterns that shape amount linkage risk."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Coin Selection",
-      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-      "notes": "User-facing coin selection tradeoffs affecting privacy outcomes."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

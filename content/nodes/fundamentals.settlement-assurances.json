@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Block Chain",
-      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
-      "notes": "How blocks and confirmations establish confidence."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     },
     {
       "type": "article",

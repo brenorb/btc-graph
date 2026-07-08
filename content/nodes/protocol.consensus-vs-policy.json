@@ -20,10 +20,13 @@
       "notes": "Shows where local relay and admission policy diverge from raw consensus validity."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Transactions",
-      "url": "https://developer.bitcoin.org/devguide/transactions.html",
-      "notes": "Practical transaction relay context for understanding standardness and local node policy."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "20m",

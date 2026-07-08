@@ -14,10 +14,13 @@
       "notes": "Defines coinbase height commitments."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Reference: Block Chain",
-      "url": "https://developer.bitcoin.org/reference/block_chain.html",
-      "notes": "Canonical block-header and chain reference fields."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

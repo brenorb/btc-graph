@@ -14,10 +14,13 @@
       "notes": "Canonical CLTV specification and activation details."
     },
     {
-      "type": "article",
-      "title": "Developer Guide: Contracts",
-      "url": "https://developer.bitcoin.org/devguide/contracts.html",
-      "notes": "Examples of locktime-driven script constructions."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

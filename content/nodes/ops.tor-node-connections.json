@@ -14,10 +14,13 @@
       "notes": "Canonical node configuration guidance for Tor."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Anonymity Networks",
-      "url": "https://bitcoinops.org/en/topics/anonymity-networks/",
-      "notes": "Node-level anonymity network tradeoffs and deployment notes."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

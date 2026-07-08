@@ -14,10 +14,13 @@
       "notes": "Seed phrase foundations needed before any entropy-splitting method."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Backups",
-      "url": "https://bitcoin.design/guide/how-it-works/backups/",
-      "notes": "Backup design patterns and user-risk framing for distributed secret storage."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

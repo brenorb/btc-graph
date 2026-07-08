@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Transactions",
-      "url": "https://developer.bitcoin.org/devguide/transactions.html",
-      "notes": "Transaction structure fundamentals behind batching tradeoffs."
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4h1H0iK",
+      "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     },
     {
       "type": "article",

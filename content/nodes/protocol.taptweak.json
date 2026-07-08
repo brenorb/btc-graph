@@ -22,10 +22,13 @@
       "notes": "Workshop module 2.2 explains how key tweaks commit to arbitrary data in Taproot outputs."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Taproot",
-      "url": "https://bitcoinops.org/en/topics/taproot/",
-      "notes": "Practical ecosystem context for where TapTweak fits inside deployed Taproot usage."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "25m",

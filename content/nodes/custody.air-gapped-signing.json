@@ -10,10 +10,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Design: Private Key Management Overview",
-      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-      "notes": "Threat model and key-isolation design patterns."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

@@ -926,6 +926,20 @@
         "source.bitcoinops-topics"
       ],
       "notes": "This keeps the subtree clearer without over-wiring every downstream policy leaf at once."
+    },
+    {
+      "id": "decision.amazon-book-coverage",
+      "type": "scope",
+      "subject": "per-node-amazon-book-resource",
+      "status": "resolved",
+      "rationale": "Each node should expose at least one Amazon-linked book resource so learners have a long-form study option in addition to articles. When a node was already at its resource cap, the weakest non-book resource was replaced instead of bloating the list.",
+      "relatedConceptIds": [],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map",
+        "source.bitcoin-dev-philosophy",
+        "source.bitcoinops-topics"
+      ],
+      "notes": "The pass used only book links already established elsewhere in the repo, normalized chapter-link book entries to title-level Amazon links, and added a test to keep future nodes covered."
     }
   ]
 }

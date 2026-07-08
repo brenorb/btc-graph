@@ -9,9 +9,9 @@
   "resources": [
     {
       "type": "book",
-      "title": "Mastering Bitcoin: Transaction Fees",
-      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
-      "notes": "Economic background for fee dynamics and bidding strategies.",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
       "regionalUrls": {
         "BR": "https://amzn.to/4te47JX"
       }
