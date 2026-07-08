@@ -4,7 +4,8 @@
   "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.fee-market"
+    "protocol.fee-market",
+    "protocol.consensus-vs-policy"
   ],
   "resources": [
     {

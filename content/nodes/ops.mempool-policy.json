@@ -5,7 +5,8 @@
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
-    "protocol.mempool"
+    "protocol.mempool",
+    "protocol.consensus-vs-policy"
   ],
   "resources": [
     {

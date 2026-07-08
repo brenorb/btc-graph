@@ -871,7 +871,7 @@
         "source.mastering-bitcoin-book-map",
         "source.bitcoinops-topics"
       ],
-      "notes": "version-3 transaction relay and light-client trust model remain queued behind this bridge concept."
+      "notes": "Implemented in the current branch. The immediate follow-up rewires target ops.mempool-policy, protocol.rbf, protocol.dust-policy, and protocol.cpfp-carve-out."
     },
     {
       "id": "decision.merge-address-reuse-harms",
@@ -903,6 +903,29 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Future work should enrich protocol.timelocks copy and resources instead of adding a second node."
+    },
+    {
+      "id": "decision.policy-parent-rewire-scope",
+      "type": "scope",
+      "subject": "policy-subtree-parent-edges",
+      "status": "resolved",
+      "rationale": "The first policy-bridge rewire should target the nodes where the consensus-versus-policy boundary is most direct: ops.mempool-policy, protocol.rbf, protocol.dust-policy, and protocol.cpfp-carve-out. Deeper leaves should inherit the bridge transitively for now.",
+      "relatedConceptIds": [
+        "protocol.consensus-vs-policy",
+        "ops.mempool-policy",
+        "protocol.rbf",
+        "protocol.dust-policy",
+        "protocol.cpfp-carve-out",
+        "protocol.standardness-policy",
+        "protocol.package-relay",
+        "protocol.transaction-pinning"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy",
+        "source.mastering-bitcoin-book-map",
+        "source.bitcoinops-topics"
+      ],
+      "notes": "This keeps the subtree clearer without over-wiring every downstream policy leaf at once."
     }
   ]
 }
