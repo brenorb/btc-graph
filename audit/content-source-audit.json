@@ -18,8 +18,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
       "conceptsExtracted": 25,
-      "conceptsNormalized": 3,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys."
+      "conceptsNormalized": 4,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys and protocol.version-3-transaction-relay."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -297,10 +297,9 @@
         "protocol.transaction-pinning"
       ],
       "chosenPrerequisites": [
-        "protocol.consensus-vs-policy",
         "protocol.transaction-pinning"
       ],
-      "prerequisiteRationale": "The core learner need is to understand that relay policy is distinct from consensus, and that v3 exists to constrain pinning-related behavior.",
+      "prerequisiteRationale": "The core learner need is to understand the pinning problem that v3 relay is trying to constrain. In the current graph, the policy boundary is already inherited transitively through the transaction-pinning branch, so adding it directly would be redundant.",
       "aliases": [
         "TRUC",
         "v3 relay"
@@ -312,7 +311,7 @@
       ],
       "estimatedTime": "25m",
       "confidence": "medium",
-      "notes": "Defer until protocol.consensus-vs-policy exists. Alias normalization is mandatory here because Optech names and implementation jargon vary."
+      "notes": "Implemented in the current branch as the next policy-leaf slice after adding protocol.consensus-vs-policy. Alias normalization remains mandatory here because Optech names and implementation jargon vary, and the direct policy-boundary edge was intentionally dropped after the redundancy check proved it was already inherited."
     },
     {
       "id": "fundamentals.validation-sovereignty",
@@ -702,13 +701,13 @@
       "notes": "Source-driven bridge edge."
     },
     {
-      "from": "protocol.consensus-vs-policy",
+      "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
       "status": "proposed",
-      "rationale": "Learners should understand policy as distinct from consensus before v3 relay design tradeoffs.",
-      "sourceId": "source.bitcoin-dev-philosophy",
-      "notes": "Bridge edge inferred from policy-heavy source overlap."
+      "rationale": "Version 3 relay is a targeted policy response to transaction pinning, so learners should understand the attack class before the mitigation.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct edge chosen over package-relay because the pinning problem is the narrower immediate teaching need."
     },
     {
       "from": "fundamentals.trustlessness",
@@ -940,6 +939,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "The pass used only book links already established elsewhere in the repo, normalized chapter-link book entries to title-level Amazon links, and added a test to keep future nodes covered."
+    },
+    {
+      "id": "decision.v3-relay-slice",
+      "type": "scope",
+      "subject": "protocol.version-3-transaction-relay",
+      "status": "resolved",
+      "rationale": "Version 3 transaction relay is the highest-confidence remaining concept from the audited seed sources because it sharpens the existing mempool policy branch without opening a new broad subtree. In the current graph it fits best as a direct child of transaction pinning, with the policy boundary already inherited transitively.",
+      "relatedConceptIds": [
+        "protocol.version-3-transaction-relay",
+        "protocol.consensus-vs-policy",
+        "protocol.transaction-pinning",
+        "protocol.package-relay",
+        "protocol.ephemeral-anchors"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics",
+        "source.btctranscripts-topics"
+      ],
+      "notes": "Kept this slice additive for now instead of rewiring deeper descendants like protocol.ephemeral-anchors until the relay-policy branch grows further."
     }
   ]
 }

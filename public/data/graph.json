@@ -12249,6 +12249,50 @@
       ]
     },
     {
+      "id": "protocol.version-3-transaction-relay",
+      "title": "Version 3 Transaction Relay",
+      "description": "Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.transaction-pinning"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Version 3 Transaction Relay",
+          "url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/",
+          "notes": "Canonical overview of TRUC, its anti-pinning goals, and its relationship to package relay and ephemeral anchors."
+        },
+        {
+          "type": "article",
+          "title": "BIP 431: Topology Restrictions for Pinning",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0431.mediawiki",
+          "notes": "Primary specification for TRUC transaction signaling, topology limits, and intended fee-bumping behavior."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, fee-bumping, and mempool policy context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "mempool",
+        "relay",
+        "pinning",
+        "truc"
+      ],
+      "aliases": [
+        "truc",
+        "topologically restricted until confirmation",
+        "v3 relay"
+      ]
+    },
+    {
       "id": "protocol.versionbits",
       "title": "Version Bits Signaling",
       "description": "Miner signaling mechanism for coordinated soft-fork deployment using block version fields.",
