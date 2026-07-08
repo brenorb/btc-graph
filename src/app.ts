@@ -312,10 +312,7 @@ function createLayout(root: HTMLElement) {
 
       <footer class="site-footer">
         <div class="footer-main">
-          <span class="footer-mark-stack" aria-hidden="true">
-            <img class="footer-mark footer-mark-light" src="${LOGO_MARK_URL}" alt="" width="30" height="39" />
-            <img class="footer-mark footer-mark-dark" src="${LOGO_MARK_WHITE_URL}" alt="" width="30" height="39" />
-          </span>
+          <img class="footer-mark" src="${LOGO_MARK_URL}" alt="" width="30" height="39" />
           <div>
             <div class="footer-title">Bitcoin Learning Graph</div>
             <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
