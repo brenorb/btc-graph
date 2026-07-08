@@ -85,10 +85,35 @@ body {
   gap: 2px;
 }
 
+.brand-mark-stack,
+.footer-mark-stack {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.brand-mark-stack {
+  width: 40px;
+}
+
 .brand-mark {
   width: 40px;
   height: auto;
-  flex: 0 0 auto;
+  display: block;
+}
+
+.brand-mark-dark,
+.footer-mark-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .brand-mark-light,
+:root[data-theme="dark"] .footer-mark-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .brand-mark-dark,
+:root[data-theme="dark"] .footer-mark-dark {
+  display: block;
 }
 
 .brand-title {
@@ -692,10 +717,14 @@ input {
   gap: 10px;
 }
 
+.footer-mark-stack {
+  width: 30px;
+}
+
 .footer-mark {
   width: 30px;
   height: auto;
-  flex: 0 0 auto;
+  display: block;
 }
 
 .footer-title {
