@@ -86,8 +86,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 12,
       "conceptsExtracted": 15,
-      "conceptsNormalized": 5,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, and tapleaf inclusion proofs. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs."
+      "conceptsNormalized": 6,
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, tapleaf inclusion proofs, and Huffman-optimized TapTrees. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs, and protocol.huffman-optimized-taptrees."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -103,8 +103,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
       "conceptsExtracted": 15,
-      "conceptsNormalized": 8,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, and protocol.p2ms."
+      "conceptsNormalized": 9,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, protocol.p2ms, and protocol.bare-multisig-standardness."
     }
   ],
   "concepts": [
@@ -279,7 +279,7 @@
       ],
       "estimatedTime": "20m",
       "confidence": "medium",
-      "notes": "Advanced but likely missing in the current graph."
+      "notes": "Implemented in the current branch as the last explicit pending workshop optimization concept."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -640,6 +640,38 @@
       "notes": "Implemented in the current branch as the next Decoding-derived output-template slice."
     },
     {
+      "id": "protocol.bare-multisig-standardness",
+      "title": "Bare Multisig Standardness",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding",
+      "sourceContext": "Scripts module page P2MS, especially the standardness-versus-validity discussion",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "A narrow policy leaf about one specific script template's default relay treatment, distinct from both the bare multisig template itself and the broader concept of standardness policy.",
+      "candidatePrerequisites": [
+        "protocol.p2ms",
+        "protocol.standardness-policy"
+      ],
+      "chosenPrerequisites": [
+        "protocol.p2ms",
+        "protocol.standardness-policy"
+      ],
+      "prerequisiteRationale": "Learners need the bare multisig template and the general idea of standardness before the special relay treatment of bare multisig becomes meaningful.",
+      "aliases": [
+        "bare multisig relay standardness",
+        "non-standard bare multisig"
+      ],
+      "tags": [
+        "policy",
+        "multisig",
+        "relay"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the first policy leaf under the new legacy multisig mini-subgraph."
+    },
+    {
       "id": "protocol.cluster-mempool",
       "title": "Cluster Mempool",
       "category": "Network, Relay & Client Sync",
@@ -899,6 +931,24 @@
       "rationale": "Bare multisig is the concrete locking template built from OP_CHECKMULTISIG, so the opcode is the clean direct parent once introduced.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Replaces the earlier curricular and wallet-semantic parent candidates."
+    },
+    {
+      "from": "protocol.p2ms",
+      "to": "protocol.bare-multisig-standardness",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The relay treatment only makes sense once the learner understands what a bare multisig output actually is on-chain.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Policy leaf anchored on the specific legacy script template it constrains."
+    },
+    {
+      "from": "protocol.standardness-policy",
+      "to": "protocol.bare-multisig-standardness",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "This node is a concrete application of standard transaction policy, so the general standardness concept should come first.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Policy-boundary prerequisite inherited through the existing mempool-policy branch."
     }
   ],
   "decisions": [
@@ -1268,6 +1318,24 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "Kept the direct parent to protocol.op-checkmultisig rather than protocol.script so the graph can distinguish the opcode mechanism from the template built on top of it."
+    },
+    {
+      "id": "decision.bare-multisig-standardness-leaf",
+      "type": "scope",
+      "subject": "protocol.bare-multisig-standardness",
+      "status": "resolved",
+      "rationale": "The first downstream policy leaf after the legacy multisig mini-subgraph should be protocol.bare-multisig-standardness. It turns the Decoding standardness-versus-validity sidebar into a precise graph node without collapsing it into generic policy or wallet-level multisig content.",
+      "relatedConceptIds": [
+        "protocol.bare-multisig-standardness",
+        "protocol.p2ms",
+        "protocol.standardness-policy",
+        "protocol.op-checkmultisig",
+        "protocol.consensus-vs-policy"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "Kept protocol.consensus-vs-policy out of the direct prerequisites because that boundary is already inherited through protocol.standardness-policy."
     }
   ]
 }

@@ -9770,6 +9770,49 @@
       ]
     },
     {
+      "id": "protocol.bare-multisig-standardness",
+      "title": "Bare Multisig Standardness",
+      "description": "Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.p2ms",
+        "protocol.standardness-policy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical explanation of multisig scripts plus the standardness rule that makes larger bare multisig outputs non-standard for default relay."
+        },
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding lesson that explicitly contrasts bare multisig with P2SH multisig and calls out the small-participant standardness limit."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for script templates, redeem-script indirection, and policy-versus-validity tradeoffs in older transaction patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "policy",
+        "multisig",
+        "relay"
+      ],
+      "aliases": [
+        "bare multisig relay standardness",
+        "non-standard bare multisig"
+      ]
+    },
+    {
       "id": "protocol.block-height",
       "title": "Block Height",
       "description": "Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.",
@@ -10836,6 +10879,47 @@
       "aliases": [
         "headers first",
         "header sync"
+      ]
+    },
+    {
+      "id": "protocol.huffman-optimized-taptrees",
+      "title": "Huffman-Optimized TapTrees",
+      "description": "A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptree"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.5 shows how to arrange TapTree leaves by expected spend probability to reduce average reveal cost."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Formal Taproot commitment reference for the tree and proof structure that Huffman ordering is optimizing."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Background reference for Merkle commitments, script trees, and transaction-size tradeoffs behind this optimization.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "optimization",
+        "scripts"
+      ],
+      "aliases": [
+        "huffman taptrees"
       ]
     },
     {

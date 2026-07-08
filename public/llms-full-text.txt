@@ -199,9 +199,10 @@ Network, Relay & Client Sync (48 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (57 concepts)
+Protocol & Consensus (59 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
+- Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
 - Bitcoin Script: Locking and unlocking conditions for UTXO spending.
 - Block Height: Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.
@@ -221,6 +222,7 @@ Protocol & Consensus (57 concepts)
 - Ephemeral Anchors: Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.
 - Fee Sponsorship: Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.
 - Halving Cycle: Programmed issuance reductions and long-term security implications.
+- Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.
 - MATT and CCV: MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.
 - Median Time Past: Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
