@@ -17,9 +17,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
-      "conceptsExtracted": 27,
-      "conceptsNormalized": 7,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, and protocol.accidental-confiscation."
+      "conceptsExtracted": 28,
+      "conceptsNormalized": 8,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, and dev.taproot-descriptors."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -438,6 +438,39 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a wallet-construction bridge that parents several existing privacy and funding leaves conceptually, without rewiring those older phase-locked nodes yet."
+    },
+    {
+      "id": "dev.taproot-descriptors",
+      "title": "Taproot Descriptors",
+      "category": "Wallets",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+      "sourceContext": "Output script descriptors topic page plus BIP386 tr() descriptor support for P2TR outputs",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates the tr() descriptor layer for Taproot outputs, narrower than generic descriptors and narrower than PSBT or MuSig workflow integrations.",
+      "candidatePrerequisites": [
+        "dev.descriptors",
+        "protocol.taproot",
+        "dev.descriptor-wallet-imports"
+      ],
+      "chosenPrerequisites": [
+        "dev.descriptors",
+        "protocol.taproot"
+      ],
+      "prerequisiteRationale": "Learners need the base descriptor grammar and the Taproot output model before Taproot-specific descriptor structure makes sense. Import workflows are downstream consumers rather than prerequisites.",
+      "aliases": [
+        "tr descriptors",
+        "bip386"
+      ],
+      "tags": [
+        "descriptors",
+        "taproot",
+        "wallet-development"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as a clean descriptor-side Taproot leaf without reopening PSBT transport or MuSig workflow rewires."
     },
     {
       "id": "protocol.version-3-transaction-relay",
@@ -1037,6 +1070,24 @@
       "notes": "Direct edge keeps the node connected to transaction-cost tradeoffs rather than only to wallet UX."
     },
     {
+      "from": "dev.descriptors",
+      "to": "dev.taproot-descriptors",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Taproot descriptors extend the general descriptor grammar, so learners need the base descriptor model before the tr() specialization makes sense.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct edge keeps the node scoped to descriptor structure instead of wallet import behavior."
+    },
+    {
+      "from": "protocol.taproot",
+      "to": "dev.taproot-descriptors",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The tr() descriptor exists specifically to encode P2TR outputs and optional Taproot script-path commitments, so learners need the Taproot output model first.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct edge keeps the node grounded in Taproot output semantics rather than in generic descriptor syntax alone."
+    },
+    {
       "from": "protocol.transaction-pinning",
       "to": "protocol.version-3-transaction-relay",
       "type": "prerequisite",
@@ -1533,6 +1584,25 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Chosen over philosophy-side wrappers such as full-node decentralization because coin selection has clearer boundaries and stronger immediate downstream leverage in the current graph. The direct protocol.utxo-model edge was dropped after the redundancy check showed it was already inherited through the fee-market branch."
+    },
+    {
+      "id": "decision.taproot-descriptors-slice",
+      "type": "scope",
+      "subject": "dev.taproot-descriptors",
+      "status": "resolved",
+      "rationale": "The cleanest next Optech-side additive slice is dev.taproot-descriptors. It captures the BIP386 tr() descriptor layer directly without collapsing into generic descriptor wallet flows, PSBT transport, or MuSig policy composition.",
+      "relatedConceptIds": [
+        "dev.taproot-descriptors",
+        "dev.descriptors",
+        "protocol.taproot",
+        "dev.descriptor-wallet-imports",
+        "dev.taproot-psbt-fields",
+        "custody.musig2-descriptors"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Chosen over broader governance wrappers and over deeper Taproot internals because it adds a clean new bridge between existing descriptor and Taproot branches without forcing rewires on older wallet nodes."
     },
     {
       "id": "decision.decoding-script-history-slice",

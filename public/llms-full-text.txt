@@ -318,7 +318,7 @@ Security (53 concepts)
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
 - zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
-Wallets (31 concepts)
+Wallets (32 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.
 - Air-Gapped Signing: Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.
 - Backups and Recovery: Recovery drills, inheritance planning, and backup hygiene.
@@ -346,6 +346,7 @@ Wallets (31 concepts)
 - Seed Phrases: Mnemonic backups and key restoration model.
 - Seed XOR Shards: Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.
 - Self-Custody Principles: Operational responsibility model and threat minimization.
+- Taproot Descriptors: Taproot descriptors use the `tr()` expression to describe P2TR outputs, including internal keys and optional script-path commitments. They extend generic output descriptors with Taproot-specific structure without becoming a transaction construction or signing workflow by themselves.
 - Taproot PSBT Fields: Taproot-specific PSBT input and output fields for carrying internal keys, leaf scripts, merkle data, and Taproot derivation metadata without redefining the broader PSBT workflow.
 - UTXO and Output Labeling: Maintaining labels for transaction outputs and counterparties to improve spending decisions, accounting, and privacy hygiene.
 - Wallet Development: Building safer wallet UX around signing and policy constraints.
