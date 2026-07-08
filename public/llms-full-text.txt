@@ -255,7 +255,7 @@ Protocol & Consensus (54 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (52 concepts)
+Security (53 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -289,6 +289,7 @@ Security (52 concepts)
 - Modular Exponentiation: Fast exponentiation under a modulus is the core operation behind key exchange and signature verification. It turns repeated multiplication into tractable computation on large numbers.
 - Modular Inverse: Modular inversion is required in Bitcoin signature equations for both key and nonce terms. Understanding inversion clarifies why bad nonce handling can leak private keys.
 - Network Privacy (Tor): Reducing IP-level linkage when interacting with Bitcoin nodes.
+- Nonce Reuse Attack: Reusing the same Schnorr nonce across different signatures lets observers solve for the signer private key from public signature data. It is a narrow signing failure mode that explains why nonce generation hygiene matters in wallets and multisig protocols.
 - OP_VAULT Proposal: OP_VAULT proposes native covenant support for delayed recovery and theft mitigation flows. It is designed to make vault policies safer and simpler to deploy.
 - PayJoin (P2EP): Interactive transaction protocol that breaks common-input ownership heuristics.
 - Protocol Neutrality: Protocol neutrality means consensus and relay rules should avoid embedding special treatment for particular users or outcomes. Neutral rule design is a core part of Bitcoin’s credible fairness.

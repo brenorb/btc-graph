@@ -103,8 +103,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
       "conceptsExtracted": 15,
-      "conceptsNormalized": 4,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk."
+      "conceptsNormalized": 5,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk and security.nonce-reuse-attack."
     }
   ],
   "concepts": [
@@ -517,7 +517,7 @@
       ],
       "estimatedTime": "15m",
       "confidence": "medium",
-      "notes": "Good candidate for a concise security bridge node."
+      "notes": "Implemented in the current branch as the next Decoding-derived security slice."
     },
     {
       "id": "protocol.p2pk",
@@ -793,6 +793,15 @@
       "rationale": "P2PK is a concrete legacy script template, so learners first need the locking and unlocking model from Bitcoin Script.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Chosen as the first script-history leaf from Decoding after dedupe and direct-edge review."
+    },
+    {
+      "from": "fundamentals.schnorr-signatures",
+      "to": "security.nonce-reuse-attack",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The nonce-reuse failure only makes sense after the learner understands the Schnorr signing flow that produces the nonce and signature pair.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Chosen as a narrow additive security slice without bundling it to custody-side defenses."
     }
   ],
   "decisions": [
@@ -1090,6 +1099,23 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "Deferred protocol.p2ms because its cleanest current prerequisite options are either wallet-semantic overlap or a curricular, non-direct dependency on protocol.p2pk."
+    },
+    {
+      "id": "decision.decoding-nonce-security-slice",
+      "type": "scope",
+      "subject": "security.nonce-reuse-attack",
+      "status": "resolved",
+      "rationale": "The cleanest next Decoding-derived additive slice after P2PK is security.nonce-reuse-attack. It adds a precise Schnorr signing failure mode without reopening the brittle Taproot prerequisite chain or forcing a phase-11 custody rewire.",
+      "relatedConceptIds": [
+        "security.nonce-reuse-attack",
+        "fundamentals.schnorr-signatures",
+        "security.exfiltration-resistant-signing",
+        "protocol.p2ms"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "Kept additive and separate from security.exfiltration-resistant-signing so the graph distinguishes the failure mode from the defense pattern."
     }
   ]
 }
