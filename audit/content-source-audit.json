@@ -156,6 +156,23 @@
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
       "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups and transaction metadata remain follow-up candidates."
+    },
+    {
+      "id": "source.bitcoin-design-wallet-activity",
+      "name": "Bitcoin Design Wallet Activity Context",
+      "url": "https://bitcoin.design/guide/daily-spending-wallet/activity/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "User-facing wallet activity, contacts, and contextual payment-history concepts that help learners distinguish on-chain events from wallet-added meaning.",
+      "clusterStrategy": "Track activity and contacts pages together so contextual metadata stays separate from backup flows and from protocol transaction mechanics.",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 2,
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 1,
+      "notes": "Second Bitcoin Design implementation slice. The current additive winner is custody.transaction-metadata; encrypted cloud backups remains the main deferred design-side candidate."
     }
   ],
   "concepts": [
@@ -1294,6 +1311,40 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen as the cleanest first Bitcoin Design gap because it is highly user-relevant and bridges wallet UX with privacy/trust tradeoffs."
+    },
+    {
+      "id": "custody.transaction-metadata",
+      "title": "Transaction Metadata",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-design-wallet-activity",
+      "sourceUrl": "https://bitcoin.design/guide/daily-spending-wallet/activity/",
+      "sourceContext": "Daily spending wallet cluster: Activity plus Contacts",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific wallet-layer concept: contextual information such as names, notes, tags, and linked contacts attached to payments or activity rows. This is narrower than generic transaction history and narrower than UTXO labeling, because it focuses on user-facing meaning and portability rather than spend-control metadata alone.",
+      "candidatePrerequisites": [
+        "custody.output-labeling",
+        "privacy.pseudonymity",
+        "custody.human-readable-addresses"
+      ],
+      "chosenPrerequisites": [
+        "custody.output-labeling",
+        "privacy.pseudonymity"
+      ],
+      "prerequisiteRationale": "Learners need the existing concept of wallet-applied labels plus the privacy idea that transaction history creates pseudonymous patterns. Human-readable addresses are a common input to richer metadata, but they are a neighboring UX mechanism rather than a prerequisite for understanding that wallet metadata exists and must be portable.",
+      "aliases": [
+        "payment metadata",
+        "wallet activity metadata",
+        "transaction notes"
+      ],
+      "tags": [
+        "wallets",
+        "ux",
+        "activity"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next design-side slice because it adds a clear wallet-data concept without collapsing into generic backup flows."
     }
   ],
   "edges": [
@@ -1575,6 +1626,24 @@
       "rationale": "A major design constraint is that reusable human-readable handles can worsen privacy unless they resolve to reusable payment mechanisms or rotate safely, so learners need the address-reuse problem first.",
       "sourceId": "source.bitcoin-design-payment-formats",
       "notes": "Direct edge captures the main privacy tradeoff without forcing downstream protocol-specific address schemes into prerequisites."
+    },
+    {
+      "from": "custody.output-labeling",
+      "to": "custody.transaction-metadata",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Output labeling already introduces the idea that wallets attach their own context to payments and spendable objects, making it the cleanest direct bridge into broader transaction-level notes, contacts, and portability concerns.",
+      "sourceId": "source.bitcoin-design-wallet-activity",
+      "notes": "Direct edge distinguishes wider payment-history context from narrower spend-control labels without treating them as unrelated."
+    },
+    {
+      "from": "privacy.pseudonymity",
+      "to": "custody.transaction-metadata",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Wallet-added names, notes, and contact links matter partly because transaction history is only pseudonymous and can reveal meaningful patterns when users or tools correlate activity over time.",
+      "sourceId": "source.bitcoin-design-wallet-activity",
+      "notes": "Direct edge keeps the node tied to the privacy and identity meaning of payment history rather than only to generic lifecycle sequencing."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2290,6 +2359,27 @@
         "source.bitcoin-design-payment-formats"
       ],
       "notes": "Chosen over encrypted cloud backups because generic backup hygiene already exists and over transaction metadata because output labeling already partially covers adjacent meaning-tracking behavior."
+    },
+    {
+      "id": "decision.transaction-metadata-slice",
+      "type": "scope",
+      "subject": "custody.transaction-metadata",
+      "status": "resolved",
+      "rationale": "The cleanest next Bitcoin Design slice after human-readable addresses is custody.transaction-metadata. It captures the wallet-side context layer around payments and activity history, which is not on-chain and needs explicit portability, while encrypted cloud backups and wallet-encryption still overlap more heavily with existing backup and passphrase concepts.",
+      "relatedConceptIds": [
+        "custody.transaction-metadata",
+        "protocol.transaction-lifecycle",
+        "custody.output-labeling",
+        "custody.human-readable-addresses",
+        "custody.encrypted-cloud-backups",
+        "custody.wallet-encryption"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-wallet-activity",
+        "source.bitcoin-design-payment-formats",
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Kept the node focused on names, notes, tags, and portability at the payment-history layer so it stays distinct from UTXO labeling, contact import flows, and backup mechanics."
     }
   ]
 }

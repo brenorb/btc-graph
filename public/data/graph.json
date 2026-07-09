@@ -850,6 +850,50 @@
       ]
     },
     {
+      "id": "custody.transaction-metadata",
+      "title": "Transaction Metadata",
+      "description": "Transaction metadata is wallet-side context such as contacts, descriptions, tags, and notes attached to a payment or activity item. It helps users understand history and search their activity, but it is not stored on-chain and needs explicit portability if users change wallets.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.output-labeling",
+        "privacy.pseudonymity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Activity",
+          "url": "https://bitcoin.design/guide/daily-spending-wallet/activity/",
+          "notes": "Primary discussion of wallet activity presentation, recipient fields, and why metadata portability matters."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Contacts",
+          "url": "https://bitcoin.design/guide/daily-spending-wallet/contacts/",
+          "notes": "Shows how wallets attach names, reusable payment endpoints, and contextual meaning to transactions without confusing that data for on-chain state."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet behavior, transaction history, and the underlying payment model that this metadata decorates.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "wallets",
+        "ux",
+        "activity"
+      ],
+      "aliases": [
+        "payment metadata",
+        "wallet activity metadata",
+        "transaction notes"
+      ]
+    },
+    {
       "id": "custody.watch-only-wallets",
       "title": "Watch-Only Wallets",
       "description": "Wallet setups that monitor balances and addresses without holding spending keys.",
