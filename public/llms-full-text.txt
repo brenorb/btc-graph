@@ -209,7 +209,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (70 concepts)
+Protocol & Consensus (71 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -217,6 +217,7 @@ Protocol & Consensus (70 concepts)
 - Bech32m Addresses: Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
 - Bitcoin Script: Locking and unlocking conditions for UTXO spending.
+- Bitcoin URI Scheme (BIP21): BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.
 - Block Height: Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.
 - Block Structure: Header fields, merkle root, and block composition.
 - Block Weight and Virtual Bytes: How weight units and vbytes price block space after SegWit.

@@ -1,0 +1,44 @@
+{
+  "id": "protocol.bitcoin-uri-bip21",
+  "title": "Bitcoin URI Scheme (BIP21)",
+  "description": "BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.addresses-outputs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Payment Processing",
+      "url": "https://developer.bitcoin.org/devguide/payment_processing.html",
+      "notes": "Canonical overview of payment requests, `bitcoin:` URIs, QR transport, and their role in wallet payment flows."
+    },
+    {
+      "type": "article",
+      "title": "BIP 21: URI Scheme",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki",
+      "notes": "Canonical standard for `bitcoin:` URIs, amount encoding, and optional parameters."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for addresses, wallet payment flows, and the request formats layered on top of them.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "payments",
+    "wallets",
+    "standards"
+  ],
+  "aliases": [
+    "bip21",
+    "bitcoin uri",
+    "bitcoin: uri",
+    "bitcoin payment uri"
+  ]
+}

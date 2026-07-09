@@ -301,14 +301,14 @@
       "priority": "P1",
       "scope": "Canonical developer-facing guide sections covering block chain, transactions, contracts, wallets, payment processing, operating modes, P2P network, and mining.",
       "clusterStrategy": "Track the eight top-level guide sections first, then split dense sections like Transactions, Contracts, Wallets, and P2P Network when they expose concept gaps not already covered by existing nodes.",
-      "status": "Queued",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
       "pageClustersTracked": 8,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Added after the current audited source queue was exhausted. This is the next obvious canonical documentation family to inventory before starting another extraction pass."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 1,
+      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced three clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, protocol.escrow-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winner is protocol.bitcoin-uri-bip21 because it lands as a missing standard-format bridge with one direct parent and lower coupling than the contract and mining candidates."
     }
   ],
   "concepts": [
@@ -2007,6 +2007,39 @@
       "notes": "Chosen as the cleanest remaining Cypherpunk Library additive slice because it fills a distinct gap around money as a measuring instrument rather than a scarce asset, while the remaining privacy and DKG candidates are still cleaner as defers or merges."
     },
     {
+      "id": "protocol.bitcoin-uri-bip21",
+      "title": "Bitcoin URI Scheme (BIP21)",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-developer-guides",
+      "sourceUrl": "https://developer.bitcoin.org/devguide/payment_processing.html",
+      "sourceContext": "Payment Processing -> Requesting Payments -> bitcoin: URI",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific payment-request standard: the `bitcoin:` URI format defined by BIP21. It is narrower than payment processing as a whole, narrower than QR-code transport, and distinct from deprecated BIP70 payment-protocol flows.",
+      "candidatePrerequisites": [
+        "protocol.addresses-outputs",
+        "custody.human-readable-addresses"
+      ],
+      "chosenPrerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "prerequisiteRationale": "Learners need to understand what address or output destination the URI is packaging before the request format makes sense. Human-readable addresses are a neighboring higher-level naming layer rather than a prerequisite for the standard URI itself.",
+      "aliases": [
+        "bip21",
+        "bitcoin uri",
+        "bitcoin: uri",
+        "bitcoin payment uri"
+      ],
+      "tags": [
+        "payments",
+        "wallets",
+        "standards"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Chosen as the first Developer Guides slice because it survives dedupe as a missing standard-format bridge between raw addresses and higher-level wallet payment UX, while the nearby escrow and pool-share candidates still sit closer to broader mechanism branches."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2829,6 +2862,15 @@
       "notes": "Direct parent captures the measurement-distortion problem that ideal money is trying to avoid."
     },
     {
+      "from": "protocol.addresses-outputs",
+      "to": "protocol.bitcoin-uri-bip21",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The URI is a wrapper around a payment destination and amount, so learners need the underlying address and output model first.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent keeps the node tied to the standard request format rather than collapsing it into higher-level wallet UX systems."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3597,6 +3639,24 @@
         "source.bitcoin-developer-guides"
       ],
       "notes": "Recorded after three subagent comparisons converged on July 9, 2026: no remaining candidate from these audited families survives dedupe more cleanly than the already-landed nodes, so the audit should widen to the Bitcoin Developer Guides next."
+    },
+    {
+      "id": "decision.developer-guides-bip21-slice",
+      "type": "scope",
+      "subject": "protocol.bitcoin-uri-bip21",
+      "status": "resolved",
+      "rationale": "The first Bitcoin Developer Guides slice should be protocol.bitcoin-uri-bip21. It captures a specific missing payment-request standard with one clean direct parent, while the nearby escrow/arbitration and pool-share candidates remain valid but sit deeper inside broader contract and mining mechanism branches.",
+      "relatedConceptIds": [
+        "protocol.bitcoin-uri-bip21",
+        "protocol.addresses-outputs",
+        "custody.human-readable-addresses",
+        "protocol.escrow-arbitration",
+        "mining.pool-shares"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Chosen after the first Developer Guides subagent pass surfaced three viable candidates. Kept QR-code transport and BIP70-specific behavior out of scope so the node stays focused on the BIP21 request format itself."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
