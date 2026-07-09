@@ -136,9 +136,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -1866,6 +1866,36 @@
       "notes": "Chosen as the cleanest first additive slice from the Cypherpunk Library cluster because current coverage only mentions DigiCash inside the broader pre-Bitcoin survey and covers modern Bitcoin-backed mints elsewhere."
     },
     {
+      "id": "history.cypherpunk-manifesto",
+      "title": "A Cypherpunk's Manifesto",
+      "category": "History & Governance",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "sourceUrl": "https://www.cypherpunkbooks.com/book/a-cypherpunks-manifesto",
+      "sourceContext": "A Cypherpunk's Manifesto by Eric Hughes",
+      "existingNodeId": "history.cypherpunks",
+      "status": "merge",
+      "atomicityRationale": "The text is foundational and high-signal, but in the graph it still works best as a canonical primary source for the existing movement-level node rather than as a separate learner-facing concept boundary.",
+      "candidatePrerequisites": [
+        "history.cypherpunks",
+        "fundamentals.public-private-keys"
+      ],
+      "chosenPrerequisites": [
+        "history.cypherpunks"
+      ],
+      "prerequisiteRationale": "If learners encounter the manifesto title, the cleanest direct grounding concept is the existing Cypherpunk Movement node. The cryptography background remains a prerequisite for the movement node itself and does not justify minting a new manifesto-level leaf.",
+      "aliases": [
+        "cypherpunk manifesto"
+      ],
+      "tags": [
+        "history",
+        "privacy",
+        "cypherpunk"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Merge into history.cypherpunks. Preserve discoverability through aliases and a primary-source resource instead of creating a separate manifesto node."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -3057,6 +3087,23 @@
         "source.cypherpunk-library-bitcoin-adjacent"
       ],
       "notes": "Chosen over cypherpunk manifesto or monetary-theory slices because this one survives dedupe as a precise learner gap between blind-signature cryptography, pre-Bitcoin digital-cash history, and modern ecash descendants."
+    },
+    {
+      "id": "decision.merge-cypherpunk-manifesto",
+      "type": "merge",
+      "subject": "history.cypherpunk-manifesto",
+      "status": "resolved",
+      "rationale": "Merge A Cypherpunk's Manifesto into history.cypherpunks; do not add a separate manifesto node.",
+      "relatedConceptIds": [
+        "history.cypherpunk-manifesto",
+        "history.cypherpunks",
+        "history.cypherpunk-roots-bitcoin-origin",
+        "history.pre-bitcoin-digital-cash"
+      ],
+      "relatedSourceIds": [
+        "source.cypherpunk-library-bitcoin-adjacent"
+      ],
+      "notes": "The manifesto is a foundational primary source for the movement-level history node, but it does not survive dedupe as a separate atomic concept once the graph already has the Cypherpunk Movement bridge node."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
