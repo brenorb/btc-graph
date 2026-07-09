@@ -10075,6 +10075,49 @@
       ]
     },
     {
+      "id": "privacy.secret-right-to-cash",
+      "title": "Your Secret Right to Cash",
+      "description": "Physical cash historically gave people a private, bearer-style way to pay without routine permission checks or transaction surveillance. As money became digital and intermediated, that default right weakened, making privacy and censorship resistance explicit design goals rather than ambient properties.",
+      "category": "Security",
+      "prerequisites": [
+        "economics.history-of-money",
+        "fundamentals.censorship-resistance"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Your Secret Right to Cash",
+          "url": "https://www.cypherpunkbooks.com/book/your-secret-right-to-cash",
+          "notes": "Peter Van Valkenburgh's essay on why private bearer cash mattered by default and what is lost when payments become fully intermediated."
+        },
+        {
+          "type": "article",
+          "title": "The Case for Electronic Cash",
+          "url": "https://coincenter.org/the-case-for-electronic-cash/",
+          "notes": "Extends the essay's argument into digital cash design, privacy, and exclusion risks in mediated payment systems."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Human-rights framing for why open access, privacy, and resistance to exclusion matter for money.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/3NMybNF"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "privacy",
+        "cash",
+        "censorship"
+      ],
+      "aliases": [
+        "secret right to cash",
+        "private bearer cash"
+      ]
+    },
+    {
       "id": "privacy.silent-payments",
       "title": "Silent Payments",
       "description": "Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.",
@@ -13465,7 +13508,7 @@
     {
       "id": "protocol.time-warp-attack",
       "title": "Time Warp Attack",
-      "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit sits at the intersection of retarget math and Bitcoin's consensus limits on miner-controlled time.",
+      "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit depends on Bitcoin's off-by-one retarget bug plus the consensus limits on miner-controlled time, so it sits at the intersection of retarget math and timestamp rules.",
       "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.difficulty-adjustment",
@@ -13483,6 +13526,12 @@
           "title": "BIP 54: Consensus Cleanup",
           "url": "https://github.com/bitcoin/bips/blob/master/bip-0054.md",
           "notes": "Specification and motivation for fixing the time warp bug as part of the consensus cleanup bundle."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Newsletter #299",
+          "url": "https://bitcoinops.org/en/newsletters/2024/04/24/",
+          "notes": "Explains the off-by-one retarget bug and why it matters because it enables the time-warp exploit."
         },
         {
           "type": "book",
@@ -13503,7 +13552,9 @@
       "aliases": [
         "time warp",
         "timewarp attack",
-        "difficulty time warp"
+        "difficulty time warp",
+        "off-by-one difficulty bug",
+        "off-by-one retarget bug"
       ]
     },
     {

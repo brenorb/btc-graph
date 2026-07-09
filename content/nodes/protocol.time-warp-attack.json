@@ -1,7 +1,7 @@
 {
   "id": "protocol.time-warp-attack",
   "title": "Time Warp Attack",
-  "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit sits at the intersection of retarget math and Bitcoin's consensus limits on miner-controlled time.",
+  "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit depends on Bitcoin's off-by-one retarget bug plus the consensus limits on miner-controlled time, so it sits at the intersection of retarget math and timestamp rules.",
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.difficulty-adjustment",
@@ -19,6 +19,12 @@
       "title": "BIP 54: Consensus Cleanup",
       "url": "https://github.com/bitcoin/bips/blob/master/bip-0054.md",
       "notes": "Specification and motivation for fixing the time warp bug as part of the consensus cleanup bundle."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Newsletter #299",
+      "url": "https://bitcoinops.org/en/newsletters/2024/04/24/",
+      "notes": "Explains the off-by-one retarget bug and why it matters because it enables the time-warp exploit."
     },
     {
       "type": "book",
@@ -39,6 +45,8 @@
   "aliases": [
     "time warp",
     "timewarp attack",
-    "difficulty time warp"
+    "difficulty time warp",
+    "off-by-one difficulty bug",
+    "off-by-one retarget bug"
   ]
 }

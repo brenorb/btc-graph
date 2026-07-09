@@ -136,9 +136,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 3,
-      "conceptsNormalized": 3,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
+      "conceptsExtracted": 4,
+      "conceptsNormalized": 4,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash, privacy.secret-right-to-cash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -153,9 +153,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 3,
-      "conceptsNormalized": 3,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug."
+      "conceptsExtracted": 4,
+      "conceptsNormalized": 4,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1925,6 +1925,38 @@
       "notes": "Merge The Crypto Anarchist Manifesto into history.bitcoin-anarchism; preserve discoverability via alias and a source-page resource, with no standalone node."
     },
     {
+      "id": "privacy.secret-right-to-cash",
+      "title": "Your Secret Right to Cash",
+      "category": "Security",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "sourceUrl": "https://www.cypherpunkbooks.com/book/your-secret-right-to-cash",
+      "sourceContext": "Your Secret Right to Cash by Peter Van Valkenburgh",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific privacy and rights concept: cash as a historically private bearer instrument whose default secrecy and permissionlessness are being lost in digital, intermediated payment systems. It is narrower than general privacy tradeoffs and narrower than censorship resistance as a whole.",
+      "candidatePrerequisites": [
+        "economics.history-of-money",
+        "fundamentals.censorship-resistance"
+      ],
+      "chosenPrerequisites": [
+        "economics.history-of-money",
+        "fundamentals.censorship-resistance"
+      ],
+      "prerequisiteRationale": "Learners need historical context for how money shifted from bearer instruments to account-based systems, and they need the general concept of censorship resistance to understand why losing private cash changes power over payments. Neither parent makes the other redundant.",
+      "aliases": [
+        "secret right to cash",
+        "private bearer cash"
+      ],
+      "tags": [
+        "privacy",
+        "cash",
+        "censorship"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next Cypherpunk Library additive slice because it captures the bearer-cash privacy and exclusion tradeoff directly without collapsing into the already crowded money-theory lane or duplicating generic KYC and pseudonymity nodes."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2051,6 +2083,39 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Add. Same explained-post consensus-cleanup lane; distinct Merkle-commitment failure with one clean direct parent and lower dedupe risk than DKG, Shamir, Lamport, or garbled-circuit candidates."
+    },
+    {
+      "id": "protocol.off-by-one-difficulty-bug",
+      "title": "Off-by-One Difficulty Bug",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2029171268344529361",
+      "sourceContext": "Off-by-one difficulty bug explained",
+      "existingNodeId": "protocol.time-warp-attack",
+      "status": "merge",
+      "atomicityRationale": "The phrase names the retargeting flaw that enables the time-warp exploit, but in the current graph it does not survive as a cleaner learner-facing boundary than the existing time-warp node.",
+      "candidatePrerequisites": [
+        "protocol.difficulty-adjustment",
+        "protocol.block-height",
+        "protocol.time-warp-attack"
+      ],
+      "chosenPrerequisites": [
+        "protocol.time-warp-attack"
+      ],
+      "prerequisiteRationale": "If learners encounter the off-by-one label, the cleanest direct grounding concept is the existing Time Warp Attack node, which already owns the exploit boundary and now absorbs the retargeting mechanism terminology.",
+      "aliases": [
+        "difficulty off-by-one bug",
+        "off-by-one retarget bug",
+        "retarget off-by-one"
+      ],
+      "tags": [
+        "consensus",
+        "mining",
+        "retargeting"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Merge into protocol.time-warp-attack. Preserve discoverability via aliases and a supporting Optech explainer instead of minting a duplicate consensus-bug node."
     }
   ],
   "edges": [
@@ -2584,6 +2649,24 @@
       "rationale": "Learners need the unsolved scarcity problem in digital cash before the trusted-mint tradeoff in Chaumian designs becomes meaningful.",
       "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
       "notes": "Direct parent frames why the system still needed a central operator even though it improved privacy."
+    },
+    {
+      "from": "economics.history-of-money",
+      "to": "privacy.secret-right-to-cash",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The concept depends on understanding how money moved from bearer cash toward mediated account systems, so learners need the long-run monetary history first.",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "notes": "Direct parent keeps the node tied to the bearer-versus-intermediated payment shift rather than drifting into generic civil-liberties framing."
+    },
+    {
+      "from": "fundamentals.censorship-resistance",
+      "to": "privacy.secret-right-to-cash",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the general idea that payment systems can exclude or block participants before the loss of private cash as a payment right becomes fully meaningful.",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "notes": "Direct parent captures the exclusion-risk side of the argument without reopening broader compliance or surveillance wrappers."
     },
     {
       "from": "lightning.per-commitment-secrets",
@@ -3244,6 +3327,25 @@
       "notes": "The manifesto is a foundational primary source for Bitcoin's anarchist and cypherpunk framing, but it works better as discoverability and sourcing on the existing node than as a duplicate manifesto-level concept."
     },
     {
+      "id": "decision.secret-right-to-cash-slice",
+      "type": "scope",
+      "subject": "privacy.secret-right-to-cash",
+      "status": "resolved",
+      "rationale": "Add privacy.secret-right-to-cash. It isolates the bearer-cash privacy and exclusion tradeoff directly, with clear parents in monetary history and censorship resistance, while the remaining Cypherpunk Library money-theory texts overlap more heavily with existing economics nodes.",
+      "relatedConceptIds": [
+        "privacy.secret-right-to-cash",
+        "economics.history-of-money",
+        "fundamentals.censorship-resistance",
+        "privacy.kyc-tradeoffs",
+        "security.aml-kyc-sanctions-tradeoffs",
+        "privacy.pseudonymity"
+      ],
+      "relatedSourceIds": [
+        "source.cypherpunk-library-bitcoin-adjacent"
+      ],
+      "notes": "Chosen over asymptotically-ideal-money and other adjacent library texts because the graph already has denser monetary-theory coverage than bearer-cash privacy coverage."
+    },
+    {
       "id": "decision.obscured-commitment-number-slice",
       "type": "scope",
       "subject": "lightning.obscured-commitment-number",
@@ -3314,6 +3416,24 @@
         "source.bitcoin-dev-project-explained-posts"
       ],
       "notes": "Chosen as the next X explained-post slice because it preserves the consensus-cleanup bug branch while staying atomic, with a cleaner parent than a broader Merkle-vulnerabilities wrapper or the more duplicate-prone custody and advanced-crypto candidates."
+    },
+    {
+      "id": "decision.merge-off-by-one-difficulty-bug",
+      "type": "merge",
+      "subject": "protocol.off-by-one-difficulty-bug",
+      "status": "resolved",
+      "rationale": "Merge Off-by-one difficulty bug into protocol.time-warp-attack; do not add a separate node.",
+      "relatedConceptIds": [
+        "protocol.off-by-one-difficulty-bug",
+        "protocol.time-warp-attack",
+        "protocol.difficulty-adjustment",
+        "protocol.block-height",
+        "protocol.median-time-past"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "The off-by-one retargeting flaw is the mechanism that enables the existing time-warp exploit node, but it does not survive dedupe as a cleaner learner-facing boundary than the attack concept already in the graph."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
