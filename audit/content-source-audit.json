@@ -190,6 +190,40 @@
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
       "notes": "Third Bitcoin Design implementation slice. The current additive winner is custody.multiple-wallets; encrypted cloud backups remains deferred because it overlaps too heavily with backups-recovery."
+    },
+    {
+      "id": "source.bitcoin-design-cloud-backup",
+      "name": "Bitcoin Design Automatic Cloud Backup",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/cloud-backup/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "User-facing backup scheme that stores encrypted wallet recovery data with an OS or cloud provider for low-friction restoration.",
+      "clusterStrategy": "Track the conceptual cloud-backup page, the daily-spending reference flow, and the private-key-management overview together so the scheme can be deduped against existing backup and Lightning recovery coverage.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized to existing",
+      "dedupeStatus": "Merged into existing",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Reviewed and merged into existing coverage instead of minting a node. The enduring source value is backup-scheme tradeoffs that already fit custody.backups-recovery plus lightning.channel-backups."
+    },
+    {
+      "id": "source.bitcoin-design-upgradeable-wallet",
+      "name": "Bitcoin Design Upgradeable Wallet",
+      "url": "https://bitcoin.design/guide/upgradeable-wallet/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "User-facing wallet architecture for progressive security and staged upgrades between key-management schemes.",
+      "clusterStrategy": "Track the upgradeable-wallet reference design separately so progressive security becomes its own concept instead of staying buried inside cloud-backup discussions or multiwallet archival flows.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 1,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Fourth Bitcoin Design implementation slice candidate. The current additive winner is custody.progressive-security, which survives dedupe more cleanly than automatic cloud backups or wallet-encryption."
     }
   ],
   "concepts": [
@@ -1396,6 +1430,41 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen over encrypted cloud backups and wallet-encryption because the design page is really about custody architecture and purposeful wallet separation, not about backup transport or at-rest key protection."
+    },
+    {
+      "id": "custody.progressive-security",
+      "title": "Progressive Security",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-design-upgradeable-wallet",
+      "sourceUrl": "https://bitcoin.design/guide/upgradeable-wallet/",
+      "sourceContext": "Bitcoin Design reference design: Upgradeable wallet",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific custody-architecture concept: deliberately staging stronger key-management schemes as holdings, confidence, and risk increase. This is narrower than generic wallet security, narrower than any single scheme such as cloud backup or multisig, and narrower than multiple-wallet UI organization.",
+      "candidatePrerequisites": [
+        "custody.self-custody",
+        "custody.hardware-wallets",
+        "custody.multisig",
+        "custody.backups-recovery"
+      ],
+      "chosenPrerequisites": [
+        "custody.hardware-wallets",
+        "custody.multisig"
+      ],
+      "prerequisiteRationale": "Learners need the concrete upgrade targets first: external signing devices and multi-key wallet schemes. Self-custody is already inherited through both, while generic backup hygiene is a neighboring concern that the progressive-security path evaluates rather than a prerequisite for understanding the staged-upgrade pattern itself.",
+      "aliases": [
+        "upgradeable wallet",
+        "security upgrade path",
+        "wallet scheme upgrades"
+      ],
+      "tags": [
+        "wallets",
+        "ux",
+        "security"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Chosen as the cleaner long-lived concept from the design material after recording automatic cloud backups as merge-only coverage and after keeping wallet-encryption deferred due overlap with existing passphrase and backup branches."
     }
   ],
   "edges": [
@@ -1704,6 +1773,24 @@
       "rationale": "Deliberately separating funds across different wallet buckets is a custody decision, so learners need the base self-custody responsibility model before the organizational pattern makes sense.",
       "sourceId": "source.bitcoin-design-multiple-wallets",
       "notes": "Kept the direct parent at the responsibility-model layer; multisig, watch-only, and HD account structures remain examples or implementation details rather than prerequisites."
+    },
+    {
+      "from": "custody.hardware-wallets",
+      "to": "custody.progressive-security",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "One of the core upgrade steps in the reference design is moving from default low-friction storage to an external signing device, so learners need the hardware-signing model before the staged-upgrade pattern makes sense.",
+      "sourceId": "source.bitcoin-design-upgradeable-wallet",
+      "notes": "Direct edge captures the mid-tier upgrade target without treating cloud backup itself as the core concept."
+    },
+    {
+      "from": "custody.multisig",
+      "to": "custody.progressive-security",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The higher-security end of the progression moves into 2-of-3 and 3-of-5 multi-key schemes, so learners need the multisig model before they can reason about why and when a wallet should escalate there.",
+      "sourceId": "source.bitcoin-design-upgradeable-wallet",
+      "notes": "Direct edge captures the high-assurance destination of the progression rather than a specific product flow."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2462,6 +2549,47 @@
         "source.bitcoin-core-academy-wallet"
       ],
       "notes": "Kept the node focused on purpose-based wallet separation so it does not collapse into BIP44 account-path mechanics, view-only inheritance as a standalone leaf, or generic backup simplification."
+    },
+    {
+      "id": "decision.merge-automatic-cloud-backups",
+      "type": "merge",
+      "subject": "custody.automatic-cloud-backups",
+      "status": "resolved",
+      "rationale": "The Bitcoin Design cloud-backup material describes a recognizable scheme, but in the current graph it lands as backup-scheme nuance rather than a clean standalone concept. The strongest enduring value is the trust and loss-tradeoff discussion, which already belongs under custody.backups-recovery, with Lightning-specific operational motivation covered by lightning.channel-backups.",
+      "relatedConceptIds": [
+        "custody.automatic-cloud-backups",
+        "custody.backups-recovery",
+        "custody.passphrase",
+        "custody.seed-phrases",
+        "custody.self-custody",
+        "custody.multiple-wallets",
+        "lightning.channel-backups"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-cloud-backup"
+      ],
+      "notes": "Did not mint a node because direct-only prerequisites collapse the concept into either generic backup hygiene or Lightning-specific recovery behavior."
+    },
+    {
+      "id": "decision.progressive-security-slice",
+      "type": "scope",
+      "subject": "custody.progressive-security",
+      "status": "resolved",
+      "rationale": "The cleanest next Bitcoin Design slice after multiple wallets is custody.progressive-security. It captures the long-lived product concept of staging stronger key-management schemes as user needs grow, while cloud backups are better treated as merge-only backup nuance and wallet-encryption still overlaps too heavily with existing passphrase and backup coverage.",
+      "relatedConceptIds": [
+        "custody.progressive-security",
+        "custody.hardware-wallets",
+        "custody.multisig",
+        "custody.multiple-wallets",
+        "custody.automatic-cloud-backups",
+        "custody.wallet-encryption"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-upgradeable-wallet",
+        "source.bitcoin-design-cloud-backup",
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Kept the node at the upgrade-strategy level so it does not collapse into any single key-management scheme or into multiwallet archival UX."
     }
   ]
 }
