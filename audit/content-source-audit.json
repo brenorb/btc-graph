@@ -85,9 +85,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 12,
-      "conceptsExtracted": 15,
-      "conceptsNormalized": 6,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, tapleaf inclusion proofs, and Huffman-optimized TapTrees. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs, and protocol.huffman-optimized-taptrees."
+      "conceptsExtracted": 16,
+      "conceptsNormalized": 7,
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, tapleaf inclusion proofs, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -280,6 +280,40 @@
       "estimatedTime": "20m",
       "confidence": "medium",
       "notes": "Implemented in the current branch as the last explicit pending workshop optimization concept."
+    },
+    {
+      "id": "custody.degrading-multisig",
+      "title": "Degrading Multisig",
+      "category": "Wallets",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop module 3.1 Degrading Multisig",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific timeout-based custody policy, narrower than generic multisig, narrower than threshold signatures, and narrower than broad inheritance or recovery planning.",
+      "candidatePrerequisites": [
+        "custody.multisig",
+        "protocol.taproot",
+        "protocol.timelocks",
+        "custody.backups-recovery"
+      ],
+      "chosenPrerequisites": [
+        "custody.multisig",
+        "protocol.timelocks"
+      ],
+      "prerequisiteRationale": "Learners need the baseline multisig model and timelock semantics first. Taproot is a clean implementation path surfaced by the workshop, but the custody policy itself can be understood before committing to a specific script-path mechanism. Generic backup planning is a downstream use context rather than a prerequisite for understanding this script-policy construction.",
+      "aliases": [
+        "timeout backup multisig",
+        "degrading multisig wallet"
+      ],
+      "tags": [
+        "multisig",
+        "taproot",
+        "recovery"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the next workshop-derived custody case study, while leaving broader threshold-signature umbrella material for later and keeping Taproot as implementation context rather than a direct prerequisite."
     },
     {
       "id": "protocol.chain-split-risk",
@@ -1305,6 +1339,24 @@
       "rationale": "BIP388 key information items package xpubs and derivation origins, so learners need the HD derivation model before the portable wallet-policy format makes sense.",
       "sourceId": "source.bitcoinops-topics",
       "notes": "Non-redundant alongside dev.descriptors because neither concept implies the other in the current graph."
+    },
+    {
+      "from": "custody.multisig",
+      "to": "custody.degrading-multisig",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The policy only makes sense once the learner understands ordinary multisig threshold custody and why signers can be split into live and backup sets.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Direct custody parent for the signer-threshold side of the construction."
+    },
+    {
+      "from": "protocol.timelocks",
+      "to": "custody.degrading-multisig",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The degrading policy activates its weaker backup path only after a timeout, so timelock semantics are a direct part of the construction.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Needed alongside custody.multisig because the learner must understand the temporal rule, not just the signer policy."
     }
   ],
   "decisions": [
@@ -1841,6 +1893,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Kept the node additive and left degrading multisig for a later wallet-policy slice rather than combining two different policy families in one commit."
+    },
+    {
+      "id": "decision.degrading-multisig-slice",
+      "type": "scope",
+      "subject": "custody.degrading-multisig",
+      "status": "resolved",
+      "rationale": "The cleanest next workshop-derived wallet-policy slice is custody.degrading-multisig. It captures one specific timeout-based recovery policy without drifting into threshold-signature umbrella material, generic inheritance planning, or covenant-based vault proposals.",
+      "relatedConceptIds": [
+        "custody.degrading-multisig",
+        "custody.multisig",
+        "protocol.timelocks",
+        "protocol.taproot",
+        "security.op-vault",
+        "custody.inheritance-planning"
+      ],
+      "relatedSourceIds": [
+        "source.optech-schnorr-taproot-workshop"
+      ],
+      "notes": "Kept Taproot as implementation context and resource support rather than a direct prerequisite so the node stays a custody-policy concept instead of a protocol wrapper."
     }
   ]
 }

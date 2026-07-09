@@ -1,0 +1,43 @@
+{
+  "id": "custody.degrading-multisig",
+  "title": "Degrading Multisig",
+  "description": "Degrading multisig uses a strong live-key spending policy first and a weaker backup path that becomes available after a timeout. It is a concrete custody pattern for balancing day-to-day resilience with emergency recovery options, and Taproot can implement it with cleaner onchain privacy.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.multisig",
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Module 3.1 demonstrates the degrading multisig wallet pattern with live and backup keys plus a timeout path."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Taproot structure that allows multiple spending paths to be committed and only the exercised path to be revealed."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for multisig custody design, script paths, and recovery tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "multisig",
+    "taproot",
+    "recovery"
+  ],
+  "aliases": [
+    "timeout backup multisig",
+    "degrading multisig wallet"
+  ]
+}
