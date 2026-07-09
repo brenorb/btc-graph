@@ -13225,6 +13225,50 @@
       ]
     },
     {
+      "id": "protocol.time-warp-attack",
+      "title": "Time Warp Attack",
+      "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit sits at the intersection of retarget math and Bitcoin's consensus limits on miner-controlled time.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.difficulty-adjustment",
+        "protocol.median-time-past"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Time Warp",
+          "url": "https://bitcoinops.org/en/topics/time-warp/",
+          "notes": "Canonical overview of the attack, why it matters, and the current mitigation discussion."
+        },
+        {
+          "type": "article",
+          "title": "BIP 54: Consensus Cleanup",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0054.md",
+          "notes": "Specification and motivation for fixing the time warp bug as part of the consensus cleanup bundle."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the mining, block-header, and consensus mechanics that make the exploit legible.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "consensus",
+        "mining",
+        "timestamps"
+      ],
+      "aliases": [
+        "time warp",
+        "timewarp attack",
+        "difficulty time warp"
+      ]
+    },
+    {
       "id": "protocol.timelocks",
       "title": "Script Timelocks",
       "description": "Timelock primitives used to constrain when funds can be spent in script contracts.",

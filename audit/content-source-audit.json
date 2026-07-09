@@ -148,14 +148,14 @@
       "priority": "P1",
       "scope": "Short-form educational posts from @Bitcoin_Devs that explicitly explain protocol, wallet, and Lightning mechanisms in learner-facing language.",
       "clusterStrategy": "Track the live X search as one source-family row first, then expand to one row per matching post once current results are enumerated. Group matching posts by concept family such as hashing, fee management, node architecture, channel mechanics, and upgrade proposals.",
-      "status": "Seeded",
+      "status": "In review",
       "crawlStatus": "In progress",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained."
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1797,6 +1797,39 @@
       "estimatedTime": "25m",
       "confidence": "high",
       "notes": "Chosen as the cleanest first additive slice from Programming Lightning because it fills a precise mechanism gap between existing commitment-state and revocation nodes without reopening broader routing or HTLC wrappers."
+    },
+    {
+      "id": "protocol.time-warp-attack",
+      "title": "Time Warp Attack",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2028765218114056347",
+      "sourceContext": "Great Consensus Cleanup explained, Part 1: Time Warp Attack",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific consensus exploit: manipulating timestamps across retarget periods to distort future difficulty. It is narrower than difficulty adjustment as a whole and narrower than general timestamp rules.",
+      "candidatePrerequisites": [
+        "protocol.difficulty-adjustment",
+        "protocol.median-time-past"
+      ],
+      "chosenPrerequisites": [
+        "protocol.difficulty-adjustment",
+        "protocol.median-time-past"
+      ],
+      "prerequisiteRationale": "Learners need the retarget mechanism to understand the attack surface and the consensus timestamp rules to understand how miners can push time data far enough to exploit it. Neither parent makes the other redundant.",
+      "aliases": [
+        "time warp",
+        "timewarp attack",
+        "difficulty time warp"
+      ],
+      "tags": [
+        "consensus",
+        "mining",
+        "timestamps"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest first additive slice from the explained-post cluster because it adds a concrete consensus bug that is not already covered by the broader retargeting or timestamp overview nodes."
     }
   ],
   "edges": [
@@ -2276,6 +2309,24 @@
       "rationale": "Per-commitment secrets are generated for each new commitment state, so learners need the commitment-transaction model before the secret-rotation mechanism makes sense.",
       "sourceId": "source.programming-lightning",
       "notes": "Direct parent keeps the node on state evolution rather than on later punishment or watchtower behavior."
+    },
+    {
+      "from": "protocol.difficulty-adjustment",
+      "to": "protocol.time-warp-attack",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The attack only makes sense once learners understand how Bitcoin retargets mining difficulty over long block windows.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent keeps the exploit tied to the retarget mechanism instead of burying it under generic mining vocabulary."
+    },
+    {
+      "from": "protocol.median-time-past",
+      "to": "protocol.time-warp-attack",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the consensus timestamp constraints before they can reason about how miners manipulate time data and where the remaining attack surface lives.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent captures the timestamp-boundary side of the exploit without overloading timelocks or block headers."
     }
   ],
   "decisions": [
@@ -2830,6 +2881,22 @@
         "source.programming-lightning"
       ],
       "notes": "Chosen over broader Programming Lightning candidates such as payment channels, onion-routing internals, or HTLC workflow wrappers because it survives dedupe as one precise mechanism with clear downstream leverage. The direct parent set was later reduced to lightning.commitment-transactions only after the redundancy check showed the crypto primitives were already inherited transitively."
+    },
+    {
+      "id": "decision.time-warp-attack-slice",
+      "type": "scope",
+      "subject": "protocol.time-warp-attack",
+      "status": "resolved",
+      "rationale": "The cleanest next Bitcoin Dev Project Explained slice is protocol.time-warp-attack. It captures a specific consensus exploit at the boundary between difficulty retargeting and timestamp rules without collapsing into the broader difficulty-adjustment or median-time-past overview nodes.",
+      "relatedConceptIds": [
+        "protocol.time-warp-attack",
+        "protocol.difficulty-adjustment",
+        "protocol.median-time-past"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "Chosen over broader or already-covered explained posts because the exploit is atomic, learner-diagnosable, and still missing from the current graph even though nearby consensus parents already exist."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

@@ -10,7 +10,7 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 ## Bitcoin Dev Project Explained Posts
 
-- Strong follow-up: `protocol.time-warp-attack`
+- Implemented in branch: `protocol.time-warp-attack`
 - Source context: `Great Consensus Cleanup explained Part 1: Time Warp Attack`
 - Reason: Bitcoin-native consensus exploit bridge between difficulty adjustment and timestamp constraints
 

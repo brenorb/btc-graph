@@ -204,7 +204,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (67 concepts)
+Protocol & Consensus (68 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -262,6 +262,7 @@ Protocol & Consensus (67 concepts)
 - Tapscript: Tapscript is the script version used for Taproot script-path spends. It keeps the basic Script model but changes signature rules, replaces CHECKMULTISIG with CHECKSIGADD, and adds upgrade hooks such as OP_SUCCESSx.
 - TapTree: A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.
 - TapTweak: TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.
+- Time Warp Attack: Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit sits at the intersection of retarget math and Bitcoin's consensus limits on miner-controlled time.
 - TLUV Proposal: TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.
 - Transaction Confirmations: How confirmation depth affects settlement confidence for different payment risk profiles.
 - Transaction Lifecycle: From creation and propagation to confirmation and settlement.
