@@ -204,7 +204,7 @@ Network, Relay & Client Sync (50 concepts)
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
 Protocol & Consensus (67 concepts)
-- Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
+- Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
 - Bech32m Addresses: Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.

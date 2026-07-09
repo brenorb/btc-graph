@@ -1733,6 +1733,38 @@
       "estimatedTime": "20m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next book-side bridge concept after the address-format slice because it strengthens the existing Script subtree without reopening a broad wrapper or duplicating an opcode leaf."
+    },
+    {
+      "id": "protocol.scriptless-scripts",
+      "title": "Scriptless Scripts",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/adaptor-signatures/",
+      "sourceContext": "Adaptor signatures topic cluster and adjacent Optech note grouping threshold and scriptless constructions",
+      "existingNodeId": "protocol.adaptor-signatures",
+      "status": "merge",
+      "atomicityRationale": "The term names a family of signature-based contract constructions, but in the current graph it is still broader than one learner-facing mechanism. The atomic primitive already represented here is adaptor signatures.",
+      "candidatePrerequisites": [
+        "protocol.adaptor-signatures",
+        "protocol.discrete-log-equivalency",
+        "extension.discreet-log-contracts",
+        "lightning.ptlc"
+      ],
+      "chosenPrerequisites": [
+        "protocol.adaptor-signatures"
+      ],
+      "prerequisiteRationale": "If a learner encounters the term, the cleanest direct concept boundary to ground it is adaptor signatures. The other neighboring nodes are downstream applications or supporting constructions rather than a cleaner parent concept.",
+      "aliases": [
+        "scriptless contracts"
+      ],
+      "tags": [
+        "contracts",
+        "signatures",
+        "privacy"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Do not add as a separate node. Preserve discoverability by folding the term into protocol.adaptor-signatures metadata and by keeping the downstream applications split into their own nodes."
     }
   ],
   "edges": [
@@ -2719,6 +2751,25 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Chosen after the Bech32m address slice because it survives dedupe, has one clean direct prerequisite, and strengthens an already active concept branch."
+    },
+    {
+      "id": "decision.merge-scriptless-scripts",
+      "type": "merge",
+      "subject": "protocol.scriptless-scripts",
+      "status": "resolved",
+      "rationale": "Do not add scriptless scripts as a standalone node. In the current graph it remains an umbrella label spanning adaptor signatures, DLEQ-assisted constructions, PTLCs, DLCs, and related privacy-preserving contract techniques rather than one atomic learner-facing concept boundary.",
+      "relatedConceptIds": [
+        "protocol.scriptless-scripts",
+        "protocol.adaptor-signatures",
+        "protocol.discrete-log-equivalency",
+        "lightning.ptlc",
+        "extension.discreet-log-contracts",
+        "protocol.musig"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Merged into protocol.adaptor-signatures for search discoverability after confirming the term is broader than Lightning and broader than any one downstream application."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
