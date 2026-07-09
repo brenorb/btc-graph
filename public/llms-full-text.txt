@@ -279,7 +279,7 @@ Protocol & Consensus (70 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (54 concepts)
+Security (55 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -308,6 +308,7 @@ Security (54 concepts)
 - Hash Functions: Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.
 - Interactive Proofs: Interactive proofs model verification as a dialogue between a prover and a verifier. They matter because many zero-knowledge protocols start from this challenge-response structure before later non-interactive variants compress the interaction.
 - KYC and Privacy Tradeoffs: Identity linkage risks and mitigation strategies.
+- Lamport Signatures: Lamport signatures are one-time digital signatures built only from hash functions. They trade large keys and single-use semantics for simple security assumptions, which is why they remain a useful starting point for understanding hash-based and post-quantum signature families.
 - Merkle Trees: Efficient integrity proofs for large sets of transactions.
 - Modular Arithmetic Basics: Modular arithmetic is clock-style math over a fixed modulus and is the base of Bitcoin signature calculations. It defines addition, subtraction, and multiplication inside finite fields.
 - Modular Exponentiation: Fast exponentiation under a modulus is the core operation behind key exchange and signature verification. It turns repeated multiplication into tractable computation on large numbers.

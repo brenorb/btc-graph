@@ -153,9 +153,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 4,
-      "conceptsNormalized": 4,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
+      "conceptsExtracted": 5,
+      "conceptsNormalized": 5,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug, fundamentals.lamport-signatures. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -2116,6 +2116,39 @@
       "estimatedTime": "0m",
       "confidence": "high",
       "notes": "Merge into protocol.time-warp-attack. Preserve discoverability via aliases and a supporting Optech explainer instead of minting a duplicate consensus-bug node."
+    },
+    {
+      "id": "fundamentals.lamport-signatures",
+      "title": "Lamport Signatures",
+      "category": "Security",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2045140929192006003",
+      "sourceContext": "Lamport Signature explained",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific signature construction family: one-time signatures built from hash functions alone. It is narrower than general post-quantum cryptography and narrower than broader hash-based signature trees such as XMSS or SPHINCS+.",
+      "candidatePrerequisites": [
+        "fundamentals.digital-signatures",
+        "fundamentals.hash-functions"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.digital-signatures",
+        "fundamentals.hash-functions"
+      ],
+      "prerequisiteRationale": "Learners need the general idea of what a signature authorizes and verifies, plus the one-way-hash primitive Lamport signatures use instead of elliptic-curve arithmetic. Neither parent makes the other redundant.",
+      "aliases": [
+        "lamport signature",
+        "lamport one-time signatures",
+        "hash-based one-time signatures"
+      ],
+      "tags": [
+        "cryptography",
+        "post-quantum",
+        "signatures"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "medium",
+      "notes": "Chosen as the next explained-post slice because it is clearly surfaced by multiple Bitcoin Dev Project posts, still absent from the graph, and cleanly bridges Bitcoin's quantum-resistance discussions without collapsing into the broader SPHINCS+ or post-quantum wrapper."
     }
   ],
   "edges": [
@@ -2703,6 +2736,24 @@
       "rationale": "The bug only makes sense once learners understand how transaction hashes sit inside the block merkle tree and why internal-node preimages matter for block commitments.",
       "sourceId": "source.bitcoin-dev-project-explained-posts",
       "notes": "One direct parent keeps the node at the block-commitment layer instead of reopening broader hashing or SPV overview branches."
+    },
+    {
+      "from": "fundamentals.digital-signatures",
+      "to": "fundamentals.lamport-signatures",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the general signing-and-verification mental model before the one-time Lamport construction and its tradeoffs become meaningful.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent keeps the node tied to signature semantics instead of treating it as only a post-quantum curiosity."
+    },
+    {
+      "from": "fundamentals.hash-functions",
+      "to": "fundamentals.lamport-signatures",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Lamport signatures replace elliptic-curve arithmetic with one-way hash preimages and comparisons, so learners need the hash primitive first.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent captures the actual cryptographic mechanism rather than forcing learners through unrelated elliptic-curve details."
     }
   ],
   "decisions": [
@@ -3434,6 +3485,24 @@
         "source.bitcoin-dev-project-explained-posts"
       ],
       "notes": "The off-by-one retargeting flaw is the mechanism that enables the existing time-warp exploit node, but it does not survive dedupe as a cleaner learner-facing boundary than the attack concept already in the graph."
+    },
+    {
+      "id": "decision.lamport-signatures-slice",
+      "type": "scope",
+      "subject": "fundamentals.lamport-signatures",
+      "status": "resolved",
+      "rationale": "Add fundamentals.lamport-signatures. It captures the one-time hash-based signature primitive directly, fills a real gap exposed by the explained-post source, and gives cleaner grounding for Bitcoin's quantum-resistance discussions than jumping straight to SPHINCS+ or script-level Lamport applications.",
+      "relatedConceptIds": [
+        "fundamentals.lamport-signatures",
+        "fundamentals.digital-signatures",
+        "fundamentals.hash-functions",
+        "protocol.adaptor-signatures",
+        "fundamentals.schnorr-signatures"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "Chosen over BIP 158, Full Node Architecture, and SegWit Address as the next X slice because those ideas are already better covered by existing graph nodes or would survive only as merges and metadata enrichment."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

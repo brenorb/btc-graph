@@ -15,10 +15,12 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 - Implemented in branch: `protocol.time-warp-attack`
 - Implemented in branch: `protocol.duplicate-transaction-bug`
 - Implemented in branch: `protocol.64-byte-transaction-bug`
+- Implemented in branch: `fundamentals.lamport-signatures`
 - Merged in branch: `Off-by-one difficulty bug explained` -> `protocol.time-warp-attack`
 - Source context: `Great Consensus Cleanup explained Part 1: Time Warp Attack`
 - Source context: `Duplicate transaction bug explained`
 - Source context: `Episode 5: The 64-byte transaction bug explained simply`
+- Source context: `Lamport Signature explained`
 - Source context: `Off-by-one difficulty bug explained`
 - Reason: Bitcoin-native consensus-cleanup bug branch covering timestamp manipulation and txid uniqueness failures
 
