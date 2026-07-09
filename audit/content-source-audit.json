@@ -17,9 +17,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
-      "conceptsExtracted": 29,
-      "conceptsNormalized": 9,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, dev.taproot-descriptors, and dev.descriptor-wallet-policies."
+      "conceptsExtracted": 30,
+      "conceptsNormalized": 10,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, dev.taproot-descriptors, dev.descriptor-wallet-policies, and dev.descriptors-in-psbt."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -539,6 +539,40 @@
       "estimatedTime": "55m",
       "confidence": "high",
       "notes": "Implemented in the current branch as the clean BIP388 slice after concluding that the broader descriptor-wallets label would duplicate the existing descriptor-wallet-imports alias."
+    },
+    {
+      "id": "dev.descriptors-in-psbt",
+      "title": "Descriptors in PSBTs",
+      "category": "Wallets",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/psbt/",
+      "sourceContext": "PSBT topic page plus output script descriptors topic updates about descriptor-aware signer and wallet coordination",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one interoperability concept: carrying descriptor information inside PSBT-based coordination flows, narrower than generic PSBT workflows and narrower than broad descriptor-wallet abstractions.",
+      "candidatePrerequisites": [
+        "dev.descriptors",
+        "custody.psbt",
+        "dev.psbt-v2",
+        "dev.descriptor-wallet-policies"
+      ],
+      "chosenPrerequisites": [
+        "dev.descriptors",
+        "custody.psbt"
+      ],
+      "prerequisiteRationale": "Learners need the descriptor model and the base PSBT coordination model first. PSBT v2 and wallet-policy formats are important adjacent evolutions, but they are downstream refinements rather than prerequisites for the general descriptor-in-PSBT idea.",
+      "aliases": [
+        "descriptor psbts",
+        "psbt descriptors"
+      ],
+      "tags": [
+        "descriptors",
+        "psbt",
+        "interoperability"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the cleanest remaining Optech-side interoperability slice after ruling out MAST, threshold signatures, and scriptless multisignatures as broader or more duplicate-prone."
     },
     {
       "id": "protocol.musig",
@@ -1341,6 +1375,24 @@
       "notes": "Non-redundant alongside dev.descriptors because neither concept implies the other in the current graph."
     },
     {
+      "from": "dev.descriptors",
+      "to": "dev.descriptors-in-psbt",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The node is about carrying descriptor information during transaction coordination, so learners need the descriptor syntax and script-template model first.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct parent kept at the representation layer rather than the wallet-policy or taproot-specific refinements."
+    },
+    {
+      "from": "custody.psbt",
+      "to": "dev.descriptors-in-psbt",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Descriptor-aware exchange only makes sense after the learner understands the general PSBT coordination workflow that transports signing-related data between tools.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Direct parent kept at the base PSBT workflow level instead of requiring later version-specific extensions."
+    },
+    {
       "from": "custody.multisig",
       "to": "custody.degrading-multisig",
       "type": "prerequisite",
@@ -1893,6 +1945,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Kept the node additive and left degrading multisig for a later wallet-policy slice rather than combining two different policy families in one commit."
+    },
+    {
+      "id": "decision.descriptors-in-psbt-slice",
+      "type": "scope",
+      "subject": "dev.descriptors-in-psbt",
+      "status": "resolved",
+      "rationale": "The cleanest next Optech-side interoperability slice is dev.descriptors-in-psbt. It captures descriptor-aware PSBT coordination directly without collapsing into the narrower taproot-field branch, the wallet-policy branch, or the broader umbrella topics around threshold and scriptless multisignatures.",
+      "relatedConceptIds": [
+        "dev.descriptors-in-psbt",
+        "dev.descriptors",
+        "custody.psbt",
+        "dev.psbt-v2",
+        "dev.descriptor-wallet-policies",
+        "dev.taproot-psbt-fields"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "This slice was chosen after ruling out MAST as too duplicative with the existing TapTree branch and ruling out threshold-signature and scriptless-multisignature wrappers as too broad for the current graph."
     },
     {
       "id": "decision.degrading-multisig-slice",

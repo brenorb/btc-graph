@@ -1190,6 +1190,55 @@
       ]
     },
     {
+      "id": "dev.descriptors-in-psbt",
+      "title": "Descriptors in PSBTs",
+      "description": "Descriptors in PSBTs let coordinators and signers exchange script-template information alongside transaction data instead of relying on custom wallet metadata. They make it easier for different tools to reason about the same inputs, outputs, and signing responsibilities from a shared descriptor view.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.descriptors",
+        "custody.psbt"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Partially Signed Bitcoin Transactions",
+          "url": "https://bitcoinops.org/en/topics/psbt/",
+          "notes": "Source-native discussion of PSBT interoperability changes, including descriptor-related extensions and coordination patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Script Descriptors",
+          "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+          "notes": "Source-native record of descriptor adoption and the later work to combine descriptors with signer and wallet workflows."
+        },
+        {
+          "type": "article",
+          "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+          "notes": "Base PSBT structure that later descriptor-carrying extensions build on."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet interoperability, transaction construction, and signer coordination tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "descriptors",
+        "psbt",
+        "interoperability"
+      ],
+      "aliases": [
+        "descriptor psbts",
+        "psbt descriptors"
+      ]
+    },
+    {
       "id": "dev.fee-estimation-rpc",
       "title": "Fee Estimation RPC",
       "description": "How wallet and node software estimate feerates from mempool and historical confirmation data.",
