@@ -54,7 +54,7 @@ Economics (32 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (47 concepts)
+Extension Systems (48 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -93,6 +93,7 @@ Extension Systems (47 concepts)
 - Nostr: Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.
 - Payment Channels: Off-chain bilateral channels secured by on-chain contracts.
 - Payment Pools: Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.
+- Per-Commitment Secrets: Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.
 - Point Time-Locked Contracts (PTLCs): PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.
 - Revocation and Penalty Keys: Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.

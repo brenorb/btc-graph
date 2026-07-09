@@ -7286,6 +7286,48 @@
       ]
     },
     {
+      "id": "lightning.per-commitment-secrets",
+      "title": "Per-Commitment Secrets",
+      "description": "Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.commitment-transactions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Secrets",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-secrets",
+          "notes": "Interactive lesson on the descending secret chain, per-commitment points, and the key-derivation role they play in Lightning channel states."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical reference for per-commitment points, revocation keys, and the state-specific key material used in Lightning commitments."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment state evolution, revocation design, and the cryptographic machinery behind channel safety.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "lightning",
+        "channels",
+        "keys"
+      ],
+      "aliases": [
+        "commitment secrets",
+        "per-commitment points"
+      ]
+    },
+    {
       "id": "lightning.probing-attacks",
       "title": "Lightning Probing Attacks",
       "description": "Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.",

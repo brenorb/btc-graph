@@ -114,14 +114,14 @@
       "priority": "P0",
       "scope": "Interactive Lightning curriculum covering payment channels, channel state updates, HTLCs, onion routing, routing economics, and visual Lightning simulations.",
       "clusterStrategy": "Track the Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning surfaces as separate course clusters before drilling into individual lessons.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
+      "status": "In review",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance."
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -1765,6 +1765,38 @@
       "estimatedTime": "0m",
       "confidence": "high",
       "notes": "Do not add as a separate node. Preserve discoverability by folding the term into protocol.adaptor-signatures metadata and by keeping the downstream applications split into their own nodes."
+    },
+    {
+      "id": "lightning.per-commitment-secrets",
+      "title": "Per-Commitment Secrets",
+      "category": "Extension Systems",
+      "sourceId": "source.programming-lightning",
+      "sourceUrl": "https://programminglightning.com/lightning-tutorial/commitment-secrets",
+      "sourceContext": "Lightning Tutorial commitment-secrets lesson with exercises for building the commitment secret, deriving the per-commitment point, and producing commitment keys",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific Lightning channel mechanism: the per-state secret chain used to derive per-commitment points and commitment keys. It is narrower than commitment transactions as a whole and narrower than downstream revocation or force-close behavior.",
+      "candidatePrerequisites": [
+        "lightning.commitment-transactions",
+        "fundamentals.hash-functions",
+        "fundamentals.public-private-keys"
+      ],
+      "chosenPrerequisites": [
+        "lightning.commitment-transactions"
+      ],
+      "prerequisiteRationale": "Learners need the channel-state context from commitment transactions before the per-state secret chain is meaningful. The underlying hash and key-material concepts are already inherited transitively through the commitment branch, so they would be redundant as direct edges.",
+      "aliases": [
+        "commitment secrets",
+        "per-commitment points"
+      ],
+      "tags": [
+        "lightning",
+        "channels",
+        "keys"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest first additive slice from Programming Lightning because it fills a precise mechanism gap between existing commitment-state and revocation nodes without reopening broader routing or HTLC wrappers."
     }
   ],
   "edges": [
@@ -2235,6 +2267,15 @@
       "rationale": "The stack execution model is the direct mechanism by which Bitcoin Script evaluates spending conditions, so learners need the umbrella Script concept before drilling into stack behavior.",
       "sourceId": "source.mastering-bitcoin-book-map",
       "notes": "Direct parent positions the node as the conceptual middle layer between Script and opcode-specific leaves."
+    },
+    {
+      "from": "lightning.commitment-transactions",
+      "to": "lightning.per-commitment-secrets",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Per-commitment secrets are generated for each new commitment state, so learners need the commitment-transaction model before the secret-rotation mechanism makes sense.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent keeps the node on state evolution rather than on later punishment or watchtower behavior."
     }
   ],
   "decisions": [
@@ -2770,6 +2811,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Merged into protocol.adaptor-signatures for search discoverability after confirming the term is broader than Lightning and broader than any one downstream application."
+    },
+    {
+      "id": "decision.per-commitment-secrets-slice",
+      "type": "scope",
+      "subject": "lightning.per-commitment-secrets",
+      "status": "resolved",
+      "rationale": "The cleanest first additive slice from Programming Lightning is lightning.per-commitment-secrets. It captures one specific state-derivation mechanism that the current graph depends on implicitly through commitment and revocation nodes, without reopening the broader Lightning Tutorial wrappers around channels, HTLCs, or routing.",
+      "relatedConceptIds": [
+        "lightning.per-commitment-secrets",
+        "lightning.commitment-transactions",
+        "lightning.revocation-penalty-keys",
+        "lightning.force-closures",
+        "fundamentals.hash-functions",
+        "fundamentals.public-private-keys"
+      ],
+      "relatedSourceIds": [
+        "source.programming-lightning"
+      ],
+      "notes": "Chosen over broader Programming Lightning candidates such as payment channels, onion-routing internals, or HTLC workflow wrappers because it survives dedupe as one precise mechanism with clear downstream leverage. The direct parent set was later reduced to lightning.commitment-transactions only after the redundancy check showed the crypto primitives were already inherited transitively."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
