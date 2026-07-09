@@ -136,9 +136,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 4,
-      "conceptsNormalized": 4,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash, privacy.secret-right-to-cash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
+      "conceptsExtracted": 5,
+      "conceptsNormalized": 5,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash, privacy.secret-right-to-cash, economics.ideal-money. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -1957,6 +1957,39 @@
       "notes": "Chosen as the cleanest next Cypherpunk Library additive slice because it captures the bearer-cash privacy and exclusion tradeoff directly without collapsing into the already crowded money-theory lane or duplicating generic KYC and pseudonymity nodes."
     },
     {
+      "id": "economics.ideal-money",
+      "title": "Ideal Money",
+      "category": "Economics",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "sourceUrl": "https://www.cypherpunkbooks.com/book/ideal-money-and-asymptotically-ideal-money",
+      "sourceContext": "Ideal Money and Asymptotically Ideal Money",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific monetary-theory concept: money as a stable measuring instrument for prices and economic calculation. It is narrower than general monetary theory, narrower than Hayek's currency-competition thesis, and distinct from Bitcoin's scarcity-driven store-of-value framing.",
+      "candidatePrerequisites": [
+        "fundamentals.money-properties",
+        "fundamentals.inflation",
+        "economics.neutral-money-vs-political-money"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.inflation"
+      ],
+      "prerequisiteRationale": "Learners need to understand how inflation distorts purchasing power and price signals before the idea of money as a stable measuring stick becomes meaningful. The baseline money-properties ladder is already inherited transitively through inflation, and the neutrality branch is adjacent context rather than a strict prerequisite.",
+      "aliases": [
+        "asymptotically ideal money",
+        "ideal money and asymptotically ideal money",
+        "money as a measuring stick"
+      ],
+      "tags": [
+        "economics",
+        "money",
+        "monetary-theory"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "medium",
+      "notes": "Chosen as the cleanest remaining Cypherpunk Library additive slice because it fills a distinct gap around money as a measuring instrument rather than a scarce asset, while the remaining privacy and DKG candidates are still cleaner as defers or merges."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2770,6 +2803,15 @@
       "notes": "Direct parent captures the exclusion-risk side of the argument without reopening broader compliance or surveillance wrappers."
     },
     {
+      "from": "fundamentals.inflation",
+      "to": "economics.ideal-money",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The concept is about minimizing monetary distortion, so learners need to understand how inflation changes purchasing power and price signals first.",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "notes": "Direct parent captures the measurement-distortion problem that ideal money is trying to avoid."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3490,6 +3532,25 @@
         "source.cypherpunk-library-bitcoin-adjacent"
       ],
       "notes": "Chosen over asymptotically-ideal-money and other adjacent library texts because the graph already has denser monetary-theory coverage than bearer-cash privacy coverage."
+    },
+    {
+      "id": "decision.ideal-money-slice",
+      "type": "scope",
+      "subject": "economics.ideal-money",
+      "status": "resolved",
+      "rationale": "Add economics.ideal-money. It isolates money's role as a stable measuring stick for economic calculation, which survives dedupe more cleanly than the remaining merge-bound privacy material and the still-parentless DKG path.",
+      "relatedConceptIds": [
+        "economics.ideal-money",
+        "fundamentals.money-properties",
+        "fundamentals.inflation",
+        "economics.monetary-backing",
+        "economics.monetary-premium",
+        "economics.neutral-money-vs-political-money"
+      ],
+      "relatedSourceIds": [
+        "source.cypherpunk-library-bitcoin-adjacent"
+      ],
+      "notes": "Kept neutrality and Hayek-side political-economy framing as neighboring context rather than direct prerequisites so this lands as a distinct measurement-and-calculation concept instead of collapsing into the existing monetary-theory lane."
     },
     {
       "id": "decision.obscured-commitment-number-slice",

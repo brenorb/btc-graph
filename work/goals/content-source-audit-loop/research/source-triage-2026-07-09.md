@@ -32,11 +32,13 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 - Implemented in branch: `history.chaumian-ecash`
 - Implemented in branch: `privacy.secret-right-to-cash`
+- Implemented in branch: `economics.ideal-money`
 - Merged in branch: `A Cypherpunk's Manifesto` -> `history.cypherpunks`
 - Merged in branch: `The Crypto Anarchist Manifesto` -> `history.bitcoin-anarchism`
 - Source cluster: `Protecting Privacy with Electronic Cash` and `The Beauty of eCash`
+- Source cluster: `Ideal Money and Asymptotically Ideal Money`
 - Source cluster: `A Cypherpunk's Manifesto`, `The Crypto Anarchist Manifesto`, `Your Secret Right to Cash`, `Protecting Privacy with Electronic Cash`, and `The Beauty of eCash`
-- Reason: preserve the movement's primary source inside existing history coverage while adding the historical digital-cash bridge as its own node
+- Reason: preserve the movement's primary sources inside existing history coverage while adding one historical digital-cash bridge and one distinct monetary-theory bridge that survives dedupe as money-as-measuring-stick rather than money-as-scarce-asset coverage
 
 ## Pending Follow-ons
 
@@ -47,9 +49,4 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 - `privacy.non-blockchain-privacy-leaks`
   - Source family: `Bitcoin Dev Philosophy`
   - Source cluster: `Chapter 3 Privacy -> 3.5 Non-blockchain privacy`
-  - Current read: merge/defer into `privacy.pseudonymity`; better used to strengthen off-chain leakage examples than as its own node
-
-- `economics.ideal-money`
-  - Source family: `Cypherpunk Library`
-  - Source cluster: `Ideal Money and Asymptotically Ideal Money`
-  - Current read: distinct monetary-theory candidate focused on money as a stable measuring stick rather than mainly a scarce asset
+  - Current read: defer; overlaps more cleanly with `privacy.network-privacy`, `privacy.kyc-tradeoffs`, and `custody.transaction-metadata` than with `privacy.pseudonymity`, so keep it out of the current slice unless a stronger learner-facing bridge emerges

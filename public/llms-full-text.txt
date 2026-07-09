@@ -20,7 +20,7 @@ Site sections:
 
 Topics by category:
 
-Economics (32 concepts)
+Economics (33 concepts)
 - Barter Limitations: Why direct barter fails at scale and drives monetary emergence.
 - Bitcoin Supply and Demand: Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.
 - Bretton Woods and 1971: The 1971 suspension of dollar-gold convertibility marked the transition to the modern fiat era. This event is central to debates about monetary discretion, inflation, and hard-money alternatives.
@@ -34,6 +34,7 @@ Economics (32 concepts)
 - Hayek's Money Competition: Hayek's money competition thesis argues that currencies should compete rather than be monopolized by the state. It frames Bitcoin as a market alternative in monetary selection.
 - History of Money: From commodity monies to credit money and modern fiat regimes. This history frames why monetary institutions and trust models evolve over time.
 - Hyperinflation History: Hyperinflation episodes show how confidence collapse, fiscal dominance, and monetary over-expansion can destroy currency function. Historical case studies clarify why monetary credibility is fragile.
+- Ideal Money: Ideal money acts as a stable measuring stick for economic calculation. The concept emphasizes minimizing monetary distortion so prices, savings, and long-term contracts reflect real changes instead of policy-driven noise.
 - Inflation: How monetary expansion changes purchasing power and incentives.
 - Long-Term Security Budget: How subsidy decline and fee revenue together influence miner incentives and chain security.
 - Lost Coins and Effective Supply: How permanently inaccessible coins affect circulating supply, liquidity, and long-term scarcity.
