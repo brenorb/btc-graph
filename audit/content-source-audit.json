@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 24,
-      "conceptsNormalized": 10,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, and protocol.script-execution-stack."
+      "conceptsExtracted": 25,
+      "conceptsNormalized": 11,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, and dev.extended-keys."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -2051,10 +2051,11 @@
       "atomicityRationale": "This isolates one specific BIP32 derivation mode: hardened child derivation. It is narrower than HD wallets generally, narrower than BIP44 path conventions, and narrower than the broader privacy consequences of xpub leakage.",
       "candidatePrerequisites": [
         "dev.bip32",
+        "dev.extended-keys",
         "privacy.xpub-leakage"
       ],
       "chosenPrerequisites": [
-        "dev.bip32"
+        "dev.extended-keys"
       ],
       "prerequisiteRationale": "Learners need the base extended-key derivation model before the hardened-versus-non-hardened distinction makes sense. XPUB leakage is a downstream consequence and motivation, not a prerequisite for understanding the derivation mode itself.",
       "aliases": [
@@ -2137,6 +2138,40 @@
       "estimatedTime": "20m",
       "confidence": "high",
       "notes": "Chosen as the next Developer Guides wallet slice after Hardened Keys because the source exposes WIF as a dedicated named format with one clean direct parent and lower dedupe risk than the remaining mining leaf."
+    },
+    {
+      "id": "dev.extended-keys",
+      "title": "Extended Keys (XPUB/XPRV)",
+      "category": "Wallets",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+      "sourceContext": "Wallet Recovery > Creating an HD Wallet from the Seed > Extended keys",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific HD-wallet building block: the xpub/xprv package of key material plus chain code used to derive a branch of child keys. It is narrower than BIP32 generally, narrower than hardened derivation specifically, and distinct from downstream privacy leakage or watch-only operational use cases.",
+      "candidatePrerequisites": [
+        "dev.bip32",
+        "privacy.xpub-leakage",
+        "custody.watch-only-wallets"
+      ],
+      "chosenPrerequisites": [
+        "dev.bip32"
+      ],
+      "prerequisiteRationale": "Learners first need the broader HD derivation tree model before the xpub/xprv branch-export boundary makes sense. XPUB leakage and watch-only workflows are downstream consequences and applications rather than parent concepts.",
+      "aliases": [
+        "xpub",
+        "xprv",
+        "extended public keys",
+        "extended private keys"
+      ],
+      "tags": [
+        "wallets",
+        "keys",
+        "standards"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Chosen as the next Mastering Bitcoin wallet-branch slice because it closes the gap between generic BIP32 coverage and downstream nodes that already assume learners understand xpub/xprv branch derivation semantics."
     },
     {
       "id": "mining.pool-shares",
@@ -3004,12 +3039,21 @@
     },
     {
       "from": "dev.bip32",
+      "to": "dev.extended-keys",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Extended keys are one specific export and branch-derivation surface inside the broader BIP32 HD tree model, so learners need the base tree-derivation mechanics first.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct parent keeps the node inside the HD derivation branch instead of treating xpub or xprv behavior as only a privacy or operational-wallet concept."
+    },
+    {
+      "from": "dev.extended-keys",
       "to": "dev.hardened-keys",
       "type": "prerequisite",
       "status": "proposed",
-      "rationale": "Hardened derivation is one specific child-key mode inside the broader BIP32 extended-key model, so learners need the base tree-derivation mechanics first.",
+      "rationale": "Hardened derivation is a constraint on what an extended public key can derive and on how extended private and public key boundaries behave, so learners need the base xpub/xprv model first.",
       "sourceId": "source.bitcoin-developer-guides",
-      "notes": "Direct parent keeps the node anchored in the HD derivation branch instead of treating it as only a privacy or wallet-policy concept."
+      "notes": "Direct parent closes the previously missing branch-level bridge between BIP32 generally and hardened derivation specifically."
     },
     {
       "from": "custody.multisig",
@@ -3851,7 +3895,25 @@
       "relatedSourceIds": [
         "source.bitcoin-developer-guides"
       ],
-      "notes": "Chosen after the Wallets subagent identified Hardened Keys as the cleanest additive bridge inside the existing HD derivation branch. Kept BIP44 path structure and xpub-leakage consequences out of scope so the node stays focused on the hardened derivation mechanism itself."
+      "notes": "Chosen after the Wallets subagent identified Hardened Keys as the cleanest additive bridge inside the existing HD derivation branch. After later book-side extraction exposed dev.extended-keys as a missing bridge, the node was re-anchored there so BIP44 path structure and xpub-leakage consequences could stay out of scope while the hardened derivation mechanism remained direct."
+    },
+    {
+      "id": "decision.extended-keys-slice",
+      "type": "scope",
+      "subject": "dev.extended-keys",
+      "status": "resolved",
+      "rationale": "The cleanest next Mastering Bitcoin wallet-branch slice is dev.extended-keys. It captures the xpub/xprv boundary directly without collapsing into generic BIP32 coverage, single-key serialization formats like WIF, or downstream privacy and watch-only consequences.",
+      "relatedConceptIds": [
+        "dev.extended-keys",
+        "dev.bip32",
+        "dev.hardened-keys",
+        "privacy.xpub-leakage",
+        "custody.watch-only-wallets"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Chosen after compare-pass subagents ruled out a standalone Base58Check node and confirmed that the missing branch-level xpub/xprv concept would strengthen the existing BIP32, hardened-keys, and wallet-policy subtree more cleanly."
     },
     {
       "id": "decision.developer-guides-escrow-slice",

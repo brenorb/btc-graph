@@ -4,7 +4,7 @@
   "description": "Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.",
   "category": "Wallets",
   "prerequisites": [
-    "dev.bip32"
+    "dev.extended-keys"
   ],
   "resources": [
     {

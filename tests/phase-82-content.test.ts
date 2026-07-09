@@ -19,36 +19,36 @@ function loadNodes(): GraphNode[] {
   });
 }
 
-describe("phase 78 hardened keys slice", () => {
+describe("phase 82 extended keys slice", () => {
   const nodes = loadNodes();
   const byId = new Map(nodes.map((node) => [node.id, node]));
 
-  it("adds the hardened keys node", () => {
-    expect(byId.has("dev.hardened-keys")).toBe(true);
+  it("adds the extended keys node", () => {
+    expect(byId.has("dev.extended-keys")).toBe(true);
   });
 
-  it("anchors the concept on extended keys only", () => {
-    const node = byId.get("dev.hardened-keys");
+  it("anchors extended keys on bip32 only", () => {
+    const node = byId.get("dev.extended-keys");
     expect(node).toBeTruthy();
     if (!node) return;
 
-    expect(node.prerequisites).toEqual(["dev.extended-keys"]);
+    expect(node.prerequisites).toEqual(["dev.bip32"]);
   });
 
-  it("keeps the description focused on hardened derivation and key-boundary security", () => {
-    const node = byId.get("dev.hardened-keys");
+  it("keeps the description focused on xpub xprv branch derivation semantics", () => {
+    const node = byId.get("dev.extended-keys");
     expect(node).toBeTruthy();
     if (!node) return;
 
     const description = node.description.toLowerCase();
-    expect(description).toContain("hardened");
+    expect(description).toContain("xprv");
     expect(description).toContain("xpub");
-    expect(description).toContain("private key");
-    expect(description).toContain("security boundary");
+    expect(description).toContain("chain code");
+    expect(description).toContain("watch-only");
   });
 
   it("keeps the resources curated and book-covered", () => {
-    const node = byId.get("dev.hardened-keys");
+    const node = byId.get("dev.extended-keys");
     expect(node).toBeTruthy();
     if (!node) return;
 
