@@ -119,9 +119,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 3,
-      "conceptsNormalized": 3,
-      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts."
+      "conceptsExtracted": 4,
+      "conceptsNormalized": 4,
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts, and lightning.htlc-output-scripts."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -2021,6 +2021,40 @@
       "notes": "Add. Distinct BOLT 3 commitment-output script layer for to_local/to_remote and CSV delay; lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered."
     },
     {
+      "id": "lightning.htlc-output-scripts",
+      "title": "HTLC Output Scripts",
+      "category": "Extension Systems",
+      "sourceId": "source.programming-lightning",
+      "sourceUrl": "https://programminglightning.com/lightning-tutorial/offered-htlcs",
+      "sourceContext": "Programming Lightning lessons offered-htlcs and received-htlcs, with adjacent htlc-fees-dust handling",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific BOLT 3 mechanism layer: the offered and received HTLC witness scripts embedded in commitment transactions. It is narrower than HTLCs as a payment primitive, narrower than commitment output scripts generally, and narrower than later settlement-path or watchtower workflows.",
+      "candidatePrerequisites": [
+        "lightning.htlc",
+        "lightning.commitment-output-scripts",
+        "protocol.cltv-bip65"
+      ],
+      "chosenPrerequisites": [
+        "lightning.htlc",
+        "lightning.commitment-output-scripts"
+      ],
+      "prerequisiteRationale": "Learners need the high-level HTLC purpose to understand why the scripts contain payment preimage and timeout branches, and they need the earlier commitment output script layer to see how HTLC outputs extend the same commitment-transaction structure. CLTV details are already part of the HTLC idea and do not need a separate direct edge here.",
+      "aliases": [
+        "offered htlc scripts",
+        "received htlc scripts",
+        "htlc witness scripts"
+      ],
+      "tags": [
+        "lightning",
+        "htlc",
+        "scripts"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the strongest remaining Programming Lightning slice because it cleanly bridges the current gap between generic HTLC coverage and timeout-settlement behavior without reopening broader routing or channel-policy wrappers."
+    },
+    {
       "id": "protocol.duplicate-transaction-bug",
       "title": "Duplicate Transaction Bug",
       "category": "Protocol & Consensus",
@@ -2743,6 +2777,24 @@
       "rationale": "The obscured commitment number is part of the same commitment-state machinery as the per-state secret chain, so learners need that state-derivation context before the field-level encoding scheme makes sense.",
       "sourceId": "source.programming-lightning",
       "notes": "Direct parent keeps the node in the narrow commitment-state branch instead of pulling in broader closure or HTLC behavior."
+    },
+    {
+      "from": "lightning.htlc",
+      "to": "lightning.htlc-output-scripts",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the base HTLC idea before the offered and received witness-script branches, timeout paths, and preimage-claim paths become meaningful.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent keeps the node tied to the payment-contract primitive instead of treating it as generic script trivia."
+    },
+    {
+      "from": "lightning.commitment-output-scripts",
+      "to": "lightning.htlc-output-scripts",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "HTLC output scripts are additional commitment-transaction outputs layered on top of the same to_local and to_remote commitment-script structure, so learners need that earlier script layer first.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent places the node at the next script layer above commitment outputs without dragging in later close-handling or watchtower flows."
     },
     {
       "from": "protocol.coinbase-transaction",
@@ -3474,6 +3526,25 @@
         "source.programming-lightning"
       ],
       "notes": "Chosen after the first two Programming Lightning commitment-state slices because the source exposes dedicated static-remotekey and CSV checkpoints, making the output-script layer a cleaner atomic addition than broader revocation, close, or HTLC wrappers."
+    },
+    {
+      "id": "decision.htlc-output-scripts-slice",
+      "type": "scope",
+      "subject": "lightning.htlc-output-scripts",
+      "status": "resolved",
+      "rationale": "Add lightning.htlc-output-scripts. It isolates the offered/received HTLC witness-script layer directly, bridging the current gap between generic HTLC concepts and HTLC timeout settlement without collapsing into broader routing or channel-policy wrappers.",
+      "relatedConceptIds": [
+        "lightning.htlc-output-scripts",
+        "lightning.htlc",
+        "lightning.commitment-output-scripts",
+        "lightning.htlc-timeout-settlement",
+        "protocol.cltv-bip65",
+        "protocol.dust-policy"
+      ],
+      "relatedSourceIds": [
+        "source.programming-lightning"
+      ],
+      "notes": "Chosen over economics.ideal-money because the Lightning branch already has the parent and child surfaces needed for this script-layer concept to land as a clean, reusable node today."
     },
     {
       "id": "decision.duplicate-transaction-bug-slice",

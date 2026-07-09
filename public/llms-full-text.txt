@@ -54,7 +54,7 @@ Economics (32 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (50 concepts)
+Extension Systems (51 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -73,6 +73,7 @@ Extension Systems (50 concepts)
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
 - Fedi: Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.
+- HTLC Output Scripts: Lightning HTLC output scripts define the exact witness conditions for claiming or timing out offered and received HTLCs inside commitment transactions. They add preimage and timeout branches on top of the broader commitment-script structure, which is why they sit between generic HTLC concepts and later settlement handling.
 - HTLC Timeout Settlement Paths: On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.
 - HTLCs: Conditional forwarding using hashlocks and timelocks.
 - Invoices and Payment Requests: BOLT11 request format and payment execution flow.

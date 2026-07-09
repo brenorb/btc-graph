@@ -7,7 +7,9 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 - Implemented in branch: `lightning.per-commitment-secrets`
 - Implemented in branch: `lightning.obscured-commitment-number`
 - Implemented in branch: `lightning.commitment-output-scripts`
+- Implemented in branch: `lightning.htlc-output-scripts`
 - Source cluster: `lightning-tutorial/commitment-secrets` and `lightning-tutorial/commitment-transactions`
+- Source cluster: `offered-htlcs`, `received-htlcs`, and `htlc-fees-dust`
 - Reason: commitment-state bridge concepts between the broad commitment-transaction overview and downstream revocation, close, and HTLC behavior
 
 ## Bitcoin Dev Project Explained Posts
@@ -40,17 +42,12 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 - `fundamentals.distributed-key-generation`
   - Source family: `Bitcoin Dev Project Explained Posts`
-  - Current read: clean runner-up after `custody.shamirs-secret-sharing`; likely depends on collaborative key generation without any one party holding the full secret
+  - Current read: defer; likely wants a more concrete threshold-signing child such as `protocol.frost` before it lands cleanly
 
 - `privacy.non-blockchain-privacy-leaks`
   - Source family: `Bitcoin Dev Philosophy`
   - Source cluster: `Chapter 3 Privacy -> 3.5 Non-blockchain privacy`
-  - Current read: clean additive privacy node for wallet, exchange, network, and metadata leaks outside the on-chain graph
-
-- `lightning.htlc-output-scripts`
-  - Source family: `Programming Lightning`
-  - Source cluster: `offered-htlcs`, `received-htlcs`, `htlc-fees-dust`
-  - Current read: strongest remaining Lightning mechanism slice after commitment-output-scripts
+  - Current read: merge/defer into `privacy.pseudonymity`; better used to strengthen off-chain leakage examples than as its own node
 
 - `economics.ideal-money`
   - Source family: `Cypherpunk Library`
