@@ -203,7 +203,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (62 concepts)
+Protocol & Consensus (63 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -263,6 +263,7 @@ Protocol & Consensus (62 concepts)
 - Transaction Malleability: How pre-confirmation transaction mutation risk appears and why stable identifiers matter.
 - Transaction Pinning: Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.
 - TXHASH Proposal: TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.
+- TXID and WTXID: SegWit transactions have two identifiers: the txid commits to the original serialization without witness data, while the wtxid commits to the serialization that includes witness data. If a transaction has no witness data the two IDs are the same, but when witness data exists the distinction matters for relay, tracking, and understanding why inputs still refer to previous outputs by txid.
 - UTXO Model: State model based on spendable outputs instead of account balances.
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.

@@ -4,7 +4,8 @@
   "description": "Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.transaction-relay-inv-getdata"
+    "protocol.transaction-relay-inv-getdata",
+    "protocol.txid-vs-wtxid"
   ],
   "resources": [
     {

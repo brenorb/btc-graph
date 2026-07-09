@@ -136,9 +136,9 @@
       "extractionStatus": "Normalized candidate",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 1,
-      "notes": "Second post-seed-source slice. The current additive winners are protocol.mempool-unbroadcast-set and protocol.transaction-rebroadcast-privacy; transaction-format internals remain follow-up material."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Second post-seed-source slice. The current additive winners are protocol.mempool-unbroadcast-set, protocol.transaction-rebroadcast-privacy, and protocol.txid-vs-wtxid. The remaining transaction-format internals are now mostly implementation-detail material rather than clean learner-facing nodes."
     },
     {
       "id": "source.bitcoin-design-payment-formats",
@@ -1518,6 +1518,40 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen as the cleaner next Academy mempool slice after ruling out broader transaction-format and wallet-encryption candidates."
+    },
+    {
+      "id": "protocol.txid-vs-wtxid",
+      "title": "TXID and WTXID",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "sourceUrl": "https://bitcoincore.academy/mempool-tx-format.html",
+      "sourceContext": "Bitcoin Core Academy mempool cluster: transaction format in the mempool",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific identifier distinction: txid commits to the base transaction serialization while wtxid commits to the witness-inclusive serialization. That is narrower than SegWit as a whole, narrower than relay mode changes like BIP339, and narrower than a broad transaction-format wrapper.",
+      "candidatePrerequisites": [
+        "protocol.segregated-witness",
+        "protocol.transaction-malleability",
+        "protocol.transaction-relay-inv-getdata"
+      ],
+      "chosenPrerequisites": [
+        "protocol.segregated-witness"
+      ],
+      "prerequisiteRationale": "Learners need the SegWit serialization split first because txid and wtxid only diverge once witness data is separated from the original transaction format. Malleability and relay behavior are important consequences and use cases, but they are not required to understand the identifier distinction itself.",
+      "aliases": [
+        "txid and wtxid",
+        "transaction identifiers",
+        "witness transaction id"
+      ],
+      "tags": [
+        "transactions",
+        "segwit",
+        "relay",
+        "bitcoin-core"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest remaining Academy transaction-format bridge after checking that the distinction is not already owned by transaction malleability or WTXID relay."
     }
   ],
   "edges": [
@@ -1862,6 +1896,24 @@
       "rationale": "Different rebroadcast patterns matter because observers can correlate network behavior with public transaction history and infer likely origin, so learners need the pseudonymity and linkage problem first.",
       "sourceId": "source.bitcoin-core-academy-mempool",
       "notes": "Direct parent keeps the node focused on why relay-side origin leakage matters, not just how rebroadcast code works."
+    },
+    {
+      "from": "protocol.segregated-witness",
+      "to": "protocol.txid-vs-wtxid",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The identifier split only exists because SegWit introduces a witness-inclusive serialization alongside the legacy serialization, so learners need the SegWit structure change before the two IDs make sense.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Direct parent keeps the bridge on the serialization distinction instead of reintroducing downstream relay consequences."
+    },
+    {
+      "from": "protocol.txid-vs-wtxid",
+      "to": "protocol.wtxid-relay-bip339",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "WTXID relay is specifically the choice to announce and request witness-bearing transactions by wtxid instead of txid, so the learner should understand the two identifier forms before the relay mode change.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Added as a graph bridge so the existing relay node no longer has to explain the identifier distinction internally."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2596,6 +2648,25 @@
         "source.bitcoin-core-academy-mempool"
       ],
       "notes": "Kept the node at the relay-privacy layer so it does not drift into low-level peer filter implementation details or duplicate the existing generic network-privacy branch."
+    },
+    {
+      "id": "decision.txid-vs-wtxid-slice",
+      "type": "scope",
+      "subject": "protocol.txid-vs-wtxid",
+      "status": "resolved",
+      "rationale": "The cleanest remaining Academy transaction-format concept is protocol.txid-vs-wtxid. It captures one specific identifier distinction that existing nodes currently rely on implicitly, while broader wrappers like transaction identification or mempool entry format would overlap too heavily with SegWit, transaction malleability, and relay workflow coverage.",
+      "relatedConceptIds": [
+        "protocol.txid-vs-wtxid",
+        "protocol.segregated-witness",
+        "protocol.wtxid-relay-bip339",
+        "protocol.transaction-malleability",
+        "protocol.transaction-relay-inv-getdata",
+        "protocol.mempool-unbroadcast-set"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-academy-mempool"
+      ],
+      "notes": "Used the new node to re-anchor the existing WTXID relay leaf so the identifier split becomes an explicit learner-facing bridge instead of hidden supporting detail."
     },
     {
       "id": "decision.human-readable-addresses-slice",
