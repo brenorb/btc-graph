@@ -13228,6 +13228,51 @@
       ]
     },
     {
+      "id": "protocol.transaction-rebroadcast-privacy",
+      "title": "Transaction Rebroadcast Privacy",
+      "description": "If a node rebroadcasts its own wallet transactions differently from ordinary peer transactions, observers can infer likely transaction origin even when the first announcement was hidden. Bitcoin Core reduces that leak by making rebroadcast behavior look more like normal network activity instead of a wallet-specific signal.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.mempool-unbroadcast-set",
+        "privacy.pseudonymity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction Relay",
+          "url": "https://bitcoincore.academy/transaction-relay.html",
+          "notes": "Primary explanation of initial-broadcast privacy, peer announcement tracking, and rebroadcast heuristics for wallet transactions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core PR #21061",
+          "url": "https://github.com/bitcoin/bitcoin/pull/21061",
+          "notes": "Introduces the TxRebroadcast module and explains why wallet-transaction rebroadcast behavior can leak origin information."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, mempool behavior, and the privacy implications of network-level transaction handling.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mempool",
+        "relay",
+        "privacy",
+        "bitcoin-core"
+      ],
+      "aliases": [
+        "rebroadcast privacy",
+        "wallet rebroadcast privacy",
+        "txrebroadcast privacy"
+      ]
+    },
+    {
       "id": "protocol.transaction-relay-inv-getdata",
       "title": "Transaction Relay (inv/getdata)",
       "description": "How peers announce and request transactions using inv/getdata before full tx relay.",

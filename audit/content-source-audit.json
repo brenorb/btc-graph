@@ -121,7 +121,7 @@
       "pageClustersTracked": 3,
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
-      "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption and mempool-unbroadcast-set remain follow-up candidates from the same source family."
+      "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption remains deferred because the cleanest surviving slice is still too coupled to missing Core wallet-internals parents."
     },
     {
       "id": "source.bitcoin-core-academy-mempool",
@@ -138,7 +138,7 @@
       "pageClustersTracked": 3,
       "conceptsExtracted": 2,
       "conceptsNormalized": 1,
-      "notes": "Second post-seed-source slice. The current additive winner is protocol.mempool-unbroadcast-set; broader rebroadcast and transaction-format internals remain follow-up material."
+      "notes": "Second post-seed-source slice. The current additive winners are protocol.mempool-unbroadcast-set and protocol.transaction-rebroadcast-privacy; transaction-format internals remain follow-up material."
     },
     {
       "id": "source.bitcoin-design-payment-formats",
@@ -224,6 +224,23 @@
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
       "notes": "Fourth Bitcoin Design implementation slice candidate. The current additive winner is custody.progressive-security, which survives dedupe more cleanly than automatic cloud backups or wallet-encryption."
+    },
+    {
+      "id": "source.bitcoin-design-shared-wallet",
+      "name": "Bitcoin Design Shared Wallet",
+      "url": "https://bitcoin.design/guide/shared-wallet/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "Reference design for co-managed wallets using multi-key schemes, provider-held recovery keys, and household approval policies.",
+      "clusterStrategy": "Track the shared-wallet page together with the generic multi-key explanation so persona-specific multisig scenarios are deduped against existing custody mechanism nodes.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized to existing",
+      "dedupeStatus": "Merged into existing",
+      "pageClustersTracked": 2,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Reviewed and merged into existing coverage instead of minting a node. The enduring source value is shared-wallet examples for custody.multisig, custody.multiple-wallets, and custody.progressive-security."
     }
   ],
   "concepts": [
@@ -1465,6 +1482,42 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Chosen as the cleaner long-lived concept from the design material after recording automatic cloud backups as merge-only coverage and after keeping wallet-encryption deferred due overlap with existing passphrase and backup branches."
+    },
+    {
+      "id": "protocol.transaction-rebroadcast-privacy",
+      "title": "Transaction Rebroadcast Privacy",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "sourceUrl": "https://bitcoincore.academy/transaction-relay.html",
+      "sourceContext": "Bitcoin Core Academy mempool and relay cluster: rebroadcasting transactions",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific relay-privacy concept: origin leakage created when nodes rebroadcast wallet transactions differently from ordinary peer transactions. This is narrower than general transaction relay, narrower than the unbroadcast set mechanism, and narrower than broad network privacy guidance.",
+      "candidatePrerequisites": [
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata",
+        "protocol.mempool-unbroadcast-set",
+        "privacy.pseudonymity"
+      ],
+      "chosenPrerequisites": [
+        "protocol.mempool-unbroadcast-set",
+        "privacy.pseudonymity"
+      ],
+      "prerequisiteRationale": "Learners need the existing mechanism for tracking locally submitted transactions that may need later rebroadcast plus the privacy idea that transaction-origin metadata can link activity back to users. Generic relay mechanics and mempool behavior are already inherited transitively through the unbroadcast-set node.",
+      "aliases": [
+        "rebroadcast privacy",
+        "wallet rebroadcast privacy",
+        "txrebroadcast privacy"
+      ],
+      "tags": [
+        "mempool",
+        "relay",
+        "privacy",
+        "bitcoin-core"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the cleaner next Academy mempool slice after ruling out broader transaction-format and wallet-encryption candidates."
     }
   ],
   "edges": [
@@ -1791,6 +1844,24 @@
       "rationale": "The higher-security end of the progression moves into 2-of-3 and 3-of-5 multi-key schemes, so learners need the multisig model before they can reason about why and when a wallet should escalate there.",
       "sourceId": "source.bitcoin-design-upgradeable-wallet",
       "notes": "Direct edge captures the high-assurance destination of the progression rather than a specific product flow."
+    },
+    {
+      "from": "protocol.mempool-unbroadcast-set",
+      "to": "protocol.transaction-rebroadcast-privacy",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Rebroadcast privacy builds directly on the local-node distinction between transactions merely accepted into the mempool and transactions known to have propagated, which is exactly the gap the unbroadcast set tracks.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Direct parent keeps the slice on the local tracking mechanism rather than reintroducing generic relay ancestors."
+    },
+    {
+      "from": "privacy.pseudonymity",
+      "to": "protocol.transaction-rebroadcast-privacy",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Different rebroadcast patterns matter because observers can correlate network behavior with public transaction history and infer likely origin, so learners need the pseudonymity and linkage problem first.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Direct parent keeps the node focused on why relay-side origin leakage matters, not just how rebroadcast code works."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2488,6 +2559,45 @@
       "notes": "Kept dev.p2p-messages out of the direct prerequisites because it is already inherited through transaction relay, and deferred wallet-encryption for a later pass that can better distinguish disk encryption from mnemonic passphrases and generic custody hygiene."
     },
     {
+      "id": "decision.defer-wallet-encryption",
+      "type": "defer",
+      "subject": "custody.wallet-encryption",
+      "status": "resolved",
+      "rationale": "The Bitcoin Core Academy wallet-encryption material still does not survive atomicity as one clean node in the current graph. It mixes CMasterKey wrapping, unlock-timeout memory handling, first-encryption descriptor rotation, and database-migration details, and the narrowest surviving developer-facing slice is still too coupled to missing Core wallet-internals parents.",
+      "relatedConceptIds": [
+        "custody.wallet-encryption",
+        "custody.passphrase",
+        "custody.backups-recovery",
+        "custody.self-custody",
+        "dev.scriptpubkeymanagers",
+        "dev.descriptor-wallet-imports",
+        "custody.progressive-security"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Deferred instead of merged because no existing node cleanly owns the CMasterKey passphrase-rewrap semantics, but adding that slice now would create a weak prerequisite branch."
+    },
+    {
+      "id": "decision.transaction-rebroadcast-privacy-slice",
+      "type": "scope",
+      "subject": "protocol.transaction-rebroadcast-privacy",
+      "status": "resolved",
+      "rationale": "The cleanest next Academy mempool slice after the unbroadcast set is protocol.transaction-rebroadcast-privacy. It captures one specific origin-leakage mechanism and its mitigation path without collapsing into generic transaction relay, broad network privacy, or the more implementation-heavy transaction-format and wallet-encryption branches.",
+      "relatedConceptIds": [
+        "protocol.transaction-rebroadcast-privacy",
+        "protocol.mempool-unbroadcast-set",
+        "protocol.transaction-relay-inv-getdata",
+        "privacy.pseudonymity",
+        "dev.p2p-messages",
+        "protocol.consensus-vs-policy"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-academy-mempool"
+      ],
+      "notes": "Kept the node at the relay-privacy layer so it does not drift into low-level peer filter implementation details or duplicate the existing generic network-privacy branch."
+    },
+    {
       "id": "decision.human-readable-addresses-slice",
       "type": "scope",
       "subject": "custody.human-readable-addresses",
@@ -2590,6 +2700,25 @@
         "source.bitcoin-core-academy-wallet"
       ],
       "notes": "Kept the node at the upgrade-strategy level so it does not collapse into any single key-management scheme or into multiwallet archival UX."
+    },
+    {
+      "id": "decision.merge-shared-wallet",
+      "type": "merge",
+      "subject": "custody.shared-wallet",
+      "status": "resolved",
+      "rationale": "The Bitcoin Design shared-wallet material does not survive dedupe as a clean new node after multi-key, multiple-wallets, and progressive-security coverage. It is a scenario wrapper around co-managed multisig, assisted recovery, and approval-policy choices rather than one stable concept boundary.",
+      "relatedConceptIds": [
+        "custody.shared-wallet",
+        "custody.multisig",
+        "custody.multiple-wallets",
+        "custody.progressive-security",
+        "custody.inheritance-planning",
+        "custody.self-custody"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-shared-wallet"
+      ],
+      "notes": "Merged into existing coverage because the page's lasting value is as a downstream example of multi-key custody, not as a separate prerequisite node."
     }
   ]
 }

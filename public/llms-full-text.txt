@@ -151,7 +151,7 @@ Mining (19 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (49 concepts)
+Network, Relay & Client Sync (50 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -194,6 +194,7 @@ Network, Relay & Client Sync (49 concepts)
 - Tor for Node Connectivity: Improving network privacy and resilience by routing node traffic over Tor.
 - Transaction Bloom Filtering (BIP37): Legacy lightweight-client filtering using bloom filters and why modern wallets moved to compact filters.
 - Transaction Index (txindex): Global transaction indexing mode for historical transaction lookups at the cost of extra disk and sync overhead.
+- Transaction Rebroadcast Privacy: If a node rebroadcasts its own wallet transactions differently from ordinary peer transactions, observers can infer likely transaction origin even when the first announcement was hidden. Bitcoin Core reduces that leak by making rebroadcast behavior look more like normal network activity instead of a wallet-specific signal.
 - Transaction Relay (inv/getdata): How peers announce and request transactions using inv/getdata before full tx relay.
 - Utreexo: Utreexo compresses UTXO commitments using accumulator proofs to reduce full-node state costs. It shifts part of the burden to proof generation and verification pipelines.
 - UTXO Set Management: Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.
