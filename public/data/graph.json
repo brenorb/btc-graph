@@ -11983,6 +11983,50 @@
       ]
     },
     {
+      "id": "protocol.escrow-and-arbitration",
+      "title": "Escrow and Arbitration",
+      "description": "Escrow and arbitration uses a 2-of-3 multisig contract where buyer, seller, and arbitrator can resolve payment outcomes without trusting one party alone. It shows how P2SH multisig can encode conditional dispute resolution directly in Bitcoin spending paths.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Contracts",
+          "url": "https://developer.bitcoin.org/devguide/contracts.html#escrow-and-arbitration",
+          "notes": "Canonical walkthrough of the 2-of-3 escrow contract pattern and its buyer, seller, and arbitrator resolution paths."
+        },
+        {
+          "type": "article",
+          "title": "BIP 16: Pay to Script Hash",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki",
+          "notes": "Canonical background for why the multisig redeem script can be hidden until spend time."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for multisig spending paths, redeem scripts, and legacy contract construction patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "contracts",
+        "multisig",
+        "p2sh"
+      ],
+      "aliases": [
+        "escrow contract",
+        "arbitrated escrow",
+        "2-of-3 escrow"
+      ]
+    },
+    {
       "id": "protocol.fee-calculation",
       "title": "Fee Calculation",
       "description": "Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.",

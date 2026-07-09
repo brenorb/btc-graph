@@ -209,7 +209,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (71 concepts)
+Protocol & Consensus (72 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -235,6 +235,7 @@ Protocol & Consensus (71 concepts)
 - Discrete Log Equivalency (DLEQ): DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, DLC-style attestations, and other scriptless constructions.
 - Duplicate Transaction Bug: Early Bitcoin allowed some coinbase transactions to be duplicated with identical txids, which could confuse UTXO references that assumed every prior transaction id was unique. BIP 30 blocked most duplicates, BIP 34 enforced unique coinbase heights, and later cleanup proposals remove the remaining special-case burden.
 - Ephemeral Anchors: Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.
+- Escrow and Arbitration: Escrow and arbitration uses a 2-of-3 multisig contract where buyer, seller, and arbitrator can resolve payment outcomes without trusting one party alone. It shows how P2SH multisig can encode conditional dispute resolution directly in Bitcoin spending paths.
 - Fee Calculation: Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.
 - Fee Sponsorship: Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.
 - Halving Cycle: Programmed issuance reductions and long-term security implications.

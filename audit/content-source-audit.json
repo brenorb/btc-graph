@@ -307,8 +307,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 8,
       "conceptsExtracted": 4,
-      "conceptsNormalized": 2,
-      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winners are protocol.bitcoin-uri-bip21 and dev.hardened-keys because they land as missing standards-and-key-derivation bridges with clean direct parents, while the contract and mining candidates remain valid but sit deeper inside broader mechanism branches."
+      "conceptsNormalized": 3,
+      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winners are protocol.bitcoin-uri-bip21, dev.hardened-keys, and protocol.escrow-and-arbitration because they land as missing standards, key-derivation, and contract-pattern bridges with clean direct parents, while pool-shares remains the next valid but more leaf-like mining mechanism candidate."
     }
   ],
   "concepts": [
@@ -2072,6 +2072,40 @@
       "notes": "Chosen as the second Developer Guides slice because it fills a precise gap inside the existing BIP32 branch with one clean direct parent and lower scenario risk than the remaining escrow/arbitration and pool-share candidates."
     },
     {
+      "id": "protocol.escrow-and-arbitration",
+      "title": "Escrow and Arbitration",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-developer-guides",
+      "sourceUrl": "https://developer.bitcoin.org/devguide/contracts.html#escrow-and-arbitration",
+      "sourceContext": "Contracts -> Escrow And Arbitration",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific Bitcoin contract pattern: a 2-of-3 P2SH multisig escrow with an arbitrator who can resolve disputes. It is narrower than multisig generally, narrower than P2SH generally, and distinct from Lightning payment channels or CoinJoin.",
+      "candidatePrerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash",
+        "lightning.payment-channels"
+      ],
+      "chosenPrerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash"
+      ],
+      "prerequisiteRationale": "Learners need the wallet-level threshold-signing concept and the script-hash contract wrapper before the escrow redeem-script pattern makes sense. Payment channels are a neighboring contract family, not a prerequisite for understanding arbitrated escrow.",
+      "aliases": [
+        "escrow contract",
+        "arbitrated escrow",
+        "2-of-3 escrow"
+      ],
+      "tags": [
+        "contracts",
+        "multisig",
+        "p2sh"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Chosen as the third Developer Guides slice because it fills the contracts branch with a concrete adjudicated-spend pattern that the current graph did not previously name, while pool-shares remains a valid but more isolated mining leaf."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2912,6 +2946,24 @@
       "notes": "Direct parent keeps the node anchored in the HD derivation branch instead of treating it as only a privacy or wallet-policy concept."
     },
     {
+      "from": "custody.multisig",
+      "to": "protocol.escrow-and-arbitration",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The escrow flow depends on understanding how multiple signers can authorize one spend and why a 2-of-3 threshold changes trust assumptions between buyer, seller, and arbitrator.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent keeps the node tied to the threshold-signing contract pattern instead of treating it as generic dispute-resolution theory."
+    },
+    {
+      "from": "protocol.pay-to-script-hash",
+      "to": "protocol.escrow-and-arbitration",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The contract uses a P2SH redeem script to hide the multisig spending conditions until spend time, so learners need the P2SH wrapper first.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent captures the on-chain contract packaging layer that makes the escrow pattern practical."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3716,6 +3768,23 @@
         "source.bitcoin-developer-guides"
       ],
       "notes": "Chosen after the Wallets subagent identified Hardened Keys as the cleanest additive bridge inside the existing HD derivation branch. Kept BIP44 path structure and xpub-leakage consequences out of scope so the node stays focused on the hardened derivation mechanism itself."
+    },
+    {
+      "id": "decision.developer-guides-escrow-slice",
+      "type": "scope",
+      "subject": "protocol.escrow-and-arbitration",
+      "status": "resolved",
+      "rationale": "The next Bitcoin Developer Guides slice should be protocol.escrow-and-arbitration. It captures a missing contract-pattern node that bridges the existing multisig and P2SH primitives into one concrete adjudicated-spend flow, while pool-shares remains a valid but more isolated mining leaf.",
+      "relatedConceptIds": [
+        "protocol.escrow-and-arbitration",
+        "custody.multisig",
+        "protocol.pay-to-script-hash",
+        "mining.pool-shares"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Chosen after the Contracts subagent revalidated the direct parents against the current branch and after the wallet candidate Hardened Keys had already been landed. Kept Lightning payment channels and CoinJoin out of scope so the node stays focused on the 2-of-3 escrow pattern itself."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
