@@ -105,6 +105,23 @@
       "conceptsExtracted": 16,
       "conceptsNormalized": 10,
       "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
+    },
+    {
+      "id": "source.bitcoin-core-academy-wallet",
+      "name": "Bitcoin Core Academy Wallet Internals",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "sourceType": "course-cluster",
+      "priority": "P1",
+      "scope": "Wallet internals cluster around ScriptPubKeyManagers, wallet keys, transaction identification, and balance calculation.",
+      "clusterStrategy": "Track one wallet-internals page cluster at a time so Core-specific abstractions stay atomic instead of collapsing into generic wallet concepts.",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 1,
+      "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption and mempool-unbroadcast-set remain follow-up candidates from the same source family."
     }
   ],
   "concepts": [
@@ -1142,6 +1159,39 @@
       "estimatedTime": "0m",
       "confidence": "high",
       "notes": "Duplicate detected."
+    },
+    {
+      "id": "dev.scriptpubkeymanagers",
+      "title": "ScriptPubKey Managers",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-core-academy-wallet",
+      "sourceUrl": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "sourceContext": "Wallet cluster: ScriptPubKeyManagers plus Keys in the Wallet",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific Bitcoin Core wallet abstraction that owns scriptPubKeys, address derivation branches, and ownership tracking for a managed script family. This is narrower than generic wallet internals and narrower than descriptor syntax by itself.",
+      "candidatePrerequisites": [
+        "custody.address-types",
+        "dev.descriptors",
+        "custody.watch-only-wallets"
+      ],
+      "chosenPrerequisites": [
+        "dev.descriptors"
+      ],
+      "prerequisiteRationale": "The clean direct parent is the descriptor model that modern SPKMs manage. Address types still matter conceptually, but they are already inherited transitively through dev.descriptors, and watch-only wallets are a common downstream use case rather than a prerequisite for the abstraction itself.",
+      "aliases": [
+        "scriptpubkeymanagers",
+        "spkm",
+        "spkms"
+      ],
+      "tags": [
+        "wallet-internals",
+        "bitcoin-core",
+        "descriptors"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Chosen as the first additive concept from the post-seed source expansion pass."
     }
   ],
   "edges": [
@@ -1387,6 +1437,15 @@
       "rationale": "This node is a concrete application of standard transaction policy, so the general standardness concept should come first.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Policy-boundary prerequisite inherited through the existing mempool-policy branch."
+    },
+    {
+      "from": "dev.descriptors",
+      "to": "dev.scriptpubkeymanagers",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Modern descriptor wallets hand descriptor-backed script templates to dedicated managers, so learners need the descriptor model before the SPKM boundary makes sense.",
+      "sourceId": "source.bitcoin-core-academy-wallet",
+      "notes": "Direct edge distinguishes the Core wallet abstraction from descriptor syntax without collapsing the two concepts into one node."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2043,6 +2102,25 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Chosen over narrower subtree deepenings such as witness structure or address-encoding specifics because this bridge improves both the wallet-construction and privacy branches immediately."
+    },
+    {
+      "id": "decision.scriptpubkeymanagers-slice",
+      "type": "scope",
+      "subject": "dev.scriptpubkeymanagers",
+      "status": "resolved",
+      "rationale": "The cleanest first additive slice from the post-seed source expansion is dev.scriptpubkeymanagers. It captures one specific Bitcoin Core wallet abstraction that current graph nodes only point toward indirectly through descriptors, address types, and watch-only behavior, without collapsing into broad wallet-internals or mempool implementation material.",
+      "relatedConceptIds": [
+        "dev.scriptpubkeymanagers",
+        "dev.descriptors",
+        "custody.address-types",
+        "custody.watch-only-wallets",
+        "custody.wallet-encryption",
+        "protocol.mempool-unbroadcast-set"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Chosen over wallet-encryption because passphrase and general custody security already give that area partial coverage, and over mempool-unbroadcast-set because the academy gap is clearer on the wallet-internals side."
     }
   ]
 }
