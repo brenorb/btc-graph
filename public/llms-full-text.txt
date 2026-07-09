@@ -201,7 +201,7 @@ Network, Relay & Client Sync (48 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (61 concepts)
+Protocol & Consensus (62 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -211,6 +211,7 @@ Protocol & Consensus (61 concepts)
 - Block Structure: Header fields, merkle root, and block composition.
 - Block Weight and Virtual Bytes: How weight units and vbytes price block space after SegWit.
 - Byzantine Generals Problem: Consensus under adversarial communication assumptions.
+- Change Outputs: A change output returns leftover value from a transaction back to the spender when the selected inputs exceed the payment amount and fees. Understanding change outputs is the bridge between basic output structure and later wallet decisions about coin selection, privacy leakage, and address reuse.
 - CHECKLOCKTIMEVERIFY (BIP 65): Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.
 - CHECKSEQUENCEVERIFY (BIP 112): Script opcode that enforces relative locktime conditions using sequence-based spending constraints.
 - Coinbase Transaction: Special first transaction in each block that collects subsidy and transaction fees.

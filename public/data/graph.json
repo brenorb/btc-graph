@@ -10362,6 +10362,48 @@
       ]
     },
     {
+      "id": "protocol.change-outputs",
+      "title": "Change Outputs",
+      "description": "A change output returns leftover value from a transaction back to the spender when the selected inputs exceed the payment amount and fees. Understanding change outputs is the bridge between basic output structure and later wallet decisions about coin selection, privacy leakage, and address reuse.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Explains transaction outputs and the common pattern of returning leftover value to a new output controlled by the spender."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide: Coin Selection",
+          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+          "notes": "Clear wallet-side explanation of why spending often creates change and how that affects user-facing transaction construction."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction construction, wallet funding, and the mechanics of returning excess input value as change.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "transactions",
+        "wallets",
+        "outputs"
+      ],
+      "aliases": [
+        "change output basics",
+        "wallet change output"
+      ]
+    },
+    {
       "id": "protocol.cltv-bip65",
       "title": "CHECKLOCKTIMEVERIFY (BIP 65)",
       "description": "Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.",

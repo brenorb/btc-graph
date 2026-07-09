@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 21,
-      "conceptsNormalized": 7,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, and custody.coin-selection."
+      "conceptsExtracted": 22,
+      "conceptsNormalized": 8,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, and protocol.change-outputs."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -472,6 +472,38 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented in the current branch as a wallet-construction bridge that parents several existing privacy and funding leaves conceptually, without rewiring those older phase-locked nodes yet."
+    },
+    {
+      "id": "protocol.change-outputs",
+      "title": "Change Outputs",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Chapter 2 wallet transaction construction flow: making change before coin selection and later privacy heuristics",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific transaction-construction concept: returning excess input value to the spender as a new output. It is narrower than generic outputs and narrower than the later wallet-policy and privacy decisions built on top of it.",
+      "candidatePrerequisites": [
+        "protocol.addresses-outputs",
+        "protocol.transaction-lifecycle",
+        "custody.coin-selection"
+      ],
+      "chosenPrerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "prerequisiteRationale": "Learners need the basic output model first. Transaction-lifecycle is broader context already inherited in the output branch, and coin selection is a downstream wallet decision that depends on understanding change outputs rather than preceding it.",
+      "aliases": [
+        "change output basics",
+        "wallet change output"
+      ],
+      "tags": [
+        "transactions",
+        "wallets",
+        "outputs"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Implemented in the current branch as the missing bridge between addresses-outputs and the existing coin-selection and change-privacy leaves."
     },
     {
       "id": "dev.taproot-descriptors",
@@ -1202,6 +1234,15 @@
       "rationale": "Wallets choose different UTXO sets partly to minimize transaction size and fee cost, so fee pressure is a direct part of the concept.",
       "sourceId": "source.mastering-bitcoin-book-map",
       "notes": "Direct edge keeps the node connected to transaction-cost tradeoffs rather than only to wallet UX."
+    },
+    {
+      "from": "protocol.addresses-outputs",
+      "to": "protocol.change-outputs",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Change is a specific kind of transaction output, so learners need the basic output and spendability model before the leftover-value pattern makes sense.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct edge keeps the node between raw output structure and the later wallet-decision branch."
     },
     {
       "from": "dev.descriptors",
@@ -1983,6 +2024,25 @@
         "source.optech-schnorr-taproot-workshop"
       ],
       "notes": "Kept Taproot as implementation context and resource support rather than a direct prerequisite so the node stays a custody-policy concept instead of a protocol wrapper."
+    },
+    {
+      "id": "decision.change-outputs-slice",
+      "type": "scope",
+      "subject": "protocol.change-outputs",
+      "status": "resolved",
+      "rationale": "The cleanest next non-Optech bridge from the remaining mandatory sources is protocol.change-outputs. It fills the missing concept between generic outputs and the existing wallet/privacy leaves around coin selection, change detection, and change avoidance without reopening broader transaction-structure or address-format branches.",
+      "relatedConceptIds": [
+        "protocol.change-outputs",
+        "protocol.addresses-outputs",
+        "custody.coin-selection",
+        "privacy.change-detection",
+        "privacy.change-avoidance",
+        "privacy.coin-control"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Chosen over narrower subtree deepenings such as witness structure or address-encoding specifics because this bridge improves both the wallet-construction and privacy branches immediately."
     }
   ]
 }
