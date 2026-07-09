@@ -6869,6 +6869,50 @@
       ]
     },
     {
+      "id": "lightning.commitment-output-scripts",
+      "title": "Commitment Output Scripts",
+      "description": "Lightning commitment transactions pay balances through distinct to_local and to_remote output scripts. The to_local branch uses a revocable CSV-delayed script, while the to_remote branch captures the immediately spendable counterparty output, including the modern static_remotekey pattern.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.per-commitment-secrets",
+        "protocol.csv-bip112"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Scripts",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-scripts",
+          "notes": "Interactive lesson covering to_local, to_remote, static_remotekey, and why CSV protects the delayed local branch."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical specification for to_local, to_remote, and related commitment output script templates."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment output design, static_remotekey, and the operational safety model behind CSV-delayed spends.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "lightning",
+        "scripts",
+        "transactions"
+      ],
+      "aliases": [
+        "commitment scripts",
+        "to_local and to_remote scripts",
+        "static_remotekey"
+      ]
+    },
+    {
       "id": "lightning.commitment-transactions",
       "title": "Lightning Commitment Transactions",
       "description": "Pre-signed updateable channel states that enforce current balances during unilateral close.",

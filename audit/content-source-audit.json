@@ -119,9 +119,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -1955,6 +1955,40 @@
       "notes": "Chosen as the cleanest next Programming Lightning slice because it captures a distinct BOLT 3 state-number encoding mechanism with lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered."
     },
     {
+      "id": "lightning.commitment-output-scripts",
+      "title": "Commitment Output Scripts",
+      "category": "Extension Systems",
+      "sourceId": "source.programming-lightning",
+      "sourceUrl": "https://programminglightning.com/lightning-tutorial/commitment-scripts",
+      "sourceContext": "Commitment-scripts lesson exercises create_to_remote_script and create_to_local_script, plus static-remotekey and csv-purpose checkpoints",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific BOLT 3 mechanism layer: the to_local and to_remote output scripts used inside commitment transactions. It is narrower than commitment transactions as a whole and narrower than later close, revocation, or HTLC workflows.",
+      "candidatePrerequisites": [
+        "lightning.per-commitment-secrets",
+        "protocol.csv-bip112",
+        "lightning.commitment-transactions"
+      ],
+      "chosenPrerequisites": [
+        "lightning.per-commitment-secrets",
+        "protocol.csv-bip112"
+      ],
+      "prerequisiteRationale": "Learners need the per-state key derivation machinery to understand where the revocation and delayed-payment keys come from, and they need CSV to understand the delayed to_local branch. Commitment-transactions remains useful context but is already inherited transitively through lightning.per-commitment-secrets.",
+      "aliases": [
+        "commitment scripts",
+        "to_local and to_remote scripts",
+        "static_remotekey"
+      ],
+      "tags": [
+        "lightning",
+        "scripts",
+        "transactions"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Add. Distinct BOLT 3 commitment-output script layer for to_local/to_remote and CSV delay; lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered."
+    },
+    {
       "id": "protocol.duplicate-transaction-bug",
       "title": "Duplicate Transaction Bug",
       "category": "Protocol & Consensus",
@@ -2496,6 +2530,24 @@
       "rationale": "Per-commitment secrets are generated for each new commitment state, so learners need the commitment-transaction model before the secret-rotation mechanism makes sense.",
       "sourceId": "source.programming-lightning",
       "notes": "Direct parent keeps the node on state evolution rather than on later punishment or watchtower behavior."
+    },
+    {
+      "from": "lightning.per-commitment-secrets",
+      "to": "lightning.commitment-output-scripts",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The to_local and to_remote scripts rely on per-state key derivation, revocation keys, and delayed-payment keys, so learners need the per-commitment secret machinery first.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent keeps the node at the commitment-key layer instead of collapsing back into the broader commitment-transaction overview."
+    },
+    {
+      "from": "protocol.csv-bip112",
+      "to": "lightning.commitment-output-scripts",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The delayed to_local branch is defined by a CSV-enforced waiting period, so learners need the relative-timelock opcode before the script template makes sense.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent captures the script-mechanism side of the concept without dragging in broader force-close or HTLC timing behavior."
     },
     {
       "from": "protocol.difficulty-adjustment",
@@ -3207,6 +3259,25 @@
         "source.programming-lightning"
       ],
       "notes": "Chosen after per-commitment-secrets because the commitment-transactions module exposes dedicated obscure-factor and obscured-commitment-number exercises, making this a cleaner atomic follow-up than broader wrapper lessons."
+    },
+    {
+      "id": "decision.commitment-scripts-slice",
+      "type": "scope",
+      "subject": "lightning.commitment-output-scripts",
+      "status": "resolved",
+      "rationale": "Add. Distinct BOLT 3 commitment-output script layer for to_local/to_remote and CSV delay; lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered.",
+      "relatedConceptIds": [
+        "lightning.commitment-output-scripts",
+        "lightning.per-commitment-secrets",
+        "lightning.commitment-transactions",
+        "protocol.csv-bip112",
+        "lightning.revocation-penalty-keys",
+        "lightning.force-closures"
+      ],
+      "relatedSourceIds": [
+        "source.programming-lightning"
+      ],
+      "notes": "Chosen after the first two Programming Lightning commitment-state slices because the source exposes dedicated static-remotekey and CSV checkpoints, making the output-script layer a cleaner atomic addition than broader revocation, close, or HTLC wrappers."
     },
     {
       "id": "decision.duplicate-transaction-bug-slice",

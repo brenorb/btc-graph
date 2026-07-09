@@ -6,6 +6,7 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 - Implemented in branch: `lightning.per-commitment-secrets`
 - Implemented in branch: `lightning.obscured-commitment-number`
+- Implemented in branch: `lightning.commitment-output-scripts`
 - Source cluster: `lightning-tutorial/commitment-secrets` and `lightning-tutorial/commitment-transactions`
 - Reason: commitment-state bridge concepts between the broad commitment-transaction overview and downstream revocation, close, and HTLC behavior
 
