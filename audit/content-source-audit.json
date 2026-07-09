@@ -153,9 +153,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 5,
-      "conceptsNormalized": 5,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug, fundamentals.lamport-signatures. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
+      "conceptsExtracted": 6,
+      "conceptsNormalized": 6,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, BIP-68 Explained, and Shamir's Secret Sharing explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug, fundamentals.lamport-signatures, custody.shamirs-secret-sharing. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -2149,6 +2149,40 @@
       "estimatedTime": "35m",
       "confidence": "medium",
       "notes": "Chosen as the next explained-post slice because it is clearly surfaced by multiple Bitcoin Dev Project posts, still absent from the graph, and cleanly bridges Bitcoin's quantum-resistance discussions without collapsing into the broader SPHINCS+ or post-quantum wrapper."
+    },
+    {
+      "id": "custody.shamirs-secret-sharing",
+      "title": "Shamir's Secret Sharing",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2067145417838755879",
+      "sourceContext": "Shamir's secret sharing explained simply",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific secret-splitting scheme: dividing one secret into threshold shares that can reconstruct it only when enough shares are combined. It is narrower than generic backup and recovery, narrower than multisig signer coordination, and distinct from XOR-based shard schemes.",
+      "candidatePrerequisites": [
+        "custody.seed-phrases",
+        "custody.backups-recovery",
+        "fundamentals.finite-fields",
+        "custody.seed-xor-shards"
+      ],
+      "chosenPrerequisites": [
+        "custody.backups-recovery"
+      ],
+      "prerequisiteRationale": "The cleanest direct parent is the broader backup-and-recovery problem this scheme solves. In the current graph, the underlying key and arithmetic lineage is already inherited transitively through the custody branch, so adding finite-field math as a second direct parent would create a redundant edge.",
+      "aliases": [
+        "shamir secret sharing",
+        "shamir backup",
+        "threshold seed shares"
+      ],
+      "tags": [
+        "self-custody",
+        "backups",
+        "threshold"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next explained-post custody slice because it fills a real backup-method gap without duplicating seed XOR shards, generic recovery planning, or multisig coordination. DKG remains a plausible follow-on, but it depends on this threshold-sharing concept more directly than the reverse."
     }
   ],
   "edges": [
@@ -2754,6 +2788,15 @@
       "rationale": "Lamport signatures replace elliptic-curve arithmetic with one-way hash preimages and comparisons, so learners need the hash primitive first.",
       "sourceId": "source.bitcoin-dev-project-explained-posts",
       "notes": "Direct parent captures the actual cryptographic mechanism rather than forcing learners through unrelated elliptic-curve details."
+    },
+    {
+      "from": "custody.backups-recovery",
+      "to": "custody.shamirs-secret-sharing",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "In Bitcoin practice the scheme is used as one backup-and-recovery method, so learners need the broader custody problem before the threshold-share design choice becomes meaningful.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent keeps the node anchored in practical custody use instead of drifting into a purely abstract cryptography topic."
     }
   ],
   "decisions": [
@@ -3503,6 +3546,25 @@
         "source.bitcoin-dev-project-explained-posts"
       ],
       "notes": "Chosen over BIP 158, Full Node Architecture, and SegWit Address as the next X slice because those ideas are already better covered by existing graph nodes or would survive only as merges and metadata enrichment."
+    },
+    {
+      "id": "decision.shamirs-secret-sharing-slice",
+      "type": "scope",
+      "subject": "custody.shamirs-secret-sharing",
+      "status": "resolved",
+      "rationale": "Add custody.shamirs-secret-sharing. It captures one specific threshold backup method with clear custody relevance, cleaner learner boundaries than DKG, and lower duplication risk than broader wallet-recovery or signer-coordination topics.",
+      "relatedConceptIds": [
+        "custody.shamirs-secret-sharing",
+        "custody.seed-phrases",
+        "fundamentals.finite-fields",
+        "custody.seed-xor-shards",
+        "custody.backups-recovery",
+        "fundamentals.distributed-key-generation"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "Chosen over DKG because DKG depends on threshold secret sharing more directly than the reverse, and chosen over SegWit Address or Full Node Architecture because those ideas already have stronger existing graph coverage."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

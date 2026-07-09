@@ -931,6 +931,49 @@
       ]
     },
     {
+      "id": "custody.shamirs-secret-sharing",
+      "title": "Shamir's Secret Sharing",
+      "description": "Shamir's Secret Sharing splits one secret into multiple shares so that any chosen threshold can reconstruct it, while fewer shares reveal nothing useful. In Bitcoin custody it is commonly used for seed backups when operators want threshold recovery without handing one full secret to any single location.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.backups-recovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "How to Share a Secret",
+          "url": "https://web.mit.edu/6.857/OldStuff/Fall03/ref/Shamir-HowToShareASecret.pdf",
+          "notes": "Adi Shamir's original paper introducing threshold secret sharing with polynomial reconstruction over finite fields."
+        },
+        {
+          "type": "article",
+          "title": "SLIP-0039: Shamir's Secret-Sharing for Mnemonic Codes",
+          "url": "https://github.com/satoshilabs/slips/blob/master/slip-0039.md",
+          "notes": "Official wallet-backup specification showing how Shamir sharing is applied to mnemonic secrets in Bitcoin-adjacent practice."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for seed material, wallet backup context, and the surrounding custody tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "self-custody",
+        "backups",
+        "threshold"
+      ],
+      "aliases": [
+        "shamir secret sharing",
+        "shamir backup",
+        "threshold seed shares"
+      ]
+    },
+    {
       "id": "custody.transaction-metadata",
       "title": "Transaction Metadata",
       "description": "Transaction metadata is wallet-side context such as contacts, descriptions, tags, and notes attached to a payment or activity item. It helps users understand history and search their activity, but it is not stored on-chain and needs explicit portability if users change wallets.",
