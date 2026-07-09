@@ -430,6 +430,49 @@
       ]
     },
     {
+      "id": "custody.human-readable-addresses",
+      "title": "Human-Readable Bitcoin Addresses",
+      "description": "Human-readable Bitcoin addresses use memorable handles that resolve to normal payment instructions instead of exposing raw addresses directly. They improve sharing and recall, but add trust and privacy tradeoffs because an intermediary or naming system is involved in the lookup.",
+      "category": "Wallets",
+      "prerequisites": [
+        "privacy.address-reuse"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Human Readable Addresses",
+          "url": "https://bitcoin.design/guide/how-it-works/human-readable-addresses/",
+          "notes": "Primary UX-oriented overview of BIP353, Lightning Address, Paynyms, and the trust/privacy tradeoffs behind readable handles."
+        },
+        {
+          "type": "article",
+          "title": "BIP 353: DNS Payment Instructions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki",
+          "notes": "Canonical specification for Human-Readable Bitcoin Addresses resolved through DNS."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for payment instructions, address handling, and wallet tradeoffs that frame this UX layer.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "wallets",
+        "ux",
+        "payments"
+      ],
+      "aliases": [
+        "human bitcoin addresses",
+        "readable bitcoin handles",
+        "bip353 addresses"
+      ]
+    },
+    {
       "id": "custody.inheritance-planning",
       "title": "Bitcoin Inheritance Planning",
       "description": "Designing survivable custody workflows that balance privacy, security, and recoverability.",

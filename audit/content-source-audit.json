@@ -139,6 +139,23 @@
       "conceptsExtracted": 2,
       "conceptsNormalized": 1,
       "notes": "Second post-seed-source slice. The current additive winner is protocol.mempool-unbroadcast-set; broader rebroadcast and transaction-format internals remain follow-up material."
+    },
+    {
+      "id": "source.bitcoin-design-payment-formats",
+      "name": "Bitcoin Design Payment Request Formats",
+      "url": "https://bitcoin.design/guide/how-it-works/human-readable-addresses/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "User-facing payment request and address-sharing concepts across human-readable addresses, transaction display, and wallet privacy tradeoffs.",
+      "clusterStrategy": "Track design guide pages by UX concept cluster so user-facing payment abstractions stay separate from protocol internals and generic wallet hygiene.",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 1,
+      "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups and transaction metadata remain follow-up candidates."
     }
   ],
   "concepts": [
@@ -1243,6 +1260,40 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next additive academy slice after scriptpubkey managers."
+    },
+    {
+      "id": "custody.human-readable-addresses",
+      "title": "Human-Readable Bitcoin Addresses",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-design-payment-formats",
+      "sourceUrl": "https://bitcoin.design/guide/how-it-works/human-readable-addresses/",
+      "sourceContext": "Payment request formats cluster: Human readable addresses",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific payment UX concept: readable handles that resolve to normal payment instructions through a lookup system. This is narrower than general address formats, narrower than LNURL, and narrower than reusable-address protocols like silent payments.",
+      "candidatePrerequisites": [
+        "protocol.addresses-outputs",
+        "privacy.address-reuse",
+        "extension.lnurl",
+        "privacy.silent-payments"
+      ],
+      "chosenPrerequisites": [
+        "privacy.address-reuse"
+      ],
+      "prerequisiteRationale": "The clean direct parent is the privacy problem created by reusable payment identifiers. The underlying address model still matters, but it is already inherited transitively through privacy.address-reuse, while LNURL and silent payments remain neighboring implementations or downstream examples rather than prerequisites.",
+      "aliases": [
+        "human bitcoin addresses",
+        "readable bitcoin handles",
+        "bip353 addresses"
+      ],
+      "tags": [
+        "wallets",
+        "ux",
+        "payments"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest first Bitcoin Design gap because it is highly user-relevant and bridges wallet UX with privacy/trust tradeoffs."
     }
   ],
   "edges": [
@@ -1515,6 +1566,15 @@
       "rationale": "This set only matters because nodes need to distinguish locally submitted transactions from those later observed through the network relay path and may retry announcing them.",
       "sourceId": "source.bitcoin-core-academy-mempool",
       "notes": "Direct edge ties the mechanism to network propagation confirmation and rebroadcast attempts."
+    },
+    {
+      "from": "privacy.address-reuse",
+      "to": "custody.human-readable-addresses",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "A major design constraint is that reusable human-readable handles can worsen privacy unless they resolve to reusable payment mechanisms or rotate safely, so learners need the address-reuse problem first.",
+      "sourceId": "source.bitcoin-design-payment-formats",
+      "notes": "Direct edge captures the main privacy tradeoff without forcing downstream protocol-specific address schemes into prerequisites."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2210,6 +2270,26 @@
         "source.bitcoin-core-academy-wallet"
       ],
       "notes": "Kept dev.p2p-messages out of the direct prerequisites because it is already inherited through transaction relay, and deferred wallet-encryption for a later pass that can better distinguish disk encryption from mnemonic passphrases and generic custody hygiene."
+    },
+    {
+      "id": "decision.human-readable-addresses-slice",
+      "type": "scope",
+      "subject": "custody.human-readable-addresses",
+      "status": "resolved",
+      "rationale": "The cleanest first Bitcoin Design slice is custody.human-readable-addresses. It captures the user-facing handle-to-payment-instruction layer directly, with a clear privacy and trust model, while avoiding narrower implementation leaves like LNURL and silent payments and avoiding broader backup or activity-metadata wrappers.",
+      "relatedConceptIds": [
+        "custody.human-readable-addresses",
+        "protocol.addresses-outputs",
+        "privacy.address-reuse",
+        "extension.lnurl",
+        "privacy.silent-payments",
+        "custody.encrypted-cloud-backups",
+        "custody.transaction-metadata"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-payment-formats"
+      ],
+      "notes": "Chosen over encrypted cloud backups because generic backup hygiene already exists and over transaction metadata because output labeling already partially covers adjacent meaning-tracking behavior."
     }
   ]
 }
