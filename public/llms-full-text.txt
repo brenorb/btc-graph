@@ -203,7 +203,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (63 concepts)
+Protocol & Consensus (64 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -254,6 +254,7 @@ Protocol & Consensus (63 concepts)
 - TapLeaf Inclusion Proofs: TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.
 - Taproot: Protocol upgrade enabling more private and efficient key/script spending conditions.
 - Taproot Annex: The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.
+- Taproot Key-Path Spends: Taproot key-path spends spend a P2TR output by providing a Schnorr signature for the tweaked output key without revealing any committed script path. When all parties can cooperate, this is the most compact and private Taproot spend form because it looks like a simple signature check onchain.
 - Tapscript: Tapscript is the script version used for Taproot script-path spends. It keeps the basic Script model but changes signature rules, replaces CHECKMULTISIG with CHECKSIGADD, and adds upgrade hooks such as OP_SUCCESSx.
 - TapTree: A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.
 - TapTweak: TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.

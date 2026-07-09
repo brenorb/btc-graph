@@ -85,9 +85,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 12,
-      "conceptsExtracted": 16,
-      "conceptsNormalized": 7,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, tapleaf inclusion proofs, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
+      "conceptsExtracted": 17,
+      "conceptsNormalized": 8,
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, key-path spends, tapleaf inclusion proofs, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taproot-key-path-spends, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -331,6 +331,39 @@
       "estimatedTime": "20m",
       "confidence": "high",
       "notes": "Implemented in the current branch as part of the first Taproot-internal bridge slice."
+    },
+    {
+      "id": "protocol.taproot-key-path-spends",
+      "title": "Taproot Key-Path Spends",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "sourceUrl": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "sourceContext": "Workshop modules 2.0 Introduction to Taproot and 2.1 Segwit V1",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific Taproot spending mode: spending by signature against the tweaked output key without revealing a script path. It is narrower than Taproot overall, narrower than TapTweak as a key-derivation mechanism, and distinct from Tapscript's script-path execution rules.",
+      "candidatePrerequisites": [
+        "protocol.taproot",
+        "protocol.taptweak",
+        "fundamentals.schnorr-signatures"
+      ],
+      "chosenPrerequisites": [
+        "protocol.taptweak"
+      ],
+      "prerequisiteRationale": "The direct learner need is understanding that the spend authorizes against the tweaked Taproot output key. Schnorr signatures and the broader Taproot context are already inherited through TapTweak, while script-path concepts such as Tapscript and TapTree are sibling alternatives rather than prerequisites.",
+      "aliases": [
+        "key path spend",
+        "taproot key spend",
+        "p2tr key path spend"
+      ],
+      "tags": [
+        "taproot",
+        "schnorr",
+        "spending"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest remaining workshop-native Taproot spending-mode slice after ruling out broader wrappers and keeping script-path detail in the Tapscript and TapTree branches."
     },
     {
       "id": "protocol.taptree",
@@ -1574,6 +1607,15 @@
       "notes": "Source-driven bridge edge."
     },
     {
+      "from": "protocol.taptweak",
+      "to": "protocol.taproot-key-path-spends",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "A key-path spend verifies against the tweaked Taproot output key, so learners need the tweak mechanism before the spending mode makes sense.",
+      "sourceId": "source.optech-schnorr-taproot-workshop",
+      "notes": "Direct parent keeps the node focused on the spend mode rather than on broad Taproot overview material."
+    },
+    {
       "from": "protocol.taptree",
       "to": "protocol.tapleaf-inclusion-proofs",
       "type": "prerequisite",
@@ -2368,6 +2410,24 @@
         "source.bitcoinops-topics"
       ],
       "notes": "Chosen over broader governance wrappers and over deeper Taproot internals because it adds a clean new bridge between existing descriptor and Taproot branches without forcing rewires on older wallet nodes."
+    },
+    {
+      "id": "decision.taproot-key-path-spends-slice",
+      "type": "scope",
+      "subject": "protocol.taproot-key-path-spends",
+      "status": "resolved",
+      "rationale": "The cleanest remaining workshop-native Taproot slice is protocol.taproot-key-path-spends. It captures one specific spending mode already implied by the existing Taproot and TapTweak nodes without collapsing back into the broad Taproot overview or forward into script-path-only nodes such as Tapscript and TapTree.",
+      "relatedConceptIds": [
+        "protocol.taproot-key-path-spends",
+        "protocol.taptweak",
+        "protocol.taproot",
+        "protocol.tapscript",
+        "protocol.taptree"
+      ],
+      "relatedSourceIds": [
+        "source.optech-schnorr-taproot-workshop"
+      ],
+      "notes": "Kept the direct prerequisite set to TapTweak only after the redundancy check showed Schnorr and Taproot context are already inherited transitively, and script-path branches are sibling alternatives rather than prerequisites."
     },
     {
       "id": "decision.decoding-script-history-slice",
