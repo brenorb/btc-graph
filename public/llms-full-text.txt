@@ -136,7 +136,7 @@ History & Governance (26 concepts)
 - User-Activated Soft Fork (UASF): How node operators coordinated policy to enforce soft-fork activation during the SegWit era.
 - Version Bits Signaling: Miner signaling mechanism for coordinated soft-fork deployment using block version fields.
 
-Mining (19 concepts)
+Mining (20 concepts)
 - 51% Attack Model: Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.
 - ASICBoost: ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.
 - ASICs: ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.
@@ -151,6 +151,7 @@ Mining (19 concepts)
 - Mining Energy Accounting: Energy analysis depends on boundaries and assumptions, especially the difference between marginal and average accounting. Good analysis distinguishes physical grid effects from narrative shortcuts.
 - Mining Environmental Debate: Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.
 - Mining Hardware: ASIC design constraints and practical deployment considerations.
+- Mining Pool Shares: Mining pool shares are partial proofs of work found under a pool-defined target that is easier than the network target. They let a pool verify that a miner contributed real hash work, measure each miner's proportional contribution, and split payouts when one submitted share also happens to satisfy the actual network target.
 - Mining Template Construction: How miners and pools build candidate blocks from mempool transactions under policy, size, and fee constraints.
 - Pool vs Solo Mining: Variance, payout models, and operational tradeoffs.
 - Stale Blocks: Why valid blocks can become stale due to propagation races and how relay improvements reduce this risk.

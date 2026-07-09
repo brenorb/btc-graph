@@ -303,12 +303,12 @@
       "clusterStrategy": "Track the eight top-level guide sections first, then split dense sections like Transactions, Contracts, Wallets, and P2P Network when they expose concept gaps not already covered by existing nodes.",
       "status": "In review",
       "crawlStatus": "Partial",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
-      "pageClustersTracked": 8,
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 9,
       "conceptsExtracted": 5,
-      "conceptsNormalized": 4,
-      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. A follow-up Wallet Files pass surfaced dev.wallet-import-format-wif as another clean wallet-standard slice. The implemented winners are now protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, and dev.wallet-import-format-wif because they land as missing standards, key-derivation, contract-pattern, and key-serialization bridges with clean direct parents, while pool-shares remains the next valid but more leaf-like mining mechanism candidate."
+      "conceptsNormalized": 5,
+      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. A follow-up Wallet Files pass surfaced dev.wallet-import-format-wif as another clean wallet-standard slice. The implemented winners are now protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, dev.wallet-import-format-wif, and mining.pool-shares because they land as missing standards, key-derivation, contract-pattern, key-serialization, and pooled-mining accounting bridges with clean direct parents. The current tracked top-level-plus-Wallet-Files queue is exhausted for this pass, though future deeper section splits may still surface more concepts."
     }
   ],
   "concepts": [
@@ -2139,6 +2139,39 @@
       "notes": "Chosen as the next Developer Guides wallet slice after Hardened Keys because the source exposes WIF as a dedicated named format with one clean direct parent and lower dedupe risk than the remaining mining leaf."
     },
     {
+      "id": "mining.pool-shares",
+      "title": "Mining Pool Shares",
+      "category": "Mining",
+      "sourceId": "source.bitcoin-developer-guides",
+      "sourceUrl": "https://developer.bitcoin.org/devguide/mining.html#pool-mining",
+      "sourceContext": "Mining -> Pool Mining",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific pooled-mining mechanism: the lower-difficulty proofs a pool accepts to measure contributed hash work and allocate payouts. It is narrower than pooled mining generally, narrower than Stratum or getblocktemplate transport, and distinct from broader mining economics discussions.",
+      "candidatePrerequisites": [
+        "mining.pool-vs-solo",
+        "protocol.difficulty-adjustment",
+        "protocol.proof-of-work",
+        "mining.stratum",
+        "mining.getblocktemplate"
+      ],
+      "chosenPrerequisites": [
+        "mining.pool-vs-solo"
+      ],
+      "prerequisiteRationale": "Learners first need the pooled-versus-solo mining frame so the purpose of an easier share target and payout accounting makes sense. Proof-of-work and difficulty context are already inherited through that node, while Stratum and getblocktemplate are later protocol variants that use the concept rather than parent it.",
+      "aliases": [
+        "pool shares",
+        "mining shares"
+      ],
+      "tags": [
+        "mining",
+        "pools"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the remaining Developer Guides mining slice because it survives dedupe as the pooled-mining accounting proof itself, not just a transport or workflow wrapper."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -3006,6 +3039,15 @@
       "notes": "Direct parent keeps the node anchored on key material itself instead of overfitting it to address formats or HD wallet hierarchies."
     },
     {
+      "from": "mining.pool-vs-solo",
+      "to": "mining.pool-shares",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Pool shares only make sense after learners understand why pooled mining exists and why miners need a lower-variance way to prove contributed work before an actual block is found.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent keeps the node at the pooled-mining accounting layer without adding redundant proof-of-work or difficulty edges."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3844,6 +3886,23 @@
         "source.bitcoin-developer-guides"
       ],
       "notes": "Chosen after a follow-up Wallet Files pass in the Developer Guides and after subagent comparison against mining.pool-shares. Kept address formats, P2PKH, and HD wallet hierarchy concepts out of the direct prerequisite set so the node stays focused on single-key import/export serialization."
+    },
+    {
+      "id": "decision.developer-guides-pool-shares-slice",
+      "type": "scope",
+      "subject": "mining.pool-shares",
+      "status": "resolved",
+      "rationale": "The next Bitcoin Developer Guides slice should be mining.pool-shares. It captures the pooled-mining accounting proof directly with one clean direct parent, and it survives dedupe more cleanly than folding it into either the pool-vs-solo comparison or the later Stratum and getblocktemplate transport nodes.",
+      "relatedConceptIds": [
+        "mining.pool-shares",
+        "mining.pool-vs-solo",
+        "mining.stratum",
+        "mining.getblocktemplate"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Chosen after the Wallet Files follow-up had already landed WIF and after subagent comparison revalidated that pool shares are the remaining additive Developer Guides mining leaf. Kept proof-of-work and difficulty edges inherited through mining.pool-vs-solo so the new node stays free of redundant direct prerequisites."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
