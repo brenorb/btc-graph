@@ -267,6 +267,26 @@ describe("mobile app shell", () => {
     expect(toggle?.getAttribute("aria-expanded")).toBe("false");
   });
 
+  it("uses the dark logo asset for the header and footer in dark mode on mobile", async () => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      value: vi.fn().mockReturnValue({
+        matches: true,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      }),
+    });
+
+    await bootstrapApp(document.querySelector("#app"));
+
+    const headerLogo = document.querySelector<HTMLImageElement>(".brand-mark");
+    const footerLogo = document.querySelector<HTMLImageElement>(".footer-mark");
+
+    expect(document.documentElement.dataset.theme).toBe("dark");
+    expect(headerLogo?.getAttribute("src")).toContain("brand/logo-mark-white.png");
+    expect(footerLogo?.getAttribute("src")).toContain("brand/logo-mark-white.png");
+  });
+
   it("adds mobile graph zoom controls", async () => {
     await bootstrapApp(document.querySelector("#app"));
 
