@@ -119,9 +119,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -1864,6 +1864,36 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Chosen as the cleanest first additive slice from the Cypherpunk Library cluster because current coverage only mentions DigiCash inside the broader pre-Bitcoin survey and covers modern Bitcoin-backed mints elsewhere."
+    },
+    {
+      "id": "lightning.obscured-commitment-number",
+      "title": "Obscured Commitment Number",
+      "category": "Extension Systems",
+      "sourceId": "source.programming-lightning",
+      "sourceUrl": "https://programminglightning.com/lightning-tutorial/commitment-transactions",
+      "sourceContext": "Commitment-transactions module exercises ln-exercise-obscure-factor and ln-exercise-obscured-commitment",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific Lightning commitment-state mechanism: how the channel state number is hidden in transaction fields using an obscure factor. It is narrower than commitment transactions as a whole and narrower than broader revocation or HTLC workflows.",
+      "candidatePrerequisites": [
+        "lightning.per-commitment-secrets"
+      ],
+      "chosenPrerequisites": [
+        "lightning.per-commitment-secrets"
+      ],
+      "prerequisiteRationale": "Learners first need the per-state key and secret machinery because the obscured commitment number is another state-indexing mechanism attached to the same commitment-state lineage. Commitment transactions remain useful background but are already inherited through lightning.per-commitment-secrets.",
+      "aliases": [
+        "obscure factor",
+        "obscured commitment numbers"
+      ],
+      "tags": [
+        "lightning",
+        "commitment-state",
+        "transactions"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next Programming Lightning slice because it captures a distinct BOLT 3 state-number encoding mechanism with lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered."
     }
   ],
   "edges": [
@@ -2379,6 +2409,15 @@
       "rationale": "Learners need the unsolved scarcity problem in digital cash before the trusted-mint tradeoff in Chaumian designs becomes meaningful.",
       "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
       "notes": "Direct parent frames why the system still needed a central operator even though it improved privacy."
+    },
+    {
+      "from": "lightning.per-commitment-secrets",
+      "to": "lightning.obscured-commitment-number",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The obscured commitment number is part of the same commitment-state machinery as the per-state secret chain, so learners need that state-derivation context before the field-level encoding scheme makes sense.",
+      "sourceId": "source.programming-lightning",
+      "notes": "Direct parent keeps the node in the narrow commitment-state branch instead of pulling in broader closure or HTLC behavior."
     }
   ],
   "decisions": [
@@ -2967,6 +3006,23 @@
         "source.cypherpunk-library-bitcoin-adjacent"
       ],
       "notes": "Chosen over cypherpunk manifesto or monetary-theory slices because this one survives dedupe as a precise learner gap between blind-signature cryptography, pre-Bitcoin digital-cash history, and modern ecash descendants."
+    },
+    {
+      "id": "decision.obscured-commitment-number-slice",
+      "type": "scope",
+      "subject": "lightning.obscured-commitment-number",
+      "status": "resolved",
+      "rationale": "Add. Distinct BOLT 3 state-number encoding mechanism for commitment transactions; lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered.",
+      "relatedConceptIds": [
+        "lightning.obscured-commitment-number",
+        "lightning.per-commitment-secrets",
+        "lightning.commitment-transactions",
+        "lightning.revocation-penalty-keys"
+      ],
+      "relatedSourceIds": [
+        "source.programming-lightning"
+      ],
+      "notes": "Chosen after per-commitment-secrets because the commitment-transactions module exposes dedicated obscure-factor and obscured-commitment-number exercises, making this a cleaner atomic follow-up than broader wrapper lessons."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

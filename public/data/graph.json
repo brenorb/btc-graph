@@ -7239,6 +7239,48 @@
       ]
     },
     {
+      "id": "lightning.obscured-commitment-number",
+      "title": "Obscured Commitment Number",
+      "description": "Lightning hides each commitment transaction's state number by XORing it with a 48-bit obscure factor derived from both payment basepoints, then splitting the result across nLockTime and nSequence. Channel peers can still recover the right state index, but casual onchain observers cannot read it directly.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.per-commitment-secrets"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Transactions",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-transactions",
+          "notes": "Interactive commitment-transaction lesson with the obscure-factor and obscured-commitment-number exercises."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical specification for the 48-bit obscured commitment number and its encoding into locktime and sequence."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment-state mechanics, unilateral close behavior, and the transaction fields Lightning repurposes.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "lightning",
+        "commitment-state",
+        "transactions"
+      ],
+      "aliases": [
+        "obscure factor",
+        "obscured commitment numbers"
+      ]
+    },
+    {
       "id": "lightning.onion-routing",
       "title": "Lightning Onion Routing",
       "description": "Packet format and forwarding privacy model for multi-hop Lightning payments.",

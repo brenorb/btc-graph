@@ -4,9 +4,10 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 ## Programming Lightning
 
-- Winner: `lightning.per-commitment-secrets`
-- Source cluster: `lightning-tutorial/commitment-secrets`
-- Reason: specific mechanism between commitment transactions and revocation/penalty handling, with lower duplicate risk than broader channel-state or onion-routing wrappers
+- Implemented in branch: `lightning.per-commitment-secrets`
+- Implemented in branch: `lightning.obscured-commitment-number`
+- Source cluster: `lightning-tutorial/commitment-secrets` and `lightning-tutorial/commitment-transactions`
+- Reason: commitment-state bridge concepts between the broad commitment-transaction overview and downstream revocation, close, and HTLC behavior
 
 ## Bitcoin Dev Project Explained Posts
 
