@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 23,
-      "conceptsNormalized": 9,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, and protocol.bech32m-addresses."
+      "conceptsExtracted": 24,
+      "conceptsNormalized": 10,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, and protocol.script-execution-stack."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -105,6 +105,57 @@
       "conceptsExtracted": 17,
       "conceptsNormalized": 11,
       "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.fee-calculation, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
+    },
+    {
+      "id": "source.programming-lightning",
+      "name": "Programming Lightning",
+      "url": "https://programminglightning.com/",
+      "sourceType": "course-platform",
+      "priority": "P0",
+      "scope": "Interactive Lightning curriculum covering payment channels, channel state updates, HTLCs, onion routing, routing economics, and visual Lightning simulations.",
+      "clusterStrategy": "Track the Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning surfaces as separate course clusters before drilling into individual lessons.",
+      "status": "Seeded",
+      "crawlStatus": "Not started",
+      "extractionStatus": "Not started",
+      "dedupeStatus": "Not started",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 0,
+      "conceptsNormalized": 0,
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance."
+    },
+    {
+      "id": "source.cypherpunk-library-bitcoin-adjacent",
+      "name": "Cypherpunk Library Bitcoin-Adjacent Canon",
+      "url": "https://www.cypherpunkbooks.com/collection",
+      "sourceType": "essay-library",
+      "priority": "P1",
+      "scope": "Bitcoin-adjacent cypherpunk readings focused on privacy, electronic cash, monetary theory, and the ideological roots most likely to sharpen foundational and history nodes.",
+      "clusterStrategy": "Start with four clusters: cypherpunk manifestos, privacy and surveillance essays, eCash and digital-cash texts, and monetary-theory readings. Defer clearly non-Bitcoin-adjacent political or general-hacker texts unless they surface a direct graph gap.",
+      "status": "Seeded",
+      "crawlStatus": "Not started",
+      "extractionStatus": "Not started",
+      "dedupeStatus": "Not started",
+      "pageClustersTracked": 4,
+      "conceptsExtracted": 0,
+      "conceptsNormalized": 0,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons."
+    },
+    {
+      "id": "source.bitcoin-dev-project-explained-posts",
+      "name": "Bitcoin Dev Project Explained Posts",
+      "url": "https://x.com/search?q=from%3ABitcoin_Devs%20explained&src=typed_query&f=live",
+      "sourceType": "social-post-cluster",
+      "priority": "P1",
+      "scope": "Short-form educational posts from @Bitcoin_Devs that explicitly explain protocol, wallet, and Lightning mechanisms in learner-facing language.",
+      "clusterStrategy": "Track the live X search as one source-family row first, then expand to one row per matching post once current results are enumerated. Group matching posts by concept family such as hashing, fee management, node architecture, channel mechanics, and upgrade proposals.",
+      "status": "Seeded",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Not started",
+      "dedupeStatus": "Not started",
+      "pageClustersTracked": 43,
+      "conceptsExtracted": 0,
+      "conceptsNormalized": 0,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1651,7 +1702,37 @@
       ],
       "estimatedTime": "20m",
       "confidence": "high",
-      "notes": "Chosen as the cleanest surviving book-side address-format gap because broader candidates like script execution stack or privacy measures are either already covered implicitly or too umbrella-like."
+      "notes": "Chosen as the cleanest surviving book-side address-format gap because broader privacy wrappers remained too umbrella-like and this slice had a lower duplicate risk in the current graph."
+    },
+    {
+      "id": "protocol.script-execution-stack",
+      "title": "Script Execution Stack",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Authorization and Authentication chapter, Script Construction section on the script execution stack",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific mechanism: the stack-machine evaluation model behind Script. It is narrower than the umbrella Script node and broader than individual opcode leaves, which makes it a useful missing bridge concept.",
+      "candidatePrerequisites": [
+        "protocol.script"
+      ],
+      "chosenPrerequisites": [
+        "protocol.script"
+      ],
+      "prerequisiteRationale": "Learners first need the general idea that Script defines locking and unlocking conditions. Once that umbrella is in place, the stack execution model is the direct mechanism layer needed before opcode-specific leaves such as OP_CHECKMULTISIG.",
+      "aliases": [
+        "script stack",
+        "stack-based script execution"
+      ],
+      "tags": [
+        "scripts",
+        "stack",
+        "validation"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next book-side bridge concept after the address-format slice because it strengthens the existing Script subtree without reopening a broad wrapper or duplicating an opcode leaf."
     }
   ],
   "edges": [
@@ -2113,6 +2194,15 @@
       "rationale": "Bech32m became necessary for witness version 1 and higher, and Taproot is the first major deployed witness-v1 use case, so learners need that upgrade context before the format distinction makes sense.",
       "sourceId": "source.mastering-bitcoin-book-map",
       "notes": "Direct parent keeps the node anchored on the practical protocol transition that exposed Bech32m to users."
+    },
+    {
+      "from": "protocol.script",
+      "to": "protocol.script-execution-stack",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The stack execution model is the direct mechanism by which Bitcoin Script evaluates spending conditions, so learners need the umbrella Script concept before drilling into stack behavior.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct parent positions the node as the conceptual middle layer between Script and opcode-specific leaves."
     }
   ],
   "decisions": [
@@ -2611,6 +2701,24 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Chosen over broader philosophy-side wrappers because it is a precise learner-facing gap with low duplicate risk and a clear place in the current graph."
+    },
+    {
+      "id": "decision.script-execution-stack-slice",
+      "type": "scope",
+      "subject": "protocol.script-execution-stack",
+      "status": "resolved",
+      "rationale": "The cleanest next Mastering Bitcoin bridge concept is protocol.script-execution-stack. It gives the current Script subtree an explicit mechanism layer between the broad Script overview and opcode-specific leaves, which improves gap diagnosis without inflating the graph with another umbrella node.",
+      "relatedConceptIds": [
+        "protocol.script-execution-stack",
+        "protocol.script",
+        "protocol.op-checkmultisig",
+        "protocol.op-return",
+        "protocol.op-codeseparator"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Chosen after the Bech32m address slice because it survives dedupe, has one clean direct prerequisite, and strengthens an already active concept branch."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

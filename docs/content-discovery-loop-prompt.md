@@ -15,6 +15,9 @@ Use this loop when the goal is to expand `btc-graph` from educational sources wi
   - Mastering Bitcoin book map: `https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md`
   - Optech Schnorr/Taproot Workshop: `https://bitcoinops.org/en/schnorr-taproot-workshop/`
   - Decoding by Bitcoin Devs: `https://bitcoindevs.xyz/decoding`
+  - Programming Lightning: `https://programminglightning.com/`
+  - Cypherpunk Library, narrowed to Bitcoin-adjacent privacy, eCash, and monetary texts: `https://www.cypherpunkbooks.com/collection`
+  - Bitcoin Dev Project explained posts on X, starting from the live query and expanding to each matching post: `https://x.com/search?q=from%3ABitcoin_Devs%20explained&src=typed_query&f=live`
 - treat these as mandatory starting sources
 - enumerate each source into the `Sources` sheet before extracting concepts
 - for large sources, break them into page clusters or sections and track those separately
@@ -34,6 +37,7 @@ Use this loop when the goal is to expand `btc-graph` from educational sources wi
 
 - start with source inventory:
   - enumerate every target site, section, and major page cluster
+  - for search-backed or feed-like sources, create one source-family row first and then expand to one row per matched post or page when the current query results are enumerated
   - track source name, URL, scope, crawl status, extraction status, dedupe status, and notes
   - do not mark a source complete until its relevant pages have been inspected and its concepts have been normalized against the existing graph
 

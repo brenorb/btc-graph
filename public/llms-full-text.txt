@@ -203,7 +203,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (66 concepts)
+Protocol & Consensus (67 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -246,6 +246,7 @@ Protocol & Consensus (66 concepts)
 - Pay-to-Script-Hash (P2SH): Output type where spending conditions are committed as a script hash and revealed at spend time.
 - Proof of Work: Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.
 - Reorgs and Finality: Probabilistic finality and chain reorganization behavior.
+- Script Execution Stack: Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.
 - Script Timelocks: Timelock primitives used to constrain when funds can be spent in script contracts.
 - Segregated Witness (SegWit): Witness data separation that fixed key malleability issues and increased block capacity efficiency.
 - SegWit Witness Commitment: How witness data is committed in coinbase transactions to secure segregated witness verification.
