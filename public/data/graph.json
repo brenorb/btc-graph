@@ -11348,6 +11348,49 @@
       ]
     },
     {
+      "id": "protocol.fee-calculation",
+      "title": "Fee Calculation",
+      "description": "Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.block-weight-vbytes"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Decoding Bitcoin: Fee Calculation",
+          "url": "https://bitcoindevs.xyz/decoding/fee-calculation",
+          "notes": "Beginner-friendly walkthrough of fee = inputs minus outputs, feerates, minimum relay fees, and fee-bumping context."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical transaction accounting background for inputs, outputs, and miner fee collection."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction construction, feerates, and blockspace pricing tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "fees",
+        "transactions",
+        "blockspace"
+      ],
+      "aliases": [
+        "transaction fee calculation",
+        "bitcoin fees",
+        "inputs minus outputs"
+      ]
+    },
+    {
       "id": "protocol.fee-market",
       "title": "Fee Market",
       "description": "How users bid for blockspace and why confirmation priority follows fee rates under congestion.",

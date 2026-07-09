@@ -203,7 +203,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (64 concepts)
+Protocol & Consensus (65 concepts)
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
@@ -225,6 +225,7 @@ Protocol & Consensus (64 concepts)
 - Direct Introspection Proposals: Direct introspection proposals expose transaction fields to Script for covenant enforcement. They increase expressiveness while raising complexity and review-surface tradeoffs.
 - Discrete Log Equivalency (DLEQ): DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, and scriptless constructions.
 - Ephemeral Anchors: Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.
+- Fee Calculation: Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.
 - Fee Sponsorship: Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.
 - Halving Cycle: Programmed issuance reductions and long-term security implications.
 - Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.

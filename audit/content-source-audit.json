@@ -102,9 +102,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
-      "conceptsExtracted": 16,
-      "conceptsNormalized": 10,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
+      "conceptsExtracted": 17,
+      "conceptsNormalized": 11,
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.fee-calculation, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1585,6 +1585,39 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Chosen as the cleanest remaining Academy transaction-format bridge after checking that the distinction is not already owned by transaction malleability or WTXID relay."
+    },
+    {
+      "id": "protocol.fee-calculation",
+      "title": "Fee Calculation",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoindevs-decoding",
+      "sourceUrl": "https://bitcoindevs.xyz/decoding/fee-calculation",
+      "sourceContext": "Transactions module page Fee Calculation",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one learner-facing mechanism: how a transaction's fee is derived and interpreted. It is narrower than fee-market dynamics, narrower than transaction creation as a workflow, and distinct from RPC-specific estimation tooling.",
+      "candidatePrerequisites": [
+        "protocol.utxo-model",
+        "protocol.block-weight-vbytes",
+        "protocol.change-outputs"
+      ],
+      "chosenPrerequisites": [
+        "protocol.block-weight-vbytes"
+      ],
+      "prerequisiteRationale": "Block weight and vbytes are the clean direct parent because practical fee calculation depends on relating an absolute fee to blockspace pricing units. The current graph already reaches UTXO accounting transitively through the block-weight branch, so adding protocol.utxo-model directly would be redundant. Change outputs are a frequent consequence of fee setting, but not a prerequisite for understanding the calculation itself.",
+      "aliases": [
+        "transaction fee calculation",
+        "bitcoin fees",
+        "inputs minus outputs"
+      ],
+      "tags": [
+        "fees",
+        "transactions",
+        "blockspace"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest surviving Decoding transactions slice because broader pages such as Creating a Transaction and Signing Transactions remain too bundled, while fee-market and RPC nodes already cover downstream economics and tooling."
     }
   ],
   "edges": [
@@ -2019,6 +2052,15 @@
       "rationale": "The degrading policy activates its weaker backup path only after a timeout, so timelock semantics are a direct part of the construction.",
       "sourceId": "source.optech-schnorr-taproot-workshop",
       "notes": "Needed alongside custody.multisig because the learner must understand the temporal rule, not just the signer policy."
+    },
+    {
+      "from": "protocol.block-weight-vbytes",
+      "to": "protocol.fee-calculation",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Understanding whether an absolute fee is high or low requires relating it to the blockspace pricing unit, so learners need weight and virtual bytes before fee calculation is fully meaningful in practice.",
+      "sourceId": "source.bitcoindevs-decoding",
+      "notes": "Direct parent keeps the node at the mechanism layer without drifting into broader fee-market competition."
     }
   ],
   "decisions": [
@@ -2480,6 +2522,24 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "This does not resolve the protocol-side bridge for protocol.p2ms by itself. The likely next comparison remains protocol.op-checkmultisig versus protocol.p2ms directly."
+    },
+    {
+      "id": "decision.decoding-fee-calculation-slice",
+      "type": "scope",
+      "subject": "protocol.fee-calculation",
+      "status": "resolved",
+      "rationale": "The cleanest remaining Decoding-derived transactions slice is protocol.fee-calculation. It isolates how fees are derived and interpreted without collapsing into the broader transaction-construction workflow, the economics of fee markets, or wallet-specific estimation tooling.",
+      "relatedConceptIds": [
+        "protocol.fee-calculation",
+        "protocol.block-weight-vbytes",
+        "protocol.fee-market",
+        "dev.fee-estimation-rpc",
+        "protocol.change-outputs"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoindevs-decoding"
+      ],
+      "notes": "Chosen before more bundled transaction pages because it survives dedupe as one precise learner-facing mechanism and strengthens the path into fee-market and fee-bumping nodes. The direct parent set was later reduced to protocol.block-weight-vbytes only after the redundancy check showed UTXO accounting was already inherited transitively."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
