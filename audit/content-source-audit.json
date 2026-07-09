@@ -306,9 +306,9 @@
       "extractionStatus": "Normalized candidate",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 8,
-      "conceptsExtracted": 4,
-      "conceptsNormalized": 3,
-      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winners are protocol.bitcoin-uri-bip21, dev.hardened-keys, and protocol.escrow-and-arbitration because they land as missing standards, key-derivation, and contract-pattern bridges with clean direct parents, while pool-shares remains the next valid but more leaf-like mining mechanism candidate."
+      "conceptsExtracted": 5,
+      "conceptsNormalized": 4,
+      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. A follow-up Wallet Files pass surfaced dev.wallet-import-format-wif as another clean wallet-standard slice. The implemented winners are now protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, and dev.wallet-import-format-wif because they land as missing standards, key-derivation, contract-pattern, and key-serialization bridges with clean direct parents, while pool-shares remains the next valid but more leaf-like mining mechanism candidate."
     }
   ],
   "concepts": [
@@ -2106,6 +2106,39 @@
       "notes": "Chosen as the third Developer Guides slice because it fills the contracts branch with a concrete adjudicated-spend pattern that the current graph did not previously name, while pool-shares remains a valid but more isolated mining leaf."
     },
     {
+      "id": "dev.wallet-import-format-wif",
+      "title": "Wallet Import Format (WIF)",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-developer-guides",
+      "sourceUrl": "https://developer.bitcoin.org/devguide/wallets.html#wallet-import-format-wif",
+      "sourceContext": "Wallets -> Wallet Files -> Private Key Formats -> Wallet Import Format (WIF)",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific wallet serialization format: Base58Check-encoding a single private key with network and compression metadata for import/export. It is narrower than general key concepts, narrower than HD wallets, and distinct from address formats or output templates.",
+      "candidatePrerequisites": [
+        "fundamentals.public-private-keys",
+        "protocol.addresses-outputs",
+        "dev.bip32"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.public-private-keys"
+      ],
+      "prerequisiteRationale": "Learners first need the underlying private-key concept itself. Address formats and HD derivation trees are useful neighbors, but they are not direct prerequisites for understanding how one raw private key is serialized into WIF.",
+      "aliases": [
+        "wif",
+        "wallet import format",
+        "private key import format"
+      ],
+      "tags": [
+        "wallets",
+        "keys",
+        "encoding"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Chosen as the next Developer Guides wallet slice after Hardened Keys because the source exposes WIF as a dedicated named format with one clean direct parent and lower dedupe risk than the remaining mining leaf."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2964,6 +2997,15 @@
       "notes": "Direct parent captures the on-chain contract packaging layer that makes the escrow pattern practical."
     },
     {
+      "from": "fundamentals.public-private-keys",
+      "to": "dev.wallet-import-format-wif",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "WIF is a serialization format for one private key, so learners need the underlying asymmetric-key concept before the network prefix, checksum, and compression flag details make sense.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent keeps the node anchored on key material itself instead of overfitting it to address formats or HD wallet hierarchies."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3785,6 +3827,23 @@
         "source.bitcoin-developer-guides"
       ],
       "notes": "Chosen after the Contracts subagent revalidated the direct parents against the current branch and after the wallet candidate Hardened Keys had already been landed. Kept Lightning payment channels and CoinJoin out of scope so the node stays focused on the 2-of-3 escrow pattern itself."
+    },
+    {
+      "id": "decision.developer-guides-wif-slice",
+      "type": "scope",
+      "subject": "dev.wallet-import-format-wif",
+      "status": "resolved",
+      "rationale": "The next Bitcoin Developer Guides slice should be dev.wallet-import-format-wif. It captures a missing named wallet serialization standard with one clean direct parent and lower dedupe risk than the remaining pool-shares leaf.",
+      "relatedConceptIds": [
+        "dev.wallet-import-format-wif",
+        "fundamentals.public-private-keys",
+        "dev.hardened-keys",
+        "mining.pool-shares"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Chosen after a follow-up Wallet Files pass in the Developer Guides and after subagent comparison against mining.pool-shares. Kept address formats, P2PKH, and HD wallet hierarchy concepts out of the direct prerequisite set so the node stays focused on single-key import/export serialization."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
