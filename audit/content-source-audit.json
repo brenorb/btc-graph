@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 22,
-      "conceptsNormalized": 8,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, and protocol.change-outputs."
+      "conceptsExtracted": 23,
+      "conceptsNormalized": 9,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, and protocol.bech32m-addresses."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -1618,6 +1618,40 @@
       "estimatedTime": "20m",
       "confidence": "high",
       "notes": "Chosen as the cleanest surviving Decoding transactions slice because broader pages such as Creating a Transaction and Signing Transactions remain too bundled, while fee-market and RPC nodes already cover downstream economics and tooling."
+    },
+    {
+      "id": "protocol.bech32m-addresses",
+      "title": "Bech32m Addresses",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md",
+      "sourceContext": "Keys and Addresses chapter, Bech32 Addresses section covering Bech32m",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one address-encoding concept: the checksum format used for native witness version 1 and higher addresses. It is narrower than broad address overviews, narrower than Taproot as a whole, and distinct from script-template nodes such as P2TR or SegWit output types.",
+      "candidatePrerequisites": [
+        "protocol.addresses-outputs",
+        "protocol.taproot",
+        "protocol.segregated-witness"
+      ],
+      "chosenPrerequisites": [
+        "protocol.addresses-outputs",
+        "protocol.taproot"
+      ],
+      "prerequisiteRationale": "Learners need the general idea that addresses encode spend templates and network context, and they need the Taproot witness-version upgrade that made Bech32m necessary in practice. SegWit remains useful background, but it is already inherited through Taproot and would be redundant as a direct edge.",
+      "aliases": [
+        "bech32m",
+        "taproot addresses",
+        "v1 segwit addresses"
+      ],
+      "tags": [
+        "addresses",
+        "segwit",
+        "taproot"
+      ],
+      "estimatedTime": "20m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest surviving book-side address-format gap because broader candidates like script execution stack or privacy measures are either already covered implicitly or too umbrella-like."
     }
   ],
   "edges": [
@@ -2061,6 +2095,24 @@
       "rationale": "Understanding whether an absolute fee is high or low requires relating it to the blockspace pricing unit, so learners need weight and virtual bytes before fee calculation is fully meaningful in practice.",
       "sourceId": "source.bitcoindevs-decoding",
       "notes": "Direct parent keeps the node at the mechanism layer without drifting into broader fee-market competition."
+    },
+    {
+      "from": "protocol.addresses-outputs",
+      "to": "protocol.bech32m-addresses",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Bech32m is an address-encoding format, so learners need the general relationship between addresses, script templates, and spendability before the newer checksum format is meaningful.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct parent keeps the node on encoding semantics rather than on raw string-format trivia."
+    },
+    {
+      "from": "protocol.taproot",
+      "to": "protocol.bech32m-addresses",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Bech32m became necessary for witness version 1 and higher, and Taproot is the first major deployed witness-v1 use case, so learners need that upgrade context before the format distinction makes sense.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct parent keeps the node anchored on the practical protocol transition that exposed Bech32m to users."
     }
   ],
   "decisions": [
@@ -2540,6 +2592,25 @@
         "source.bitcoindevs-decoding"
       ],
       "notes": "Chosen before more bundled transaction pages because it survives dedupe as one precise learner-facing mechanism and strengthens the path into fee-market and fee-bumping nodes. The direct parent set was later reduced to protocol.block-weight-vbytes only after the redundancy check showed UTXO accounting was already inherited transitively."
+    },
+    {
+      "id": "decision.bech32m-addresses-slice",
+      "type": "scope",
+      "subject": "protocol.bech32m-addresses",
+      "status": "resolved",
+      "rationale": "The cleanest remaining Mastering Bitcoin address-format slice is protocol.bech32m-addresses. It captures the checksum and witness-version distinction for modern native segwit addresses without collapsing into the broad addresses-and-outputs umbrella or into Taproot internals that belong elsewhere.",
+      "relatedConceptIds": [
+        "protocol.bech32m-addresses",
+        "protocol.addresses-outputs",
+        "protocol.taproot",
+        "protocol.segregated-witness",
+        "custody.human-readable-addresses",
+        "protocol.p2pkh"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Chosen over broader philosophy-side wrappers because it is a precise learner-facing gap with low duplicate risk and a clear place in the current graph."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
