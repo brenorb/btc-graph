@@ -104,7 +104,7 @@ Extension Systems (48 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (25 concepts)
+History & Governance (26 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
@@ -114,6 +114,7 @@ History & Governance (25 concepts)
 - Bitcoin Whitepaper: Original system design framing for decentralized digital cash and double-spend resistance.
 - Block Size War: Governance conflict over scaling strategy and how social consensus resolved protocol direction.
 - Chain Split Risk: Chain split risk is the ecosystem cost created when a contentious protocol upgrade leaves incompatible rule sets active at the same time. Persistent splits can impose replay, reorg, infrastructure, and coordination costs even when each side keeps producing blocks.
+- Chaumian eCash: Chaumian eCash used blind signatures and a central issuer to create private digital cash before Bitcoin. Studying it shows how pre-Bitcoin systems approached privacy and double-spend resistance while still depending on trusted mint operators.
 - Cypherpunk Movement: Origins of privacy-preserving digital cash ideas.
 - Cypherpunk Roots and Bitcoin Origin: Bitcoin emerged from cypherpunk ideas about privacy, digital cash, and open-source coordination. This topic connects pre-Bitcoin experiments to the 2008-2009 launch context.
 - Double-Spend Problem: Why digital scarcity is hard and what constraints must be solved.

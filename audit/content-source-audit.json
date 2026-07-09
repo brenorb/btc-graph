@@ -131,14 +131,14 @@
       "priority": "P1",
       "scope": "Bitcoin-adjacent cypherpunk readings focused on privacy, electronic cash, monetary theory, and the ideological roots most likely to sharpen foundational and history nodes.",
       "clusterStrategy": "Start with four clusters: cypherpunk manifestos, privacy and surveillance essays, eCash and digital-cash texts, and monetary-theory readings. Defer clearly non-Bitcoin-adjacent political or general-hacker texts unless they surface a direct graph gap.",
-      "status": "Seeded",
-      "crawlStatus": "Not started",
-      "extractionStatus": "Not started",
-      "dedupeStatus": "Not started",
+      "status": "In review",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "In progress",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 0,
-      "conceptsNormalized": 0,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons."
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -1830,6 +1830,40 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Chosen as the cleanest first additive slice from the explained-post cluster because it adds a concrete consensus bug that is not already covered by the broader retargeting or timestamp overview nodes."
+    },
+    {
+      "id": "history.chaumian-ecash",
+      "title": "Chaumian eCash",
+      "category": "History & Governance",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "sourceUrl": "https://www.cypherpunkbooks.com/book/protecting-privacy-with-electronic-cash",
+      "sourceContext": "Protecting Privacy with Electronic Cash paired with The Beauty of eCash",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific pre-Bitcoin digital-cash design family built around blind signatures and a trusted mint. It is narrower than the broad pre-Bitcoin-digital-cash survey and narrower than modern Bitcoin-backed ecash systems.",
+      "candidatePrerequisites": [
+        "fundamentals.blind-signatures",
+        "history.double-spend-problem"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.blind-signatures",
+        "history.double-spend-problem"
+      ],
+      "prerequisiteRationale": "Learners need the cryptographic privacy mechanism to understand how the cash stayed anonymous and the double-spend problem to understand why a central mint was still required. The broader prehistory survey is helpful context but not a strict prerequisite for this specific system.",
+      "aliases": [
+        "chaumian ecash",
+        "david chaum ecash",
+        "digicash",
+        "blind-signature ecash"
+      ],
+      "tags": [
+        "history",
+        "ecash",
+        "privacy"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest first additive slice from the Cypherpunk Library cluster because current coverage only mentions DigiCash inside the broader pre-Bitcoin survey and covers modern Bitcoin-backed mints elsewhere."
     }
   ],
   "edges": [
@@ -2327,6 +2361,24 @@
       "rationale": "Learners need the consensus timestamp constraints before they can reason about how miners manipulate time data and where the remaining attack surface lives.",
       "sourceId": "source.bitcoin-dev-project-explained-posts",
       "notes": "Direct parent captures the timestamp-boundary side of the exploit without overloading timelocks or block headers."
+    },
+    {
+      "from": "fundamentals.blind-signatures",
+      "to": "history.chaumian-ecash",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Chaumian ecash is defined by using blind signatures to let a mint issue private bearer tokens without seeing the final token contents.",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "notes": "Direct parent keeps the node tied to the specific cryptographic mechanism rather than treating it as generic digital-money history."
+    },
+    {
+      "from": "history.double-spend-problem",
+      "to": "history.chaumian-ecash",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the unsolved scarcity problem in digital cash before the trusted-mint tradeoff in Chaumian designs becomes meaningful.",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "notes": "Direct parent frames why the system still needed a central operator even though it improved privacy."
     }
   ],
   "decisions": [
@@ -2897,6 +2949,24 @@
         "source.bitcoin-dev-project-explained-posts"
       ],
       "notes": "Chosen over broader or already-covered explained posts because the exploit is atomic, learner-diagnosable, and still missing from the current graph even though nearby consensus parents already exist."
+    },
+    {
+      "id": "decision.chaumian-ecash-slice",
+      "type": "scope",
+      "subject": "history.chaumian-ecash",
+      "status": "resolved",
+      "rationale": "Add history.chaumian-ecash. Current coverage only mentions DigiCash inside history.pre-bitcoin-digital-cash and covers modern Bitcoin-backed mints in extension.ecash; the dedicated historical bridge is still missing.",
+      "relatedConceptIds": [
+        "history.chaumian-ecash",
+        "history.pre-bitcoin-digital-cash",
+        "history.double-spend-problem",
+        "fundamentals.blind-signatures",
+        "extension.ecash"
+      ],
+      "relatedSourceIds": [
+        "source.cypherpunk-library-bitcoin-adjacent"
+      ],
+      "notes": "Chosen over cypherpunk manifesto or monetary-theory slices because this one survives dedupe as a precise learner gap between blind-signature cryptography, pre-Bitcoin digital-cash history, and modern ecash descendants."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

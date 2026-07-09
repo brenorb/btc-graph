@@ -16,6 +16,6 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 ## Cypherpunk Library
 
-- Strong follow-up: `history.chaumian-ecash`
+- Implemented in branch: `history.chaumian-ecash`
 - Source cluster: `Protecting Privacy with Electronic Cash` and `The Beauty of eCash`
 - Reason: historical bridge between blind signatures, pre-Bitcoin digital cash, and modern Bitcoin-backed ecash systems
