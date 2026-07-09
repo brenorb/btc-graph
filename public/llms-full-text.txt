@@ -206,7 +206,8 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (69 concepts)
+Protocol & Consensus (70 concepts)
+- 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.

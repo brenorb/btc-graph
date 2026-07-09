@@ -153,9 +153,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1957,6 +1957,37 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next explained-post consensus-cleanup slice because it is distinct from existing double-spend and malleability nodes and has cleaner parents than DKG, Shamir, Lamport, or garbled-circuit candidates in the current graph."
+    },
+    {
+      "id": "protocol.64-byte-transaction-bug",
+      "title": "64-Byte Transaction Bug",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2034308520464834706",
+      "sourceContext": "Episode 5: The 64-byte transaction bug explained simply",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific Merkle-commitment failure mode: witness-stripped transactions whose 64-byte serialization can be mistaken for an internal Merkle-tree node preimage. It is narrower than generic Merkle-tree vulnerabilities and narrower than the full consensus-cleanup bundle.",
+      "candidatePrerequisites": [
+        "protocol.block-structure"
+      ],
+      "chosenPrerequisites": [
+        "protocol.block-structure"
+      ],
+      "prerequisiteRationale": "Learners need the block header, transaction-merkle-root, and block-composition model before the internal-node ambiguity makes sense. That keeps the parent direct without expanding into a broader SPV, wallet, or hashing review chain.",
+      "aliases": [
+        "64 byte tx bug",
+        "64-byte tx vulnerability",
+        "merkle tree ambiguity bug"
+      ],
+      "tags": [
+        "consensus",
+        "merkle",
+        "spv"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Add. Same explained-post consensus-cleanup lane; distinct Merkle-commitment failure with one clean direct parent and lower dedupe risk than DKG, Shamir, Lamport, or garbled-circuit candidates."
     }
   ],
   "edges": [
@@ -2499,6 +2530,15 @@
       "rationale": "Learners need the txid-plus-output-index reference model to understand why identical transaction ids could confuse later spends and overwrite assumptions in the UTXO set.",
       "sourceId": "source.bitcoin-dev-project-explained-posts",
       "notes": "Direct parent captures the reference-model side of the bug without conflating it with double-spend history or malleability."
+    },
+    {
+      "from": "protocol.block-structure",
+      "to": "protocol.64-byte-transaction-bug",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The bug only makes sense once learners understand how transaction hashes sit inside the block merkle tree and why internal-node preimages matter for block commitments.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "One direct parent keeps the node at the block-commitment layer instead of reopening broader hashing or SPV overview branches."
     }
   ],
   "decisions": [
@@ -3139,6 +3179,24 @@
         "source.bitcoin-dev-project-explained-posts"
       ],
       "notes": "Chosen as the next X explained-post slice because the duplicate-transaction bug survives dedupe as a specific consensus-cleanup failure mode with clearer direct parents than the currently visible custody or advanced-crypto candidates."
+    },
+    {
+      "id": "decision.64-byte-transaction-bug-slice",
+      "type": "scope",
+      "subject": "protocol.64-byte-transaction-bug",
+      "status": "resolved",
+      "rationale": "Add. Same explained-post consensus-cleanup lane; distinct Merkle-commitment failure with one clean direct parent and lower dedupe risk than DKG/Shamir/Lamport/garbled-circuit candidates.",
+      "relatedConceptIds": [
+        "protocol.64-byte-transaction-bug",
+        "protocol.block-structure",
+        "fundamentals.merkle-trees",
+        "protocol.duplicate-transaction-bug",
+        "protocol.time-warp-attack"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "Chosen as the next X explained-post slice because it preserves the consensus-cleanup bug branch while staying atomic, with a cleaner parent than a broader Merkle-vulnerabilities wrapper or the more duplicate-prone custody and advanced-crypto candidates."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",
