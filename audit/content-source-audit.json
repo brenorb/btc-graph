@@ -29,10 +29,10 @@
       "priority": "P0",
       "scope": "Topic index into transcript-backed technical discussions and workshops.",
       "clusterStrategy": "Track Topics, Categories, Types, and Sources as separate provenance surfaces before drilling into individual transcript families.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 4,
       "conceptsExtracted": 11,
       "conceptsNormalized": 5,
@@ -87,7 +87,7 @@
       "pageClustersTracked": 12,
       "conceptsExtracted": 17,
       "conceptsNormalized": 8,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, key-path spends, tapleaf inclusion proofs, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taproot-key-path-spends, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
+      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, key-path spends, tapleaf inclusion proofs, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taproot-key-path-spends, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.huffman-optimized-taptrees, and custody.degrading-multisig. Current tracked workshop queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -97,14 +97,14 @@
       "priority": "P0",
       "scope": "Structured educational material that may reveal curriculum-style prerequisite bundles.",
       "clusterStrategy": "Track the Introduction, Tools, Transactions, Scripts, and Taproot module groups before lesson-level expansion.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 5,
       "conceptsExtracted": 17,
       "conceptsNormalized": 11,
-      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.fee-calculation, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig."
+      "notes": "Best used for sequencing and beginner-friendly prerequisite ordering rather than broad topic discovery. Implemented from this source in the current branch: protocol.p2pk, security.nonce-reuse-attack, protocol.p2pkh, protocol.fee-calculation, protocol.op-checkmultisig, protocol.p2ms, protocol.bare-multisig-standardness, and protocol.musig. Current tracked module queue is exhausted for this pass."
     },
     {
       "id": "source.programming-lightning",
@@ -114,14 +114,14 @@
       "priority": "P0",
       "scope": "Interactive Lightning curriculum covering payment channels, channel state updates, HTLCs, onion routing, routing economics, and visual Lightning simulations.",
       "clusterStrategy": "Track the Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning surfaces as separate course clusters before drilling into individual lessons.",
-      "status": "In review",
-      "crawlStatus": "In progress",
-      "extractionStatus": "Normalized",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 4,
       "conceptsNormalized": 4,
-      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts, and lightning.htlc-output-scripts."
+      "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts, and lightning.htlc-output-scripts. Current tracked surface queue is exhausted for this pass."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -131,14 +131,14 @@
       "priority": "P1",
       "scope": "Bitcoin-adjacent cypherpunk readings focused on privacy, electronic cash, monetary theory, and the ideological roots most likely to sharpen foundational and history nodes.",
       "clusterStrategy": "Start with four clusters: cypherpunk manifestos, privacy and surveillance essays, eCash and digital-cash texts, and monetary-theory readings. Defer clearly non-Bitcoin-adjacent political or general-hacker texts unless they surface a direct graph gap.",
-      "status": "In review",
-      "crawlStatus": "In progress",
-      "extractionStatus": "Normalized",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 4,
       "conceptsExtracted": 5,
       "conceptsNormalized": 5,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash, privacy.secret-right-to-cash, economics.ideal-money. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash, privacy.secret-right-to-cash, economics.ideal-money. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto. Current tracked cluster queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -148,14 +148,14 @@
       "priority": "P1",
       "scope": "Short-form educational posts from @Bitcoin_Devs that explicitly explain protocol, wallet, and Lightning mechanisms in learner-facing language.",
       "clusterStrategy": "Track the live X search as one source-family row first, then expand to one row per matching post once current results are enumerated. Group matching posts by concept family such as hashing, fee management, node architecture, channel mechanics, and upgrade proposals.",
-      "status": "In review",
-      "crawlStatus": "In progress",
-      "extractionStatus": "Normalized",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 43,
       "conceptsExtracted": 6,
       "conceptsNormalized": 6,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, BIP-68 Explained, and Shamir's Secret Sharing explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug, fundamentals.lamport-signatures, custody.shamirs-secret-sharing. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained."
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, 64-byte transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, BIP-68 Explained, and Shamir's Secret Sharing explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug, protocol.64-byte-transaction-bug, fundamentals.lamport-signatures, custody.shamirs-secret-sharing. Merged into existing coverage in the current branch: protocol.time-warp-attack via Off-by-one difficulty bug explained. Current enumerated post queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -165,14 +165,14 @@
       "priority": "P1",
       "scope": "Wallet internals cluster around ScriptPubKeyManagers, wallet keys, transaction identification, and balance calculation.",
       "clusterStrategy": "Track one wallet-internals page cluster at a time so Core-specific abstractions stay atomic instead of collapsing into generic wallet concepts.",
-      "status": "In review",
-      "crawlStatus": "Partial",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
-      "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption remains deferred because the cleanest surviving slice is still too coupled to missing Core wallet-internals parents."
+      "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption remains deferred because the cleanest surviving slice is still too coupled to missing Core wallet-internals parents. Current tracked wallet-internals queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-core-academy-mempool",
@@ -182,14 +182,14 @@
       "priority": "P1",
       "scope": "Mempool and relay internals cluster around transaction relay, rebroadcast behavior, and local node transaction state.",
       "clusterStrategy": "Track the academy mempool pages as a separate cluster so implementation-specific relay mechanisms are not collapsed into generic mempool coverage.",
-      "status": "In review",
-      "crawlStatus": "Partial",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 3,
       "conceptsNormalized": 3,
-      "notes": "Second post-seed-source slice. The current additive winners are protocol.mempool-unbroadcast-set, protocol.transaction-rebroadcast-privacy, and protocol.txid-vs-wtxid. The remaining transaction-format internals are now mostly implementation-detail material rather than clean learner-facing nodes."
+      "notes": "Second post-seed-source slice. The current additive winners are protocol.mempool-unbroadcast-set, protocol.transaction-rebroadcast-privacy, and protocol.txid-vs-wtxid. The remaining transaction-format internals are now mostly implementation-detail material rather than clean learner-facing nodes. Current tracked mempool queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-design-payment-formats",
@@ -199,14 +199,14 @@
       "priority": "P1",
       "scope": "User-facing payment request and address-sharing concepts across human-readable addresses, transaction display, and wallet privacy tradeoffs.",
       "clusterStrategy": "Track design guide pages by UX concept cluster so user-facing payment abstractions stay separate from protocol internals and generic wallet hygiene.",
-      "status": "In review",
-      "crawlStatus": "Partial",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
-      "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups remains the main deferred neighbor from this design source family."
+      "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups remains the main deferred neighbor from this design source family. Current tracked payment-format queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-design-wallet-activity",
@@ -216,14 +216,14 @@
       "priority": "P1",
       "scope": "User-facing wallet activity, contacts, and contextual payment-history concepts that help learners distinguish on-chain events from wallet-added meaning.",
       "clusterStrategy": "Track activity and contacts pages together so contextual metadata stays separate from backup flows and from protocol transaction mechanics.",
-      "status": "In review",
-      "crawlStatus": "Partial",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 2,
       "conceptsExtracted": 2,
       "conceptsNormalized": 1,
-      "notes": "Second Bitcoin Design implementation slice. The current additive winner is custody.transaction-metadata; encrypted cloud backups remains the main deferred design-side candidate."
+      "notes": "Second Bitcoin Design implementation slice. The current additive winner is custody.transaction-metadata; encrypted cloud backups remains the main deferred design-side candidate. Current tracked activity-and-contacts queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-design-multiple-wallets",
@@ -233,14 +233,14 @@
       "priority": "P1",
       "scope": "User-facing wallet architecture around separating funds by purpose, ownership, and security model inside one application.",
       "clusterStrategy": "Track the multiple-wallets page separately so purpose-based wallet separation stays distinct from account-path mechanics, backup flows, and generic wallet activity metadata.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 1,
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
-      "notes": "Third Bitcoin Design implementation slice. The current additive winner is custody.multiple-wallets; encrypted cloud backups remains deferred because it overlaps too heavily with backups-recovery."
+      "notes": "Third Bitcoin Design implementation slice. The current additive winner is custody.multiple-wallets; encrypted cloud backups remains deferred because it overlaps too heavily with backups-recovery. Current tracked page queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-design-cloud-backup",
@@ -267,14 +267,14 @@
       "priority": "P1",
       "scope": "User-facing wallet architecture for progressive security and staged upgrades between key-management schemes.",
       "clusterStrategy": "Track the upgradeable-wallet reference design separately so progressive security becomes its own concept instead of staying buried inside cloud-backup discussions or multiwallet archival flows.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Normalized candidate",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Queue exhausted",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 1,
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
-      "notes": "Fourth Bitcoin Design implementation slice candidate. The current additive winner is custody.progressive-security, which survives dedupe more cleanly than automatic cloud backups or wallet-encryption."
+      "notes": "Fourth Bitcoin Design implementation slice candidate. The current additive winner is custody.progressive-security, which survives dedupe more cleanly than automatic cloud backups or wallet-encryption. Current tracked page queue is exhausted for this pass."
     },
     {
       "id": "source.bitcoin-design-shared-wallet",
@@ -292,6 +292,23 @@
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
       "notes": "Reviewed and merged into existing coverage instead of minting a node. The enduring source value is shared-wallet examples for custody.multisig, custody.multiple-wallets, and custody.progressive-security."
+    },
+    {
+      "id": "source.bitcoin-developer-guides",
+      "name": "Bitcoin Developer Guides",
+      "url": "https://developer.bitcoin.org/devguide/",
+      "sourceType": "documentation-cluster",
+      "priority": "P1",
+      "scope": "Canonical developer-facing guide sections covering block chain, transactions, contracts, wallets, payment processing, operating modes, P2P network, and mining.",
+      "clusterStrategy": "Track the eight top-level guide sections first, then split dense sections like Transactions, Contracts, Wallets, and P2P Network when they expose concept gaps not already covered by existing nodes.",
+      "status": "Queued",
+      "crawlStatus": "Not started",
+      "extractionStatus": "Not started",
+      "dedupeStatus": "Not started",
+      "pageClustersTracked": 8,
+      "conceptsExtracted": 0,
+      "conceptsNormalized": 0,
+      "notes": "Added after the current audited source queue was exhausted. This is the next obvious canonical documentation family to inventory before starting another extraction pass."
     }
   ],
   "concepts": [
@@ -3551,6 +3568,35 @@
         "source.cypherpunk-library-bitcoin-adjacent"
       ],
       "notes": "Kept neutrality and Hayek-side political-economy framing as neighboring context rather than direct prerequisites so this lands as a distinct measurement-and-calculation concept instead of collapsing into the existing monetary-theory lane."
+    },
+    {
+      "id": "decision.current-source-pass-exhausted",
+      "type": "scope",
+      "subject": "audit.current-source-pass",
+      "status": "resolved",
+      "rationale": "The current audited pass across the tracked Programming Lightning, Decoding, Optech workshop, Cypherpunk Library starting clusters, Bitcoin Dev Project explained posts, Bitcoin Design clusters, and Bitcoin Core Academy clusters is exhausted for clean additive nodes. The remaining visible items are merge-only or still defer-bound, so the next move is source expansion rather than forcing a weak node into the graph.",
+      "relatedConceptIds": [
+        "fundamentals.distributed-key-generation",
+        "privacy.non-blockchain-privacy-leaks",
+        "custody.wallet-encryption",
+        "custody.automatic-cloud-backups",
+        "custody.shared-wallet"
+      ],
+      "relatedSourceIds": [
+        "source.optech-schnorr-taproot-workshop",
+        "source.bitcoindevs-decoding",
+        "source.programming-lightning",
+        "source.cypherpunk-library-bitcoin-adjacent",
+        "source.bitcoin-dev-project-explained-posts",
+        "source.bitcoin-core-academy-wallet",
+        "source.bitcoin-core-academy-mempool",
+        "source.bitcoin-design-payment-formats",
+        "source.bitcoin-design-wallet-activity",
+        "source.bitcoin-design-multiple-wallets",
+        "source.bitcoin-design-upgradeable-wallet",
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Recorded after three subagent comparisons converged on July 9, 2026: no remaining candidate from these audited families survives dedupe more cleanly than the already-landed nodes, so the audit should widen to the Bitcoin Developer Guides next."
     },
     {
       "id": "decision.obscured-commitment-number-slice",
