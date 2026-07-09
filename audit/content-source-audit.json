@@ -306,9 +306,9 @@
       "extractionStatus": "Normalized candidate",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 8,
-      "conceptsExtracted": 3,
-      "conceptsNormalized": 1,
-      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced three clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, protocol.escrow-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winner is protocol.bitcoin-uri-bip21 because it lands as a missing standard-format bridge with one direct parent and lower coupling than the contract and mining candidates."
+      "conceptsExtracted": 4,
+      "conceptsNormalized": 2,
+      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. The first implemented winners are protocol.bitcoin-uri-bip21 and dev.hardened-keys because they land as missing standards-and-key-derivation bridges with clean direct parents, while the contract and mining candidates remain valid but sit deeper inside broader mechanism branches."
     }
   ],
   "concepts": [
@@ -2040,6 +2040,38 @@
       "notes": "Chosen as the first Developer Guides slice because it survives dedupe as a missing standard-format bridge between raw addresses and higher-level wallet payment UX, while the nearby escrow and pool-share candidates still sit closer to broader mechanism branches."
     },
     {
+      "id": "dev.hardened-keys",
+      "title": "Hardened Keys",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-developer-guides",
+      "sourceUrl": "https://developer.bitcoin.org/devguide/wallets.html#hardened-keys",
+      "sourceContext": "Wallets -> Hierarchical Deterministic Key Creation -> Hardened Keys",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific BIP32 derivation mode: hardened child derivation. It is narrower than HD wallets generally, narrower than BIP44 path conventions, and narrower than the broader privacy consequences of xpub leakage.",
+      "candidatePrerequisites": [
+        "dev.bip32",
+        "privacy.xpub-leakage"
+      ],
+      "chosenPrerequisites": [
+        "dev.bip32"
+      ],
+      "prerequisiteRationale": "Learners need the base extended-key derivation model before the hardened-versus-non-hardened distinction makes sense. XPUB leakage is a downstream consequence and motivation, not a prerequisite for understanding the derivation mode itself.",
+      "aliases": [
+        "hardened derivation",
+        "hardened child keys",
+        "hardened child derivation"
+      ],
+      "tags": [
+        "wallets",
+        "keys",
+        "standards"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Chosen as the second Developer Guides slice because it fills a precise gap inside the existing BIP32 branch with one clean direct parent and lower scenario risk than the remaining escrow/arbitration and pool-share candidates."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -2871,6 +2903,15 @@
       "notes": "Direct parent keeps the node tied to the standard request format rather than collapsing it into higher-level wallet UX systems."
     },
     {
+      "from": "dev.bip32",
+      "to": "dev.hardened-keys",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Hardened derivation is one specific child-key mode inside the broader BIP32 extended-key model, so learners need the base tree-derivation mechanics first.",
+      "sourceId": "source.bitcoin-developer-guides",
+      "notes": "Direct parent keeps the node anchored in the HD derivation branch instead of treating it as only a privacy or wallet-policy concept."
+    },
+    {
       "from": "lightning.per-commitment-secrets",
       "to": "lightning.obscured-commitment-number",
       "type": "prerequisite",
@@ -3657,6 +3698,24 @@
         "source.bitcoin-developer-guides"
       ],
       "notes": "Chosen after the first Developer Guides subagent pass surfaced three viable candidates. Kept QR-code transport and BIP70-specific behavior out of scope so the node stays focused on the BIP21 request format itself."
+    },
+    {
+      "id": "decision.developer-guides-hardened-keys-slice",
+      "type": "scope",
+      "subject": "dev.hardened-keys",
+      "status": "resolved",
+      "rationale": "The next Bitcoin Developer Guides slice should be dev.hardened-keys. It captures a specific missing BIP32 sub-concept with one clean direct parent, while the remaining escrow/arbitration and pool-share candidates remain valid but live deeper inside broader contract and mining mechanism branches.",
+      "relatedConceptIds": [
+        "dev.hardened-keys",
+        "dev.bip32",
+        "privacy.xpub-leakage",
+        "protocol.escrow-and-arbitration",
+        "mining.pool-shares"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-developer-guides"
+      ],
+      "notes": "Chosen after the Wallets subagent identified Hardened Keys as the cleanest additive bridge inside the existing HD derivation branch. Kept BIP44 path structure and xpub-leakage consequences out of scope so the node stays focused on the hardened derivation mechanism itself."
     },
     {
       "id": "decision.obscured-commitment-number-slice",

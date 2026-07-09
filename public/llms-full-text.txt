@@ -339,7 +339,7 @@ Security (55 concepts)
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
 - zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
-Wallets (41 concepts)
+Wallets (42 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.
 - Air-Gapped Signing: Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.
 - Backups and Recovery: Recovery drills, inheritance planning, and backup hygiene.
@@ -356,6 +356,7 @@ Wallets (41 concepts)
 - Descriptor Wallet Policies: Descriptor wallet policies define a wallet as a descriptor template plus key information items, making account structure portable across software and hardware signers. They standardize how external signers can register, verify, and later derive the same wallet without relying on custom wallet-specific side data.
 - Descriptors in PSBTs: Descriptors in PSBTs let coordinators and signers exchange script-template information alongside transaction data instead of relying on custom wallet metadata. They make it easier for different tools to reason about the same inputs, outputs, and signing responsibilities from a shared descriptor view.
 - fundrawtransaction RPC: RPC for coin selection and fee funding of partially constructed transactions.
+- Hardened Keys: Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.
 - Hardware Wallets: Isolated signing environments and practical security tradeoffs.
 - HD Wallets: Deterministic key derivation for scalable wallet management.
 - Human-Readable Bitcoin Addresses: Human-readable Bitcoin addresses use memorable handles that resolve to normal payment instructions instead of exposing raw addresses directly. They improve sharing and recall, but add trust and privacy tradeoffs because an intermediary or naming system is involved in the lookup.
