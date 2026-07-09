@@ -153,9 +153,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 43,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added from user direction. The live X query was enumerated in the logged-in in-app browser on July 8, 2026 and surfaced 43 matching posts. Visible examples include Lamport Signature explained, Duplicate transaction bug explained, SegWit Address explained, Off-by-one difficulty bug explained, Great Consensus Cleanup explained Part 1: Time Warp Attack, Transaction Pinning explained, Full Node Architecture Explained, MAST explained simply, BIP 158 explained, MuSig explained Simply, CPFP transaction explained, CISA explained, and BIP-68 Explained. Implemented from this source in the current branch: protocol.time-warp-attack, protocol.duplicate-transaction-bug."
     },
     {
       "id": "source.bitcoin-core-academy-wallet",
@@ -1894,6 +1894,39 @@
       "estimatedTime": "25m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next Programming Lightning slice because it captures a distinct BOLT 3 state-number encoding mechanism with lower dedupe risk than revocation, close, or HTLC wrapper lessons already covered."
+    },
+    {
+      "id": "protocol.duplicate-transaction-bug",
+      "title": "Duplicate Transaction Bug",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "sourceUrl": "https://x.com/Bitcoin_Devs/status/2042615480888742066",
+      "sourceContext": "Duplicate transaction bug explained: BIP 30 -> BIP 34 -> BIP 54",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one specific consensus bug: duplicated transactions with identical txids, especially duplicated coinbases, breaking the assumption that txids uniquely identify prior outputs. It is narrower than the broad double-spend problem and narrower than generic transaction malleability.",
+      "candidatePrerequisites": [
+        "protocol.coinbase-transaction",
+        "protocol.utxo-model"
+      ],
+      "chosenPrerequisites": [
+        "protocol.coinbase-transaction",
+        "protocol.utxo-model"
+      ],
+      "prerequisiteRationale": "Learners need coinbase-specific structure to understand why early blocks could replay special transactions and the UTXO reference model to understand why identical txids confused later spends. These parents stay direct without collapsing into broader history or transaction-lifecycle wrappers.",
+      "aliases": [
+        "bip 30",
+        "duplicate txid bug",
+        "duplicate coinbase bug"
+      ],
+      "tags": [
+        "consensus",
+        "txids",
+        "mining"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next explained-post consensus-cleanup slice because it is distinct from existing double-spend and malleability nodes and has cleaner parents than DKG, Shamir, Lamport, or garbled-circuit candidates in the current graph."
     }
   ],
   "edges": [
@@ -2418,6 +2451,24 @@
       "rationale": "The obscured commitment number is part of the same commitment-state machinery as the per-state secret chain, so learners need that state-derivation context before the field-level encoding scheme makes sense.",
       "sourceId": "source.programming-lightning",
       "notes": "Direct parent keeps the node in the narrow commitment-state branch instead of pulling in broader closure or HTLC behavior."
+    },
+    {
+      "from": "protocol.coinbase-transaction",
+      "to": "protocol.duplicate-transaction-bug",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The bug is historically tied to duplicated coinbase transactions, so learners need the special structure and validation role of coinbase transactions before the replay vector makes sense.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent keeps the bug tied to the early-coinbase uniqueness failure instead of burying it under general mining history."
+    },
+    {
+      "from": "protocol.utxo-model",
+      "to": "protocol.duplicate-transaction-bug",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Learners need the txid-plus-output-index reference model to understand why identical transaction ids could confuse later spends and overwrite assumptions in the UTXO set.",
+      "sourceId": "source.bitcoin-dev-project-explained-posts",
+      "notes": "Direct parent captures the reference-model side of the bug without conflating it with double-spend history or malleability."
     }
   ],
   "decisions": [
@@ -3023,6 +3074,24 @@
         "source.programming-lightning"
       ],
       "notes": "Chosen after per-commitment-secrets because the commitment-transactions module exposes dedicated obscure-factor and obscured-commitment-number exercises, making this a cleaner atomic follow-up than broader wrapper lessons."
+    },
+    {
+      "id": "decision.duplicate-transaction-bug-slice",
+      "type": "scope",
+      "subject": "protocol.duplicate-transaction-bug",
+      "status": "resolved",
+      "rationale": "Add. Same explained-post consensus-cleanup lane as protocol.time-warp-attack, distinct from existing double-spend and malleability nodes, and cleaner than DKG/Shamir/Lamport/garbled-circuits given current graph parents.",
+      "relatedConceptIds": [
+        "protocol.duplicate-transaction-bug",
+        "protocol.coinbase-transaction",
+        "protocol.utxo-model",
+        "history.double-spend-problem",
+        "protocol.transaction-malleability"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-project-explained-posts"
+      ],
+      "notes": "Chosen as the next X explained-post slice because the duplicate-transaction bug survives dedupe as a specific consensus-cleanup failure mode with clearer direct parents than the currently visible custody or advanced-crypto candidates."
     },
     {
       "id": "decision.decoding-checkmultisig-slice",

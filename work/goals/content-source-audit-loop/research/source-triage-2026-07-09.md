@@ -12,8 +12,10 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 ## Bitcoin Dev Project Explained Posts
 
 - Implemented in branch: `protocol.time-warp-attack`
+- Implemented in branch: `protocol.duplicate-transaction-bug`
 - Source context: `Great Consensus Cleanup explained Part 1: Time Warp Attack`
-- Reason: Bitcoin-native consensus exploit bridge between difficulty adjustment and timestamp constraints
+- Source context: `Duplicate transaction bug explained`
+- Reason: Bitcoin-native consensus-cleanup bug branch covering timestamp manipulation and txid uniqueness failures
 
 ## Cypherpunk Library
 

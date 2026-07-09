@@ -11398,6 +11398,56 @@
       ]
     },
     {
+      "id": "protocol.duplicate-transaction-bug",
+      "title": "Duplicate Transaction Bug",
+      "description": "Early Bitcoin allowed some coinbase transactions to be duplicated with identical txids, which could confuse UTXO references that assumed every prior transaction id was unique. BIP 30 blocked most duplicates, BIP 34 enforced unique coinbase heights, and later cleanup proposals remove the remaining special-case burden.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.coinbase-transaction",
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Duplicate Transactions",
+          "url": "https://bitcoinops.org/en/topics/duplicate-transactions/",
+          "notes": "Canonical overview of why identical txids were dangerous and how Bitcoin constrained them over time."
+        },
+        {
+          "type": "article",
+          "title": "BIP 30: Duplicate Transactions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki",
+          "notes": "Consensus rule that disallows most duplicate transactions whose outputs are not all spent."
+        },
+        {
+          "type": "article",
+          "title": "BIP 34: Height in Coinbase",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki",
+          "notes": "Coinbase-height commitment that makes future coinbase transactions unique and closes the main replay vector."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad transaction and UTXO reference for understanding txids, coinbase structure, and consensus uniqueness assumptions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "consensus",
+        "txids",
+        "mining"
+      ],
+      "aliases": [
+        "bip 30",
+        "duplicate txid bug",
+        "duplicate coinbase bug"
+      ]
+    },
+    {
       "id": "protocol.dust-policy",
       "title": "Dust Policy",
       "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
