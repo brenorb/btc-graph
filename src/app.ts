@@ -132,9 +132,17 @@ function createLayout(root: HTMLElement) {
     <div class="layout">
       <header class="header">
         <div class="brand">
-          <span class="brand-mark-stack" aria-hidden="true">
-            <img class="brand-mark brand-mark-light" src="${LOGO_MARK_URL}" alt="" width="40" height="52" />
-            <img class="brand-mark brand-mark-dark" src="${LOGO_MARK_WHITE_URL}" alt="" width="40" height="52" />
+          <span class="brand-mark-frame" aria-hidden="true">
+            <img
+              class="brand-mark"
+              data-theme-logo
+              data-logo-light="${LOGO_MARK_URL}"
+              data-logo-dark="${LOGO_MARK_WHITE_URL}"
+              src="${LOGO_MARK_URL}"
+              alt=""
+              width="40"
+              height="52"
+            />
           </span>
           <div class="brand-copy">
             <h1 class="brand-title">Bitcoin Learning Graph</h1>
@@ -312,7 +320,16 @@ function createLayout(root: HTMLElement) {
 
       <footer class="site-footer">
         <div class="footer-main">
-          <img class="footer-mark" src="${LOGO_MARK_URL}" alt="" width="30" height="39" />
+          <img
+            class="footer-mark"
+            data-theme-logo
+            data-logo-light="${LOGO_MARK_URL}"
+            data-logo-dark="${LOGO_MARK_WHITE_URL}"
+            src="${LOGO_MARK_URL}"
+            alt=""
+            width="30"
+            height="39"
+          />
           <div>
             <div class="footer-title">Bitcoin Learning Graph</div>
             <div class="meta">Static, open-source concept map for structured Bitcoin learning.</div>
@@ -407,18 +424,31 @@ function shouldAutoOpenHelpModal(storage: StorageLike | undefined) {
   return readStorageItem(storage, HELP_MODAL_STORAGE_KEY) !== "1";
 }
 
+function syncThemeLogos(theme: "light" | "dark") {
+  document.querySelectorAll<HTMLImageElement>("[data-theme-logo]").forEach((image) => {
+    const lightSrc = image.dataset.logoLight;
+    const darkSrc = image.dataset.logoDark;
+    const nextSrc = theme === "dark" ? darkSrc : lightSrc;
+    if (nextSrc) {
+      image.src = nextSrc;
+    }
+  });
+}
+
 function themeSetup(storage: StorageLike | undefined) {
   const themeRoot = document.documentElement;
   const stored = readStorageItem(storage, "btc-graph-theme");
   const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const theme = resolveInitialTheme(stored, preferredDark);
   themeRoot.dataset.theme = theme;
+  syncThemeLogos(theme);
 
   const button = document.querySelector<HTMLButtonElement>("#theme-toggle");
   button?.addEventListener("click", () => {
     const currentTheme = themeRoot.dataset.theme === "dark" ? "dark" : "light";
     const nextTheme = resolveNextTheme(currentTheme);
     themeRoot.dataset.theme = nextTheme;
+    syncThemeLogos(nextTheme);
     writeStorageItem(storage, "btc-graph-theme", nextTheme);
   });
 }
