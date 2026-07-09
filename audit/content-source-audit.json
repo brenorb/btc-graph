@@ -155,7 +155,7 @@
       "pageClustersTracked": 3,
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
-      "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups and transaction metadata remain follow-up candidates."
+      "notes": "First Bitcoin Design implementation slice. The current additive winner is custody.human-readable-addresses; encrypted cloud backups remains the main deferred neighbor from this design source family."
     },
     {
       "id": "source.bitcoin-design-wallet-activity",
@@ -173,6 +173,23 @@
       "conceptsExtracted": 2,
       "conceptsNormalized": 1,
       "notes": "Second Bitcoin Design implementation slice. The current additive winner is custody.transaction-metadata; encrypted cloud backups remains the main deferred design-side candidate."
+    },
+    {
+      "id": "source.bitcoin-design-multiple-wallets",
+      "name": "Bitcoin Design Multiple Wallets",
+      "url": "https://bitcoin.design/guide/multiple-wallets/",
+      "sourceType": "guide-cluster",
+      "priority": "P1",
+      "scope": "User-facing wallet architecture around separating funds by purpose, ownership, and security model inside one application.",
+      "clusterStrategy": "Track the multiple-wallets page separately so purpose-based wallet separation stays distinct from account-path mechanics, backup flows, and generic wallet activity metadata.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 1,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Third Bitcoin Design implementation slice. The current additive winner is custody.multiple-wallets; encrypted cloud backups remains deferred because it overlaps too heavily with backups-recovery."
     }
   ],
   "concepts": [
@@ -1345,6 +1362,40 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next design-side slice because it adds a clear wallet-data concept without collapsing into generic backup flows."
+    },
+    {
+      "id": "custody.multiple-wallets",
+      "title": "Multiple Wallets",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-design-multiple-wallets",
+      "sourceUrl": "https://bitcoin.design/guide/multiple-wallets/",
+      "sourceContext": "Bitcoin Design guide page: Multiple Wallets",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific wallet-architecture concept: separating funds into distinct wallets for different purposes, owners, or security models inside one application. This is narrower than generic wallet UX, narrower than HD account-path mechanics, and narrower than backup strategy discussions.",
+      "candidatePrerequisites": [
+        "custody.self-custody",
+        "custody.multisig",
+        "custody.watch-only-wallets",
+        "custody.hd-wallets"
+      ],
+      "chosenPrerequisites": [
+        "custody.self-custody"
+      ],
+      "prerequisiteRationale": "Learners first need the operational idea that custody decisions shift responsibility and risk management onto the user. Multisig and watch-only wallets are important examples inside multi-wallet setups, and HD wallets can implement the structure, but those are neighboring wallet types or mechanisms rather than prerequisites for understanding purpose-based wallet separation itself.",
+      "aliases": [
+        "multi-wallet setup",
+        "wallet compartmentalization",
+        "multiple wallet management"
+      ],
+      "tags": [
+        "wallets",
+        "ux",
+        "custody"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen over encrypted cloud backups and wallet-encryption because the design page is really about custody architecture and purposeful wallet separation, not about backup transport or at-rest key protection."
     }
   ],
   "edges": [
@@ -1644,6 +1695,15 @@
       "rationale": "Wallet-added names, notes, and contact links matter partly because transaction history is only pseudonymous and can reveal meaningful patterns when users or tools correlate activity over time.",
       "sourceId": "source.bitcoin-design-wallet-activity",
       "notes": "Direct edge keeps the node tied to the privacy and identity meaning of payment history rather than only to generic lifecycle sequencing."
+    },
+    {
+      "from": "custody.self-custody",
+      "to": "custody.multiple-wallets",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Deliberately separating funds across different wallet buckets is a custody decision, so learners need the base self-custody responsibility model before the organizational pattern makes sense.",
+      "sourceId": "source.bitcoin-design-multiple-wallets",
+      "notes": "Kept the direct parent at the responsibility-model layer; multisig, watch-only, and HD account structures remain examples or implementation details rather than prerequisites."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2380,6 +2440,28 @@
         "source.bitcoin-core-academy-wallet"
       ],
       "notes": "Kept the node focused on names, notes, tags, and portability at the payment-history layer so it stays distinct from UTXO labeling, contact import flows, and backup mechanics."
+    },
+    {
+      "id": "decision.multiple-wallets-slice",
+      "type": "scope",
+      "subject": "custody.multiple-wallets",
+      "status": "resolved",
+      "rationale": "The cleanest next Bitcoin Design slice after transaction metadata is custody.multiple-wallets. It captures the wallet-architecture pattern of separating funds across distinct wallet roles inside one app, while encrypted cloud backups and wallet-encryption still overlap more heavily with the existing backup and passphrase branches.",
+      "relatedConceptIds": [
+        "custody.multiple-wallets",
+        "custody.self-custody",
+        "custody.watch-only-wallets",
+        "custody.multisig",
+        "custody.hd-wallets",
+        "custody.encrypted-cloud-backups",
+        "custody.wallet-encryption"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-design-multiple-wallets",
+        "source.bitcoin-design-wallet-activity",
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Kept the node focused on purpose-based wallet separation so it does not collapse into BIP44 account-path mechanics, view-only inheritance as a standalone leaf, or generic backup simplification."
     }
   ]
 }
