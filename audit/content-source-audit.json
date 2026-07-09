@@ -3021,7 +3021,7 @@
       "type": "merge",
       "subject": "protocol.scriptless-scripts",
       "status": "resolved",
-      "rationale": "Do not add scriptless scripts as a standalone node. In the current graph it remains an umbrella label spanning adaptor signatures, DLEQ-assisted constructions, PTLCs, DLCs, and related privacy-preserving contract techniques rather than one atomic learner-facing concept boundary.",
+      "rationale": "Do not add scriptless scripts as a standalone node. In the current graph it remains a cross-domain umbrella label spanning adaptor signatures, DLEQ-assisted constructions, atomic swaps, PTLCs, DLCs, and related privacy-preserving contract techniques rather than one atomic learner-facing concept boundary.",
       "relatedConceptIds": [
         "protocol.scriptless-scripts",
         "protocol.adaptor-signatures",

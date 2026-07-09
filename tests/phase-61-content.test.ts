@@ -35,6 +35,17 @@ describe("phase 61 scriptless scripts merge handling", () => {
     expect(node.aliases).toContain("scriptless scripts");
     expect(node.description.toLowerCase()).toContain("scriptless");
     expect(node.description.toLowerCase()).not.toContain("lightning-only");
+    expect(node.description.toLowerCase()).toContain("atomic swaps");
+  });
+
+  it("keeps neighboring scriptless primitives framed beyond lightning", () => {
+    const node = byId.get("protocol.discrete-log-equivalency");
+    expect(node).toBeTruthy();
+    if (!node) return;
+
+    expect(node.description.toLowerCase()).toContain("atomic swaps");
+    expect(node.description.toLowerCase()).toContain("dlc");
+    expect(node.resources.some((resource) => resource.type === "book" && resource.title === "Mastering Bitcoin")).toBe(true);
   });
 
   it("keeps adaptor signatures curated and book-covered", () => {
