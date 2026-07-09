@@ -122,6 +122,23 @@
       "conceptsExtracted": 3,
       "conceptsNormalized": 1,
       "notes": "First additional-source pass beyond the mandatory seed list. The current additive winner is dev.scriptpubkeymanagers; wallet-encryption and mempool-unbroadcast-set remain follow-up candidates from the same source family."
+    },
+    {
+      "id": "source.bitcoin-core-academy-mempool",
+      "name": "Bitcoin Core Academy Mempool Mechanics",
+      "url": "https://bitcoincore.academy/mempool-unbroadcast.html",
+      "sourceType": "course-cluster",
+      "priority": "P1",
+      "scope": "Mempool and relay internals cluster around transaction relay, rebroadcast behavior, and local node transaction state.",
+      "clusterStrategy": "Track the academy mempool pages as a separate cluster so implementation-specific relay mechanisms are not collapsed into generic mempool coverage.",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Normalized candidate",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 1,
+      "notes": "Second post-seed-source slice. The current additive winner is protocol.mempool-unbroadcast-set; broader rebroadcast and transaction-format internals remain follow-up material."
     }
   ],
   "concepts": [
@@ -1192,6 +1209,40 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Chosen as the first additive concept from the post-seed source expansion pass."
+    },
+    {
+      "id": "protocol.mempool-unbroadcast-set",
+      "title": "Mempool Unbroadcast Set",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "sourceUrl": "https://bitcoincore.academy/mempool-unbroadcast.html",
+      "sourceContext": "Mempool cluster: Mempool unbroadcast set plus Transaction relay",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "One specific Bitcoin Core mempool mechanism for tracking locally submitted transactions that have not yet been confirmed as propagated. This is narrower than generic mempool policy and narrower than the full transaction relay pipeline.",
+      "candidatePrerequisites": [
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata",
+        "dev.p2p-messages"
+      ],
+      "chosenPrerequisites": [
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata"
+      ],
+      "prerequisiteRationale": "Learners need the mempool as the local transaction pool and the inv/getdata relay flow that supplies or confirms network knowledge of transactions. dev.p2p-messages is already inherited transitively through protocol.transaction-relay-inv-getdata, so it would be redundant as a direct edge.",
+      "aliases": [
+        "unbroadcast txids",
+        "m_unbroadcast_txids",
+        "unbroadcast set"
+      ],
+      "tags": [
+        "mempool",
+        "relay",
+        "bitcoin-core"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Chosen as the cleanest next additive academy slice after scriptpubkey managers."
     }
   ],
   "edges": [
@@ -1446,6 +1497,24 @@
       "rationale": "Modern descriptor wallets hand descriptor-backed script templates to dedicated managers, so learners need the descriptor model before the SPKM boundary makes sense.",
       "sourceId": "source.bitcoin-core-academy-wallet",
       "notes": "Direct edge distinguishes the Core wallet abstraction from descriptor syntax without collapsing the two concepts into one node."
+    },
+    {
+      "from": "protocol.mempool",
+      "to": "protocol.mempool-unbroadcast-set",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The unbroadcast set is a mempool-owned data structure, so learners need the local unconfirmed transaction pool model before this narrower tracking mechanism makes sense.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Direct edge keeps the concept scoped to local transaction state rather than broader relay policy."
+    },
+    {
+      "from": "protocol.transaction-relay-inv-getdata",
+      "to": "protocol.mempool-unbroadcast-set",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "This set only matters because nodes need to distinguish locally submitted transactions from those later observed through the network relay path and may retry announcing them.",
+      "sourceId": "source.bitcoin-core-academy-mempool",
+      "notes": "Direct edge ties the mechanism to network propagation confirmation and rebroadcast attempts."
     },
     {
       "from": "fundamentals.schnorr-signatures",
@@ -2121,6 +2190,26 @@
         "source.bitcoin-core-academy-wallet"
       ],
       "notes": "Chosen over wallet-encryption because passphrase and general custody security already give that area partial coverage, and over mempool-unbroadcast-set because the academy gap is clearer on the wallet-internals side."
+    },
+    {
+      "id": "decision.mempool-unbroadcast-set-slice",
+      "type": "scope",
+      "subject": "protocol.mempool-unbroadcast-set",
+      "status": "resolved",
+      "rationale": "The cleanest next additive academy slice after scriptpubkey managers is protocol.mempool-unbroadcast-set. It captures one specific local-node relay mechanism that is not already represented by the generic mempool, relay, or policy nodes, while wallet-encryption still overlaps with the existing seed-passphrase and self-custody coverage unless its scope is handled much more carefully later.",
+      "relatedConceptIds": [
+        "protocol.mempool-unbroadcast-set",
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata",
+        "dev.p2p-messages",
+        "custody.passphrase",
+        "custody.self-custody"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-academy-mempool",
+        "source.bitcoin-core-academy-wallet"
+      ],
+      "notes": "Kept dev.p2p-messages out of the direct prerequisites because it is already inherited through transaction relay, and deferred wallet-encryption for a later pass that can better distinguish disk encryption from mnemonic passphrases and generic custody hygiene."
     }
   ]
 }

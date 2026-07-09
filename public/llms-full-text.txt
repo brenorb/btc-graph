@@ -151,7 +151,7 @@ Mining (19 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (48 concepts)
+Network, Relay & Client Sync (49 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -177,6 +177,7 @@ Network, Relay & Client Sync (48 concepts)
 - Light Client Trust Model: Light clients reduce bandwidth and storage costs by delegating part of validation to full nodes and peers, which changes what they can verify for themselves. Understanding this trust model clarifies the tradeoffs between full nodes, legacy SPV, and compact-filter clients.
 - Mempool: How unconfirmed transactions propagate, queue, and get filtered by local node policy.
 - Mempool Policy: Standardness, relay policy, and transaction propagation behavior.
+- Mempool Unbroadcast Set: Bitcoin Core tracks locally submitted transactions that are in the mempool but not yet verified as seen by the wider network in an unbroadcast set. This explains why nodes remember some txids for later rebroadcast attempts instead of treating mempool admission as proof of propagation.
 - Mesh Networks: Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.
 - Node Hardware Sizing: CPU, RAM, disk, and network requirements by workload.
 - Package Relay: Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.

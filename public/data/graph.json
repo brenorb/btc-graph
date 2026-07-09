@@ -11552,6 +11552,50 @@
       ]
     },
     {
+      "id": "protocol.mempool-unbroadcast-set",
+      "title": "Mempool Unbroadcast Set",
+      "description": "Bitcoin Core tracks locally submitted transactions that are in the mempool but not yet verified as seen by the wider network in an unbroadcast set. This explains why nodes remember some txids for later rebroadcast attempts instead of treating mempool admission as proof of propagation.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Unbroadcast Set",
+          "url": "https://bitcoincore.academy/mempool-unbroadcast.html",
+          "notes": "Primary explanation of m_unbroadcast_txids, removal conditions, and periodic rebroadcast attempts."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction Relay",
+          "url": "https://bitcoincore.academy/transaction-relay.html",
+          "notes": "Provides the surrounding relay and rebroadcast context that makes the unbroadcast set useful."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, mempool handling, and node behavior around unconfirmed transactions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mempool",
+        "relay",
+        "bitcoin-core"
+      ],
+      "aliases": [
+        "unbroadcast txids",
+        "m_unbroadcast_txids",
+        "unbroadcast set"
+      ]
+    },
+    {
       "id": "protocol.musig",
       "title": "MuSig",
       "description": "MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.",
