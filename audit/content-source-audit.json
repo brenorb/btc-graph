@@ -136,9 +136,9 @@
       "extractionStatus": "Normalized",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added from user direction. High-signal starting texts from the collection include A Cypherpunk's Manifesto, The Crypto Anarchist Manifesto, Your Secret Right to Cash, Protecting Privacy with Electronic Cash, The Beauty of eCash, The Cyphernomicon, Ideal Money and Asymptotically Ideal Money, and 21 Lessons. Implemented from this source in the current branch: history.chaumian-ecash. Merged into existing coverage in the current branch: history.cypherpunks via A Cypherpunk's Manifesto; history.bitcoin-anarchism via The Crypto Anarchist Manifesto."
     },
     {
       "id": "source.bitcoin-dev-project-explained-posts",
@@ -1896,6 +1896,35 @@
       "notes": "Merge into history.cypherpunks. Preserve discoverability through aliases and a primary-source resource instead of creating a separate manifesto node."
     },
     {
+      "id": "history.crypto-anarchist-manifesto",
+      "title": "The Crypto Anarchist Manifesto",
+      "category": "History & Governance",
+      "sourceId": "source.cypherpunk-library-bitcoin-adjacent",
+      "sourceUrl": "https://www.cypherpunkbooks.com/book/the-crypto-anarchist-manifesto",
+      "sourceContext": "The Crypto Anarchist Manifesto by Timothy C. May",
+      "existingNodeId": "history.bitcoin-anarchism",
+      "status": "merge",
+      "atomicityRationale": "The text is foundational and high-signal, but in the graph it works best as a canonical primary source for the existing Bitcoin-and-anarchism history node rather than as a separate learner-facing concept boundary.",
+      "candidatePrerequisites": [
+        "history.bitcoin-anarchism"
+      ],
+      "chosenPrerequisites": [
+        "history.bitcoin-anarchism"
+      ],
+      "prerequisiteRationale": "If learners encounter the manifesto title, the cleanest direct grounding concept is the existing Bitcoin and Anarchism node. The manifesto sharpens that framing, but does not survive dedupe as a separate prerequisite leaf.",
+      "aliases": [
+        "crypto anarchist manifesto"
+      ],
+      "tags": [
+        "history",
+        "privacy",
+        "cypherpunk"
+      ],
+      "estimatedTime": "0m",
+      "confidence": "high",
+      "notes": "Merge The Crypto Anarchist Manifesto into history.bitcoin-anarchism; preserve discoverability via alias and a source-page resource, with no standalone node."
+    },
+    {
       "id": "lightning.obscured-commitment-number",
       "title": "Obscured Commitment Number",
       "category": "Extension Systems",
@@ -3144,6 +3173,23 @@
         "source.cypherpunk-library-bitcoin-adjacent"
       ],
       "notes": "The manifesto is a foundational primary source for the movement-level history node, but it does not survive dedupe as a separate atomic concept once the graph already has the Cypherpunk Movement bridge node."
+    },
+    {
+      "id": "decision.merge-crypto-anarchist-manifesto",
+      "type": "merge",
+      "subject": "history.crypto-anarchist-manifesto",
+      "status": "resolved",
+      "rationale": "Merge The Crypto Anarchist Manifesto into history.bitcoin-anarchism; do not add a separate manifesto node.",
+      "relatedConceptIds": [
+        "history.crypto-anarchist-manifesto",
+        "history.bitcoin-anarchism",
+        "history.cypherpunks",
+        "history.pre-bitcoin-digital-cash"
+      ],
+      "relatedSourceIds": [
+        "source.cypherpunk-library-bitcoin-adjacent"
+      ],
+      "notes": "The manifesto is a foundational primary source for Bitcoin's anarchist and cypherpunk framing, but it works better as discoverability and sourcing on the existing node than as a duplicate manifesto-level concept."
     },
     {
       "id": "decision.obscured-commitment-number-slice",

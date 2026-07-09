@@ -10,6 +10,12 @@
     {
       "type": "article",
       "title": "The Crypto Anarchist Manifesto",
+      "url": "https://www.cypherpunkbooks.com/book/the-crypto-anarchist-manifesto",
+      "notes": "Cypherpunk Library source page anchoring the manifesto inside the broader canon that shaped Bitcoin's non-coercive governance ethos."
+    },
+    {
+      "type": "article",
+      "title": "The Crypto Anarchist Manifesto",
       "url": "https://nakamotoinstitute.org/library/crypto-anarchist-manifesto/",
       "notes": "Foundational cypherpunk framing for non-state digital coordination."
     },
@@ -36,6 +42,7 @@
   ],
   "aliases": [
     "bitcoin is not democracy",
-    "anarchism and bitcoin"
+    "anarchism and bitcoin",
+    "crypto anarchist manifesto"
   ]
 }

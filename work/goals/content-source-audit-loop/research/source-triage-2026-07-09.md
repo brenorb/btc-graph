@@ -23,6 +23,7 @@ Preserve the strongest pending source-family findings from the 2026-07-09 subage
 
 - Implemented in branch: `history.chaumian-ecash`
 - Merged in branch: `A Cypherpunk's Manifesto` -> `history.cypherpunks`
+- Merged in branch: `The Crypto Anarchist Manifesto` -> `history.bitcoin-anarchism`
 - Source cluster: `Protecting Privacy with Electronic Cash` and `The Beauty of eCash`
-- Source cluster: `A Cypherpunk's Manifesto`, `Protecting Privacy with Electronic Cash`, and `The Beauty of eCash`
+- Source cluster: `A Cypherpunk's Manifesto`, `The Crypto Anarchist Manifesto`, `Protecting Privacy with Electronic Cash`, and `The Beauty of eCash`
 - Reason: preserve the movement's primary source inside existing history coverage while adding the historical digital-cash bridge as its own node
