@@ -1,0 +1,15 @@
+{
+  "id": "extension.client-side-validation",
+  "title": "Client-Side Validation",
+  "description": "Client-side validation lets the recipient validate an offchain asset's transition history and contract rules, using Bitcoin UTXOs as single-use seals instead of asking full nodes to enforce the asset's state.",
+  "category": "Extension Systems",
+  "prerequisites": ["extension.single-use-seals", "protocol.pay-to-contract"],
+  "resources": [
+    {"type":"article","title":"Mastering Bitcoin: Applications","url":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","notes":"Describes client-side validation, single-use seals, and recipient verification for application-layer assets."},
+    {"type":"article","title":"Bitcoin Optech: Client-Side Validation","url":"https://bitcoinops.org/en/topics/client-side-validation/","notes":"Terminology and current ecosystem context for validation performed by asset participants rather than Bitcoin full nodes."},
+    {"type":"book","title":"Mastering Bitcoin","url":"https://amzn.to/4ro0NdG","notes":"Long-form treatment of UTXOs and application-layer protocols.","regionalUrls":{"BR":"https://amzn.to/4te47JX"}}
+  ],
+  "estimatedTime":"40m",
+  "tags":["assets","validation","utxos","contracts","rgb"],
+  "aliases":["recipient-side validation","client validated assets","single-use seals"]
+}

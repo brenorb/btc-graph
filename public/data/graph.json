@@ -3838,6 +3838,52 @@
       ]
     },
     {
+      "id": "extension.client-side-validation",
+      "title": "Client-Side Validation",
+      "description": "Client-side validation lets the recipient validate an offchain asset's transition history and contract rules, using Bitcoin UTXOs as single-use seals instead of asking full nodes to enforce the asset's state.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.single-use-seals",
+        "protocol.pay-to-contract"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Applications",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc",
+          "notes": "Describes client-side validation, single-use seals, and recipient verification for application-layer assets."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Client-Side Validation",
+          "url": "https://bitcoinops.org/en/topics/client-side-validation/",
+          "notes": "Terminology and current ecosystem context for validation performed by asset participants rather than Bitcoin full nodes."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Long-form treatment of UTXOs and application-layer protocols.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "assets",
+        "validation",
+        "utxos",
+        "contracts",
+        "rgb"
+      ],
+      "aliases": [
+        "recipient-side validation",
+        "client validated assets",
+        "single-use seals"
+      ]
+    },
+    {
       "id": "extension.coinpools",
       "title": "Coinpools",
       "description": "Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.",
@@ -4326,6 +4372,44 @@
       ],
       "aliases": [
         "two-way pegs"
+      ]
+    },
+    {
+      "id": "extension.single-use-seals",
+      "title": "Single-Use Seals",
+      "description": "A single-use seal binds an offchain state transition to a UTXO that can be spent only once. Spending the outpoint closes the old seal and prevents the same state transition from being valid twice.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Applications",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc",
+          "notes": "Explains how Bitcoin outpoints provide single-use seals for client-side validated systems."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background on UTXOs and application-layer protocols.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "utxos",
+        "commitments",
+        "assets",
+        "contracts"
+      ],
+      "aliases": [
+        "single use seals",
+        "UTXO seals",
+        "outpoint seals"
       ]
     },
     {
@@ -13876,6 +13960,52 @@
         "partial merkle trees",
         "SPV proofs",
         "merkleblock proofs"
+      ]
+    },
+    {
+      "id": "protocol.pay-to-contract",
+      "title": "Pay to Contract (P2C)",
+      "description": "Pay to Contract commits to offchain contract data by tweaking a public key with a hash-derived value, producing a payment destination that proves the commitment without placing the contract data onchain.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Applications",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc",
+          "notes": "Explains how key tweaking publicly commits to an external contract without revealing it onchain."
+        },
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Authorization and Authentication",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch07_authorization-authentication.adoc",
+          "notes": "Provides the public-key and signature context for key-based commitments."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Long-form treatment of Bitcoin keys, commitments, and application constructions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "contracts",
+        "keys",
+        "commitments",
+        "privacy",
+        "applications"
+      ],
+      "aliases": [
+        "P2C",
+        "pay-to-contract protocol",
+        "key tweak commitment"
       ]
     },
     {

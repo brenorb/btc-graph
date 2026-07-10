@@ -68,9 +68,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
-      "conceptsExtracted": 25,
-      "conceptsNormalized": 13,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, protocol.witness-structure, and protocol.partial-merkle-proofs."
+      "conceptsExtracted": 28,
+      "conceptsNormalized": 16,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, protocol.witness-structure, protocol.partial-merkle-proofs, protocol.pay-to-contract, extension.single-use-seals, and extension.client-side-validation."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -3279,7 +3279,10 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Added after deduping against mining.pool-shares, mining.pool-vs-solo, mining.51-percent-attack, and mining.miner-decentralization. Keep selfish mining as a separate chain-construction strategy rather than collapsing it into this pool-accounting attack."
-    }
+    },
+    {"id":"protocol.pay-to-contract","title":"Pay to Contract (P2C)","category":"Protocol & Consensus","sourceId":"source.mastering-bitcoin-book-map","sourceUrl":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","sourceContext":"Mastering Bitcoin chapters 7 and 14: pay-to-contract commitments","existingNodeId":"","status":"new","atomicityRationale":"One key-tweak commitment construction, distinct from generic hashing, Taproot, DLCs, and script contracts.","candidatePrerequisites":["fundamentals.public-private-keys","fundamentals.hash-functions","protocol.taproot"],"chosenPrerequisites":["fundamentals.public-private-keys","fundamentals.hash-functions"],"prerequisiteRationale":"Public keys and hash commitments are the direct construction. Taproot is an adjacent use of key tweaking, not required to understand P2C.","aliases":["P2C","pay-to-contract protocol","key tweak commitment"],"tags":["contracts","keys","commitments","privacy","applications"],"estimatedTime":"35m","confidence":"high","notes":"Added after deduping against Taproot, DLCs, commitment schemes, and Script; it is the missing generic public-key commitment pattern."},
+    {"id":"extension.single-use-seals","title":"Single-Use Seals","category":"Extension Systems","sourceId":"source.mastering-bitcoin-book-map","sourceUrl":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","sourceContext":"Mastering Bitcoin chapter 14: UTXO single-use seals","existingNodeId":"","status":"new","atomicityRationale":"One bridge concept: an outpoint can bind an offchain state transition exactly once because it can only be spent once.","candidatePrerequisites":["protocol.utxo-model"],"chosenPrerequisites":["protocol.utxo-model"],"prerequisiteRationale":"The UTXO model supplies the one-time spend property that makes the seal meaningful.","aliases":["single use seals","UTXO seals","outpoint seals"],"tags":["utxos","commitments","assets","contracts"],"estimatedTime":"25m","confidence":"high","notes":"Added as the explicit bridge between UTXO semantics and client-side validation; do not hide the core invariant inside either neighbor."},
+    {"id":"extension.client-side-validation","title":"Client-Side Validation","category":"Extension Systems","sourceId":"source.mastering-bitcoin-book-map","sourceUrl":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","sourceContext":"Mastering Bitcoin chapter 14: client-side validation and single-use seals","existingNodeId":"","status":"new","atomicityRationale":"One application-layer validation model where recipients validate offchain asset history and rules, distinct from Bitcoin full-node validation.","candidatePrerequisites":["extension.single-use-seals","protocol.pay-to-contract","fundamentals.validation-sovereignty"],"chosenPrerequisites":["extension.single-use-seals","protocol.pay-to-contract"],"prerequisiteRationale":"Single-use seals provide the one-time transition invariant and P2C provides contract anchoring. Validation sovereignty is related Bitcoin-layer framing, not a direct prerequisite.","aliases":["recipient-side validation","client validated assets"],"tags":["assets","validation","utxos","contracts","rgb"],"estimatedTime":"40m","confidence":"high","notes":"Added after deduping against validation sovereignty and RGB-adjacent labels. It is a distinct application-layer model rather than a second full-node concept."}
   ],
   "edges": [
     {
@@ -4199,7 +4202,12 @@
       "rationale": "Block withholding exploits the difference between a pool-paid share and a share that also meets the network target, so learners must understand share accounting before the attack model makes sense.",
       "sourceId": "source.bitcoinops-topics",
       "notes": "Pool-versus-solo and mining economics are inherited through mining.pool-shares; do not add a redundant majority-attack edge."
-    }
+    },
+    {"from":"fundamentals.public-private-keys","to":"protocol.pay-to-contract","type":"prerequisite","status":"proposed","rationale":"P2C tweaks a public key to commit to contract data, so learners need the public/private key model.","sourceId":"source.mastering-bitcoin-book-map","notes":"Taproot is adjacent, not a direct requirement."},
+    {"from":"fundamentals.hash-functions","to":"protocol.pay-to-contract","type":"prerequisite","status":"proposed","rationale":"P2C derives a commitment tweak from contract data using a hash, so learners need hash commitments first.","sourceId":"source.mastering-bitcoin-book-map","notes":"The hash is part of the construction rather than generic background."},
+    {"from":"protocol.utxo-model","to":"extension.single-use-seals","type":"prerequisite","status":"proposed","rationale":"Single-use seals rely on a UTXO's one-time spend property.","sourceId":"source.mastering-bitcoin-book-map","notes":"This explicit bridge prevents hiding the seal invariant inside generic UTXO semantics."},
+    {"from":"extension.single-use-seals","to":"extension.client-side-validation","type":"prerequisite","status":"proposed","rationale":"Client-side validation relies on seals to prevent an offchain transition from being valid twice.","sourceId":"source.mastering-bitcoin-book-map","notes":"The UTXO parent is inherited through the seal and is intentionally not duplicated."},
+    {"from":"protocol.pay-to-contract","to":"extension.client-side-validation","type":"prerequisite","status":"proposed","rationale":"Client-side validation uses cryptographic commitments to bind offchain asset rules and transitions, so P2C supplies the contract-anchoring mechanism.","sourceId":"source.mastering-bitcoin-book-map","notes":"Keep this direct edge: it prevents treating client-side validation as a vague UTXO-only extension."}
   ],
   "decisions": [
     {
