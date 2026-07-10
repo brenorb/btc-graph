@@ -135,10 +135,10 @@
       "crawlStatus": "In progress",
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
-      "pageClustersTracked": 6,
-      "conceptsExtracted": 3,
-      "conceptsNormalized": 3,
-      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags, lightning.onion-messages, and lightning.encrypted-authenticated-transport."
+      "pageClustersTracked": 7,
+      "conceptsExtracted": 4,
+      "conceptsNormalized": 4,
+      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags, lightning.onion-messages, lightning.encrypted-authenticated-transport, and lightning.dns-seeds."
     },
     {
       "id": "source.bitcoin-bips",
@@ -3133,6 +3133,44 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Added after deduping against protocol.cluster-mempool, ops.mempool-policy, protocol.package-relay, protocol.package-rbf, protocol.cpfp, and v3 transaction relay. This is a noun-level policy concept rather than an API wrapper."
+    },
+    {
+      "id": "lightning.dns-seeds",
+      "title": "Lightning DNS Seeds",
+      "category": "Extension Systems",
+      "sourceId": "source.lightning-bolts",
+      "sourceUrl": "https://github.com/lightning/bolts/blob/master/10-dns-bootstrap.md",
+      "sourceContext": "BOLT 10: DNS Bootstrap and Assisted Node Location",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one Lightning discovery mechanism: DNS-assisted bootstrap and known-peer location using Lightning-specific realms, address-type filters, node-ID queries, and DNS reply records. It is narrower than generic DNS seeding and distinct from gossip's ongoing topology dissemination.",
+      "candidatePrerequisites": [
+        "ops.dns-seeds",
+        "lightning.gossip-protocol",
+        "ops.peer-discovery",
+        "lightning.routing"
+      ],
+      "chosenPrerequisites": [
+        "ops.dns-seeds",
+        "lightning.gossip-protocol"
+      ],
+      "prerequisiteRationale": "Generic DNS seeds supply the bootstrap model, while Lightning gossip supplies the network-specific node-discovery context that BOLT 10 supplements. Peer discovery and routing are already inherited through those parents and are not additional direct prerequisites.",
+      "aliases": [
+        "Lightning DNS bootstrap",
+        "DNS bootstrap",
+        "assisted node location",
+        "BOLT 10"
+      ],
+      "tags": [
+        "lightning",
+        "dns",
+        "peer-discovery",
+        "networking",
+        "gossip"
+      ],
+      "estimatedTime": "40m",
+      "confidence": "high",
+      "notes": "Added after deduping against ops.dns-seeds, lightning.gossip-protocol, peer-discovery, and routing concepts. This is a Lightning protocol mechanism, not a function/API wrapper."
     }
   ],
   "edges": [
@@ -3999,6 +4037,24 @@
       "rationale": "Cluster limits bound connected transaction sets, so learners need the cluster-mempool model before understanding why count and aggregate virtual-size limits replace legacy ancestor/descendant limits.",
       "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
       "notes": "Package relay, Package RBF, CPFP, and version 3 relay remain affected workflows or neighboring policy mechanisms rather than direct prerequisites."
+    },
+    {
+      "from": "ops.dns-seeds",
+      "to": "lightning.dns-seeds",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Lightning DNS seeds specialize the general DNS bootstrap pattern with Lightning-specific query filters and known-peer lookup, so learners need the base DNS-seed model first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Peer discovery is inherited through ops.dns-seeds; generic Bitcoin P2P bootstrapping remains a parent concept rather than a duplicated edge."
+    },
+    {
+      "from": "lightning.gossip-protocol",
+      "to": "lightning.dns-seeds",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "BOLT 10 locates Lightning peers and filters results by Lightning address information, so learners need Lightning's node-discovery and gossip context before understanding the assisted-location mechanism.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Lightning routing and generic P2P messages are inherited through gossip rather than added as transitive prerequisites."
     }
   ],
   "decisions": [
@@ -5599,6 +5655,24 @@
         "source.bitcoin-core-cluster-mempool-rpc"
       ],
       "notes": "Added with only protocol.cluster-mempool as the direct prerequisite. Keep legacy ancestor/descendant limits, CPFP carve-out, TRUC, and package-RBF as related mechanisms rather than redundant direct edges."
+    },
+    {
+      "id": "decision.lightning-dns-seeds-slice",
+      "type": "scope",
+      "subject": "lightning.dns-seeds",
+      "status": "resolved",
+      "rationale": "BOLT 10 exposes a distinct Lightning discovery mechanism absent from the graph: use DNS not only to bootstrap unknown peers but also to locate a known Lightning node by node ID, realm, and address-type filters. It survives dedupe because generic DNS seeds lack Lightning-specific query semantics, while gossip disseminates ongoing topology rather than bootstrapping or assisted lookup.",
+      "relatedConceptIds": [
+        "lightning.dns-seeds",
+        "ops.dns-seeds",
+        "lightning.gossip-protocol",
+        "ops.peer-discovery",
+        "lightning.routing"
+      ],
+      "relatedSourceIds": [
+        "source.lightning-bolts"
+      ],
+      "notes": "Added with ops.dns-seeds and lightning.gossip-protocol as the only direct prerequisites. Keep BOLT 10's bootstrap and assisted-location outcome together; node routing is a downstream consumer, not a third direct edge."
     },
     {
       "id": "decision.function-wrapper-vs-concept-boundary",
