@@ -63,6 +63,14 @@ function hasPath(
 }
 
 describe("content graph prerequisites", () => {
+  it("avoids duplicate direct prerequisites", () => {
+    const duplicates = loadNodes()
+      .filter((node) => new Set(node.prerequisites).size !== node.prerequisites.length)
+      .map((node) => node.id);
+
+    expect(duplicates).toEqual([]);
+  });
+
   it("avoids redundant transitive direct prerequisites", () => {
     const nodes = loadNodes();
     const byId = new Map(nodes.map((node) => [node.id, node]));
