@@ -214,7 +214,7 @@ Network, Relay & Client Sync (51 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (73 concepts)
+Protocol & Consensus (74 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -268,6 +268,7 @@ Protocol & Consensus (73 concepts)
 - Sequence Locks (BIP 68): Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.
 - SIGHASH Flags: Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.
 - SIGHASH_ANYPREVOUT: ANYPREVOUT changes signature commitment semantics so updates can bind less history. It is a key enabler for eltoo-style channel update protocols.
+- Strict DER Signature Encoding: The consensus rule that requires legacy ECDSA signatures in Bitcoin script to use strict Distinguished Encoding Rules (DER), rejecting ambiguous encodings that could otherwise create multiple valid transaction representations.
 - Tagged Hashes: Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.
 - TapLeaf Inclusion Proofs: TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.
 - Taproot: Protocol upgrade enabling more private and efficient key/script spending conditions.

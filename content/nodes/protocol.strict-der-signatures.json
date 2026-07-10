@@ -1,0 +1,49 @@
+{
+  "id": "protocol.strict-der-signatures",
+  "title": "Strict DER Signature Encoding",
+  "description": "The consensus rule that requires legacy ECDSA signatures in Bitcoin script to use strict Distinguished Encoding Rules (DER), rejecting ambiguous encodings that could otherwise create multiple valid transaction representations.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 66: Strict DER Signatures",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki",
+      "notes": "Canonical specification for the deployed strict-DER consensus rule and its validation behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core BIP Implementation Index",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/bips.md",
+      "notes": "Shows how BIP 66 is implemented and deployed in Bitcoin Core."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Script Interpreter",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/src/script/interpreter.cpp",
+      "notes": "Implementation reference for signature-encoding checks during script evaluation."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Provides the signature, script, and transaction context needed to understand strict encoding rules.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "consensus",
+    "signatures",
+    "malleability"
+  ],
+  "aliases": [
+    "strict DER",
+    "BIP 66",
+    "DER-encoded signatures"
+  ]
+}

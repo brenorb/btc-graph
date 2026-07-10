@@ -141,6 +141,23 @@
       "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags and lightning.onion-messages."
     },
     {
+      "id": "source.bitcoin-bips",
+      "name": "Bitcoin Improvement Proposals",
+      "url": "https://github.com/bitcoin/bips",
+      "sourceType": "standards-repository",
+      "priority": "P0",
+      "scope": "Canonical Bitcoin Improvement Proposals covering process, consensus rules, signatures, wallet formats, applications, peer services, relay, APIs, mining, and deployment mechanisms.",
+      "clusterStrategy": "Enumerate the repository registry first, then group BIPs into consensus soft forks, signature encoding and serialization, script and output templates, wallet and payment standards, and peer/relay protocols. Treat BIPs as specification provenance rather than automatic one-to-one nodes.",
+      "status": "Inventorying",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 5,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures."
+    },
+    {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
       "name": "Cypherpunk Library Bitcoin-Adjacent Canon",
       "url": "https://www.cypherpunkbooks.com/collection",
@@ -2652,6 +2669,39 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Implemented as the next BOLTs slice after feature flags. BOLT 08 transport, BOLT 10 DNS bootstrap, and already-covered dual funding remain queued or merge/defer candidates."
+    },
+    {
+      "id": "protocol.strict-der-signatures",
+      "title": "Strict DER Signature Encoding",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-bips",
+      "sourceUrl": "https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki",
+      "sourceContext": "BIP 66: Strict DER Signatures",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific deployed consensus rule: legacy ECDSA signatures must use strict DER encoding. It is narrower than digital signatures, Script, and transaction malleability, and it isolates a concrete validation behavior rather than a broad BIP or soft-fork umbrella.",
+      "candidatePrerequisites": [
+        "protocol.script",
+        "fundamentals.digital-signatures",
+        "protocol.transaction-malleability"
+      ],
+      "chosenPrerequisites": [
+        "protocol.script"
+      ],
+      "prerequisiteRationale": "The Script node already inherits the digital-signature verification path in this graph, so it is the only direct parent needed for strict encoding checks. Transaction malleability is related historical motivation, not a necessary direct parent for understanding the rule itself.",
+      "aliases": [
+        "strict DER",
+        "BIP 66",
+        "DER-encoded signatures"
+      ],
+      "tags": [
+        "consensus",
+        "signatures",
+        "malleability"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as the first BIPs source-expansion slice. BIP 66 is treated as a specific consensus validation rule, not as a duplicate of transaction malleability or a generic soft-fork node. The direct edge is kept only on protocol.script because the digital-signature path is already inherited."
     }
   ],
   "edges": [
@@ -3419,6 +3469,15 @@
       "rationale": "Onion messages use blinded paths to forward channel-independent payloads without exposing the final destination topology, so the route-blinding model must come first.",
       "sourceId": "source.lightning-bolts",
       "notes": "Payment onion routing and BOLT12 offers remain related sibling or downstream concepts rather than direct prerequisites."
+    },
+    {
+      "from": "protocol.script",
+      "to": "protocol.strict-der-signatures",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Strict DER enforcement occurs while Script validates an ECDSA signature, so learners need the spending-condition and interpreter context first.",
+      "sourceId": "source.bitcoin-bips",
+      "notes": "Direct edge keeps the rule at the script-validation layer rather than treating BIP 66 as a broad historical upgrade topic."
     }
   ],
   "decisions": [
@@ -4818,6 +4877,22 @@
         "source.lightning-bolts"
       ],
       "notes": "Added with feature flags and route blinding as direct prerequisites. BOLT 08 Noise transport and BOLT 10 DNS bootstrap remain future source-expansion candidates."
+    },
+    {
+      "id": "decision.strict-der-signatures-slice",
+      "type": "scope",
+      "subject": "protocol.strict-der-signatures",
+      "status": "resolved",
+      "rationale": "BIP 66 describes one deployed consensus validation rule that is absent from the graph: strict DER encoding for legacy ECDSA signatures. It survives dedupe because Script supplies the inherited signature-validation path, while transaction malleability is broader historical motivation rather than the same learning outcome.",
+      "relatedConceptIds": [
+        "protocol.strict-der-signatures",
+        "protocol.script",
+        "protocol.transaction-malleability"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-bips"
+      ],
+      "notes": "Added with only protocol.script as a direct prerequisite because the graph already inherits fundamentals.digital-signatures through that path. BIP 66 is kept as the canonical alias and source anchor."
     }
   ]
 }
