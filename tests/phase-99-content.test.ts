@@ -17,7 +17,8 @@ describe("phase 99 content: miner decentralization", () => {
     const source = audit.sources.find((candidate) => candidate.id === "source.bitcoin-dev-philosophy");
     const concept = audit.concepts.find((candidate) => candidate.id === "mining.miner-decentralization");
 
-    expect(source).toMatchObject({ status: "In review", conceptsNormalized: 7 });
+    expect(source).toMatchObject({ status: "In review" });
+    expect(source?.conceptsNormalized).toBeGreaterThanOrEqual(7);
     expect(concept).toMatchObject({
       status: "new",
       chosenPrerequisites: ["protocol.nodes-vs-miners", "mining.pool-vs-solo"],

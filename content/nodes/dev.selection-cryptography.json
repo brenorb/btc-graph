@@ -1,0 +1,35 @@
+{
+  "id": "dev.selection-cryptography",
+  "title": "Selection Cryptography",
+  "description": "Selection cryptography is the practice of choosing cryptographic libraries, tools, and practices suitable for Bitcoin software by assessing their review, testing, portability, and dependency risk.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "dev.review-culture"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Development Philosophy: Selection Cryptography",
+      "url": "https://bitcoindevphilosophy.com/#selectioncryptography",
+      "notes": "Explains the decision process for choosing cryptographic tools, libraries, and practices in Bitcoin systems."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Dependencies",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md",
+      "notes": "Concrete project guidance for understanding and minimizing third-party dependency exposure."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Long-form treatment of reviewing cryptographic choices and minimizing dependency risk in Bitcoin software.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4uRjb1v"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": ["development", "cryptography", "dependencies", "security", "review"],
+  "aliases": ["cryptographic dependency selection", "choosing cryptographic libraries", "crypto library due diligence"]
+}

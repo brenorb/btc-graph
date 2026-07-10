@@ -51,9 +51,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 9,
-      "conceptsExtracted": 21,
-      "conceptsNormalized": 7,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, development review, and miner decentralization. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, dev.review-culture, and mining.miner-decentralization."
+      "conceptsExtracted": 22,
+      "conceptsNormalized": 8,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, development review, miner decentralization, and selection cryptography. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, dev.review-culture, mining.miner-decentralization, and dev.selection-cryptography."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -3207,6 +3207,42 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Added after deduping against fundamentals.censorship-resistance, protocol.nodes-vs-miners, mining.pool-vs-solo, and mining.stratum-v2. Do not add full-node decentralization as a duplicate: it is already covered by validation sovereignty and full-node concepts."
+    },
+    {
+      "id": "dev.selection-cryptography",
+      "title": "Selection Cryptography",
+      "category": "History & Governance",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/#selectioncryptography",
+      "sourceContext": "Open Source chapter 7.4 Selection cryptography",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one developer decision skill: evaluating whether a cryptographic dependency or implementation is safe and suitable to adopt. It is distinct from learning cryptographic primitives, reviewing a proposed Bitcoin change, and reproducing a released binary.",
+      "candidatePrerequisites": [
+        "dev.review-culture",
+        "security.adversarial-thinking",
+        "dev.reproducible-builds",
+        "fundamentals.elliptic-curve-cryptography"
+      ],
+      "chosenPrerequisites": [
+        "dev.review-culture"
+      ],
+      "prerequisiteRationale": "Review culture supplies the learner's core method for examining evidence, tests, authorship, and process. Adversarial thinking is already inherited through it; reproducible builds verify release artifacts after selection; and a particular cryptographic primitive is not necessary to understand dependency due diligence.",
+      "aliases": [
+        "cryptographic dependency selection",
+        "choosing cryptographic libraries",
+        "crypto library due diligence"
+      ],
+      "tags": [
+        "development",
+        "cryptography",
+        "dependencies",
+        "security",
+        "review"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Added after deduping against dev.review-culture, security.adversarial-thinking, dev.reproducible-builds, and cryptographic primitive nodes. It covers choosing a tool or dependency, not proving a primitive or reviewing one particular code change."
     }
   ],
   "edges": [
@@ -4109,6 +4145,15 @@
       "rationale": "Pool and solo mining explain the participant and coordination structure whose concentration or dispersion determines practical control over transaction ordering.",
       "sourceId": "source.bitcoin-dev-philosophy",
       "notes": "Stratum V2 remains optional implementation context, not a direct prerequisite."
+    },
+    {
+      "from": "dev.review-culture",
+      "to": "dev.selection-cryptography",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Selection cryptography evaluates cryptographic tools and dependencies through evidence, testing, authorship, and review quality, so learners need the broader Bitcoin review discipline first.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Adversarial thinking is inherited through dev.review-culture; reproducible builds are a downstream verification practice rather than a prerequisite."
     }
   ],
   "decisions": [
@@ -5764,6 +5809,24 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Added with exactly protocol.nodes-vs-miners and mining.pool-vs-solo as direct prerequisites. Keep censorship resistance as the explained property, Stratum V2 as an optional mechanism, and full-node decentralization in its existing validation-sovereignty cluster."
+    },
+    {
+      "id": "decision.selection-cryptography-slice",
+      "type": "scope",
+      "subject": "dev.selection-cryptography",
+      "status": "resolved",
+      "rationale": "Bitcoin Development Philosophy identifies a distinct engineering discipline: selecting cryptographic libraries, tools, and practices by evaluating their suitability, review process, authorship, documentation, portability, testing, and best practices. The graph lacked this decision point between general review culture and later implementation verification.",
+      "relatedConceptIds": [
+        "dev.selection-cryptography",
+        "dev.review-culture",
+        "security.adversarial-thinking",
+        "dev.reproducible-builds",
+        "fundamentals.elliptic-curve-cryptography"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Added with dev.review-culture as the only direct prerequisite. Keep primitive theory, general adversarial reasoning, and reproducible-build verification as neighboring or inherited concepts rather than redundant edges."
     }
   ]
 }
