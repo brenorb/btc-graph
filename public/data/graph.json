@@ -9541,6 +9541,59 @@
       ]
     },
     {
+      "id": "ops.mempool-cluster-limits",
+      "title": "Mempool Cluster Limits",
+      "description": "Bitcoin Core limits each connected mempool cluster to a bounded transaction count and aggregate virtual size, replacing legacy ancestor and descendant limits so package admission, relay, replacement, and block-selection decisions remain computationally tractable.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.cluster-mempool"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core 31.0 Release Notes: Cluster Limits",
+          "url": "https://bitcoincore.org/en/releases/31.0/",
+          "notes": "Defines the default 64-transaction and 101 kB virtual-size cluster limits and their replacement of ancestor/descendant limits."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core v31.0 Cluster Policy Configuration",
+          "url": "https://github.com/bitcoin/bitcoin/blob/v31.0/src/init.cpp",
+          "notes": "Implementation configuration context for cluster policy limits and their node-level overrides."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Cluster Mempool",
+          "url": "https://bitcoinops.org/en/topics/cluster-mempool/",
+          "notes": "Explains why bounded clusters make chunk linearization and policy decisions computationally feasible."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for transaction packages, mempool policy, fees, and node operations.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "mempool",
+        "cluster-mempool",
+        "policy",
+        "packages",
+        "cpfp",
+        "rbf"
+      ],
+      "aliases": [
+        "cluster limits",
+        "mempool cluster size limits",
+        "cluster transaction limits",
+        "ancestor and descendant limit replacement"
+      ]
+    },
+    {
       "id": "ops.mempool-policy",
       "title": "Mempool Policy",
       "description": "Standardness, relay policy, and transaction propagation behavior.",

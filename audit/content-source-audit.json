@@ -401,16 +401,16 @@
       "url": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
       "sourceType": "implementation-documentation-cluster",
       "priority": "P1",
-      "scope": "Bitcoin Core's cluster-mempool data model and the getmempoolcluster and getmempoolfeeratediagram RPCs for inspecting connected transactions, mining order, chunks, fees, weights, and whole-mempool fee curves.",
-      "clusterStrategy": "Track the getmempoolcluster and getmempoolfeeratediagram RPC references, Bitcoin Core 31.0 release notes, mempool terminology, and the two implementation paths as one cluster-observability slice; keep the conceptual cluster-mempool model separate from these concrete RPC workflows.",
+      "scope": "Bitcoin Core's cluster-mempool data model, bounded cluster policy, and related RPCs for inspecting connected transactions, mining order, chunks, fees, weights, and whole-mempool fee curves.",
+      "clusterStrategy": "Track the getmempoolcluster and getmempoolfeeratediagram RPC references, cluster-limit policy, Bitcoin Core 31.0 release notes, mempool terminology, and implementation paths as one cluster-mempool slice; keep concrete RPC workflows merged into the higher-level concepts.",
       "status": "In review",
       "crawlStatus": "Complete",
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added after the package-RBF slice. The inspected documentation exposes getmempoolcluster as per-cluster read-only inspection and getmempoolfeeratediagram as whole-mempool fee-curve inspection. Both are implementation surfaces merged into protocol.cluster-mempool rather than standalone learner nodes; their RPCs remain optional developer references."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added after the package-RBF slice. The inspected documentation exposes two RPC implementation surfaces, both merged into protocol.cluster-mempool, plus a distinct learner-facing policy concept: bounded cluster limits replacing legacy ancestor/descendant limits."
     }
   ],
   "concepts": [
@@ -3093,6 +3093,46 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Do not add a standalone node. Fold the underlying fee-curve vocabulary into protocol.cluster-mempool if needed; keep the hidden RPC as an optional developer reference rather than a graph prerequisite."
+    },
+    {
+      "id": "ops.mempool-cluster-limits",
+      "title": "Mempool Cluster Limits",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
+      "sourceUrl": "https://bitcoincore.org/en/releases/31.0/",
+      "sourceContext": "Bitcoin Core 31.0 cluster policy limits, configuration, and Optech cluster-mempool explanation",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one operational policy concept: bounded transaction count and aggregate virtual size for each connected mempool cluster. It is distinct from the cluster-mempool data model, package relay, Package RBF, CPFP, TRUC, and generic mempool policy because it explains the concrete limits that keep package and chunk computation tractable.",
+      "candidatePrerequisites": [
+        "protocol.cluster-mempool",
+        "ops.mempool-policy",
+        "protocol.package-relay",
+        "protocol.package-rbf",
+        "protocol.cpfp",
+        "protocol.version-3-transaction-relay"
+      ],
+      "chosenPrerequisites": [
+        "protocol.cluster-mempool"
+      ],
+      "prerequisiteRationale": "The cluster-mempool model is the direct prerequisite for understanding why connected components need bounded size. Mempool policy is inherited through that node; package relay, Package RBF, CPFP, and TRUC are affected workflows or neighboring mitigations rather than direct prerequisites.",
+      "aliases": [
+        "cluster limits",
+        "mempool cluster size limits",
+        "cluster transaction limits",
+        "ancestor and descendant limit replacement"
+      ],
+      "tags": [
+        "mempool",
+        "cluster-mempool",
+        "policy",
+        "packages",
+        "cpfp",
+        "rbf"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Added after deduping against protocol.cluster-mempool, ops.mempool-policy, protocol.package-relay, protocol.package-rbf, protocol.cpfp, and v3 transaction relay. This is a noun-level policy concept rather than an API wrapper."
     }
   ],
   "edges": [
@@ -3950,6 +3990,15 @@
       "rationale": "Package RBF extends the ordinary replacement-policy model with package-level fee and cluster conditions, so learners need base RBF semantics first.",
       "sourceId": "source.bitcoin-core-package-policy",
       "notes": "Package relay, cluster mempool, submitpackage, and pinning remain adjacent concepts rather than redundant direct edges."
+    },
+    {
+      "from": "protocol.cluster-mempool",
+      "to": "ops.mempool-cluster-limits",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Cluster limits bound connected transaction sets, so learners need the cluster-mempool model before understanding why count and aggregate virtual-size limits replace legacy ancestor/descendant limits.",
+      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
+      "notes": "Package relay, Package RBF, CPFP, and version 3 relay remain affected workflows or neighboring policy mechanisms rather than direct prerequisites."
     }
   ],
   "decisions": [
@@ -5531,6 +5580,25 @@
         "source.bitcoin-core-cluster-mempool-rpc"
       ],
       "notes": "Merged into protocol.cluster-mempool. Preserve the underlying fee-curve terminology there if it helps advanced learners, without adding a separate RPC wrapper node."
+    },
+    {
+      "id": "decision.mempool-cluster-limits-slice",
+      "type": "bridge-concept",
+      "subject": "ops.mempool-cluster-limits",
+      "status": "resolved",
+      "rationale": "Bitcoin Core 31.0 introduces bounded cluster policy limits that replace legacy ancestor and descendant limits. This survives dedupe as a learner-facing node because it explains a concrete operational constraint affecting package admission, CPFP, relay, replacement, and computational tractability, unlike the omitted RPC wrappers.",
+      "relatedConceptIds": [
+        "ops.mempool-cluster-limits",
+        "protocol.cluster-mempool",
+        "ops.mempool-policy",
+        "protocol.package-relay",
+        "protocol.package-rbf",
+        "protocol.cpfp"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-cluster-mempool-rpc"
+      ],
+      "notes": "Added with only protocol.cluster-mempool as the direct prerequisite. Keep legacy ancestor/descendant limits, CPFP carve-out, TRUC, and package-RBF as related mechanisms rather than redundant direct edges."
     },
     {
       "id": "decision.function-wrapper-vs-concept-boundary",
