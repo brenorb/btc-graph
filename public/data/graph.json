@@ -9442,6 +9442,55 @@
       ]
     },
     {
+      "id": "ops.mempool-purging",
+      "title": "Mempool Purging and Rolling Minimum Fee",
+      "description": "How a node raises its rolling minimum relay feerate under mempool pressure and evicts transactions below that threshold as the mempool is trimmed. This is local policy and eviction behavior, not consensus or fee estimation.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "ops.mempool-policy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Policy Documentation",
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/README.md",
+          "notes": "Canonical explanation of mempool policy, minimum relay feerates, and eviction behavior."
+        },
+        {
+          "type": "article",
+          "title": "getmempoolinfo RPC",
+          "url": "https://developer.bitcoin.org/reference/rpc/getmempoolinfo.html",
+          "notes": "Shows the current mempool size, memory usage, and rolling minimum fee rate exposed by Bitcoin Core."
+        },
+        {
+          "type": "article",
+          "title": "Mempool.space FAQ",
+          "url": "https://mempool.space/docs/faq",
+          "notes": "Operational view of mempool fullness, stuck transactions, and the purging fee rate shown by the explorer."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for mempool behavior, feerates, relay policy, and transaction confirmation tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mempool",
+        "fees",
+        "node-operations"
+      ],
+      "aliases": [
+        "mempool eviction",
+        "rolling minimum fee",
+        "mempool purging"
+      ]
+    },
+    {
       "id": "ops.mesh-networks",
       "title": "Mesh Networks",
       "description": "Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.",

@@ -158,6 +158,23 @@
       "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures."
     },
     {
+      "id": "source.mempool-space-docs",
+      "name": "Mempool.space Documentation",
+      "url": "https://mempool.space/docs",
+      "sourceType": "documentation-cluster",
+      "priority": "P1",
+      "scope": "Operational documentation for fee visibility, mempool behavior, transaction monitoring, APIs, and self-hosting. Treat it as implementation and observability guidance, not consensus authority.",
+      "clusterStrategy": "Enumerate the FAQ, REST API, WebSocket API, and self-hosting/repository clusters first. Use Bitcoin Core documentation as the canonical authority for consensus and policy semantics, then retain Mempool.space-specific observability concepts only when they survive deduplication.",
+      "status": "Inventorying",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 4,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added during source expansion. Initial clusters cover FAQ/mempool behavior, REST API, WebSocket/live events, and self-hosting. Implemented from this source in the current branch: ops.mempool-purging, with Bitcoin Core policy and RPC documentation used as canonical supporting sources."
+    },
+    {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
       "name": "Cypherpunk Library Bitcoin-Adjacent Canon",
       "url": "https://www.cypherpunkbooks.com/collection",
@@ -2702,6 +2719,39 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as the first BIPs source-expansion slice. BIP 66 is treated as a specific consensus validation rule, not as a duplicate of transaction malleability or a generic soft-fork node. The direct edge is kept only on protocol.script because the digital-signature path is already inherited."
+    },
+    {
+      "id": "ops.mempool-purging",
+      "title": "Mempool Purging and Rolling Minimum Fee",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.mempool-space-docs",
+      "sourceUrl": "https://mempool.space/docs/faq",
+      "sourceContext": "FAQ > stuck transactions, mempool fullness, purging threshold, and rolling minimum fee",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific node-operations behavior: how mempool pressure raises a rolling minimum relay feerate and causes lower-feerate transactions to be evicted. It is narrower than mempool policy, fee markets, package relay, and generic transaction confirmation.",
+      "candidatePrerequisites": [
+        "ops.mempool-policy",
+        "protocol.fee-market",
+        "protocol.mempool"
+      ],
+      "chosenPrerequisites": [
+        "ops.mempool-policy"
+      ],
+      "prerequisiteRationale": "Mempool policy is the direct conceptual parent for local relay thresholds and eviction. The generic mempool and fee-market concepts are already inherited through that policy path, so adding them directly would be redundant or too broad.",
+      "aliases": [
+        "mempool eviction",
+        "rolling minimum fee",
+        "mempool purging"
+      ],
+      "tags": [
+        "mempool",
+        "fees",
+        "node-operations"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as the first mempool.space source-expansion slice, with Bitcoin Core policy and getmempoolinfo documentation anchoring the semantics."
     }
   ],
   "edges": [
@@ -3478,6 +3528,15 @@
       "rationale": "Strict DER enforcement occurs while Script validates an ECDSA signature, so learners need the spending-condition and interpreter context first.",
       "sourceId": "source.bitcoin-bips",
       "notes": "Direct edge keeps the rule at the script-validation layer rather than treating BIP 66 as a broad historical upgrade topic."
+    },
+    {
+      "from": "ops.mempool-policy",
+      "to": "ops.mempool-purging",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Rolling minimum fee escalation and transaction eviction are local consequences of the node's mempool relay policy, so learners need that policy boundary first.",
+      "sourceId": "source.mempool-space-docs",
+      "notes": "The generic mempool, fee-market, and consensus-policy branches remain inherited or adjacent rather than direct prerequisites."
     }
   ],
   "decisions": [
@@ -4893,6 +4952,25 @@
         "source.bitcoin-bips"
       ],
       "notes": "Added with only protocol.script as a direct prerequisite because the graph already inherits fundamentals.digital-signatures through that path. BIP 66 is kept as the canonical alias and source anchor."
+    },
+    {
+      "id": "decision.mempool-purging-slice",
+      "type": "scope",
+      "subject": "ops.mempool-purging",
+      "status": "resolved",
+      "rationale": "Mempool.space documentation surfaces an operational behavior missing from the graph: a node's rolling minimum relay fee rises under memory pressure and lower-feerate transactions are evicted. It survives dedupe because mempool policy defines the boundary, while fee markets, package relay, and generic mempool nodes describe adjacent or inherited concepts.",
+      "relatedConceptIds": [
+        "ops.mempool-purging",
+        "ops.mempool-policy",
+        "protocol.mempool",
+        "protocol.fee-market",
+        "protocol.package-relay",
+        "ops.peer-eviction-protection"
+      ],
+      "relatedSourceIds": [
+        "source.mempool-space-docs"
+      ],
+      "notes": "Added with only ops.mempool-policy as a direct prerequisite. Bitcoin Core policy and RPC documentation are canonical supporting sources; Mempool.space provides the operator-facing observability context."
     }
   ]
 }
