@@ -20,6 +20,11 @@ Build a public, static, GitHub Pages website with an interactive hierarchical Bi
   - Red: add/fix a failing test first when practical.
   - Green: implement the smallest change to pass.
   - Refactor: clean up while keeping tests green.
+- Do not manufacture tests for pure content or data changes just to claim TDD:
+  - tests must protect executable behavior, a real bug regression, or a reusable repository-wide invariant
+  - do not add phase-specific or node-specific tests that merely restate JSON, assert that newly added nodes exist, freeze exact prose or keywords, duplicate prerequisite arrays, or enforce batch-local resource counts and allowlists
+  - for node additions, rely on the existing graph build, schema/reference/cycle validation, link checks, and editorial review unless the change introduces new validator behavior or a documented global invariant
+  - when no meaningful automated test applies, document the executable verification performed instead of creating a ceremonial test
 - Close the loop for ALL work (not only UI):
   - verify results in the same session before considering the task done
   - for behavior changes, prove it with tests and/or executable checks
