@@ -52,8 +52,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 9,
       "conceptsExtracted": 20,
-      "conceptsNormalized": 5,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty and consensus vs policy. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, and protocol.chain-split-risk."
+      "conceptsNormalized": 6,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, and development review. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, and dev.review-culture."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -2533,6 +2533,40 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as the missing legacy-SPV proof mechanism between block structure and the existing light-client trust model. Compact block filters remain a distinct modern client-sync approach rather than a duplicate."
+    },
+    {
+      "id": "dev.review-culture",
+      "title": "Review Culture in Bitcoin Development",
+      "category": "History & Governance",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/#review",
+      "sourceContext": "Open Source chapter > Review",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific development-process concept: how independent review across proposal, implementation, deployment, and adoption stages reduces correctness, security, and compatibility risk. It is narrower than the BIPs process and distinct from general adversarial thinking, reproducible builds, and responsible disclosure.",
+      "candidatePrerequisites": [
+        "dev.bips-process",
+        "security.adversarial-thinking",
+        "dev.reproducible-builds",
+        "security.responsible-disclosure"
+      ],
+      "chosenPrerequisites": [
+        "dev.bips-process",
+        "security.adversarial-thinking"
+      ],
+      "prerequisiteRationale": "The proposal process supplies the lifecycle in which review occurs, while adversarial thinking supplies the threat-driven review mindset. Reproducible builds and responsible disclosure are specialized downstream safeguards rather than prerequisites for understanding review culture itself.",
+      "aliases": [
+        "Bitcoin development review",
+        "code review in Bitcoin"
+      ],
+      "tags": [
+        "development",
+        "review",
+        "security"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as a narrow Bitcoin-development review concept. Permissionless development remains deferred because it overlaps more heavily with neutrality, censorship resistance, and the BIPs process."
     }
   ],
   "edges": [
@@ -3255,6 +3289,24 @@
       "rationale": "Partial Merkle proofs reconstruct a transaction's inclusion path against the Merkle root carried by a block, so learners need block composition and root placement first.",
       "sourceId": "source.mastering-bitcoin-book-map",
       "notes": "The block-structure parent already inherits fundamentals.merkle-trees, avoiding a redundant direct edge."
+    },
+    {
+      "from": "dev.bips-process",
+      "to": "dev.review-culture",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Review culture is applied throughout the proposal and implementation lifecycle, so learners need to understand the process in which Bitcoin changes are proposed and evaluated.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Direct edge supplies the development-lifecycle context without adding downstream release or deployment details."
+    },
+    {
+      "from": "security.adversarial-thinking",
+      "to": "dev.review-culture",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Independent review in Bitcoin is deliberately adversarial: reviewers look for correctness failures, attack paths, and compatibility hazards before changes are merged.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Direct edge keeps review distinct from responsible disclosure and reproducible-build verification, which are specialized downstream safeguards."
     }
   ],
   "decisions": [
@@ -4601,6 +4653,24 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Added with only protocol.block-structure as a direct prerequisite; the inherited Merkle-tree edge remains transitive and the trust-model relationship remains downstream."
+    },
+    {
+      "id": "decision.review-culture-slice",
+      "type": "scope",
+      "subject": "dev.review-culture",
+      "status": "resolved",
+      "rationale": "Bitcoin Dev Philosophy's review section names a concrete safety practice that is absent from the graph: independent, adversarial review across multiple development stages. It survives dedupe because BIPs process describes the lifecycle, adversarial thinking describes the attacker mindset, reproducible builds verify artifacts, and responsible disclosure handles discovered vulnerabilities.",
+      "relatedConceptIds": [
+        "dev.review-culture",
+        "dev.bips-process",
+        "security.adversarial-thinking",
+        "dev.reproducible-builds",
+        "security.responsible-disclosure"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Added with only the proposal lifecycle and adversarial mindset as direct prerequisites. Permissionless development is deferred pending a narrower dedupe pass."
     }
   ]
 }

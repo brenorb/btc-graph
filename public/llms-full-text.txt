@@ -108,7 +108,7 @@ Extension Systems (51 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (26 concepts)
+History & Governance (27 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
@@ -130,6 +130,7 @@ History & Governance (26 concepts)
 - Pre-Bitcoin Digital Cash Attempts: Before Bitcoin, multiple designs tried to create digital money, including DigiCash, Hashcash, b-money, and bit gold. Studying these attempts clarifies what Bitcoin solved and what tradeoffs remained unresolved.
 - Rai Stones: Rai stones from Yap are a classic case of socially recognized monetary ownership where transfer can occur without physically moving the asset. They illustrate that money depends on shared ledgers and social consensus.
 - RBF Policy Evolution: Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.
+- Review Culture in Bitcoin Development: Bitcoin development relies on independent, adversarial peer review and incremental discussion to catch correctness, security, and compatibility failures before changes are merged.
 - SegWit Activation: The activation path, signaling dynamics, and coordination history behind SegWit deployment.
 - Soft Forks vs Hard Forks: Compatibility tradeoffs in protocol upgrades.
 - Taproot Activation History: Timeline and mechanism of Taproot deployment, from signaling design to mainnet lock-in and activation.

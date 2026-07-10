@@ -1823,6 +1823,49 @@
       ]
     },
     {
+      "id": "dev.review-culture",
+      "title": "Review Culture in Bitcoin Development",
+      "description": "Bitcoin development relies on independent, adversarial peer review and incremental discussion to catch correctness, security, and compatibility failures before changes are merged.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "dev.bips-process",
+        "security.adversarial-thinking"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Development Philosophy: Review",
+          "url": "https://bitcoindevphilosophy.com/#review",
+          "notes": "Explains the layers of conceptual, proposal, implementation, deployment, and user-adoption review."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Contributing Guide",
+          "url": "https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md",
+          "notes": "Practical expectations for proposing, reviewing, testing, and iterating on Bitcoin Core changes."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Broader context for why independent review, restraint, and incremental consensus matter in Bitcoin development.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4uRjb1v"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "development",
+        "review",
+        "security"
+      ],
+      "aliases": [
+        "Bitcoin development review",
+        "code review in Bitcoin"
+      ]
+    },
+    {
       "id": "dev.scantxoutset-rpc",
       "title": "scantxoutset RPC",
       "description": "RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.",
