@@ -55,7 +55,7 @@ Economics (33 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (52 concepts)
+Extension Systems (53 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -87,6 +87,7 @@ Extension Systems (52 concepts)
 - Lightning Force Closures: Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.
 - Lightning Gossip Protocol: How channel and node announcements propagate network topology and routing policy updates.
 - Lightning Multi-Path Payments: Splitting payments across routes to improve reliability and liquidity utilization.
+- Lightning Onion Messages: Unreliable, channel-independent encrypted messages forwarded over blinded onion paths. Onion messages let Lightning peers transport requests and responses without requiring a payment HTLC or exposing the sender's destination topology.
 - Lightning Onion Routing: Packet format and forwarding privacy model for multi-hop Lightning payments.
 - Lightning Probing Attacks: Techniques used to infer channel balances or endpoint behavior through crafted routing attempts.
 - Lightning Route Blinding: A privacy technique where receivers hide destination topology by providing blinded route hints.

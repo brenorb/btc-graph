@@ -136,9 +136,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 6,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags and lightning.onion-messages."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -2617,6 +2617,41 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as the first BOLTs source-expansion slice. The odd/even optional-versus-required rule is kept inside this node rather than split into separate feature-bit nodes."
+    },
+    {
+      "id": "lightning.onion-messages",
+      "title": "Lightning Onion Messages",
+      "category": "Extension Systems",
+      "sourceId": "source.lightning-bolts",
+      "sourceUrl": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md#onion-messages",
+      "sourceContext": "BOLT 04: Onion Routing Protocol > Onion Messages",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific Lightning transport mechanism: forwarding unreliable encrypted messages over blinded onion paths without using a payment HTLC. It is distinct from payment onion routing, route blinding itself, and BOLT12 offer encoding.",
+      "candidatePrerequisites": [
+        "lightning.feature-flags",
+        "lightning.route-blinding",
+        "lightning.onion-routing",
+        "lightning.bolt12-offers"
+      ],
+      "chosenPrerequisites": [
+        "lightning.feature-flags",
+        "lightning.route-blinding"
+      ],
+      "prerequisiteRationale": "Feature negotiation explains how peers signal onion-message support, and route blinding explains the privacy-preserving path construction. Payment onion routing is a sibling transport model, while BOLT12 offers are one downstream message use case rather than a prerequisite.",
+      "aliases": [
+        "onion messages",
+        "channel-independent messages",
+        "BOLT 04 onion messages"
+      ],
+      "tags": [
+        "lightning",
+        "onion-routing",
+        "privacy"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Implemented as the next BOLTs slice after feature flags. BOLT 08 transport, BOLT 10 DNS bootstrap, and already-covered dual funding remain queued or merge/defer candidates."
     }
   ],
   "edges": [
@@ -3366,6 +3401,24 @@
       "rationale": "Feature negotiation is used to advertise and interpret capabilities across Lightning peers and network announcements, so learners need the surrounding gossip and announcement context first.",
       "sourceId": "source.lightning-bolts",
       "notes": "Direct edge keeps the feature-bit mechanism distinct from the lower-level message transport and downstream routing protocols."
+    },
+    {
+      "from": "lightning.feature-flags",
+      "to": "lightning.onion-messages",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Peers use a negotiated feature bit to advertise whether they can send and forward onion messages, so learners need the capability-negotiation model first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Direct edge keeps the feature gate separate from the message forwarding mechanism."
+    },
+    {
+      "from": "lightning.route-blinding",
+      "to": "lightning.onion-messages",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Onion messages use blinded paths to forward channel-independent payloads without exposing the final destination topology, so the route-blinding model must come first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Payment onion routing and BOLT12 offers remain related sibling or downstream concepts rather than direct prerequisites."
     }
   ],
   "decisions": [
@@ -4747,6 +4800,24 @@
         "source.lightning-bolts"
       ],
       "notes": "Added with only lightning.gossip-protocol as a direct prerequisite. BOLT 01 and BOLT 07 remain curated supporting resources, while the broader BOLTs source queue stays in review."
+    },
+    {
+      "id": "decision.lightning-onion-messages-slice",
+      "type": "scope",
+      "subject": "lightning.onion-messages",
+      "status": "resolved",
+      "rationale": "BOLT 04 exposes an atomic message-transport mechanism missing from the graph: unreliable encrypted payloads forwarded over blinded onion paths without payment HTLCs. It survives dedupe because payment onion routing, route blinding, and BOLT12 offers each cover different neighboring learning outcomes.",
+      "relatedConceptIds": [
+        "lightning.onion-messages",
+        "lightning.feature-flags",
+        "lightning.route-blinding",
+        "lightning.onion-routing",
+        "lightning.bolt12-offers"
+      ],
+      "relatedSourceIds": [
+        "source.lightning-bolts"
+      ],
+      "notes": "Added with feature flags and route blinding as direct prerequisites. BOLT 08 Noise transport and BOLT 10 DNS bootstrap remain future source-expansion candidates."
     }
   ]
 }
