@@ -17,9 +17,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 157,
-      "conceptsExtracted": 30,
-      "conceptsNormalized": 10,
-      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, dev.taproot-descriptors, dev.descriptor-wallet-policies, and dev.descriptors-in-psbt."
+      "conceptsExtracted": 31,
+      "conceptsNormalized": 11,
+      "notes": "157 topics plus 117 aliases make this a naming registry and gap detector more than a bulk node source. Implemented from this source in the current branch: protocol.x-only-public-keys, protocol.version-3-transaction-relay, protocol.tapscript, dev.taproot-psbt-fields, protocol.accidental-confiscation, dev.taproot-descriptors, dev.descriptor-wallet-policies, dev.descriptors-in-psbt, and mining.block-withholding."
     },
     {
       "id": "source.btctranscripts-topics",
@@ -3243,6 +3243,42 @@
       "estimatedTime": "30m",
       "confidence": "high",
       "notes": "Added after deduping against dev.review-culture, security.adversarial-thinking, dev.reproducible-builds, and cryptographic primitive nodes. It covers choosing a tool or dependency, not proving a primitive or reviewing one particular code change."
+    },
+    {
+      "id": "mining.block-withholding",
+      "title": "Block Withholding",
+      "category": "Mining",
+      "sourceId": "source.bitcoinops-topics",
+      "sourceUrl": "https://bitcoinops.org/en/topics/block-withholding/",
+      "sourceContext": "Bitcoin Optech topic: Block withholding and oblivious shares",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one pooled-mining attack: a miner can submit paid, non-block shares while withholding block-valid shares to impose a disproportionate loss on the pool. It is narrower than pooled mining and distinct from payout accounting, majority-chain attacks, and miner centralization.",
+      "candidatePrerequisites": [
+        "mining.pool-shares",
+        "mining.pool-vs-solo",
+        "mining.51-percent-attack",
+        "mining.mining-economics"
+      ],
+      "chosenPrerequisites": [
+        "mining.pool-shares"
+      ],
+      "prerequisiteRationale": "Pool shares provide the direct mechanism: a pool pays for easier-target proofs but only a block-valid share earns the network reward. Pool organization and mining economics are inherited through that node; a majority attack is a distinct threat model and not required.",
+      "aliases": [
+        "block withholding attack",
+        "withholding attack",
+        "oblivious shares"
+      ],
+      "tags": [
+        "mining",
+        "pools",
+        "attacks",
+        "incentives",
+        "shares"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Added after deduping against mining.pool-shares, mining.pool-vs-solo, mining.51-percent-attack, and mining.miner-decentralization. Keep selfish mining as a separate chain-construction strategy rather than collapsing it into this pool-accounting attack."
     }
   ],
   "edges": [
@@ -4154,6 +4190,15 @@
       "rationale": "Selection cryptography evaluates cryptographic tools and dependencies through evidence, testing, authorship, and review quality, so learners need the broader Bitcoin review discipline first.",
       "sourceId": "source.bitcoin-dev-philosophy",
       "notes": "Adversarial thinking is inherited through dev.review-culture; reproducible builds are a downstream verification practice rather than a prerequisite."
+    },
+    {
+      "from": "mining.pool-shares",
+      "to": "mining.block-withholding",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Block withholding exploits the difference between a pool-paid share and a share that also meets the network target, so learners must understand share accounting before the attack model makes sense.",
+      "sourceId": "source.bitcoinops-topics",
+      "notes": "Pool-versus-solo and mining economics are inherited through mining.pool-shares; do not add a redundant majority-attack edge."
     }
   ],
   "decisions": [
@@ -5827,6 +5872,24 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Added with dev.review-culture as the only direct prerequisite. Keep primitive theory, general adversarial reasoning, and reproducible-build verification as neighboring or inherited concepts rather than redundant edges."
+    },
+    {
+      "id": "decision.block-withholding-slice",
+      "type": "scope",
+      "subject": "mining.block-withholding",
+      "status": "resolved",
+      "rationale": "Bitcoin Optech identifies block withholding as a distinct pooled-mining attack: a participant can submit ordinary shares for compensation while selectively hiding block-valid shares, giving up little revenue while depriving the pool of the block reward. This attack model was absent from the graph.",
+      "relatedConceptIds": [
+        "mining.block-withholding",
+        "mining.pool-shares",
+        "mining.pool-vs-solo",
+        "mining.51-percent-attack",
+        "mining.miner-decentralization"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoinops-topics"
+      ],
+      "notes": "Added with mining.pool-shares as the only direct prerequisite. Preserve selfish mining as a separate chain-building attack and keep oblivious shares as a proposed mitigation alias, not a separate node."
     }
   ]
 }

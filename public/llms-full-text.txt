@@ -142,12 +142,13 @@ History & Governance (28 concepts)
 - User-Activated Soft Fork (UASF): How node operators coordinated policy to enforce soft-fork activation during the SegWit era.
 - Version Bits Signaling: Miner signaling mechanism for coordinated soft-fork deployment using block version fields.
 
-Mining (21 concepts)
+Mining (22 concepts)
 - 51% Attack Model: Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.
 - ASICBoost: ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.
 - ASICs: ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.
 - Block Propagation Latency: How network propagation speed affects stale risk, template quality, and mining profitability.
 - Block Template Transaction Selection: How miners and pools choose mempool transactions for candidate blocks under fee and policy constraints.
+- Block Withholding: Block withholding is a pooled-mining attack in which a miner submits ordinary shares for payment but withholds a block-valid share, sacrificing little personal revenue while denying the pool the block reward.
 - Empty-Block Mining Strategy: Why miners occasionally produce low-fee or empty blocks and how this impacts network fee dynamics.
 - Environmental Co-Benefits: Bitcoin mining can use renewable energy well, can be a good demand response load, can recycle heat, can reduce methane emissions, and can use lost energy that would otherwise be wasted.
 - Fee Sniping: Miner strategy of re-mining recent blocks to capture high-fee transactions, with reorg and incentive tradeoffs.
