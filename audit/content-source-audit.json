@@ -124,6 +124,23 @@
       "notes": "Added from user direction. The public app bundle clearly exposes Lightning Tutorial, Onion Routing Tutorial, and Visual Lightning as the main extraction surfaces, which should produce bridge concepts in the payment-channel and routing branches without depending on transcript-style provenance. Implemented from this source in the current branch: lightning.per-commitment-secrets, lightning.obscured-commitment-number, lightning.commitment-output-scripts, and lightning.htlc-output-scripts. Current tracked surface queue is exhausted for this pass."
     },
     {
+      "id": "source.lightning-bolts",
+      "name": "Lightning Network BOLTs",
+      "url": "https://github.com/lightning/bolts",
+      "sourceType": "protocol-specification-repository",
+      "priority": "P0",
+      "scope": "Canonical Lightning wire protocol, transport, channel, transaction, routing, discovery, feature-negotiation, invoice, and offer specifications.",
+      "clusterStrategy": "Track each BOLT document as an enumeration cluster, starting with the index and BOLTs 01, 02, 04, 08, 09, and 10. Extract only atomic mechanisms and deduplicate against existing Lightning nodes before proposing additions.",
+      "status": "In review",
+      "crawlStatus": "In progress",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 6,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags."
+    },
+    {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
       "name": "Cypherpunk Library Bitcoin-Adjacent Canon",
       "url": "https://www.cypherpunkbooks.com/collection",
@@ -2567,6 +2584,39 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as a narrow Bitcoin-development review concept. Permissionless development remains deferred because it overlaps more heavily with neutrality, censorship resistance, and the BIPs process."
+    },
+    {
+      "id": "lightning.feature-flags",
+      "title": "Lightning Feature Flags",
+      "category": "Extension Systems",
+      "sourceId": "source.lightning-bolts",
+      "sourceUrl": "https://github.com/lightning/bolts/blob/master/09-features.md",
+      "sourceContext": "BOLT 09: Features > feature-bit registry and optional/required semantics",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific interoperability mechanism: capability bits that implementations advertise and negotiate across init messages, announcements, invoices, and related protocol contexts. It is narrower than Lightning gossip, peer messaging, and the individual protocols that consume the negotiated features.",
+      "candidatePrerequisites": [
+        "lightning.gossip-protocol",
+        "dev.p2p-messages",
+        "lightning.routing"
+      ],
+      "chosenPrerequisites": [
+        "lightning.gossip-protocol"
+      ],
+      "prerequisiteRationale": "The gossip protocol supplies the Lightning network-advertisement context in which feature signaling is used. P2P messages and routing are inherited implementation or consumer context rather than direct prerequisites for understanding the feature-bit negotiation mechanism.",
+      "aliases": [
+        "Lightning feature bits",
+        "Lightning capability negotiation",
+        "BOLT 09 features"
+      ],
+      "tags": [
+        "lightning",
+        "protocol",
+        "interoperability"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as the first BOLTs source-expansion slice. The odd/even optional-versus-required rule is kept inside this node rather than split into separate feature-bit nodes."
     }
   ],
   "edges": [
@@ -3307,6 +3357,15 @@
       "rationale": "Independent review in Bitcoin is deliberately adversarial: reviewers look for correctness failures, attack paths, and compatibility hazards before changes are merged.",
       "sourceId": "source.bitcoin-dev-philosophy",
       "notes": "Direct edge keeps review distinct from responsible disclosure and reproducible-build verification, which are specialized downstream safeguards."
+    },
+    {
+      "from": "lightning.gossip-protocol",
+      "to": "lightning.feature-flags",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Feature negotiation is used to advertise and interpret capabilities across Lightning peers and network announcements, so learners need the surrounding gossip and announcement context first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Direct edge keeps the feature-bit mechanism distinct from the lower-level message transport and downstream routing protocols."
     }
   ],
   "decisions": [
@@ -4671,6 +4730,23 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Added with only the proposal lifecycle and adversarial mindset as direct prerequisites. Permissionless development is deferred pending a narrower dedupe pass."
+    },
+    {
+      "id": "decision.lightning-feature-flags-slice",
+      "type": "scope",
+      "subject": "lightning.feature-flags",
+      "status": "resolved",
+      "rationale": "BOLT 09 exposes a precise Lightning interoperability concept that is absent from the graph: negotiating optional and required capability bits. It survives dedupe because gossip, peer messaging, and routing describe the surrounding protocol or consumers, not the feature-bit registry and negotiation rule itself.",
+      "relatedConceptIds": [
+        "lightning.feature-flags",
+        "lightning.gossip-protocol",
+        "dev.p2p-messages",
+        "lightning.routing"
+      ],
+      "relatedSourceIds": [
+        "source.lightning-bolts"
+      ],
+      "notes": "Added with only lightning.gossip-protocol as a direct prerequisite. BOLT 01 and BOLT 07 remain curated supporting resources, while the broader BOLTs source queue stays in review."
     }
   ]
 }

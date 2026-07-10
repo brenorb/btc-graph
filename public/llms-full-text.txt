@@ -55,7 +55,7 @@ Economics (33 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (51 concepts)
+Extension Systems (52 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -83,6 +83,7 @@ Extension Systems (51 concepts)
 - Lightning Channel Jamming: A denial-of-service pattern where HTLC slots or liquidity are intentionally exhausted on routing paths.
 - Lightning Channel Splicing: Updating channel capacity without fully closing channels by combining on-chain and off-chain state changes.
 - Lightning Commitment Transactions: Pre-signed updateable channel states that enforce current balances during unilateral close.
+- Lightning Feature Flags: Capability bits that Lightning peers advertise in init messages, gossip announcements, invoices, and related protocol contexts. Odd and even bit pairs distinguish optional support from required support so implementations can negotiate features safely.
 - Lightning Force Closures: Unilateral channel close path, penalty windows, and watchtower-dependent safety assumptions.
 - Lightning Gossip Protocol: How channel and node announcements propagate network topology and routing policy updates.
 - Lightning Multi-Path Payments: Splitting payments across routes to improve reliability and liquidity utilization.
