@@ -1,0 +1,45 @@
+{
+  "id": "custody.deterministic-multisig-key-sorting",
+  "title": "Deterministic Multisig Key Sorting",
+  "description": "The BIP 67 convention for sorting compressed public keys before constructing a multisig redeem script, so independent wallets derive the same script and address from the same signer set.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.multisig",
+    "protocol.pay-to-script-hash"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 67: Deterministic Public Key Sorting",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0067.mediawiki",
+      "notes": "Canonical specification for sorting compressed public keys in multisig scripts."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Multisig Tutorial",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md",
+      "notes": "Implementation-oriented context for multisig script construction and wallet interoperability."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for public keys, multisig scripts, and wallet interoperability.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "wallets",
+    "multisig",
+    "standards",
+    "interoperability"
+  ],
+  "aliases": [
+    "BIP 67",
+    "sorted multisig keys",
+    "deterministic multisig"
+  ]
+}

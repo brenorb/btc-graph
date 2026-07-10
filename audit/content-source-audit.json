@@ -153,9 +153,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures and custody.deterministic-multisig-key-sorting."
     },
     {
       "id": "source.mempool-space-docs",
@@ -2721,6 +2721,40 @@
       "notes": "Implemented as the first BIPs source-expansion slice. BIP 66 is treated as a specific consensus validation rule, not as a duplicate of transaction malleability or a generic soft-fork node. The direct edge is kept only on protocol.script because the digital-signature path is already inherited."
     },
     {
+      "id": "custody.deterministic-multisig-key-sorting",
+      "title": "Deterministic Multisig Key Sorting",
+      "category": "Wallets",
+      "sourceId": "source.bitcoin-bips",
+      "sourceUrl": "https://github.com/bitcoin/bips/blob/master/bip-0067.mediawiki",
+      "sourceContext": "BIP 67 > deterministic sorting of compressed public keys in multisig redeem scripts",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one interoperability convention: sorting compressed public keys before constructing a multisig script. It is narrower than multisig generally and distinct from P2SH, which supplies the script-hash wrapper rather than the signer-ordering rule.",
+      "candidatePrerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash"
+      ],
+      "chosenPrerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash"
+      ],
+      "prerequisiteRationale": "Learners need the signer-policy model and the P2SH script-hash context before the deterministic key-ordering convention is useful for wallet interoperability. The shared Script ancestor is inherited and should not be added directly.",
+      "aliases": [
+        "BIP 67",
+        "sorted multisig keys",
+        "deterministic multisig"
+      ],
+      "tags": [
+        "wallets",
+        "multisig",
+        "standards",
+        "interoperability"
+      ],
+      "estimatedTime": "25m",
+      "confidence": "high",
+      "notes": "Selected from the BIPs wallet/payment standards cluster after deduping against multisig itself, P2SH, and broader wallet address conventions."
+    },
+    {
       "id": "ops.mempool-purging",
       "title": "Mempool Purging and Rolling Minimum Fee",
       "category": "Network, Relay & Client Sync",
@@ -3528,6 +3562,24 @@
       "rationale": "Strict DER enforcement occurs while Script validates an ECDSA signature, so learners need the spending-condition and interpreter context first.",
       "sourceId": "source.bitcoin-bips",
       "notes": "Direct edge keeps the rule at the script-validation layer rather than treating BIP 66 as a broad historical upgrade topic."
+    },
+    {
+      "from": "custody.multisig",
+      "to": "custody.deterministic-multisig-key-sorting",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The node builds on the wallet-level threshold signer policy before specifying a deterministic ordering convention for the signer keys.",
+      "sourceId": "source.bitcoin-bips",
+      "notes": "Direct edge preserves the distinction between multisig policy and the BIP 67 interoperability rule."
+    },
+    {
+      "from": "protocol.pay-to-script-hash",
+      "to": "custody.deterministic-multisig-key-sorting",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "BIP 67 is commonly applied when constructing the redeem script whose hash is committed by P2SH, so the script-hash wrapper provides the output context.",
+      "sourceId": "source.bitcoin-bips",
+      "notes": "The shared protocol.script ancestor remains inherited rather than a redundant direct edge."
     },
     {
       "from": "ops.mempool-policy",
@@ -4971,6 +5023,23 @@
         "source.mempool-space-docs"
       ],
       "notes": "Added with only ops.mempool-policy as a direct prerequisite. Bitcoin Core policy and RPC documentation are canonical supporting sources; Mempool.space provides the operator-facing observability context."
+    },
+    {
+      "id": "decision.deterministic-multisig-key-sorting-slice",
+      "type": "scope",
+      "subject": "custody.deterministic-multisig-key-sorting",
+      "status": "resolved",
+      "rationale": "BIP 67 names one missing interoperability rule: sort compressed public keys before constructing a multisig script so independent wallets agree on the same redeem script and address. It survives dedupe because multisig describes the signer policy and P2SH describes the script-hash wrapper, not the deterministic ordering convention.",
+      "relatedConceptIds": [
+        "custody.deterministic-multisig-key-sorting",
+        "custody.multisig",
+        "protocol.pay-to-script-hash",
+        "protocol.script"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-bips"
+      ],
+      "notes": "Added with custody.multisig and protocol.pay-to-script-hash as direct prerequisites. The shared Script ancestor remains inherited, and the concept is wallet/protocol interoperability rather than Lightning-specific."
     }
   ]
 }
