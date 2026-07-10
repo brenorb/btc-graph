@@ -1,0 +1,42 @@
+{
+  "id": "protocol.x-only-public-keys",
+  "title": "X-Only Public Keys",
+  "description": "X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.public-private-keys",
+    "fundamentals.schnorr-signatures"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures for secp256k1",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Defines the x-only key format used by Bitcoin Schnorr signatures."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Shows how x-only keys appear in Taproot internal keys and output keys."
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "taproot",
+    "keys",
+    "schnorr"
+  ],
+  "aliases": [
+    "x only pubkeys"
+  ]
+}

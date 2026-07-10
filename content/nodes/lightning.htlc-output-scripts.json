@@ -1,0 +1,50 @@
+{
+  "id": "lightning.htlc-output-scripts",
+  "title": "HTLC Output Scripts",
+  "description": "Lightning HTLC output scripts define the exact witness conditions for claiming or timing out offered and received HTLCs inside commitment transactions. They add preimage and timeout branches on top of the broader commitment-script structure, which is why they sit between generic HTLC concepts and later settlement handling.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.htlc",
+    "lightning.commitment-output-scripts"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Programming Lightning: Offered HTLCs",
+      "url": "https://programminglightning.com/lightning-tutorial/offered-htlcs",
+      "notes": "Interactive lesson for the offered-HTLC witness script branch and how preimage or timeout paths are encoded."
+    },
+    {
+      "type": "article",
+      "title": "Programming Lightning: Received HTLCs",
+      "url": "https://programminglightning.com/lightning-tutorial/received-htlcs",
+      "notes": "Companion lesson covering the received-HTLC branch and how the claimant or timeout path differs from the offered case."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+      "notes": "Canonical specification for offered and received HTLC output scripts, including HTLC-success and HTLC-timeout spending flows."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Best long-form treatment of commitment transactions, HTLC script branches, and the operational consequences of the different spend paths.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "lightning",
+    "htlc",
+    "scripts"
+  ],
+  "aliases": [
+    "offered htlc scripts",
+    "received htlc scripts",
+    "htlc witness scripts"
+  ]
+}

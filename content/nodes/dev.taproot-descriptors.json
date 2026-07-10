@@ -1,0 +1,49 @@
+{
+  "id": "dev.taproot-descriptors",
+  "title": "Taproot Descriptors",
+  "description": "Taproot descriptors use the `tr()` expression to describe P2TR outputs, including internal keys and optional script-path commitments. They extend generic output descriptors with Taproot-specific structure without becoming a transaction construction or signing workflow by themselves.",
+  "category": "Wallets",
+  "prerequisites": [
+    "dev.descriptors",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 386: tr() Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0386.mediawiki",
+      "notes": "Primary specification for Taproot descriptor syntax and its mapping to P2TR outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Output Script Descriptors",
+      "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+      "notes": "Source-native context for descriptor evolution and how Taproot descriptors fit into wallet tooling."
+    },
+    {
+      "type": "article",
+      "title": "BIP 380: Output Script Descriptors",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+      "notes": "General descriptor semantics that Taproot descriptors build on."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for Taproot outputs, wallet construction, and descriptor-oriented tooling.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "descriptors",
+    "taproot",
+    "wallet-development"
+  ],
+  "aliases": [
+    "tr descriptors",
+    "bip386"
+  ]
+}

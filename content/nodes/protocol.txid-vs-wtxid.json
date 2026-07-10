@@ -1,0 +1,43 @@
+{
+  "id": "protocol.txid-vs-wtxid",
+  "title": "TXID and WTXID",
+  "description": "SegWit transactions have two identifiers: the txid commits to the original serialization without witness data, while the wtxid commits to the serialization that includes witness data. If a transaction has no witness data the two IDs are the same, but when witness data exists the distinction matters for relay, tracking, and understanding why inputs still refer to previous outputs by txid.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.segregated-witness"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Transaction format in the mempool",
+      "url": "https://bitcoincore.academy/mempool-tx-format.html",
+      "notes": "Shows why Bitcoin Core indexes mempool transactions by both txid and wtxid for different lookup and policy tasks."
+    },
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Canonical definition of txid and wtxid serialization, including when both identifiers are equal."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Good bridge from raw transaction serialization to witness-aware transaction identification.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "transactions",
+    "segwit",
+    "relay"
+  ],
+  "aliases": [
+    "txid and wtxid",
+    "transaction identifiers",
+    "witness transaction id"
+  ]
+}

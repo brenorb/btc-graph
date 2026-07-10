@@ -1,0 +1,41 @@
+{
+  "id": "protocol.op-checkmultisig",
+  "title": "OP_CHECKMULTISIG",
+  "description": "Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "P2MS - Pay To Multisig",
+      "url": "https://bitcoindevs.xyz/decoding/p2ms",
+      "notes": "Decoding walkthrough showing how OP_CHECKMULTISIG appears in bare multisig locking scripts and why OP_0 is required when spending them."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Canonical description of multisig scripts, the extra stack item bug, and the standard script form used with OP_CHECKMULTISIG."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Script-level reference for opcode behavior, stack evaluation, and legacy multisig spending patterns.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "opcodes",
+    "scripts",
+    "multisig"
+  ],
+  "aliases": [
+    "checkmultisig"
+  ]
+}

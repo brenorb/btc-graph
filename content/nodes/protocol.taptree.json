@@ -1,0 +1,42 @@
+{
+  "id": "protocol.taptree",
+  "title": "TapTree",
+  "description": "A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taptweak"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Defines Taproot script tree commitments and script-path witness structure."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop module 2.4 demonstrates constructing a TapTree and spending via one revealed script."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "taproot",
+    "scripts",
+    "merkle"
+  ],
+  "aliases": [
+    "taptree",
+    "tap tree"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "custody.multiple-wallets",
+  "title": "Multiple Wallets",
+  "description": "Multiple wallets means separating funds into distinct wallet buckets inside one application based on purpose, ownership, or security model. A spending wallet, shared wallet, savings wallet, or view-only inheritance wallet can stay separate while still being managed together.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.self-custody"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Multiple Wallets",
+      "url": "https://bitcoin.design/guide/multiple-wallets/",
+      "notes": "Primary UX discussion of separating wallets by purpose, ownership, balance views, and switching patterns inside one app."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for wallet structure, custody tradeoffs, and the underlying payment model that multi-wallet UX organizes.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "wallets",
+    "ux",
+    "custody"
+  ],
+  "aliases": [
+    "multi-wallet setup",
+    "wallet compartmentalization",
+    "multiple wallet management"
+  ]
+}

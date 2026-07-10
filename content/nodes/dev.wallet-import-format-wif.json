@@ -1,0 +1,43 @@
+{
+  "id": "dev.wallet-import-format-wif",
+  "title": "Wallet Import Format (WIF)",
+  "description": "Wallet Import Format serializes a single Bitcoin private key into a Base58Check string with a network prefix, checksum, and optional compressed-key flag so wallets can export and import raw keys with lower transcription risk.",
+  "category": "Wallets",
+  "prerequisites": [
+    "fundamentals.public-private-keys"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html#wallet-import-format-wif",
+      "notes": "Canonical walkthrough of WIF encoding steps, network prefixes, checksum handling, and the compressed-key suffix."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Glossary: WIF",
+      "url": "https://developer.bitcoin.org/glossary.html#wallet-import-format-wif",
+      "notes": "Concise reference that distinguishes WIF from extended private keys and other wallet serialization formats."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for private keys, Base58Check encoding, and the legacy wallet import/export formats built on top of them.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "wallets",
+    "keys",
+    "encoding"
+  ],
+  "aliases": [
+    "wif",
+    "wallet import format",
+    "private key import format"
+  ]
+}

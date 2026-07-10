@@ -1,0 +1,43 @@
+{
+  "id": "dev.hardened-keys",
+  "title": "Hardened Keys",
+  "description": "Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.",
+  "category": "Wallets",
+  "prerequisites": [
+    "dev.extended-keys"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Wallets",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html#hardened-keys",
+      "notes": "Canonical walkthrough of hardened derivation and why it changes what can be derived from extended public keys."
+    },
+    {
+      "type": "article",
+      "title": "BIP 32: Hierarchical Deterministic Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+      "notes": "Canonical specification for hardened and non-hardened child derivation."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for HD wallet trees, xpub/xprv boundaries, and practical derivation tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "wallets",
+    "keys",
+    "standards"
+  ],
+  "aliases": [
+    "hardened derivation",
+    "hardened child keys",
+    "hardened child derivation"
+  ]
+}

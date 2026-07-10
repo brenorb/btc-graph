@@ -1,0 +1,43 @@
+{
+  "id": "protocol.p2pkh",
+  "title": "Pay-to-Public-Key-Hash (P2PKH)",
+  "description": "Legacy output type that locks coins to a hash of the recipient public key instead of the full key itself. It hides the public key until spend time and became the dominant template for classic Bitcoin addresses and script-based payments.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.p2pk",
+    "fundamentals.hash-functions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "P2PKH - Pay To Public Key Hash",
+      "url": "https://bitcoindevs.xyz/decoding/p2pkh",
+      "notes": "Decoding walkthrough of the P2PKH locking script, spend path, and why it differs from direct public-key outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Canonical reference for the P2PKH pubkey script, signature script, and validation flow."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Script-level reference for legacy output templates, HASH160-based locking, and spend verification.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "scripts",
+    "outputs",
+    "addresses"
+  ],
+  "aliases": [
+    "p2pkh",
+    "pay to public key hash"
+  ]
+}

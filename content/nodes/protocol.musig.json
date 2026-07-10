@@ -1,0 +1,48 @@
+{
+  "id": "protocol.musig",
+  "title": "MuSig",
+  "description": "MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.schnorr-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "MuSig",
+      "url": "https://bitcoindevs.xyz/decoding/musig",
+      "notes": "Step-by-step teaching walkthrough of MuSig key aggregation, signing rounds, and the resulting single-signature spend."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: MuSig",
+      "url": "https://bitcoinops.org/en/topics/musig/",
+      "notes": "Bitcoin-focused overview of MuSig, MuSig2, and the tradeoffs between privacy, efficiency, and interactivity."
+    },
+    {
+      "type": "article",
+      "title": "BTC Transcripts: MuSig, MuSig-DN and MuSig2",
+      "url": "https://btctranscripts.com/stephan-livera-podcast/2020-10-27-jonas-nick-tim-ruffing-musig2",
+      "notes": "Deeper discussion of the MuSig family and the practical differences between the protocol variants."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for Taproot-era keys, transaction construction, and multisignature design tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "schnorr",
+    "multisig",
+    "aggregation"
+  ],
+  "aliases": [
+    "musig",
+    "aggregated signatures"
+  ]
+}

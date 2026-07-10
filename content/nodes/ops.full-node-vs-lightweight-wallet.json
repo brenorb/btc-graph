@@ -1,0 +1,43 @@
+{
+  "id": "ops.full-node-vs-lightweight-wallet",
+  "title": "Full Node vs Lightweight Wallet",
+  "description": "Full nodes verify Bitcoin rules locally, while lightweight wallets trade some verification guarantees for lower bandwidth, storage, and setup costs. Choosing between them means choosing a trust model, not just a software footprint.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "fundamentals.validation-sovereignty",
+    "protocol.light-client-trust-model"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Operating Modes",
+      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+      "notes": "Canonical overview of full-node validation, SPV tradeoffs, and the operating-mode choices available to wallet users."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+      "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+      "notes": "User-facing explanation of why self-verification changes what guarantees a wallet can give you."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for wallet operating modes, full-node validation, and lightweight client tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "wallets",
+    "verification",
+    "nodes"
+  ],
+  "aliases": [
+    "full node versus lightweight wallet",
+    "full node vs spv wallet"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "protocol.tapleaf-inclusion-proofs",
+  "title": "TapLeaf Inclusion Proofs",
+  "description": "TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taptree"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Formal witness rules for proving a tapleaf was part of the committed TapTree."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop module 2.4 walks through spending with one script and providing proof it was in the committed tree."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "taproot",
+    "proofs",
+    "scripts"
+  ],
+  "aliases": [
+    "tapleaf proofs"
+  ]
+}

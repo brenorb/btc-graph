@@ -1,0 +1,44 @@
+{
+  "id": "custody.progressive-security",
+  "title": "Progressive Security",
+  "description": "Progressive security is a wallet design approach that starts with low-friction key management for smaller amounts and guides users toward stronger schemes as value, experience, or threat exposure grows. It treats hardware signing and multi-key setups as staged upgrades instead of one fixed wallet architecture from day one.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.hardware-wallets",
+    "custody.multisig"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Upgradeable Wallet",
+      "url": "https://bitcoin.design/guide/upgradeable-wallet/",
+      "notes": "Primary reference design for staged private-key-management upgrades as holdings and user sophistication grow."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Design Principles",
+      "url": "https://bitcoin.design/guide/getting-started/principles/",
+      "notes": "High-level articulation of progressive security as a beginner-to-advanced product design principle."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for custody tradeoffs, signer models, and wallet scheme differences that progressive upgrades navigate.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "wallets",
+    "ux",
+    "security"
+  ],
+  "aliases": [
+    "upgradeable wallet",
+    "security upgrade path",
+    "wallet scheme upgrades"
+  ]
+}

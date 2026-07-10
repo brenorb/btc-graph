@@ -20,7 +20,7 @@ Site sections:
 
 Topics by category:
 
-Economics (32 concepts)
+Economics (33 concepts)
 - Barter Limitations: Why direct barter fails at scale and drives monetary emergence.
 - Bitcoin Supply and Demand: Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.
 - Bretton Woods and 1971: The 1971 suspension of dollar-gold convertibility marked the transition to the modern fiat era. This event is central to debates about monetary discretion, inflation, and hard-money alternatives.
@@ -34,6 +34,7 @@ Economics (32 concepts)
 - Hayek's Money Competition: Hayek's money competition thesis argues that currencies should compete rather than be monopolized by the state. It frames Bitcoin as a market alternative in monetary selection.
 - History of Money: From commodity monies to credit money and modern fiat regimes. This history frames why monetary institutions and trust models evolve over time.
 - Hyperinflation History: Hyperinflation episodes show how confidence collapse, fiscal dominance, and monetary over-expansion can destroy currency function. Historical case studies clarify why monetary credibility is fragile.
+- Ideal Money: Ideal money acts as a stable measuring stick for economic calculation. The concept emphasizes minimizing monetary distortion so prices, savings, and long-term contracts reflect real changes instead of policy-driven noise.
 - Inflation: How monetary expansion changes purchasing power and incentives.
 - Long-Term Security Budget: How subsidy decline and fee revenue together influence miner incentives and chain security.
 - Lost Coins and Effective Supply: How permanently inaccessible coins affect circulating supply, liquidity, and long-term scarcity.
@@ -54,7 +55,7 @@ Economics (32 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (47 concepts)
+Extension Systems (51 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -67,11 +68,13 @@ Extension Systems (47 concepts)
 - Channel Reserve and Dust Limits: Channel-level reserve and dust constraints that preserve safety margins and spendability under fee pressure.
 - Coinpools: Coinpools are shared-ownership constructions that compress many balances into coordinated UTXO sets. They combine covenant-like constraints with cooperative state updates.
 - Coinswaps: Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.
+- Commitment Output Scripts: Lightning commitment transactions pay balances through distinct to_local and to_remote output scripts. The to_local branch uses a revocable CSV-delayed script, while the to_remote branch captures the immediately spendable counterparty output, including the modern static_remotekey pattern.
 - Congestion-Control Trees: Congestion-control trees pre-structure exits so many users can settle efficiently during fee spikes. They prioritize predictable emergency paths over flexible ad hoc spending.
 - Discreet Log Contracts (DLCs): DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
 - Fedi: Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.
+- HTLC Output Scripts: Lightning HTLC output scripts define the exact witness conditions for claiming or timing out offered and received HTLCs inside commitment transactions. They add preimage and timeout branches on top of the broader commitment-script structure, which is why they sit between generic HTLC concepts and later settlement handling.
 - HTLC Timeout Settlement Paths: On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.
 - HTLCs: Conditional forwarding using hashlocks and timelocks.
 - Invoices and Payment Requests: BOLT11 request format and payment execution flow.
@@ -91,8 +94,10 @@ Extension Systems (47 concepts)
 - Liquidity Management: Inbound/outbound capacity and channel balance operations.
 - LNURL: LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.
 - Nostr: Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.
+- Obscured Commitment Number: Lightning hides each commitment transaction's state number by XORing it with a 48-bit obscure factor derived from both payment basepoints, then splitting the result across nLockTime and nSequence. Channel peers can still recover the right state index, but casual onchain observers cannot read it directly.
 - Payment Channels: Off-chain bilateral channels secured by on-chain contracts.
 - Payment Pools: Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.
+- Per-Commitment Secrets: Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.
 - Point Time-Locked Contracts (PTLCs): PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.
 - Revocation and Penalty Keys: Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
@@ -103,7 +108,8 @@ Extension Systems (47 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (23 concepts)
+History & Governance (26 concepts)
+- Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
 - Bitcoin as Social Technology: Bitcoin works through social consensus around rule enforcement, not just code execution. Like contracts, the social layer determines legitimacy when disputes or edge cases appear.
@@ -111,6 +117,8 @@ History & Governance (23 concepts)
 - Bitcoin Narrative Cycles: Public narratives around Bitcoin shift across boom-bust phases, regulation headlines, and technology milestones. Learning to separate narrative heat from structural signal improves judgment.
 - Bitcoin Whitepaper: Original system design framing for decentralized digital cash and double-spend resistance.
 - Block Size War: Governance conflict over scaling strategy and how social consensus resolved protocol direction.
+- Chain Split Risk: Chain split risk is the ecosystem cost created when a contentious protocol upgrade leaves incompatible rule sets active at the same time. Persistent splits can impose replay, reorg, infrastructure, and coordination costs even when each side keeps producing blocks.
+- Chaumian eCash: Chaumian eCash used blind signatures and a central issuer to create private digital cash before Bitcoin. Studying it shows how pre-Bitcoin systems approached privacy and double-spend resistance while still depending on trusted mint operators.
 - Cypherpunk Movement: Origins of privacy-preserving digital cash ideas.
 - Cypherpunk Roots and Bitcoin Origin: Bitcoin emerged from cypherpunk ideas about privacy, digital cash, and open-source coordination. This topic connects pre-Bitcoin experiments to the 2008-2009 launch context.
 - Double-Spend Problem: Why digital scarcity is hard and what constraints must be solved.
@@ -128,7 +136,7 @@ History & Governance (23 concepts)
 - User-Activated Soft Fork (UASF): How node operators coordinated policy to enforce soft-fork activation during the SegWit era.
 - Version Bits Signaling: Miner signaling mechanism for coordinated soft-fork deployment using block version fields.
 
-Mining (19 concepts)
+Mining (20 concepts)
 - 51% Attack Model: Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.
 - ASICBoost: ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.
 - ASICs: ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.
@@ -143,13 +151,14 @@ Mining (19 concepts)
 - Mining Energy Accounting: Energy analysis depends on boundaries and assumptions, especially the difference between marginal and average accounting. Good analysis distinguishes physical grid effects from narrative shortcuts.
 - Mining Environmental Debate: Environmental claims about Bitcoin mining depend heavily on system boundaries, attribution methods, and counterfactual assumptions. A strong view should engage both best critiques and strongest rebuttals.
 - Mining Hardware: ASIC design constraints and practical deployment considerations.
+- Mining Pool Shares: Mining pool shares are partial proofs of work found under a pool-defined target that is easier than the network target. They let a pool verify that a miner contributed real hash work, measure each miner's proportional contribution, and split payouts when one submitted share also happens to satisfy the actual network target.
 - Mining Template Construction: How miners and pools build candidate blocks from mempool transactions under policy, size, and fee constraints.
 - Pool vs Solo Mining: Variance, payout models, and operational tradeoffs.
 - Stale Blocks: Why valid blocks can become stale due to propagation races and how relay improvements reduce this risk.
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (44 concepts)
+Network, Relay & Client Sync (50 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -162,16 +171,20 @@ Network, Relay & Client Sync (44 concepts)
 - Compact Block Filters: Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.
 - Compact Block Relay: Bandwidth-efficient block propagation using short transaction identifiers.
 - Compact Blocks vs Compact Filters: Operational differences between block propagation optimization and lightweight-client block filtering protocols.
+- Consensus vs Policy: Consensus rules determine whether a block or transaction is valid for the whole network, while policy rules determine what an individual node will relay, mine, or keep in its mempool. A transaction can be consensus-valid yet still be non-standard or locally rejected by policy.
 - Distributed Systems: Replication, fault tolerance, and coordination in decentralized networks.
 - DNS Seeds: Bootstrap mechanism that gives new nodes initial peers before ongoing address gossip takes over.
 - Dust Policy: Policy thresholds for economically unspendable outputs and their impact on transaction construction.
 - Electrum Server: Serving wallet queries from your own verified node stack.
 - Erlay Transaction Relay: Erlay reduces transaction relay bandwidth while preserving propagation robustness. It changes gossip behavior to scale peer connectivity more efficiently.
 - Fee Estimation RPC: How wallet and node software estimate feerates from mempool and historical confirmation data.
+- Full Node vs Lightweight Wallet: Full nodes verify Bitcoin rules locally, while lightweight wallets trade some verification guarantees for lower bandwidth, storage, and setup costs. Choosing between them means choosing a trust model, not just a software footprint.
 - Headers-First Synchronization: How nodes download and validate block headers before fetching full blocks during initial sync.
 - Initial Block Download: How a new node bootstraps chainstate safely and reaches current tip.
+- Light Client Trust Model: Light clients reduce bandwidth and storage costs by delegating part of validation to full nodes and peers, which changes what they can verify for themselves. Understanding this trust model clarifies the tradeoffs between full nodes, legacy SPV, and compact-filter clients.
 - Mempool: How unconfirmed transactions propagate, queue, and get filtered by local node policy.
 - Mempool Policy: Standardness, relay policy, and transaction propagation behavior.
+- Mempool Unbroadcast Set: Bitcoin Core tracks locally submitted transactions that are in the mempool but not yet verified as seen by the wider network in an unbroadcast set. This explains why nodes remember some txids for later rebroadcast attempts instead of treating mempool admission as proof of propagation.
 - Mesh Networks: Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.
 - Node Hardware Sizing: CPU, RAM, disk, and network requirements by workload.
 - Package Relay: Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.
@@ -188,22 +201,29 @@ Network, Relay & Client Sync (44 concepts)
 - Tor for Node Connectivity: Improving network privacy and resilience by routing node traffic over Tor.
 - Transaction Bloom Filtering (BIP37): Legacy lightweight-client filtering using bloom filters and why modern wallets moved to compact filters.
 - Transaction Index (txindex): Global transaction indexing mode for historical transaction lookups at the cost of extra disk and sync overhead.
+- Transaction Rebroadcast Privacy: If a node rebroadcasts its own wallet transactions differently from ordinary peer transactions, observers can infer likely transaction origin even when the first announcement was hidden. Bitcoin Core reduces that leak by making rebroadcast behavior look more like normal network activity instead of a wallet-specific signal.
 - Transaction Relay (inv/getdata): How peers announce and request transactions using inv/getdata before full tx relay.
 - Utreexo: Utreexo compresses UTXO commitments using accumulator proofs to reduce full-node state costs. It shifts part of the burden to proof generation and verification pipelines.
 - UTXO Set Management: Operational handling of UTXO set growth, disk constraints, and validation performance tradeoffs.
 - V2 P2P Transport (BIP324): V2 transport encrypts peer-to-peer traffic and improves handshake behavior. It reduces passive metadata leakage and hardens network communications.
 - Verify Node Sync: Validation checkpoints and trust-minimized sync checks.
+- Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (48 concepts)
+Protocol & Consensus (72 concepts)
+- 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
+- Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
+- Bech32m Addresses: Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
 - Bitcoin Script: Locking and unlocking conditions for UTXO spending.
+- Bitcoin URI Scheme (BIP21): BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.
 - Block Height: Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.
 - Block Structure: Header fields, merkle root, and block composition.
 - Block Weight and Virtual Bytes: How weight units and vbytes price block space after SegWit.
 - Byzantine Generals Problem: Consensus under adversarial communication assumptions.
+- Change Outputs: A change output returns leftover value from a transaction back to the spender when the selected inputs exceed the payment amount and fees. Understanding change outputs is the bridge between basic output structure and later wallet decisions about coin selection, privacy leakage, and address reuse.
 - CHECKLOCKTIMEVERIFY (BIP 65): Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.
 - CHECKSEQUENCEVERIFY (BIP 112): Script opcode that enforces relative locktime conditions using sequence-based spending constraints.
 - Coinbase Transaction: Special first transaction in each block that collects subsidy and transaction fees.
@@ -214,38 +234,57 @@ Protocol & Consensus (48 concepts)
 - Digital Scarcity: Digital scarcity is the ability to make digital units costly to forge and impossible to validly spend twice under shared rules. Bitcoin's breakthrough is combining cryptography, networking, and consensus to enforce that scarcity.
 - Direct Introspection Proposals: Direct introspection proposals expose transaction fields to Script for covenant enforcement. They increase expressiveness while raising complexity and review-surface tradeoffs.
 - Discrete Log Equivalency (DLEQ): DLEQ proofs show two public keys share the same secret scalar without revealing that scalar. They are building blocks for adaptor signatures, atomic swaps, and scriptless constructions.
+- Duplicate Transaction Bug: Early Bitcoin allowed some coinbase transactions to be duplicated with identical txids, which could confuse UTXO references that assumed every prior transaction id was unique. BIP 30 blocked most duplicates, BIP 34 enforced unique coinbase heights, and later cleanup proposals remove the remaining special-case burden.
 - Ephemeral Anchors: Ephemeral anchors adjust fee-bumping flows so temporary anchors improve package relay flexibility. They are tightly coupled to modern mempool package policy.
+- Escrow and Arbitration: Escrow and arbitration uses a 2-of-3 multisig contract where buyer, seller, and arbitrator can resolve payment outcomes without trusting one party alone. It shows how P2SH multisig can encode conditional dispute resolution directly in Bitcoin spending paths.
+- Fee Calculation: Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.
 - Fee Sponsorship: Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.
 - Halving Cycle: Programmed issuance reductions and long-term security implications.
+- Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.
 - MATT and CCV: MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.
 - Median Time Past: Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.
+- MuSig: MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
+- OP_CHECKMULTISIG: Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.
 - OP_CHECKSIGADD: OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.
 - OP_CHECKSIGFROMSTACK: OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.
 - OP_CHECKTEMPLATEVERIFY (CTV): CTV restricts spending transactions to a committed template hash. This enables deterministic spending trees and scalable pre-planned transaction structures.
 - OP_CODESEPARATOR: OP_CODESEPARATOR changes the script segment committed by signature hashing. Its behavior is subtle and historically important for advanced script correctness.
 - OP_RETURN Outputs: Provably unspendable script outputs used for bounded data commitments on-chain.
+- Pay-to-Multisig (P2MS): Legacy bare multisig output template that places multiple public keys and an m-of-n threshold directly in the locking script. It spends through OP_CHECKMULTISIG and predates the more flexible P2SH-based multisig pattern.
+- Pay-to-Public-Key (P2PK): Legacy output type that locks coins directly to a full public key and spends them with a matching signature. It is simpler than P2PKH, but it reveals the recipient public key at receive time and mainly matters today as an early script template reference point.
+- Pay-to-Public-Key-Hash (P2PKH): Legacy output type that locks coins to a hash of the recipient public key instead of the full key itself. It hides the public key until spend time and became the dominant template for classic Bitcoin addresses and script-based payments.
 - Pay-to-Script-Hash (P2SH): Output type where spending conditions are committed as a script hash and revealed at spend time.
 - Proof of Work: Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.
 - Reorgs and Finality: Probabilistic finality and chain reorganization behavior.
+- Script Execution Stack: Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.
 - Script Timelocks: Timelock primitives used to constrain when funds can be spent in script contracts.
 - Segregated Witness (SegWit): Witness data separation that fixed key malleability issues and increased block capacity efficiency.
 - SegWit Witness Commitment: How witness data is committed in coinbase transactions to secure segregated witness verification.
 - Sequence Locks (BIP 68): Relative locktime semantics encoded in nSequence and enforced through sequence-based transaction finality rules.
 - SIGHASH Flags: Signature hash flags define which transaction parts are committed by each signature and shape authorization semantics.
 - SIGHASH_ANYPREVOUT: ANYPREVOUT changes signature commitment semantics so updates can bind less history. It is a key enabler for eltoo-style channel update protocols.
+- Tagged Hashes: Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.
+- TapLeaf Inclusion Proofs: TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.
 - Taproot: Protocol upgrade enabling more private and efficient key/script spending conditions.
 - Taproot Annex: The annex is an optional witness element committed by Taproot signatures but ignored by script execution. It provides forward-compatibility space for future soft-fork semantics.
+- Taproot Key-Path Spends: Taproot key-path spends spend a P2TR output by providing a Schnorr signature for the tweaked output key without revealing any committed script path. When all parties can cooperate, this is the most compact and private Taproot spend form because it looks like a simple signature check onchain.
+- Tapscript: Tapscript is the script version used for Taproot script-path spends. It keeps the basic Script model but changes signature rules, replaces CHECKMULTISIG with CHECKSIGADD, and adds upgrade hooks such as OP_SUCCESSx.
+- TapTree: A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.
+- TapTweak: TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.
+- Time Warp Attack: Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit depends on Bitcoin's off-by-one retarget bug plus the consensus limits on miner-controlled time, so it sits at the intersection of retarget math and timestamp rules.
 - TLUV Proposal: TLUV is a covenant proposal focused on constrained value and output structure updates. It aims to support richer contract trees without exposing full introspection.
 - Transaction Confirmations: How confirmation depth affects settlement confidence for different payment risk profiles.
 - Transaction Lifecycle: From creation and propagation to confirmation and settlement.
 - Transaction Malleability: How pre-confirmation transaction mutation risk appears and why stable identifiers matter.
 - Transaction Pinning: Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.
 - TXHASH Proposal: TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.
+- TXID and WTXID: SegWit transactions have two identifiers: the txid commits to the original serialization without witness data, while the wtxid commits to the serialization that includes witness data. If a transaction has no witness data the two IDs are the same, but when witness data exists the distinction matters for relay, tracking, and understanding why inputs still refer to previous outputs by txid.
 - UTXO Model: State model based on spendable outputs instead of account balances.
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
+- X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (51 concepts)
+Security (55 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -274,11 +313,13 @@ Security (51 concepts)
 - Hash Functions: Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.
 - Interactive Proofs: Interactive proofs model verification as a dialogue between a prover and a verifier. They matter because many zero-knowledge protocols start from this challenge-response structure before later non-interactive variants compress the interaction.
 - KYC and Privacy Tradeoffs: Identity linkage risks and mitigation strategies.
+- Lamport Signatures: Lamport signatures are one-time digital signatures built only from hash functions. They trade large keys and single-use semantics for simple security assumptions, which is why they remain a useful starting point for understanding hash-based and post-quantum signature families.
 - Merkle Trees: Efficient integrity proofs for large sets of transactions.
 - Modular Arithmetic Basics: Modular arithmetic is clock-style math over a fixed modulus and is the base of Bitcoin signature calculations. It defines addition, subtraction, and multiplication inside finite fields.
 - Modular Exponentiation: Fast exponentiation under a modulus is the core operation behind key exchange and signature verification. It turns repeated multiplication into tractable computation on large numbers.
 - Modular Inverse: Modular inversion is required in Bitcoin signature equations for both key and nonce terms. Understanding inversion clarifies why bad nonce handling can leak private keys.
 - Network Privacy (Tor): Reducing IP-level linkage when interacting with Bitcoin nodes.
+- Nonce Reuse Attack: Reusing the same Schnorr nonce across different signatures lets observers solve for the signer private key from public signature data. It is a narrow signing failure mode that explains why nonce generation hygiene matters in wallets and multisig protocols.
 - OP_VAULT Proposal: OP_VAULT proposes native covenant support for delayed recovery and theft mitigation flows. It is designed to make vault policies safer and simpler to deploy.
 - PayJoin (P2EP): Interactive transaction protocol that breaks common-input ownership heuristics.
 - Protocol Neutrality: Protocol neutrality means consensus and relay rules should avoid embedding special treatment for particular users or outcomes. Neutral rule design is a core part of Bitcoin’s credible fairness.
@@ -293,12 +334,14 @@ Security (51 concepts)
 - Silent Payments: Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.
 - Trustlessness: Trustlessness in Bitcoin means security comes from verification and incentives rather than trusted operators. You can reduce counterparty risk by validating rules locally.
 - UTXO Consolidation Tradeoffs: Balancing fee savings and future spending efficiency against privacy loss when merging UTXOs.
+- Validation Sovereignty: Validation sovereignty means deciding Bitcoin's rules by verifying them yourself instead of outsourcing validation to a wallet provider, service, or remote node. It is the practical user-facing consequence of don't trust, verify.
 - XPUB Leakage: Privacy and security risks from sharing extended public keys with third-party services.
+- Your Secret Right to Cash: Physical cash historically gave people a private, bearer-style way to pay without routine permission checks or transaction surveillance. As money became digital and intermediated, that default right weakened, making privacy and censorship resistance explicit design goals rather than ambient properties.
 - Zero-Knowledge Proofs: Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
 - zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
-Wallets (29 concepts)
+Wallets (44 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.
 - Air-Gapped Signing: Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.
 - Backups and Recovery: Recovery drills, inheritance planning, and backup hygiene.
@@ -308,23 +351,38 @@ Wallets (29 concepts)
 - Bitcoin Inheritance Planning: Designing survivable custody workflows that balance privacy, security, and recoverability.
 - BSMS for Multisig Coordination: Bitcoin Secure Multisig Setup standards for interoperable multisig setup, descriptors, and recovery metadata.
 - Codex32 Backups: Codex32 is a checksummed seed-sharing format designed for human-verifiable backup workflows. It focuses on robustness against transcription and partial-share handling mistakes.
+- Coin Selection: Coin selection is the process a wallet uses to choose which UTXOs fund a payment. It balances fee cost, change creation, and privacy tradeoffs before signing or broadcasting a transaction.
 - Custody vs Self-Custody Legal Framing: Legal obligations and risk shift depending on whether funds are held by an intermediary or controlled directly by the user. Understanding this split is essential for consumer protection and compliance posture.
+- Degrading Multisig: Degrading multisig uses a strong live-key spending policy first and a weaker backup path that becomes available after a timeout. It is a concrete custody pattern for balancing day-to-day resilience with emergency recovery options, and Taproot can implement it with cleaner onchain privacy.
 - Descriptor Wallet Imports: Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.
+- Descriptor Wallet Policies: Descriptor wallet policies define a wallet as a descriptor template plus key information items, making account structure portable across software and hardware signers. They standardize how external signers can register, verify, and later derive the same wallet without relying on custom wallet-specific side data.
+- Descriptors in PSBTs: Descriptors in PSBTs let coordinators and signers exchange script-template information alongside transaction data instead of relying on custom wallet metadata. They make it easier for different tools to reason about the same inputs, outputs, and signing responsibilities from a shared descriptor view.
+- Extended Keys (XPUB/XPRV): Extended keys package a BIP32 key together with its chain code so a wallet can derive an entire branch of child keys from one exported value. An xprv can derive both child private and public keys, while an xpub can derive only child public keys for watch-only or address-generation workflows.
 - fundrawtransaction RPC: RPC for coin selection and fee funding of partially constructed transactions.
+- Hardened Keys: Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.
 - Hardware Wallets: Isolated signing environments and practical security tradeoffs.
 - HD Wallets: Deterministic key derivation for scalable wallet management.
+- Human-Readable Bitcoin Addresses: Human-readable Bitcoin addresses use memorable handles that resolve to normal payment instructions instead of exposing raw addresses directly. They improve sharing and recall, but add trust and privacy tradeoffs because an intermediary or naming system is involved in the lookup.
 - HWI + PSBT Signing Flow: Separation between host construction and hardware-device signing through PSBT-based workflows.
 - Miniscript: Safer script composition and policy analysis.
+- Multiple Wallets: Multiple wallets means separating funds into distinct wallet buckets inside one application based on purpose, ownership, or security model. A spending wallet, shared wallet, savings wallet, or view-only inheritance wallet can stay separate while still being managed together.
 - Multisig Wallets: Threshold signing policies for resilience and governance.
 - MuSig2 Descriptor Workflows: How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.
 - Output Descriptors: Descriptor expressions that describe script templates, key origins, and wallet scanning behavior.
+- Progressive Security: Progressive security is a wallet design approach that starts with low-friction key management for smaller amounts and guides users toward stronger schemes as value, experience, or threat exposure grows. It treats hardware signing and multi-key setups as staged upgrades instead of one fixed wallet architecture from day one.
 - PSBT v2: The v2 evolution of PSBT that improves transaction construction semantics and interoperability.
 - PSBT Workflow: Partially signed transaction flow for safer collaborative signing.
 - scantxoutset RPC: RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.
+- ScriptPubKey Managers: Bitcoin Core ScriptPubKey Managers are wallet components that own scriptPubKey sets, address generation branches, and ownership tracking for specific output types. In descriptor wallets, the wallet becomes a collection of these managers instead of one monolithic key-and-address store.
 - Seed Passphrase (BIP39): Optional passphrase extension for mnemonic seeds and its recovery risk tradeoffs.
 - Seed Phrases: Mnemonic backups and key restoration model.
 - Seed XOR Shards: Splitting seed entropy into XOR-combined shards for backup distribution, with operational and recovery pitfalls.
 - Self-Custody Principles: Operational responsibility model and threat minimization.
+- Shamir's Secret Sharing: Shamir's Secret Sharing splits one secret into multiple shares so that any chosen threshold can reconstruct it, while fewer shares reveal nothing useful. In Bitcoin custody it is commonly used for seed backups when operators want threshold recovery without handing one full secret to any single location.
+- Taproot Descriptors: Taproot descriptors use the `tr()` expression to describe P2TR outputs, including internal keys and optional script-path commitments. They extend generic output descriptors with Taproot-specific structure without becoming a transaction construction or signing workflow by themselves.
+- Taproot PSBT Fields: Taproot-specific PSBT input and output fields for carrying internal keys, leaf scripts, merkle data, and Taproot derivation metadata without redefining the broader PSBT workflow.
+- Transaction Metadata: Transaction metadata is wallet-side context such as contacts, descriptions, tags, and notes attached to a payment or activity item. It helps users understand history and search their activity, but it is not stored on-chain and needs explicit portability if users change wallets.
 - UTXO and Output Labeling: Maintaining labels for transaction outputs and counterparties to improve spending decisions, accounting, and privacy hygiene.
 - Wallet Development: Building safer wallet UX around signing and policy constraints.
+- Wallet Import Format (WIF): Wallet Import Format serializes a single Bitcoin private key into a Base58Check string with a network prefix, checksum, and optional compressed-key flag so wallets can export and import raw keys with lower transcription risk.
 - Watch-Only Wallets: Wallet setups that monitor balances and addresses without holding spending keys.
