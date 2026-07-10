@@ -136,9 +136,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 6,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags and lightning.onion-messages."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added during source expansion. The first inventory covers the BOLT index plus messaging, peer protocol, onion messaging, encrypted transport, feature negotiation, and DNS bootstrap clusters. Implemented from this source in the current branch: lightning.feature-flags, lightning.onion-messages, and lightning.encrypted-authenticated-transport."
     },
     {
       "id": "source.bitcoin-bips",
@@ -2688,6 +2688,41 @@
       "notes": "Implemented as the next BOLTs slice after feature flags. BOLT 08 transport, BOLT 10 DNS bootstrap, and already-covered dual funding remain queued or merge/defer candidates."
     },
     {
+      "id": "lightning.encrypted-authenticated-transport",
+      "title": "Lightning Encrypted and Authenticated Transport",
+      "category": "Extension Systems",
+      "sourceId": "source.lightning-bolts",
+      "sourceUrl": "https://github.com/lightning/bolts/blob/master/08-transport.md",
+      "sourceContext": "BOLT 08: Encrypted and Authenticated Transport > Noise_XK handshake, ECDH key derivation, and ChaCha20-Poly1305 framed transport",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one Lightning wire-transport mechanism: authenticating peer identities, deriving session keys, and encrypting framed messages. It is narrower than generic cryptographic transport and distinct from Bitcoin's BIP324 P2P transport.",
+      "candidatePrerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.diffie-hellman-key-exchange",
+        "protocol.v2-p2p-transport"
+      ],
+      "chosenPrerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.diffie-hellman-key-exchange"
+      ],
+      "prerequisiteRationale": "Public/private keys supply the long-term identity model and Diffie-Hellman supplies the shared-secret mechanism. Bitcoin P2P v2 transport is a sibling protocol with different peer and wire-context requirements, not a prerequisite for BOLT 08.",
+      "aliases": [
+        "BOLT 08 transport",
+        "Lightning Noise transport",
+        "Lightning encrypted transport"
+      ],
+      "tags": [
+        "lightning",
+        "transport",
+        "encryption",
+        "authentication"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Selected as the cleanest remaining P0 BOLTs concept after deduping against protocol.v2-p2p-transport. Keep the Lightning-specific Noise_XK and framing outcome visible rather than collapsing both transports into a generic encryption node."
+    },
+    {
       "id": "protocol.strict-der-signatures",
       "title": "Strict DER Signature Encoding",
       "category": "Protocol & Consensus",
@@ -3553,6 +3588,24 @@
       "rationale": "Onion messages use blinded paths to forward channel-independent payloads without exposing the final destination topology, so the route-blinding model must come first.",
       "sourceId": "source.lightning-bolts",
       "notes": "Payment onion routing and BOLT12 offers remain related sibling or downstream concepts rather than direct prerequisites."
+    },
+    {
+      "from": "fundamentals.public-private-keys",
+      "to": "lightning.encrypted-authenticated-transport",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The Noise_XK handshake authenticates long-term Lightning node identities with public/private key material, so learners need that identity model first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Direct edge keeps identity foundations separate from the session-key derivation mechanism."
+    },
+    {
+      "from": "fundamentals.diffie-hellman-key-exchange",
+      "to": "lightning.encrypted-authenticated-transport",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "BOLT 08 uses elliptic-curve Diffie-Hellman operations to derive shared session secrets, so the key-exchange primitive must be understood first.",
+      "sourceId": "source.lightning-bolts",
+      "notes": "Bitcoin P2P v2 transport remains a related sibling rather than a direct prerequisite because it is a different protocol context."
     },
     {
       "from": "protocol.script",
@@ -5040,6 +5093,23 @@
         "source.bitcoin-bips"
       ],
       "notes": "Added with custody.multisig and protocol.pay-to-script-hash as direct prerequisites. The shared Script ancestor remains inherited, and the concept is wallet/protocol interoperability rather than Lightning-specific."
+    },
+    {
+      "id": "decision.lightning-encrypted-authenticated-transport-slice",
+      "type": "scope",
+      "subject": "lightning.encrypted-authenticated-transport",
+      "status": "resolved",
+      "rationale": "BOLT 08 exposes a missing Lightning transport mechanism: Noise_XK identity authentication, ECDH-derived session keys, and authenticated encryption for framed peer messages. It survives dedupe because BIP324 covers Bitcoin node transport in a different peer and wire context.",
+      "relatedConceptIds": [
+        "lightning.encrypted-authenticated-transport",
+        "protocol.v2-p2p-transport",
+        "fundamentals.public-private-keys",
+        "fundamentals.diffie-hellman-key-exchange"
+      ],
+      "relatedSourceIds": [
+        "source.lightning-bolts"
+      ],
+      "notes": "Added with only the identity and key-exchange foundations as direct prerequisites. Keep BOLT 08 and BIP324 as sibling transport nodes rather than collapsing them into generic encrypted transport."
     }
   ]
 }
