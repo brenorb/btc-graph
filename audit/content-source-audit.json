@@ -391,9 +391,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 3,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added after the RPC-security slice. The inspected pages establish submitpackage as a local package-admission mechanism distinct from testmempoolaccept preflight and network package relay."
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added after the RPC-security slice. The inspected pages establish submitpackage as a local package-admission mechanism and package RBF as a distinct replacement rule, separate from testmempoolaccept preflight, network package relay, and cluster-mempool internals."
     }
   ],
   "concepts": [
@@ -2963,6 +2963,44 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Added after deduping against dev.testmempoolaccept-rpc, protocol.package-relay, protocol.cluster-mempool, and package-CPFP concepts."
+    },
+    {
+      "id": "protocol.package-rbf",
+      "title": "Package RBF",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-package-policy",
+      "sourceUrl": "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/mempool-replacements.md",
+      "sourceContext": "Package RBF and 1P1C-topology package replacement in Bitcoin Core policy and wallet integration documentation",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one replacement rule: current Bitcoin Core policy supports limited 1P1C-style replacement of conflicting in-mempool transaction packages when package-level fee, incremental relay, cluster, and feerate-improvement conditions are met. It is narrower than ordinary RBF, package relay, cluster mempool, and submitpackage as an RPC operation.",
+      "candidatePrerequisites": [
+        "protocol.rbf",
+        "protocol.package-relay",
+        "protocol.cluster-mempool",
+        "dev.submitpackage-rpc",
+        "protocol.transaction-pinning"
+      ],
+      "chosenPrerequisites": [
+        "protocol.rbf"
+      ],
+      "prerequisiteRationale": "Ordinary RBF supplies the direct replacement-policy model. Package relay describes propagation, cluster mempool describes internal package accounting, submitpackage describes local submission, and transaction pinning is a motivating risk rather than a technical requirement for understanding package replacement rules.",
+      "aliases": [
+        "package RBF",
+        "package replace-by-fee",
+        "1P1C package RBF",
+        "package replacement"
+      ],
+      "tags": [
+        "rbf",
+        "mempool",
+        "packages",
+        "fee-bumping",
+        "cluster-mempool"
+      ],
+      "estimatedTime": "55m",
+      "confidence": "high",
+      "notes": "Added after deduping against protocol.rbf, dev.submitpackage-rpc, protocol.package-relay, protocol.cluster-mempool, and transaction-pinning concepts. Current policy scope is limited 1P1C-style package replacement rather than unrestricted package RBF."
     }
   ],
   "edges": [
@@ -3811,6 +3849,15 @@
       "rationale": "submitpackage is the admission counterpart to the existing testmempoolaccept preflight workflow, so learners need to understand local package checks before attempting submission and interpreting package results.",
       "sourceId": "source.bitcoin-core-package-policy",
       "notes": "Package relay and cluster mempool remain neighboring concepts rather than direct prerequisites because this node focuses on one local RPC operation."
+    },
+    {
+      "from": "protocol.rbf",
+      "to": "protocol.package-rbf",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Package RBF extends the ordinary replacement-policy model with package-level fee and cluster conditions, so learners need base RBF semantics first.",
+      "sourceId": "source.bitcoin-core-package-policy",
+      "notes": "Package relay, cluster mempool, submitpackage, and pinning remain adjacent concepts rather than redundant direct edges."
     }
   ],
   "decisions": [
@@ -5336,6 +5383,25 @@
         "source.bitcoin-core-package-policy"
       ],
       "notes": "Added with only dev.testmempoolaccept-rpc as the direct prerequisite. Keep the local-admission versus network-relay distinction explicit; successful submitpackage does not mean the package propagated."
+    },
+    {
+      "id": "decision.package-rbf-slice",
+      "type": "scope",
+      "subject": "protocol.package-rbf",
+      "status": "resolved",
+      "rationale": "Bitcoin Core replacement-policy documentation and the 1P1C wallet guide expose a distinct package-level replacement mechanism missing from the graph: replacing conflicting transaction packages using aggregate fee, incremental relay, cluster, and feerate-improvement rules. It survives dedupe because ordinary RBF is the parent policy, submitpackage is a local admission operation, package relay is network propagation, and cluster mempool is internal package accounting.",
+      "relatedConceptIds": [
+        "protocol.package-rbf",
+        "protocol.rbf",
+        "dev.submitpackage-rpc",
+        "protocol.package-relay",
+        "protocol.cluster-mempool",
+        "protocol.transaction-pinning"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-package-policy"
+      ],
+      "notes": "Added with only protocol.rbf as the direct prerequisite. Keep the current limited 1P1C package-RBF scope explicit rather than implying unrestricted package replacement, and keep the concept separate from the submitpackage RPC workflow or general package relay."
     }
   ]
 }

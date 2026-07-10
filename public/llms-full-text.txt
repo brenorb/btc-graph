@@ -162,7 +162,7 @@ Mining (20 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (53 concepts)
+Network, Relay & Client Sync (54 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -192,6 +192,7 @@ Network, Relay & Client Sync (53 concepts)
 - Mempool Unbroadcast Set: Bitcoin Core tracks locally submitted transactions that are in the mempool but not yet verified as seen by the wider network in an unbroadcast set. This explains why nodes remember some txids for later rebroadcast attempts instead of treating mempool admission as proof of propagation.
 - Mesh Networks: Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.
 - Node Hardware Sizing: CPU, RAM, disk, and network requirements by workload.
+- Package RBF: Current Bitcoin Core package RBF supports limited 1P1C-style replacement of conflicting in-mempool transaction packages when the replacement satisfies aggregate-fee, incremental-fee, cluster-limit, and feerate-improvement rules, allowing child fees to replace a package rather than only a single transaction.
 - Package Relay: Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.
 - Partial Merkle Proofs: A compact proof that a transaction belongs to a block by sending only the relevant Merkle branches and a bit field describing the traversed tree, allowing an SPV client to verify inclusion without downloading every transaction.
 - Peer Discovery and Addrman: How nodes discover, score, and rotate peers using address relay and addrman persistence.

@@ -6,7 +6,7 @@ import { describe, expect, it } from "vitest";
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const node = JSON.parse(
   fs.readFileSync(
-    path.join(repoRoot, "content", "nodes", "dev.submitpackage-rpc.json"),
+    path.join(repoRoot, "content", "nodes", "protocol.package-rbf.json"),
     "utf8",
   ),
 );
@@ -14,20 +14,21 @@ const audit = JSON.parse(
   fs.readFileSync(path.join(repoRoot, "audit", "content-source-audit.json"), "utf8"),
 );
 
-describe("submitpackage RPC content slice", () => {
-  it("keeps local package admission distinct from preflight and relay", () => {
-    expect(node.id).toBe("dev.submitpackage-rpc");
-    expect(node.prerequisites).toEqual(["dev.testmempoolaccept-rpc"]);
-    expect(node.description).toMatch(/local mempool/i);
-    expect(node.description).toMatch(/package-policy evaluation/i);
-    expect(node.description).toMatch(/does not imply network propagation/i);
+describe("package RBF content slice", () => {
+  it("keeps package replacement distinct from ordinary RBF and relay", () => {
+    expect(node.id).toBe("protocol.package-rbf");
+    expect(node.prerequisites).toEqual(["protocol.rbf"]);
+    expect(node.description).toMatch(/limited 1P1C-style replacement/i);
+    expect(node.description).toMatch(/conflicting in-mempool transaction packages/i);
+    expect(node.description).toMatch(/aggregate-fee/i);
+    expect(node.description).toMatch(/child fees to replace a package/i);
   });
 
-  it("has curated package-policy sources and an Amazon book", () => {
+  it("has curated replacement-policy sources and an Amazon book", () => {
     expect(node.resources.map((resource: { url: string }) => resource.url)).toEqual([
-      "https://bitcoincore.org/en/doc/31.0.0/rpc/rawtransactions/submitpackage/",
       "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/packages.md",
-      "https://bitcoincore.org/en/releases/26.0/",
+      "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/mempool-replacements.md",
+      "https://bitcoinops.org/en/bitcoin-core-28-wallet-integration-guide/",
       "https://amzn.to/4ro0NdG",
     ]);
   });
@@ -37,18 +38,18 @@ describe("submitpackage RPC content slice", () => {
       (entry: { id: string }) => entry.id === "source.bitcoin-core-package-policy",
     );
     const concept = audit.concepts.find(
-      (entry: { id: string }) => entry.id === "dev.submitpackage-rpc",
+      (entry: { id: string }) => entry.id === "protocol.package-rbf",
     );
     const edge = audit.edges.find(
       (entry: { from: string; to: string }) =>
-        entry.from === "dev.testmempoolaccept-rpc" && entry.to === "dev.submitpackage-rpc",
+        entry.from === "protocol.rbf" && entry.to === "protocol.package-rbf",
     );
 
     expect(source).toMatchObject({ status: "In review", conceptsNormalized: 2 });
     expect(concept).toMatchObject({
       sourceId: "source.bitcoin-core-package-policy",
       status: "new",
-      chosenPrerequisites: ["dev.testmempoolaccept-rpc"],
+      chosenPrerequisites: ["protocol.rbf"],
     });
     expect(edge).toMatchObject({ type: "prerequisite", status: "proposed" });
   });
