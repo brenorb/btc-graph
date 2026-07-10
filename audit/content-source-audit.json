@@ -360,6 +360,23 @@
       "conceptsExtracted": 5,
       "conceptsNormalized": 5,
       "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. A follow-up Wallet Files pass surfaced dev.wallet-import-format-wif as another clean wallet-standard slice. The implemented winners are now protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, dev.wallet-import-format-wif, and mining.pool-shares because they land as missing standards, key-derivation, contract-pattern, key-serialization, and pooled-mining accounting bridges with clean direct parents. The current tracked top-level-plus-Wallet-Files queue is exhausted for this pass, though future deeper section splits may still surface more concepts."
+    },
+    {
+      "id": "source.bitcoin-core-operator-docs",
+      "name": "Bitcoin Core Operator Documentation",
+      "url": "https://github.com/bitcoin/bitcoin/tree/master/doc",
+      "sourceType": "implementation-documentation-cluster",
+      "priority": "P1",
+      "scope": "Bitcoin Core's operator-facing documentation and configuration references for securing node control surfaces, especially JSON-RPC exposure and credentials.",
+      "clusterStrategy": "Track the JSON-RPC interface security section, bitcoin.conf reference, and implementation configuration paths as one operator-security cluster before splitting distinct access-control or privacy concepts.",
+      "status": "In review",
+      "crawlStatus": "Partial",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added after the audited queue surfaced a distinct RPC control-plane security gap. The first inspected cluster covers credentials, rpcbind/rpcallowip exposure, and the implementation path that applies these settings."
     }
   ],
   "concepts": [
@@ -2858,6 +2875,41 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Added after deduping against Script, digital signatures, PSBT, Taproot, OP_CHECKSIGFROMSTACK, and the cross-domain Scriptless Scripts umbrella."
+    },
+    {
+      "id": "security.bitcoin-core-rpc-access",
+      "title": "Bitcoin Core RPC Access Security",
+      "category": "Security",
+      "sourceId": "source.bitcoin-core-operator-docs",
+      "sourceUrl": "https://github.com/bitcoin/bitcoin/blob/master/doc/JSON-RPC-interface.md#security",
+      "sourceContext": "JSON-RPC Interface > Security, bitcoin.conf RPC settings, and init.cpp configuration handling",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one operational security boundary: safely exposing Bitcoin Core's powerful RPC control plane through authentication and network-access limits. It is narrower than the generic RPC interface and distinct from wallet RPC workflows, transaction preflight, package relay, and general node security.",
+      "candidatePrerequisites": [
+        "dev.bitcoin-core-rpc",
+        "ops.run-full-node",
+        "security.adversarial-thinking"
+      ],
+      "chosenPrerequisites": [
+        "dev.bitcoin-core-rpc"
+      ],
+      "prerequisiteRationale": "Learners need the RPC interface and its authority before its access boundary can make sense. Full-node operation is already inherited through dev.bitcoin-core-rpc, and adversarial thinking is useful context but not a direct technical requirement for understanding authentication and exposure controls.",
+      "aliases": [
+        "Bitcoin Core RPC security",
+        "secure RPC exposure",
+        "RPC authentication",
+        "rpcauth"
+      ],
+      "tags": [
+        "security",
+        "rpc",
+        "access-control",
+        "node-operations"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Added after deduping against dev.bitcoin-core-rpc, dev.testmempoolaccept-rpc, wallet RPC nodes, package relay, and general node-security concepts."
     }
   ],
   "edges": [
@@ -3688,6 +3740,15 @@
       "rationale": "BIP 322 proves message authorization by constructing virtual transactions that satisfy a Bitcoin output script, so learners need the Script spending-condition model first.",
       "sourceId": "source.bitcoin-bips",
       "notes": "The digital-signature path is inherited through Script; PSBT, Schnorr, and Taproot remain related variants rather than redundant direct edges."
+    },
+    {
+      "from": "dev.bitcoin-core-rpc",
+      "to": "security.bitcoin-core-rpc-access",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "RPC access security is the control boundary around Bitcoin Core's programmatic interface, so learners need to understand the interface and its authority before securing exposure to it.",
+      "sourceId": "source.bitcoin-core-operator-docs",
+      "notes": "Full-node operation is inherited through dev.bitcoin-core-rpc; wallet RPC and transaction-preflight nodes remain downstream use cases rather than direct parents."
     }
   ],
   "decisions": [
@@ -5177,6 +5238,24 @@
         "source.bitcoin-bips"
       ],
       "notes": "Added with only protocol.script as the direct prerequisite. Variant-specific PSBT, Schnorr, and Taproot details remain downstream or adjacent rather than being forced into the generic format's prerequisite set."
+    },
+    {
+      "id": "decision.bitcoin-core-rpc-access-security-slice",
+      "type": "scope",
+      "subject": "security.bitcoin-core-rpc-access",
+      "status": "resolved",
+      "rationale": "Bitcoin Core's operator documentation exposes a missing learner-facing security boundary: authenticate RPC clients and constrain where the powerful interface can be reached. It survives dedupe because dev.bitcoin-core-rpc describes the interface, testmempoolaccept and wallet RPC nodes describe specific consumers, and package-relay or cluster-mempool describe transaction policy rather than control-plane exposure.",
+      "relatedConceptIds": [
+        "security.bitcoin-core-rpc-access",
+        "dev.bitcoin-core-rpc",
+        "dev.testmempoolaccept-rpc",
+        "protocol.package-relay",
+        "protocol.cluster-mempool"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-operator-docs"
+      ],
+      "notes": "Added with only dev.bitcoin-core-rpc as the direct prerequisite. Cookie/rpcauth credentials and rpcbind/rpcallowip exposure controls stay within one coherent RPC control-boundary concept; later source passes may split them only if a distinct learner outcome emerges."
     }
   ]
 }

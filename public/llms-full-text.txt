@@ -293,11 +293,12 @@ Protocol & Consensus (75 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (55 concepts)
+Security (56 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
 - Amount Correlation: How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.
+- Bitcoin Core RPC Access Security: Secure Bitcoin Core's powerful RPC control boundary by authenticating clients, limiting bind and allow rules, and understanding that RPC access can read private data, spend wallet funds, and change node behavior.
 - Blind Signatures: Blind signatures let a signer authorize a token without seeing its final contents, enabling ecash mints to issue privately spendable proofs. They build directly on digital-signature verification.
 - Censorship Resistance: Why open participation and distributed validation make transaction censorship costly and fragile.
 - Chain Analysis Heuristics: Common heuristics used to cluster addresses and infer ownership from on-chain behavior.
