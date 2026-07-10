@@ -394,6 +394,23 @@
       "conceptsExtracted": 2,
       "conceptsNormalized": 2,
       "notes": "Added after the RPC-security slice. The inspected pages establish submitpackage as a local package-admission mechanism and package RBF as a distinct replacement rule, separate from testmempoolaccept preflight, network package relay, and cluster-mempool internals."
+    },
+    {
+      "id": "source.bitcoin-core-cluster-mempool-rpc",
+      "name": "Bitcoin Core Cluster Mempool and RPC Documentation",
+      "url": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
+      "sourceType": "implementation-documentation-cluster",
+      "priority": "P1",
+      "scope": "Bitcoin Core's cluster-mempool data model and the getmempoolcluster RPC for inspecting connected transactions, mining order, chunks, fees, and weights.",
+      "clusterStrategy": "Track the getmempoolcluster RPC reference, Bitcoin Core 31.0 release notes, and mempool terminology as one cluster-observability slice; keep the conceptual cluster-mempool model separate from this concrete RPC workflow.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added after the package-RBF slice. The inspected documentation exposes getmempoolcluster as a read-only local observability operation, distinct from cluster-mempool policy, submitpackage admission, package relay, and package replacement."
     }
   ],
   "concepts": [
@@ -3001,6 +3018,43 @@
       "estimatedTime": "55m",
       "confidence": "high",
       "notes": "Added after deduping against protocol.rbf, dev.submitpackage-rpc, protocol.package-relay, protocol.cluster-mempool, and transaction-pinning concepts. Current policy scope is limited 1P1C-style package replacement rather than unrestricted package RBF."
+    },
+    {
+      "id": "dev.getmempoolcluster-rpc",
+      "title": "getmempoolcluster RPC",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
+      "sourceUrl": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
+      "sourceContext": "getmempoolcluster RPC reference, Bitcoin Core 31.0 cluster-mempool release notes, and mempool terminology",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one developer-facing observation workflow: given an in-mempool transaction, inspect its connected cluster and interpret the mining-ordered chunks, fees, weights, and transactions. It is narrower than the cluster-mempool policy model and distinct from package admission, package relay, and package replacement.",
+      "candidatePrerequisites": [
+        "protocol.cluster-mempool",
+        "dev.submitpackage-rpc",
+        "protocol.package-rbf",
+        "protocol.package-relay"
+      ],
+      "chosenPrerequisites": [
+        "protocol.cluster-mempool"
+      ],
+      "prerequisiteRationale": "The conceptual cluster-mempool model is the direct prerequisite for interpreting connected components, chunks, and mining order. submitpackage is a local admission operation, package RBF is replacement policy, and package relay is network propagation rather than a requirement for reading local cluster state.",
+      "aliases": [
+        "getmempoolcluster",
+        "mempool cluster RPC",
+        "cluster inspection RPC",
+        "mempool chunk ordering"
+      ],
+      "tags": [
+        "rpc",
+        "mempool",
+        "cluster-mempool",
+        "packages",
+        "mining-order"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Added after deduping against protocol.cluster-mempool, dev.submitpackage-rpc, protocol.package-rbf, and protocol.package-relay. This node teaches read-only local cluster inspection, not admission, replacement, or relay."
     }
   ],
   "edges": [
@@ -3858,6 +3912,15 @@
       "rationale": "Package RBF extends the ordinary replacement-policy model with package-level fee and cluster conditions, so learners need base RBF semantics first.",
       "sourceId": "source.bitcoin-core-package-policy",
       "notes": "Package relay, cluster mempool, submitpackage, and pinning remain adjacent concepts rather than redundant direct edges."
+    },
+    {
+      "from": "protocol.cluster-mempool",
+      "to": "dev.getmempoolcluster-rpc",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The RPC reports a transaction's connected cluster and mining-ordered chunks, so learners need the cluster-mempool model before interpreting its output.",
+      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
+      "notes": "submitpackage, package RBF, and package relay remain neighboring workflows rather than direct prerequisites."
     }
   ],
   "decisions": [
@@ -5402,6 +5465,24 @@
         "source.bitcoin-core-package-policy"
       ],
       "notes": "Added with only protocol.rbf as the direct prerequisite. Keep the current limited 1P1C package-RBF scope explicit rather than implying unrestricted package replacement, and keep the concept separate from the submitpackage RPC workflow or general package relay."
+    },
+    {
+      "id": "decision.getmempoolcluster-rpc-slice",
+      "type": "scope",
+      "subject": "dev.getmempoolcluster-rpc",
+      "status": "resolved",
+      "rationale": "Bitcoin Core 31.0 documentation exposes getmempoolcluster as a distinct read-only developer workflow: query an in-mempool transaction and interpret its connected cluster, transaction count, weight, mining-ordered chunks, and chunk fees. It survives dedupe because cluster mempool is the underlying model, submitpackage is local admission, package RBF is replacement policy, and package relay is network propagation.",
+      "relatedConceptIds": [
+        "dev.getmempoolcluster-rpc",
+        "protocol.cluster-mempool",
+        "dev.submitpackage-rpc",
+        "protocol.package-rbf",
+        "protocol.package-relay"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-cluster-mempool-rpc"
+      ],
+      "notes": "Added with only protocol.cluster-mempool as the direct prerequisite. Keep the node focused on interpreting local RPC output rather than teaching cluster design, package admission, replacement, or relay."
     }
   ]
 }

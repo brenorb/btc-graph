@@ -162,7 +162,7 @@ Mining (20 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (54 concepts)
+Network, Relay & Client Sync (55 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -183,6 +183,7 @@ Network, Relay & Client Sync (54 concepts)
 - Erlay Transaction Relay: Erlay reduces transaction relay bandwidth while preserving propagation robustness. It changes gossip behavior to scale peer connectivity more efficiently.
 - Fee Estimation RPC: How wallet and node software estimate feerates from mempool and historical confirmation data.
 - Full Node vs Lightweight Wallet: Full nodes verify Bitcoin rules locally, while lightweight wallets trade some verification guarantees for lower bandwidth, storage, and setup costs. Choosing between them means choosing a trust model, not just a software footprint.
+- getmempoolcluster RPC: Bitcoin Core's getmempoolcluster RPC inspects the connected mempool cluster for an in-mempool transaction, returning its transaction count, weight, and mining-ordered chunks with their fees and transactions.
 - Headers-First Synchronization: How nodes download and validate block headers before fetching full blocks during initial sync.
 - Initial Block Download: How a new node bootstraps chainstate safely and reaches current tip.
 - Light Client Trust Model: Light clients reduce bandwidth and storage costs by delegating part of validation to full nodes and peers, which changes what they can verify for themselves. Understanding this trust model clarifies the tradeoffs between full nodes, legacy SPV, and compact-filter clients.

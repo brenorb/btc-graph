@@ -1621,6 +1621,58 @@
       ]
     },
     {
+      "id": "dev.getmempoolcluster-rpc",
+      "title": "getmempoolcluster RPC",
+      "description": "Bitcoin Core's getmempoolcluster RPC inspects the connected mempool cluster for an in-mempool transaction, returning its transaction count, weight, and mining-ordered chunks with their fees and transactions.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.cluster-mempool"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core 31.0 getmempoolcluster RPC",
+          "url": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
+          "notes": "Canonical RPC reference for inspecting a transaction's connected cluster and mining-ordered chunks."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core 31.0 Release Notes: Cluster Mempool",
+          "url": "https://bitcoincore.org/en/releases/31.0/",
+          "notes": "Explains the cluster-mempool model, chunk-based mining order, and the new cluster inspection RPC."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Mempool Terminology",
+          "url": "https://github.com/bitcoin/bitcoin/blob/31.x/doc/policy/mempool-terminology.md",
+          "notes": "Definitions for clusters, chunks, and feerate-based ordering used by the RPC."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for transactions, mempool behavior, fees, and Bitcoin Core developer workflows.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "rpc",
+        "mempool",
+        "cluster-mempool",
+        "packages",
+        "mining-order"
+      ],
+      "aliases": [
+        "getmempoolcluster",
+        "mempool cluster RPC",
+        "cluster inspection RPC",
+        "mempool chunk ordering"
+      ]
+    },
+    {
       "id": "dev.hardened-keys",
       "title": "Hardened Keys",
       "description": "Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.",
