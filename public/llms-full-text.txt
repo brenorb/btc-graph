@@ -162,7 +162,7 @@ Mining (20 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (52 concepts)
+Network, Relay & Client Sync (53 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -202,6 +202,7 @@ Network, Relay & Client Sync (52 concepts)
 - Run a Full Node: Install, sync, and maintain independently verifying infrastructure.
 - Signet Operations: Using signet for deterministic, low-value testing of wallet and node workflows.
 - Standardness Policy: Node relay and mempool policy rules that constrain which valid transactions are considered standard.
+- submitpackage RPC: Bitcoin Core's submitpackage RPC submits a topologically ordered package of raw transactions to the local mempool for consensus and package-policy evaluation; local acceptance does not imply network propagation.
 - testmempoolaccept RPC: RPC workflow to pre-check transaction acceptance against local mempool and policy rules.
 - Testnet and Regtest: Controlled experimentation environments for protocol and wallet behavior.
 - Tor for Node Connectivity: Improving network privacy and resilience by routing node traffic over Tor.

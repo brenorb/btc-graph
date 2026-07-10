@@ -377,6 +377,23 @@
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
       "notes": "Added after the audited queue surfaced a distinct RPC control-plane security gap. The first inspected cluster covers credentials, rpcbind/rpcallowip exposure, and the implementation path that applies these settings."
+    },
+    {
+      "id": "source.bitcoin-core-package-policy",
+      "name": "Bitcoin Core Package Policy and Admission Documentation",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/policy/packages.md",
+      "sourceType": "protocol-documentation-cluster",
+      "priority": "P1",
+      "scope": "Bitcoin Core's package mempool acceptance rules, submitpackage RPC, and release history for local package admission and fee-bumping behavior.",
+      "clusterStrategy": "Track the current submitpackage RPC reference, package-policy specification, and the 26.0 release note that introduced the RPC as one package-admission cluster; keep network package relay and cluster-mempool as deduplicated neighboring concepts.",
+      "status": "In review",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Raw extraction",
+      "dedupeStatus": "In progress",
+      "pageClustersTracked": 3,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added after the RPC-security slice. The inspected pages establish submitpackage as a local package-admission mechanism distinct from testmempoolaccept preflight and network package relay."
     }
   ],
   "concepts": [
@@ -2910,6 +2927,42 @@
       "estimatedTime": "45m",
       "confidence": "high",
       "notes": "Added after deduping against dev.bitcoin-core-rpc, dev.testmempoolaccept-rpc, wallet RPC nodes, package relay, and general node-security concepts."
+    },
+    {
+      "id": "dev.submitpackage-rpc",
+      "title": "submitpackage RPC",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-package-policy",
+      "sourceUrl": "https://bitcoincore.org/en/doc/31.0.0/rpc/rawtransactions/submitpackage/",
+      "sourceContext": "submitpackage RPC reference, package-policy specification, and Bitcoin Core 26.0 release notes",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one developer-facing operation: submitting a transaction package to a local node for package-aware mempool admission and reading the result. It is narrower than package relay, cluster mempool, and package policy generally, and distinct from testmempoolaccept because it attempts local admission rather than only preflighting the package.",
+      "candidatePrerequisites": [
+        "dev.testmempoolaccept-rpc",
+        "protocol.package-relay",
+        "protocol.cluster-mempool",
+        "protocol.cpfp"
+      ],
+      "chosenPrerequisites": [
+        "dev.testmempoolaccept-rpc"
+      ],
+      "prerequisiteRationale": "Learners need the existing RPC preflight workflow before the distinction between testing and submitting a package is useful. Package relay is a network-propagation layer, cluster mempool is an internal policy design, and CPFP is a motivating use case rather than a direct technical requirement.",
+      "aliases": [
+        "submitpackage",
+        "submitpackage RPC",
+        "local package submission",
+        "package mempool submission"
+      ],
+      "tags": [
+        "rpc",
+        "mempool",
+        "packages",
+        "fee-bumping"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Added after deduping against dev.testmempoolaccept-rpc, protocol.package-relay, protocol.cluster-mempool, and package-CPFP concepts."
     }
   ],
   "edges": [
@@ -3749,6 +3802,15 @@
       "rationale": "RPC access security is the control boundary around Bitcoin Core's programmatic interface, so learners need to understand the interface and its authority before securing exposure to it.",
       "sourceId": "source.bitcoin-core-operator-docs",
       "notes": "Full-node operation is inherited through dev.bitcoin-core-rpc; wallet RPC and transaction-preflight nodes remain downstream use cases rather than direct parents."
+    },
+    {
+      "from": "dev.testmempoolaccept-rpc",
+      "to": "dev.submitpackage-rpc",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "submitpackage is the admission counterpart to the existing testmempoolaccept preflight workflow, so learners need to understand local package checks before attempting submission and interpreting package results.",
+      "sourceId": "source.bitcoin-core-package-policy",
+      "notes": "Package relay and cluster mempool remain neighboring concepts rather than direct prerequisites because this node focuses on one local RPC operation."
     }
   ],
   "decisions": [
@@ -5256,6 +5318,24 @@
         "source.bitcoin-core-operator-docs"
       ],
       "notes": "Added with only dev.bitcoin-core-rpc as the direct prerequisite. Cookie/rpcauth credentials and rpcbind/rpcallowip exposure controls stay within one coherent RPC control-boundary concept; later source passes may split them only if a distinct learner outcome emerges."
+    },
+    {
+      "id": "decision.submitpackage-rpc-slice",
+      "type": "scope",
+      "subject": "dev.submitpackage-rpc",
+      "status": "resolved",
+      "rationale": "Bitcoin Core's package-admission documentation exposes a distinct RPC operation missing from the graph: submitting a package to the local mempool for package-aware validation and admission. It survives dedupe because testmempoolaccept only preflights, package relay describes network propagation, cluster mempool describes an internal policy model, and package policy is the broader rule set rather than the operation itself.",
+      "relatedConceptIds": [
+        "dev.submitpackage-rpc",
+        "dev.testmempoolaccept-rpc",
+        "protocol.package-relay",
+        "protocol.cluster-mempool",
+        "protocol.cpfp"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-package-policy"
+      ],
+      "notes": "Added with only dev.testmempoolaccept-rpc as the direct prerequisite. Keep the local-admission versus network-relay distinction explicit; successful submitpackage does not mean the package propagated."
     }
   ]
 }
