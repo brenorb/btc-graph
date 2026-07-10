@@ -12542,6 +12542,51 @@
       ]
     },
     {
+      "id": "protocol.generic-signed-messages",
+      "title": "Generic Signed Message Format",
+      "description": "BIP 322 uses virtual transactions to prove that a signer can satisfy a Bitcoin scriptPubKey for a message without spending or broadcasting funds.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 322: Generic Signed Message Format",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki",
+          "notes": "Canonical specification for signing and verifying messages against arbitrary Bitcoin output scripts using virtual transactions."
+        },
+        {
+          "type": "article",
+          "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+          "notes": "Related transaction-serialization context for the virtual transaction model and script-aware signing workflows."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Hands-on context for Script, signatures, transactions, and constructing verifiable Bitcoin spending conditions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "signatures",
+        "messages",
+        "script",
+        "interoperability"
+      ],
+      "aliases": [
+        "BIP 322",
+        "BIP322",
+        "generic signed messages",
+        "Bitcoin signed message format"
+      ]
+    },
+    {
       "id": "protocol.halving",
       "title": "Halving Cycle",
       "description": "Programmed issuance reductions and long-term security implications.",

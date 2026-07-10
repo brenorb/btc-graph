@@ -153,9 +153,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 5,
-      "conceptsExtracted": 2,
-      "conceptsNormalized": 2,
-      "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures and custody.deterministic-multisig-key-sorting."
+      "conceptsExtracted": 3,
+      "conceptsNormalized": 3,
+      "notes": "Added during source expansion. Initial inventory covers the registry/process, consensus soft forks, signature encoding and serialization, script/output templates, wallet/payment standards, and peer/relay clusters. Implemented from this source in the current branch: protocol.strict-der-signatures, custody.deterministic-multisig-key-sorting, and protocol.generic-signed-messages."
     },
     {
       "id": "source.mempool-space-docs",
@@ -2821,6 +2821,43 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as the first mempool.space source-expansion slice, with Bitcoin Core policy and getmempoolinfo documentation anchoring the semantics."
+    },
+    {
+      "id": "protocol.generic-signed-messages",
+      "title": "Generic Signed Message Format",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.bitcoin-bips",
+      "sourceUrl": "https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki",
+      "sourceContext": "BIP 322: Generic Signed Message Format",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This isolates one interoperability format: proving that a signer can satisfy a Bitcoin scriptPubKey for a message through virtual transactions. It is narrower than Script, digital signatures, PSBT, Taproot, and Scriptless Scripts because those describe the execution substrate, signing workflow, script variants, or broader construction family rather than the generic message format itself.",
+      "candidatePrerequisites": [
+        "protocol.script",
+        "fundamentals.digital-signatures",
+        "custody.psbt",
+        "fundamentals.schnorr-signatures",
+        "protocol.taproot"
+      ],
+      "chosenPrerequisites": [
+        "protocol.script"
+      ],
+      "prerequisiteRationale": "BIP 322 is defined around satisfying an output script, so Script is the only direct prerequisite. Digital signatures are already inherited through the Script branch, while PSBT, Schnorr, and Taproot are variant-specific or related signing contexts rather than requirements for understanding the generic format.",
+      "aliases": [
+        "BIP 322",
+        "BIP322",
+        "generic signed messages",
+        "Bitcoin signed message format"
+      ],
+      "tags": [
+        "signatures",
+        "messages",
+        "script",
+        "interoperability"
+      ],
+      "estimatedTime": "45m",
+      "confidence": "high",
+      "notes": "Added after deduping against Script, digital signatures, PSBT, Taproot, OP_CHECKSIGFROMSTACK, and the cross-domain Scriptless Scripts umbrella."
     }
   ],
   "edges": [
@@ -3642,6 +3679,15 @@
       "rationale": "Rolling minimum fee escalation and transaction eviction are local consequences of the node's mempool relay policy, so learners need that policy boundary first.",
       "sourceId": "source.mempool-space-docs",
       "notes": "The generic mempool, fee-market, and consensus-policy branches remain inherited or adjacent rather than direct prerequisites."
+    },
+    {
+      "from": "protocol.script",
+      "to": "protocol.generic-signed-messages",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "BIP 322 proves message authorization by constructing virtual transactions that satisfy a Bitcoin output script, so learners need the Script spending-condition model first.",
+      "sourceId": "source.bitcoin-bips",
+      "notes": "The digital-signature path is inherited through Script; PSBT, Schnorr, and Taproot remain related variants rather than redundant direct edges."
     }
   ],
   "decisions": [
@@ -5110,6 +5156,27 @@
         "source.lightning-bolts"
       ],
       "notes": "Added with only the identity and key-exchange foundations as direct prerequisites. Keep BOLT 08 and BIP324 as sibling transport nodes rather than collapsing them into generic encrypted transport."
+    },
+    {
+      "id": "decision.generic-signed-messages-slice",
+      "type": "scope",
+      "subject": "protocol.generic-signed-messages",
+      "status": "resolved",
+      "rationale": "BIP 322 exposes a distinct interoperability format missing from the graph: proving that a signer can satisfy an arbitrary Bitcoin scriptPubKey for a message using virtual transactions. It survives dedupe because Script, digital signatures, PSBT, Taproot, OP_CHECKSIGFROMSTACK, and Scriptless Scripts each cover a different substrate, workflow, variant, opcode proposal, or cross-domain construction family.",
+      "relatedConceptIds": [
+        "protocol.generic-signed-messages",
+        "protocol.script",
+        "fundamentals.digital-signatures",
+        "custody.psbt",
+        "fundamentals.schnorr-signatures",
+        "protocol.taproot",
+        "protocol.op-checksigfromstack",
+        "protocol.scriptless-scripts"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-bips"
+      ],
+      "notes": "Added with only protocol.script as the direct prerequisite. Variant-specific PSBT, Schnorr, and Taproot details remain downstream or adjacent rather than being forced into the generic format's prerequisite set."
     }
   ]
 }
