@@ -1,0 +1,43 @@
+{
+  "id": "protocol.taproot-key-path-spends",
+  "title": "Taproot Key-Path Spends",
+  "description": "Taproot key-path spends spend a P2TR output by providing a Schnorr signature for the tweaked output key without revealing any committed script path. When all parties can cooperate, this is the most compact and private Taproot spend form because it looks like a simple signature check onchain.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taptweak"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop modules 2.0 and 2.1 show how a segwit v1 output can be spent via the key path with a Schnorr signature."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Canonical Taproot specification covering witness structure and signature-based spending against the tweaked output key."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Advanced technical reference for Taproot transaction construction, Schnorr signatures, and spending-path privacy tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "taproot",
+    "schnorr",
+    "spending"
+  ],
+  "aliases": [
+    "key path spend",
+    "taproot key spend",
+    "p2tr key path spend"
+  ]
+}

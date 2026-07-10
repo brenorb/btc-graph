@@ -1,0 +1,35 @@
+{
+  "id": "mining.pool-shares",
+  "title": "Mining Pool Shares",
+  "description": "Mining pool shares are partial proofs of work found under a pool-defined target that is easier than the network target. They let a pool verify that a miner contributed real hash work, measure each miner's proportional contribution, and split payouts when one submitted share also happens to satisfy the actual network target.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.pool-vs-solo"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Mining",
+      "url": "https://developer.bitcoin.org/devguide/mining.html#pool-mining",
+      "notes": "Primary source for how pools use easier share targets, validate miner work, and map submitted shares to payouts."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad background on proof of work, block construction, miner incentives, and the pooled-mining context around share accounting.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "mining",
+    "pools"
+  ],
+  "aliases": [
+    "pool shares",
+    "mining shares"
+  ]
+}

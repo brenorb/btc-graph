@@ -1,0 +1,44 @@
+{
+  "id": "fundamentals.lamport-signatures",
+  "title": "Lamport Signatures",
+  "description": "Lamport signatures are one-time digital signatures built only from hash functions. They trade large keys and single-use semantics for simple security assumptions, which is why they remain a useful starting point for understanding hash-based and post-quantum signature families.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.digital-signatures",
+    "fundamentals.hash-functions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Constructing Digital Signatures from a One Way Function",
+      "url": "https://lamport.azurewebsites.net/pubs/dig-sig.pdf",
+      "notes": "Leslie Lamport's original paper introducing one-time signatures built from one-way functions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Newsletter #301",
+      "url": "https://bitcoinops.org/en/newsletters/2024/05/08/",
+      "notes": "Bitcoin-specific context for how Lamport signatures show up in quantum-resistance discussions and proposed script constructions."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "General cryptography and signing background for understanding why alternative signature constructions matter in Bitcoin.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "cryptography",
+    "post-quantum",
+    "signatures"
+  ],
+  "aliases": [
+    "lamport signature",
+    "lamport one-time signatures",
+    "hash-based one-time signatures"
+  ]
+}

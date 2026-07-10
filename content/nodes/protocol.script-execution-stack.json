@@ -1,0 +1,42 @@
+{
+  "id": "protocol.script-execution-stack",
+  "title": "Script Execution Stack",
+  "description": "Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Script",
+      "url": "https://en.bitcoin.it/wiki/Script",
+      "notes": "Reference overview of Bitcoin Script as a stack-based, Forth-like language and how opcodes transform stack items."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Canonical walkthrough of script validation, stack evaluation, and the conditions that make a spend succeed or fail."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Authorization and authentication chapters covering Script construction, stack execution, and spending validation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "scripts",
+    "stack",
+    "validation"
+  ],
+  "aliases": [
+    "script stack",
+    "stack-based script execution"
+  ]
+}

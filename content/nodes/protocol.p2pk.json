@@ -1,0 +1,42 @@
+{
+  "id": "protocol.p2pk",
+  "title": "Pay-to-Public-Key (P2PK)",
+  "description": "Legacy output type that locks coins directly to a full public key and spends them with a matching signature. It is simpler than P2PKH, but it reveals the recipient public key at receive time and mainly matters today as an early script template reference point.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.script"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "P2PK - Pay To Public Key",
+      "url": "https://bitcoindevs.xyz/decoding/p2pk",
+      "notes": "Decoding walkthrough using the Hal Finney transaction to show the locking script, unlocking script, and validation flow."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Concrete script-level reference for legacy output templates, signature verification, and spending conditions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Broad transaction and output-pattern reference that places P2PK in the historical script family."
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "scripts",
+    "outputs",
+    "history"
+  ],
+  "aliases": [
+    "p2pk",
+    "pay to pubkey"
+  ]
+}

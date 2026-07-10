@@ -1,0 +1,49 @@
+{
+  "id": "dev.taproot-psbt-fields",
+  "title": "Taproot PSBT Fields",
+  "description": "Taproot-specific PSBT input and output fields for carrying internal keys, leaf scripts, merkle data, and Taproot derivation metadata without redefining the broader PSBT workflow.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.psbt",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 371: Taproot Fields for PSBT",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0371.mediawiki",
+      "notes": "Canonical specification for Taproot-specific PSBT input and output fields."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: PSBT",
+      "url": "https://bitcoinops.org/en/topics/psbt/",
+      "notes": "Implementation-oriented context for PSBT evolution, including Taproot field support across wallets and libraries."
+    },
+    {
+      "type": "article",
+      "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+      "notes": "Base PSBT field model that BIP 371 extends for Taproot data."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for wallet construction, signing workflows, and Taproot-era transaction structure.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "psbt",
+    "taproot",
+    "wallet-development"
+  ],
+  "aliases": [
+    "bip371",
+    "taproot fields for psbt"
+  ]
+}

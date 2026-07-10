@@ -191,6 +191,54 @@
       ]
     },
     {
+      "id": "custody.coin-selection",
+      "title": "Coin Selection",
+      "description": "Coin selection is the process a wallet uses to choose which UTXOs fund a payment. It balances fee cost, change creation, and privacy tradeoffs before signing or broadcasting a transaction.",
+      "category": "Wallets",
+      "prerequisites": [
+        "protocol.fee-market"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Coin Selection",
+          "url": "https://bitcoinops.org/en/topics/coin-selection/",
+          "notes": "Concise overview of why wallets choose different UTXO sets and how fee and privacy pressures shape the algorithms."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide: Coin Selection",
+          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+          "notes": "Clear product and UX framing for the tradeoffs wallets expose or hide from users."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core RPC: fundrawtransaction",
+          "url": "https://developer.bitcoin.org/reference/rpc/fundrawtransaction.html",
+          "notes": "Concrete implementation surface where automatic funding and selection behavior becomes visible."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for UTXOs, change outputs, and wallet transaction construction.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "wallets",
+        "utxos",
+        "fees"
+      ],
+      "aliases": [
+        "utxo selection",
+        "input selection"
+      ]
+    },
+    {
       "id": "custody.custody-vs-self-custody-law",
       "title": "Custody vs Self-Custody Legal Framing",
       "description": "Legal obligations and risk shift depending on whether funds are held by an intermediary or controlled directly by the user. Understanding this split is essential for consumer protection and compliance posture.",
@@ -234,6 +282,49 @@
       ],
       "aliases": [
         "custodial vs non-custodial legal risk"
+      ]
+    },
+    {
+      "id": "custody.degrading-multisig",
+      "title": "Degrading Multisig",
+      "description": "Degrading multisig uses a strong live-key spending policy first and a weaker backup path that becomes available after a timeout. It is a concrete custody pattern for balancing day-to-day resilience with emergency recovery options, and Taproot can implement it with cleaner onchain privacy.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.multisig",
+        "protocol.timelocks"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Module 3.1 demonstrates the degrading multisig wallet pattern with live and backup keys plus a timeout path."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Taproot structure that allows multiple spending paths to be committed and only the exercised path to be revealed."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for multisig custody design, script paths, and recovery tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "multisig",
+        "taproot",
+        "recovery"
+      ],
+      "aliases": [
+        "timeout backup multisig",
+        "degrading multisig wallet"
       ]
     },
     {
@@ -327,6 +418,49 @@
       ]
     },
     {
+      "id": "custody.human-readable-addresses",
+      "title": "Human-Readable Bitcoin Addresses",
+      "description": "Human-readable Bitcoin addresses use memorable handles that resolve to normal payment instructions instead of exposing raw addresses directly. They improve sharing and recall, but add trust and privacy tradeoffs because an intermediary or naming system is involved in the lookup.",
+      "category": "Wallets",
+      "prerequisites": [
+        "privacy.address-reuse"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Human Readable Addresses",
+          "url": "https://bitcoin.design/guide/how-it-works/human-readable-addresses/",
+          "notes": "Primary UX-oriented overview of BIP353, Lightning Address, Paynyms, and the trust/privacy tradeoffs behind readable handles."
+        },
+        {
+          "type": "article",
+          "title": "BIP 353: DNS Payment Instructions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki",
+          "notes": "Canonical specification for Human-Readable Bitcoin Addresses resolved through DNS."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for payment instructions, address handling, and wallet tradeoffs that frame this UX layer.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "wallets",
+        "ux",
+        "payments"
+      ],
+      "aliases": [
+        "human bitcoin addresses",
+        "readable bitcoin handles",
+        "bip353 addresses"
+      ]
+    },
+    {
       "id": "custody.inheritance-planning",
       "title": "Bitcoin Inheritance Planning",
       "description": "Designing survivable custody workflows that balance privacy, security, and recoverability.",
@@ -362,6 +496,43 @@
       ],
       "aliases": [
         "bitcoin inheritance"
+      ]
+    },
+    {
+      "id": "custody.multiple-wallets",
+      "title": "Multiple Wallets",
+      "description": "Multiple wallets means separating funds into distinct wallet buckets inside one application based on purpose, ownership, or security model. A spending wallet, shared wallet, savings wallet, or view-only inheritance wallet can stay separate while still being managed together.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.self-custody"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Multiple Wallets",
+          "url": "https://bitcoin.design/guide/multiple-wallets/",
+          "notes": "Primary UX discussion of separating wallets by purpose, ownership, balance views, and switching patterns inside one app."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet structure, custody tradeoffs, and the underlying payment model that multi-wallet UX organizes.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "wallets",
+        "ux",
+        "custody"
+      ],
+      "aliases": [
+        "multi-wallet setup",
+        "wallet compartmentalization",
+        "multiple wallet management"
       ]
     },
     {
@@ -518,6 +689,50 @@
       ],
       "aliases": [
         "25th word"
+      ]
+    },
+    {
+      "id": "custody.progressive-security",
+      "title": "Progressive Security",
+      "description": "Progressive security is a wallet design approach that starts with low-friction key management for smaller amounts and guides users toward stronger schemes as value, experience, or threat exposure grows. It treats hardware signing and multi-key setups as staged upgrades instead of one fixed wallet architecture from day one.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.hardware-wallets",
+        "custody.multisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Upgradeable Wallet",
+          "url": "https://bitcoin.design/guide/upgradeable-wallet/",
+          "notes": "Primary reference design for staged private-key-management upgrades as holdings and user sophistication grow."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Design Principles",
+          "url": "https://bitcoin.design/guide/getting-started/principles/",
+          "notes": "High-level articulation of progressive security as a beginner-to-advanced product design principle."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for custody tradeoffs, signer models, and wallet scheme differences that progressive upgrades navigate.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "wallets",
+        "ux",
+        "security"
+      ],
+      "aliases": [
+        "upgradeable wallet",
+        "security upgrade path",
+        "wallet scheme upgrades"
       ]
     },
     {
@@ -683,6 +898,93 @@
       ],
       "aliases": [
         "self-custody principles"
+      ]
+    },
+    {
+      "id": "custody.shamirs-secret-sharing",
+      "title": "Shamir's Secret Sharing",
+      "description": "Shamir's Secret Sharing splits one secret into multiple shares so that any chosen threshold can reconstruct it, while fewer shares reveal nothing useful. In Bitcoin custody it is commonly used for seed backups when operators want threshold recovery without handing one full secret to any single location.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.backups-recovery"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "How to Share a Secret",
+          "url": "https://web.mit.edu/6.857/OldStuff/Fall03/ref/Shamir-HowToShareASecret.pdf",
+          "notes": "Adi Shamir's original paper introducing threshold secret sharing with polynomial reconstruction over finite fields."
+        },
+        {
+          "type": "article",
+          "title": "SLIP-0039: Shamir's Secret-Sharing for Mnemonic Codes",
+          "url": "https://github.com/satoshilabs/slips/blob/master/slip-0039.md",
+          "notes": "Official wallet-backup specification showing how Shamir sharing is applied to mnemonic secrets in Bitcoin-adjacent practice."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for seed material, wallet backup context, and the surrounding custody tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "self-custody",
+        "backups",
+        "threshold"
+      ],
+      "aliases": [
+        "shamir secret sharing",
+        "shamir backup",
+        "threshold seed shares"
+      ]
+    },
+    {
+      "id": "custody.transaction-metadata",
+      "title": "Transaction Metadata",
+      "description": "Transaction metadata is wallet-side context such as contacts, descriptions, tags, and notes attached to a payment or activity item. It helps users understand history and search their activity, but it is not stored on-chain and needs explicit portability if users change wallets.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.output-labeling",
+        "privacy.pseudonymity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Activity",
+          "url": "https://bitcoin.design/guide/daily-spending-wallet/activity/",
+          "notes": "Primary discussion of wallet activity presentation, recipient fields, and why metadata portability matters."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design: Contacts",
+          "url": "https://bitcoin.design/guide/daily-spending-wallet/contacts/",
+          "notes": "Shows how wallets attach names, reusable payment endpoints, and contextual meaning to transactions without confusing that data for on-chain state."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet behavior, transaction history, and the underlying payment model that this metadata decorates.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "wallets",
+        "ux",
+        "activity"
+      ],
+      "aliases": [
+        "payment metadata",
+        "wallet activity metadata",
+        "transaction notes"
       ]
     },
     {
@@ -958,6 +1260,55 @@
       ]
     },
     {
+      "id": "dev.descriptor-wallet-policies",
+      "title": "Descriptor Wallet Policies",
+      "description": "Descriptor wallet policies define a wallet as a descriptor template plus key information items, making account structure portable across software and hardware signers. They standardize how external signers can register, verify, and later derive the same wallet without relying on custom wallet-specific side data.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.descriptors",
+        "dev.bip32"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 388: Wallet Policies for Descriptor Wallets",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki",
+          "notes": "Canonical definition of descriptor wallet policies, descriptor templates, and key information vectors."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Script Descriptors",
+          "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+          "notes": "Tracks the descriptor ecosystem changes that surfaced wallet policies as a distinct standard."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Hardware Wallet Interface (HWI)",
+          "url": "https://bitcoinops.org/en/topics/hwi/",
+          "notes": "Shows why a portable wallet-policy format matters for external signers that combine descriptors with hardware-device coordination."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for HD keys, descriptors, and wallet interoperability tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "descriptors",
+        "wallets",
+        "external-signers"
+      ],
+      "aliases": [
+        "bip388",
+        "wallet policies"
+      ]
+    },
+    {
       "id": "dev.descriptors",
       "title": "Output Descriptors",
       "description": "Descriptor expressions that describe script templates, key origins, and wallet scanning behavior.",
@@ -999,6 +1350,99 @@
         "output descriptors",
         "output script descriptors",
         "script descriptors"
+      ]
+    },
+    {
+      "id": "dev.descriptors-in-psbt",
+      "title": "Descriptors in PSBTs",
+      "description": "Descriptors in PSBTs let coordinators and signers exchange script-template information alongside transaction data instead of relying on custom wallet metadata. They make it easier for different tools to reason about the same inputs, outputs, and signing responsibilities from a shared descriptor view.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.descriptors",
+        "custody.psbt"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Partially Signed Bitcoin Transactions",
+          "url": "https://bitcoinops.org/en/topics/psbt/",
+          "notes": "Source-native discussion of PSBT interoperability changes, including descriptor-related extensions and coordination patterns."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Script Descriptors",
+          "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+          "notes": "Source-native record of descriptor adoption and the later work to combine descriptors with signer and wallet workflows."
+        },
+        {
+          "type": "article",
+          "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+          "notes": "Base PSBT structure that later descriptor-carrying extensions build on."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet interoperability, transaction construction, and signer coordination tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "descriptors",
+        "psbt",
+        "interoperability"
+      ],
+      "aliases": [
+        "descriptor psbts",
+        "psbt descriptors"
+      ]
+    },
+    {
+      "id": "dev.extended-keys",
+      "title": "Extended Keys (XPUB/XPRV)",
+      "description": "Extended keys package a BIP32 key together with its chain code so a wallet can derive an entire branch of child keys from one exported value. An xprv can derive both child private and public keys, while an xpub can derive only child public keys for watch-only or address-generation workflows.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.bip32"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 32: Hierarchical Deterministic Wallets",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+          "notes": "Canonical specification for extended private keys, extended public keys, chain codes, and public-only derivation."
+        },
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Wallet Recovery",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+          "notes": "Walks through what extended keys contain, how xpub/xprv branches differ, and why public-only derivation matters operationally."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for HD wallets, xpub/xprv boundaries, chain codes, and the wallet workflows built on branch-level key export.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "wallets",
+        "keys",
+        "standards"
+      ],
+      "aliases": [
+        "xpub",
+        "xprv",
+        "extended public keys",
+        "extended private keys"
       ]
     },
     {
@@ -1075,6 +1519,49 @@
       ],
       "aliases": [
         "transaction funding rpc"
+      ]
+    },
+    {
+      "id": "dev.hardened-keys",
+      "title": "Hardened Keys",
+      "description": "Hardened derivation is the BIP32 child-key mode that prevents a leaked child private key plus parent xpub from revealing the parent private key. It creates a security boundary inside HD wallet trees at the cost of giving up public-only derivation below that branch.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.extended-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Wallets",
+          "url": "https://developer.bitcoin.org/devguide/wallets.html#hardened-keys",
+          "notes": "Canonical walkthrough of hardened derivation and why it changes what can be derived from extended public keys."
+        },
+        {
+          "type": "article",
+          "title": "BIP 32: Hierarchical Deterministic Wallets",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+          "notes": "Canonical specification for hardened and non-hardened child derivation."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for HD wallet trees, xpub/xprv boundaries, and practical derivation tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "wallets",
+        "keys",
+        "standards"
+      ],
+      "aliases": [
+        "hardened derivation",
+        "hardened child keys",
+        "hardened child derivation"
       ]
     },
     {
@@ -1305,6 +1792,147 @@
       ]
     },
     {
+      "id": "dev.scriptpubkeymanagers",
+      "title": "ScriptPubKey Managers",
+      "description": "Bitcoin Core ScriptPubKey Managers are wallet components that own scriptPubKey sets, address generation branches, and ownership tracking for specific output types. In descriptor wallets, the wallet becomes a collection of these managers instead of one monolithic key-and-address store.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.descriptors"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: ScriptPubKeyManagers",
+          "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+          "notes": "Primary walkthrough of the SPKM abstraction, per-output-type managers, and the internal versus external split."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Keys in the Wallet",
+          "url": "https://bitcoincore.academy/wallet-keys.html",
+          "notes": "Explains why descriptor wallets replaced the older keypool model and why script management was separated into dedicated managers."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet structure, script templates, and address derivation background relevant to Core wallet internals.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "wallet-internals",
+        "bitcoin-core",
+        "descriptors"
+      ],
+      "aliases": [
+        "scriptpubkeymanagers",
+        "spkm",
+        "spkms"
+      ]
+    },
+    {
+      "id": "dev.taproot-descriptors",
+      "title": "Taproot Descriptors",
+      "description": "Taproot descriptors use the `tr()` expression to describe P2TR outputs, including internal keys and optional script-path commitments. They extend generic output descriptors with Taproot-specific structure without becoming a transaction construction or signing workflow by themselves.",
+      "category": "Wallets",
+      "prerequisites": [
+        "dev.descriptors",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 386: tr() Output Script Descriptors",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0386.mediawiki",
+          "notes": "Primary specification for Taproot descriptor syntax and its mapping to P2TR outputs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Output Script Descriptors",
+          "url": "https://bitcoinops.org/en/topics/output-script-descriptors/",
+          "notes": "Source-native context for descriptor evolution and how Taproot descriptors fit into wallet tooling."
+        },
+        {
+          "type": "article",
+          "title": "BIP 380: Output Script Descriptors",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki",
+          "notes": "General descriptor semantics that Taproot descriptors build on."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for Taproot outputs, wallet construction, and descriptor-oriented tooling.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "descriptors",
+        "taproot",
+        "wallet-development"
+      ],
+      "aliases": [
+        "tr descriptors",
+        "bip386"
+      ]
+    },
+    {
+      "id": "dev.taproot-psbt-fields",
+      "title": "Taproot PSBT Fields",
+      "description": "Taproot-specific PSBT input and output fields for carrying internal keys, leaf scripts, merkle data, and Taproot derivation metadata without redefining the broader PSBT workflow.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.psbt",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 371: Taproot Fields for PSBT",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0371.mediawiki",
+          "notes": "Canonical specification for Taproot-specific PSBT input and output fields."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: PSBT",
+          "url": "https://bitcoinops.org/en/topics/psbt/",
+          "notes": "Implementation-oriented context for PSBT evolution, including Taproot field support across wallets and libraries."
+        },
+        {
+          "type": "article",
+          "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+          "notes": "Base PSBT field model that BIP 371 extends for Taproot data."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet construction, signing workflows, and Taproot-era transaction structure.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "psbt",
+        "taproot",
+        "wallet-development"
+      ],
+      "aliases": [
+        "bip371",
+        "taproot fields for psbt"
+      ]
+    },
+    {
       "id": "dev.testmempoolaccept-rpc",
       "title": "testmempoolaccept RPC",
       "description": "RPC workflow to pre-check transaction acceptance against local mempool and policy rules.",
@@ -1421,6 +2049,49 @@
       ],
       "aliases": [
         "wallet development"
+      ]
+    },
+    {
+      "id": "dev.wallet-import-format-wif",
+      "title": "Wallet Import Format (WIF)",
+      "description": "Wallet Import Format serializes a single Bitcoin private key into a Base58Check string with a network prefix, checksum, and optional compressed-key flag so wallets can export and import raw keys with lower transcription risk.",
+      "category": "Wallets",
+      "prerequisites": [
+        "fundamentals.public-private-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Wallets",
+          "url": "https://developer.bitcoin.org/devguide/wallets.html#wallet-import-format-wif",
+          "notes": "Canonical walkthrough of WIF encoding steps, network prefixes, checksum handling, and the compressed-key suffix."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Glossary: WIF",
+          "url": "https://developer.bitcoin.org/glossary.html#wallet-import-format-wif",
+          "notes": "Concise reference that distinguishes WIF from extended private keys and other wallet serialization formats."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for private keys, Base58Check encoding, and the legacy wallet import/export formats built on top of them.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "wallets",
+        "keys",
+        "encoding"
+      ],
+      "aliases": [
+        "wif",
+        "wallet import format",
+        "private key import format"
       ]
     },
     {
@@ -1926,6 +2597,49 @@
       "aliases": [
         "historical hyperinflation",
         "currency collapse history"
+      ]
+    },
+    {
+      "id": "economics.ideal-money",
+      "title": "Ideal Money",
+      "description": "Ideal money acts as a stable measuring stick for economic calculation. The concept emphasizes minimizing monetary distortion so prices, savings, and long-term contracts reflect real changes instead of policy-driven noise.",
+      "category": "Economics",
+      "prerequisites": [
+        "fundamentals.inflation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Ideal Money and Asymptotically Ideal Money",
+          "url": "https://www.cypherpunkbooks.com/book/ideal-money-and-asymptotically-ideal-money",
+          "notes": "Primary-source framing for money as a measuring instrument rather than a politically managed target."
+        },
+        {
+          "type": "article",
+          "title": "Ideal Money and Asymptotically Ideal Money (PDF)",
+          "url": "https://web.math.princeton.edu/jfnj/texts_and_graphics/Main.Content/IDEAL_MONEY.../Older/PENN_STATE/babu.money.b.pdf",
+          "notes": "Alternative copy of the essay for deeper reading and terminology alignment."
+        },
+        {
+          "type": "book",
+          "title": "Denationalisation of Money",
+          "url": "https://amzn.to/4uiDGEh",
+          "notes": "Useful adjacent book on competitive money and why monetary quality matters for economic coordination.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4dIgWaD"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "economics",
+        "money",
+        "monetary-theory"
+      ],
+      "aliases": [
+        "asymptotically ideal money",
+        "ideal money and asymptotically ideal money",
+        "money as a measuring stick"
       ]
     },
     {
@@ -4201,6 +4915,50 @@
       ]
     },
     {
+      "id": "fundamentals.lamport-signatures",
+      "title": "Lamport Signatures",
+      "description": "Lamport signatures are one-time digital signatures built only from hash functions. They trade large keys and single-use semantics for simple security assumptions, which is why they remain a useful starting point for understanding hash-based and post-quantum signature families.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.digital-signatures",
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Constructing Digital Signatures from a One Way Function",
+          "url": "https://lamport.azurewebsites.net/pubs/dig-sig.pdf",
+          "notes": "Leslie Lamport's original paper introducing one-time signatures built from one-way functions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Newsletter #301",
+          "url": "https://bitcoinops.org/en/newsletters/2024/05/08/",
+          "notes": "Bitcoin-specific context for how Lamport signatures show up in quantum-resistance discussions and proposed script constructions."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "General cryptography and signing background for understanding why alternative signature constructions matter in Bitcoin.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "cryptography",
+        "post-quantum",
+        "signatures"
+      ],
+      "aliases": [
+        "lamport signature",
+        "lamport one-time signatures",
+        "hash-based one-time signatures"
+      ]
+    },
+    {
       "id": "fundamentals.merkle-trees",
       "title": "Merkle Trees",
       "description": "Efficient integrity proofs for large sets of transactions.",
@@ -4805,6 +5563,48 @@
       ]
     },
     {
+      "id": "fundamentals.validation-sovereignty",
+      "title": "Validation Sovereignty",
+      "description": "Validation sovereignty means deciding Bitcoin's rules by verifying them yourself instead of outsourcing validation to a wallet provider, service, or remote node. It is the practical user-facing consequence of don't trust, verify.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.trustlessness"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+          "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+          "notes": "Explains why self-verification matters and what is lost when you delegate it."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Trustlessness",
+          "url": "https://bitcoindevphilosophy.com/#trustlessness",
+          "notes": "Frames validation as the practical way to use Bitcoin without trusting third parties."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Directly aligned with the philosophy and engineering tradeoffs behind self-validation.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4uRjb1v"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "verification",
+        "full-nodes",
+        "philosophy"
+      ],
+      "aliases": [
+        "validation independence",
+        "self-validation"
+      ]
+    },
+    {
       "id": "fundamentals.zero-knowledge-proofs",
       "title": "Zero-Knowledge Proofs",
       "description": "Zero-knowledge proofs let someone prove a statement is true without revealing the underlying witness. They matter as background for privacy systems, validity proofs, and off-chain verification schemes discussed around Bitcoin.",
@@ -5140,6 +5940,51 @@
       ],
       "aliases": [
         "blocksize war"
+      ]
+    },
+    {
+      "id": "history.chaumian-ecash",
+      "title": "Chaumian eCash",
+      "description": "Chaumian eCash used blind signatures and a central issuer to create private digital cash before Bitcoin. Studying it shows how pre-Bitcoin systems approached privacy and double-spend resistance while still depending on trusted mint operators.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "fundamentals.blind-signatures",
+        "history.double-spend-problem"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Protecting Privacy with Electronic Cash",
+          "url": "https://www.cypherpunkbooks.com/book/protecting-privacy-with-electronic-cash",
+          "notes": "Hal Finney's early cypherpunk case for anonymous electronic cash and why blind signatures mattered."
+        },
+        {
+          "type": "article",
+          "title": "The Beauty of eCash",
+          "url": "https://www.cypherpunkbooks.com/book/the-beauty-of-ecash",
+          "notes": "Hal Finney's follow-on note illustrating what made Chaum-style digital cash distinctive as a bearer instrument."
+        },
+        {
+          "type": "book",
+          "title": "Genesis Book",
+          "url": "https://amzn.to/4bjOd9C",
+          "notes": "Useful historical framing for the cypherpunk digital-cash lineage that preceded Bitcoin.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/41xvliA"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "history",
+        "ecash",
+        "privacy"
+      ],
+      "aliases": [
+        "chaumian ecash",
+        "david chaum ecash",
+        "digicash",
+        "blind-signature ecash"
       ]
     },
     {
@@ -6033,6 +6878,50 @@
       ]
     },
     {
+      "id": "lightning.commitment-output-scripts",
+      "title": "Commitment Output Scripts",
+      "description": "Lightning commitment transactions pay balances through distinct to_local and to_remote output scripts. The to_local branch uses a revocable CSV-delayed script, while the to_remote branch captures the immediately spendable counterparty output, including the modern static_remotekey pattern.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.per-commitment-secrets",
+        "protocol.csv-bip112"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Scripts",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-scripts",
+          "notes": "Interactive lesson covering to_local, to_remote, static_remotekey, and why CSV protects the delayed local branch."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical specification for to_local, to_remote, and related commitment output script templates."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment output design, static_remotekey, and the operational safety model behind CSV-delayed spends.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "lightning",
+        "scripts",
+        "transactions"
+      ],
+      "aliases": [
+        "commitment scripts",
+        "to_local and to_remote scripts",
+        "static_remotekey"
+      ]
+    },
+    {
       "id": "lightning.commitment-transactions",
       "title": "Lightning Commitment Transactions",
       "description": "Pre-signed updateable channel states that enforce current balances during unilateral close.",
@@ -6227,6 +7116,56 @@
       ]
     },
     {
+      "id": "lightning.htlc-output-scripts",
+      "title": "HTLC Output Scripts",
+      "description": "Lightning HTLC output scripts define the exact witness conditions for claiming or timing out offered and received HTLCs inside commitment transactions. They add preimage and timeout branches on top of the broader commitment-script structure, which is why they sit between generic HTLC concepts and later settlement handling.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.htlc",
+        "lightning.commitment-output-scripts"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Offered HTLCs",
+          "url": "https://programminglightning.com/lightning-tutorial/offered-htlcs",
+          "notes": "Interactive lesson for the offered-HTLC witness script branch and how preimage or timeout paths are encoded."
+        },
+        {
+          "type": "article",
+          "title": "Programming Lightning: Received HTLCs",
+          "url": "https://programminglightning.com/lightning-tutorial/received-htlcs",
+          "notes": "Companion lesson covering the received-HTLC branch and how the claimant or timeout path differs from the offered case."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical specification for offered and received HTLC output scripts, including HTLC-success and HTLC-timeout spending flows."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment transactions, HTLC script branches, and the operational consequences of the different spend paths.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "lightning",
+        "htlc",
+        "scripts"
+      ],
+      "aliases": [
+        "offered htlc scripts",
+        "received htlc scripts",
+        "htlc witness scripts"
+      ]
+    },
+    {
       "id": "lightning.htlc-timeout-settlement",
       "title": "HTLC Timeout Settlement Paths",
       "description": "On-chain and off-chain settlement behavior when HTLCs approach timeout boundaries.",
@@ -6393,6 +7332,48 @@
       ]
     },
     {
+      "id": "lightning.obscured-commitment-number",
+      "title": "Obscured Commitment Number",
+      "description": "Lightning hides each commitment transaction's state number by XORing it with a 48-bit obscure factor derived from both payment basepoints, then splitting the result across nLockTime and nSequence. Channel peers can still recover the right state index, but casual onchain observers cannot read it directly.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.per-commitment-secrets"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Transactions",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-transactions",
+          "notes": "Interactive commitment-transaction lesson with the obscure-factor and obscured-commitment-number exercises."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical specification for the 48-bit obscured commitment number and its encoding into locktime and sequence."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment-state mechanics, unilateral close behavior, and the transaction fields Lightning repurposes.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "lightning",
+        "commitment-state",
+        "transactions"
+      ],
+      "aliases": [
+        "obscure factor",
+        "obscured commitment numbers"
+      ]
+    },
+    {
       "id": "lightning.onion-routing",
       "title": "Lightning Onion Routing",
       "description": "Packet format and forwarding privacy model for multi-hop Lightning payments.",
@@ -6482,6 +7463,48 @@
       ],
       "aliases": [
         "payment channels"
+      ]
+    },
+    {
+      "id": "lightning.per-commitment-secrets",
+      "title": "Per-Commitment Secrets",
+      "description": "Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "lightning.commitment-transactions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Programming Lightning: Commitment Secrets",
+          "url": "https://programminglightning.com/lightning-tutorial/commitment-secrets",
+          "notes": "Interactive lesson on the descending secret chain, per-commitment points, and the key-derivation role they play in Lightning channel states."
+        },
+        {
+          "type": "article",
+          "title": "BOLT 03: Bitcoin Transaction and Script Formats",
+          "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md",
+          "notes": "Canonical reference for per-commitment points, revocation keys, and the state-specific key material used in Lightning commitments."
+        },
+        {
+          "type": "book",
+          "title": "Mastering the Lightning Network",
+          "url": "https://amzn.to/40V421t",
+          "notes": "Best long-form treatment of commitment state evolution, revocation design, and the cryptographic machinery behind channel safety.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4v6P9aq"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "lightning",
+        "channels",
+        "keys"
+      ],
+      "aliases": [
+        "commitment secrets",
+        "per-commitment points"
       ]
     },
     {
@@ -7366,6 +8389,41 @@
       ]
     },
     {
+      "id": "mining.pool-shares",
+      "title": "Mining Pool Shares",
+      "description": "Mining pool shares are partial proofs of work found under a pool-defined target that is easier than the network target. They let a pool verify that a miner contributed real hash work, measure each miner's proportional contribution, and split payouts when one submitted share also happens to satisfy the actual network target.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.pool-vs-solo"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Mining",
+          "url": "https://developer.bitcoin.org/devguide/mining.html#pool-mining",
+          "notes": "Primary source for how pools use easier share targets, validate miner work, and map submitted shares to payouts."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad background on proof of work, block construction, miner incentives, and the pooled-mining context around share accounting.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mining",
+        "pools"
+      ],
+      "aliases": [
+        "pool shares",
+        "mining shares"
+      ]
+    },
+    {
       "id": "mining.pool-vs-solo",
       "title": "Pool vs Solo Mining",
       "description": "Variance, payout models, and operational tradeoffs.",
@@ -7777,6 +8835,49 @@
       ],
       "aliases": [
         "electrum server"
+      ]
+    },
+    {
+      "id": "ops.full-node-vs-lightweight-wallet",
+      "title": "Full Node vs Lightweight Wallet",
+      "description": "Full nodes verify Bitcoin rules locally, while lightweight wallets trade some verification guarantees for lower bandwidth, storage, and setup costs. Choosing between them means choosing a trust model, not just a software footprint.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "fundamentals.validation-sovereignty",
+        "protocol.light-client-trust-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Operating Modes",
+          "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+          "notes": "Canonical overview of full-node validation, SPV tradeoffs, and the operating-mode choices available to wallet users."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+          "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+          "notes": "User-facing explanation of why self-verification changes what guarantees a wallet can give you."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for wallet operating modes, full-node validation, and lightweight client tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "wallets",
+        "verification",
+        "nodes"
+      ],
+      "aliases": [
+        "full node versus lightweight wallet",
+        "full node vs spv wallet"
       ]
     },
     {
@@ -8893,6 +9994,49 @@
       ]
     },
     {
+      "id": "privacy.secret-right-to-cash",
+      "title": "Your Secret Right to Cash",
+      "description": "Physical cash historically gave people a private, bearer-style way to pay without routine permission checks or transaction surveillance. As money became digital and intermediated, that default right weakened, making privacy and censorship resistance explicit design goals rather than ambient properties.",
+      "category": "Security",
+      "prerequisites": [
+        "economics.history-of-money",
+        "fundamentals.censorship-resistance"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Your Secret Right to Cash",
+          "url": "https://www.cypherpunkbooks.com/book/your-secret-right-to-cash",
+          "notes": "Peter Van Valkenburgh's essay on why private bearer cash mattered by default and what is lost when payments become fully intermediated."
+        },
+        {
+          "type": "article",
+          "title": "The Case for Electronic Cash",
+          "url": "https://coincenter.org/the-case-for-electronic-cash/",
+          "notes": "Extends the essay's argument into digital cash design, privacy, and exclusion risks in mediated payment systems."
+        },
+        {
+          "type": "book",
+          "title": "The Little Bitcoin Book",
+          "url": "https://amzn.to/4sJ3wjb",
+          "notes": "Human-rights framing for why open access, privacy, and resistance to exclusion matter for money.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/3NMybNF"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "privacy",
+        "cash",
+        "censorship"
+      ],
+      "aliases": [
+        "secret right to cash",
+        "private bearer cash"
+      ]
+    },
+    {
       "id": "privacy.silent-payments",
       "title": "Silent Payments",
       "description": "Silent payments let receivers publish one static address while each payment still lands in a unique on-chain output. This reduces address reuse while keeping receiver-side scanning requirements manageable.",
@@ -9010,6 +10154,103 @@
       "aliases": [
         "xpub privacy",
         "extended public key leakage"
+      ]
+    },
+    {
+      "id": "protocol.64-byte-transaction-bug",
+      "title": "64-Byte Transaction Bug",
+      "description": "A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.block-structure"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 53: Disallow 64-byte Transactions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0053.mediawiki",
+          "notes": "Primary proposal describing the Merkle ambiguity and SPV-proof attack surface created by 64-byte witness-stripped transactions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Merkle Tree Vulnerabilities",
+          "url": "https://bitcoinops.org/en/topics/merkle-tree-vulnerabilities/",
+          "notes": "Canonical overview of why internal-node ambiguity matters and how 64-byte transactions fit into the mitigation debate."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Consensus Cleanup Soft Fork",
+          "url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+          "notes": "Tracks the broader cleanup proposal that includes invalidating future 64-byte transactions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad reference for transactions, block commitments, and SPV assumptions needed to understand the bug.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "consensus",
+        "merkle",
+        "spv"
+      ],
+      "aliases": [
+        "64 byte tx bug",
+        "64-byte tx vulnerability",
+        "merkle tree ambiguity bug"
+      ]
+    },
+    {
+      "id": "protocol.accidental-confiscation",
+      "title": "Accidental Confiscation",
+      "description": "Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Accidental Confiscation",
+          "url": "https://bitcoinops.org/en/topics/accidental-confiscation/",
+          "notes": "Canonical source for the risk model, including reserved upgrade features, presigned transactions, and committed scripts."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Soft Fork Activation",
+          "url": "https://bitcoinops.org/en/topics/soft-fork-activation/",
+          "notes": "Broader activation context for why new consensus restrictions can create coordination and safety failures."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Consensus Cleanup Soft Fork",
+          "url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+          "notes": "Concrete example of upgrade discussions where old feature usage and backward compatibility become spendability concerns."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Long-form history of why activation design, backward compatibility, and consensus safety have social and economic consequences.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "softforks",
+        "upgrades",
+        "scripts"
+      ],
+      "aliases": [
+        "confiscatory soft fork risk",
+        "soft fork confiscation"
       ]
     },
     {
@@ -9252,6 +10493,137 @@
       ]
     },
     {
+      "id": "protocol.bare-multisig-standardness",
+      "title": "Bare Multisig Standardness",
+      "description": "Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.p2ms",
+        "protocol.standardness-policy"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical explanation of multisig scripts plus the standardness rule that makes larger bare multisig outputs non-standard for default relay."
+        },
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding lesson that explicitly contrasts bare multisig with P2SH multisig and calls out the small-participant standardness limit."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for script templates, redeem-script indirection, and policy-versus-validity tradeoffs in older transaction patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "policy",
+        "multisig",
+        "relay"
+      ],
+      "aliases": [
+        "bare multisig relay standardness",
+        "non-standard bare multisig"
+      ]
+    },
+    {
+      "id": "protocol.bech32m-addresses",
+      "title": "Bech32m Addresses",
+      "description": "Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.addresses-outputs",
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 350: Bech32m Format for v1+ Witness Addresses",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki",
+          "notes": "Canonical definition of Bech32m and its requirement for native witness version 1 and higher outputs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Bech32(m)",
+          "url": "https://bitcoinops.org/en/topics/bech32/",
+          "notes": "Practical overview of Bech32 and Bech32m as native segwit address formats and how witness versioning affects encoding."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Address-format chapter covering Bech32/Bech32m structure, witness versions, and modern wallet address handling.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "addresses",
+        "segwit",
+        "taproot"
+      ],
+      "aliases": [
+        "bech32m",
+        "taproot addresses",
+        "v1 segwit addresses"
+      ]
+    },
+    {
+      "id": "protocol.bitcoin-uri-bip21",
+      "title": "Bitcoin URI Scheme (BIP21)",
+      "description": "BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Payment Processing",
+          "url": "https://developer.bitcoin.org/devguide/payment_processing.html",
+          "notes": "Canonical overview of payment requests, `bitcoin:` URIs, QR transport, and their role in wallet payment flows."
+        },
+        {
+          "type": "article",
+          "title": "BIP 21: URI Scheme",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki",
+          "notes": "Canonical standard for `bitcoin:` URIs, amount encoding, and optional parameters."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for addresses, wallet payment flows, and the request formats layered on top of them.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "payments",
+        "wallets",
+        "standards"
+      ],
+      "aliases": [
+        "bip21",
+        "bitcoin uri",
+        "bitcoin: uri",
+        "bitcoin payment uri"
+      ]
+    },
+    {
       "id": "protocol.block-height",
       "title": "Block Height",
       "description": "Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.",
@@ -9412,6 +10784,90 @@
       "aliases": [
         "bip37",
         "bloom filtering"
+      ]
+    },
+    {
+      "id": "protocol.chain-split-risk",
+      "title": "Chain Split Risk",
+      "description": "Chain split risk is the ecosystem cost created when a contentious protocol upgrade leaves incompatible rule sets active at the same time. Persistent splits can impose replay, reorg, infrastructure, and coordination costs even when each side keeps producing blocks.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.softfork-hardfork"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Philosophy: Costs of a Split",
+          "url": "https://bitcoindevphilosophy.com/#_costs_of_a_split",
+          "notes": "Direct conceptual framing for why incompatible upgrade outcomes impose lasting costs on users and infrastructure."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: Socialized Costs Of Hard Forks",
+          "url": "https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks",
+          "notes": "Concrete examples of replay, privacy, reorg, and coordination costs created by contentious splits."
+        },
+        {
+          "type": "book",
+          "title": "The Blocksize War",
+          "url": "https://amzn.to/4b64b8s",
+          "notes": "Best long-form case study for how split risk and activation conflict spill across wallets, exchanges, miners, and users.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4rXhk90"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "governance",
+        "forks",
+        "upgrades"
+      ],
+      "aliases": [
+        "costs of a split",
+        "chain split costs"
+      ]
+    },
+    {
+      "id": "protocol.change-outputs",
+      "title": "Change Outputs",
+      "description": "A change output returns leftover value from a transaction back to the spender when the selected inputs exceed the payment amount and fees. Understanding change outputs is the bridge between basic output structure and later wallet decisions about coin selection, privacy leakage, and address reuse.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.addresses-outputs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Explains transaction outputs and the common pattern of returning leftover value to a new output controlled by the spender."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Design Guide: Coin Selection",
+          "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
+          "notes": "Clear wallet-side explanation of why spending often creates change and how that affects user-facing transaction construction."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction construction, wallet funding, and the mechanics of returning excess input value as change.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "transactions",
+        "wallets",
+        "outputs"
+      ],
+      "aliases": [
+        "change output basics",
+        "wallet change output"
       ]
     },
     {
@@ -9640,6 +11096,47 @@
       ],
       "aliases": [
         "consensus rules"
+      ]
+    },
+    {
+      "id": "protocol.consensus-vs-policy",
+      "title": "Consensus vs Policy",
+      "description": "Consensus rules determine whether a block or transaction is valid for the whole network, while policy rules determine what an individual node will relay, mine, or keep in its mempool. A transaction can be consensus-valid yet still be non-standard or locally rejected by policy.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.consensus-rules"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Hardcoded Consensus Values",
+          "url": "https://bitcoincore.academy/hardcoded-consensus-values.html",
+          "notes": "Clear contrast between immutable consensus validation and implementation-specific rule boundaries."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Lifecycle",
+          "url": "https://bitcoincore.academy/mempool-lifecycle.html",
+          "notes": "Shows where local relay and admission policy diverge from raw consensus validity."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "consensus",
+        "policy",
+        "mempool"
+      ],
+      "aliases": [
+        "policy vs consensus"
       ]
     },
     {
@@ -9952,6 +11449,56 @@
       ]
     },
     {
+      "id": "protocol.duplicate-transaction-bug",
+      "title": "Duplicate Transaction Bug",
+      "description": "Early Bitcoin allowed some coinbase transactions to be duplicated with identical txids, which could confuse UTXO references that assumed every prior transaction id was unique. BIP 30 blocked most duplicates, BIP 34 enforced unique coinbase heights, and later cleanup proposals remove the remaining special-case burden.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.coinbase-transaction",
+        "protocol.utxo-model"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Duplicate Transactions",
+          "url": "https://bitcoinops.org/en/topics/duplicate-transactions/",
+          "notes": "Canonical overview of why identical txids were dangerous and how Bitcoin constrained them over time."
+        },
+        {
+          "type": "article",
+          "title": "BIP 30: Duplicate Transactions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki",
+          "notes": "Consensus rule that disallows most duplicate transactions whose outputs are not all spent."
+        },
+        {
+          "type": "article",
+          "title": "BIP 34: Height in Coinbase",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki",
+          "notes": "Coinbase-height commitment that makes future coinbase transactions unique and closes the main replay vector."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad transaction and UTXO reference for understanding txids, coinbase structure, and consensus uniqueness assumptions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "consensus",
+        "txids",
+        "mining"
+      ],
+      "aliases": [
+        "bip 30",
+        "duplicate txid bug",
+        "duplicate coinbase bug"
+      ]
+    },
+    {
       "id": "protocol.dust-policy",
       "title": "Dust Policy",
       "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
@@ -10063,6 +11610,93 @@
       ],
       "aliases": [
         "erlay"
+      ]
+    },
+    {
+      "id": "protocol.escrow-and-arbitration",
+      "title": "Escrow and Arbitration",
+      "description": "Escrow and arbitration uses a 2-of-3 multisig contract where buyer, seller, and arbitrator can resolve payment outcomes without trusting one party alone. It shows how P2SH multisig can encode conditional dispute resolution directly in Bitcoin spending paths.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "custody.multisig",
+        "protocol.pay-to-script-hash"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Contracts",
+          "url": "https://developer.bitcoin.org/devguide/contracts.html#escrow-and-arbitration",
+          "notes": "Canonical walkthrough of the 2-of-3 escrow contract pattern and its buyer, seller, and arbitrator resolution paths."
+        },
+        {
+          "type": "article",
+          "title": "BIP 16: Pay to Script Hash",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki",
+          "notes": "Canonical background for why the multisig redeem script can be hidden until spend time."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for multisig spending paths, redeem scripts, and legacy contract construction patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "contracts",
+        "multisig",
+        "p2sh"
+      ],
+      "aliases": [
+        "escrow contract",
+        "arbitrated escrow",
+        "2-of-3 escrow"
+      ]
+    },
+    {
+      "id": "protocol.fee-calculation",
+      "title": "Fee Calculation",
+      "description": "Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.block-weight-vbytes"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Decoding Bitcoin: Fee Calculation",
+          "url": "https://bitcoindevs.xyz/decoding/fee-calculation",
+          "notes": "Beginner-friendly walkthrough of fee = inputs minus outputs, feerates, minimum relay fees, and fee-bumping context."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical transaction accounting background for inputs, outputs, and miner fee collection."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction construction, feerates, and blockspace pricing tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "fees",
+        "transactions",
+        "blockspace"
+      ],
+      "aliases": [
+        "transaction fee calculation",
+        "bitcoin fees",
+        "inputs minus outputs"
       ]
     },
     {
@@ -10218,6 +11852,90 @@
       ]
     },
     {
+      "id": "protocol.huffman-optimized-taptrees",
+      "title": "Huffman-Optimized TapTrees",
+      "description": "A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptree"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.5 shows how to arrange TapTree leaves by expected spend probability to reduce average reveal cost."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Formal Taproot commitment reference for the tree and proof structure that Huffman ordering is optimizing."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Background reference for Merkle commitments, script trees, and transaction-size tradeoffs behind this optimization.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "optimization",
+        "scripts"
+      ],
+      "aliases": [
+        "huffman taptrees"
+      ]
+    },
+    {
+      "id": "protocol.light-client-trust-model",
+      "title": "Light Client Trust Model",
+      "description": "Light clients reduce bandwidth and storage costs by delegating part of validation to full nodes and peers, which changes what they can verify for themselves. Understanding this trust model clarifies the tradeoffs between full nodes, legacy SPV, and compact-filter clients.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "ops.run-full-node",
+        "protocol.compact-block-filters"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Operating Modes",
+          "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
+          "notes": "Official overview of full nodes, SPV security assumptions, and the tradeoffs of thinner client modes."
+        },
+        {
+          "type": "article",
+          "title": "BIP 157: Client Side Block Filtering",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki",
+          "notes": "Primary specification for the modern light-client filtering model and its verification guarantees."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for full-node verification, wallet sync tradeoffs, and lightweight-client architecture.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "light-clients",
+        "verification",
+        "wallets"
+      ],
+      "aliases": [
+        "spv trust model",
+        "light wallet trust model"
+      ]
+    },
+    {
       "id": "protocol.matt-ccv",
       "title": "MATT and CCV",
       "description": "MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.",
@@ -10336,6 +12054,98 @@
       ]
     },
     {
+      "id": "protocol.mempool-unbroadcast-set",
+      "title": "Mempool Unbroadcast Set",
+      "description": "Bitcoin Core tracks locally submitted transactions that are in the mempool but not yet verified as seen by the wider network in an unbroadcast set. This explains why nodes remember some txids for later rebroadcast attempts instead of treating mempool admission as proof of propagation.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.mempool",
+        "protocol.transaction-relay-inv-getdata"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Mempool Unbroadcast Set",
+          "url": "https://bitcoincore.academy/mempool-unbroadcast.html",
+          "notes": "Primary explanation of m_unbroadcast_txids, removal conditions, and periodic rebroadcast attempts."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction Relay",
+          "url": "https://bitcoincore.academy/transaction-relay.html",
+          "notes": "Provides the surrounding relay and rebroadcast context that makes the unbroadcast set useful."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, mempool handling, and node behavior around unconfirmed transactions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mempool",
+        "relay",
+        "bitcoin-core"
+      ],
+      "aliases": [
+        "unbroadcast txids",
+        "m_unbroadcast_txids",
+        "unbroadcast set"
+      ]
+    },
+    {
+      "id": "protocol.musig",
+      "title": "MuSig",
+      "description": "MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.schnorr-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "MuSig",
+          "url": "https://bitcoindevs.xyz/decoding/musig",
+          "notes": "Step-by-step teaching walkthrough of MuSig key aggregation, signing rounds, and the resulting single-signature spend."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: MuSig",
+          "url": "https://bitcoinops.org/en/topics/musig/",
+          "notes": "Bitcoin-focused overview of MuSig, MuSig2, and the tradeoffs between privacy, efficiency, and interactivity."
+        },
+        {
+          "type": "article",
+          "title": "BTC Transcripts: MuSig, MuSig-DN and MuSig2",
+          "url": "https://btctranscripts.com/stephan-livera-podcast/2020-10-27-jonas-nick-tim-ruffing-musig2",
+          "notes": "Deeper discussion of the MuSig family and the practical differences between the protocol variants."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for Taproot-era keys, transaction construction, and multisignature design tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "schnorr",
+        "multisig",
+        "aggregation"
+      ],
+      "aliases": [
+        "musig",
+        "aggregated signatures"
+      ]
+    },
+    {
       "id": "protocol.nodes-vs-miners",
       "title": "Nodes vs Miners",
       "description": "Different responsibilities and power boundaries in the network.",
@@ -10416,6 +12226,47 @@
       ],
       "aliases": [
         "cat opcode"
+      ]
+    },
+    {
+      "id": "protocol.op-checkmultisig",
+      "title": "OP_CHECKMULTISIG",
+      "description": "Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding walkthrough showing how OP_CHECKMULTISIG appears in bare multisig locking scripts and why OP_0 is required when spending them."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical description of multisig scripts, the extra stack item bug, and the standard script form used with OP_CHECKMULTISIG."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for opcode behavior, stack evaluation, and legacy multisig spending patterns.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "opcodes",
+        "scripts",
+        "multisig"
+      ],
+      "aliases": [
+        "checkmultisig"
       ]
     },
     {
@@ -10600,6 +12451,133 @@
       "aliases": [
         "nulldata outputs",
         "data commitments"
+      ]
+    },
+    {
+      "id": "protocol.p2ms",
+      "title": "Pay-to-Multisig (P2MS)",
+      "description": "Legacy bare multisig output template that places multiple public keys and an m-of-n threshold directly in the locking script. It spends through OP_CHECKMULTISIG and predates the more flexible P2SH-based multisig pattern.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.op-checkmultisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2MS - Pay To Multisig",
+          "url": "https://bitcoindevs.xyz/decoding/p2ms",
+          "notes": "Decoding walkthrough for the bare multisig locking script, unlocking script, and legacy spending flow."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical multisig script reference covering the m-of-n template and how it differs from P2SH multisig."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for legacy multisig templates, stack evaluation, and spending conditions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "scripts",
+        "multisig",
+        "outputs"
+      ],
+      "aliases": [
+        "p2ms",
+        "bare multisig"
+      ]
+    },
+    {
+      "id": "protocol.p2pk",
+      "title": "Pay-to-Public-Key (P2PK)",
+      "description": "Legacy output type that locks coins directly to a full public key and spends them with a matching signature. It is simpler than P2PKH, but it reveals the recipient public key at receive time and mainly matters today as an early script template reference point.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2PK - Pay To Public Key",
+          "url": "https://bitcoindevs.xyz/decoding/p2pk",
+          "notes": "Decoding walkthrough using the Hal Finney transaction to show the locking script, unlocking script, and validation flow."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Concrete script-level reference for legacy output templates, signature verification, and spending conditions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Broad transaction and output-pattern reference that places P2PK in the historical script family."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "scripts",
+        "outputs",
+        "history"
+      ],
+      "aliases": [
+        "p2pk",
+        "pay to pubkey"
+      ]
+    },
+    {
+      "id": "protocol.p2pkh",
+      "title": "Pay-to-Public-Key-Hash (P2PKH)",
+      "description": "Legacy output type that locks coins to a hash of the recipient public key instead of the full key itself. It hides the public key until spend time and became the dominant template for classic Bitcoin addresses and script-based payments.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.p2pk",
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "P2PKH - Pay To Public Key Hash",
+          "url": "https://bitcoindevs.xyz/decoding/p2pkh",
+          "notes": "Decoding walkthrough of the P2PKH locking script, spend path, and why it differs from direct public-key outputs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical reference for the P2PKH pubkey script, signature script, and validation flow."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Script-level reference for legacy output templates, HASH160-based locking, and spend verification.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "scripts",
+        "outputs",
+        "addresses"
+      ],
+      "aliases": [
+        "p2pkh",
+        "pay to public key hash"
       ]
     },
     {
@@ -10857,6 +12835,48 @@
       ]
     },
     {
+      "id": "protocol.script-execution-stack",
+      "title": "Script Execution Stack",
+      "description": "Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Script",
+          "url": "https://en.bitcoin.it/wiki/Script",
+          "notes": "Reference overview of Bitcoin Script as a stack-based, Forth-like language and how opcodes transform stack items."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical walkthrough of script validation, stack evaluation, and the conditions that make a spend succeed or fail."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Authorization and authentication chapters covering Script construction, stack execution, and spending validation.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "scripts",
+        "stack",
+        "validation"
+      ],
+      "aliases": [
+        "script stack",
+        "stack-based script execution"
+      ]
+    },
+    {
       "id": "protocol.segregated-witness",
       "title": "Segregated Witness (SegWit)",
       "description": "Witness data separation that fixed key malleability issues and increased block capacity efficiency.",
@@ -11067,6 +13087,88 @@
       ]
     },
     {
+      "id": "protocol.tagged-hashes",
+      "title": "Tagged Hashes",
+      "description": "Tagged hashes domain-separate hash inputs by hashing a tag into the digest context before the message payload. In Bitcoin they prevent different Taproot and Schnorr constructions from accidentally reusing the same hash domain.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.hash-functions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Canonical definition of the tagged hashing construction used by Schnorr signatures."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        },
+        {
+          "type": "article",
+          "title": "Decoding Bitcoin",
+          "url": "https://bitcoindevs.xyz/decoding",
+          "notes": "Taproot module includes a learner-friendly tagged-hashes lesson in a broader prerequisite path."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "schnorr",
+        "cryptography"
+      ],
+      "aliases": [
+        "tagged hashing"
+      ]
+    },
+    {
+      "id": "protocol.tapleaf-inclusion-proofs",
+      "title": "TapLeaf Inclusion Proofs",
+      "description": "TapLeaf inclusion proofs provide the Merkle sibling hashes needed to prove that a revealed tapscript leaf belonged to the TapTree committed by a Taproot output. They are the evidence that links one script-path spend to the hidden tree committed at creation time.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptree"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Formal witness rules for proving a tapleaf was part of the committed TapTree."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.4 walks through spending with one script and providing proof it was in the committed tree."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "proofs",
+        "scripts"
+      ],
+      "aliases": [
+        "tapleaf proofs"
+      ]
+    },
+    {
       "id": "protocol.taproot",
       "title": "Taproot",
       "description": "Protocol upgrade enabling more private and efficient key/script spending conditions.",
@@ -11111,6 +13213,234 @@
       ],
       "aliases": [
         "taproot upgrade"
+      ]
+    },
+    {
+      "id": "protocol.taproot-key-path-spends",
+      "title": "Taproot Key-Path Spends",
+      "description": "Taproot key-path spends spend a P2TR output by providing a Schnorr signature for the tweaked output key without revealing any committed script path. When all parties can cooperate, this is the most compact and private Taproot spend form because it looks like a simple signature check onchain.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptweak"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop modules 2.0 and 2.1 show how a segwit v1 output can be spent via the key path with a Schnorr signature."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Canonical Taproot specification covering witness structure and signature-based spending against the tweaked output key."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Advanced technical reference for Taproot transaction construction, Schnorr signatures, and spending-path privacy tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "taproot",
+        "schnorr",
+        "spending"
+      ],
+      "aliases": [
+        "key path spend",
+        "taproot key spend",
+        "p2tr key path spend"
+      ]
+    },
+    {
+      "id": "protocol.tapscript",
+      "title": "Tapscript",
+      "description": "Tapscript is the script version used for Taproot script-path spends. It keeps the basic Script model but changes signature rules, replaces CHECKMULTISIG with CHECKSIGADD, and adds upgrade hooks such as OP_SUCCESSx.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 342: Validation of Taproot Scripts",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki",
+          "notes": "Primary specification for Taproot script-path execution rules, opcode changes, and resource limits."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Tapscript",
+          "url": "https://bitcoinops.org/en/topics/tapscript/",
+          "notes": "Canonical terminology and ecosystem references for Tapscript-related implementation work."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop context for how Taproot keys, TapTrees, and Tapscript fit together."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Practical grounding for Script execution, witness semantics, and spending-condition design.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "taproot",
+        "script",
+        "opcodes"
+      ],
+      "aliases": [
+        "taproot script rules",
+        "bip342"
+      ]
+    },
+    {
+      "id": "protocol.taptree",
+      "title": "TapTree",
+      "description": "A TapTree is the Merkle tree of tapscript leaves committed inside a Taproot output. It lets one output commit to multiple script paths while only revealing the executed leaf and a proof path when spent.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taptweak"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Defines Taproot script tree commitments and script-path witness structure."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.4 demonstrates constructing a TapTree and spending via one revealed script."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "taproot",
+        "scripts",
+        "merkle"
+      ],
+      "aliases": [
+        "taptree",
+        "tap tree"
+      ]
+    },
+    {
+      "id": "protocol.taptweak",
+      "title": "TapTweak",
+      "description": "TapTweak derives a Taproot output key by adding a tagged-hash tweak to an internal key, optionally committing a script tree at the same time. It is the mechanism that binds key-path and script-path spending into one Taproot output.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.taproot",
+        "protocol.tagged-hashes",
+        "protocol.x-only-public-keys"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Canonical definition of Taproot output key tweaking and script commitments."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+          "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+          "notes": "Workshop module 2.2 explains how key tweaks commit to arbitrary data in Taproot outputs."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "taproot",
+        "keys",
+        "scripts"
+      ],
+      "aliases": [
+        "tap tweak"
+      ]
+    },
+    {
+      "id": "protocol.time-warp-attack",
+      "title": "Time Warp Attack",
+      "description": "Time warp attacks manipulate block timestamps across difficulty periods so miners can suppress or lower future difficulty despite faster block production. The exploit depends on Bitcoin's off-by-one retarget bug plus the consensus limits on miner-controlled time, so it sits at the intersection of retarget math and timestamp rules.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.difficulty-adjustment",
+        "protocol.median-time-past"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Time Warp",
+          "url": "https://bitcoinops.org/en/topics/time-warp/",
+          "notes": "Canonical overview of the attack, why it matters, and the current mitigation discussion."
+        },
+        {
+          "type": "article",
+          "title": "BIP 54: Consensus Cleanup",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0054.md",
+          "notes": "Specification and motivation for fixing the time warp bug as part of the consensus cleanup bundle."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Newsletter #299",
+          "url": "https://bitcoinops.org/en/newsletters/2024/04/24/",
+          "notes": "Explains the off-by-one retarget bug and why it matters because it enables the time-warp exploit."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for the mining, block-header, and consensus mechanics that make the exploit legible.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "consensus",
+        "mining",
+        "timestamps"
+      ],
+      "aliases": [
+        "time warp",
+        "timewarp attack",
+        "difficulty time warp",
+        "off-by-one difficulty bug",
+        "off-by-one retarget bug"
       ]
     },
     {
@@ -11329,6 +13659,51 @@
       ]
     },
     {
+      "id": "protocol.transaction-rebroadcast-privacy",
+      "title": "Transaction Rebroadcast Privacy",
+      "description": "If a node rebroadcasts its own wallet transactions differently from ordinary peer transactions, observers can infer likely transaction origin even when the first announcement was hidden. Bitcoin Core reduces that leak by making rebroadcast behavior look more like normal network activity instead of a wallet-specific signal.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.mempool-unbroadcast-set",
+        "privacy.pseudonymity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction Relay",
+          "url": "https://bitcoincore.academy/transaction-relay.html",
+          "notes": "Primary explanation of initial-broadcast privacy, peer announcement tracking, and rebroadcast heuristics for wallet transactions."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core PR #21061",
+          "url": "https://github.com/bitcoin/bitcoin/pull/21061",
+          "notes": "Introduces the TxRebroadcast module and explains why wallet-transaction rebroadcast behavior can leak origin information."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, mempool behavior, and the privacy implications of network-level transaction handling.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "mempool",
+        "relay",
+        "privacy",
+        "bitcoin-core"
+      ],
+      "aliases": [
+        "rebroadcast privacy",
+        "wallet rebroadcast privacy",
+        "txrebroadcast privacy"
+      ]
+    },
+    {
       "id": "protocol.transaction-relay-inv-getdata",
       "title": "Transaction Relay (inv/getdata)",
       "description": "How peers announce and request transactions using inv/getdata before full tx relay.",
@@ -11406,6 +13781,49 @@
       ],
       "aliases": [
         "txhash"
+      ]
+    },
+    {
+      "id": "protocol.txid-vs-wtxid",
+      "title": "TXID and WTXID",
+      "description": "SegWit transactions have two identifiers: the txid commits to the original serialization without witness data, while the wtxid commits to the serialization that includes witness data. If a transaction has no witness data the two IDs are the same, but when witness data exists the distinction matters for relay, tracking, and understanding why inputs still refer to previous outputs by txid.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.segregated-witness"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: Transaction format in the mempool",
+          "url": "https://bitcoincore.academy/mempool-tx-format.html",
+          "notes": "Shows why Bitcoin Core indexes mempool transactions by both txid and wtxid for different lookup and policy tasks."
+        },
+        {
+          "type": "article",
+          "title": "BIP 141: Segregated Witness",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+          "notes": "Canonical definition of txid and wtxid serialization, including when both identifiers are equal."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Good bridge from raw transaction serialization to witness-aware transaction identification.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "transactions",
+        "segwit",
+        "relay"
+      ],
+      "aliases": [
+        "txid and wtxid",
+        "transaction identifiers",
+        "witness transaction id"
       ]
     },
     {
@@ -11491,6 +13909,50 @@
       ],
       "aliases": [
         "bip324"
+      ]
+    },
+    {
+      "id": "protocol.version-3-transaction-relay",
+      "title": "Version 3 Transaction Relay",
+      "description": "Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.transaction-pinning"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: Version 3 Transaction Relay",
+          "url": "https://bitcoinops.org/en/topics/version-3-transaction-relay/",
+          "notes": "Canonical overview of TRUC, its anti-pinning goals, and its relationship to package relay and ephemeral anchors."
+        },
+        {
+          "type": "article",
+          "title": "BIP 431: Topology Restrictions for Pinning",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0431.mediawiki",
+          "notes": "Primary specification for TRUC transaction signaling, topology limits, and intended fee-bumping behavior."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Broad technical reference for transaction relay, fee-bumping, and mempool policy context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "mempool",
+        "relay",
+        "pinning",
+        "truc"
+      ],
+      "aliases": [
+        "truc",
+        "topologically restricted until confirmation",
+        "v3 relay"
       ]
     },
     {
@@ -11618,6 +14080,48 @@
       "aliases": [
         "bip339",
         "witness txid relay"
+      ]
+    },
+    {
+      "id": "protocol.x-only-public-keys",
+      "title": "X-Only Public Keys",
+      "description": "X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.public-private-keys",
+        "fundamentals.schnorr-signatures"
+      ],
+      "resources": [
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Defines the x-only key format used by Bitcoin Schnorr signatures."
+        },
+        {
+          "type": "article",
+          "title": "BIP 341: Taproot",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+          "notes": "Shows how x-only keys appear in Taproot internal keys and output keys."
+        }
+      ],
+      "estimatedTime": "20m",
+      "tags": [
+        "taproot",
+        "keys",
+        "schnorr"
+      ],
+      "aliases": [
+        "x only pubkeys"
       ]
     },
     {
@@ -11780,6 +14284,48 @@
       ],
       "aliases": [
         "anti exfiltration"
+      ]
+    },
+    {
+      "id": "security.nonce-reuse-attack",
+      "title": "Nonce Reuse Attack",
+      "description": "Reusing the same Schnorr nonce across different signatures lets observers solve for the signer private key from public signature data. It is a narrow signing failure mode that explains why nonce generation hygiene matters in wallets and multisig protocols.",
+      "category": "Security",
+      "prerequisites": [
+        "fundamentals.schnorr-signatures"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Nonce Reuse Attack",
+          "url": "https://bitcoindevs.xyz/decoding/nonce-reuse-attack",
+          "notes": "Decoding walkthrough showing how reused Schnorr nonces expose the private key across two signatures."
+        },
+        {
+          "type": "article",
+          "title": "BIP 340: Schnorr Signatures for secp256k1",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+          "notes": "Primary specification for BIP340 signing, including nonce derivation context and why accidental nonce reuse can leak the secret key."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Signature-level background for nonce use, key leakage failure modes, and Bitcoin script verification context.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "15m",
+      "tags": [
+        "schnorr",
+        "signing",
+        "security"
+      ],
+      "aliases": [
+        "reused nonce attack",
+        "schnorr nonce reuse"
       ]
     },
     {

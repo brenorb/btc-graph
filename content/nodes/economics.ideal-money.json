@@ -1,0 +1,43 @@
+{
+  "id": "economics.ideal-money",
+  "title": "Ideal Money",
+  "description": "Ideal money acts as a stable measuring stick for economic calculation. The concept emphasizes minimizing monetary distortion so prices, savings, and long-term contracts reflect real changes instead of policy-driven noise.",
+  "category": "Economics",
+  "prerequisites": [
+    "fundamentals.inflation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Ideal Money and Asymptotically Ideal Money",
+      "url": "https://www.cypherpunkbooks.com/book/ideal-money-and-asymptotically-ideal-money",
+      "notes": "Primary-source framing for money as a measuring instrument rather than a politically managed target."
+    },
+    {
+      "type": "article",
+      "title": "Ideal Money and Asymptotically Ideal Money (PDF)",
+      "url": "https://web.math.princeton.edu/jfnj/texts_and_graphics/Main.Content/IDEAL_MONEY.../Older/PENN_STATE/babu.money.b.pdf",
+      "notes": "Alternative copy of the essay for deeper reading and terminology alignment."
+    },
+    {
+      "type": "book",
+      "title": "Denationalisation of Money",
+      "url": "https://amzn.to/4uiDGEh",
+      "notes": "Useful adjacent book on competitive money and why monetary quality matters for economic coordination.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4dIgWaD"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "economics",
+    "money",
+    "monetary-theory"
+  ],
+  "aliases": [
+    "asymptotically ideal money",
+    "ideal money and asymptotically ideal money",
+    "money as a measuring stick"
+  ]
+}

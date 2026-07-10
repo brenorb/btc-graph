@@ -1,0 +1,43 @@
+{
+  "id": "dev.scriptpubkeymanagers",
+  "title": "ScriptPubKey Managers",
+  "description": "Bitcoin Core ScriptPubKey Managers are wallet components that own scriptPubKey sets, address generation branches, and ownership tracking for specific output types. In descriptor wallets, the wallet becomes a collection of these managers instead of one monolithic key-and-address store.",
+  "category": "Wallets",
+  "prerequisites": [
+    "dev.descriptors"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: ScriptPubKeyManagers",
+      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
+      "notes": "Primary walkthrough of the SPKM abstraction, per-output-type managers, and the internal versus external split."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: Keys in the Wallet",
+      "url": "https://bitcoincore.academy/wallet-keys.html",
+      "notes": "Explains why descriptor wallets replaced the older keypool model and why script management was separated into dedicated managers."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for wallet structure, script templates, and address derivation background relevant to Core wallet internals.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "wallet-internals",
+    "bitcoin-core",
+    "descriptors"
+  ],
+  "aliases": [
+    "scriptpubkeymanagers",
+    "spkm",
+    "spkms"
+  ]
+}

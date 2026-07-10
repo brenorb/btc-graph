@@ -1,0 +1,44 @@
+{
+  "id": "dev.extended-keys",
+  "title": "Extended Keys (XPUB/XPRV)",
+  "description": "Extended keys package a BIP32 key together with its chain code so a wallet can derive an entire branch of child keys from one exported value. An xprv can derive both child private and public keys, while an xpub can derive only child public keys for watch-only or address-generation workflows.",
+  "category": "Wallets",
+  "prerequisites": [
+    "dev.bip32"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 32: Hierarchical Deterministic Wallets",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki",
+      "notes": "Canonical specification for extended private keys, extended public keys, chain codes, and public-only derivation."
+    },
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Wallet Recovery",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+      "notes": "Walks through what extended keys contain, how xpub/xprv branches differ, and why public-only derivation matters operationally."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for HD wallets, xpub/xprv boundaries, chain codes, and the wallet workflows built on branch-level key export.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "wallets",
+    "keys",
+    "standards"
+  ],
+  "aliases": [
+    "xpub",
+    "xprv",
+    "extended public keys",
+    "extended private keys"
+  ]
+}

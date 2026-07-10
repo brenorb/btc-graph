@@ -1,0 +1,42 @@
+{
+  "id": "fundamentals.validation-sovereignty",
+  "title": "Validation Sovereignty",
+  "description": "Validation sovereignty means deciding Bitcoin's rules by verifying them yourself instead of outsourcing validation to a wallet provider, service, or remote node. It is the practical user-facing consequence of don't trust, verify.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.trustlessness"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Don’t trust, verify",
+      "url": "https://bitcoindevphilosophy.com/#donttrustverify",
+      "notes": "Explains why self-verification matters and what is lost when you delegate it."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Philosophy: Trustlessness",
+      "url": "https://bitcoindevphilosophy.com/#trustlessness",
+      "notes": "Frames validation as the practical way to use Bitcoin without trusting third parties."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Directly aligned with the philosophy and engineering tradeoffs behind self-validation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4uRjb1v"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "verification",
+    "full-nodes",
+    "philosophy"
+  ],
+  "aliases": [
+    "validation independence",
+    "self-validation"
+  ]
+}

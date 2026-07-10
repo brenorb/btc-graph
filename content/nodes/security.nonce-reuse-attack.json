@@ -1,0 +1,42 @@
+{
+  "id": "security.nonce-reuse-attack",
+  "title": "Nonce Reuse Attack",
+  "description": "Reusing the same Schnorr nonce across different signatures lets observers solve for the signer private key from public signature data. It is a narrow signing failure mode that explains why nonce generation hygiene matters in wallets and multisig protocols.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.schnorr-signatures"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Nonce Reuse Attack",
+      "url": "https://bitcoindevs.xyz/decoding/nonce-reuse-attack",
+      "notes": "Decoding walkthrough showing how reused Schnorr nonces expose the private key across two signatures."
+    },
+    {
+      "type": "article",
+      "title": "BIP 340: Schnorr Signatures for secp256k1",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+      "notes": "Primary specification for BIP340 signing, including nonce derivation context and why accidental nonce reuse can leak the secret key."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Signature-level background for nonce use, key leakage failure modes, and Bitcoin script verification context.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "15m",
+  "tags": [
+    "schnorr",
+    "signing",
+    "security"
+  ],
+  "aliases": [
+    "reused nonce attack",
+    "schnorr nonce reuse"
+  ]
+}

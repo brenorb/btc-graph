@@ -1,0 +1,44 @@
+{
+  "id": "protocol.bech32m-addresses",
+  "title": "Bech32m Addresses",
+  "description": "Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.addresses-outputs",
+    "protocol.taproot"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 350: Bech32m Format for v1+ Witness Addresses",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki",
+      "notes": "Canonical definition of Bech32m and its requirement for native witness version 1 and higher outputs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Bech32(m)",
+      "url": "https://bitcoinops.org/en/topics/bech32/",
+      "notes": "Practical overview of Bech32 and Bech32m as native segwit address formats and how witness versioning affects encoding."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Address-format chapter covering Bech32/Bech32m structure, witness versions, and modern wallet address handling.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "addresses",
+    "segwit",
+    "taproot"
+  ],
+  "aliases": [
+    "bech32m",
+    "taproot addresses",
+    "v1 segwit addresses"
+  ]
+}

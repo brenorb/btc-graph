@@ -1,0 +1,41 @@
+{
+  "id": "protocol.huffman-optimized-taptrees",
+  "title": "Huffman-Optimized TapTrees",
+  "description": "A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taptree"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Workshop module 2.5 shows how to arrange TapTree leaves by expected spend probability to reduce average reveal cost."
+    },
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Formal Taproot commitment reference for the tree and proof structure that Huffman ordering is optimizing."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Background reference for Merkle commitments, script trees, and transaction-size tradeoffs behind this optimization.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "taproot",
+    "optimization",
+    "scripts"
+  ],
+  "aliases": [
+    "huffman taptrees"
+  ]
+}

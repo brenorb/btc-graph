@@ -1,0 +1,49 @@
+{
+  "id": "protocol.64-byte-transaction-bug",
+  "title": "64-Byte Transaction Bug",
+  "description": "A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 53: Disallow 64-byte Transactions",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0053.mediawiki",
+      "notes": "Primary proposal describing the Merkle ambiguity and SPV-proof attack surface created by 64-byte witness-stripped transactions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Merkle Tree Vulnerabilities",
+      "url": "https://bitcoinops.org/en/topics/merkle-tree-vulnerabilities/",
+      "notes": "Canonical overview of why internal-node ambiguity matters and how 64-byte transactions fit into the mitigation debate."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: Consensus Cleanup Soft Fork",
+      "url": "https://bitcoinops.org/en/topics/consensus-cleanup-soft-fork/",
+      "notes": "Tracks the broader cleanup proposal that includes invalidating future 64-byte transactions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad reference for transactions, block commitments, and SPV assumptions needed to understand the bug.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "consensus",
+    "merkle",
+    "spv"
+  ],
+  "aliases": [
+    "64 byte tx bug",
+    "64-byte tx vulnerability",
+    "merkle tree ambiguity bug"
+  ]
+}
