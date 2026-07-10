@@ -168,7 +168,7 @@ Mining (22 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (55 concepts)
+Network, Relay & Client Sync (56 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -207,6 +207,7 @@ Network, Relay & Client Sync (55 concepts)
 - Peer-to-Peer Network Topology: How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.
 - Pruned vs Archival Nodes: Storage and functionality tradeoffs in node configuration.
 - Replace-by-Fee (RBF): Policy mechanism to replace unconfirmed transactions with higher-fee versions.
+- Replacement Cycling: Replacement cycling repeatedly uses RBF and CPFP to evict a time-sensitive multiparty transaction from the mempool, preventing its confirmation while the attacker can afford to keep cycling replacements.
 - Run a Full Node: Install, sync, and maintain independently verifying infrastructure.
 - Signet Operations: Using signet for deterministic, low-value testing of wallet and node workflows.
 - Standardness Policy: Node relay and mempool policy rules that constrain which valid transactions are considered standard.

@@ -14185,6 +14185,53 @@
       ]
     },
     {
+      "id": "protocol.replacement-cycling",
+      "title": "Replacement Cycling",
+      "description": "Replacement cycling repeatedly uses RBF and CPFP to evict a time-sensitive multiparty transaction from the mempool, preventing its confirmation while the attacker can afford to keep cycling replacements.",
+      "category": "Network, Relay & Client Sync",
+      "prerequisites": [
+        "protocol.rbf",
+        "protocol.cpfp"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Replacement Cycling",
+          "url": "https://bitcoinops.org/en/topics/replacement-cycling/",
+          "notes": "Explains the repeated RBF-and-CPFP eviction attack and its impact on contract protocols."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Transaction Pinning",
+          "url": "https://bitcoinops.org/en/topics/transaction-pinning/",
+          "notes": "Context for the wider family of fee-bumping and confirmation-blocking attacks."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background on fee bumping, transaction packages, and mempool policy.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "mempool",
+        "rbf",
+        "cpfp",
+        "pinning",
+        "lightning",
+        "contracts"
+      ],
+      "aliases": [
+        "replacement cycling attack",
+        "RBF cycling",
+        "transaction replacement cycling"
+      ]
+    },
+    {
       "id": "protocol.script",
       "title": "Bitcoin Script",
       "description": "Locking and unlocking conditions for UTXO spending.",
