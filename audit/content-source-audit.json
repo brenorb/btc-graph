@@ -401,16 +401,16 @@
       "url": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
       "sourceType": "implementation-documentation-cluster",
       "priority": "P1",
-      "scope": "Bitcoin Core's cluster-mempool data model and the getmempoolcluster RPC for inspecting connected transactions, mining order, chunks, fees, and weights.",
-      "clusterStrategy": "Track the getmempoolcluster RPC reference, Bitcoin Core 31.0 release notes, and mempool terminology as one cluster-observability slice; keep the conceptual cluster-mempool model separate from this concrete RPC workflow.",
+      "scope": "Bitcoin Core's cluster-mempool data model and the getmempoolcluster and getmempoolfeeratediagram RPCs for inspecting connected transactions, mining order, chunks, fees, weights, and whole-mempool fee curves.",
+      "clusterStrategy": "Track the getmempoolcluster and getmempoolfeeratediagram RPC references, Bitcoin Core 31.0 release notes, mempool terminology, and the two implementation paths as one cluster-observability slice; keep the conceptual cluster-mempool model separate from these concrete RPC workflows.",
       "status": "In review",
       "crawlStatus": "Complete",
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
-      "pageClustersTracked": 3,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added after the package-RBF slice. The inspected documentation exposes getmempoolcluster as a read-only local observability operation, distinct from cluster-mempool policy, submitpackage admission, package relay, and package replacement."
+      "pageClustersTracked": 5,
+      "conceptsExtracted": 2,
+      "conceptsNormalized": 2,
+      "notes": "Added after the package-RBF slice. The inspected documentation exposes getmempoolcluster as per-cluster read-only inspection and getmempoolfeeratediagram as whole-mempool fee-curve inspection. Both are implementation surfaces merged into protocol.cluster-mempool rather than standalone learner nodes; their RPCs remain optional developer references."
     }
   ],
   "concepts": [
@@ -3026,9 +3026,9 @@
       "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
       "sourceUrl": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
       "sourceContext": "getmempoolcluster RPC reference, Bitcoin Core 31.0 cluster-mempool release notes, and mempool terminology",
-      "existingNodeId": "",
-      "status": "new",
-      "atomicityRationale": "This isolates one developer-facing observation workflow: given an in-mempool transaction, inspect its connected cluster and interpret the mining-ordered chunks, fees, weights, and transactions. It is narrower than the cluster-mempool policy model and distinct from package admission, package relay, and package replacement.",
+      "existingNodeId": "protocol.cluster-mempool",
+      "status": "merge",
+      "atomicityRationale": "This is a concrete diagnostic RPC over the existing cluster-mempool model, not an independent learner-facing prerequisite. The connected-cluster, chunk, fee, and weight ideas belong in protocol.cluster-mempool; the command itself is an optional developer reference.",
       "candidatePrerequisites": [
         "protocol.cluster-mempool",
         "dev.submitpackage-rpc",
@@ -3038,7 +3038,7 @@
       "chosenPrerequisites": [
         "protocol.cluster-mempool"
       ],
-      "prerequisiteRationale": "The conceptual cluster-mempool model is the direct prerequisite for interpreting connected components, chunks, and mining order. submitpackage is a local admission operation, package RBF is replacement policy, and package relay is network propagation rather than a requirement for reading local cluster state.",
+      "prerequisiteRationale": "Merge into protocol.cluster-mempool rather than create a wrapper node: the model is the learning outcome, while submitpackage is a local admission operation, package RBF is replacement policy, and package relay is network propagation.",
       "aliases": [
         "getmempoolcluster",
         "mempool cluster RPC",
@@ -3054,7 +3054,45 @@
       ],
       "estimatedTime": "35m",
       "confidence": "high",
-      "notes": "Added after deduping against protocol.cluster-mempool, dev.submitpackage-rpc, protocol.package-rbf, and protocol.package-relay. This node teaches read-only local cluster inspection, not admission, replacement, or relay."
+      "notes": "Do not add a standalone node. Preserve the RPC as an optional resource on protocol.cluster-mempool for developers who need local diagnostics."
+    },
+    {
+      "id": "dev.getmempoolfeeratediagram-rpc",
+      "title": "getmempoolfeeratediagram RPC",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
+      "sourceUrl": "https://github.com/bitcoin/bitcoin/blob/v31.0/src/rpc/mempool.cpp#L3289-L3364",
+      "sourceContext": "Bitcoin Core 31.0 release notes, hidden getmempoolfeeratediagram RPC implementation, and feerate-diagram mempool implementation",
+      "existingNodeId": "protocol.cluster-mempool",
+      "status": "merge",
+      "atomicityRationale": "This is a concrete diagnostic RPC over the existing cluster-mempool and fee-ordering model, not an independent learner-facing prerequisite. The cumulative fee and sigops-adjusted weight curve can enrich protocol.cluster-mempool, while the command itself remains an optional developer reference.",
+      "candidatePrerequisites": [
+        "protocol.cluster-mempool",
+        "dev.getmempoolcluster-rpc",
+        "protocol.package-rbf",
+        "mining.block-template-selection",
+        "ops.mempool-purging"
+      ],
+      "chosenPrerequisites": [
+        "protocol.cluster-mempool"
+      ],
+      "prerequisiteRationale": "Merge into protocol.cluster-mempool rather than create a wrapper node: the cluster-mempool ordering model is the learning outcome, while per-cluster inspection is a sibling workflow, package RBF is a downstream consumer, and mining-template or eviction nodes are separate policy consumers.",
+      "aliases": [
+        "getmempoolfeeratediagram",
+        "mempool feerate diagram RPC",
+        "whole-mempool feerate diagram"
+      ],
+      "tags": [
+        "rpc",
+        "mempool",
+        "fees",
+        "cluster-mempool",
+        "mining-order",
+        "observability"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Do not add a standalone node. Fold the underlying fee-curve vocabulary into protocol.cluster-mempool if needed; keep the hidden RPC as an optional developer reference rather than a graph prerequisite."
     }
   ],
   "edges": [
@@ -3912,15 +3950,6 @@
       "rationale": "Package RBF extends the ordinary replacement-policy model with package-level fee and cluster conditions, so learners need base RBF semantics first.",
       "sourceId": "source.bitcoin-core-package-policy",
       "notes": "Package relay, cluster mempool, submitpackage, and pinning remain adjacent concepts rather than redundant direct edges."
-    },
-    {
-      "from": "protocol.cluster-mempool",
-      "to": "dev.getmempoolcluster-rpc",
-      "type": "prerequisite",
-      "status": "proposed",
-      "rationale": "The RPC reports a transaction's connected cluster and mining-ordered chunks, so learners need the cluster-mempool model before interpreting its output.",
-      "sourceId": "source.bitcoin-core-cluster-mempool-rpc",
-      "notes": "submitpackage, package RBF, and package relay remain neighboring workflows rather than direct prerequisites."
     }
   ],
   "decisions": [
@@ -5468,10 +5497,10 @@
     },
     {
       "id": "decision.getmempoolcluster-rpc-slice",
-      "type": "scope",
+      "type": "merge",
       "subject": "dev.getmempoolcluster-rpc",
       "status": "resolved",
-      "rationale": "Bitcoin Core 31.0 documentation exposes getmempoolcluster as a distinct read-only developer workflow: query an in-mempool transaction and interpret its connected cluster, transaction count, weight, mining-ordered chunks, and chunk fees. It survives dedupe because cluster mempool is the underlying model, submitpackage is local admission, package RBF is replacement policy, and package relay is network propagation.",
+      "rationale": "Do not add getmempoolcluster as a first-class node. It is an implementation-specific diagnostic interface over the existing cluster-mempool concept; the learner-facing outcome is understanding connected clusters, chunks, fees, and weights, not memorizing an RPC name.",
       "relatedConceptIds": [
         "dev.getmempoolcluster-rpc",
         "protocol.cluster-mempool",
@@ -5482,7 +5511,44 @@
       "relatedSourceIds": [
         "source.bitcoin-core-cluster-mempool-rpc"
       ],
-      "notes": "Added with only protocol.cluster-mempool as the direct prerequisite. Keep the node focused on interpreting local RPC output rather than teaching cluster design, package admission, replacement, or relay."
+      "notes": "Merged into protocol.cluster-mempool. Keep the RPC URL as an optional developer resource, not a prerequisite edge or standalone graph node."
+    },
+    {
+      "id": "decision.getmempoolfeeratediagram-rpc-slice",
+      "type": "merge",
+      "subject": "dev.getmempoolfeeratediagram-rpc",
+      "status": "resolved",
+      "rationale": "Do not add getmempoolfeeratediagram as a first-class node. Its cumulative fee and weight curve is useful vocabulary for the existing cluster-mempool concept, but the hidden RPC is an implementation-specific diagnostic surface rather than a standalone learner gap.",
+      "relatedConceptIds": [
+        "dev.getmempoolfeeratediagram-rpc",
+        "protocol.cluster-mempool",
+        "dev.getmempoolcluster-rpc",
+        "protocol.package-rbf",
+        "mining.block-template-selection",
+        "ops.mempool-purging"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-cluster-mempool-rpc"
+      ],
+      "notes": "Merged into protocol.cluster-mempool. Preserve the underlying fee-curve terminology there if it helps advanced learners, without adding a separate RPC wrapper node."
+    },
+    {
+      "id": "decision.function-wrapper-vs-concept-boundary",
+      "type": "scope",
+      "subject": "concept-boundary-heuristic",
+      "status": "resolved",
+      "rationale": "Use function-shaped names as an implementation-detail warning: RPCs and similar command surfaces usually expose an existing learner-facing concept rather than define a new one. Prefer the higher-level noun concept as the graph node and retain the implementation surface as an alias or optional resource when useful.",
+      "relatedConceptIds": [
+        "protocol.cluster-mempool",
+        "dev.getmempoolcluster-rpc",
+        "dev.getmempoolfeeratediagram-rpc",
+        "protocol.op-cat"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-core-cluster-mempool-rpc",
+        "source.bitcoinops-topics"
+      ],
+      "notes": "This is a heuristic, not a hard naming rule. Review low-level primitives individually: consequential opcodes such as OP_CAT can deserve dedicated nodes when they have a distinct learning outcome, compatibility significance, or important prerequisite chain."
     }
   ]
 }
