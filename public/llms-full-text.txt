@@ -210,7 +210,7 @@ Network, Relay & Client Sync (50 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (72 concepts)
+Protocol & Consensus (73 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -278,6 +278,7 @@ Protocol & Consensus (72 concepts)
 - Transaction Lifecycle: From creation and propagation to confirmation and settlement.
 - Transaction Malleability: How pre-confirmation transaction mutation risk appears and why stable identifiers matter.
 - Transaction Pinning: Transaction pinning exploits relay and mempool rules to block fee-bump or replacement strategies. It is a core risk area for contract protocols that rely on timely confirmation.
+- Transaction Witness Structure: The transaction-level witness serialization layout that stores one witness stack per input, including the marker, flag, item counts, and witness items that carry SegWit spending data outside the legacy input script.
 - TXHASH Proposal: TXHASH introduces transaction field commitments for covenant-like constraints. It explores a finer-grained introspection path for contract design.
 - TXID and WTXID: SegWit transactions have two identifiers: the txid commits to the original serialization without witness data, while the wtxid commits to the serialization that includes witness data. If a transaction has no witness data the two IDs are the same, but when witness data exists the distinction matters for relay, tracking, and understanding why inputs still refer to previous outputs by txid.
 - UTXO Model: State model based on spendable outputs instead of account balances.

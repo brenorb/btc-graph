@@ -69,8 +69,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
       "conceptsExtracted": 25,
-      "conceptsNormalized": 11,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, and dev.extended-keys."
+      "conceptsNormalized": 12,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, and protocol.witness-structure."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -2467,6 +2467,39 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Chosen as the cleanest next explained-post custody slice because it fills a real backup-method gap without duplicating seed XOR shards, generic recovery planning, or multisig coordination. DKG remains a plausible follow-on, but it depends on this threshold-sharing concept more directly than the reverse."
+    },
+    {
+      "id": "protocol.witness-structure",
+      "title": "Transaction Witness Structure",
+      "category": "Protocol & Consensus",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06_transactions.adoc",
+      "sourceContext": "Transactions > Witness Structure > Witness Structure Serialization",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific transaction-format concept: how each input carries a witness stack and how the marker, flag, item counts, and witness items are serialized. It is narrower than SegWit as an upgrade and distinct from the identifier and block-commitment consequences of witness data.",
+      "candidatePrerequisites": [
+        "protocol.segregated-witness",
+        "protocol.txid-vs-wtxid",
+        "protocol.witness-commitment"
+      ],
+      "chosenPrerequisites": [
+        "protocol.segregated-witness"
+      ],
+      "prerequisiteRationale": "SegWit is the direct conceptual change that introduces witness serialization. TXID/WTXID and witness commitments are downstream consequences or validation applications, so adding them directly would create redundant or backward-facing edges.",
+      "aliases": [
+        "witness structure",
+        "segwit transaction structure",
+        "witness serialization"
+      ],
+      "tags": [
+        "transactions",
+        "segwit",
+        "serialization"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as the missing transaction-level SegWit bridge. Existing TXID/WTXID and witness-commitment nodes remain unchanged until a separate prerequisite-cleanup pass evaluates whether they should consume this node."
     }
   ],
   "edges": [
@@ -3171,6 +3204,15 @@
       "rationale": "In Bitcoin practice the scheme is used as one backup-and-recovery method, so learners need the broader custody problem before the threshold-share design choice becomes meaningful.",
       "sourceId": "source.bitcoin-dev-project-explained-posts",
       "notes": "Direct parent keeps the node anchored in practical custody use instead of drifting into a purely abstract cryptography topic."
+    },
+    {
+      "from": "protocol.segregated-witness",
+      "to": "protocol.witness-structure",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The transaction witness layout only makes sense after the learner understands that SegWit separates witness data from the legacy transaction serialization.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "Direct edge keeps the node at the transaction-format layer; TXID/WTXID and witness-commitment consequences remain downstream concepts."
     }
   ],
   "decisions": [
@@ -4481,6 +4523,24 @@
         "source.bitcoin-design-shared-wallet"
       ],
       "notes": "Merged into existing coverage because the page's lasting value is as a downstream example of multi-key custody, not as a separate prerequisite node."
+    },
+    {
+      "id": "decision.witness-structure-slice",
+      "type": "scope",
+      "subject": "protocol.witness-structure",
+      "status": "resolved",
+      "rationale": "Mastering Bitcoin's witness-structure section contains a clean transaction-level concept that is missing between the existing SegWit upgrade node and the graph's TXID/WTXID and witness-commitment consequences. It survives dedupe because those neighboring nodes explain different learning outcomes.",
+      "relatedConceptIds": [
+        "protocol.witness-structure",
+        "protocol.segregated-witness",
+        "protocol.txid-vs-wtxid",
+        "protocol.witness-commitment",
+        "protocol.block-weight-vbytes"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Added with only protocol.segregated-witness as a direct prerequisite. Relative timelocks, SIGHASH flags, compact block filters, coinbase transactions, and difficulty adjustment were reviewed as existing coverage and not cloned."
     }
   ]
 }
