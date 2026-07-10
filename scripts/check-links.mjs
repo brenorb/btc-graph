@@ -1,12 +1,19 @@
 import fs from "node:fs";
 import path from "node:path";
+import dns from "node:dns";
 
 const repoRoot = process.cwd();
 const sourceDir = path.join(repoRoot, "content", "nodes");
-const DEFAULT_TIMEOUT_MS = 15000;
+const DEFAULT_TIMEOUT_MS = 20000;
 const CONCURRENCY = 6;
-const MAX_ATTEMPTS = 3;
+const MAX_ATTEMPTS = 5;
+const RETRY_BASE_DELAY_MS = 500;
 const RETRYABLE_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
+
+// GitHub-hosted runners can prefer an unreachable IPv6 route for some older
+// hosts. Prefer IPv4 so a transient family-selection failure does not make
+// an otherwise reachable source fail the whole validation job.
+dns.setDefaultResultOrder("ipv4first");
 
 function loadNodes() {
   const files = fs
@@ -78,7 +85,7 @@ async function requestWithRetry(url, method) {
     }
 
     // Short exponential backoff to reduce transient network flakiness in CI.
-    await sleep(300 * 2 ** (attempt - 1));
+    await sleep(RETRY_BASE_DELAY_MS * 2 ** (attempt - 1));
   }
 
   throw lastError ?? new Error("Link check failed with unknown error");
