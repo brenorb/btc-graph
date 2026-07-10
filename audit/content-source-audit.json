@@ -51,9 +51,9 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 9,
-      "conceptsExtracted": 20,
-      "conceptsNormalized": 6,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, and development review. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, and dev.review-culture."
+      "conceptsExtracted": 21,
+      "conceptsNormalized": 7,
+      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, development review, and miner decentralization. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, dev.review-culture, and mining.miner-decentralization."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -3171,6 +3171,42 @@
       "estimatedTime": "40m",
       "confidence": "high",
       "notes": "Added after deduping against ops.dns-seeds, lightning.gossip-protocol, peer-discovery, and routing concepts. This is a Lightning protocol mechanism, not a function/API wrapper."
+    },
+    {
+      "id": "mining.miner-decentralization",
+      "title": "Miner Decentralization",
+      "category": "Mining",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "sourceUrl": "https://bitcoindevphilosophy.com/#minerdecentralization",
+      "sourceContext": "Decentralization chapter 1.1 Miner decentralization",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one system-level concept about dispersed control over transaction ordering and its censorship consequences. It is narrower than censorship resistance, distinct from the rule-enforcement role of full nodes, and broader than a particular pool protocol such as Stratum V2.",
+      "candidatePrerequisites": [
+        "protocol.nodes-vs-miners",
+        "mining.pool-vs-solo",
+        "fundamentals.censorship-resistance",
+        "mining.stratum-v2"
+      ],
+      "chosenPrerequisites": [
+        "protocol.nodes-vs-miners",
+        "mining.pool-vs-solo"
+      ],
+      "prerequisiteRationale": "Learners first need the authority boundary between miners and validating nodes, then the pool-versus-solo structure that shapes how mining participants coordinate. Censorship resistance is the outcome explained by this node, while Stratum V2 is an optional implementation mechanism rather than a universal prerequisite.",
+      "aliases": [
+        "mining decentralization",
+        "hashrate decentralization",
+        "decentralized transaction ordering"
+      ],
+      "tags": [
+        "mining",
+        "decentralization",
+        "censorship-resistance",
+        "governance"
+      ],
+      "estimatedTime": "30m",
+      "confidence": "high",
+      "notes": "Added after deduping against fundamentals.censorship-resistance, protocol.nodes-vs-miners, mining.pool-vs-solo, and mining.stratum-v2. Do not add full-node decentralization as a duplicate: it is already covered by validation sovereignty and full-node concepts."
     }
   ],
   "edges": [
@@ -4055,6 +4091,24 @@
       "rationale": "BOLT 10 locates Lightning peers and filters results by Lightning address information, so learners need Lightning's node-discovery and gossip context before understanding the assisted-location mechanism.",
       "sourceId": "source.lightning-bolts",
       "notes": "Lightning routing and generic P2P messages are inherited through gossip rather than added as transitive prerequisites."
+    },
+    {
+      "from": "protocol.nodes-vs-miners",
+      "to": "mining.miner-decentralization",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Miner decentralization only makes sense once learners distinguish miners' transaction-ordering role from full nodes' independent enforcement of consensus validity.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "The edge keeps censorship power separate from authority to change consensus rules."
+    },
+    {
+      "from": "mining.pool-vs-solo",
+      "to": "mining.miner-decentralization",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Pool and solo mining explain the participant and coordination structure whose concentration or dispersion determines practical control over transaction ordering.",
+      "sourceId": "source.bitcoin-dev-philosophy",
+      "notes": "Stratum V2 remains optional implementation context, not a direct prerequisite."
     }
   ],
   "decisions": [
@@ -5691,6 +5745,25 @@
         "source.bitcoinops-topics"
       ],
       "notes": "This is a heuristic, not a hard naming rule. Review low-level primitives individually: consequential opcodes such as OP_CAT can deserve dedicated nodes when they have a distinct learning outcome, compatibility significance, or important prerequisite chain."
+    },
+    {
+      "id": "decision.miner-decentralization-slice",
+      "type": "scope",
+      "subject": "mining.miner-decentralization",
+      "status": "resolved",
+      "rationale": "Bitcoin Dev Philosophy separates miner decentralization from full-node decentralization: a changing, permissionless mining set protects transaction ordering from centralized censorship, while users' validating nodes make consensus rules hard to change without broad adoption. This is a distinct learner outcome absent from the graph.",
+      "relatedConceptIds": [
+        "mining.miner-decentralization",
+        "protocol.nodes-vs-miners",
+        "mining.pool-vs-solo",
+        "fundamentals.censorship-resistance",
+        "mining.stratum-v2",
+        "fundamentals.validation-sovereignty"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-dev-philosophy"
+      ],
+      "notes": "Added with exactly protocol.nodes-vs-miners and mining.pool-vs-solo as direct prerequisites. Keep censorship resistance as the explained property, Stratum V2 as an optional mechanism, and full-node decentralization in its existing validation-sovereignty cluster."
     }
   ]
 }
