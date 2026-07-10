@@ -69,8 +69,8 @@
       "dedupeStatus": "In progress",
       "pageClustersTracked": 14,
       "conceptsExtracted": 25,
-      "conceptsNormalized": 12,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, and protocol.witness-structure."
+      "conceptsNormalized": 13,
+      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, protocol.witness-structure, and protocol.partial-merkle-proofs."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -2500,6 +2500,39 @@
       "estimatedTime": "35m",
       "confidence": "high",
       "notes": "Implemented as the missing transaction-level SegWit bridge. Existing TXID/WTXID and witness-commitment nodes remain unchanged until a separate prerequisite-cleanup pass evaluates whether they should consume this node."
+    },
+    {
+      "id": "protocol.partial-merkle-proofs",
+      "title": "Partial Merkle Proofs",
+      "category": "Network, Relay & Client Sync",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "sourceUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch11_blockchain.adoc",
+      "sourceContext": "The Blockchain > Merkle Trees and Lightweight Clients",
+      "existingNodeId": "",
+      "status": "new",
+      "atomicityRationale": "This is one specific client-verification mechanism: sending only the relevant Merkle branches and traversal bits needed to prove a transaction belongs to a block. It is narrower than Merkle trees, block structure, and the broader light-client trust model, and distinct from compact block filters.",
+      "candidatePrerequisites": [
+        "fundamentals.merkle-trees",
+        "protocol.block-structure",
+        "protocol.light-client-trust-model"
+      ],
+      "chosenPrerequisites": [
+        "protocol.block-structure"
+      ],
+      "prerequisiteRationale": "Block structure supplies the Merkle-root context and already inherits the generic Merkle-tree concept. The light-client trust model is a downstream interpretation of what this proof can and cannot verify, so making it a direct prerequisite would reverse the mechanism-to-tradeoff relationship.",
+      "aliases": [
+        "partial merkle trees",
+        "SPV proofs",
+        "merkleblock proofs"
+      ],
+      "tags": [
+        "spv",
+        "light-clients",
+        "merkle-proofs"
+      ],
+      "estimatedTime": "35m",
+      "confidence": "high",
+      "notes": "Implemented as the missing legacy-SPV proof mechanism between block structure and the existing light-client trust model. Compact block filters remain a distinct modern client-sync approach rather than a duplicate."
     }
   ],
   "edges": [
@@ -3213,6 +3246,15 @@
       "rationale": "The transaction witness layout only makes sense after the learner understands that SegWit separates witness data from the legacy transaction serialization.",
       "sourceId": "source.mastering-bitcoin-book-map",
       "notes": "Direct edge keeps the node at the transaction-format layer; TXID/WTXID and witness-commitment consequences remain downstream concepts."
+    },
+    {
+      "from": "protocol.block-structure",
+      "to": "protocol.partial-merkle-proofs",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Partial Merkle proofs reconstruct a transaction's inclusion path against the Merkle root carried by a block, so learners need block composition and root placement first.",
+      "sourceId": "source.mastering-bitcoin-book-map",
+      "notes": "The block-structure parent already inherits fundamentals.merkle-trees, avoiding a redundant direct edge."
     }
   ],
   "decisions": [
@@ -4541,6 +4583,24 @@
         "source.mastering-bitcoin-book-map"
       ],
       "notes": "Added with only protocol.segregated-witness as a direct prerequisite. Relative timelocks, SIGHASH flags, compact block filters, coinbase transactions, and difficulty adjustment were reviewed as existing coverage and not cloned."
+    },
+    {
+      "id": "decision.partial-merkle-proofs-slice",
+      "type": "scope",
+      "subject": "protocol.partial-merkle-proofs",
+      "status": "resolved",
+      "rationale": "Mastering Bitcoin's lightweight-client chapter exposes a concrete partial-proof mechanism that is absent from the graph. It survives dedupe because generic Merkle trees explain the primitive, block structure explains the committed root, compact block filters describe a different modern sync protocol, and the light-client trust model explains the resulting guarantees rather than the proof construction itself.",
+      "relatedConceptIds": [
+        "protocol.partial-merkle-proofs",
+        "fundamentals.merkle-trees",
+        "protocol.block-structure",
+        "protocol.compact-block-filters",
+        "protocol.light-client-trust-model"
+      ],
+      "relatedSourceIds": [
+        "source.mastering-bitcoin-book-map"
+      ],
+      "notes": "Added with only protocol.block-structure as a direct prerequisite; the inherited Merkle-tree edge remains transitive and the trust-model relationship remains downstream."
     }
   ]
 }

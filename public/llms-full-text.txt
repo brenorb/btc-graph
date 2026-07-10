@@ -158,7 +158,7 @@ Mining (20 concepts)
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
 
-Network, Relay & Client Sync (50 concepts)
+Network, Relay & Client Sync (51 concepts)
 - AddrMan Bucketing: Peer address manager bucket strategy used to diversify outbound candidate selection and reduce eclipse risk.
 - AddrV2 (BIP 155): Extended peer address relay format that supports newer network address types while preserving compatibility.
 - ASMAP Peer Diversity: Using AS-level bucketing to reduce eclipse-risk concentration from peers within the same autonomous systems.
@@ -188,6 +188,7 @@ Network, Relay & Client Sync (50 concepts)
 - Mesh Networks: Mesh networks route data through many local peers without depending on one central ISP path. They are studied as resilience infrastructure for Bitcoin communication under outage or censorship pressure.
 - Node Hardware Sizing: CPU, RAM, disk, and network requirements by workload.
 - Package Relay: Policy and relay of related transaction packages, commonly parent-child sets, for fee-bumping and package validation.
+- Partial Merkle Proofs: A compact proof that a transaction belongs to a block by sending only the relevant Merkle branches and a bit field describing the traversed tree, allowing an SPV client to verify inclusion without downloading every transaction.
 - Peer Discovery and Addrman: How nodes discover, score, and rotate peers using address relay and addrman persistence.
 - Peer Eviction Protection: Inbound and outbound peer eviction logic designed to retain high-value peers and resist DoS/eclipsing behavior.
 - Peer-to-Peer Network Topology: How Bitcoin nodes discover peers, relay data, and maintain decentralized communication.

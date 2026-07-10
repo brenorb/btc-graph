@@ -1,0 +1,43 @@
+{
+  "id": "protocol.partial-merkle-proofs",
+  "title": "Partial Merkle Proofs",
+  "description": "A compact proof that a transaction belongs to a block by sending only the relevant Merkle branches and a bit field describing the traversed tree, allowing an SPV client to verify inclusion without downloading every transaction.",
+  "category": "Network, Relay & Client Sync",
+  "prerequisites": [
+    "protocol.block-structure"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 37: Connection Bloom Filtering",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki",
+      "notes": "Defines merkleblock messages and partial Merkle tree proofs used by legacy SPV clients."
+    },
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: The Blockchain",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch11_blockchain.adoc",
+      "notes": "Explains how a lightweight client verifies transaction inclusion with a partial Merkle branch."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Provides the broader block, Merkle-tree, and lightweight-client context for partial proofs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "spv",
+    "light-clients",
+    "merkle-proofs"
+  ],
+  "aliases": [
+    "partial merkle trees",
+    "SPV proofs",
+    "merkleblock proofs"
+  ]
+}
