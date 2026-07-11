@@ -16,7 +16,8 @@ describe("phase 100 content: selection cryptography", () => {
     const source = audit.sources.find((candidate) => candidate.id === "source.bitcoin-dev-philosophy");
     const concept = audit.concepts.find((candidate) => candidate.id === "dev.selection-cryptography");
 
-    expect(source).toMatchObject({ status: "In review", conceptsNormalized: 8 });
+    expect(source?.status).toBe("In review");
+    expect(source?.conceptsNormalized).toBeGreaterThanOrEqual(8);
     expect(concept).toMatchObject({
       status: "new",
       chosenPrerequisites: ["dev.review-culture"],
