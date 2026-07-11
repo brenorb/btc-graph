@@ -10,9 +10,9 @@
   "resources": [
     {
       "type": "article",
-      "title": "Cube implementation repository",
-      "url": "https://github.com/cube-btc/cube/tree/main",
-      "notes": "Implementation reference for Cube's execution environment; the article that defines ZKTLCs is tracked in the source audit."
+      "title": "Introducing Cube",
+      "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+      "notes": "Primary explanation of ZKTLCs as Cube's unified primitive for programmable computation with challenge-response and timeout exits."
     },
     {
       "type": "article",

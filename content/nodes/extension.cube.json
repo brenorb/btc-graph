@@ -9,9 +9,9 @@
   "resources": [
     {
       "type": "article",
-      "title": "Cube implementation repository",
-      "url": "https://github.com/cube-btc/cube/tree/main",
-      "notes": "Open-source implementation reference for Cube and CubeVM; the introductory architecture article is tracked in the source audit."
+      "title": "Introducing Cube",
+      "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+      "notes": "Primary architectural overview of Cube, CubeVM, ZKTLCs, Shadowing, Projector, lifting, and exit paths."
     },
     {
       "type": "book",

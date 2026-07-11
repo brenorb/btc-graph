@@ -4216,9 +4216,9 @@
       "resources": [
         {
           "type": "article",
-          "title": "Cube implementation repository",
-          "url": "https://github.com/cube-btc/cube/tree/main",
-          "notes": "Open-source implementation reference for Cube and CubeVM; the introductory architecture article is tracked in the source audit."
+          "title": "Introducing Cube",
+          "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+          "notes": "Primary architectural overview of Cube, CubeVM, ZKTLCs, Shadowing, Projector, lifting, and exit paths."
         },
         {
           "type": "book",
@@ -4911,9 +4911,9 @@
       "resources": [
         {
           "type": "article",
-          "title": "Cube implementation repository",
-          "url": "https://github.com/cube-btc/cube/tree/main",
-          "notes": "Primary implementation reference for the Cube execution environment; the article that motivated this node is tracked in the source audit."
+          "title": "Introducing Cube",
+          "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+          "notes": "Primary explanation of timeout trees as Cube's ownership-virtualization and settlement primitive."
         },
         {
           "type": "article",
@@ -4995,9 +4995,9 @@
       "resources": [
         {
           "type": "article",
-          "title": "Cube implementation repository",
-          "url": "https://github.com/cube-btc/cube/tree/main",
-          "notes": "Implementation reference for Cube's execution environment; the article that defines ZKTLCs is tracked in the source audit."
+          "title": "Introducing Cube",
+          "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+          "notes": "Primary explanation of ZKTLCs as Cube's unified primitive for programmable computation with challenge-response and timeout exits."
         },
         {
           "type": "article",
