@@ -1311,6 +1311,50 @@
       ]
     },
     {
+      "id": "dev.bootstrappable-builds",
+      "title": "Bootstrappable Builds",
+      "description": "Bootstrappable builds reduce the trusted computing base by making the toolchain rebuildable from a small, independently verifiable set of binaries and source code. They strengthen reproducible builds by addressing trust in the compilers and build tools used to produce the final software.",
+      "category": "Security",
+      "prerequisites": [
+        "dev.reproducible-builds"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Development Philosophy: Bootstrappable Toolchains",
+          "url": "https://bitcoindevphilosophy.com/#trustlessness",
+          "notes": "Explains why reproducibility alone does not remove trust in prebuilt compilers and how a minimal trusted binary can bootstrap the toolchain."
+        },
+        {
+          "type": "article",
+          "title": "Guix: Bitcoin Core Build System",
+          "url": "https://github.com/bitcoin/bitcoin/tree/master/contrib/guix",
+          "notes": "Concrete build-system context for bootstrappable and reproducible Bitcoin Core builds."
+        },
+        {
+          "type": "book",
+          "title": "Bitcoin Development Philosophy",
+          "url": "https://amzn.to/4s33eUd",
+          "notes": "Long-form discussion of minimizing trusted binaries and verifying the build path.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4uRjb1v"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "builds",
+        "supply chain",
+        "toolchains",
+        "verification"
+      ],
+      "aliases": [
+        "bootstrappable toolchains",
+        "bootstrapable builds",
+        "trust-minimized builds"
+      ]
+    },
+    {
       "id": "dev.descriptor-wallet-imports",
       "title": "Descriptor Wallet Imports",
       "description": "Importing and managing descriptor-based wallet script sets, ranges, and checksums for deterministic tracking.",

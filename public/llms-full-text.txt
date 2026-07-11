@@ -311,13 +311,14 @@ Protocol & Consensus (80 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (58 concepts)
+Security (59 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
 - Amount Correlation: How amount uniqueness and matching patterns can link inputs, outputs, and user behavior across transactions.
 - Bitcoin Core RPC Access Security: Secure Bitcoin Core's powerful RPC control boundary by authenticating clients, limiting bind and allow rules, and understanding that RPC access can read private data, spend wallet funds, and change node behavior.
 - Blind Signatures: Blind signatures let a signer authorize a token without seeing its final contents, enabling ecash mints to issue privately spendable proofs. They build directly on digital-signature verification.
+- Bootstrappable Builds: Bootstrappable builds reduce the trusted computing base by making the toolchain rebuildable from a small, independently verifiable set of binaries and source code. They strengthen reproducible builds by addressing trust in the compilers and build tools used to produce the final software.
 - Censorship Resistance: Why open participation and distributed validation make transaction censorship costly and fragile.
 - Chain Analysis Heuristics: Common heuristics used to cluster addresses and infer ownership from on-chain behavior.
 - Change Avoidance Strategies: Wallet spending techniques that minimize change output creation to reduce linkage and future privacy leakage.
