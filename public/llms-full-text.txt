@@ -114,7 +114,7 @@ Extension Systems (57 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (29 concepts)
+History & Governance (30 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
@@ -133,6 +133,7 @@ History & Governance (29 concepts)
 - GPU-to-ASIC Transition: Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.
 - Monetary Contact Shocks: When previously separate civilizations begin trading, a local money can lose scarcity if outsiders replicate it at lower cost. This helps explain monetary inflation episodes tied to technology and trade contact.
 - Nodes vs Miners: Different responsibilities and power boundaries in the network.
+- Permissionless Development: Permissionless development means people can build wallets, protocols, tools, and services around Bitcoin without asking a central authority for approval. The permissionless boundary is constrained by the protocol's rules and users' voluntary adoption, not by a developer committee granting access.
 - Pre-Bitcoin Digital Cash Attempts: Before Bitcoin, multiple designs tried to create digital money, including DigiCash, Hashcash, b-money, and bit gold. Studying these attempts clarifies what Bitcoin solved and what tradeoffs remained unresolved.
 - Pseudonymous Development: Pseudonymous development lets Bitcoin contributors publish and review work without tying it to a legal identity. It can protect contributors from coercion while keeping technical claims accountable through public evidence and peer review.
 - Rai Stones: Rai stones from Yap are a classic case of socially recognized monetary ownership where transfer can occur without physically moving the asset. They illustrate that money depends on shared ledgers and social consensus.
