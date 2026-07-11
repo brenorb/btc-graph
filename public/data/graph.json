@@ -14281,8 +14281,8 @@
         {
           "type": "article",
           "title": "Bitcoin Optech: Pay to Anchor",
-          "url": "https://bitcoinops.org/en/topics/pay-to-anchor/",
-          "notes": "Implementation and fee-bumping context for P2A outputs."
+          "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+          "notes": "Optech groups P2A with ephemeral anchors and documents the fee-bumping context."
         },
         {
           "type": "book",

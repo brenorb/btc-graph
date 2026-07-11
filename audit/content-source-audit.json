@@ -46,14 +46,14 @@
       "priority": "P0",
       "scope": "Conceptual and systems-thinking source likely to surface bridge concepts and framing gaps.",
       "clusterStrategy": "Track 9 chapter-level rows first, with later splits for dense chapters 5, 7, 8, and 9.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 9,
       "conceptsExtracted": 23,
       "conceptsNormalized": 11,
-      "notes": "Heavy overlap with existing philosophy nodes, but strong for bridge concepts like validation sovereignty, consensus vs policy, development review, permissionless development, pseudonymous development, miner decentralization, and selection cryptography. Implemented from this source in the current branch: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, dev.review-culture, dev.permissionless-development, dev.pseudonymous-development, mining.miner-decentralization, and dev.selection-cryptography."
+      "notes": "Complete nine-chapter pass. Dense chapters 5, 7, 8, and 9 were split conceptually and deduplicated against the graph. Implemented bridge concepts: fundamentals.validation-sovereignty, protocol.consensus-vs-policy, protocol.chain-split-risk, dev.review-culture, dev.permissionless-development, dev.pseudonymous-development, dev.bootstrappable-builds, mining.miner-decentralization, and dev.selection-cryptography. Funding, culture shock, scaling taxonomies, and historical incident examples remain contextual or existing coverage rather than standalone gaps."
     },
     {
       "id": "source.mastering-bitcoin-book-map",
@@ -63,14 +63,14 @@
       "priority": "P0",
       "scope": "Structured chapter map for foundational and implementation-oriented concept coverage.",
       "clusterStrategy": "Track 14 chapter rows first, grouping chapters 4 to 12 as the primary extraction surface.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 14,
       "conceptsExtracted": 28,
       "conceptsNormalized": 16,
-      "notes": "Already heavily reused in current nodes, so chapter titles are containers. Best current value is prerequisite ladders and bridge concepts. Implemented from this source in the current branch: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, protocol.witness-structure, protocol.partial-merkle-proofs, protocol.pay-to-contract, extension.single-use-seals, and extension.client-side-validation."
+      "notes": "Complete 14-chapter outline pass. Chapter titles were treated as containers, then prerequisite ladders and bridge concepts were normalized against the existing graph. Implemented missing bridges: protocol.light-client-trust-model, ops.full-node-vs-lightweight-wallet, custody.coin-selection, protocol.change-outputs, protocol.bech32m-addresses, protocol.script-execution-stack, dev.extended-keys, protocol.witness-structure, protocol.partial-merkle-proofs, protocol.pay-to-contract, extension.single-use-seals, and extension.client-side-validation."
     },
     {
       "id": "source.optech-schnorr-taproot-workshop",
@@ -80,14 +80,14 @@
       "priority": "P0",
       "scope": "Focused advanced curriculum around Schnorr, Taproot, and related prerequisite chains.",
       "clusterStrategy": "Track the 12 module pages plus shared assets once per source.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 12,
       "conceptsExtracted": 18,
       "conceptsNormalized": 9,
-      "notes": "Best current source for missing Taproot bridge concepts such as tagged hashes, taptweak, key-path spends, tapleaf inclusion proofs, control blocks, Huffman-optimized TapTrees, and concrete policy case studies like degrading multisig. Implemented from this source in the current branch: protocol.tagged-hashes, protocol.taptweak, protocol.taproot-key-path-spends, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.taproot-control-blocks, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
+      "notes": "Complete 12-module pass, including preparation/math, Schnorr/MuSig, Taproot, Tapscript, TapTree, Huffman construction, and the degrading-multisig case study. Implemented bridge concepts: protocol.tagged-hashes, protocol.taptweak, protocol.taproot-key-path-spends, protocol.taptree, protocol.tapleaf-inclusion-proofs, protocol.taproot-control-blocks, protocol.huffman-optimized-taptrees, and custody.degrading-multisig."
     },
     {
       "id": "source.bitcoindevs-decoding",
@@ -130,7 +130,7 @@
       "sourceType": "protocol-specification-repository",
       "priority": "P0",
       "scope": "Canonical Lightning wire protocol, transport, channel, transaction, routing, discovery, feature-negotiation, invoice, and offer specifications.",
-      "clusterStrategy": "Track each BOLT document as an enumeration cluster, starting with the index and BOLTs 01, 02, 04, 08, 09, and 10. Extract only atomic mechanisms and deduplicate against existing Lightning nodes before proposing additions.",
+      "clusterStrategy": "Track every current BOLT document as an enumeration cluster. Extract only atomic mechanisms and deduplicate against existing Lightning nodes before proposing additions.",
       "status": "Complete",
       "crawlStatus": "Complete",
       "extractionStatus": "Normalized",
@@ -165,14 +165,14 @@
       "priority": "P1",
       "scope": "Operational documentation for fee visibility, mempool behavior, transaction monitoring, APIs, and self-hosting. Treat it as implementation and observability guidance, not consensus authority.",
       "clusterStrategy": "Enumerate the FAQ, REST API, WebSocket API, and self-hosting/repository clusters first. Use Bitcoin Core documentation as the canonical authority for consensus and policy semantics, then retain Mempool.space-specific observability concepts only when they survive deduplication.",
-      "status": "Inventorying",
-      "crawlStatus": "In progress",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 4,
-      "conceptsExtracted": 1,
-      "conceptsNormalized": 1,
-      "notes": "Added during source expansion. Initial clusters cover FAQ/mempool behavior, REST API, WebSocket/live events, and self-hosting. Implemented from this source in the current branch: ops.mempool-purging, with Bitcoin Core policy and RPC documentation used as canonical supporting sources."
+      "conceptsExtracted": 5,
+      "conceptsNormalized": 5,
+      "notes": "Complete FAQ/mempool, REST API, WebSocket/live-events, and self-hosting pass. ops.mempool-purging is the only learner-facing concept added from this source; explorer UI, REST/WebSocket endpoints, and self-hosting are recorded as implementation/product surfaces rather than Bitcoin graph nodes. Bitcoin Core policy and RPC documentation remain canonical for protocol semantics."
     },
     {
       "id": "source.cypherpunk-library-bitcoin-adjacent",
@@ -930,14 +930,14 @@
       "priority": "P1",
       "scope": "Canonical developer-facing guide sections covering block chain, transactions, contracts, wallets, payment processing, operating modes, P2P network, and mining.",
       "clusterStrategy": "Track the eight top-level guide sections first, then split dense sections like Transactions, Contracts, Wallets, and P2P Network when they expose concept gaps not already covered by existing nodes.",
-      "status": "In review",
-      "crawlStatus": "Partial",
+      "status": "Complete",
+      "crawlStatus": "Complete",
       "extractionStatus": "Queue exhausted",
       "dedupeStatus": "Complete",
       "pageClustersTracked": 9,
       "conceptsExtracted": 5,
       "conceptsNormalized": 5,
-      "notes": "Added after the current audited source queue was exhausted. The first pass across the top-level sections surfaced four clean candidates: protocol.bitcoin-uri-bip21 from Payment Processing, dev.hardened-keys from Wallets, protocol.escrow-and-arbitration from Contracts, and mining.pool-shares from Pool Mining. A follow-up Wallet Files pass surfaced dev.wallet-import-format-wif as another clean wallet-standard slice. The implemented winners are now protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, dev.wallet-import-format-wif, and mining.pool-shares because they land as missing standards, key-derivation, contract-pattern, key-serialization, and pooled-mining accounting bridges with clean direct parents. The current tracked top-level-plus-Wallet-Files queue is exhausted for this pass, though future deeper section splits may still surface more concepts."
+      "notes": "Complete first pass across the eight top-level guide sections plus the Wallet Files split. Implemented missing standards and bridges: protocol.bitcoin-uri-bip21, dev.hardened-keys, protocol.escrow-and-arbitration, dev.wallet-import-format-wif, and mining.pool-shares. Remaining dense subsections are represented by existing graph coverage or deferred as future deep dives rather than falsely treated as unreviewed source families."
     },
     {
       "id": "source.bitcoin-core-operator-docs",
@@ -947,14 +947,14 @@
       "priority": "P1",
       "scope": "Bitcoin Core's operator-facing documentation and configuration references for securing node control surfaces, especially JSON-RPC exposure and credentials.",
       "clusterStrategy": "Track the JSON-RPC interface security section, bitcoin.conf reference, and implementation configuration paths as one operator-security cluster before splitting distinct access-control or privacy concepts.",
-      "status": "In review",
-      "crawlStatus": "Partial",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
-      "notes": "Added after the audited queue surfaced a distinct RPC control-plane security gap. The first inspected cluster covers credentials, rpcbind/rpcallowip exposure, and the implementation path that applies these settings."
+      "notes": "Complete operator-security cluster. Inspected JSON-RPC-interface.md, bitcoin-conf.md, and init.md for cookie/rpcauth credentials, rpcbind/rpcallowip exposure, and the configuration path that applies these settings. The distinct learner concept is security.bitcoin-core-rpc-access; individual RPC options remain implementation details."
     },
     {
       "id": "source.bitcoin-core-package-policy",
@@ -964,14 +964,14 @@
       "priority": "P1",
       "scope": "Bitcoin Core's package mempool acceptance rules, submitpackage RPC, and release history for local package admission and fee-bumping behavior.",
       "clusterStrategy": "Track the current submitpackage RPC reference, package-policy specification, and the 26.0 release note that introduced the RPC as one package-admission cluster; keep network package relay and cluster-mempool as deduplicated neighboring concepts.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 3,
       "conceptsExtracted": 2,
       "conceptsNormalized": 2,
-      "notes": "Added after the RPC-security slice. The inspected pages establish submitpackage as a local package-admission mechanism and package RBF as a distinct replacement rule, separate from testmempoolaccept preflight, network package relay, and cluster-mempool internals."
+      "notes": "Complete package-admission cluster. submitpackage is retained as a developer workflow and package RBF as a distinct replacement rule; testmempoolaccept, package relay, and cluster-mempool remain neighboring concepts rather than duplicated prerequisites."
     },
     {
       "id": "source.bitcoin-core-cluster-mempool-rpc",
@@ -981,14 +981,14 @@
       "priority": "P1",
       "scope": "Bitcoin Core's cluster-mempool data model, bounded cluster policy, and related RPCs for inspecting connected transactions, mining order, chunks, fees, weights, and whole-mempool fee curves.",
       "clusterStrategy": "Track the getmempoolcluster and getmempoolfeeratediagram RPC references, cluster-limit policy, Bitcoin Core 31.0 release notes, mempool terminology, and implementation paths as one cluster-mempool slice; keep concrete RPC workflows merged into the higher-level concepts.",
-      "status": "In review",
+      "status": "Complete",
       "crawlStatus": "Complete",
-      "extractionStatus": "Raw extraction",
-      "dedupeStatus": "In progress",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
       "pageClustersTracked": 5,
       "conceptsExtracted": 3,
       "conceptsNormalized": 3,
-      "notes": "Added after the package-RBF slice. The inspected documentation exposes two RPC implementation surfaces, both merged into protocol.cluster-mempool, plus a distinct learner-facing policy concept: bounded cluster limits replacing legacy ancestor/descendant limits."
+      "notes": "Complete cluster-mempool pass. getmempoolcluster and getmempoolfeeratediagram are implementation surfaces merged into protocol.cluster-mempool; ops.mempool-cluster-limits remains the distinct learner-facing policy concept."
     }
   ],
   "concepts": [
@@ -3911,7 +3911,11 @@
     {"id":"lightning.channel-fee-policies","title":"Lightning Channel Fee Policies","category":"Extension Systems","sourceId":"source.lightning-bolts","sourceUrl":"https://github.com/lightning/bolts/blob/master/07-routing-gossip.md#the-channel_update-message","sourceContext":"BOLT 07 channel_update fee and HTLC policy fields","existingNodeId":"lightning.channel-fee-policies","status":"existing","atomicityRationale":"BOLT 07 specifies the existing learner-facing concept of channel forwarding fees and HTLC policy limits.","candidatePrerequisites":["lightning.liquidity"],"chosenPrerequisites":["lightning.liquidity"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["channel_update fees","routing fee policy"],"tags":["lightning","routing","fees"],"estimatedTime":"70m","resourceCandidates":["https://github.com/lightning/bolts/blob/master/07-routing-gossip.md#the-channel_update-message","https://amzn.to/40V421t"],"confidence":"high","notes":"Existing node confirmed; channel_update itself remains a protocol message rather than a separate node."},
     {"id":"lightning.short-channel-id","title":"Short Channel IDs","category":"Extension Systems","sourceId":"source.lightning-bolts","sourceUrl":"https://github.com/lightning/bolts/blob/master/07-routing-gossip.md#definition-of-short_channel_id","sourceContext":"BOLT 07 short_channel_id definition","existingNodeId":"","status":"new","atomicityRationale":"A Short Channel ID is one precise identifier encoding a channel funding output as block height, transaction index, and output index; it is a prerequisite for interpreting Lightning gossip references.","candidatePrerequisites":["lightning.payment-channels","protocol.block-height"],"chosenPrerequisites":["lightning.payment-channels","protocol.block-height"],"prerequisiteRationale":"Learners need the channel funding context and the block-height component before the compact on-chain identifier is meaningful.","aliases":["short_channel_id","SCID","short channel identifier"],"tags":["lightning","channels","gossip","identifiers"],"estimatedTime":"25m","resourceCandidates":["https://github.com/lightning/bolts/blob/master/07-routing-gossip.md#definition-of-short_channel_id","https://amzn.to/40V421t"],"confidence":"high","notes":"Add as the only new node from the complete BOLT 07 pass; announcement and query messages remain part of gossip."},
     {"id":"lightning.invoices","title":"Invoices and Payment Requests","category":"Extension Systems","sourceId":"source.lightning-bolts","sourceUrl":"https://github.com/lightning/bolts/blob/master/11-payment-encoding.md","sourceContext":"BOLT 11 invoice protocol","existingNodeId":"lightning.invoices","status":"existing","atomicityRationale":"BOLT 11 specifies the existing invoice and payment-request concept.","candidatePrerequisites":["lightning.routing"],"chosenPrerequisites":["lightning.routing"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["BOLT 11 invoices","payment requests"],"tags":["lightning","payments"],"estimatedTime":"50m","resourceCandidates":["https://github.com/lightning/bolts/blob/master/11-payment-encoding.md","https://amzn.to/40V421t"],"confidence":"high","notes":"Existing node confirmed after inspecting BOLT 11 encoding and payer/payee flow."},
-    {"id":"lightning.bolt12-offers","title":"BOLT12 Offers","category":"Extension Systems","sourceId":"source.lightning-bolts","sourceUrl":"https://github.com/lightning/bolts/blob/master/12-offer-encoding.md","sourceContext":"BOLT 12 offers, invoice requests, and invoices","existingNodeId":"lightning.bolt12-offers","status":"existing","atomicityRationale":"BOLT 12 specifies the existing reusable offers and invoice-request protocol concept.","candidatePrerequisites":["lightning.invoices","lightning.route-blinding"],"chosenPrerequisites":["lightning.invoices","lightning.route-blinding"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["offers","invoice requests","BOLT 12"],"tags":["lightning","payments","privacy"],"estimatedTime":"75m","resourceCandidates":["https://github.com/lightning/bolts/blob/master/12-offer-encoding.md","https://amzn.to/40V421t"],"confidence":"high","notes":"Existing node confirmed; payment proofs and TLV fields remain internal parts of the BOLT 12 flow rather than standalone learner nodes."}
+    {"id":"lightning.bolt12-offers","title":"BOLT12 Offers","category":"Extension Systems","sourceId":"source.lightning-bolts","sourceUrl":"https://github.com/lightning/bolts/blob/master/12-offer-encoding.md","sourceContext":"BOLT 12 offers, invoice requests, and invoices","existingNodeId":"lightning.bolt12-offers","status":"existing","atomicityRationale":"BOLT 12 specifies the existing reusable offers and invoice-request protocol concept.","candidatePrerequisites":["lightning.invoices","lightning.route-blinding"],"chosenPrerequisites":["lightning.invoices","lightning.route-blinding"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["offers","invoice requests","BOLT 12"],"tags":["lightning","payments","privacy"],"estimatedTime":"75m","resourceCandidates":["https://github.com/lightning/bolts/blob/master/12-offer-encoding.md","https://amzn.to/40V421t"],"confidence":"high","notes":"Existing node confirmed; payment proofs and TLV fields remain internal parts of the BOLT 12 flow rather than standalone learner nodes."},
+    {"id":"ops.mempool-explorer","title":"Mempool Explorer","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space explorer and visualizer","existingNodeId":"","status":"skip","atomicityRationale":"The explorer is a product and observability surface over Bitcoin data, not one Bitcoin protocol concept with a learner-specific prerequisite chain.","candidatePrerequisites":["protocol.mempool"],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a product wrapper.","aliases":["mempool.space explorer","mempool visualizer"],"tags":["mempool","observability","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip as a product surface; retain the source family for operational reference."},
+    {"id":"dev.mempool-rest-api","title":"Mempool.space REST API","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space REST API","existingNodeId":"","status":"skip","atomicityRationale":"The REST endpoint surface is an implementation interface, not a Bitcoin concept learners need as a graph node.","candidatePrerequisites":["protocol.mempool"],"chosenPrerequisites":[],"prerequisiteRationale":"No direct learner prerequisite applies to an application API wrapper.","aliases":["mempool REST API"],"tags":["api","mempool","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip under the implementation-surface heuristic."},
+    {"id":"dev.mempool-websocket-api","title":"Mempool.space WebSocket API","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space WebSocket and live events","existingNodeId":"","status":"skip","atomicityRationale":"The WebSocket event stream is an application transport interface, not a distinct Bitcoin protocol concept.","candidatePrerequisites":["protocol.mempool"],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for an application transport wrapper.","aliases":["mempool WebSocket API","mempool live events"],"tags":["api","mempool","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip under the implementation-surface heuristic."},
+    {"id":"ops.mempool-self-hosting","title":"Self-Hosted Mempool Explorer","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space self-hosting and deployment","existingNodeId":"","status":"skip","atomicityRationale":"Self-hosting this explorer is a deployment workflow built on Bitcoin Core, not a Bitcoin learning concept that should occupy a graph node.","candidatePrerequisites":["ops.run-full-node"],"chosenPrerequisites":[],"prerequisiteRationale":"Running a full node is related operational context but not a direct prerequisite for a skipped product workflow.","aliases":["self-hosted mempool.space","Mempool deployment"],"tags":["operations","self-hosting","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip as product/deployment scope; preserve repository documentation as an optional operator resource outside the concept graph."}
   ],
   "edges": [
     {
@@ -6612,6 +6616,9 @@
     },
     {
       "id":"decision.pay-to-anchor-slice","type":"scope","subject":"protocol.pay-to-anchor","status":"resolved","rationale":"Pay to Anchor is a distinct keyless output pattern for fee-bumping hooks, not a duplicate of generic anchor outputs or ephemeral-anchor package policy.","relatedConceptIds":["protocol.pay-to-anchor","protocol.ephemeral-anchors","protocol.version-3-transaction-relay"],"relatedSourceIds":["source.bitcoin-bips"],"notes":"Added as a draft protocol/application concept; TRUC remains related anti-pinning context without becoming a direct prerequisite."
+    },
+    {
+      "id":"decision.mempool-space-surface-skip","type":"exclusion","subject":"source.mempool-space-docs","status":"resolved","rationale":"The Mempool.space FAQ, REST API, WebSocket stream, and self-hosting material expose observability and deployment surfaces over Bitcoin Core. They do not add a learner-facing Bitcoin protocol concept beyond the already-covered mempool policy/purging branch.","relatedConceptIds":["ops.mempool-purging","ops.mempool-explorer","dev.mempool-rest-api","dev.mempool-websocket-api","ops.mempool-self-hosting"],"relatedSourceIds":["source.mempool-space-docs"],"notes":"Keep these as audit candidates and source references, but do not mint product/API wrapper nodes."
     }
   ]
 }
