@@ -1,0 +1,44 @@
+{
+  "id": "protocol.base58check",
+  "title": "Base58Check Encoding",
+  "description": "Bitcoin's Base58Check encoding represents versioned payloads such as legacy addresses and WIF keys with a human-friendly alphabet and checksum. The format includes network-specific version bytes, preserves leading zero bytes, and detects many transcription errors.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.hash-functions",
+    "protocol.addresses-outputs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Base58Check encoding",
+      "url": "https://en.bitcoin.it/wiki/Base58Check_encoding",
+      "notes": "Detailed explanation of the alphabet, version bytes, checksum, and leading-zero handling."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Base58Check Encoding",
+      "url": "https://developer.bitcoin.org/devguide/wallets.html#base58check-encoding",
+      "notes": "Canonical developer reference for addresses and WIF serialization."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Hands-on treatment of Base58 encoding, checksums, addresses, and key serialization.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "encoding",
+    "addresses",
+    "keys"
+  ],
+  "aliases": [
+    "base58check",
+    "base58 check encoding",
+    "base58 checksum"
+  ]
+}
