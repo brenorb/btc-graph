@@ -1108,6 +1108,23 @@
       "conceptsExtracted": 10,
       "conceptsNormalized": 8,
       "notes": "No new node was required. The page's central governance model is already represented by Bitcoin as Social Technology, Consensus Rules, Protocol Neutrality, BIPs Process, Review Culture, Permissionless Development, Miner Decentralization, and Chain Split Risk. Do not add a broad Bitcoin Governance umbrella node; retain the linked essays as contextual resources."
+    },
+    {
+      "id": "source.lopp-bitcoin-investment-theses",
+      "name": "Jameson Lopp Bitcoin Investment Theses Resource Index",
+      "url": "https://www.lopp.net/bitcoin-information/investment-theses.html",
+      "sourceType": "investment-resource-index",
+      "priority": "P1",
+      "scope": "Curated investment theses, corporate treasury materials, Bitcoin value models, monetary arguments, and comparative altcoin investment resources.",
+      "clusterStrategy": "Review the index by economic concept rather than importing every report or forecast: money and monetary premium, scarcity and issuance, monetization and adoption, risk and volatility, corporate reserves, valuation models, and altcoin comparisons.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 4,
+      "conceptsExtracted": 16,
+      "conceptsNormalized": 10,
+      "notes": "No new learner-facing node was required. Existing coverage includes Properties of Money, Scarcity and Sound Money, Monetary Premium, Monetization Process, Bitcoin Supply and Demand, Block Subsidy, Halving Cycle, Volatility Psychology and Risk Sizing, Savings vs Investment, and Token/Altcoin context. Price targets, stock-to-flow and Metcalfe-style forecasts, corporate treasury case studies, and individual portfolio recommendations remain models or context rather than stable Bitcoin prerequisites."
     }
   ],
   "concepts": [
@@ -7048,6 +7065,16 @@
       "relatedConceptIds": ["history.social-consensus-technology","protocol.consensus-rules","fundamentals.neutrality","dev.bips-process","dev.review-culture","dev.permissionless-development","mining.miner-decentralization","protocol.chain-split-risk"],
       "relatedSourceIds": ["source.lopp-bitcoin-governance"],
       "notes": "No new node added. Keep the resource index available for context and future source-level research."
+    },
+    {
+      "id": "decision.lopp-bitcoin-investment-theses-inventory",
+      "type": "inventory",
+      "subject": "source.lopp-bitcoin-investment-theses",
+      "status": "resolved",
+      "rationale": "Investment theses are arguments and models that reuse monetary, economic, and risk concepts; they are not themselves atomic Bitcoin prerequisites. Importing price forecasts, corporate examples, or portfolio recommendations would make the graph time-sensitive and advisory rather than educational.",
+      "relatedConceptIds": ["fundamentals.money-properties","economics.scarcity","economics.monetary-premium","economics.monetization-process","economics.bitcoin-supply-demand","economics.block-subsidy","protocol.halving","economics.volatility-psychology-risk-sizing","economics.savings-vs-investment","economics.token-basics"],
+      "relatedSourceIds": ["source.lopp-bitcoin-investment-theses"],
+      "notes": "No new node added. Keep the index as a curated source hub for economic context; do not treat it as financial advice or a source of canonical price predictions."
     }
   ]
 }
