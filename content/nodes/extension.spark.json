@@ -1,0 +1,43 @@
+{
+  "id": "extension.spark",
+  "title": "Spark Protocol",
+  "description": "Spark is a Bitcoin Layer 2 protocol built on statechain ideas. It transfers off-chain representations of bitcoin without bilateral payment-channel management, using a distributed operator set and threshold-signature coordination while supporting Lightning interoperability and offline receiving.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.statechains"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Spark Protocol Documentation",
+      "url": "https://docs.spark.money/start/overview",
+      "notes": "Official overview of Spark's Bitcoin Layer 2 protocol and asset model."
+    },
+    {
+      "type": "article",
+      "title": "Spark Protocol Repository",
+      "url": "https://github.com/buildonspark/spark",
+      "notes": "Open-source implementation and protocol development reference."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Background for Bitcoin Layer 2 payments, Lightning interoperability, and off-chain tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "bitcoin-l2",
+    "statechains",
+    "off-chain",
+    "lightning"
+  ],
+  "aliases": [
+    "Spark Bitcoin L2",
+    "Spark statechain protocol"
+  ]
+}

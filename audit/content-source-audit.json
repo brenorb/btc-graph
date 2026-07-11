@@ -1006,6 +1006,23 @@
       "conceptsExtracted": 12,
       "conceptsNormalized": 12,
       "notes": "Complete first-edition pass over all 101 chapter files. Six concepts were added, six candidates were merged or excluded: Satoshi Nakamoto, Bitcoin denominations and satoshis, block subsidy, quantum-computing threats, Ordinals and inscriptions, and proof of existence/timestamping. Stablecoins, altcoins, exchanges, satellites, and named products remain contextual or implementation/product scope. The unfinished second edition was intentionally excluded."
+    },
+    {
+      "id": "source.spark-protocol",
+      "name": "Spark Bitcoin Layer 2 Protocol",
+      "url": "https://docs.spark.money/start/overview",
+      "sourceType": "protocol-documentation-repository",
+      "priority": "P1",
+      "scope": "Spark's statechain-based Bitcoin Layer 2 protocol, operator model, off-chain asset transfers, Lightning interoperability, and developer implementation.",
+      "clusterStrategy": "Track the official overview and open-source repository as one protocol cluster. Separate the learner-facing Spark architecture from generic statechains, threshold-signature internals, and product-specific wallet workflows.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 2,
+      "conceptsExtracted": 1,
+      "conceptsNormalized": 1,
+      "notes": "Added Spark as a distinct implementation/protocol node downstream of Statechains; operator coordination and Lightning interoperability remain inside the Spark concept rather than becoming separate nodes."
     }
   ],
   "concepts": [
@@ -3943,9 +3960,20 @@
     {"id":"economics.altcoins","title":"Altcoins","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20095_o_que_sao_altcoins_e_stablecoins.md","sourceContext":"Question 95: What are altcoins and stablecoins?","existingNodeId":"","status":"skip","atomicityRationale":"Altcoins are a comparison class rather than one atomic Bitcoin concept; the graph already covers forks, sidechains, and token systems where those distinctions matter.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct graph edge is justified for a skipped comparison category.","aliases":["alternative cryptocurrencies","alternative coins"],"tags":["adjacent-assets","comparisons"],"estimatedTime":"0m","confidence":"high","notes":"Skip as a broad category and retain the chapter as source context for comparative learning."},
     {"id":"ops.exchange-custody","title":"Exchange Custody","category":"Wallets","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20014_o_que_e_uma_exchange.md","sourceContext":"Question 14: What is an exchange?","existingNodeId":"","status":"skip","atomicityRationale":"An exchange is a product and custody model, not a Bitcoin protocol concept; adding a node would invite rapidly changing provider-specific detail.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped product category.","aliases":["bitcoin exchange","custodial exchange"],"tags":["custody","products"],"estimatedTime":"0m","confidence":"high","notes":"Skip as product scope; self-custody and custody tradeoffs remain the learner-facing concepts."},
     {"id":"ops.offline-bitcoin-transport","title":"Offline Bitcoin Transport","category":"Network, Relay & Client Sync","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20082_e_se_desligarem_a_internet.md","sourceContext":"Question 82: What if the Internet is shut down?","existingNodeId":"ops.mesh-networks","status":"merge","atomicityRationale":"Satellite, mesh, telephone, and physical-transfer examples all answer the same operational question about alternate communication paths; they do not warrant separate product nodes.","candidatePrerequisites":["fundamentals.peer-to-peer-network"],"chosenPrerequisites":["ops.mesh-networks"],"prerequisiteRationale":"Reuse the existing off-grid mesh-network concept rather than duplicating transport modalities.","aliases":["offline Bitcoin transfer","alternate Bitcoin communications"],"tags":["networking","resilience","operations"],"estimatedTime":"30m","confidence":"high","notes":"Merge source examples into ops.mesh-networks as supporting context; satellites and Opendime remain implementation/product examples."},
-    {"id":"economics.hodling","title":"HODLing","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20071_o_que_e_hodl.md","sourceContext":"Question 71: What is HODL?","existingNodeId":"","status":"skip","atomicityRationale":"HODL is a cultural slogan and investment behavior, not a prerequisite concept needed to understand Bitcoin's mechanics.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped cultural term.","aliases":["hold on for dear life","holding bitcoin"],"tags":["culture","markets"],"estimatedTime":"0m","confidence":"high","notes":"Skip as culture/behavior; volatility and savings concepts remain the relevant learner outcomes."}
+    {"id":"economics.hodling","title":"HODLing","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20071_o_que_e_hodl.md","sourceContext":"Question 71: What is HODL?","existingNodeId":"","status":"skip","atomicityRationale":"HODL is a cultural slogan and investment behavior, not a prerequisite concept needed to understand Bitcoin's mechanics.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped cultural term.","aliases":["hold on for dear life","holding bitcoin"],"tags":["culture","markets"],"estimatedTime":"0m","confidence":"high","notes":"Skip as culture/behavior; volatility and savings concepts remain the relevant learner outcomes."},
+    {"id":"extension.spark","title":"Spark Protocol","category":"Extension Systems","sourceId":"source.spark-protocol","sourceUrl":"https://docs.spark.money/start/overview","sourceContext":"Official Spark overview and open-source protocol repository","existingNodeId":"","status":"new","atomicityRationale":"Spark is a concrete Bitcoin Layer 2 protocol with a distinct operator, transfer, and interoperability model built on statechain ideas; it is not merely an alias for the generic Statechains concept.","candidatePrerequisites":["extension.statechains"],"chosenPrerequisites":["extension.statechains"],"prerequisiteRationale":"Statechains provide the architecture needed to understand Spark's off-chain ownership-transfer model; threshold-signature coordination is kept inside the node description rather than minted as an unreviewed implementation node.","aliases":["Spark Bitcoin L2","Spark statechain protocol"],"tags":["bitcoin-l2","statechains","off-chain","lightning"],"estimatedTime":"60m","confidence":"high","resourceCandidates":["https://docs.spark.money/start/overview","https://github.com/buildonspark/spark","https://amzn.to/40V421t"],"notes":"Added at the user's request after confirming the official protocol documentation and repository."
+    }
   ],
   "edges": [
+    {
+      "from": "extension.statechains",
+      "to": "extension.spark",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Spark's architecture extends statechain-style off-chain ownership transfer with a distributed operator set and Lightning interoperability.",
+      "sourceId": "source.spark-protocol",
+      "notes": "Source-driven bridge edge."
+    },
     {
       "from": "history.cypherpunk-roots-bitcoin-origin",
       "to": "history.satoshi-nakamoto",
@@ -6790,6 +6818,16 @@
       "relatedConceptIds": ["economics.stablecoins","economics.altcoins","ops.exchange-custody","ops.offline-bitcoin-transport","economics.hodling","extension.sidechains","fundamentals.bitcoin-layers"],
       "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
       "notes": "Offline transport examples merge into ops.mesh-networks; the other candidates remain source context without learner-facing nodes."
+    },
+    {
+      "id": "decision.spark-protocol-slice",
+      "type": "scope",
+      "subject": "extension.spark",
+      "status": "resolved",
+      "rationale": "Spark has a distinct learner outcome from generic Statechains: understanding a concrete Bitcoin Layer 2 protocol with distributed operator coordination, off-chain transfers, offline receiving, and Lightning interoperability.",
+      "relatedConceptIds": ["extension.spark","extension.statechains","lightning.payment-channels"],
+      "relatedSourceIds": ["source.spark-protocol"],
+      "notes": "Keep Spark-specific operator internals, SDK APIs, and wallet products inside the node resources rather than creating implementation-shaped children."
     }
   ]
 }

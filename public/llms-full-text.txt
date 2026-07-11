@@ -59,7 +59,7 @@ Economics & Incentives (2 concepts)
 - Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
 - Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 
-Extension Systems (60 concepts)
+Extension Systems (61 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -115,6 +115,7 @@ Extension Systems (60 concepts)
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
 - Single-Use Seals: A single-use seal binds an offchain state transition to a UTXO that can be spent only once. Spending the outpoint closes the old seal and prevents the same state transition from being valid twice.
 - Spacechains: Spacechains anchor external consensus data to Bitcoin while preserving independent execution environments. They use Bitcoin finality as a settlement root without full smart-contract expressiveness.
+- Spark Protocol: Spark is a Bitcoin Layer 2 protocol built on statechain ideas. It transfers off-chain representations of bitcoin without bilateral payment-channel management, using a distributed operator set and threshold-signature coordination while supporting Lightning interoperability and offline receiving.
 - Statechains: Statechains transfer control of pre-funded outputs between participants with minimal on-chain activity. Their trust and liveness assumptions differ from Lightning and covenant trees.
 - Submarine Swaps: Submarine swaps atomically bridge on-chain and Lightning balances using hashlock and timelock constructions. They enable non-custodial liquidity transitions across layers.
 - The Great Script Restoration: The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.
