@@ -989,6 +989,23 @@
       "conceptsExtracted": 3,
       "conceptsNormalized": 3,
       "notes": "Complete cluster-mempool pass. getmempoolcluster and getmempoolfeeratediagram are implementation surfaces merged into protocol.cluster-mempool; ops.mempool-cluster-limits remains the distinct learner-facing policy concept."
+    },
+    {
+      "id": "source.101-perguntas-bitcoin-1ed",
+      "name": "101 Perguntas e Respostas sobre Bitcoin - 1a edicao",
+      "url": "local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed",
+      "sourceType": "local-book-markdown",
+      "priority": "P0",
+      "scope": "Completed first-edition beginner curriculum covering Bitcoin history, money, custody, protocol mechanics, mining, privacy, scaling, legal context, and contribution paths.",
+      "clusterStrategy": "Inspect all 101 numbered chapter files individually, extract atomic learning outcomes, then deduplicate against existing nodes and separate Bitcoin concepts from opinions, laws, product references, and future-project surveys.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 101,
+      "conceptsExtracted": 12,
+      "conceptsNormalized": 12,
+      "notes": "Complete first-edition pass over all 101 chapter files. Six concepts were added, six candidates were merged or excluded: Satoshi Nakamoto, Bitcoin denominations and satoshis, block subsidy, quantum-computing threats, Ordinals and inscriptions, and proof of existence/timestamping. Stablecoins, altcoins, exchanges, satellites, and named products remain contextual or implementation/product scope. The unfinished second edition was intentionally excluded."
     }
   ],
   "concepts": [
@@ -3916,8 +3933,82 @@
     {"id":"dev.mempool-rest-api","title":"Mempool.space REST API","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space REST API","existingNodeId":"","status":"skip","atomicityRationale":"The REST endpoint surface is an implementation interface, not a Bitcoin concept learners need as a graph node.","candidatePrerequisites":["protocol.mempool"],"chosenPrerequisites":[],"prerequisiteRationale":"No direct learner prerequisite applies to an application API wrapper.","aliases":["mempool REST API"],"tags":["api","mempool","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip under the implementation-surface heuristic."},
     {"id":"dev.mempool-websocket-api","title":"Mempool.space WebSocket API","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space WebSocket and live events","existingNodeId":"","status":"skip","atomicityRationale":"The WebSocket event stream is an application transport interface, not a distinct Bitcoin protocol concept.","candidatePrerequisites":["protocol.mempool"],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for an application transport wrapper.","aliases":["mempool WebSocket API","mempool live events"],"tags":["api","mempool","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip under the implementation-surface heuristic."},
     {"id":"ops.mempool-self-hosting","title":"Self-Hosted Mempool Explorer","category":"Network, Relay & Client Sync","sourceId":"source.mempool-space-docs","sourceUrl":"https://mempool.space/docs","sourceContext":"Mempool.space self-hosting and deployment","existingNodeId":"","status":"skip","atomicityRationale":"Self-hosting this explorer is a deployment workflow built on Bitcoin Core, not a Bitcoin learning concept that should occupy a graph node.","candidatePrerequisites":["ops.run-full-node"],"chosenPrerequisites":[],"prerequisiteRationale":"Running a full node is related operational context but not a direct prerequisite for a skipped product workflow.","aliases":["self-hosted mempool.space","Mempool deployment"],"tags":["operations","self-hosting","tools"],"estimatedTime":"0m","resourceCandidates":[],"confidence":"high","notes":"Skip as product/deployment scope; preserve repository documentation as an optional operator resource outside the concept graph."}
+    ,{"id":"history.satoshi-nakamoto","title":"Satoshi Nakamoto","category":"History & Governance","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20004_quem_criou_o_bitcoin.md","sourceContext":"Question 4: Who created Bitcoin?","existingNodeId":"","status":"new","atomicityRationale":"The creator pseudonym and deliberate disappearance are a distinct historical and governance learning outcome, not merely a duplicate of the whitepaper or early-history container.","candidatePrerequisites":["history.cypherpunk-roots-bitcoin-origin"],"chosenPrerequisites":["history.cypherpunk-roots-bitcoin-origin"],"prerequisiteRationale":"The cypherpunk roots and origin context provide the historical frame for understanding the pseudonym and founder independence.","aliases":["Satoshi","Bitcoin creator"],"tags":["history","origins","pseudonymity"],"estimatedTime":"30m","confidence":"high","notes":"Add as a focused historical node; avoid turning speculation about Satoshi's legal identity into graph content."},
+    {"id":"economics.bitcoin-denominations","title":"Bitcoin Denominations and Satoshis","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20003_qual_a_diferenca_entre_bitcoin_com_b_maiusculo_e_b.md","sourceContext":"Question 3: Bitcoin, BTC, and satoshis","existingNodeId":"","status":"new","atomicityRationale":"BTC and satoshis are a concrete monetary-unit concept that learners need to identify and use, distinct from generic scarcity or money properties.","candidatePrerequisites":["fundamentals.money-properties"],"chosenPrerequisites":["fundamentals.money-properties"],"prerequisiteRationale":"Monetary units are easier to understand after the learner has a basic model of money and its functions.","aliases":["sats","bitcoin units","BTC denominations"],"tags":["money","units","satoshis"],"estimatedTime":"20m","confidence":"high","notes":"Add the denomination concept without creating separate nodes for BTC, bitcoin capitalization, or the protocol/software naming convention."},
+    {"id":"economics.block-subsidy","title":"Block Subsidy","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20018_quantos_bitcoin_sao_produzidos_por_dia.md","sourceContext":"Question 18: How many bitcoin are produced per day?","existingNodeId":"","status":"new","atomicityRationale":"The newly issued portion of miner revenue is a specific issuance mechanism that should not be hidden inside coinbase transactions or the halving schedule.","candidatePrerequisites":["protocol.coinbase-transaction"],"chosenPrerequisites":["protocol.coinbase-transaction"],"prerequisiteRationale":"The coinbase transaction is where the subsidy is claimed; its existing halving prerequisite already supplies the issuance schedule.","aliases":["mining subsidy","block reward subsidy","new bitcoin issuance"],"tags":["issuance","mining","monetary-policy"],"estimatedTime":"30m","confidence":"high","notes":"Add as the issuance component of miner revenue; keep fees as a separate concept."},
+    {"id":"security.quantum-computing-threat","title":"Quantum Computing Threats","category":"Security","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20081_o_que_vai_acontecer_se_quebrarem_a_criptografia_do.md","sourceContext":"Question 81: What happens if Bitcoin cryptography is broken?","existingNodeId":"","status":"new","atomicityRationale":"Quantum attacks create a distinct threat model across public-key signatures and proof-of-work, beyond ordinary private-key guessing or nonce failures.","candidatePrerequisites":["fundamentals.digital-signatures"],"chosenPrerequisites":["fundamentals.digital-signatures"],"prerequisiteRationale":"Digital-signature security is the non-redundant direct prerequisite for the key-spending threat; proof-of-work remains covered in the node description and resources rather than duplicating the current graph path.","aliases":["quantum threat","quantum attacks on Bitcoin","quantum resistance"],"tags":["security","cryptography","post-quantum"],"estimatedTime":"45m","confidence":"high","notes":"Add as a threat-model node; Lamport signatures remain a neighboring post-quantum primitive rather than a substitute for the threat model."},
+    {"id":"extension.ordinals-inscriptions","title":"Ordinals and Inscriptions","category":"Extension Systems","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20078_e_possivel_registrar_coisas_alem_de_transacoes_na_.md","sourceContext":"Question 78: Can things besides transactions be registered on Bitcoin?","existingNodeId":"","status":"new","atomicityRationale":"Ordinal numbering and inscription data form a distinct Bitcoin application pattern with concrete witness, fee, and block-space tradeoffs; it is not just generic OP_RETURN data.","candidatePrerequisites":["protocol.taproot","protocol.witness-structure"],"chosenPrerequisites":["protocol.taproot","protocol.witness-structure"],"prerequisiteRationale":"The book's explanation ties inscriptions to Taproot-era witness data; OP_RETURN is an older adjacent mechanism, not a direct prerequisite.","aliases":["Ordinals","Bitcoin inscriptions","ordinal inscriptions"],"tags":["taproot","witness","applications"],"estimatedTime":"45m","confidence":"high","notes":"Add the learner-facing application concept while keeping individual inscription formats and marketplaces out of the graph."},
+    {"id":"extension.proof-of-existence","title":"Proof of Existence and Timestamping","category":"Extension Systems","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20079_o_que_significa_a_mensagem_do_primeiro_bloco_do_bi.md","sourceContext":"Question 79: What does the Genesis Block message mean?","existingNodeId":"","status":"new","atomicityRationale":"Anchoring evidence to prove that it existed by a given time is a distinct application outcome illustrated by the Genesis Block and OpenTimestamps references.","candidatePrerequisites":["fundamentals.commitment-schemes"],"chosenPrerequisites":["fundamentals.commitment-schemes"],"prerequisiteRationale":"Commitments provide the minimal cryptographic mechanism for timestamping without storing the full document on-chain.","aliases":["proof of existence","Bitcoin timestamping","OpenTimestamps"],"tags":["commitments","timestamping","applications"],"estimatedTime":"35m","confidence":"high","notes":"Add as a generic Bitcoin-anchored application; the Genesis Block remains historical context rather than the node itself."},
+    {"id":"economics.stablecoins","title":"Stablecoins","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20095_o_que_sao_altcoins_e_stablecoins.md","sourceContext":"Question 95: What are altcoins and stablecoins?","existingNodeId":"","status":"skip","atomicityRationale":"Stablecoins are a broad adjacent-asset category with issuer, collateral, and regulatory models that do not form a Bitcoin prerequisite in this graph.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct Bitcoin learning prerequisite is justified for a skipped adjacent-asset survey.","aliases":["stable coins"],"tags":["adjacent-assets","money"],"estimatedTime":"0m","confidence":"high","notes":"Skip as adjacent context; revisit only if the graph gains a deliberate comparative monetary-systems branch."},
+    {"id":"economics.altcoins","title":"Altcoins","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20095_o_que_sao_altcoins_e_stablecoins.md","sourceContext":"Question 95: What are altcoins and stablecoins?","existingNodeId":"","status":"skip","atomicityRationale":"Altcoins are a comparison class rather than one atomic Bitcoin concept; the graph already covers forks, sidechains, and token systems where those distinctions matter.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct graph edge is justified for a skipped comparison category.","aliases":["alternative cryptocurrencies","alternative coins"],"tags":["adjacent-assets","comparisons"],"estimatedTime":"0m","confidence":"high","notes":"Skip as a broad category and retain the chapter as source context for comparative learning."},
+    {"id":"ops.exchange-custody","title":"Exchange Custody","category":"Wallets","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20014_o_que_e_uma_exchange.md","sourceContext":"Question 14: What is an exchange?","existingNodeId":"","status":"skip","atomicityRationale":"An exchange is a product and custody model, not a Bitcoin protocol concept; adding a node would invite rapidly changing provider-specific detail.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped product category.","aliases":["bitcoin exchange","custodial exchange"],"tags":["custody","products"],"estimatedTime":"0m","confidence":"high","notes":"Skip as product scope; self-custody and custody tradeoffs remain the learner-facing concepts."},
+    {"id":"ops.offline-bitcoin-transport","title":"Offline Bitcoin Transport","category":"Network, Relay & Client Sync","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20082_e_se_desligarem_a_internet.md","sourceContext":"Question 82: What if the Internet is shut down?","existingNodeId":"ops.mesh-networks","status":"merge","atomicityRationale":"Satellite, mesh, telephone, and physical-transfer examples all answer the same operational question about alternate communication paths; they do not warrant separate product nodes.","candidatePrerequisites":["fundamentals.peer-to-peer-network"],"chosenPrerequisites":["ops.mesh-networks"],"prerequisiteRationale":"Reuse the existing off-grid mesh-network concept rather than duplicating transport modalities.","aliases":["offline Bitcoin transfer","alternate Bitcoin communications"],"tags":["networking","resilience","operations"],"estimatedTime":"30m","confidence":"high","notes":"Merge source examples into ops.mesh-networks as supporting context; satellites and Opendime remain implementation/product examples."},
+    {"id":"economics.hodling","title":"HODLing","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20071_o_que_e_hodl.md","sourceContext":"Question 71: What is HODL?","existingNodeId":"","status":"skip","atomicityRationale":"HODL is a cultural slogan and investment behavior, not a prerequisite concept needed to understand Bitcoin's mechanics.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped cultural term.","aliases":["hold on for dear life","holding bitcoin"],"tags":["culture","markets"],"estimatedTime":"0m","confidence":"high","notes":"Skip as culture/behavior; volatility and savings concepts remain the relevant learner outcomes."}
   ],
   "edges": [
+    {
+      "from": "history.cypherpunk-roots-bitcoin-origin",
+      "to": "history.satoshi-nakamoto",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Satoshi's pseudonym and founder independence are best understood in the context of Bitcoin's cypherpunk roots and origin story.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "fundamentals.money-properties",
+      "to": "economics.bitcoin-denominations",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The learner needs a basic monetary-unit model before BTC and satoshis are meaningful denominations.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.coinbase-transaction",
+      "to": "economics.block-subsidy",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The block subsidy is the newly issued component claimed by a coinbase transaction.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "The coinbase node already carries the halving prerequisite, so no redundant direct halving edge is added."
+    },
+    {
+      "from": "fundamentals.digital-signatures",
+      "to": "security.quantum-computing-threat",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Quantum attacks on public-key authorization require understanding ordinary Bitcoin signature security first.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.taproot",
+      "to": "extension.ordinals-inscriptions",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "The source explains inscriptions as a Taproot-era witness-data application.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.witness-structure",
+      "to": "extension.ordinals-inscriptions",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Witness structure is needed to understand where inscription data is carried and how it affects block space.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "fundamentals.commitment-schemes",
+      "to": "extension.proof-of-existence",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Timestamp proofs commit evidence without requiring the complete document to be stored on-chain.",
+      "sourceId": "source.101-perguntas-bitcoin-1ed",
+      "notes": "Source-driven bridge edge."
+    },
     {
       "from": "protocol.tagged-hashes",
       "to": "protocol.taptweak",
@@ -6619,6 +6710,86 @@
     },
     {
       "id":"decision.mempool-space-surface-skip","type":"exclusion","subject":"source.mempool-space-docs","status":"resolved","rationale":"The Mempool.space FAQ, REST API, WebSocket stream, and self-hosting material expose observability and deployment surfaces over Bitcoin Core. They do not add a learner-facing Bitcoin protocol concept beyond the already-covered mempool policy/purging branch.","relatedConceptIds":["ops.mempool-purging","ops.mempool-explorer","dev.mempool-rest-api","dev.mempool-websocket-api","ops.mempool-self-hosting"],"relatedSourceIds":["source.mempool-space-docs"],"notes":"Keep these as audit candidates and source references, but do not mint product/API wrapper nodes."
+    },
+    {
+      "id": "decision.101-perguntas-bitcoin-1ed-inventory",
+      "type": "inventory",
+      "subject": "source.101-perguntas-bitcoin-1ed",
+      "status": "resolved",
+      "rationale": "The completed first edition contains 101 numbered Markdown chapters and was reviewed as a full source family. The unfinished second edition was excluded from this pass.",
+      "relatedConceptIds": [],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "All 101 chapter files have a normalized disposition; no claim is made about the incomplete second edition."
+    },
+    {
+      "id": "decision.101-satoshi-nakamoto-slice",
+      "type": "scope",
+      "subject": "history.satoshi-nakamoto",
+      "status": "resolved",
+      "rationale": "The creator pseudonym and disappearance are a distinct historical/governance learning outcome not represented by the generic whitepaper and early-history nodes.",
+      "relatedConceptIds": ["history.satoshi-nakamoto","history.cypherpunk-roots-bitcoin-origin","history.bitcoin-whitepaper"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Keep speculative identity claims out of the node; focus on the pseudonym, launch authorship, and founder independence."
+    },
+    {
+      "id": "decision.101-bitcoin-denominations-slice",
+      "type": "scope",
+      "subject": "economics.bitcoin-denominations",
+      "status": "resolved",
+      "rationale": "BTC and satoshis are concrete units learners must recognize and use; they are not redundant with scarcity or monetary properties.",
+      "relatedConceptIds": ["economics.bitcoin-denominations","fundamentals.money-properties","fundamentals.digital-scarcity"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Do not create separate nodes for capitalization, protocol/software naming, BTC, and satoshi."
+    },
+    {
+      "id": "decision.101-block-subsidy-slice",
+      "type": "scope",
+      "subject": "economics.block-subsidy",
+      "status": "resolved",
+      "rationale": "The newly issued component of miner revenue is a distinct issuance concept even though coinbase transactions and halvings already exist.",
+      "relatedConceptIds": ["economics.block-subsidy","protocol.coinbase-transaction","protocol.halving","economics.miner-revenue-composition"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Keep transaction fees separate from subsidy and avoid a redundant direct edge to halving."
+    },
+    {
+      "id": "decision.101-quantum-threat-slice",
+      "type": "scope",
+      "subject": "security.quantum-computing-threat",
+      "status": "resolved",
+      "rationale": "The quantum threat model spans signature authorization and proof-of-work and is not replaced by adding one post-quantum primitive such as Lamport signatures.",
+      "relatedConceptIds": ["security.quantum-computing-threat","fundamentals.digital-signatures","protocol.proof-of-work","fundamentals.lamport-signatures"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Keep proof-of-work as threat-model context and mitigation primitives as resources or neighboring nodes; do not add a redundant direct proof-of-work edge."
+    },
+    {
+      "id": "decision.101-ordinals-inscriptions-slice",
+      "type": "scope",
+      "subject": "extension.ordinals-inscriptions",
+      "status": "resolved",
+      "rationale": "Ordinals and inscriptions are a distinct Bitcoin application family with a real learner outcome around satoshi numbering, witness data, and block-space tradeoffs.",
+      "relatedConceptIds": ["extension.ordinals-inscriptions","protocol.taproot","protocol.witness-structure","protocol.op-return"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Do not expand individual collections, marketplaces, or inscription formats into separate nodes."
+    },
+    {
+      "id": "decision.101-proof-of-existence-slice",
+      "type": "scope",
+      "subject": "extension.proof-of-existence",
+      "status": "resolved",
+      "rationale": "Bitcoin-anchored timestamping is a reusable application concept illustrated by the Genesis Block and OpenTimestamps, not merely an OP_RETURN implementation detail.",
+      "relatedConceptIds": ["extension.proof-of-existence","fundamentals.commitment-schemes","protocol.op-return","history.genesis-block"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Use commitments and off-chain aggregation as the conceptual center; keep OpenTimestamps as a resource."
+    },
+    {
+      "id": "decision.101-contextual-exclusions",
+      "type": "exclusion",
+      "subject": "source.101-perguntas-bitcoin-1ed",
+      "status": "resolved",
+      "rationale": "Stablecoins, altcoins, exchanges, HODL, and named offline transport products are comparative, cultural, legal, or product context rather than missing Bitcoin graph concepts.",
+      "relatedConceptIds": ["economics.stablecoins","economics.altcoins","ops.exchange-custody","ops.offline-bitcoin-transport","economics.hodling","extension.sidechains","fundamentals.bitcoin-layers"],
+      "relatedSourceIds": ["source.101-perguntas-bitcoin-1ed"],
+      "notes": "Offline transport examples merge into ops.mesh-networks; the other candidates remain source context without learner-facing nodes."
     }
   ]
 }

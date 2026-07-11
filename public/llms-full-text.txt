@@ -55,7 +55,11 @@ Economics (33 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (58 concepts)
+Economics & Incentives (2 concepts)
+- Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
+- Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
+
+Extension Systems (60 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -100,10 +104,12 @@ Extension Systems (58 concepts)
 - LNURL: LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.
 - Nostr: Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.
 - Obscured Commitment Number: Lightning hides each commitment transaction's state number by XORing it with a 48-bit obscure factor derived from both payment basepoints, then splitting the result across nLockTime and nSequence. Channel peers can still recover the right state index, but casual onchain observers cannot read it directly.
+- Ordinals and Inscriptions: Ordinals assign an ordering identity to individual satoshis, while inscriptions attach arbitrary witness data to transactions. Together they create a Bitcoin application pattern for collectibles and other data-bearing artifacts with on-chain fee and block-space tradeoffs.
 - Payment Channels: Off-chain bilateral channels secured by on-chain contracts.
 - Payment Pools: Payment pools coordinate shared UTXOs and internal balance updates to reduce on-chain footprint. They rely on covenant-like constraints to keep exits and rebalances safe.
 - Per-Commitment Secrets: Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.
 - Point Time-Locked Contracts (PTLCs): PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.
+- Proof of Existence and Timestamping: Proof-of-existence protocols commit evidence to Bitcoin so anyone can later verify that a document or statement existed no later than a particular time, without storing the entire document on-chain.
 - Revocation and Penalty Keys: Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.
 - Short Channel IDs: A Short Channel ID compactly identifies a Lightning channel's funding output by encoding its block height, transaction index, and output index. It lets gossip messages refer to the same on-chain channel without repeating the full transaction outpoint.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
@@ -115,7 +121,7 @@ Extension Systems (58 concepts)
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
 
-History & Governance (30 concepts)
+History & Governance (31 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
@@ -140,6 +146,7 @@ History & Governance (30 concepts)
 - Rai Stones: Rai stones from Yap are a classic case of socially recognized monetary ownership where transfer can occur without physically moving the asset. They illustrate that money depends on shared ledgers and social consensus.
 - RBF Policy Evolution: Historical development of replace-by-fee relay policy and its role in modern fee-bumping workflows.
 - Review Culture in Bitcoin Development: Bitcoin development relies on independent, adversarial peer review and incremental discussion to catch correctness, security, and compatibility failures before changes are merged.
+- Satoshi Nakamoto: Satoshi Nakamoto is the pseudonym used by the person or group that designed and launched Bitcoin. The disappearance of that identity is part of Bitcoin's separation from a permanent founder or controlling authority.
 - SegWit Activation: The activation path, signaling dynamics, and coordination history behind SegWit deployment.
 - Selection Cryptography: Selection cryptography is the practice of choosing cryptographic libraries, tools, and practices suitable for Bitcoin software by assessing their review, testing, portability, and dependency risk.
 - Soft Forks vs Hard Forks: Compatibility tradeoffs in protocol upgrades.
@@ -314,7 +321,7 @@ Protocol & Consensus (82 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (59 concepts)
+Security (60 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -358,6 +365,7 @@ Security (59 concepts)
 - Protocol Neutrality: Protocol neutrality means consensus and relay rules should avoid embedding special treatment for particular users or outcomes. Neutral rule design is a core part of Bitcoin’s credible fairness.
 - Pseudonymity (Not Anonymity): Bitcoin is pseudonymous, not anonymous: addresses are public identifiers that can be linked to real identities through behavior, counterparties, and metadata. Privacy requires active operational practices rather than default assumptions.
 - Public/Private Keys: Asymmetric cryptography foundations for ownership proofs.
+- Quantum Computing Threats: Large fault-tolerant quantum computers could weaken Bitcoin's public-key signature assumptions and accelerate proof-of-work search. The threat is distinct from ordinary key guessing and motivates migration planning for quantum-resistant authorization.
 - Reproducible Builds: Reproducible builds let independent parties verify that released binaries match source code. They reduce supply-chain trust assumptions for wallet and node software.
 - Responsible Disclosure: Responsible disclosure coordinates vulnerability reporting and patching to reduce exploit windows. In Bitcoin, disclosure timing and communication quality can have ecosystem-wide impact.
 - Rogue-Key Attack: A rogue-key attack exploits naive public-key aggregation by choosing a related key that cancels another participant's key, making an aggregate signature appear authorized without the intended cooperation. Key aggregation protocols need binding or proof-of-possession defenses.
