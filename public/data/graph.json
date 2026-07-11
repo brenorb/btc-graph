@@ -4370,6 +4370,49 @@
       ]
     },
     {
+      "id": "extension.elements",
+      "title": "Elements Platform",
+      "description": "Elements is an open-source Bitcoin-derived blockchain platform for building sidechains and application-specific networks. It extends Bitcoin-style transactions with features such as confidential transactions, issued assets, and federation-based interoperability.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.sidechains"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Elements Project",
+          "url": "https://elementsproject.org/",
+          "notes": "Project overview and platform capabilities."
+        },
+        {
+          "type": "article",
+          "title": "Elements Repository",
+          "url": "https://github.com/ElementsProject/elements",
+          "notes": "Reference implementation for Elements-based networks."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin-derived chains, transactions, and Script.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "elements",
+        "sidechains",
+        "confidential-transactions",
+        "assets"
+      ],
+      "aliases": [
+        "Elements blockchain platform",
+        "Elements Core"
+      ]
+    },
+    {
       "id": "extension.fedi",
       "title": "Fedi",
       "description": "Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.",
@@ -4447,6 +4490,53 @@
       ],
       "aliases": [
         "gsr"
+      ]
+    },
+    {
+      "id": "extension.liquid",
+      "title": "Liquid Network",
+      "description": "Liquid is a production Bitcoin sidechain built on the Elements platform. It uses a federation and two-way peg for Bitcoin movement, supports confidential transactions and issued assets, and provides faster settlement with Lightning interoperability.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.elements",
+        "protocol.confidential-transactions"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Liquid Developer Documentation",
+          "url": "https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal",
+          "notes": "Official documentation for Liquid architecture, applications, and development."
+        },
+        {
+          "type": "article",
+          "title": "How Liquid Works",
+          "url": "https://docs.liquid.net/docs/how-liquid-works",
+          "notes": "Explains Liquid's Elements-based node, federation, transactions, and network flow."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for sidechains, Bitcoin transactions, and layer architecture.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "liquid",
+        "sidechains",
+        "elements",
+        "assets",
+        "confidential-transactions",
+        "lightning"
+      ],
+      "aliases": [
+        "Liquid Network",
+        "Liquid sidechain",
+        "L-BTC"
       ]
     },
     {
@@ -4649,6 +4739,50 @@
         "proof of existence",
         "Bitcoin timestamping",
         "OpenTimestamps"
+      ]
+    },
+    {
+      "id": "extension.rgb",
+      "title": "RGB Protocol",
+      "description": "RGB is a client-side-validated smart-contract protocol for Bitcoin and Lightning. It keeps contract state and validation data off-chain, anchors commitments to Bitcoin transaction outputs, and lets participants validate the asset history they receive without requiring Bitcoin consensus changes.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.client-side-validation"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "RGB Documentation",
+          "url": "https://rgb.tech/docs/",
+          "notes": "Official documentation for RGB concepts, standards, contracts, and integration."
+        },
+        {
+          "type": "article",
+          "title": "RGB Protocol Repository",
+          "url": "https://github.com/RGB-WG/rgb",
+          "notes": "Reference implementation and wallet/runtime integration code."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin transactions, commitments, UTXOs, and application-layer protocols.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "rgb",
+        "client-side-validation",
+        "smart-contracts",
+        "assets",
+        "lightning"
+      ],
+      "aliases": [
+        "RGB smart contracts",
+        "RGB protocol"
       ]
     },
     {
@@ -12809,6 +12943,51 @@
       "aliases": [
         "compact blocks",
         "bip152"
+      ]
+    },
+    {
+      "id": "protocol.confidential-transactions",
+      "title": "Confidential Transactions",
+      "description": "Confidential Transactions hide transaction amounts and selected asset information while preserving verifiability through cryptographic commitments and range proofs. Elements and Liquid use this model as a core privacy and asset-transfer feature.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.commitment-schemes"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Liquid Technical Overview",
+          "url": "https://docs.liquid.net/docs/technical-overview",
+          "notes": "Official overview of Liquid's confidential transactions and issued-asset model."
+        },
+        {
+          "type": "article",
+          "title": "Elements Repository",
+          "url": "https://github.com/ElementsProject/elements",
+          "notes": "Open-source platform implementation and technical documentation."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for cryptographic commitments, transaction validation, and Bitcoin's UTXO model.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "privacy",
+        "commitments",
+        "range-proofs",
+        "liquid",
+        "elements"
+      ],
+      "aliases": [
+        "Confidential Transactions",
+        "confidential assets",
+        "CT"
       ]
     },
     {

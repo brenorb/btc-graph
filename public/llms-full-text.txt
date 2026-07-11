@@ -59,7 +59,7 @@ Economics & Incentives (2 concepts)
 - Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
 - Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 
-Extension Systems (64 concepts)
+Extension Systems (67 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -78,6 +78,7 @@ Extension Systems (64 concepts)
 - Cube: Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.
 - Discreet Log Contracts (DLCs): DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
+- Elements Platform: Elements is an open-source Bitcoin-derived blockchain platform for building sidechains and application-specific networks. It extends Bitcoin-style transactions with features such as confidential transactions, issued assets, and federation-based interoperability.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
 - Fedi: Fedi packages federated Bitcoin-backed ecash into a user-facing app with community and recovery workflows. It inherits ecash mint trust assumptions while making shared custody models easier to use.
 - HTLC Output Scripts: Lightning HTLC output scripts define the exact witness conditions for claiming or timing out offered and received HTLCs inside commitment transactions. They add preimage and timeout branches on top of the broader commitment-script structure, which is why they sit between generic HTLC concepts and later settlement handling.
@@ -101,6 +102,7 @@ Extension Systems (64 concepts)
 - Lightning Route Blinding: A privacy technique where receivers hide destination topology by providing blinded route hints.
 - Lightning Routing: Path finding, forwarding, and reliability constraints.
 - Lightning Trampoline Routing: A routing mode where lightweight wallets delegate part of pathfinding to trampoline nodes.
+- Liquid Network: Liquid is a production Bitcoin sidechain built on the Elements platform. It uses a federation and two-way peg for Bitcoin movement, supports confidential transactions and issued assets, and provides faster settlement with Lightning interoperability.
 - Liquidity Management: Inbound/outbound capacity and channel balance operations.
 - LNURL: LNURL is a family of Lightning interaction conventions layered on top of URLs and metadata endpoints. It improves UX but introduces interoperability and trust-surface tradeoffs.
 - Nostr: Nostr is an open protocol for relayed social communication using public-key identities. It is relevant to Bitcoin culture because it extends censorship-resistant coordination beyond payments.
@@ -112,6 +114,7 @@ Extension Systems (64 concepts)
 - Point Time-Locked Contracts (PTLCs): PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.
 - Proof of Existence and Timestamping: Proof-of-existence protocols commit evidence to Bitcoin so anyone can later verify that a document or statement existed no later than a particular time, without storing the entire document on-chain.
 - Revocation and Penalty Keys: Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.
+- RGB Protocol: RGB is a client-side-validated smart-contract protocol for Bitcoin and Lightning. It keeps contract state and validation data off-chain, anchors commitments to Bitcoin transaction outputs, and lets participants validate the asset history they receive without requiring Bitcoin consensus changes.
 - Short Channel IDs: A Short Channel ID compactly identifies a Lightning channel's funding output by encoding its block height, transaction index, and output index. It lets gossip messages refer to the same on-chain channel without repeating the full transaction outpoint.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
 - Single-Use Seals: A single-use seal binds an offchain state transition to a UTXO that can be spent only once. Spending the outpoint closes the old seal and prevents the same state transition from being valid twice.
@@ -241,7 +244,7 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (82 concepts)
+Protocol & Consensus (83 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -259,6 +262,7 @@ Protocol & Consensus (82 concepts)
 - CHECKSEQUENCEVERIFY (BIP 112): Script opcode that enforces relative locktime conditions using sequence-based spending constraints.
 - Coinbase Transaction: Special first transaction in each block that collects subsidy and transaction fees.
 - Commit-Delay-Reveal Protocol: A commit-delay-reveal protocol commits to a value, waits through a delay, and reveals it later so participants cannot adapt their choice after seeing other commitments. The pattern composes cryptographic commitments with timing and coordination rules.
+- Confidential Transactions: Confidential Transactions hide transaction amounts and selected asset information while preserving verifiability through cryptographic commitments and range proofs. Elements and Liquid use this model as a core privacy and asset-transfer feature.
 - Consensus Rules: Validation rules that define Bitcoin’s canonical state.
 - CPFP Carve-Out Policy: CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.
 - Cross-Input Signature Aggregation (CISA): CISA aggregates signatures across multiple inputs to reduce weight and improve coordination efficiency. It introduces new accounting and policy considerations for batch spenders.

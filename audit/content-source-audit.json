@@ -1040,6 +1040,40 @@
       "conceptsExtracted": 11,
       "conceptsNormalized": 3,
       "notes": "Added Cube, Timeout Trees, and ZKTLCs. Shadowing, Shadow Space, Projector, Hosted/Black Box Projection, Lifting, exit-ladder internals, and APE/bit-level encoding remain inside Cube or source context because they are implementation-specific mechanisms rather than independent Bitcoin learning prerequisites."
+    },
+    {
+      "id": "source.rgb-protocol",
+      "name": "RGB Protocol Documentation and Repository",
+      "url": "https://rgb.tech/docs/",
+      "sourceType": "protocol-documentation-repository",
+      "priority": "P1",
+      "scope": "RGB client-side-validated smart contracts for Bitcoin and Lightning, including commitments, contract state, asset history, and integration surfaces.",
+      "clusterStrategy": "Track the official RGB documentation, blueprint, standards index, and reference repository as one protocol cluster. Separate the RGB protocol outcome from already-covered client-side validation, single-use seals, and implementation APIs.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 4,
+      "conceptsExtracted": 6,
+      "conceptsNormalized": 1,
+      "notes": "Added RGB as the protocol-level concept. Client-side validation, single-use seals, pay-to-contract, consignments, and library/API details remain prerequisites or implementation context rather than duplicate nodes."
+    },
+    {
+      "id": "source.liquid-elements",
+      "name": "Liquid Network and Elements Documentation",
+      "url": "https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal",
+      "sourceType": "protocol-documentation-cluster",
+      "priority": "P1",
+      "scope": "Elements as a Bitcoin-derived sidechain platform and Liquid as its production federated network, including confidential transactions, issued assets, two-way peg flows, and Lightning interoperability.",
+      "clusterStrategy": "Track official Liquid documentation, Liquid technical/how-it-works pages, Elements project documentation, and the reference repository as one cluster. Keep the platform, production network, and reusable confidential-transaction primitive distinct; keep RPCs, wallet products, and individual assets inside resources.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 7,
+      "conceptsExtracted": 8,
+      "conceptsNormalized": 4,
+      "notes": "Added Elements, Liquid Network, and Confidential Transactions. Generic sidechains remains the direct context for Elements; Liquid-specific peg, federation, L-BTC, and issued-asset workflows remain inside the protocol node."
     }
   ],
   "concepts": [
@@ -3985,9 +4019,62 @@
     {"id":"extension.zktlcs","title":"Zero-Knowledge Time-Locked Contracts","category":"Extension Systems","sourceId":"source.cube-introducing","sourceUrl":"https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","sourceContext":"ZKTLCs section and virtualized computation ownership architecture","existingNodeId":"","status":"new","atomicityRationale":"ZKTLCs compose timeout-tree ownership virtualization with BitVM-style disprovable computation and unilateral timeout exits; the composition has a distinct learning outcome.","candidatePrerequisites":["extension.timeout-trees","extension.bitvm"],"chosenPrerequisites":["extension.timeout-trees","extension.bitvm"],"prerequisiteRationale":"The two components are the explicit architectural halves of the primitive: delayed ownership redemption and challengeable computation.","aliases":["ZKTLCs","ZK time-locked contracts","zero-knowledge time-locked contracts"],"tags":["bitcoin-l2","bitvm","contracts","zk"],"estimatedTime":"75m","confidence":"high","resourceCandidates":["https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","https://bitvm.org/","https://amzn.to/4ro0NdG"],"notes":"Treat as a named composition, not as a duplicate of generic zero-knowledge proofs or BitVM."
     },
     {"id":"extension.cube","title":"Cube","category":"Extension Systems","sourceId":"source.cube-introducing","sourceUrl":"https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","sourceContext":"Cube, CubeVM, and trustless Bitcoin-native Layer 2 architecture","existingNodeId":"","status":"new","atomicityRationale":"Cube is a concrete Bitcoin-native Layer 2 and virtual machine with a distinct trust, execution, and unilateral-exit model; it is not interchangeable with generic BitVM, Ark, or smart-contract concepts.","candidatePrerequisites":["extension.zktlcs"],"chosenPrerequisites":["extension.zktlcs"],"prerequisiteRationale":"ZKTLCs are the central execution-and-ownership primitive described by the article; CubeVM and data-availability details are downstream architecture.","aliases":["Cube Bitcoin","CubeVM"],"tags":["bitcoin-l2","smart-contracts","virtual-machine","self-custody"],"estimatedTime":"90m","confidence":"high","resourceCandidates":["https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","https://amzn.to/4ro0NdG"],"notes":"Keep Shadowing, Projector, lifting, exit-ladder internals, and DA encoding as Cube mechanisms and resources rather than separate nodes."
+    },
+    {"id":"extension.rgb","title":"RGB Protocol","category":"Extension Systems","sourceId":"source.rgb-protocol","sourceUrl":"https://rgb.tech/docs/","sourceContext":"Official RGB documentation, blueprint, standards, and reference repository","existingNodeId":"","status":"new","atomicityRationale":"RGB is a concrete client-side-validated smart-contract protocol for Bitcoin and Lightning with its own contract-state, asset-history, and commitment model; it is not merely an alias for client-side validation or token basics.","candidatePrerequisites":["extension.client-side-validation"],"chosenPrerequisites":["extension.client-side-validation"],"prerequisiteRationale":"Client-side validation supplies the core model of participant-validated off-chain state; single-use seals and pay-to-contract are already inherited through that node's prerequisite path.","aliases":["RGB smart contracts","RGB protocol"],"tags":["rgb","client-side-validation","smart-contracts","assets","lightning"],"estimatedTime":"75m","confidence":"high","resourceCandidates":["https://rgb.tech/docs/","https://github.com/RGB-WG/rgb","https://amzn.to/4ro0NdG"],"notes":"Add RGB as a protocol-level node; consignments, schemas, RGB20/RGB21 interfaces, and library APIs remain internal protocol details or resources."
+    },
+    {"id":"protocol.confidential-transactions","title":"Confidential Transactions","category":"Protocol & Consensus","sourceId":"source.liquid-elements","sourceUrl":"https://docs.liquid.net/docs/technical-overview","sourceContext":"Liquid technical overview and Elements confidential-transaction model","existingNodeId":"","status":"new","atomicityRationale":"Confidential Transactions are a reusable cryptographic transaction model that hides amounts and selected asset information while preserving validation; they are a distinct learner outcome from generic privacy, commitments, or Liquid itself.","candidatePrerequisites":["fundamentals.commitment-schemes"],"chosenPrerequisites":["fundamentals.commitment-schemes"],"prerequisiteRationale":"Commitments provide the core hiding-and-binding model needed before confidential amounts and proof-based validation make sense.","aliases":["confidential transactions","confidential assets","CT"],"tags":["privacy","commitments","range-proofs","liquid","elements"],"estimatedTime":"60m","confidence":"high","resourceCandidates":["https://docs.liquid.net/docs/technical-overview","https://github.com/ElementsProject/elements","https://amzn.to/4ro0NdG"],"notes":"Add as the reusable primitive behind Liquid and Elements; range proofs and asset blinding remain supporting mechanisms rather than separate nodes."
+    },
+    {"id":"extension.elements","title":"Elements Platform","category":"Extension Systems","sourceId":"source.liquid-elements","sourceUrl":"https://elementsproject.org/","sourceContext":"Elements platform overview, documentation, and reference repository","existingNodeId":"","status":"new","atomicityRationale":"Elements is a concrete Bitcoin-derived platform for building sidechains and application-specific networks, distinct from the generic sidechain design space and from Liquid's production network instance.","candidatePrerequisites":["extension.sidechains"],"chosenPrerequisites":["extension.sidechains"],"prerequisiteRationale":"Sidechains provide the architecture and security-model context needed to understand what Elements extends and deploys.","aliases":["Elements blockchain platform","Elements Core"],"tags":["elements","sidechains","confidential-transactions","assets"],"estimatedTime":"60m","confidence":"high","resourceCandidates":["https://elementsproject.org/","https://github.com/ElementsProject/elements","https://amzn.to/4ro0NdG"],"notes":"Keep Elements RPCs, opcodes, and local regtest workflows as implementation resources rather than standalone nodes."
+    },
+    {"id":"extension.liquid","title":"Liquid Network","category":"Extension Systems","sourceId":"source.liquid-elements","sourceUrl":"https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal","sourceContext":"Liquid developer portal and How Liquid Works","existingNodeId":"","status":"new","atomicityRationale":"Liquid is a production federated Bitcoin sidechain with a distinct peg, settlement, privacy, and asset-issuance model; it is not interchangeable with generic sidechains or the Elements platform.","candidatePrerequisites":["extension.elements","protocol.confidential-transactions"],"chosenPrerequisites":["extension.elements","protocol.confidential-transactions"],"prerequisiteRationale":"Elements explains the implementation platform, while Confidential Transactions explains Liquid's defining privacy and asset-transfer primitive.","aliases":["Liquid Network","Liquid sidechain","L-BTC"],"tags":["liquid","sidechains","elements","assets","confidential-transactions","lightning"],"estimatedTime":"75m","confidence":"high","resourceCandidates":["https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal","https://docs.liquid.net/docs/how-liquid-works","https://amzn.to/4ro0NdG"],"notes":"Keep peg-in/peg-out, federation operations, L-BTC, and individual issued assets inside the Liquid protocol node."
     }
   ],
   "edges": [
+    {
+      "from": "extension.client-side-validation",
+      "to": "extension.rgb",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "RGB builds its contract and asset model on client-side validation of off-chain state anchored to Bitcoin outputs.",
+      "sourceId": "source.rgb-protocol",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "fundamentals.commitment-schemes",
+      "to": "protocol.confidential-transactions",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Confidential Transactions use cryptographic commitments to hide values while preserving verifiability.",
+      "sourceId": "source.liquid-elements",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "extension.sidechains",
+      "to": "extension.elements",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Elements is a concrete platform for constructing Bitcoin-derived sidechains and application-specific networks.",
+      "sourceId": "source.liquid-elements",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "extension.elements",
+      "to": "extension.liquid",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Liquid is a production network built on the Elements platform, with its own federation, peg, and asset policies.",
+      "sourceId": "source.liquid-elements",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "protocol.confidential-transactions",
+      "to": "extension.liquid",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Liquid's privacy and issued-asset behavior depends on Confidential Transactions as a core transaction primitive.",
+      "sourceId": "source.liquid-elements",
+      "notes": "Source-driven bridge edge."
+    },
     {
       "from": "protocol.timelocks",
       "to": "extension.timeout-trees",
@@ -6897,6 +6984,16 @@
       "relatedConceptIds": ["extension.cube","extension.timeout-trees","extension.zktlcs","extension.bitvm","protocol.timelocks"],
       "relatedSourceIds": ["source.cube-introducing"],
       "notes": "Add Cube, Timeout Trees, and ZKTLCs. Keep Shadowing, Shadow Space, Projector, Hosted/Black Box Projection, Lifting, exit-ladder internals, and APE/bit-level encoding inside Cube/source context."
+    },
+    {
+      "id": "decision.rgb-liquid-elements-scope",
+      "type": "scope",
+      "subject": "source.rgb-protocol",
+      "status": "resolved",
+      "rationale": "RGB and Liquid/Elements are protocol families with distinct architecture and learner outcomes, while several named mechanisms are already represented or are implementation details.",
+      "relatedConceptIds": ["extension.rgb","extension.client-side-validation","extension.elements","extension.liquid","protocol.confidential-transactions","extension.sidechains"],
+      "relatedSourceIds": ["source.rgb-protocol","source.liquid-elements"],
+      "notes": "Add RGB, Elements, Liquid, and Confidential Transactions. Keep RGB consignments/schemas/APIs and Liquid peg, federation, L-BTC, and individual assets inside the protocol nodes and resources."
     }
   ]
 }
