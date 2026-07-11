@@ -805,6 +805,51 @@
       ]
     },
     {
+      "id": "custody.proof-of-reserves",
+      "title": "Proof of Reserves",
+      "description": "Proof of Reserves lets a custodian demonstrate control of a stated set or amount of Bitcoin at a point in time using a verifiable signed construction. It can provide evidence of asset control, but does not by itself prove liabilities, solvency, or that funds will remain available.",
+      "category": "Wallets",
+      "prerequisites": [
+        "custody.psbt",
+        "protocol.generic-signed-messages"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "BIP 127: Simple Proof-of-Reserves Transactions",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0127.mediawiki",
+          "notes": "Canonical specification for a standardized proof format and its PSBT extension. It documents privacy and scope limitations."
+        },
+        {
+          "type": "article",
+          "title": "Provisions: Privacy-Preserving Proofs of Solvency for Bitcoin Exchanges",
+          "url": "https://eprint.iacr.org/2015/1008",
+          "notes": "Research context for proving solvency with stronger privacy properties than simple control-of-funds proofs."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background on Bitcoin transactions, signatures, UTXOs, and wallet control that supports understanding reserve proofs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "custody",
+        "solvency",
+        "psbt",
+        "signatures"
+      ],
+      "aliases": [
+        "proof of reserves",
+        "proof-of-reserves transactions",
+        "PoR"
+      ]
+    },
+    {
       "id": "custody.psbt",
       "title": "PSBT Workflow",
       "description": "Partially signed transaction flow for safer collaborative signing.",

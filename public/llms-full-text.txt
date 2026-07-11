@@ -400,7 +400,7 @@ Security (60 concepts)
 - zk-SNARKs: zk-SNARKs are succinct non-interactive zero-knowledge proofs that usually optimize for very small proofs and fast verification. They are useful to understand when evaluating privacy systems, proof aggregation, and trusted-setup tradeoffs.
 - zk-STARKs: zk-STARKs are transparent zero-knowledge proofs that avoid trusted setup and lean on hash-based commitments. They matter when comparing proof systems for scalability, auditability, and post-quantum assumptions.
 
-Wallets (45 concepts)
+Wallets (46 concepts)
 - Address Types: Legacy, SegWit, and modern output encoding differences.
 - Air-Gapped Signing: Signing workflow that keeps private keys on an offline device while moving unsigned and signed payloads between systems.
 - Backups and Recovery: Recovery drills, inheritance planning, and backup hygiene.
@@ -430,6 +430,7 @@ Wallets (45 concepts)
 - MuSig2 Descriptor Workflows: How MuSig2 key-aggregation workflows integrate with descriptor-based wallet and signing policies.
 - Output Descriptors: Descriptor expressions that describe script templates, key origins, and wallet scanning behavior.
 - Progressive Security: Progressive security is a wallet design approach that starts with low-friction key management for smaller amounts and guides users toward stronger schemes as value, experience, or threat exposure grows. It treats hardware signing and multi-key setups as staged upgrades instead of one fixed wallet architecture from day one.
+- Proof of Reserves: Proof of Reserves lets a custodian demonstrate control of a stated set or amount of Bitcoin at a point in time using a verifiable signed construction. It can provide evidence of asset control, but does not by itself prove liabilities, solvency, or that funds will remain available.
 - PSBT v2: The v2 evolution of PSBT that improves transaction construction semantics and interoperability.
 - PSBT Workflow: Partially signed transaction flow for safer collaborative signing.
 - scantxoutset RPC: RPC-based scanning of chainstate UTXOs for descriptor matches without full wallet import.

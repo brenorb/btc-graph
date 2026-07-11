@@ -1227,6 +1227,23 @@
       "conceptsExtracted": 40,
       "conceptsNormalized": 0,
       "notes": "The index is primarily a curated resource hub. LNURL is already represented by extension.lnurl, and Lightning Address is covered by custody.human-readable-addresses alongside BIP 353 and other readable payment handles. Existing graph coverage includes BOLTs, payment channels, routing, onion routing, invoices, BOLT 12, liquidity, swaps, watchtowers, channel jamming, PTLCs, Eltoo, channel factories, and Lightning-related extensions. WebLN, LDK, Core Lightning, Eclair, LND, Rust Lightning, LSPs, Lightning Loop/Pool, wallets, node managers, explorers, merchant tools, and named applications remain resources or implementation surfaces; no additional atomic learner-facing node was justified by this index alone."
+    },
+    {
+      "id": "source.bitcoin-bips",
+      "name": "Bitcoin Improvement Proposals",
+      "url": "https://github.com/bitcoin/bips",
+      "sourceType": "standards-catalog",
+      "priority": "P0",
+      "scope": "Official catalog of Bitcoin Improvement Proposals covering process, consensus, applications, wallet formats, peer services, mining, transaction relay, cryptography, and protocol extensions.",
+      "clusterStrategy": "Review the catalog by learner-facing capability and implementation surface, not by BIP number. Deduplicate BIPs that specify mechanisms already represented by broader nodes, preserve proposal status as source metadata, and add only specifications with an independent learning outcome that is not already captured elsewhere in the graph.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 12,
+      "conceptsExtracted": 96,
+      "conceptsNormalized": 1,
+      "notes": "Added Proof of Reserves from BIP 127. BIP 322 is covered by Generic Signed Message Format; BIP 327 by MuSig; BIP 379 by Miniscript; BIPs 380-390 by descriptors and descriptor wallet policies; BIPs 340-342 by Schnorr, Taproot, and Tapscript; BIPs 350, 352, 353, 370, 371, 388, 433, and 443 are already represented. BIP 434 feature negotiation, BIP 331 ancestor package relay, and individual wallet/export/PSBT field variants remain implementation surfaces or existing broader nodes. Closed, draft, historical, and proposal-process BIPs remain source context rather than automatic learner nodes."
     }
   ],
   "concepts": [
@@ -4187,10 +4204,13 @@
     {"id":"extension.cross-chain-bridges","title":"Cross-Chain Bridges","category":"Extension Systems","sourceId":"source.lopp-bitcoin-other-layers","sourceUrl":"https://www.lopp.net/bitcoin-information/other-layers.html","sourceContext":"Cross-Chain Bridges section and Interlay/Threshold/Wrapped Bitcoin resources","existingNodeId":"","status":"new","atomicityRationale":"Cross-chain bridges have a distinct security outcome around representing or moving assets across independent consensus systems; their trust assumptions are not captured by generic sidechains alone.","candidatePrerequisites":["extension.sidechains"],"chosenPrerequisites":["extension.sidechains"],"prerequisiteRationale":"Sidechains provides the minimal model for anchored secondary systems; bridge mechanism variants remain inside the node.","aliases":["Bitcoin bridges","cross-chain bridge security"],"tags":["bridges","cross-chain","sidechains","custody"],"estimatedTime":"55m","confidence":"high","resourceCandidates":["https://www.interlay.io/","https://www.lopp.net/bitcoin-information/other-layers.html","https://amzn.to/4ro0NdG"],"notes":"Keep custodial, federated, light-client, and cryptographic bridge variants as comparative mechanisms rather than separate nodes."},
     {"id":"protocol.generalized-covenants","title":"Generalized Covenants","category":"Protocol & Consensus","sourceId":"source.bitcoin-covenants","sourceUrl":"https://bitcoincovenants.com/","sourceContext":"Covenant taxonomy and generalized-versus-restricted discussion","existingNodeId":"","status":"new","atomicityRationale":"Generalized covenants describe a distinct design space for broad future-transaction constraints, unlike narrowly scoped proposals such as CTV or vault-specific constructions.","candidatePrerequisites":["protocol.covenants"],"chosenPrerequisites":["protocol.covenants"],"prerequisiteRationale":"The learner needs the generic covenant model before comparing generalized and restricted expressiveness.","aliases":["generalized covenant","general covenants"],"tags":["covenants","script","transaction-introspection","protocol-design"],"estimatedTime":"35m","confidence":"high","resourceCandidates":["https://bitcoincovenants.com/","https://bitcoinops.org/en/topics/covenants/","https://amzn.to/4b5xUhC"],"notes":"Add as a taxonomy concept; individual opcode proposals remain separate nodes or resources."},
     {"id":"protocol.recursive-covenants","title":"Recursive Covenants","category":"Protocol & Consensus","sourceId":"source.bitcoin-covenants","sourceUrl":"https://bitcoincovenants.com/","sourceContext":"Definition of recursive covenants and repeated output constraints","existingNodeId":"","status":"new","atomicityRationale":"Recursive covenants preserve or reproduce spending constraints across successive outputs, creating a distinct learning outcome around repeated enforcement, escape paths, and liveness tradeoffs.","candidatePrerequisites":["protocol.covenants"],"chosenPrerequisites":["protocol.covenants"],"prerequisiteRationale":"The generic covenant model is required before recursion across transaction generations can be understood.","aliases":["recursive covenant","covenant recursion"],"tags":["covenants","recursive","script","transaction-introspection"],"estimatedTime":"35m","confidence":"high","resourceCandidates":["https://bitcoincovenants.com/","https://bitcoinops.org/en/topics/covenants/","https://amzn.to/4b5xUhC"],"notes":"Add as a reusable covenant property; application-specific recursive constructions remain resources."},
-    {"id":"protocol.op-checkcontractverify","title":"OP_CHECKCONTRACTVERIFY (BIP 443)","category":"Protocol & Consensus","sourceId":"source.spark-covenant-proposals-compared","sourceUrl":"https://www.spark.money/tools/bitcoin-covenant-proposals-compared","sourceContext":"OP_CHECKCONTRACTVERIFY section and comparison with OP_VAULT","existingNodeId":"","status":"new","atomicityRationale":"BIP 443 is a distinct covenant proposal for state-carrying outputs and generalized vault-like policies; it is not merely an alias for OP_VAULT or generic covenants.","candidatePrerequisites":["protocol.covenants"],"chosenPrerequisites":["protocol.covenants"],"prerequisiteRationale":"The generic covenant model is the minimum context needed to understand what BIP 443 constrains and generalizes.","aliases":["OP_CHECKCONTRACTVERIFY","BIP 443","OP_CCV"],"tags":["covenants","vaults","script","protocol-proposals"],"estimatedTime":"45m","confidence":"high","resourceCandidates":["https://www.spark.money/tools/bitcoin-covenant-proposals-compared","https://bips.dev/443/","https://amzn.to/4b5xUhC"],"notes":"Add the proposal as a stable learner-facing design; keep LNHANCE and BIP 446/448 as comparison context rather than separate nodes."
+    {"id":"protocol.op-checkcontractverify","title":"OP_CHECKCONTRACTVERIFY (BIP 443)","category":"Protocol & Consensus","sourceId":"source.spark-covenant-proposals-compared","sourceUrl":"https://www.spark.money/tools/bitcoin-covenant-proposals-compared","sourceContext":"OP_CHECKCONTRACTVERIFY section and comparison with OP_VAULT","existingNodeId":"","status":"new","atomicityRationale":"BIP 443 is a distinct covenant proposal for state-carrying outputs and generalized vault-like policies; it is not merely an alias for OP_VAULT or generic covenants.","candidatePrerequisites":["protocol.covenants"],"chosenPrerequisites":["protocol.covenants"],"prerequisiteRationale":"The generic covenant model is the minimum context needed to understand what BIP 443 constrains and generalizes.","aliases":["OP_CHECKCONTRACTVERIFY","BIP 443","OP_CCV"],"tags":["covenants","vaults","script","protocol-proposals"],"estimatedTime":"45m","confidence":"high","resourceCandidates":["https://www.spark.money/tools/bitcoin-covenant-proposals-compared","https://bips.dev/443/","https://amzn.to/4b5xUhC"],"notes":"Add the proposal as a stable learner-facing design; keep LNHANCE and BIP 446/448 as comparison context rather than separate nodes."},
+    {"id":"custody.proof-of-reserves","title":"Proof of Reserves","category":"Wallets","sourceId":"source.bitcoin-bips","sourceUrl":"https://github.com/bitcoin/bips","sourceContext":"BIP 127: Simple Proof-of-Reserves Transactions","existingNodeId":"","status":"new","atomicityRationale":"Proof of Reserves is a distinct custody and verification concept: it demonstrates control of stated Bitcoin funds at a point in time, while requiring learners to distinguish asset control from liabilities, solvency, and future availability.","candidatePrerequisites":["custody.psbt","protocol.generic-signed-messages"],"chosenPrerequisites":["custody.psbt","protocol.generic-signed-messages"],"prerequisiteRationale":"The learner needs PSBT signing workflows and script-aware signature verification to understand how standardized reserve proofs are constructed and checked.","aliases":["proof of reserves","proof-of-reserves transactions","PoR"],"tags":["custody","solvency","psbt","signatures"],"estimatedTime":"45m","confidence":"high","resourceCandidates":["https://github.com/bitcoin/bips/blob/master/bip-0127.mediawiki","https://eprint.iacr.org/2015/1008","https://amzn.to/4ro0NdG"],"notes":"BIP 127 formalizes a simple proof format and PSBT extension. It explicitly does not establish liabilities or privacy-preserving solvency; those remain important caveats for the node."
     }
   ],
   "edges": [
+    {"from":"custody.psbt","to":"custody.proof-of-reserves","type":"prerequisite","status":"proposed","rationale":"BIP 127 uses a standardized PSBT extension to construct and sign reserve proofs safely.","sourceId":"source.bitcoin-bips","notes":"Source-driven bridge edge."},
+    {"from":"protocol.generic-signed-messages","to":"custody.proof-of-reserves","type":"prerequisite","status":"proposed","rationale":"Reserve proofs rely on signatures that commit to a message and the controlled funds being attested.","sourceId":"source.bitcoin-bips","notes":"Source-driven bridge edge."},
     {"from":"protocol.covenants","to":"protocol.op-checkcontractverify","type":"prerequisite","status":"proposed","rationale":"OP_CHECKCONTRACTVERIFY is a proposed covenant opcode and requires the general covenant model as context.","sourceId":"source.spark-covenant-proposals-compared","notes":"Source-driven bridge edge."},
     {"from":"protocol.covenants","to":"protocol.generalized-covenants","type":"prerequisite","status":"proposed","rationale":"Generalized covenants are a broader expressiveness category within the covenant design space.","sourceId":"source.bitcoin-covenants","notes":"Source-driven bridge edge."},
     {"from":"protocol.covenants","to":"protocol.recursive-covenants","type":"prerequisite","status":"proposed","rationale":"Recursive covenants are a property of covenant constraints that persist across successive outputs.","sourceId":"source.bitcoin-covenants","notes":"Source-driven bridge edge."},
@@ -7259,6 +7279,31 @@
         "source.lopp-lightning-information"
       ],
       "notes": "No new node was added. LNURL and Lightning Address are already represented. Keep WebLN, LDK, node implementations, LSPs, Lightning Loop/Pool, wallets, dashboards, explorers, merchant tools, and named applications as resources or implementation context unless a future source establishes a distinct conceptual learning outcome."
+    },
+    {
+      "id": "decision.bitcoin-bips-slice",
+      "type": "scope",
+      "subject": "custody.proof-of-reserves",
+      "status": "resolved",
+      "rationale": "The BIPs repository is a standards catalog containing deployed mechanisms, implementation formats, historical proposals, process documents, and many narrow variants. Importing every BIP would create duplicate and implementation-shaped nodes, so the review adds only a concept with a distinct custody and verification learning outcome.",
+      "relatedConceptIds": [
+        "custody.proof-of-reserves",
+        "custody.psbt",
+        "protocol.generic-signed-messages",
+        "protocol.musig",
+        "dev.miniscript",
+        "dev.descriptors",
+        "dev.descriptor-wallet-policies",
+        "protocol.taproot",
+        "protocol.tapscript",
+        "privacy.silent-payments",
+        "protocol.pay-to-anchor",
+        "protocol.op-checkcontractverify"
+      ],
+      "relatedSourceIds": [
+        "source.bitcoin-bips"
+      ],
+      "notes": "Add Proof of Reserves from BIP 127. Keep BIP 322, MuSig2, Miniscript, descriptor families, Taproot, Silent Payments, P2A, PSBT variants, peer feature negotiation, package relay, and proposal-only mechanisms attached to their existing broader nodes or source resources."
     }
   ]
 }
