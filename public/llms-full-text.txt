@@ -55,7 +55,7 @@ Economics (33 concepts)
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
 
-Extension Systems (57 concepts)
+Extension Systems (58 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -105,6 +105,7 @@ Extension Systems (57 concepts)
 - Per-Commitment Secrets: Lightning derives a fresh per-commitment secret for each new channel state and turns it into per-commitment points and commitment keys. This secret chain enables state-specific revocation and keeps old and new commitment transactions cryptographically distinct.
 - Point Time-Locked Contracts (PTLCs): PTLCs replace hashlocks with point-based conditions to improve privacy and composability. They pair naturally with adaptor signatures and next-generation Lightning updates.
 - Revocation and Penalty Keys: Lightning mechanism that punishes publication of outdated commitment states using revocation secrets.
+- Short Channel IDs: A Short Channel ID compactly identifies a Lightning channel's funding output by encoding its block height, transaction index, and output index. It lets gossip messages refer to the same on-chain channel without repeating the full transaction outpoint.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
 - Single-Use Seals: A single-use seal binds an offchain state transition to a UTXO that can be spent only once. Spending the outpoint closes the old seal and prevents the same state transition from being valid twice.
 - Spacechains: Spacechains anchor external consensus data to Bitcoin while preserving independent execution environments. They use Bitcoin finality as a settlement root without full smart-contract expressiveness.
