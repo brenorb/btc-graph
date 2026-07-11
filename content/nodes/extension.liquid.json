@@ -1,0 +1,48 @@
+{
+  "id": "extension.liquid",
+  "title": "Liquid Network",
+  "description": "Liquid is a production Bitcoin sidechain built on the Elements platform. It uses a federation and two-way peg for Bitcoin movement, supports confidential transactions and issued assets, and provides faster settlement with Lightning interoperability.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.elements",
+    "protocol.confidential-transactions"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Liquid Developer Documentation",
+      "url": "https://docs.liquid.net/docs/welcome-to-liquid-developer-documentation-portal",
+      "notes": "Official documentation for Liquid architecture, applications, and development."
+    },
+    {
+      "type": "article",
+      "title": "How Liquid Works",
+      "url": "https://docs.liquid.net/docs/how-liquid-works",
+      "notes": "Explains Liquid's Elements-based node, federation, transactions, and network flow."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for sidechains, Bitcoin transactions, and layer architecture.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "liquid",
+    "sidechains",
+    "elements",
+    "assets",
+    "confidential-transactions",
+    "lightning"
+  ],
+  "aliases": [
+    "Liquid Network",
+    "Liquid sidechain",
+    "L-BTC"
+  ]
+}
+

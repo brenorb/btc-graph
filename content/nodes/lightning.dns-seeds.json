@@ -1,0 +1,54 @@
+{
+  "id": "lightning.dns-seeds",
+  "title": "Lightning DNS Seeds",
+  "description": "Lightning DNS seeds use DNS queries to bootstrap nodes with no known contacts and to locate the current address of a known peer, filtering results by Lightning realm, address type, node ID, and reply count.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "ops.dns-seeds",
+    "lightning.gossip-protocol"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 10: DNS Bootstrap and Assisted Node Location",
+      "url": "https://github.com/lightning/bolts/blob/master/10-dns-bootstrap.md",
+      "notes": "Canonical specification for Lightning DNS seed queries, realm and address filters, node-ID lookup, and DNS replies."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 07: P2P Node and Channel Discovery",
+      "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md",
+      "notes": "Defines the Lightning node and channel discovery context that DNS bootstrap supplements."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 01: Base Lightning Messaging",
+      "url": "https://github.com/lightning/bolts/blob/master/01-messaging.md",
+      "notes": "Defines the default Lightning port used by DNS seed responses."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Background for Lightning peer connectivity, routing, and network discovery.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": [
+    "lightning",
+    "dns",
+    "peer-discovery",
+    "networking",
+    "gossip"
+  ],
+  "aliases": [
+    "Lightning DNS bootstrap",
+    "DNS bootstrap",
+    "assisted node location",
+    "BOLT 10"
+  ]
+}
+

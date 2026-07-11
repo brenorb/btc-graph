@@ -1,0 +1,46 @@
+{
+  "id": "protocol.p2wsh",
+  "title": "Pay-to-Witness-Script-Hash (P2WSH)",
+  "description": "SegWit version-0 output that commits to the SHA256 hash of a witness script and reveals that script plus its witness stack when spent. P2WSH supports complex policies such as multisig with lower weight and no legacy scriptSig malleability.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.segregated-witness",
+    "protocol.pay-to-script-hash"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Pay-to-Witness-Script-Hash",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki#pay-to-witness-script-hash",
+      "notes": "Canonical definition of the v0 witness script hash program and witness validation."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Address",
+      "url": "https://en.bitcoin.it/wiki/Address#Pay_to_Witness_Script_Hash",
+      "notes": "Address-level explanation of native SegWit P2WSH outputs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Explains witness scripts, native SegWit multisig, and P2WSH spending structure.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "segwit",
+    "scripts",
+    "multisig"
+  ],
+  "aliases": [
+    "p2wsh",
+    "pay to witness script hash",
+    "native segwit script-hash output",
+    "segwit v0 script-hash output"
+  ]
+}
+

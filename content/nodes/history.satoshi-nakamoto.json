@@ -1,0 +1,37 @@
+{
+  "id": "history.satoshi-nakamoto",
+  "title": "Satoshi Nakamoto",
+  "description": "Satoshi Nakamoto is the pseudonym used by the person or group that designed and launched Bitcoin. The disappearance of that identity is part of Bitcoin's separation from a permanent founder or controlling authority.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "history.cypherpunk-roots-bitcoin-origin"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "The Book of Satoshi",
+      "url": "https://amzn.to/4lvhhQ8",
+      "notes": "Primary-source collection of Satoshi's writings and early Bitcoin discussions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/3NWFpyF"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Whitepaper",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "The founding design document published under the Satoshi Nakamoto pseudonym."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "history",
+    "origins",
+    "pseudonymity"
+  ],
+  "aliases": [
+    "Satoshi",
+    "Bitcoin creator"
+  ]
+}
+

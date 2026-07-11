@@ -1,0 +1,36 @@
+{
+  "id": "extension.softchains",
+  "title": "Softchains",
+  "description": "Softchains are a proposed Bitcoin layer design in which an auxiliary chain is anchored to Bitcoin through a soft-fork-compatible mechanism. The design explores stronger Bitcoin enforcement while preserving separate execution environments.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.sidechains"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Layer Two Resources",
+      "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+      "notes": "Curated entry point to the softchain proposal and related layer designs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Covenants",
+      "url": "https://bitcoinops.org/en/topics/covenants/",
+      "notes": "Background for Bitcoin-enforced spending constraints used by proposed layer designs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin consensus, Script, and sidechain tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": ["bitcoin-l2", "sidechains", "soft-forks", "covenants"],
+  "aliases": ["softchain", "softchains"]
+}
+

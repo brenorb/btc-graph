@@ -1,0 +1,32 @@
+{
+  "id": "protocol.commit-delay-reveal",
+  "title": "Commit-Delay-Reveal Protocol",
+  "description": "A commit-delay-reveal protocol commits to a value, waits through a delay, and reveals it later so participants cannot adapt their choice after seeing other commitments. The pattern composes cryptographic commitments with timing and coordination rules.",
+  "category": "Protocol & Consensus",
+  "prerequisites": ["fundamentals.commitment-schemes"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: Commit-Delay-Reveal Protocol explained",
+      "url": "https://x.com/Bitcoin_Devs/status/1931775486449103086",
+      "notes": "Learner-facing explanation of the CDR protocol pattern."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topics",
+      "url": "https://bitcoinops.org/en/topics/",
+      "notes": "Canonical source index for Bitcoin protocol proposals that use commitment and reveal patterns."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Reference background for commitments, scripts, and Bitcoin protocol coordination.",
+      "regionalUrls": {"BR": "https://amzn.to/4te47JX"}
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": ["commitments", "protocols", "coordination"],
+  "aliases": ["CDR protocol", "commit delay reveal"]
+}
+

@@ -1,0 +1,39 @@
+{
+  "id": "extension.ordinals-inscriptions",
+  "title": "Ordinals and Inscriptions",
+  "description": "Ordinals assign an ordering identity to individual satoshis, while inscriptions attach arbitrary witness data to transactions. Together they create a Bitcoin application pattern for collectibles and other data-bearing artifacts with on-chain fee and block-space tradeoffs.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.taproot",
+    "protocol.witness-structure"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin transactions, SegWit witness data, and Taproot script paths.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Ordinals Protocol",
+      "url": "https://docs.ordinals.com/",
+      "notes": "Protocol documentation for ordinal theory and inscriptions."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "taproot",
+    "witness",
+    "applications"
+  ],
+  "aliases": [
+    "Ordinals",
+    "Bitcoin inscriptions",
+    "ordinal inscriptions"
+  ]
+}
+

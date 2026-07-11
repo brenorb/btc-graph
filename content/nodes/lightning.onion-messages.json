@@ -1,0 +1,45 @@
+{
+  "id": "lightning.onion-messages",
+  "title": "Lightning Onion Messages",
+  "description": "Unreliable, channel-independent encrypted messages forwarded over blinded onion paths. Onion messages let Lightning peers transport requests and responses without requiring a payment HTLC or exposing the sender's destination topology.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.feature-flags",
+    "lightning.route-blinding"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 04: Onion Routing Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/04-onion-routing.md#onion-messages",
+      "notes": "Canonical specification for forwarding onion messages over blinded paths without a payment channel."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 09: Features",
+      "url": "https://github.com/lightning/bolts/blob/master/09-features.md",
+      "notes": "Defines the option_onion_messages capability used to negotiate support."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Provides broader context for Lightning onion routing, privacy, and channel-independent communication.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "lightning",
+    "onion-routing",
+    "privacy"
+  ],
+  "aliases": [
+    "onion messages",
+    "channel-independent messages",
+    "BOLT 04 onion messages"
+  ]
+}
+

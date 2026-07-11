@@ -1,0 +1,36 @@
+{
+  "id": "extension.cross-chain-bridges",
+  "title": "Cross-Chain Bridges",
+  "description": "Cross-chain bridges move or represent assets between Bitcoin and other networks using custodians, federations, multisig committees, light-client proofs, or cryptographic verification. Their security depends on the bridge mechanism rather than Bitcoin alone.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.sidechains"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Layer Two Resources",
+      "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+      "notes": "Curated overview of bridge designs including Interlay, Threshold, and Wrapped Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "Interlay",
+      "url": "https://www.interlay.io/",
+      "notes": "Example of a trust-minimized cross-chain Bitcoin bridge design."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin transactions, multisig, and cross-system trust assumptions.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "55m",
+  "tags": ["bridges", "cross-chain", "sidechains", "custody"],
+  "aliases": ["Bitcoin bridges", "cross-chain bridge security"]
+}
+

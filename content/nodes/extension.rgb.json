@@ -1,0 +1,45 @@
+{
+  "id": "extension.rgb",
+  "title": "RGB Protocol",
+  "description": "RGB is a client-side-validated smart-contract protocol for Bitcoin and Lightning. It keeps contract state and validation data off-chain, anchors commitments to Bitcoin transaction outputs, and lets participants validate the asset history they receive without requiring Bitcoin consensus changes.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.client-side-validation"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "RGB Documentation",
+      "url": "https://rgb.tech/docs/",
+      "notes": "Official documentation for RGB concepts, standards, contracts, and integration."
+    },
+    {
+      "type": "article",
+      "title": "RGB Protocol Repository",
+      "url": "https://github.com/RGB-WG/rgb",
+      "notes": "Reference implementation and wallet/runtime integration code."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin transactions, commitments, UTXOs, and application-layer protocols.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "rgb",
+    "client-side-validation",
+    "smart-contracts",
+    "assets",
+    "lightning"
+  ],
+  "aliases": [
+    "RGB smart contracts",
+    "RGB protocol"
+  ]
+}
+

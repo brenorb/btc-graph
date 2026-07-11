@@ -1,0 +1,45 @@
+{
+  "id": "mining.merge-mining",
+  "title": "Merged Mining",
+  "description": "Merged mining lets miners use the same proof-of-work to secure more than one compatible blockchain. An auxiliary chain can accept work demonstrated by a parent-chain block, allowing miners to earn additional rewards without proportionally increasing hashing work.",
+  "category": "Mining",
+  "prerequisites": [
+    "protocol.proof-of-work"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Merged Mining",
+      "url": "https://en.bitcoin.it/wiki/Merged_mining",
+      "notes": "Conceptual and protocol overview of auxiliary proof-of-work."
+    },
+    {
+      "type": "article",
+      "title": "Merge Mining Monitor",
+      "url": "https://mmm.deadmanoz.xyz/",
+      "notes": "Operational view of merged-mining activity and supported networks."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for proof-of-work, mining incentives, and block validation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "mining",
+    "proof-of-work",
+    "sidechains",
+    "security"
+  ],
+  "aliases": [
+    "merged mining",
+    "auxiliary proof-of-work",
+    "auxpow"
+  ]
+}
+

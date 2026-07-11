@@ -1,0 +1,44 @@
+{
+  "id": "extension.elements",
+  "title": "Elements Platform",
+  "description": "Elements is an open-source Bitcoin-derived blockchain platform for building sidechains and application-specific networks. It extends Bitcoin-style transactions with features such as confidential transactions, issued assets, and federation-based interoperability.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.sidechains"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Elements Project",
+      "url": "https://elementsproject.org/",
+      "notes": "Project overview and platform capabilities."
+    },
+    {
+      "type": "article",
+      "title": "Elements Repository",
+      "url": "https://github.com/ElementsProject/elements",
+      "notes": "Reference implementation for Elements-based networks."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin-derived chains, transactions, and Script.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "elements",
+    "sidechains",
+    "confidential-transactions",
+    "assets"
+  ],
+  "aliases": [
+    "Elements blockchain platform",
+    "Elements Core"
+  ]
+}
+
