@@ -4206,6 +4206,43 @@
       ]
     },
     {
+      "id": "extension.cube",
+      "title": "Cube",
+      "description": "Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.zktlcs"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cube implementation repository",
+          "url": "https://github.com/cube-btc/cube/tree/main",
+          "notes": "Open-source implementation reference for Cube and CubeVM; the introductory architecture article is tracked in the source audit."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin's transaction, Script, custody, and settlement model.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "90m",
+      "tags": [
+        "bitcoin-l2",
+        "smart-contracts",
+        "virtual-machine",
+        "self-custody"
+      ],
+      "aliases": [
+        "Cube Bitcoin",
+        "CubeVM"
+      ]
+    },
+    {
       "id": "extension.discreet-log-contracts",
       "title": "Discreet Log Contracts (DLCs)",
       "description": "DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.",
@@ -4864,6 +4901,49 @@
       ]
     },
     {
+      "id": "extension.timeout-trees",
+      "title": "Timeout Trees",
+      "description": "Timeout Trees use a pre-signed transaction tree to virtualize many ownership outputs under a shared settlement structure, while preserving unilateral redemption after a timeout.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "protocol.timelocks"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cube implementation repository",
+          "url": "https://github.com/cube-btc/cube/tree/main",
+          "notes": "Primary implementation reference for the Cube execution environment; the article that motivated this node is tracked in the source audit."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Timeout Trees",
+          "url": "https://bitcoinops.org/en/topics/timeout-trees/",
+          "notes": "Independent technical context for transaction-tree timeout constructions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin transactions, Script, and timelocks.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "bitcoin-l2",
+        "timelocks",
+        "off-chain",
+        "settlement"
+      ],
+      "aliases": [
+        "timeout trees",
+        "transaction timeout trees"
+      ]
+    },
+    {
       "id": "extension.transaction-templating",
       "title": "Transaction Templating",
       "description": "Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.",
@@ -4901,6 +4981,51 @@
       ],
       "aliases": [
         "tx templating"
+      ]
+    },
+    {
+      "id": "extension.zktlcs",
+      "title": "Zero-Knowledge Time-Locked Contracts",
+      "description": "Zero-Knowledge Time-Locked Contracts (ZKTLCs) combine timeout-tree ownership virtualization with BitVM-style disprovable computation, allowing a participant to challenge incorrect execution while retaining a unilateral timeout exit.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.timeout-trees",
+        "extension.bitvm"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Cube implementation repository",
+          "url": "https://github.com/cube-btc/cube/tree/main",
+          "notes": "Implementation reference for Cube's execution environment; the article that defines ZKTLCs is tracked in the source audit."
+        },
+        {
+          "type": "article",
+          "title": "BitVM",
+          "url": "https://bitvm.org/",
+          "notes": "Primary reference for optimistic, challengeable computation anchored to Bitcoin."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin Script, transactions, and the settlement layer.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "75m",
+      "tags": [
+        "bitcoin-l2",
+        "bitvm",
+        "contracts",
+        "zk"
+      ],
+      "aliases": [
+        "ZKTLCs",
+        "ZK time-locked contracts",
+        "zero-knowledge time-locked contracts"
       ]
     },
     {

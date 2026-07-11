@@ -59,7 +59,7 @@ Economics & Incentives (2 concepts)
 - Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
 - Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 
-Extension Systems (61 concepts)
+Extension Systems (64 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
@@ -75,6 +75,7 @@ Extension Systems (61 concepts)
 - Coinswaps: Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.
 - Commitment Output Scripts: Lightning commitment transactions pay balances through distinct to_local and to_remote output scripts. The to_local branch uses a revocable CSV-delayed script, while the to_remote branch captures the immediately spendable counterparty output, including the modern static_remotekey pattern.
 - Congestion-Control Trees: Congestion-control trees pre-structure exits so many users can settle efficiently during fee spikes. They prioritize predictable emergency paths over flexible ad hoc spending.
+- Cube: Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.
 - Discreet Log Contracts (DLCs): DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
@@ -119,8 +120,10 @@ Extension Systems (61 concepts)
 - Statechains: Statechains transfer control of pre-funded outputs between participants with minimal on-chain activity. Their trust and liveness assumptions differ from Lightning and covenant trees.
 - Submarine Swaps: Submarine swaps atomically bridge on-chain and Lightning balances using hashlock and timelock constructions. They enable non-custodial liquidity transitions across layers.
 - The Great Script Restoration: The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.
+- Timeout Trees: Timeout Trees use a pre-signed transaction tree to virtualize many ownership outputs under a shared settlement structure, while preserving unilateral redemption after a timeout.
 - Transaction Templating: Transaction templating pre-commits spending structures so future spends follow known shapes. It is a core pattern behind many covenant-driven scaling constructions.
 - Watchtowers: Penalty transaction protection in offline scenarios.
+- Zero-Knowledge Time-Locked Contracts: Zero-Knowledge Time-Locked Contracts (ZKTLCs) combine timeout-tree ownership virtualization with BitVM-style disprovable computation, allowing a participant to challenge incorrect execution while retaining a unilateral timeout exit.
 
 History & Governance (31 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.

@@ -1,0 +1,43 @@
+{
+  "id": "extension.timeout-trees",
+  "title": "Timeout Trees",
+  "description": "Timeout Trees use a pre-signed transaction tree to virtualize many ownership outputs under a shared settlement structure, while preserving unilateral redemption after a timeout.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "protocol.timelocks"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Cube implementation repository",
+      "url": "https://github.com/cube-btc/cube/tree/main",
+      "notes": "Primary implementation reference for the Cube execution environment; the article that motivated this node is tracked in the source audit."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Timeout Trees",
+      "url": "https://bitcoinops.org/en/topics/timeout-trees/",
+      "notes": "Independent technical context for transaction-tree timeout constructions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin transactions, Script, and timelocks.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": [
+    "bitcoin-l2",
+    "timelocks",
+    "off-chain",
+    "settlement"
+  ],
+  "aliases": [
+    "timeout trees",
+    "transaction timeout trees"
+  ]
+}

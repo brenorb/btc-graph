@@ -1023,6 +1023,23 @@
       "conceptsExtracted": 1,
       "conceptsNormalized": 1,
       "notes": "Added Spark as a distinct implementation/protocol node downstream of Statechains; operator coordination and Lightning interoperability remain inside the Spark concept rather than becoming separate nodes."
+    },
+    {
+      "id": "source.cube-introducing",
+      "name": "Introducing Cube",
+      "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+      "sourceType": "protocol-proposal-article",
+      "priority": "P1",
+      "scope": "Cube's Bitcoin-native Layer 2, CubeVM, ZKTLCs, timeout-tree ownership virtualization, unilateral exits, Shadowing, Projector, lifting, and data-availability encoding.",
+      "clusterStrategy": "Track the article's named sections as one source cluster, separating reusable learner-facing primitives from Cube-specific implementation mechanisms and speculative research directions.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 18,
+      "conceptsExtracted": 11,
+      "conceptsNormalized": 3,
+      "notes": "Added Cube, Timeout Trees, and ZKTLCs. Shadowing, Shadow Space, Projector, Hosted/Black Box Projection, Lifting, exit-ladder internals, and APE/bit-level encoding remain inside Cube or source context because they are implementation-specific mechanisms rather than independent Bitcoin learning prerequisites."
     }
   ],
   "concepts": [
@@ -3962,9 +3979,51 @@
     {"id":"ops.offline-bitcoin-transport","title":"Offline Bitcoin Transport","category":"Network, Relay & Client Sync","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20082_e_se_desligarem_a_internet.md","sourceContext":"Question 82: What if the Internet is shut down?","existingNodeId":"ops.mesh-networks","status":"merge","atomicityRationale":"Satellite, mesh, telephone, and physical-transfer examples all answer the same operational question about alternate communication paths; they do not warrant separate product nodes.","candidatePrerequisites":["fundamentals.peer-to-peer-network"],"chosenPrerequisites":["ops.mesh-networks"],"prerequisiteRationale":"Reuse the existing off-grid mesh-network concept rather than duplicating transport modalities.","aliases":["offline Bitcoin transfer","alternate Bitcoin communications"],"tags":["networking","resilience","operations"],"estimatedTime":"30m","confidence":"high","notes":"Merge source examples into ops.mesh-networks as supporting context; satellites and Opendime remain implementation/product examples."},
     {"id":"economics.hodling","title":"HODLing","category":"Economics & Incentives","sourceId":"source.101-perguntas-bitcoin-1ed","sourceUrl":"local:///Users/breno/Documents/Obsidian%20Vault/Projects/Ativos/101BTC/1_ed/101BTC%20-%20071_o_que_e_hodl.md","sourceContext":"Question 71: What is HODL?","existingNodeId":"","status":"skip","atomicityRationale":"HODL is a cultural slogan and investment behavior, not a prerequisite concept needed to understand Bitcoin's mechanics.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No graph edge is justified for a skipped cultural term.","aliases":["hold on for dear life","holding bitcoin"],"tags":["culture","markets"],"estimatedTime":"0m","confidence":"high","notes":"Skip as culture/behavior; volatility and savings concepts remain the relevant learner outcomes."},
     {"id":"extension.spark","title":"Spark Protocol","category":"Extension Systems","sourceId":"source.spark-protocol","sourceUrl":"https://docs.spark.money/start/overview","sourceContext":"Official Spark overview and open-source protocol repository","existingNodeId":"","status":"new","atomicityRationale":"Spark is a concrete Bitcoin Layer 2 protocol with a distinct operator, transfer, and interoperability model built on statechain ideas; it is not merely an alias for the generic Statechains concept.","candidatePrerequisites":["extension.statechains"],"chosenPrerequisites":["extension.statechains"],"prerequisiteRationale":"Statechains provide the architecture needed to understand Spark's off-chain ownership-transfer model; threshold-signature coordination is kept inside the node description rather than minted as an unreviewed implementation node.","aliases":["Spark Bitcoin L2","Spark statechain protocol"],"tags":["bitcoin-l2","statechains","off-chain","lightning"],"estimatedTime":"60m","confidence":"high","resourceCandidates":["https://docs.spark.money/start/overview","https://github.com/buildonspark/spark","https://amzn.to/40V421t"],"notes":"Added at the user's request after confirming the official protocol documentation and repository."
+    },
+    {"id":"extension.timeout-trees","title":"Timeout Trees","category":"Extension Systems","sourceId":"source.cube-introducing","sourceUrl":"https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","sourceContext":"Timeout Trees section and ownership-virtualization architecture","existingNodeId":"","status":"new","atomicityRationale":"Timeout Trees are a reusable settlement primitive that virtualizes many ownership outputs under a pre-signed transaction tree while preserving unilateral timeout redemption; they are broader than Cube itself.","candidatePrerequisites":["protocol.timelocks"],"chosenPrerequisites":["protocol.timelocks"],"prerequisiteRationale":"Timelocks are the direct Bitcoin primitive that makes the delayed unilateral redemption path intelligible; transaction-tree details remain inside the concept.","aliases":["timeout trees","transaction timeout trees"],"tags":["bitcoin-l2","timelocks","off-chain","settlement"],"estimatedTime":"50m","confidence":"high","resourceCandidates":["https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","https://bitcoinops.org/en/topics/timeout-trees/","https://amzn.to/4ro0NdG"],"notes":"Add as a distinct reusable primitive rather than hiding it under Ark or Cube."
+    },
+    {"id":"extension.zktlcs","title":"Zero-Knowledge Time-Locked Contracts","category":"Extension Systems","sourceId":"source.cube-introducing","sourceUrl":"https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","sourceContext":"ZKTLCs section and virtualized computation ownership architecture","existingNodeId":"","status":"new","atomicityRationale":"ZKTLCs compose timeout-tree ownership virtualization with BitVM-style disprovable computation and unilateral timeout exits; the composition has a distinct learning outcome.","candidatePrerequisites":["extension.timeout-trees","extension.bitvm"],"chosenPrerequisites":["extension.timeout-trees","extension.bitvm"],"prerequisiteRationale":"The two components are the explicit architectural halves of the primitive: delayed ownership redemption and challengeable computation.","aliases":["ZKTLCs","ZK time-locked contracts","zero-knowledge time-locked contracts"],"tags":["bitcoin-l2","bitvm","contracts","zk"],"estimatedTime":"75m","confidence":"high","resourceCandidates":["https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","https://bitvm.org/","https://amzn.to/4ro0NdG"],"notes":"Treat as a named composition, not as a duplicate of generic zero-knowledge proofs or BitVM."
+    },
+    {"id":"extension.cube","title":"Cube","category":"Extension Systems","sourceId":"source.cube-introducing","sourceUrl":"https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","sourceContext":"Cube, CubeVM, and trustless Bitcoin-native Layer 2 architecture","existingNodeId":"","status":"new","atomicityRationale":"Cube is a concrete Bitcoin-native Layer 2 and virtual machine with a distinct trust, execution, and unilateral-exit model; it is not interchangeable with generic BitVM, Ark, or smart-contract concepts.","candidatePrerequisites":["extension.zktlcs"],"chosenPrerequisites":["extension.zktlcs"],"prerequisiteRationale":"ZKTLCs are the central execution-and-ownership primitive described by the article; CubeVM and data-availability details are downstream architecture.","aliases":["Cube Bitcoin","CubeVM"],"tags":["bitcoin-l2","smart-contracts","virtual-machine","self-custody"],"estimatedTime":"90m","confidence":"high","resourceCandidates":["https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5","https://amzn.to/4ro0NdG"],"notes":"Keep Shadowing, Projector, lifting, exit-ladder internals, and DA encoding as Cube mechanisms and resources rather than separate nodes."
     }
   ],
   "edges": [
+    {
+      "from": "protocol.timelocks",
+      "to": "extension.timeout-trees",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Timeout Trees use delayed transaction branches to preserve unilateral redemption, so learners need Bitcoin timelocks first.",
+      "sourceId": "source.cube-introducing",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "extension.timeout-trees",
+      "to": "extension.zktlcs",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "ZKTLCs use timeout-tree ownership virtualization as one half of their unified primitive.",
+      "sourceId": "source.cube-introducing",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "extension.bitvm",
+      "to": "extension.zktlcs",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "ZKTLCs use BitVM-style challenge and disproof to enforce computation without trusting the executor.",
+      "sourceId": "source.cube-introducing",
+      "notes": "Source-driven bridge edge."
+    },
+    {
+      "from": "extension.zktlcs",
+      "to": "extension.cube",
+      "type": "prerequisite",
+      "status": "proposed",
+      "rationale": "Cube's architecture is built around ZKTLCs for programmable execution, ownership, and unilateral exit.",
+      "sourceId": "source.cube-introducing",
+      "notes": "Source-driven bridge edge."
+    },
     {
       "from": "extension.statechains",
       "to": "extension.spark",
@@ -6828,6 +6887,16 @@
       "relatedConceptIds": ["extension.spark","extension.statechains","lightning.payment-channels"],
       "relatedSourceIds": ["source.spark-protocol"],
       "notes": "Keep Spark-specific operator internals, SDK APIs, and wallet products inside the node resources rather than creating implementation-shaped children."
+    },
+    {
+      "id": "decision.cube-scope-slice",
+      "type": "scope",
+      "subject": "source.cube-introducing",
+      "status": "resolved",
+      "rationale": "The article contains both reusable protocol primitives and Cube-specific mechanisms; only concepts with an independent learner outcome and prerequisite chain should become graph nodes.",
+      "relatedConceptIds": ["extension.cube","extension.timeout-trees","extension.zktlcs","extension.bitvm","protocol.timelocks"],
+      "relatedSourceIds": ["source.cube-introducing"],
+      "notes": "Add Cube, Timeout Trees, and ZKTLCs. Keep Shadowing, Shadow Space, Projector, Hosted/Black Box Projection, Lifting, exit-ladder internals, and APE/bit-level encoding inside Cube/source context."
     }
   ]
 }
