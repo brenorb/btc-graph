@@ -15,10 +15,13 @@
       "notes": "Reference base for relay messaging design patterns adjacent to Bitchat-like systems."
     },
     {
-      "type": "article",
-      "title": "Mesh Networking",
-      "url": "https://en.wikipedia.org/wiki/Mesh_networking",
-      "notes": "Networking context for decentralized chat transport models."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

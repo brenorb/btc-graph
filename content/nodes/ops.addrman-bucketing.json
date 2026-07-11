@@ -14,10 +14,13 @@
       "notes": "Detailed explanation of address manager internals."
     },
     {
-      "type": "article",
-      "title": "Developer Guide: P2P Network",
-      "url": "https://developer.bitcoin.org/devguide/p2p_network.html",
-      "notes": "P2P topology and peer exchange background."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

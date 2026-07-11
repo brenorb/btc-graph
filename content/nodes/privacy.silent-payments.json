@@ -10,10 +10,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Silent Payments",
-      "url": "https://bitcoinops.org/en/topics/silent-payments/",
-      "notes": "Protocol mechanics and wallet integration tradeoffs."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

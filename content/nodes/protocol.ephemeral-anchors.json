@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Ephemeral Anchors",
-      "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
-      "notes": "Policy motivation and deployment details."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     },
     {
       "type": "article",

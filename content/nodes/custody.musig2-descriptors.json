@@ -21,10 +21,13 @@
       "notes": "Descriptor format needed to express advanced script/key policies."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Core Academy: ScriptPubKey Managers",
-      "url": "https://bitcoincore.academy/scriptpubkeymanagers.html",
-      "notes": "Wallet-side tracking model for descriptor-driven outputs."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "90m",

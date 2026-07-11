@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Opcode Explained: OP_CODESEPARATOR",
-      "url": "https://opcodeexplained.com/opcodes/op_codeseparator",
-      "notes": "Exact execution and signature-hash effects."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

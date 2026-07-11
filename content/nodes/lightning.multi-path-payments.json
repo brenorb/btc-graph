@@ -14,10 +14,13 @@
       "notes": "Technical basis for multi-part delivery."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Multipath Payments",
-      "url": "https://bitcoinops.org/en/topics/multipath-payments/",
-      "notes": "Tradeoffs and implementation progress."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     },
     {
       "type": "article",

@@ -21,10 +21,13 @@
       "notes": "Neutral custody security framework applicable to succession planning controls."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Backup and Recovery",
-      "url": "https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/landing-page/",
-      "notes": "Human-centered recovery flow design for non-technical heirs and operators."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "80m",

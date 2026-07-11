@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech: AssumeUTXO",
-      "url": "https://bitcoinops.org/en/topics/assumeutxo/",
-      "notes": "Design and implementation status tracking."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

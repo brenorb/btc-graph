@@ -1,0 +1,15 @@
+{
+  "id": "protocol.taproot-control-blocks",
+  "title": "Taproot Control Blocks",
+  "description": "A Taproot control block is script-path witness data containing the internal key, output-key parity, and Merkle proof needed to verify that a revealed tapscript leaf was committed to the spent output.",
+  "category": "Protocol & Consensus",
+  "prerequisites": ["protocol.tapleaf-inclusion-proofs"],
+  "resources": [
+    {"type":"article","title":"BIP 341: Taproot","url":"https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki","notes":"Canonical control-block encoding and script-path validation rules."},
+    {"type":"article","title":"Bitcoin Optech Schnorr/Taproot Workshop","url":"https://bitcoinops.org/en/schnorr-taproot-workshop/","notes":"Workshop context for the script-path witness and Taproot tree verification."},
+    {"type":"book","title":"Mastering Bitcoin","url":"https://amzn.to/4ro0NdG","notes":"Background for Taproot outputs and witness construction.","regionalUrls":{"BR":"https://amzn.to/4te47JX"}}
+  ],
+  "estimatedTime":"30m",
+  "tags":["taproot","witness","scripts","merkle-proofs"],
+  "aliases":["control block","taproot script-path control block"]
+}

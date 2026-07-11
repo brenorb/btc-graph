@@ -4,7 +4,8 @@
   "description": "Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.transaction-relay-inv-getdata"
+    "protocol.transaction-relay-inv-getdata",
+    "protocol.txid-vs-wtxid"
   ],
   "resources": [
     {
@@ -20,10 +21,13 @@
       "notes": "Introduces witness data and witness transaction identifiers."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Core Academy: Transaction Tracking",
-      "url": "https://bitcoincore.academy/transaction-tracking.html",
-      "notes": "How nodes track transaction identifiers and relay state."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "70m",

@@ -14,10 +14,13 @@
       "notes": "Core walkthrough of how private and public keys are represented and used."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Wallets",
-      "url": "https://developer.bitcoin.org/devguide/wallets.html",
-      "notes": "Shows where key material and signing behavior appear in wallet systems."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

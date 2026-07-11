@@ -1,7 +1,7 @@
 {
   "id": "protocol.adaptor-signatures",
   "title": "Adaptor Signatures",
-  "description": "Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.",
+  "description": "Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.",
   "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.taproot"
@@ -35,6 +35,7 @@
     "contracts"
   ],
   "aliases": [
-    "encrypted signatures"
+    "encrypted signatures",
+    "scriptless scripts"
   ]
 }

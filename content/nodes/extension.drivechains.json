@@ -1,0 +1,36 @@
+{
+  "id": "extension.drivechains",
+  "title": "Drivechains",
+  "description": "Drivechains are a sidechain design that uses blind merged mining and a miner-mediated withdrawal mechanism to move value between Bitcoin and an auxiliary chain. The design trades federation trust for miner governance and new consensus assumptions.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.sidechains",
+    "mining.merge-mining"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Drivechain Information",
+      "url": "https://www.drivechain.info/",
+      "notes": "Primary overview of the drivechain proposal and its miner-mediated peg model."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Layer Two Resources",
+      "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+      "notes": "Curated context for drivechains among Bitcoin layer designs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for sidechains, mining, and Bitcoin settlement.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": ["bitcoin-l2", "sidechains", "merged-mining", "peg"],
+  "aliases": ["drivechain", "drivechains"]
+}

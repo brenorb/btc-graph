@@ -14,10 +14,13 @@
       "notes": "Byte-level semantics and execution behavior."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: OP_CAT",
-      "url": "https://bitcoinops.org/en/topics/op_cat/",
-      "notes": "Activation and policy discussion."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

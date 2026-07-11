@@ -1,17 +1,20 @@
 {
   "id": "protocol.cluster-mempool",
   "title": "Cluster Mempool",
-  "description": "Cluster mempool tracks package relationships to improve policy decisions and package relay behavior. It aims to make ancestor/descendant handling more predictable under load.",
+  "description": "Cluster mempool organizes connected transactions into clusters and mining-order chunks so Bitcoin Core can make more predictable policy, package relay, replacement, and block-selection decisions under load.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.mempool-policy"
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Cluster Mempool",
-      "url": "https://bitcoinops.org/en/topics/cluster-mempool/",
-      "notes": "Implementation status and policy impact."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",
@@ -24,6 +27,24 @@
       "title": "Bitcoin Developer Guide: Transactions",
       "url": "https://developer.bitcoin.org/devguide/transactions.html",
       "notes": "Baseline mempool and relay context for package policy discussions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core 31.0 Release Notes: Cluster Mempool",
+      "url": "https://bitcoincore.org/en/releases/31.0/",
+      "notes": "Canonical explanation of clusters, chunks, fee ordering, and the related diagnostic RPCs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core 31.0 getmempoolcluster RPC",
+      "url": "https://bitcoincore.org/en/doc/31.0.0/rpc/blockchain/getmempoolcluster/",
+      "notes": "Optional developer reference for inspecting one connected cluster; this RPC is not a standalone learner node."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core 31.x Mempool Terminology",
+      "url": "https://github.com/bitcoin/bitcoin/blob/31.x/doc/policy/mempool-terminology.md",
+      "notes": "Definitions for clusters, chunks, and package relationships; the RPCs remain optional implementation references."
     }
   ],
   "estimatedTime": "75m",

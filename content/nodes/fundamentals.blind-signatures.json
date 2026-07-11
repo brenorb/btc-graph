@@ -14,10 +14,13 @@
       "notes": "Protocol overview for blinded ecash issuance and redemption."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Ecash",
-      "url": "https://bitcoinops.org/en/topics/ecash/",
-      "notes": "Bitcoin-specific context for blind-signature-based ecash systems."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

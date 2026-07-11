@@ -15,10 +15,13 @@
       "notes": "Proposal details and covenant motivations."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: OP_CHECKTEMPLATEVERIFY",
-      "url": "https://bitcoinops.org/en/topics/op_checktemplateverify/",
-      "notes": "Ecosystem progress and deployment discussion."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

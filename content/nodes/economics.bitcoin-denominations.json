@@ -1,0 +1,37 @@
+{
+  "id": "economics.bitcoin-denominations",
+  "title": "Bitcoin Denominations and Satoshis",
+  "description": "Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.",
+  "category": "Economics & Incentives",
+  "prerequisites": [
+    "fundamentals.money-properties"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Foundational reference for bitcoin units, amounts, and transaction representation.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Technical context for integer-denominated transaction amounts."
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "money",
+    "units",
+    "satoshis"
+  ],
+  "aliases": [
+    "sats",
+    "bitcoin units",
+    "BTC denominations"
+  ]
+}

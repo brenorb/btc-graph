@@ -14,10 +14,13 @@
       "notes": "Process guidance from historical incidents and response lessons."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: CVEs (various)",
-      "url": "https://bitcoinops.org/en/topics/cve/",
-      "notes": "Catalog of vulnerability classes and publication history."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

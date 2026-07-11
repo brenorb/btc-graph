@@ -1,0 +1,35 @@
+{
+  "id": "protocol.op-checkcontractverify",
+  "title": "OP_CHECKCONTRACTVERIFY (BIP 443)",
+  "description": "OP_CHECKCONTRACTVERIFY is a proposed covenant opcode for constructing state-carrying outputs and vault-like spending policies. It generalizes the covenant capabilities needed by OP_VAULT while supporting broader contract patterns.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Covenant Proposals Compared",
+      "url": "https://www.spark.money/tools/bitcoin-covenant-proposals-compared",
+      "notes": "Current comparison of BIP 443 with OP_VAULT and other covenant proposals."
+    },
+    {
+      "type": "article",
+      "title": "BIP 443: OP_CHECKCONTRACTVERIFY",
+      "url": "https://bips.dev/443/",
+      "notes": "Proposal specification and motivation for a more general contract-verification opcode."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Background for Script, transaction construction, and covenant mechanisms.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": ["covenants", "vaults", "script", "protocol-proposals"],
+  "aliases": ["OP_CHECKCONTRACTVERIFY", "BIP 443", "OP_CCV"]
+}

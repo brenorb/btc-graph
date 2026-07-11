@@ -14,10 +14,13 @@
       "notes": "Chainstate handling and sync implications for UTXO management."
     },
     {
-      "type": "article",
-      "title": "Developer Guide: Operating Modes",
-      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
-      "notes": "Pruned and archival operating tradeoffs."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

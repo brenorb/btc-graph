@@ -4,7 +4,8 @@
   "description": "Policy mechanism to replace unconfirmed transactions with higher-fee versions.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.fee-market"
+    "protocol.fee-market",
+    "protocol.consensus-vs-policy"
   ],
   "resources": [
     {
@@ -14,10 +15,13 @@
       "notes": "Canonical policy rules."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Replace-by-Fee",
-      "url": "https://bitcoinops.org/en/topics/replace-by-fee/",
-      "notes": "Wallet/service operational guidance."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

@@ -1,0 +1,43 @@
+{
+  "id": "protocol.witness-structure",
+  "title": "Transaction Witness Structure",
+  "description": "The transaction-level witness serialization layout that stores one witness stack per input, including the marker, flag, item counts, and witness items that carry SegWit spending data outside the legacy input script.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.segregated-witness"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Segregated Witness",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki",
+      "notes": "Canonical specification for the marker, flag, witness vectors, and transaction serialization rules."
+    },
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Transactions",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06_transactions.adoc",
+      "notes": "Explains witness serialization, one witness stack per input, compactSize counts, and empty stacks for legacy inputs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Provides the broader transaction-serialization context needed to understand witness-aware inputs and outputs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "transactions",
+    "segwit",
+    "serialization"
+  ],
+  "aliases": [
+    "witness structure",
+    "segwit transaction structure",
+    "witness serialization"
+  ]
+}

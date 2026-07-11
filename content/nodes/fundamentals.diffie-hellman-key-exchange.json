@@ -15,10 +15,13 @@
       "notes": "Shows how modern Bitcoin transport uses ECDH-derived shared secrets."
     },
     {
-      "type": "article",
-      "title": "secp256k1 ECDH API",
-      "url": "https://github.com/bitcoin-core/secp256k1/blob/master/include/secp256k1_ecdh.h",
-      "notes": "Concrete library interface for ECDH over secp256k1."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

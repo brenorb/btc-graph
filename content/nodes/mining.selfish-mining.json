@@ -1,0 +1,31 @@
+{
+  "id": "mining.selfish-mining",
+  "title": "Selfish Mining",
+  "description": "Selfish mining is an incentive attack in which miners withhold privately found blocks and reveal them strategically to gain a chain-selection and propagation advantage over honest miners.",
+  "category": "Mining",
+  "prerequisites": ["mining.pool-vs-solo", "protocol.reorgs-finality"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: Selfish Mining explained simply",
+      "url": "https://x.com/Bitcoin_Devs/status/1975289920634925475",
+      "notes": "Learner-facing explanation of the withholding strategy and incentive attack."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Academy: P2P Attacks",
+      "url": "https://bitcoincore.academy/p2p-attacks.html",
+      "notes": "Attack-model context for mining and network behavior."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Reference background for proof of work, mining incentives, and chain selection.",
+      "regionalUrls": {"BR": "https://amzn.to/4te47JX"}
+    }
+  ],
+  "estimatedTime": "40m",
+  "tags": ["mining", "incentives", "attacks"],
+  "aliases": ["selfish mining attack", "block withholding for chain advantage"]
+}

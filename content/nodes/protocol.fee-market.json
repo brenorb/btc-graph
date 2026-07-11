@@ -20,10 +20,13 @@
       "notes": "Canonical specification source for standards."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Dev Network",
-      "url": "https://bitcoindev.network/",
-      "notes": "Practical implementation context."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "45m",

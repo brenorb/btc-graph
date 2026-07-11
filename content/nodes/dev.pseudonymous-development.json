@@ -1,0 +1,14 @@
+{
+  "id":"dev.pseudonymous-development",
+  "title":"Pseudonymous Development",
+  "description":"Pseudonymous development lets Bitcoin contributors publish and review work without tying it to a legal identity. It can protect contributors from coercion while keeping technical claims accountable through public evidence and peer review.",
+  "category":"History & Governance",
+  "prerequisites":["dev.review-culture"],
+  "resources":[
+    {"type":"article","title":"Bitcoin Development Philosophy: Pseudonymous Development","url":"https://bitcoindevphilosophy.com/#pseudonymousdevelopment","notes":"Explains why contributor pseudonymity can support merit-based evaluation and personal safety."},
+    {"type":"book","title":"Bitcoin Development Philosophy","url":"https://amzn.to/4s33eUd","notes":"Long-form context for open-source development, review, and contributor safety.","regionalUrls":{"BR":"https://amzn.to/4uRjb1v"}}
+  ],
+  "estimatedTime":"25m",
+  "tags":["development","privacy","open-source","governance"],
+  "aliases":["pseudonymous contributors","developer pseudonymity"]
+}

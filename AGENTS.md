@@ -45,6 +45,9 @@ A task is done when all of the following are true:
 - Keep stable node IDs (slug style).
 - Prefer strict prerequisites as graph semantics, but never hard-block user progress marking.
 - Curate resources; avoid bloated lists.
+- Treat function-shaped names, especially RPC names such as `getmempoolcluster`, as implementation surfaces by default; prefer the higher-level noun concept as the learner-facing node and keep the function as an alias or optional resource.
+- Apply that naming heuristic with judgment: semantically important low-level primitives, including consequential opcodes such as `OP_CAT`, may deserve dedicated nodes when they have a distinct learning outcome or important prerequisite chain.
+- Record wrapper merges, exclusions, and low-level primitive exceptions in the canonical audit `Decisions` sheet.
 
 ## Collaboration Rules
 - Keep contribution paths simple for non-coders.

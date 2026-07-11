@@ -5,7 +5,8 @@
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
     "ops.run-full-node",
-    "protocol.mempool"
+    "protocol.mempool",
+    "protocol.consensus-vs-policy"
   ],
   "resources": [
     {
@@ -15,10 +16,13 @@
       "notes": "Operational and protocol-centric lessons."
     },
     {
-      "type": "article",
-      "title": "Mempool Documentation",
-      "url": "https://mempool.space/docs",
-      "notes": "Operational view of mempool and blockspace."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

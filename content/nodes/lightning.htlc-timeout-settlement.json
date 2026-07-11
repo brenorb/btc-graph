@@ -20,10 +20,13 @@
       "notes": "Required timing and watch behavior for channel safety."
     },
     {
-      "type": "article",
-      "title": "Developer Guide: Contracts",
-      "url": "https://developer.bitcoin.org/devguide/contracts.html",
-      "notes": "Base script and timeout primitives used by HTLC logic."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     }
   ],
   "estimatedTime": "75m",

@@ -85,6 +85,12 @@ Create a public, interactive, static website (hosted on GitHub Pages) with a hie
 - System should ingest and structure all relevant topics from those sources.
 - Scope size (small vs big) will be decided after reviewing source coverage and graph quality.
 
+## Concept Boundary Heuristic (decided)
+- Treat function-shaped names, especially RPC names such as `getmempoolcluster`, as implementation surfaces by default rather than first-class learning nodes.
+- Prefer the higher-level noun concept that explains the learner outcome, such as `Cluster Mempool`, and retain implementation names as aliases or optional resources when they improve discoverability.
+- Override this heuristic when a low-level primitive has a distinct, high-value learning outcome or unlocks an important prerequisite chain. Opcode concepts are reviewed individually; `OP_CAT` and similar historically or technically consequential opcodes may deserve dedicated nodes despite their implementation-shaped names.
+- Record every wrapper merge or exclusion in the canonical audit `Decisions` sheet so source coverage is preserved without bloating the learner graph.
+
 ## Collaboration Model (initial)
 - Repository should be easy for anyone to contribute via GitHub issues and pull requests.
 - Content structure should be simple to edit without deep technical knowledge.

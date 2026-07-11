@@ -21,10 +21,13 @@
       "notes": "Implementation context for inter-wallet metadata handoffs and signer interoperability."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Private Key Management",
-      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
-      "notes": "Design and operational context for distributed key management."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "80m",

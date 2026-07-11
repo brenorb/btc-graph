@@ -1,0 +1,31 @@
+{
+  "id": "protocol.mast",
+  "title": "Merkelized Alternative Script Trees (MAST)",
+  "description": "MAST commits to multiple Bitcoin Script spending branches in a Merkle tree while revealing only the branch used to spend. It reduces revealed policy and witness data without hiding the committed alternatives from verification.",
+  "category": "Protocol & Consensus",
+  "prerequisites": ["fundamentals.merkle-trees", "protocol.script"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: MAST explained simply",
+      "url": "https://x.com/Bitcoin_Devs/status/1998431297333501989",
+      "notes": "Short learner-facing explanation of Merkleized Alternative Script Trees."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: MAST",
+      "url": "https://bitcoinops.org/en/topics/mast/",
+      "notes": "Technical context for script-tree commitments and selective branch revelation."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Worked background on Bitcoin scripts, hashing, and Merkle commitments.",
+      "regionalUrls": {"BR": "https://amzn.to/4lX5bzw"}
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": ["scripts", "merkle", "privacy", "contracts"],
+  "aliases": ["MAST", "merkelized alternative script tree", "Merkelized Alternative Script Tree"]
+}

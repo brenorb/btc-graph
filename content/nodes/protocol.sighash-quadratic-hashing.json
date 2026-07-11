@@ -1,0 +1,31 @@
+{
+  "id": "protocol.sighash-quadratic-hashing",
+  "title": "Quadratic SIGHASH Hashing Cost",
+  "description": "Legacy signature hashing repeated transaction-wide work for each input, creating quadratic validation cost as transactions grew. Cached digest designs such as BIP 143 address this performance failure while preserving signature-commitment semantics.",
+  "category": "Protocol & Consensus",
+  "prerequisites": ["protocol.sighash-flags"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: Quadratic Sighash problem explained",
+      "url": "https://x.com/Bitcoin_Devs/status/1987562939109306699",
+      "notes": "Learner-facing explanation of the historical O(n^2) hashing problem."
+    },
+    {
+      "type": "article",
+      "title": "BIP 143: Transaction Signature Verification",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+      "notes": "Defines the digest structure and cached components that avoid repeated hashing work."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Background on transaction digests and signature verification.",
+      "regionalUrls": {"BR": "https://amzn.to/4lX5bzw"}
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": ["sighash", "performance", "consensus"],
+  "aliases": ["quadratic hashing problem", "quadratic SIGHASH", "O(n^2) SIGHASH"]
+}

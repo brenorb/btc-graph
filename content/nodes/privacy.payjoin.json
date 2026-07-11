@@ -21,10 +21,13 @@
       "notes": "Implementation guidance and known caveats."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Coin Selection",
-      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-      "notes": "Selection strategy implications for privacy tools."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "60m",

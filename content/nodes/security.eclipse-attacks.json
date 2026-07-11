@@ -9,10 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Eclipse Attacks",
-      "url": "https://bitcoinops.org/en/topics/eclipse-attacks/",
-      "notes": "Attack mechanics and mitigation guidance."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

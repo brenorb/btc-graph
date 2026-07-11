@@ -1,0 +1,35 @@
+{
+  "id": "mining.block-withholding",
+  "title": "Block Withholding",
+  "description": "Block withholding is a pooled-mining attack in which a miner submits ordinary shares for payment but withholds a block-valid share, sacrificing little personal revenue while denying the pool the block reward.",
+  "category": "Mining",
+  "prerequisites": [
+    "mining.pool-shares"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Block Withholding",
+      "url": "https://bitcoinops.org/en/topics/block-withholding/",
+      "notes": "Defines the attack, its pool-economics asymmetry, common mitigations, and oblivious shares as a proposed remedy."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Pooled Mining",
+      "url": "https://bitcoinops.org/en/topics/pooled-mining/",
+      "notes": "Explains share targets and payout models required to understand why selective withholding harms the pool."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background on proof of work, mining incentives, and the pooled-mining environment in which the attack occurs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": ["mining", "pools", "attacks", "incentives", "shares"],
+  "aliases": ["block withholding attack", "withholding attack", "oblivious shares"]
+}

@@ -14,10 +14,13 @@
       "notes": "Covers clustering and transaction-linking techniques."
     },
     {
-      "type": "article",
-      "title": "Lopp: Bitcoin Privacy Resources",
-      "url": "https://www.lopp.net/bitcoin-information/privacy.html",
-      "notes": "Survey of practical privacy leakage vectors and mitigations."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

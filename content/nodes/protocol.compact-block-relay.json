@@ -15,10 +15,13 @@
       "notes": "Wire protocol specification for compact blocks."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech: Compact Block Relay",
-      "url": "https://bitcoinops.org/en/topics/compact-block-relay/",
-      "notes": "Implementation and policy history with operational notes."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

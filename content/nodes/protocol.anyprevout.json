@@ -15,10 +15,13 @@
       "notes": "Proposal framing and relation to other covenant primitives."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: SIGHASH_ANYPREVOUT",
-      "url": "https://bitcoinops.org/en/topics/sighash_anyprevout/",
-      "notes": "Implementation and deployment considerations."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

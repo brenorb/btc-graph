@@ -14,10 +14,13 @@
       "notes": "DLC framing within covenant-related contract use cases."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Discreet Log Contracts",
-      "url": "https://bitcoinops.org/en/topics/discreet-log-contracts/",
-      "notes": "Protocol updates and integration lessons."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

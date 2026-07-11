@@ -14,10 +14,13 @@
       "notes": "Canonical interface between miners and full nodes for block templates."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Core RPC: getblocktemplate",
-      "url": "https://developer.bitcoin.org/reference/rpc/getblocktemplate.html",
-      "notes": "RPC details that shape practical template assembly behavior."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

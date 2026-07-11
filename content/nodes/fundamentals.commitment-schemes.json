@@ -6,10 +6,13 @@
   "prerequisites": [],
   "resources": [
     {
-      "type": "article",
-      "title": "Commitment Scheme",
-      "url": "https://en.wikipedia.org/wiki/Commitment_scheme",
-      "notes": "Compact overview of the hiding and binding properties."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     },
     {
       "type": "article",

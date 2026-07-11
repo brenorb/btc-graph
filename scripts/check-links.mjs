@@ -1,12 +1,22 @@
 import fs from "node:fs";
 import path from "node:path";
+import dns from "node:dns";
 
 const repoRoot = process.cwd();
 const sourceDir = path.join(repoRoot, "content", "nodes");
-const DEFAULT_TIMEOUT_MS = 15000;
+const DEFAULT_TIMEOUT_MS = 20000;
 const CONCURRENCY = 6;
-const MAX_ATTEMPTS = 3;
+const MAX_ATTEMPTS = 5;
+const RETRY_BASE_DELAY_MS = 500;
 const RETRYABLE_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
+const KNOWN_PROTECTED_URLS = new Set([
+  "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+]);
+
+// GitHub-hosted runners can prefer an unreachable IPv6 route for some older
+// hosts. Prefer IPv4 so a transient family-selection failure does not make
+// an otherwise reachable source fail the whole validation job.
+dns.setDefaultResultOrder("ipv4first");
 
 function loadNodes() {
   const files = fs
@@ -61,6 +71,10 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function isKnownProtectedUrl(url, result) {
+  return KNOWN_PROTECTED_URLS.has(url) && result.status === 403;
+}
+
 async function requestWithRetry(url, method) {
   let lastError;
 
@@ -78,7 +92,7 @@ async function requestWithRetry(url, method) {
     }
 
     // Short exponential backoff to reduce transient network flakiness in CI.
-    await sleep(300 * 2 ** (attempt - 1));
+    await sleep(RETRY_BASE_DELAY_MS * 2 ** (attempt - 1));
   }
 
   throw lastError ?? new Error("Link check failed with unknown error");
@@ -130,6 +144,7 @@ async function run() {
   const urls = [...usage.keys()];
 
   const failures = [];
+  const exceptions = [];
   let index = 0;
 
   async function worker() {
@@ -140,6 +155,10 @@ async function run() {
       try {
         const result = await checkUrl(current);
         if (!result.ok) {
+          if (isKnownProtectedUrl(current, result)) {
+            exceptions.push({ url: current, status: result.status, method: result.method });
+            continue;
+          }
           failures.push({
             url: current,
             status: result.status,
@@ -161,6 +180,12 @@ async function run() {
   await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
   console.log(`Checked ${urls.length} unique resource URLs across ${nodes.length} nodes.`);
+
+  for (const exception of exceptions) {
+    console.warn(
+      `- Allowed protected URL: ${exception.url} (status=${exception.status} method=${exception.method})`,
+    );
+  }
 
   if (failures.length > 0) {
     console.error(`\nFound ${failures.length} failing URL(s):`);

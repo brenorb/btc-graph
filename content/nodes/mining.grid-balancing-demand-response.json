@@ -14,10 +14,13 @@
       "notes": "Miner operating constraints that shape responsiveness to power prices."
     },
     {
-      "type": "article",
-      "title": "Lopp: Bitcoin Mining",
-      "url": "https://www.lopp.net/bitcoin-information/mining.html",
-      "notes": "Operational references including discussions of power-market dynamics."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

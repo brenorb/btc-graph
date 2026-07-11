@@ -1,0 +1,43 @@
+{
+  "id": "lightning.feature-flags",
+  "title": "Lightning Feature Flags",
+  "description": "Capability bits that Lightning peers advertise in init messages, gossip announcements, invoices, and related protocol contexts. Odd and even bit pairs distinguish optional support from required support so implementations can negotiate features safely.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.gossip-protocol"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 09: Features",
+      "url": "https://github.com/lightning/bolts/blob/master/09-features.md",
+      "notes": "Canonical registry and semantics for optional and required Lightning feature bits."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 01: Base Protocol",
+      "url": "https://github.com/lightning/bolts/blob/master/01-messaging.md",
+      "notes": "Defines how feature vectors are exchanged in init messages and attached to protocol messages."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Provides implementation context for Lightning negotiation, announcements, and interoperable peer behavior.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "lightning",
+    "protocol",
+    "interoperability"
+  ],
+  "aliases": [
+    "Lightning feature bits",
+    "Lightning capability negotiation",
+    "BOLT 09 features"
+  ]
+}

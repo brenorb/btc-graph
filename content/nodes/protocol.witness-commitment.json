@@ -17,10 +17,13 @@
       "notes": "Defines witness commitment structure and validation rules."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Reference: Block Chain",
-      "url": "https://developer.bitcoin.org/reference/block_chain.html",
-      "notes": "Reference for block and coinbase data fields used by commitments."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

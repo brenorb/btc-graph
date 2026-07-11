@@ -10,10 +10,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Zcash Learn: What are zk-SNARKs?",
-      "url": "https://z.cash/learn/what-are-zk-snarks/",
-      "notes": "High-level explanation of succinct non-interactive proofs and why they matter."
+      "type": "book",
+      "title": "Inventing Bitcoin",
+      "url": "https://amzn.to/3Njwy9P",
+      "notes": "Beginner-friendly conceptual bridge into the mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4rTB6C8"
+      }
     },
     {
       "type": "article",

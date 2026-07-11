@@ -20,10 +20,13 @@
       "notes": "Concrete examples of modeling attack surfaces in Bitcoin."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Expiration Floods",
-      "url": "https://bitcoinops.org/en/topics/expiration-floods/",
-      "notes": "Example of threat modeling for Lightning-related attack patterns."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "50m",

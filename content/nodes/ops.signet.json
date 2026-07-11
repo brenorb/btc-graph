@@ -14,10 +14,13 @@
       "notes": "When to choose regtest, testnet, or signet."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Optech Topic: Signet",
-      "url": "https://bitcoinops.org/en/topics/signet/",
-      "notes": "Network usage and ecosystem support updates."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     },
     {
       "type": "article",

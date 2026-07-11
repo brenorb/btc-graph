@@ -1,0 +1,37 @@
+{
+  "id": "extension.cube",
+  "title": "Cube",
+  "description": "Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.zktlcs"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Introducing Cube",
+      "url": "https://medium.com/cube-bitcoin/introducing-cube-8b3702e470a5",
+      "notes": "Primary architectural overview of Cube, CubeVM, ZKTLCs, Shadowing, Projector, lifting, and exit paths."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin's transaction, Script, custody, and settlement model.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "90m",
+  "tags": [
+    "bitcoin-l2",
+    "smart-contracts",
+    "virtual-machine",
+    "self-custody"
+  ],
+  "aliases": [
+    "Cube Bitcoin",
+    "CubeVM"
+  ]
+}

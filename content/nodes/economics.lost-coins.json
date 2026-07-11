@@ -15,10 +15,13 @@
       "notes": "Consensus fix preserving long-term issuance cap assumptions."
     },
     {
-      "type": "article",
-      "title": "Lopp: Bitcoin History",
-      "url": "https://www.lopp.net/bitcoin-information/history.html",
-      "notes": "Historical incidents that led to permanently inaccessible supply."
+      "type": "book",
+      "title": "The Bitcoin Standard",
+      "url": "https://amzn.to/4h1H0iK",
+      "notes": "Macro and monetary framing that situates this concept in Bitcoin's economic context.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4byFMZo"
+      }
     },
     {
       "type": "article",

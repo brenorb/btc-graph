@@ -4,7 +4,8 @@
   "description": "Policy thresholds for economically unspendable outputs and their impact on transaction construction.",
   "category": "Network, Relay & Client Sync",
   "prerequisites": [
-    "protocol.fee-market"
+    "protocol.fee-market",
+    "protocol.consensus-vs-policy"
   ],
   "resources": [
     {
@@ -20,10 +21,13 @@
       "notes": "Policy admission context relevant to dust-like outputs."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Coin Selection",
-      "url": "https://bitcoin.design/guide/how-it-works/coin-selection/",
-      "notes": "Wallet-level consequences of creating uneconomical outputs."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "55m",

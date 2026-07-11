@@ -1,0 +1,36 @@
+{
+  "id": "extension.rollups",
+  "title": "Bitcoin Rollups",
+  "description": "Bitcoin rollups execute transactions or contracts off-chain and commit compressed state data or validity evidence to Bitcoin. They aim to scale execution while inheriting selected settlement or verification guarantees from the base layer.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "fundamentals.zero-knowledge-proofs",
+    "extension.sidechains"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Rollups",
+      "url": "https://bitcoinrollups.org/",
+      "notes": "Dedicated overview of validity-rollup designs for Bitcoin."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Layer Two Resources",
+      "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+      "notes": "Curated entry point to rollups and related Bitcoin layers."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin settlement, transactions, and layer architecture.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": ["bitcoin-l2", "rollups", "zero-knowledge", "scaling"],
+  "aliases": ["Bitcoin rollup", "validity rollups"]
+}

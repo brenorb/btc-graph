@@ -20,10 +20,13 @@
       "notes": "Context for validation shortcuts used during initial chain sync."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Full Node Operating Modes",
-      "url": "https://developer.bitcoin.org/devguide/operating_modes.html",
-      "notes": "Describes full validation behavior and tradeoffs in node operation."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     }
   ],
   "estimatedTime": "55m",

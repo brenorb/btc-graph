@@ -1,0 +1,37 @@
+{
+  "id": "security.quantum-computing-threat",
+  "title": "Quantum Computing Threats",
+  "description": "Large fault-tolerant quantum computers could weaken Bitcoin's public-key signature assumptions and accelerate proof-of-work search. The threat is distinct from ordinary key guessing and motivates migration planning for quantum-resistant authorization.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.digital-signatures"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin keys, signatures, and the security assumptions affected by future cryptanalytic advances.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Quantum Computing",
+      "url": "https://bitcoinops.org/en/topics/quantum-resistance/",
+      "notes": "Bitcoin-specific analysis of quantum attacks and migration considerations."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "security",
+    "cryptography",
+    "post-quantum"
+  ],
+  "aliases": [
+    "quantum threat",
+    "quantum attacks on Bitcoin",
+    "quantum resistance"
+  ]
+}

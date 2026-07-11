@@ -14,10 +14,13 @@
       "notes": "Defines reserve constraints and channel parameter negotiation."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Lightning Liquidity",
-      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-      "notes": "Operational consequences of reserve constraints for users."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     },
     {
       "type": "article",

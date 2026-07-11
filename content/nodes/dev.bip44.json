@@ -21,10 +21,13 @@
       "notes": "Example extension illustrating how BIP44-style hierarchy evolved for SegWit."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Dev Network: Native SegWit",
-      "url": "https://bitcoindev.network/guides/bitcoinjs-lib/native-segwit-p2wpkh/",
-      "notes": "Applied derivation and script-type implementation."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "65m",

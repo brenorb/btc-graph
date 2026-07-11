@@ -8,10 +8,13 @@
   ],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin Developer Guide: Mining",
-      "url": "https://developer.bitcoin.org/devguide/mining.html",
-      "notes": "Coinbase construction and miner incentives."
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Deeper walk-through of the cryptography, scripting, and transaction mechanics behind this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
     },
     {
       "type": "article",

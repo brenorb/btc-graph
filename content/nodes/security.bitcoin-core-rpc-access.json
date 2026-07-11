@@ -1,0 +1,51 @@
+{
+  "id": "security.bitcoin-core-rpc-access",
+  "title": "Bitcoin Core RPC Access Security",
+  "description": "Secure Bitcoin Core's powerful RPC control boundary by authenticating clients, limiting bind and allow rules, and understanding that RPC access can read private data, spend wallet funds, and change node behavior.",
+  "category": "Security",
+  "prerequisites": [
+    "dev.bitcoin-core-rpc"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Core JSON-RPC Interface: Security",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/JSON-RPC-interface.md#security",
+      "notes": "Canonical security guidance for RPC credentials, local versus remote exposure, and the authority granted by the interface."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Configuration Reference",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/bitcoin-conf.md",
+      "notes": "Configuration reference for rpcbind, rpcallowip, cookie authentication, rpcauth, and related access controls."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core Initialization and Configuration",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/src/init.cpp",
+      "notes": "Implementation context for how Bitcoin Core parses and applies RPC access configuration."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for node operation, wallet authority, RPC workflows, and self-custody security tradeoffs.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "security",
+    "rpc",
+    "access-control",
+    "node-operations"
+  ],
+  "aliases": [
+    "Bitcoin Core RPC security",
+    "secure RPC exposure",
+    "RPC authentication",
+    "rpcauth"
+  ]
+}

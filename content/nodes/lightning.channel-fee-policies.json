@@ -14,10 +14,13 @@
       "notes": "Defines fee fields and update propagation for channel policies."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Design: Liquidity",
-      "url": "https://bitcoin.design/guide/how-it-works/liquidity/",
-      "notes": "Operational and product tradeoffs in channel liquidity management."
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Book-length explanation of Lightning channel, routing, and operational tradeoffs tied to this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
     },
     {
       "type": "article",

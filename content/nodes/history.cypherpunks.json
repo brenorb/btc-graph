@@ -9,9 +9,9 @@
   "resources": [
     {
       "type": "article",
-      "title": "Bitcoin.page",
-      "url": "https://bitcoin.page",
-      "notes": "Accessible concept summaries."
+      "title": "A Cypherpunk's Manifesto",
+      "url": "https://www.cypherpunkbooks.com/book/a-cypherpunks-manifesto",
+      "notes": "Foundational statement of the movement's privacy, cryptography, and anonymous-transactions ethos."
     },
     {
       "type": "article",
@@ -41,6 +41,7 @@
     "history"
   ],
   "aliases": [
-    "cypherpunk movement"
+    "cypherpunk movement",
+    "a cypherpunk's manifesto"
   ]
 }

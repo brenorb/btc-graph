@@ -1,0 +1,36 @@
+{
+  "id": "extension.spiderchains",
+  "title": "Spiderchains",
+  "description": "Spiderchains are a proposed Bitcoin sidechain architecture that uses a network of collateralized multisig operators and Bitcoin transactions to coordinate sidechain state and peg operations.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.sidechains",
+    "custody.multisig"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Spiderchain Whitepaper",
+      "url": "https://www.lopp.net/pdf/botanix-spiderchain-whitepaper.pdf",
+      "notes": "Primary design reference for the spiderchain architecture."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Layer Two Resources",
+      "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+      "notes": "Curated context for spiderchains among Bitcoin layer designs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for sidechains, multisig, and Bitcoin transaction settlement.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "50m",
+  "tags": ["bitcoin-l2", "sidechains", "multisig", "peg"],
+  "aliases": ["spiderchain", "spiderchains"]
+}

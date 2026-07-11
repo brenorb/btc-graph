@@ -1,0 +1,15 @@
+{
+  "id": "protocol.pay-to-contract",
+  "title": "Pay to Contract (P2C)",
+  "description": "Pay to Contract commits to offchain contract data by tweaking a public key with a hash-derived value, producing a payment destination that proves the commitment without placing the contract data onchain.",
+  "category": "Protocol & Consensus",
+  "prerequisites": ["fundamentals.public-private-keys", "fundamentals.hash-functions"],
+  "resources": [
+    {"type":"article","title":"Mastering Bitcoin: Applications","url":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","notes":"Explains how key tweaking publicly commits to an external contract without revealing it onchain."},
+    {"type":"article","title":"Mastering Bitcoin: Authorization and Authentication","url":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch07_authorization-authentication.adoc","notes":"Provides the public-key and signature context for key-based commitments."},
+    {"type":"book","title":"Mastering Bitcoin","url":"https://amzn.to/4ro0NdG","notes":"Long-form treatment of Bitcoin keys, commitments, and application constructions.","regionalUrls":{"BR":"https://amzn.to/4te47JX"}}
+  ],
+  "estimatedTime":"35m",
+  "tags":["contracts","keys","commitments","privacy","applications"],
+  "aliases":["P2C","pay-to-contract protocol","key tweak commitment"]
+}

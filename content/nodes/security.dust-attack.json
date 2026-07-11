@@ -1,0 +1,31 @@
+{
+  "id": "security.dust-attack",
+  "title": "Dust Attack",
+  "description": "A dust attack sends trace-value outputs to targets so later spending can link their wallets or contaminate coin-control decisions. It exploits the gap between a policy threshold for tiny outputs and the privacy meaning of spending them.",
+  "category": "Security",
+  "prerequisites": ["protocol.dust-policy", "privacy.pseudonymity"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: Dust Attack explained",
+      "url": "https://x.com/Bitcoin_Devs/status/1904946739603452376",
+      "notes": "Learner-facing explanation of dusting as a privacy attack."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Transactions",
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "notes": "Canonical context for dust thresholds and transaction output policy."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Reference background for UTXOs, transaction construction, and privacy tradeoffs.",
+      "regionalUrls": {"BR": "https://amzn.to/4te47JX"}
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": ["privacy", "utxos", "attacks"],
+  "aliases": ["dusting attack", "dust attack"]
+}

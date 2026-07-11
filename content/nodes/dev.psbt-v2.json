@@ -21,10 +21,13 @@
       "notes": "Defines PSBT v2 fields and behavior changes."
     },
     {
-      "type": "article",
-      "title": "Bitcoin Core Academy: Wallet Interfaces",
-      "url": "https://bitcoincore.academy/wallet-interfaces.html",
-      "notes": "Implementation context for wallet data flow and signing interfaces."
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad technical reference for the wallet, transaction, and protocol ideas that support this topic.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
     }
   ],
   "estimatedTime": "80m",
