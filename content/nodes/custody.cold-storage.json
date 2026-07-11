@@ -1,0 +1,45 @@
+{
+  "id": "custody.cold-storage",
+  "title": "Cold Storage",
+  "description": "A custody model that keeps spending keys offline while using an online or watch-only system to monitor balances and prepare unsigned transactions. Cold storage reduces remote attack exposure but shifts more responsibility to backups, recovery procedures, and secure offline signing.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.air-gapped-signing"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Cold storage",
+      "url": "https://en.bitcoin.it/wiki/Cold_storage",
+      "notes": "Overview of offline key custody, watch-only monitoring, and transaction transfer workflows."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Design: Private Key Management",
+      "url": "https://bitcoin.design/guide/how-it-works/private-key-management/overview/",
+      "notes": "Threat-model and UX guidance for separating key storage, transaction preparation, and signing."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Broad reference for wallet security, private-key handling, backups, and offline signing.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "custody",
+    "security",
+    "wallets"
+  ],
+  "aliases": [
+    "cold storage",
+    "cold wallet",
+    "offline wallet storage",
+    "offline key storage"
+  ]
+}
+

@@ -1,0 +1,32 @@
+{
+  "id": "dev.permissionless-development",
+  "title": "Permissionless Development",
+  "description": "Permissionless development means people can build wallets, protocols, tools, and services around Bitcoin without asking a central authority for approval. The permissionless boundary is constrained by the protocol's rules and users' voluntary adoption, not by a developer committee granting access.",
+  "category": "History & Governance",
+  "prerequisites": ["fundamentals.neutrality", "dev.bips-process"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Development Philosophy: Permissionless Development",
+      "url": "https://bitcoindevphilosophy.com/#permissionlessdevelopment",
+      "notes": "Explains permissionless participation by users, miners, and developers."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Development Philosophy: Neutrality",
+      "url": "https://bitcoindevphilosophy.com/#neutrality",
+      "notes": "Provides the adjacent protocol-neutrality context."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Long-form context for permissionless participation and development norms.",
+      "regionalUrls": {"BR": "https://amzn.to/4uRjb1v"}
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": ["development", "governance", "neutrality", "open-source"],
+  "aliases": ["permissionless development", "permissionless building", "permissionless innovation"]
+}
+

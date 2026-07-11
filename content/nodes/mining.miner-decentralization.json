@@ -1,0 +1,43 @@
+{
+  "id": "mining.miner-decentralization",
+  "title": "Miner Decentralization",
+  "description": "Miner decentralization means transaction ordering is performed by a changing, open set of miners rather than one coordinator. It limits censorship power, while independently validating nodes still determine whether proposed blocks obey consensus rules.",
+  "category": "Mining",
+  "prerequisites": [
+    "protocol.nodes-vs-miners",
+    "mining.pool-vs-solo"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Development Philosophy: Miner Decentralization",
+      "url": "https://bitcoindevphilosophy.com/#minerdecentralization",
+      "notes": "Explains why a dynamic, permissionless mining set protects transaction ordering from centralized censorship."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Whitepaper",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "notes": "Defines proof-of-work's distributed timestamping and longest-chain model."
+    },
+    {
+      "type": "article",
+      "title": "Stratum V2 Specification",
+      "url": "https://stratumprotocol.org/specification/",
+      "notes": "Implementation context for mining-pool protocols and job negotiation; not required to understand the broader concept."
+    },
+    {
+      "type": "book",
+      "title": "Bitcoin Development Philosophy",
+      "url": "https://amzn.to/4s33eUd",
+      "notes": "Long-form treatment of decentralization, censorship resistance, and the distinct roles of miners and full nodes.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4uRjb1v"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": ["mining", "decentralization", "censorship-resistance", "governance"],
+  "aliases": ["mining decentralization", "hashrate decentralization", "decentralized transaction ordering"]
+}
+

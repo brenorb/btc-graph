@@ -1,0 +1,44 @@
+{
+  "id": "protocol.proof-of-payment",
+  "title": "Proof of Payment",
+  "description": "Proof of Payment is a wallet-generated transaction-shaped proof that demonstrates control of the credentials needed to spend the inputs of a prior payment, without exposing a password or personal identity.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 120: Proof of Payment",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0120.mediawiki",
+      "notes": "Specification for generating and validating a one-time proof tied to a previous payment."
+    },
+    {
+      "type": "article",
+      "title": "BIP 121: Proof of Payment URI Scheme",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0121.mediawiki",
+      "notes": "Historical companion for transporting proof-of-payment requests."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background on transaction authorization, signatures, and wallet-controlled credentials.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "payments",
+    "wallets",
+    "signatures",
+    "authentication"
+  ],
+  "aliases": [
+    "PoP",
+    "proof of payment protocol"
+  ]
+}
+

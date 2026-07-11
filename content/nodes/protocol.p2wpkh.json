@@ -1,0 +1,46 @@
+{
+  "id": "protocol.p2wpkh",
+  "title": "Pay-to-Witness-Public-Key-Hash (P2WPKH)",
+  "description": "SegWit version-0 output that commits to a 20-byte public-key hash and places the spending signature and public key in the witness. P2WPKH reduces transaction weight and avoids the legacy txid malleability problem while preserving the familiar single-key payment model.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.segregated-witness",
+    "protocol.p2pkh"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 141: Pay-to-Witness-Public-Key-Hash",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki#pay-to-witness-public-key-hash",
+      "notes": "Canonical definition of the v0 witness program and its spending rules."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Address",
+      "url": "https://en.bitcoin.it/wiki/Address#Pay_to_Witness_Public_Key_Hash",
+      "notes": "Address-level explanation of native SegWit P2WPKH outputs."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Explains native SegWit addresses, witness programs, and P2WPKH transaction structure.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "segwit",
+    "addresses",
+    "scripts"
+  ],
+  "aliases": [
+    "p2wpkh",
+    "pay to witness public key hash",
+    "native segwit single-key output",
+    "segwit v0 key-hash output"
+  ]
+}
+

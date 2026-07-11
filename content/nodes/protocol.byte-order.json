@@ -1,0 +1,46 @@
+{
+  "id": "protocol.byte-order",
+  "title": "Bitcoin Byte Order",
+  "description": "Bitcoin serializes many numeric fields in little-endian byte order while commonly displaying hashes and identifiers in reversed human-readable order. Keeping wire order separate from display order prevents parsing and transaction-construction errors.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.transaction-lifecycle"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Learn Me a Bitcoin: Byte Order",
+      "url": "https://learnmeabitcoin.com/technical/general/byte-order/",
+      "notes": "Practical explanation of little-endian serialization and reversed hash display."
+    },
+    {
+      "type": "article",
+      "title": "Learn Me a Bitcoin: Little Endian",
+      "url": "https://learnmeabitcoin.com/technical/general/little-endian/",
+      "notes": "Concrete examples of converting numbers and byte sequences in Bitcoin data."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Hands-on context for serializing integers, hashes, transactions, and block data.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "serialization",
+    "endianness",
+    "transactions",
+    "parsing"
+  ],
+  "aliases": [
+    "byte order",
+    "little endian",
+    "little-endian encoding",
+    "hash byte order"
+  ]
+}
+

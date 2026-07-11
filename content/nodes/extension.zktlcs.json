@@ -1,0 +1,45 @@
+{
+  "id": "extension.zktlcs",
+  "title": "Zero-Knowledge Time-Locked Contracts",
+  "description": "Zero-Knowledge Time-Locked Contracts (ZKTLCs) combine timeout-tree ownership virtualization with BitVM-style disprovable computation, allowing a participant to challenge incorrect execution while retaining a unilateral timeout exit.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "extension.timeout-trees",
+    "extension.bitvm"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Cube Bitcoin Repository",
+      "url": "https://github.com/cube-btc/cube",
+      "notes": "Implementation context for Cube's Bitcoin-native programmable execution and challenge-response design."
+    },
+    {
+      "type": "article",
+      "title": "BitVM",
+      "url": "https://bitvm.org/",
+      "notes": "Primary reference for optimistic, challengeable computation anchored to Bitcoin."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for Bitcoin Script, transactions, and the settlement layer.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "75m",
+  "tags": [
+    "bitcoin-l2",
+    "bitvm",
+    "contracts",
+    "zk"
+  ],
+  "aliases": [
+    "ZKTLCs",
+    "ZK time-locked contracts",
+    "zero-knowledge time-locked contracts"
+  ]
+}

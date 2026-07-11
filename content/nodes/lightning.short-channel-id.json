@@ -1,0 +1,46 @@
+{
+  "id": "lightning.short-channel-id",
+  "title": "Short Channel IDs",
+  "description": "A Short Channel ID compactly identifies a Lightning channel's funding output by encoding its block height, transaction index, and output index. It lets gossip messages refer to the same on-chain channel without repeating the full transaction outpoint.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.payment-channels",
+    "protocol.block-height"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 07: Short Channel ID",
+      "url": "https://github.com/lightning/bolts/blob/master/07-routing-gossip.md#definition-of-short_channel_id",
+      "notes": "Canonical encoding and use of the identifier in Lightning gossip."
+    },
+    {
+      "type": "article",
+      "title": "BOLT 03: Funding Transaction Output",
+      "url": "https://github.com/lightning/bolts/blob/master/03-transactions.md#funding-transaction-output",
+      "notes": "Connects the identifier to the on-chain funding output that creates a channel."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Technical background for channel identifiers, gossip, and Lightning routing.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "lightning",
+    "channels",
+    "gossip",
+    "identifiers"
+  ],
+  "aliases": [
+    "short_channel_id",
+    "SCID",
+    "short channel identifier"
+  ]
+}
+

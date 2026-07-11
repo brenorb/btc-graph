@@ -1,0 +1,46 @@
+{
+  "id": "protocol.confidential-transactions",
+  "title": "Confidential Transactions",
+  "description": "Confidential Transactions hide transaction amounts and selected asset information while preserving verifiability through cryptographic commitments and range proofs. Elements and Liquid use this model as a core privacy and asset-transfer feature.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "fundamentals.commitment-schemes"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Liquid Technical Overview",
+      "url": "https://docs.liquid.net/docs/technical-overview",
+      "notes": "Official overview of Liquid's confidential transactions and issued-asset model."
+    },
+    {
+      "type": "article",
+      "title": "Elements Repository",
+      "url": "https://github.com/ElementsProject/elements",
+      "notes": "Open-source platform implementation and technical documentation."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for cryptographic commitments, transaction validation, and Bitcoin's UTXO model.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "60m",
+  "tags": [
+    "privacy",
+    "commitments",
+    "range-proofs",
+    "liquid",
+    "elements"
+  ],
+  "aliases": [
+    "Confidential Transactions",
+    "confidential assets",
+    "CT"
+  ]
+}
+

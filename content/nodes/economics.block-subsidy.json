@@ -1,0 +1,38 @@
+{
+  "id": "economics.block-subsidy",
+  "title": "Block Subsidy",
+  "description": "The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.",
+  "category": "Economics & Incentives",
+  "prerequisites": [
+    "protocol.coinbase-transaction"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Reference for mining rewards, coinbase transactions, and Bitcoin's issuance schedule.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Developer Guide: Block Chain",
+      "url": "https://developer.bitcoin.org/devguide/block_chain.html",
+      "notes": "Explains block validation and the coinbase reward."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "issuance",
+    "mining",
+    "monetary-policy"
+  ],
+  "aliases": [
+    "mining subsidy",
+    "block reward subsidy",
+    "new bitcoin issuance"
+  ]
+}
+

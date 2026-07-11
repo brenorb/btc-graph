@@ -1,0 +1,36 @@
+{
+  "id": "protocol.generalized-covenants",
+  "title": "Generalized Covenants",
+  "description": "Generalized covenants are covenant designs that can express broad constraints over future transaction structure rather than one narrowly defined spending pattern. They provide a useful boundary for comparing flexible introspection mechanisms with restricted covenant proposals such as CTV or vault-specific constructions.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.covenants"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Covenants Research Compilation",
+      "url": "https://bitcoincovenants.com/",
+      "notes": "Defines generalized versus restricted covenants and surveys the main construction families."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Covenants",
+      "url": "https://bitcoinops.org/en/topics/covenants/",
+      "notes": "Current technical context for covenant proposals and tradeoffs."
+    },
+    {
+      "type": "book",
+      "title": "Programming Bitcoin",
+      "url": "https://amzn.to/4b5xUhC",
+      "notes": "Background for Script, signatures, and transaction construction.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4lX5bzw"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": ["covenants", "script", "transaction-introspection", "protocol-design"],
+  "aliases": ["generalized covenant", "general covenants"]
+}
+

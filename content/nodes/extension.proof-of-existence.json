@@ -1,0 +1,44 @@
+{
+  "id": "extension.proof-of-existence",
+  "title": "Proof of Existence and Timestamping",
+  "description": "Proof-of-existence protocols commit evidence to Bitcoin so anyone can later verify that a document or statement existed no later than a particular time, without storing the entire document on-chain.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "fundamentals.commitment-schemes"
+  ],
+  "resources": [
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background for hashes, commitments, transactions, and Bitcoin data anchoring.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    },
+    {
+      "type": "article",
+      "title": "OpenTimestamps",
+      "url": "https://opentimestamps.org/",
+      "notes": "Open protocol and implementation for decentralized timestamp proofs."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Genesis Block",
+      "url": "https://developer.bitcoin.org/reference/block_chain.html",
+      "notes": "Historical example of a time-bound message embedded in Bitcoin's launch block."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "commitments",
+    "timestamping",
+    "applications"
+  ],
+  "aliases": [
+    "proof of existence",
+    "Bitcoin timestamping",
+    "OpenTimestamps"
+  ]
+}
+

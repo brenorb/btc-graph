@@ -1,0 +1,45 @@
+{
+  "id": "protocol.coinbase-maturity",
+  "title": "Coinbase Maturity",
+  "description": "Newly mined coinbase outputs cannot be spent until 100 blocks have been added after the containing block. This consensus rule protects the spendability of mining rewards while short-lived reorganizations are still possible.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.coinbase-transaction",
+    "fundamentals.settlement-assurances"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Wiki: Confirmation",
+      "url": "https://en.bitcoin.it/wiki/Confirmation#Number_of_Confirmations",
+      "notes": "Documents the 100-confirmation maturity rule for coinbase transactions."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core: Consensus Code",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/src/validation.cpp",
+      "notes": "Implementation reference for coinbase-spend validation and maturity enforcement."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Explains coinbase transactions, block rewards, confirmations, and reorganization risk.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "20m",
+  "tags": [
+    "consensus",
+    "mining",
+    "coinbase"
+  ],
+  "aliases": [
+    "coinbase maturity",
+    "100 block coinbase maturity",
+    "maturity period for mined coins"
+  ]
+}
+

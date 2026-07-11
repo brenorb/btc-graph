@@ -1,0 +1,46 @@
+{
+  "id": "lightning.encrypted-authenticated-transport",
+  "title": "Lightning Encrypted and Authenticated Transport",
+  "description": "How Lightning peers use the Noise_XK handshake and elliptic-curve Diffie–Hellman to authenticate node identities, derive session keys, and protect framed messages with authenticated encryption.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "fundamentals.public-private-keys",
+    "fundamentals.diffie-hellman-key-exchange"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BOLT 08: Encrypted and Authenticated Transport",
+      "url": "https://github.com/lightning/bolts/blob/master/08-transport.md",
+      "notes": "Canonical Lightning transport specification covering Noise_XK, key derivation, ChaCha20-Poly1305, and framed message protection."
+    },
+    {
+      "type": "article",
+      "title": "The Noise Protocol Framework",
+      "url": "https://noiseprotocol.org/noise.html",
+      "notes": "Reference for the handshake patterns and authenticated key exchange model used by BOLT 08."
+    },
+    {
+      "type": "book",
+      "title": "Mastering the Lightning Network",
+      "url": "https://amzn.to/40V421t",
+      "notes": "Broader context for Lightning peer connections and protocol security.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4v6P9aq"
+      }
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "lightning",
+    "transport",
+    "encryption",
+    "authentication"
+  ],
+  "aliases": [
+    "BOLT 08 transport",
+    "Lightning Noise transport",
+    "Lightning encrypted transport"
+  ]
+}
+
