@@ -250,7 +250,7 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (85 concepts)
+Protocol & Consensus (86 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -290,6 +290,7 @@ Protocol & Consensus (85 concepts)
 - Merkelized Alternative Script Trees (MAST): MAST commits to multiple Bitcoin Script spending branches in a Merkle tree while revealing only the branch used to spend. It reduces revealed policy and witness data without hiding the committed alternatives from verification.
 - MuSig: MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
+- OP_CHECKCONTRACTVERIFY (BIP 443): OP_CHECKCONTRACTVERIFY is a proposed covenant opcode for constructing state-carrying outputs and vault-like spending policies. It generalizes the covenant capabilities needed by OP_VAULT while supporting broader contract patterns.
 - OP_CHECKMULTISIG: Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.
 - OP_CHECKSIGADD: OP_CHECKSIGADD accumulates signature checks and supports Schnorr multisignature constructions in Tapscript. It simplifies threshold policies compared with legacy CHECKMULTISIG patterns.
 - OP_CHECKSIGFROMSTACK: OP_CHECKSIGFROMSTACK verifies signatures over stack-provided messages instead of transaction fields alone. It is a common building block in advanced covenant proposal discussions.
