@@ -1210,6 +1210,23 @@
       "conceptsExtracted": 14,
       "conceptsNormalized": 1,
       "notes": "Added OP_CHECKCONTRACTVERIFY (BIP 443). CTV, APO, OP_VAULT, OP_CAT, TXHASH, OP_CHECKSIGFROMSTACK, Eltoo/LN-Symmetry, PTLCs, timeout trees, payment pools, and recursive covenants already exist. LNHANCE and BIP 446/448 are proposal bundles or competing implementations and remain source context. Activation status is time-sensitive and should not be hard-coded into node descriptions."
+    },
+    {
+      "id": "source.lopp-lightning-information",
+      "name": "Jameson Lopp Lightning Network Resource Index",
+      "url": "https://www.lopp.net/lightning-information.html",
+      "sourceType": "lightning-resource-index",
+      "priority": "P0",
+      "scope": "Curated Lightning educational resources covering history, technical specifications, developer documentation, tools, node operations, liquidity and routing, wallets, implementations, applications, merchant adoption, economics, legal context, and research.",
+      "clusterStrategy": "Review the index by learner-facing concept and Lightning architecture. Reuse existing payment-channel, routing, liquidity, invoice, BOLT, privacy, watchtower, jamming, swap, and extension nodes. Keep wallets, node implementations, LDK/WebLN libraries, LSPs, dashboards, hosted services, directories, and individual applications as resources or implementation context rather than project-wrapper nodes.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 18,
+      "conceptsExtracted": 40,
+      "conceptsNormalized": 0,
+      "notes": "The index is primarily a curated resource hub. LNURL is already represented by extension.lnurl, and Lightning Address is covered by custody.human-readable-addresses alongside BIP 353 and other readable payment handles. Existing graph coverage includes BOLTs, payment channels, routing, onion routing, invoices, BOLT 12, liquidity, swaps, watchtowers, channel jamming, PTLCs, Eltoo, channel factories, and Lightning-related extensions. WebLN, LDK, Core Lightning, Eclair, LND, Rust Lightning, LSPs, Lightning Loop/Pool, wallets, node managers, explorers, merchant tools, and named applications remain resources or implementation surfaces; no additional atomic learner-facing node was justified by this index alone."
     }
   ],
   "concepts": [
@@ -7219,6 +7236,29 @@
       "relatedConceptIds": ["protocol.op-checkcontractverify","protocol.covenants","protocol.op-checktemplateverify","protocol.anyprevout","protocol.op-cat","protocol.txhash","security.op-vault","lightning.eltoo"],
       "relatedSourceIds": ["source.spark-covenant-proposals-compared"],
       "notes": "Add OP_CHECKCONTRACTVERIFY (BIP 443). Keep LNHANCE, BIP 446, and BIP 448 as source context; activation and miner-signaling claims remain time-sensitive and are not encoded as graph facts."
+    },
+    {
+      "id": "decision.lopp-lightning-information-slice",
+      "type": "scope",
+      "subject": "source.lopp-lightning-information",
+      "status": "resolved",
+      "rationale": "This page is a broad curated directory rather than a single technical specification. The graph should use it as a gap detector and resource index, adding only concepts with an independent learner outcome and deduplicating against the existing Lightning and wallet graph.",
+      "relatedConceptIds": [
+        "extension.lnurl",
+        "custody.human-readable-addresses",
+        "lightning.payment-channels",
+        "lightning.routing",
+        "lightning.liquidity",
+        "lightning.watchtowers",
+        "lightning.channel-jamming",
+        "lightning.bolt12-offers",
+        "lightning.eltoo",
+        "lightning.ptlc"
+      ],
+      "relatedSourceIds": [
+        "source.lopp-lightning-information"
+      ],
+      "notes": "No new node was added. LNURL and Lightning Address are already represented. Keep WebLN, LDK, node implementations, LSPs, Lightning Loop/Pool, wallets, dashboards, explorers, merchant tools, and named applications as resources or implementation context unless a future source establishes a distinct conceptual learning outcome."
     }
   ]
 }
