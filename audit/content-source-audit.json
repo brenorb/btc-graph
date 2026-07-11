@@ -1074,6 +1074,23 @@
       "conceptsExtracted": 8,
       "conceptsNormalized": 4,
       "notes": "Added Elements, Liquid Network, and Confidential Transactions. Generic sidechains remains the direct context for Elements; Liquid-specific peg, federation, L-BTC, and issued-asset workflows remain inside the protocol node."
+    },
+    {
+      "id": "source.lopp-bitcoin-history",
+      "name": "Jameson Lopp Bitcoin History Resource Index",
+      "url": "https://www.lopp.net/bitcoin-information/history.html",
+      "sourceType": "history-resource-index",
+      "priority": "P1",
+      "scope": "Historical readings, timelines, development logs, Satoshi archives, security incidents, books, and scaling-debate resources related to Bitcoin's prehistory and evolution.",
+      "clusterStrategy": "Review the index by historical theme rather than importing every linked article: prehistory and cypherpunk roots, Satoshi and early Bitcoin, consensus forks and scaling, development process, security incidents, and custody incidents.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 8,
+      "conceptsExtracted": 22,
+      "conceptsNormalized": 14,
+      "notes": "No new learner-facing node was required. High-signal history is already represented by pre-Bitcoin digital cash, cypherpunk roots, Satoshi Nakamoto, Early Bitcoin History, Genesis Block, Soft Forks vs Hard Forks, SegWit/UASF/Taproot activation, Block Size War, Chain Split Risk, historical consensus bugs, Reorgs and Finality, and Bitcoin Narrative Cycles. Exchange hacks, Silk Road, obituaries, memes, private-key challenges, and individual biographies remain context or product-specific material. Hardware-wallet incident links are tracked as input to issue #26 rather than as a new historical node."
     }
   ],
   "concepts": [
@@ -6994,6 +7011,16 @@
       "relatedConceptIds": ["extension.rgb","extension.client-side-validation","extension.elements","extension.liquid","protocol.confidential-transactions","extension.sidechains"],
       "relatedSourceIds": ["source.rgb-protocol","source.liquid-elements"],
       "notes": "Add RGB, Elements, Liquid, and Confidential Transactions. Keep RGB consignments/schemas/APIs and Liquid peg, federation, L-BTC, and individual assets inside the protocol nodes and resources."
+    },
+    {
+      "id": "decision.lopp-bitcoin-history-inventory",
+      "type": "inventory",
+      "subject": "source.lopp-bitcoin-history",
+      "status": "resolved",
+      "rationale": "The Lopp page is a curated index of historical resources. Its main learning outcomes are already represented across the graph, while importing every linked event, person, book, hack, or cultural artifact would create non-atomic and product-specific nodes.",
+      "relatedConceptIds": ["history.pre-bitcoin-digital-cash","history.cypherpunk-roots-bitcoin-origin","history.satoshi-nakamoto","history.early-bitcoin","history.genesis-block","protocol.softfork-hardfork","history.segwit-activation","history.user-activated-soft-fork","history.taproot-activation","history.block-size-war","protocol.chain-split-risk","protocol.64-byte-transaction-bug","protocol.duplicate-transaction-bug","protocol.reorgs-finality","history.bitcoin-narrative-cycles","dev.review-culture","security.responsible-disclosure"],
+      "relatedSourceIds": ["source.lopp-bitcoin-history"],
+      "notes": "No new node added. Keep the index as a source hub; use its hardware-wallet-hack links to inform the separate hardware-wallet coverage review in issue #26."
     }
   ]
 }
