@@ -4206,6 +4206,49 @@
       ]
     },
     {
+      "id": "extension.cross-chain-bridges",
+      "title": "Cross-Chain Bridges",
+      "description": "Cross-chain bridges move or represent assets between Bitcoin and other networks using custodians, federations, multisig committees, light-client proofs, or cryptographic verification. Their security depends on the bridge mechanism rather than Bitcoin alone.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.sidechains"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Layer Two Resources",
+          "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+          "notes": "Curated overview of bridge designs including Interlay, Threshold, and Wrapped Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "Interlay",
+          "url": "https://www.interlay.io/",
+          "notes": "Example of a trust-minimized cross-chain Bitcoin bridge design."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin transactions, multisig, and cross-system trust assumptions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "55m",
+      "tags": [
+        "bridges",
+        "cross-chain",
+        "sidechains",
+        "custody"
+      ],
+      "aliases": [
+        "Bitcoin bridges",
+        "cross-chain bridge security"
+      ]
+    },
+    {
       "id": "extension.cube",
       "title": "Cube",
       "description": "Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.",
@@ -4280,6 +4323,50 @@
       ],
       "aliases": [
         "dlcs"
+      ]
+    },
+    {
+      "id": "extension.drivechains",
+      "title": "Drivechains",
+      "description": "Drivechains are a sidechain design that uses blind merged mining and a miner-mediated withdrawal mechanism to move value between Bitcoin and an auxiliary chain. The design trades federation trust for miner governance and new consensus assumptions.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.sidechains",
+        "mining.merge-mining"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Drivechain Information",
+          "url": "https://www.drivechain.info/",
+          "notes": "Primary overview of the drivechain proposal and its miner-mediated peg model."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Layer Two Resources",
+          "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+          "notes": "Curated context for drivechains among Bitcoin layer designs."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for sidechains, mining, and Bitcoin settlement.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "bitcoin-l2",
+        "sidechains",
+        "merged-mining",
+        "peg"
+      ],
+      "aliases": [
+        "drivechain",
+        "drivechains"
       ]
     },
     {
@@ -4786,6 +4873,50 @@
       ]
     },
     {
+      "id": "extension.rollups",
+      "title": "Bitcoin Rollups",
+      "description": "Bitcoin rollups execute transactions or contracts off-chain and commit compressed state data or validity evidence to Bitcoin. They aim to scale execution while inheriting selected settlement or verification guarantees from the base layer.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "fundamentals.zero-knowledge-proofs",
+        "extension.sidechains"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Rollups",
+          "url": "https://bitcoinrollups.org/",
+          "notes": "Dedicated overview of validity-rollup designs for Bitcoin."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Layer Two Resources",
+          "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+          "notes": "Curated entry point to rollups and related Bitcoin layers."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin settlement, transactions, and layer architecture.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "60m",
+      "tags": [
+        "bitcoin-l2",
+        "rollups",
+        "zero-knowledge",
+        "scaling"
+      ],
+      "aliases": [
+        "Bitcoin rollup",
+        "validity rollups"
+      ]
+    },
+    {
       "id": "extension.sidechains",
       "title": "Sidechains",
       "description": "Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.",
@@ -4862,6 +4993,49 @@
         "single use seals",
         "UTXO seals",
         "outpoint seals"
+      ]
+    },
+    {
+      "id": "extension.softchains",
+      "title": "Softchains",
+      "description": "Softchains are a proposed Bitcoin layer design in which an auxiliary chain is anchored to Bitcoin through a soft-fork-compatible mechanism. The design explores stronger Bitcoin enforcement while preserving separate execution environments.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.sidechains"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Layer Two Resources",
+          "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+          "notes": "Curated entry point to the softchain proposal and related layer designs."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Covenants",
+          "url": "https://bitcoinops.org/en/topics/covenants/",
+          "notes": "Background for Bitcoin-enforced spending constraints used by proposed layer designs."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for Bitcoin consensus, Script, and sidechain tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "45m",
+      "tags": [
+        "bitcoin-l2",
+        "sidechains",
+        "soft-forks",
+        "covenants"
+      ],
+      "aliases": [
+        "softchain",
+        "softchains"
       ]
     },
     {
@@ -4945,6 +5119,50 @@
       "aliases": [
         "Spark Bitcoin L2",
         "Spark statechain protocol"
+      ]
+    },
+    {
+      "id": "extension.spiderchains",
+      "title": "Spiderchains",
+      "description": "Spiderchains are a proposed Bitcoin sidechain architecture that uses a network of collateralized multisig operators and Bitcoin transactions to coordinate sidechain state and peg operations.",
+      "category": "Extension Systems",
+      "prerequisites": [
+        "extension.sidechains",
+        "custody.multisig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Spiderchain Whitepaper",
+          "url": "https://www.lopp.net/pdf/botanix-spiderchain-whitepaper.pdf",
+          "notes": "Primary design reference for the spiderchain architecture."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Layer Two Resources",
+          "url": "https://www.lopp.net/bitcoin-information/other-layers.html",
+          "notes": "Curated context for spiderchains among Bitcoin layer designs."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Background for sidechains, multisig, and Bitcoin transaction settlement.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "50m",
+      "tags": [
+        "bitcoin-l2",
+        "sidechains",
+        "multisig",
+        "peg"
+      ],
+      "aliases": [
+        "spiderchain",
+        "spiderchains"
       ]
     },
     {

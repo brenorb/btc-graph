@@ -59,10 +59,11 @@ Economics & Incentives (2 concepts)
 - Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
 - Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 
-Extension Systems (67 concepts)
+Extension Systems (72 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
 - Bitchat: Bitchat refers to Bitcoin-adjacent peer messaging experiments that emphasize local relay, mesh-style propagation, and censorship resistance. It is useful as a social-layer coordination complement to monetary protocols.
 - Bitcoin Layers: How the base layer, payment channels, and higher-layer protocols compose a layered system.
+- Bitcoin Rollups: Bitcoin rollups execute transactions or contracts off-chain and commit compressed state data or validity evidence to Bitcoin. They aim to scale execution while inheriting selected settlement or verification guarantees from the base layer.
 - Bitcoin-Backed Ecash Systems: Bitcoin-backed ecash mints use blind signatures to trade trust assumptions for fast, private transfers with low on-chain overhead. Understanding mint trust models is critical before treating balances as final.
 - BitVM: BitVM enables optimistic computation protocols anchored to Bitcoin settlement. It trades covenant requirements for interactive proofs and operational complexity.
 - BOLT12 Offers: Next-generation Lightning request format for reusable, richer, and more private payment intents.
@@ -75,8 +76,10 @@ Extension Systems (67 concepts)
 - Coinswaps: Coinswaps exchange control of UTXOs between parties without creating obvious on-chain links. They aim to improve privacy beyond straightforward CoinJoin heuristics.
 - Commitment Output Scripts: Lightning commitment transactions pay balances through distinct to_local and to_remote output scripts. The to_local branch uses a revocable CSV-delayed script, while the to_remote branch captures the immediately spendable counterparty output, including the modern static_remotekey pattern.
 - Congestion-Control Trees: Congestion-control trees pre-structure exits so many users can settle efficiently during fee spikes. They prioritize predictable emergency paths over flexible ad hoc spending.
+- Cross-Chain Bridges: Cross-chain bridges move or represent assets between Bitcoin and other networks using custodians, federations, multisig committees, light-client proofs, or cryptographic verification. Their security depends on the bridge mechanism rather than Bitcoin alone.
 - Cube: Cube is a Bitcoin-native Layer 2 and virtual machine for trustless smart-contract execution. It combines ZKTLCs, timeout-tree exits, and Bitcoin data availability so users can retain unilateral control without a trusted custodian.
 - Discreet Log Contracts (DLCs): DLCs settle oracle-based outcomes using signature-based cryptographic tricks instead of on-chain scripting branches. They provide private, efficient contract settlement with clear oracle assumptions.
+- Drivechains: Drivechains are a sidechain design that uses blind merged mining and a miner-mediated withdrawal mechanism to move value between Bitcoin and an auxiliary chain. The design trades federation trust for miner governance and new consensus assumptions.
 - Dual-Funded Channels: Dual funding allows both channel peers to contribute inputs during channel opening. It improves liquidity symmetry and reduces one-sided capital requirements.
 - Elements Platform: Elements is an open-source Bitcoin-derived blockchain platform for building sidechains and application-specific networks. It extends Bitcoin-style transactions with features such as confidential transactions, issued assets, and federation-based interoperability.
 - Eltoo Channel Updates: Eltoo is a Lightning update design that simplifies penalty logic with replaceable state updates. It depends on ANYPREVOUT-style signature semantics.
@@ -118,8 +121,10 @@ Extension Systems (67 concepts)
 - Short Channel IDs: A Short Channel ID compactly identifies a Lightning channel's funding output by encoding its block height, transaction index, and output index. It lets gossip messages refer to the same on-chain channel without repeating the full transaction outpoint.
 - Sidechains: Sidechains move specific execution or policy experiments off the main chain while maintaining some Bitcoin anchoring. The security model depends heavily on peg design and federation or miner assumptions.
 - Single-Use Seals: A single-use seal binds an offchain state transition to a UTXO that can be spent only once. Spending the outpoint closes the old seal and prevents the same state transition from being valid twice.
+- Softchains: Softchains are a proposed Bitcoin layer design in which an auxiliary chain is anchored to Bitcoin through a soft-fork-compatible mechanism. The design explores stronger Bitcoin enforcement while preserving separate execution environments.
 - Spacechains: Spacechains anchor external consensus data to Bitcoin while preserving independent execution environments. They use Bitcoin finality as a settlement root without full smart-contract expressiveness.
 - Spark Protocol: Spark is a Bitcoin Layer 2 protocol built on statechain ideas. It transfers off-chain representations of bitcoin without bilateral payment-channel management, using a distributed operator set and threshold-signature coordination while supporting Lightning interoperability and offline receiving.
+- Spiderchains: Spiderchains are a proposed Bitcoin sidechain architecture that uses a network of collateralized multisig operators and Bitcoin transactions to coordinate sidechain state and peg operations.
 - Statechains: Statechains transfer control of pre-funded outputs between participants with minimal on-chain activity. Their trust and liveness assumptions differ from Lightning and covenant trees.
 - Submarine Swaps: Submarine swaps atomically bridge on-chain and Lightning balances using hashlock and timelock constructions. They enable non-custodial liquidity transitions across layers.
 - The Great Script Restoration: The Great Script Restoration revisits disabled Script capabilities for modern Bitcoin use. Its scope includes carefully re-evaluating opcodes such as OP_CAT.
