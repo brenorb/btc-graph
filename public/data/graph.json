@@ -12903,6 +12903,51 @@
       ]
     },
     {
+      "id": "protocol.byte-order",
+      "title": "Bitcoin Byte Order",
+      "description": "Bitcoin serializes many numeric fields in little-endian byte order while commonly displaying hashes and identifiers in reversed human-readable order. Keeping wire order separate from display order prevents parsing and transaction-construction errors.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Learn Me a Bitcoin: Byte Order",
+          "url": "https://learnmeabitcoin.com/technical/general/byte-order/",
+          "notes": "Practical explanation of little-endian serialization and reversed hash display."
+        },
+        {
+          "type": "article",
+          "title": "Learn Me a Bitcoin: Little Endian",
+          "url": "https://learnmeabitcoin.com/technical/general/little-endian/",
+          "notes": "Concrete examples of converting numbers and byte sequences in Bitcoin data."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Hands-on context for serializing integers, hashes, transactions, and block data.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "serialization",
+        "endianness",
+        "transactions",
+        "parsing"
+      ],
+      "aliases": [
+        "byte order",
+        "little endian",
+        "little-endian encoding",
+        "hash byte order"
+      ]
+    },
+    {
       "id": "protocol.chain-split-risk",
       "title": "Chain Split Risk",
       "description": "Chain split risk is the ecosystem cost created when a contentious protocol upgrade leaves incompatible rule sets active at the same time. Persistent splits can impose replay, reorg, infrastructure, and coordination costs even when each side keeps producing blocks.",
@@ -13250,6 +13295,50 @@
       "aliases": [
         "compact blocks",
         "bip152"
+      ]
+    },
+    {
+      "id": "protocol.compact-size-encoding",
+      "title": "CompactSize Encoding",
+      "description": "CompactSize is Bitcoin's variable-length integer encoding for counts and byte lengths in serialized protocol data. Understanding its prefixes is necessary for parsing transaction, block, script, and network messages correctly.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.transaction-lifecycle"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Learn Me a Bitcoin: Compact Size",
+          "url": "https://learnmeabitcoin.com/technical/general/compact-size/",
+          "notes": "Visual explanation of Bitcoin's variable-length integer format and decoding rules."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Developer Documentation: Serialization",
+          "url": "https://developer.bitcoin.org/reference/transactions.html",
+          "notes": "Reference context for CompactSize fields in transaction serialization."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Hands-on treatment of parsing and serializing Bitcoin transaction data.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "serialization",
+        "transactions",
+        "protocol",
+        "parsing"
+      ],
+      "aliases": [
+        "compact size",
+        "compact-size integer",
+        "var_int"
       ]
     },
     {

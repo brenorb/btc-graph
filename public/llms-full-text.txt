@@ -250,12 +250,13 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (86 concepts)
+Protocol & Consensus (88 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
 - Bare Multisig Standardness: Bare multisig outputs are consensus-valid, but default relay policy treats larger bare multisig cases as non-standard and prefers script-hash-based multisig in practice. This distinction matters when reasoning about what the network will relay versus what Script can theoretically validate.
 - Bech32m Addresses: Bech32m is the checksum format used for native segregated witness addresses with version 1 and higher. It preserves the human-readable, error-detecting structure of Bech32 while changing the checksum constant so wallets can distinguish newer witness versions such as Taproot from version-0 segwit addresses.
+- Bitcoin Byte Order: Bitcoin serializes many numeric fields in little-endian byte order while commonly displaying hashes and identifiers in reversed human-readable order. Keeping wire order separate from display order prevents parsing and transaction-construction errors.
 - Bitcoin Covenants: Covenants constrain how coins can be spent in future transactions. They enable advanced contract constructions such as vaults, payment pools, and congestion-control trees.
 - Bitcoin Script: Locking and unlocking conditions for UTXO spending.
 - Bitcoin URI Scheme (BIP21): BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.
@@ -268,6 +269,7 @@ Protocol & Consensus (86 concepts)
 - CHECKSEQUENCEVERIFY (BIP 112): Script opcode that enforces relative locktime conditions using sequence-based spending constraints.
 - Coinbase Transaction: Special first transaction in each block that collects subsidy and transaction fees.
 - Commit-Delay-Reveal Protocol: A commit-delay-reveal protocol commits to a value, waits through a delay, and reveals it later so participants cannot adapt their choice after seeing other commitments. The pattern composes cryptographic commitments with timing and coordination rules.
+- CompactSize Encoding: CompactSize is Bitcoin's variable-length integer encoding for counts and byte lengths in serialized protocol data. Understanding its prefixes is necessary for parsing transaction, block, script, and network messages correctly.
 - Confidential Transactions: Confidential Transactions hide transaction amounts and selected asset information while preserving verifiability through cryptographic commitments and range proofs. Elements and Liquid use this model as a core privacy and asset-transfer feature.
 - Consensus Rules: Validation rules that define Bitcoin’s canonical state.
 - CPFP Carve-Out Policy: CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.
