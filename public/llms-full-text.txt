@@ -250,7 +250,7 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (83 concepts)
+Protocol & Consensus (85 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -281,6 +281,7 @@ Protocol & Consensus (83 concepts)
 - Escrow and Arbitration: Escrow and arbitration uses a 2-of-3 multisig contract where buyer, seller, and arbitrator can resolve payment outcomes without trusting one party alone. It shows how P2SH multisig can encode conditional dispute resolution directly in Bitcoin spending paths.
 - Fee Calculation: Bitcoin transaction fees are the difference between total input value and total output value. To reason about whether a fee is high or low in practice, learners also need to relate that absolute fee to transaction weight and virtual bytes.
 - Fee Sponsorship: Fee sponsorship lets one party help another transaction confirm without directly modifying the original spend. It is part of a broader package-relay design space for contract reliability.
+- Generalized Covenants: Generalized covenants are covenant designs that can express broad constraints over future transaction structure rather than one narrowly defined spending pattern. They provide a useful boundary for comparing flexible introspection mechanisms with restricted covenant proposals such as CTV or vault-specific constructions.
 - Generic Signed Message Format: BIP 322 uses virtual transactions to prove that a signer can satisfy a Bitcoin scriptPubKey for a message without spending or broadcasting funds.
 - Halving Cycle: Programmed issuance reductions and long-term security implications.
 - Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.
@@ -304,6 +305,7 @@ Protocol & Consensus (83 concepts)
 - Proof of Payment: Proof of Payment is a wallet-generated transaction-shaped proof that demonstrates control of the credentials needed to spend the inputs of a prior payment, without exposing a password or personal identity.
 - Proof of Work: Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.
 - Quadratic SIGHASH Hashing Cost: Legacy signature hashing repeated transaction-wide work for each input, creating quadratic validation cost as transactions grew. Cached digest designs such as BIP 143 address this performance failure while preserving signature-commitment semantics.
+- Recursive Covenants: Recursive covenants are spending constraints that reproduce or preserve covenant conditions in the outputs created by a spend. They can enforce rules across repeated transaction generations and therefore introduce distinct liveness, escape, and complexity tradeoffs.
 - Reorgs and Finality: Probabilistic finality and chain reorganization behavior.
 - Script Execution Stack: Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.
 - Script Timelocks: Timelock primitives used to constrain when funds can be spent in script contracts.

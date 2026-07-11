@@ -13998,6 +13998,49 @@
       ]
     },
     {
+      "id": "protocol.generalized-covenants",
+      "title": "Generalized Covenants",
+      "description": "Generalized covenants are covenant designs that can express broad constraints over future transaction structure rather than one narrowly defined spending pattern. They provide a useful boundary for comparing flexible introspection mechanisms with restricted covenant proposals such as CTV or vault-specific constructions.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Covenants Research Compilation",
+          "url": "https://bitcoincovenants.com/",
+          "notes": "Defines generalized versus restricted covenants and surveys the main construction families."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Covenants",
+          "url": "https://bitcoinops.org/en/topics/covenants/",
+          "notes": "Current technical context for covenant proposals and tradeoffs."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Background for Script, signatures, and transaction construction.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "covenants",
+        "script",
+        "transaction-introspection",
+        "protocol-design"
+      ],
+      "aliases": [
+        "generalized covenant",
+        "general covenants"
+      ]
+    },
+    {
       "id": "protocol.generic-signed-messages",
       "title": "Generic Signed Message Format",
       "description": "BIP 322 uses virtual transactions to prove that a signer can satisfy a Bitcoin scriptPubKey for a message without spending or broadcasting funds.",
@@ -15328,6 +15371,49 @@
       ],
       "aliases": [
         "rbf"
+      ]
+    },
+    {
+      "id": "protocol.recursive-covenants",
+      "title": "Recursive Covenants",
+      "description": "Recursive covenants are spending constraints that reproduce or preserve covenant conditions in the outputs created by a spend. They can enforce rules across repeated transaction generations and therefore introduce distinct liveness, escape, and complexity tradeoffs.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.covenants"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Covenants Research Compilation",
+          "url": "https://bitcoincovenants.com/",
+          "notes": "Defines recursive covenants and places them in the broader covenant design space."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech: Covenants",
+          "url": "https://bitcoinops.org/en/topics/covenants/",
+          "notes": "Technical context for covenant recursion, exits, and application tradeoffs."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Background for Script, transaction outputs, and spending conditions.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "covenants",
+        "recursive",
+        "script",
+        "transaction-introspection"
+      ],
+      "aliases": [
+        "recursive covenant",
+        "covenant recursion"
       ]
     },
     {
