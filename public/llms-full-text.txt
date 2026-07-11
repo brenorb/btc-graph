@@ -133,7 +133,7 @@ Extension Systems (72 concepts)
 - Watchtowers: Penalty transaction protection in offline scenarios.
 - Zero-Knowledge Time-Locked Contracts: Zero-Knowledge Time-Locked Contracts (ZKTLCs) combine timeout-tree ownership virtualization with BitVM-style disprovable computation, allowing a participant to challenge incorrect execution while retaining a unilateral timeout exit.
 
-History & Governance (31 concepts)
+History & Governance (32 concepts)
 - Accidental Confiscation: Accidental confiscation is the risk that a poorly designed soft fork makes previously spendable coins effectively unspendable. It is most acute for reserved upgrade features, presigned transactions, and hidden committed scripts whose future constraints may change.
 - BIPs Process: How proposals become standards and deployment conventions.
 - Bitcoin and Anarchism: Bitcoin governance is not a voting democracy; validity is enforced by voluntary rule-following nodes rather than ballots. This aligns with anarchist and cypherpunk ideas about non-coercive coordination.
@@ -148,6 +148,7 @@ History & Governance (31 concepts)
 - Cypherpunk Roots and Bitcoin Origin: Bitcoin emerged from cypherpunk ideas about privacy, digital cash, and open-source coordination. This topic connects pre-Bitcoin experiments to the 2008-2009 launch context.
 - Double-Spend Problem: Why digital scarcity is hard and what constraints must be solved.
 - Early Bitcoin History: From launch to early adoption cycles and network maturation.
+- Economic Majority: The economic majority is the set of participants willing and able to accept Bitcoin in exchange for goods, services, or other currencies. This governance theory argues that miners cannot successfully impose a protocol change that the economically relevant users reject, because those users can refuse to recognize the resulting chain or assign it economic value.
 - Genesis Block: Bitcoin’s launch context and embedded design signals.
 - GPU-to-ASIC Transition: Historical shift from hobbyist GPU mining to specialized ASIC hardware and its decentralization consequences.
 - Monetary Contact Shocks: When previously separate civilizations begin trading, a local money can lose scarcity if outsiders replicate it at lower cost. This helps explain monetary inflation episodes tied to technology and trade contact.

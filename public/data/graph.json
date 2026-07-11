@@ -7521,6 +7521,41 @@
       ]
     },
     {
+      "id": "history.economic-majority",
+      "title": "Economic Majority",
+      "description": "The economic majority is the set of participants willing and able to accept Bitcoin in exchange for goods, services, or other currencies. This governance theory argues that miners cannot successfully impose a protocol change that the economically relevant users reject, because those users can refuse to recognize the resulting chain or assign it economic value.",
+      "category": "History & Governance",
+      "prerequisites": [
+        "protocol.nodes-vs-miners",
+        "economics.schelling-points"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Wiki: Economic Majority",
+          "url": "https://en.bitcoin.it/wiki/Economic_majority",
+          "notes": "Original formulation of the theory and its relationship to miner incentives, merchants, and protocol changes."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Wiki: Full Node",
+          "url": "https://en.bitcoin.it/wiki/Full_node",
+          "notes": "Related discussion of economic strength and why economic participants benefit from independently verifying the rules."
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "governance",
+        "economics",
+        "consensus"
+      ],
+      "aliases": [
+        "economic majority",
+        "economic actors in bitcoin",
+        "merchant majority"
+      ]
+    },
+    {
       "id": "history.genesis-block",
       "title": "Genesis Block",
       "description": "Bitcoin’s launch context and embedded design signals.",
