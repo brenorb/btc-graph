@@ -161,7 +161,7 @@ History & Governance (31 concepts)
 - User-Activated Soft Fork (UASF): How node operators coordinated policy to enforce soft-fork activation during the SegWit era.
 - Version Bits Signaling: Miner signaling mechanism for coordinated soft-fork deployment using block version fields.
 
-Mining (23 concepts)
+Mining (24 concepts)
 - 51% Attack Model: Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.
 - ASICBoost: ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.
 - ASICs: ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.
@@ -173,6 +173,7 @@ Mining (23 concepts)
 - Fee Sniping: Miner strategy of re-mining recent blocks to capture high-fee transactions, with reorg and incentive tradeoffs.
 - GetBlockTemplate Workflow: How miners request candidate block templates and construct valid block submissions.
 - Grid Balancing and Demand Response: Flexible mining loads can curtail or ramp based on grid conditions and price signals. This introduces potential value in balancing intermittent generation and constrained transmission.
+- Merged Mining: Merged mining lets miners use the same proof-of-work to secure more than one compatible blockchain. An auxiliary chain can accept work demonstrated by a parent-chain block, allowing miners to earn additional rewards without proportionally increasing hashing work.
 - Miner Decentralization: Miner decentralization means transaction ordering is performed by a changing, open set of miners rather than one coordinator. It limits censorship power, while independently validating nodes still determine whether proposed blocks obey consensus rules.
 - Mining Economics: Revenue, opex, capex, and fee dependence over time.
 - Mining Energy Accounting: Energy analysis depends on boundaries and assumptions, especially the difference between marginal and average accounting. Good analysis distinguishes physical grid effects from narrative shortcuts.

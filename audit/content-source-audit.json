@@ -1125,6 +1125,23 @@
       "conceptsExtracted": 16,
       "conceptsNormalized": 10,
       "notes": "No new learner-facing node was required. Existing coverage includes Properties of Money, Scarcity and Sound Money, Monetary Premium, Monetization Process, Bitcoin Supply and Demand, Block Subsidy, Halving Cycle, Volatility Psychology and Risk Sizing, Savings vs Investment, and Token/Altcoin context. Price targets, stock-to-flow and Metcalfe-style forecasts, corporate treasury case studies, and individual portfolio recommendations remain models or context rather than stable Bitcoin prerequisites."
+    },
+    {
+      "id": "source.lopp-bitcoin-mining",
+      "name": "Jameson Lopp Bitcoin Mining Resource Index",
+      "url": "https://www.lopp.net/bitcoin-information/mining.html",
+      "sourceType": "mining-resource-index",
+      "priority": "P1",
+      "scope": "Curated Bitcoin mining explainers, mining hardware and pool resources, profitability tools, energy research, security analysis, timestamping, and merged-mining references.",
+      "clusterStrategy": "Review the index by mining concept: proof-of-work and security, hardware and pool operations, mining economics, energy and externalities, attacks, and auxiliary proof-of-work. Keep calculators, dashboards, vendors, and hosted-mining services as resources rather than nodes.",
+      "status": "Complete",
+      "crawlStatus": "Complete",
+      "extractionStatus": "Normalized",
+      "dedupeStatus": "Complete",
+      "pageClustersTracked": 6,
+      "conceptsExtracted": 18,
+      "conceptsNormalized": 1,
+      "notes": "Added Merged Mining as the only new learner-facing concept. Proof of Work, 51% attacks, ASICs, pool/solo mining, mining economics, energy accounting, environmental tradeoffs, miner decentralization, block timestamping, and long-term security budget already exist. Hashprice, calculators, pool monitors, cloud-mining providers, and company research remain operational resources."
     }
   ],
   "concepts": [
@@ -7075,6 +7092,16 @@
       "relatedConceptIds": ["fundamentals.money-properties","economics.scarcity","economics.monetary-premium","economics.monetization-process","economics.bitcoin-supply-demand","economics.block-subsidy","protocol.halving","economics.volatility-psychology-risk-sizing","economics.savings-vs-investment","economics.token-basics"],
       "relatedSourceIds": ["source.lopp-bitcoin-investment-theses"],
       "notes": "No new node added. Keep the index as a curated source hub for economic context; do not treat it as financial advice or a source of canonical price predictions."
+    },
+    {
+      "id": "decision.lopp-bitcoin-mining-slice",
+      "type": "scope",
+      "subject": "mining.merge-mining",
+      "status": "resolved",
+      "rationale": "Merged mining is a distinct mining and security mechanism: one proof-of-work process can secure multiple compatible chains. It has an independent learning outcome and is not represented by generic proof-of-work, pool mining, or sidechains alone.",
+      "relatedConceptIds": ["mining.merge-mining","protocol.proof-of-work","mining.pool-vs-solo","extension.sidechains","mining.51-percent-attack"],
+      "relatedSourceIds": ["source.lopp-bitcoin-mining"],
+      "notes": "Add Merged Mining. Keep hashprice, difficulty estimators, profitability calculators, monitors, hosted-mining companies, and energy datasets as resources or operational context."
     }
   ]
 }
