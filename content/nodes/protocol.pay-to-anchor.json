@@ -1,0 +1,43 @@
+{
+  "id": "protocol.pay-to-anchor",
+  "title": "Pay to Anchor",
+  "description": "Pay to Anchor is a keyless witness output pattern that leaves a compact fee-bumping hook in a transaction so a later child can improve confirmation without requiring privileged key material.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.ephemeral-anchors"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 433: Pay to Anchor",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0433.mediawiki",
+      "notes": "Draft specification for the keyless P2A output and its standard relay behavior."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech: Pay to Anchor",
+      "url": "https://bitcoinops.org/en/topics/ephemeral-anchors/",
+      "notes": "Optech groups P2A with ephemeral anchors and documents the fee-bumping context."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Background on Bitcoin outputs, transaction fees, and child-pays-for-parent fee bumping.",
+      "regionalUrls": {
+        "BR": "https://amzn.to/4te47JX"
+      }
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "outputs",
+    "fee bumping",
+    "mempool",
+    "relay"
+  ],
+  "aliases": [
+    "P2A",
+    "pay-to-anchor output"
+  ]
+}
