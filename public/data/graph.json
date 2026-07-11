@@ -9364,6 +9364,49 @@
       ]
     },
     {
+      "id": "mining.selfish-mining",
+      "title": "Selfish Mining",
+      "description": "Selfish mining is an incentive attack in which miners withhold privately found blocks and reveal them strategically to gain a chain-selection and propagation advantage over honest miners.",
+      "category": "Mining",
+      "prerequisites": [
+        "mining.pool-vs-solo",
+        "protocol.reorgs-finality"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: Selfish Mining explained simply",
+          "url": "https://x.com/Bitcoin_Devs/status/1975289920634925475",
+          "notes": "Learner-facing explanation of the withholding strategy and incentive attack."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Core Academy: P2P Attacks",
+          "url": "https://bitcoincore.academy/p2p-attacks.html",
+          "notes": "Attack-model context for mining and network behavior."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Reference background for proof of work, mining incentives, and chain selection.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "40m",
+      "tags": [
+        "mining",
+        "incentives",
+        "attacks"
+      ],
+      "aliases": [
+        "selfish mining attack",
+        "block withholding for chain advantage"
+      ]
+    },
+    {
       "id": "mining.stale-blocks",
       "title": "Stale Blocks",
       "description": "Why valid blocks can become stale due to propagation races and how relay improvements reduce this risk.",
@@ -12149,6 +12192,48 @@
       ]
     },
     {
+      "id": "protocol.commit-delay-reveal",
+      "title": "Commit-Delay-Reveal Protocol",
+      "description": "A commit-delay-reveal protocol commits to a value, waits through a delay, and reveals it later so participants cannot adapt their choice after seeing other commitments. The pattern composes cryptographic commitments with timing and coordination rules.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.commitment-schemes"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: Commit-Delay-Reveal Protocol explained",
+          "url": "https://x.com/Bitcoin_Devs/status/1931775486449103086",
+          "notes": "Learner-facing explanation of the CDR protocol pattern."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topics",
+          "url": "https://bitcoinops.org/en/topics/",
+          "notes": "Canonical source index for Bitcoin protocol proposals that use commitment and reveal patterns."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Reference background for commitments, scripts, and Bitcoin protocol coordination.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "commitments",
+        "protocols",
+        "coordination"
+      ],
+      "aliases": [
+        "CDR protocol",
+        "commit delay reveal"
+      ]
+    },
+    {
       "id": "protocol.compact-block-filters",
       "title": "Compact Block Filters",
       "description": "Client-side block filtering protocol for light clients without full bloom-filter leakage patterns.",
@@ -13188,6 +13273,51 @@
       "aliases": [
         "spv trust model",
         "light wallet trust model"
+      ]
+    },
+    {
+      "id": "protocol.mast",
+      "title": "Merkelized Alternative Script Trees (MAST)",
+      "description": "MAST commits to multiple Bitcoin Script spending branches in a Merkle tree while revealing only the branch used to spend. It reduces revealed policy and witness data without hiding the committed alternatives from verification.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "fundamentals.merkle-trees",
+        "protocol.script"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: MAST explained simply",
+          "url": "https://x.com/Bitcoin_Devs/status/1998431297333501989",
+          "notes": "Short learner-facing explanation of Merkleized Alternative Script Trees."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: MAST",
+          "url": "https://bitcoinops.org/en/topics/mast/",
+          "notes": "Technical context for script-tree commitments and selective branch revelation."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Worked background on Bitcoin scripts, hashing, and Merkle commitments.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "scripts",
+        "merkle",
+        "privacy",
+        "contracts"
+      ],
+      "aliases": [
+        "MAST",
+        "merkelized alternative script tree",
+        "Merkelized Alternative Script Tree"
       ]
     },
     {
@@ -14483,6 +14613,49 @@
       "aliases": [
         "signature hash types",
         "anyonecanpay"
+      ]
+    },
+    {
+      "id": "protocol.sighash-quadratic-hashing",
+      "title": "Quadratic SIGHASH Hashing Cost",
+      "description": "Legacy signature hashing repeated transaction-wide work for each input, creating quadratic validation cost as transactions grew. Cached digest designs such as BIP 143 address this performance failure while preserving signature-commitment semantics.",
+      "category": "Protocol & Consensus",
+      "prerequisites": [
+        "protocol.sighash-flags"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: Quadratic Sighash problem explained",
+          "url": "https://x.com/Bitcoin_Devs/status/1987562939109306699",
+          "notes": "Learner-facing explanation of the historical O(n^2) hashing problem."
+        },
+        {
+          "type": "article",
+          "title": "BIP 143: Transaction Signature Verification",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+          "notes": "Defines the digest structure and cached components that avoid repeated hashing work."
+        },
+        {
+          "type": "book",
+          "title": "Programming Bitcoin",
+          "url": "https://amzn.to/4b5xUhC",
+          "notes": "Background on transaction digests and signature verification.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4lX5bzw"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "sighash",
+        "performance",
+        "consensus"
+      ],
+      "aliases": [
+        "quadratic hashing problem",
+        "quadratic SIGHASH",
+        "O(n^2) SIGHASH"
       ]
     },
     {
@@ -15901,6 +16074,49 @@
       ]
     },
     {
+      "id": "security.dust-attack",
+      "title": "Dust Attack",
+      "description": "A dust attack sends trace-value outputs to targets so later spending can link their wallets or contaminate coin-control decisions. It exploits the gap between a policy threshold for tiny outputs and the privacy meaning of spending them.",
+      "category": "Security",
+      "prerequisites": [
+        "protocol.dust-policy",
+        "privacy.pseudonymity"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: Dust Attack explained",
+          "url": "https://x.com/Bitcoin_Devs/status/1904946739603452376",
+          "notes": "Learner-facing explanation of dusting as a privacy attack."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Developer Guide: Transactions",
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "notes": "Canonical context for dust thresholds and transaction output policy."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Reference background for UTXOs, transaction construction, and privacy tradeoffs.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "30m",
+      "tags": [
+        "privacy",
+        "utxos",
+        "attacks"
+      ],
+      "aliases": [
+        "dusting attack",
+        "dust attack"
+      ]
+    },
+    {
       "id": "security.eclipse-attacks",
       "title": "Eclipse Attacks",
       "description": "Eclipse attacks isolate a node from honest peers to manipulate its view of the network. Mitigation requires peer diversity, routing hygiene, and robust eviction policy.",
@@ -16102,6 +16318,48 @@
       ],
       "aliases": [
         "coordinated disclosure"
+      ]
+    },
+    {
+      "id": "security.rogue-key-attack",
+      "title": "Rogue-Key Attack",
+      "description": "A rogue-key attack exploits naive public-key aggregation by choosing a related key that cancels another participant's key, making an aggregate signature appear authorized without the intended cooperation. Key aggregation protocols need binding or proof-of-possession defenses.",
+      "category": "Security",
+      "prerequisites": [
+        "protocol.musig"
+      ],
+      "resources": [
+        {
+          "type": "article",
+          "title": "Bitcoin Dev Project: Schnorr rogue-key attack explained",
+          "url": "https://x.com/Bitcoin_Devs/status/1976008010108678258",
+          "notes": "Learner-facing explanation of the key-aggregation attack."
+        },
+        {
+          "type": "article",
+          "title": "Bitcoin Optech Topic: MuSig",
+          "url": "https://bitcoinops.org/en/topics/musig/",
+          "notes": "Technical context for key aggregation and rogue-key defenses in multisignature constructions."
+        },
+        {
+          "type": "book",
+          "title": "Mastering Bitcoin",
+          "url": "https://amzn.to/4ro0NdG",
+          "notes": "Reference background for Schnorr signatures and multisignature coordination.",
+          "regionalUrls": {
+            "BR": "https://amzn.to/4te47JX"
+          }
+        }
+      ],
+      "estimatedTime": "35m",
+      "tags": [
+        "schnorr",
+        "multisig",
+        "security"
+      ],
+      "aliases": [
+        "rogue key attack",
+        "key aggregation rogue-key attack"
       ]
     }
   ]

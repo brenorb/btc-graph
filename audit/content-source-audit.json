@@ -204,112 +204,588 @@
       "extractionStatus": "Raw extraction",
       "dedupeStatus": "In progress",
       "pageClustersTracked": 34,
-      "conceptsExtracted": 6,
-      "conceptsNormalized": 6,
+      "conceptsExtracted": 34,
+      "conceptsNormalized": 34,
       "notes": "Reopened after audit correction. The authenticated X search was enumerated on July 11, 2026 and currently exposes 34 matching posts, which are now tracked individually below. The earlier July 8 pass reported 43 posts but did not preserve one source row per post; that historical count remains unresolved until the current and prior inventories are reconciled. Existing normalized coverage includes time-warp attack, duplicate transaction bug, 64-byte transaction bug, nonce reuse, Lamport signatures, and Shamir's Secret Sharing."
     },
-    {
-      "id":"source.bitcoin-dev-project-post-2018682587045052753","name":"Bitcoin Dev Project: Coinjoin Explained","url":"https://x.com/Bitcoin_Devs/status/2018682587045052753","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Coinjoin Explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-2017223553708654888","name":"Bitcoin Dev Project: Full Node Architecture Explained","url":"https://x.com/Bitcoin_Devs/status/2017223553708654888","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Full Node Architecture Explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-2016929384389890484","name":"Bitcoin Dev Project: SHA-256 Message Schedule Explained","url":"https://x.com/Bitcoin_Devs/status/2016929384389890484","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: SHA-256 explained Part 2: Message Schedule."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-2012233826504933706","name":"Bitcoin Dev Project: SHA-256 Explained","url":"https://x.com/Bitcoin_Devs/status/2012233826504933706","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: SHA-256 explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1998431297333501989","name":"Bitcoin Dev Project: MAST Explained","url":"https://x.com/Bitcoin_Devs/status/1998431297333501989","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: MAST (Merkelized Alternative Script Tree) explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1993443012748415027","name":"Bitcoin Dev Project: CPFP Explained","url":"https://x.com/Bitcoin_Devs/status/1993443012748415027","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Child-Pays-For-Parent transaction explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1987562939109306699","name":"Bitcoin Dev Project: Quadratic SIGHASH Problem Explained","url":"https://x.com/Bitcoin_Devs/status/1987562939109306699","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Quadratic Sighash problem O(n^2) explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1982189369684336693","name":"Bitcoin Dev Project: BIP 158 Compact Block Filters Explained","url":"https://x.com/Bitcoin_Devs/status/1982189369684336693","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: BIP 158: Compact Block Filters explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1981761265036144901","name":"Bitcoin Dev Project: Duplicate Transaction Merkle Root Collision Explained","url":"https://x.com/Bitcoin_Devs/status/1981761265036144901","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: CVE-2012-2459: Duplicate Transaction Merkle Root Collision Explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1980708369620168949","name":"Bitcoin Dev Project: Discreet Log Contracts Explained","url":"https://x.com/Bitcoin_Devs/status/1980708369620168949","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Discreet Log Contracts (DLC) explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1977486634536104288","name":"Bitcoin Dev Project: Y2038 Problem Explained","url":"https://x.com/Bitcoin_Devs/status/1977486634536104288","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: The Y2038 problem explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1977053708065423446","name":"Bitcoin Dev Project: Nonce Reuse Attack Explained","url":"https://x.com/Bitcoin_Devs/status/1977053708065423446","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Nonce Reuse Attack explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1976762610948198707","name":"Bitcoin Dev Project: MuSig2 Explained","url":"https://x.com/Bitcoin_Devs/status/1976762610948198707","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: MuSig2 explained simply; two-round Schnorr signature protocol."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1976416447577665743","name":"Bitcoin Dev Project: MuSig Explained","url":"https://x.com/Bitcoin_Devs/status/1976416447577665743","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: MuSig explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1976008010108678258","name":"Bitcoin Dev Project: Schnorr Rogue-Key Attack Explained","url":"https://x.com/Bitcoin_Devs/status/1976008010108678258","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Schnorr signatures: Rogue key attack explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1975289920634925475","name":"Bitcoin Dev Project: Selfish Mining Explained","url":"https://x.com/Bitcoin_Devs/status/1975289920634925475","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Selfish Mining explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1966579053076337056","name":"Bitcoin Dev Project: SIGHASH Explained","url":"https://x.com/Bitcoin_Devs/status/1966579053076337056","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: SigHash explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1962245647261745216","name":"Bitcoin Dev Project: Transaction Pinning Explained","url":"https://x.com/Bitcoin_Devs/status/1962245647261745216","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Transaction Pinning explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1961882664803209229","name":"Bitcoin Dev Project: SegWit Explained","url":"https://x.com/Bitcoin_Devs/status/1961882664803209229","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Segwit explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1956781577544896905","name":"Bitcoin Dev Project: WOTS+ Key Generation Explained","url":"https://x.com/Bitcoin_Devs/status/1956781577544896905","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: WOTS+ Key Generation explained; Part 4 of SPHINCS+."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1952320432033435819","name":"Bitcoin Dev Project: WOTS Explained","url":"https://x.com/Bitcoin_Devs/status/1952320432033435819","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: WOTS (Winternitz One-Time Signatures) explained; Part 3 of SPHINCS+."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1951962210902671675","name":"Bitcoin Dev Project: SPHINCS+ and Lamport Signatures Explained","url":"https://x.com/Bitcoin_Devs/status/1951962210902671675","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: SPHINCS+ explained; Part 2: Lamport Signatures."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1951704233742651737","name":"Bitcoin Dev Project: SPHINCS+ Explained","url":"https://x.com/Bitcoin_Devs/status/1951704233742651737","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: SPHINCS+ explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1946961429363327053","name":"Bitcoin Dev Project: Bitchat Explained","url":"https://x.com/Bitcoin_Devs/status/1946961429363327053","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Bitchat explained simply."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1945962367738601788","name":"Bitcoin Dev Project: Compact Block Filter Explained","url":"https://x.com/Bitcoin_Devs/status/1945962367738601788","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Compact Block Filter explained, Part 1."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1945645540152135684","name":"Bitcoin Dev Project: CPFP Explained, Earlier Post","url":"https://x.com/Bitcoin_Devs/status/1945645540152135684","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Child-Pays-For-Parent transaction explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1934578478575489365","name":"Bitcoin Dev Project: Lamport Signatures Explained","url":"https://x.com/Bitcoin_Devs/status/1934578478575489365","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Lamport Signatures Explained; quantum-resistant signature scheme."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1931775486449103086","name":"Bitcoin Dev Project: Commit-Delay-Reveal Protocol Explained","url":"https://x.com/Bitcoin_Devs/status/1931775486449103086","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Commit-Delay-Reveal (CDR) Protocol explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1905214178379362814","name":"Bitcoin Dev Project: CISA Full Aggregation Explained","url":"https://x.com/Bitcoin_Devs/status/1905214178379362814","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: CISA: Full-Aggregation explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1904946739603452376","name":"Bitcoin Dev Project: Dust Attack Explained","url":"https://x.com/Bitcoin_Devs/status/1904946739603452376","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Dust Attacked explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1904596944649150556","name":"Bitcoin Dev Project: CISA Half Signature Aggregation Explained","url":"https://x.com/Bitcoin_Devs/status/1904596944649150556","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: CISA Part 2: Half Signature Aggregation explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1904136400213340298","name":"Bitcoin Dev Project: CISA Explained","url":"https://x.com/Bitcoin_Devs/status/1904136400213340298","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: CISA (Cross Input Signature Aggregation) explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1903881770204070155","name":"Bitcoin Dev Project: Transaction Pinning Attack Explained","url":"https://x.com/Bitcoin_Devs/status/1903881770204070155","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: Transaction Pinning Attack explained."
-    },
-    {
-      "id":"source.bitcoin-dev-project-post-1903150655071719663","name":"Bitcoin Dev Project: BIP 68 Sequence Number Explained","url":"https://x.com/Bitcoin_Devs/status/1903150655071719663","sourceType":"social-post","priority":"P1","scope":"One explained post from the Bitcoin Dev Project search family.","clusterStrategy":"Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.","status":"In review","crawlStatus":"Complete","extractionStatus":"Raw extraction","dedupeStatus":"In progress","pageClustersTracked":1,"conceptsExtracted":0,"conceptsNormalized":0,"notes":"Post title: BIP-68 (Sequence number) explained."
-    },
+{
+  "id": "source.bitcoin-dev-project-post-2018682587045052753",
+  "name": "Bitcoin Dev Project: Coinjoin Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/2018682587045052753",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Coinjoin Explained. Normalized as the canonical candidate for audit.post-2018682587045052753."
+},
+{
+  "id": "source.bitcoin-dev-project-post-2017223553708654888",
+  "name": "Bitcoin Dev Project: Full Node Architecture Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/2017223553708654888",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Full Node Architecture Explained. Normalized as the canonical candidate for audit.post-2017223553708654888."
+},
+{
+  "id": "source.bitcoin-dev-project-post-2016929384389890484",
+  "name": "Bitcoin Dev Project: SHA-256 Message Schedule Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/2016929384389890484",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: SHA-256 explained Part 2: Message Schedule. Normalized as the canonical candidate for audit.post-2016929384389890484."
+},
+{
+  "id": "source.bitcoin-dev-project-post-2012233826504933706",
+  "name": "Bitcoin Dev Project: SHA-256 Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/2012233826504933706",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: SHA-256 explained. Normalized as the canonical candidate for audit.post-2012233826504933706."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1998431297333501989",
+  "name": "Bitcoin Dev Project: MAST Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1998431297333501989",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: MAST (Merkelized Alternative Script Tree) explained simply. Normalized as the canonical candidate for audit.post-1998431297333501989."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1993443012748415027",
+  "name": "Bitcoin Dev Project: CPFP Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1993443012748415027",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Child-Pays-For-Parent transaction explained. Normalized as the canonical candidate for audit.post-1993443012748415027."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1987562939109306699",
+  "name": "Bitcoin Dev Project: Quadratic SIGHASH Problem Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1987562939109306699",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Quadratic Sighash problem O(n^2) explained. Normalized as the canonical candidate for audit.post-1987562939109306699."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1982189369684336693",
+  "name": "Bitcoin Dev Project: BIP 158 Compact Block Filters Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1982189369684336693",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: BIP 158: Compact Block Filters explained. Normalized as the canonical candidate for audit.post-1982189369684336693."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1981761265036144901",
+  "name": "Bitcoin Dev Project: Duplicate Transaction Merkle Root Collision Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1981761265036144901",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: CVE-2012-2459: Duplicate Transaction Merkle Root Collision Explained. Normalized as the canonical candidate for audit.post-1981761265036144901."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1980708369620168949",
+  "name": "Bitcoin Dev Project: Discreet Log Contracts Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1980708369620168949",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Discreet Log Contracts (DLC) explained simply. Normalized as the canonical candidate for audit.post-1980708369620168949."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1977486634536104288",
+  "name": "Bitcoin Dev Project: Y2038 Problem Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1977486634536104288",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: The Y2038 problem explained. Normalized as the canonical candidate for audit.post-1977486634536104288."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1977053708065423446",
+  "name": "Bitcoin Dev Project: Nonce Reuse Attack Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1977053708065423446",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Nonce Reuse Attack explained simply. Normalized as the canonical candidate for audit.post-1977053708065423446."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1976762610948198707",
+  "name": "Bitcoin Dev Project: MuSig2 Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1976762610948198707",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: MuSig2 explained simply; two-round Schnorr signature protocol. Normalized as the canonical candidate for audit.post-1976762610948198707."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1976416447577665743",
+  "name": "Bitcoin Dev Project: MuSig Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1976416447577665743",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: MuSig explained simply. Normalized as the canonical candidate for audit.post-1976416447577665743."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1976008010108678258",
+  "name": "Bitcoin Dev Project: Schnorr Rogue-Key Attack Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1976008010108678258",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Schnorr signatures: Rogue key attack explained. Normalized as the canonical candidate for audit.post-1976008010108678258."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1975289920634925475",
+  "name": "Bitcoin Dev Project: Selfish Mining Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1975289920634925475",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Selfish Mining explained simply. Normalized as the canonical candidate for audit.post-1975289920634925475."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1966579053076337056",
+  "name": "Bitcoin Dev Project: SIGHASH Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1966579053076337056",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: SigHash explained. Normalized as the canonical candidate for audit.post-1966579053076337056."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1962245647261745216",
+  "name": "Bitcoin Dev Project: Transaction Pinning Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1962245647261745216",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Transaction Pinning explained. Normalized as the canonical candidate for audit.post-1962245647261745216."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1961882664803209229",
+  "name": "Bitcoin Dev Project: SegWit Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1961882664803209229",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Segwit explained simply. Normalized as the canonical candidate for audit.post-1961882664803209229."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1956781577544896905",
+  "name": "Bitcoin Dev Project: WOTS+ Key Generation Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1956781577544896905",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: WOTS+ Key Generation explained; Part 4 of SPHINCS+. Normalized as the canonical candidate for audit.post-1956781577544896905."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1952320432033435819",
+  "name": "Bitcoin Dev Project: WOTS Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1952320432033435819",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: WOTS (Winternitz One-Time Signatures) explained; Part 3 of SPHINCS+. Normalized as the canonical candidate for audit.post-1952320432033435819."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1951962210902671675",
+  "name": "Bitcoin Dev Project: SPHINCS+ and Lamport Signatures Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1951962210902671675",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: SPHINCS+ explained; Part 2: Lamport Signatures. Normalized as the canonical candidate for audit.post-1951962210902671675."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1951704233742651737",
+  "name": "Bitcoin Dev Project: SPHINCS+ Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1951704233742651737",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: SPHINCS+ explained. Normalized as the canonical candidate for audit.post-1951704233742651737."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1946961429363327053",
+  "name": "Bitcoin Dev Project: Bitchat Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1946961429363327053",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Bitchat explained simply. Normalized as the canonical candidate for audit.post-1946961429363327053."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1945962367738601788",
+  "name": "Bitcoin Dev Project: Compact Block Filter Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1945962367738601788",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Compact Block Filter explained, Part 1. Normalized as the canonical candidate for audit.post-1945962367738601788."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1945645540152135684",
+  "name": "Bitcoin Dev Project: CPFP Explained, Earlier Post",
+  "url": "https://x.com/Bitcoin_Devs/status/1945645540152135684",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Child-Pays-For-Parent transaction explained. Normalized as the canonical candidate for audit.post-1945645540152135684."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1934578478575489365",
+  "name": "Bitcoin Dev Project: Lamport Signatures Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1934578478575489365",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Lamport Signatures Explained; quantum-resistant signature scheme. Normalized as the canonical candidate for audit.post-1934578478575489365."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1931775486449103086",
+  "name": "Bitcoin Dev Project: Commit-Delay-Reveal Protocol Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1931775486449103086",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Commit-Delay-Reveal (CDR) Protocol explained. Normalized as the canonical candidate for audit.post-1931775486449103086."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1905214178379362814",
+  "name": "Bitcoin Dev Project: CISA Full Aggregation Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1905214178379362814",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: CISA: Full-Aggregation explained. Normalized as the canonical candidate for audit.post-1905214178379362814."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1904946739603452376",
+  "name": "Bitcoin Dev Project: Dust Attack Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1904946739603452376",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Dust Attacked explained. Normalized as the canonical candidate for audit.post-1904946739603452376."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1904596944649150556",
+  "name": "Bitcoin Dev Project: CISA Half Signature Aggregation Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1904596944649150556",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: CISA Part 2: Half Signature Aggregation explained. Normalized as the canonical candidate for audit.post-1904596944649150556."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1904136400213340298",
+  "name": "Bitcoin Dev Project: CISA Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1904136400213340298",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: CISA (Cross Input Signature Aggregation) explained. Normalized as the canonical candidate for audit.post-1904136400213340298."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1903881770204070155",
+  "name": "Bitcoin Dev Project: Transaction Pinning Attack Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1903881770204070155",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: Transaction Pinning Attack explained. Normalized as the canonical candidate for audit.post-1903881770204070155."
+},
+{
+  "id": "source.bitcoin-dev-project-post-1903150655071719663",
+  "name": "Bitcoin Dev Project: BIP 68 Sequence Number Explained",
+  "url": "https://x.com/Bitcoin_Devs/status/1903150655071719663",
+  "sourceType": "social-post",
+  "priority": "P1",
+  "scope": "One explained post from the Bitcoin Dev Project search family.",
+  "clusterStrategy": "Normalize the post's atomic learning outcome against the existing graph and record any merge or exclusion.",
+  "status": "Complete",
+  "crawlStatus": "Complete",
+  "extractionStatus": "Normalized",
+  "dedupeStatus": "Complete",
+  "pageClustersTracked": 1,
+  "conceptsExtracted": 1,
+  "conceptsNormalized": 1,
+  "notes": "Post title: BIP-68 (Sequence number) explained. Normalized as the canonical candidate for audit.post-1903150655071719663."
+},
     {
       "id": "source.bitcoin-core-academy-wallet",
       "name": "Bitcoin Core Academy Wallet Internals",
@@ -3387,7 +3863,41 @@
     {"id":"extension.single-use-seals","title":"Single-Use Seals","category":"Extension Systems","sourceId":"source.mastering-bitcoin-book-map","sourceUrl":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","sourceContext":"Mastering Bitcoin chapter 14: UTXO single-use seals","existingNodeId":"","status":"new","atomicityRationale":"One bridge concept: an outpoint can bind an offchain state transition exactly once because it can only be spent once.","candidatePrerequisites":["protocol.utxo-model"],"chosenPrerequisites":["protocol.utxo-model"],"prerequisiteRationale":"The UTXO model supplies the one-time spend property that makes the seal meaningful.","aliases":["single use seals","UTXO seals","outpoint seals"],"tags":["utxos","commitments","assets","contracts"],"estimatedTime":"25m","confidence":"high","notes":"Added as the explicit bridge between UTXO semantics and client-side validation; do not hide the core invariant inside either neighbor."},
     {"id":"extension.client-side-validation","title":"Client-Side Validation","category":"Extension Systems","sourceId":"source.mastering-bitcoin-book-map","sourceUrl":"https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc","sourceContext":"Mastering Bitcoin chapter 14: client-side validation and single-use seals","existingNodeId":"","status":"new","atomicityRationale":"One application-layer validation model where recipients validate offchain asset history and rules, distinct from Bitcoin full-node validation.","candidatePrerequisites":["extension.single-use-seals","protocol.pay-to-contract","fundamentals.validation-sovereignty"],"chosenPrerequisites":["extension.single-use-seals","protocol.pay-to-contract"],"prerequisiteRationale":"Single-use seals provide the one-time transition invariant and P2C provides contract anchoring. Validation sovereignty is related Bitcoin-layer framing, not a direct prerequisite.","aliases":["recipient-side validation","client validated assets"],"tags":["assets","validation","utxos","contracts","rgb"],"estimatedTime":"40m","confidence":"high","notes":"Added after deduping against validation sovereignty and RGB-adjacent labels. It is a distinct application-layer model rather than a second full-node concept."},
     {"id":"protocol.taproot-control-blocks","title":"Taproot Control Blocks","category":"Protocol & Consensus","sourceId":"source.optech-schnorr-taproot-workshop","sourceUrl":"https://bitcoinops.org/en/schnorr-taproot-workshop/","sourceContext":"Taproot workshop script-path witness material","existingNodeId":"","status":"new","atomicityRationale":"A control block is the distinct witness object that binds a script-path reveal to a Taproot output using an internal key, parity bit, and proof path.","candidatePrerequisites":["protocol.taproot","protocol.tapleaf-inclusion-proofs","fundamentals.merkle-trees"],"chosenPrerequisites":["protocol.tapleaf-inclusion-proofs"],"prerequisiteRationale":"Tapleaf inclusion proofs already inherit the Taproot and Merkle-tree context, while supplying the proof-path model that control blocks extend.","aliases":["control block","taproot script-path control block"],"tags":["taproot","witness","scripts","merkle-proofs"],"estimatedTime":"30m","confidence":"high","notes":"Distinct from a tapleaf proof because it additionally carries internal-key and parity data; the Taproot edge is transitive and intentionally omitted."},
-    {"id":"dev.pseudonymous-development","title":"Pseudonymous Development","category":"History & Governance","sourceId":"source.bitcoin-dev-philosophy","sourceUrl":"https://bitcoindevphilosophy.com/#pseudonymousdevelopment","sourceContext":"Open Source chapter > Pseudonymous Development","existingNodeId":"","status":"new","atomicityRationale":"One contributor-governance concept: publishing and reviewing technical work under a pseudonym can reduce coercion risk while preserving accountability through public evidence and peer review.","candidatePrerequisites":["dev.review-culture","privacy.pseudonymity"],"chosenPrerequisites":["dev.review-culture"],"prerequisiteRationale":"Review culture supplies the accountability mechanism. Transaction pseudonymity is a related identity concept, but it is not required to understand why contributors may separate legal identity from technical authorship.","aliases":["pseudonymous contributors","developer pseudonymity"],"tags":["development","privacy","open-source","governance"],"estimatedTime":"25m","resourceCandidates":["https://bitcoindevphilosophy.com/#pseudonymousdevelopment","https://amzn.to/4s33eUd"],"confidence":"high","notes":"Added after checking privacy.pseudonymity, transaction privacy, and review-culture neighbors. Keep the node focused on contributor safety and merit-based evaluation rather than anonymous transactions."}
+    {"id":"dev.pseudonymous-development","title":"Pseudonymous Development","category":"History & Governance","sourceId":"source.bitcoin-dev-philosophy","sourceUrl":"https://bitcoindevphilosophy.com/#pseudonymousdevelopment","sourceContext":"Open Source chapter > Pseudonymous Development","existingNodeId":"","status":"new","atomicityRationale":"One contributor-governance concept: publishing and reviewing technical work under a pseudonym can reduce coercion risk while preserving accountability through public evidence and peer review.","candidatePrerequisites":["dev.review-culture","privacy.pseudonymity"],"chosenPrerequisites":["dev.review-culture"],"prerequisiteRationale":"Review culture supplies the accountability mechanism. Transaction pseudonymity is a related identity concept, but it is not required to understand why contributors may separate legal identity from technical authorship.","aliases":["pseudonymous contributors","developer pseudonymity"],"tags":["development","privacy","open-source","governance"],"estimatedTime":"25m","resourceCandidates":["https://bitcoindevphilosophy.com/#pseudonymousdevelopment","https://amzn.to/4s33eUd"],"confidence":"high","notes":"Added after checking privacy.pseudonymity, transaction privacy, and review-culture neighbors. Keep the node focused on contributor safety and merit-based evaluation rather than anonymous transactions."},
+    {"id":"privacy.coinjoin","title":"CoinJoin","category":"Security","sourceId":"source.bitcoin-dev-project-post-2018682587045052753","sourceUrl":"https://x.com/Bitcoin_Devs/status/2018682587045052753","sourceContext":"Coinjoin Explained","existingNodeId":"privacy.coinjoin","status":"existing","atomicityRationale":"The post teaches the existing collaborative transaction construction concept, not a narrower new protocol mechanism.","candidatePrerequisites":["privacy.coin-control","privacy.address-reuse"],"chosenPrerequisites":["privacy.coin-control","privacy.address-reuse"],"prerequisiteRationale":"Preserve the existing node's direct prerequisites.","aliases":["coinjoin"],"tags":["privacy","collaborative-transactions"],"estimatedTime":"60m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/2018682587045052753","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse existing node; do not clone a second CoinJoin explainer."},
+    {"id":"audit.post-2017223553708654888","title":"Full Node Architecture","category":"Network, Relay & Client Sync","sourceId":"source.bitcoin-dev-project-post-2017223553708654888","sourceUrl":"https://x.com/Bitcoin_Devs/status/2017223553708654888","sourceContext":"Full Node Architecture Explained","existingNodeId":"ops.full-node-vs-lightweight-wallet","status":"merge","atomicityRationale":"The post's architecture explanation is covered by the existing learner-facing full-node versus lightweight-wallet trust-model node.","candidatePrerequisites":["fundamentals.validation-sovereignty","protocol.light-client-trust-model"],"chosenPrerequisites":["fundamentals.validation-sovereignty","protocol.light-client-trust-model"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["full node architecture"],"tags":["nodes","verification","architecture"],"estimatedTime":"25m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/2017223553708654888","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Merge into ops.full-node-vs-lightweight-wallet; the function/architecture wording does not justify a duplicate node."},
+    {"id":"audit.post-2016929384389890484","title":"SHA-256 Message Schedule","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-2016929384389890484","sourceUrl":"https://x.com/Bitcoin_Devs/status/2016929384389890484","sourceContext":"SHA-256 explained Part 2: Message Schedule","existingNodeId":"fundamentals.hash-functions","status":"merge","atomicityRationale":"The message schedule is a subtopic of the existing hash-functions foundation and does not create a separate Bitcoin learner gap at this graph level.","candidatePrerequisites":["fundamentals.hash-functions"],"chosenPrerequisites":["fundamentals.hash-functions"],"prerequisiteRationale":"The existing node already covers the relevant primitive.","aliases":["SHA-256 message schedule"],"tags":["hashing","sha256"],"estimatedTime":"30m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/2016929384389890484","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Merge into fundamentals.hash-functions; do not create an implementation-detail node for the compression-function substep."},
+    {"id":"audit.post-2012233826504933706","title":"SHA-256","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-2012233826504933706","sourceUrl":"https://x.com/Bitcoin_Devs/status/2012233826504933706","sourceContext":"SHA-256 explained","existingNodeId":"fundamentals.hash-functions","status":"existing","atomicityRationale":"The post directly explains the existing hash-functions foundation.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No additional prerequisite is needed for an existing foundational node.","aliases":["SHA-256","sha256"],"tags":["hashing","sha256"],"estimatedTime":"30m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/2012233826504933706","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Reuse fundamentals.hash-functions."},
+    {"id":"protocol.mast","title":"Merkelized Alternative Script Trees (MAST)","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1998431297333501989","sourceUrl":"https://x.com/Bitcoin_Devs/status/1998431297333501989","sourceContext":"MAST explained simply","existingNodeId":"","status":"new","atomicityRationale":"MAST is one specific script-commitment idea: commit to multiple spending branches in a Merkle tree while revealing only the executed branch. It is broader than the TapTree implementation and distinct from generic Taproot script-path spending.","candidatePrerequisites":["fundamentals.merkle-trees","protocol.script"],"chosenPrerequisites":["fundamentals.merkle-trees","protocol.script"],"prerequisiteRationale":"Learners need both the Merkle commitment structure and Bitcoin Script branch model before selective branch revelation makes sense.","aliases":["MAST","merkelized alternative script tree","Merkelized Alternative Script Tree"],"tags":["scripts","merkle","privacy","contracts"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1998431297333501989","https://bitcoinops.org/en/topics/mast/","https://amzn.to/4b5xUhC"],"confidence":"medium","notes":"Add as a bridge concept only if the existing TapTree chain does not already provide this generic learning outcome; keep TapTree as the Taproot-specific realization."},
+    {"id":"audit.post-1993443012748415027","title":"Child Pays for Parent","category":"Network, Relay & Client Sync","sourceId":"source.bitcoin-dev-project-post-1993443012748415027","sourceUrl":"https://x.com/Bitcoin_Devs/status/1993443012748415027","sourceContext":"Child-Pays-For-Parent transaction explained","existingNodeId":"protocol.cpfp","status":"existing","atomicityRationale":"The post explains the existing CPFP fee-bumping strategy.","candidatePrerequisites":["protocol.fee-market"],"chosenPrerequisites":["protocol.fee-market"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["CPFP","child pays for parent"],"tags":["fees","mempool"],"estimatedTime":"55m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1993443012748415027","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.cpfp; this is a second explainer, not a new concept."},
+    {"id":"protocol.sighash-quadratic-hashing","title":"Quadratic SIGHASH Hashing Cost","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1987562939109306699","sourceUrl":"https://x.com/Bitcoin_Devs/status/1987562939109306699","sourceContext":"Quadratic Sighash problem O(n^2) explained","existingNodeId":"","status":"new","atomicityRationale":"One specific historical validation problem: legacy signature hashing repeats transaction-wide work for each input, creating quadratic verification cost and motivating cached digest designs.","candidatePrerequisites":["protocol.sighash-flags"],"chosenPrerequisites":["protocol.sighash-flags"],"prerequisiteRationale":"SIGHASH semantics supply the signature-digest context; the performance failure is a distinct consequence rather than a duplicate of the flag definitions.","aliases":["quadratic hashing problem","quadratic SIGHASH","O(n^2) SIGHASH"],"tags":["sighash","performance","consensus"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1987562939109306699","https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Add as a narrow historical/protocol bridge; do not model the internal hashing loop as a generic implementation node."},
+    {"id":"audit.post-1982189369684336693","title":"BIP 158 Compact Block Filters","category":"Network, Relay & Client Sync","sourceId":"source.bitcoin-dev-project-post-1982189369684336693","sourceUrl":"https://x.com/Bitcoin_Devs/status/1982189369684336693","sourceContext":"BIP 158: Compact Block Filters explained","existingNodeId":"protocol.compact-block-filters","status":"existing","atomicityRationale":"The post teaches the existing BIP 158 compact-filter protocol.","candidatePrerequisites":["dev.p2p-messages","protocol.block-structure"],"chosenPrerequisites":["dev.p2p-messages","protocol.block-structure"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["BIP 158","compact block filters"],"tags":["light-clients","filters","p2p"],"estimatedTime":"70m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1982189369684336693","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.compact-block-filters."},
+    {"id":"audit.post-1981761265036144901","title":"Duplicate Transaction Merkle Root Collision","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1981761265036144901","sourceUrl":"https://x.com/Bitcoin_Devs/status/1981761265036144901","sourceContext":"CVE-2012-2459 duplicate transaction Merkle root collision explained","existingNodeId":"protocol.duplicate-transaction-bug","status":"merge","atomicityRationale":"The collision is a concrete manifestation of the existing duplicate-transaction consensus bug family, not a separate learner outcome at the current graph granularity.","candidatePrerequisites":["protocol.coinbase-transaction","protocol.utxo-model"],"chosenPrerequisites":["protocol.coinbase-transaction","protocol.utxo-model"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["CVE-2012-2459","Merkle root collision"],"tags":["consensus","merkle","security"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1981761265036144901","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Merge into protocol.duplicate-transaction-bug and preserve the CVE as an alias/resource context."},
+    {"id":"extension.discreet-log-contracts","title":"Discreet Log Contracts","category":"Extension Systems","sourceId":"source.bitcoin-dev-project-post-1980708369620168949","sourceUrl":"https://x.com/Bitcoin_Devs/status/1980708369620168949","sourceContext":"Discreet Log Contracts explained simply","existingNodeId":"extension.discreet-log-contracts","status":"existing","atomicityRationale":"The post explains the existing DLC contract construction.","candidatePrerequisites":["protocol.adaptor-signatures"],"chosenPrerequisites":["protocol.adaptor-signatures"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["DLC","DLCs"],"tags":["contracts","oracles","adaptor-signatures"],"estimatedTime":"85m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1980708369620168949","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse extension.discreet-log-contracts."},
+    {"id":"dev.y2038-problem","title":"Y2038 Problem","category":"Development","sourceId":"source.bitcoin-dev-project-post-1977486634536104288","sourceUrl":"https://x.com/Bitcoin_Devs/status/1977486634536104288","sourceContext":"The Y2038 problem explained","existingNodeId":"","status":"skip","atomicityRationale":"The post names a general timestamp implementation hazard rather than a Bitcoin-specific learner concept or prerequisite branch.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No Bitcoin graph edge is justified without a Bitcoin-specific learning outcome.","aliases":["Year 2038 problem","Unix time overflow"],"tags":["time","software"],"estimatedTime":"15m","resourceCandidates":[],"confidence":"high","notes":"Skip as off-scope implementation history; retain the source row for coverage evidence."},
+    {"id":"audit.post-1977053708065423446","title":"Nonce Reuse Attack","category":"Security","sourceId":"source.bitcoin-dev-project-post-1977053708065423446","sourceUrl":"https://x.com/Bitcoin_Devs/status/1977053708065423446","sourceContext":"Nonce reuse attack explained simply","existingNodeId":"security.nonce-reuse-attack","status":"existing","atomicityRationale":"The post repeats the existing nonce-reuse attack concept.","candidatePrerequisites":["fundamentals.schnorr-signatures"],"chosenPrerequisites":["fundamentals.schnorr-signatures"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["nonce reuse"],"tags":["signatures","security"],"estimatedTime":"30m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1977053708065423446","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse security.nonce-reuse-attack."},
+    {"id":"audit.post-1976762610948198707","title":"MuSig2","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1976762610948198707","sourceUrl":"https://x.com/Bitcoin_Devs/status/1976762610948198707","sourceContext":"MuSig2 explained simply","existingNodeId":"protocol.musig","status":"merge","atomicityRationale":"MuSig2 is a protocol version in the existing MuSig family; the current node already covers the key aggregation and interactive signing learning outcome.","candidatePrerequisites":["fundamentals.schnorr-signatures"],"chosenPrerequisites":["fundamentals.schnorr-signatures"],"prerequisiteRationale":"Reuse the existing MuSig node's direct prerequisite.","aliases":["MuSig2","two-round MuSig"],"tags":["schnorr","multisig","aggregation"],"estimatedTime":"50m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1976762610948198707","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Merge into protocol.musig and preserve MuSig2 as an alias/resource variant."},
+    {"id":"audit.post-1976416447577665743","title":"MuSig","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1976416447577665743","sourceUrl":"https://x.com/Bitcoin_Devs/status/1976416447577665743","sourceContext":"MuSig explained simply","existingNodeId":"protocol.musig","status":"existing","atomicityRationale":"The post directly explains the existing MuSig node.","candidatePrerequisites":["fundamentals.schnorr-signatures"],"chosenPrerequisites":["fundamentals.schnorr-signatures"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["MuSig"],"tags":["schnorr","multisig","aggregation"],"estimatedTime":"50m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1976416447577665743","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.musig."},
+    {"id":"security.rogue-key-attack","title":"Rogue-Key Attack","category":"Security","sourceId":"source.bitcoin-dev-project-post-1976008010108678258","sourceUrl":"https://x.com/Bitcoin_Devs/status/1976008010108678258","sourceContext":"Schnorr signatures: rogue key attack explained","existingNodeId":"","status":"new","atomicityRationale":"One multisignature security failure: an attacker can choose a related public key so an aggregate key appears authorized without the victim's intended cooperation.","candidatePrerequisites":["protocol.musig"],"chosenPrerequisites":["protocol.musig"],"prerequisiteRationale":"MuSig supplies the key-aggregation setting; Schnorr signatures are inherited through MuSig and do not need a redundant direct edge.","aliases":["rogue key attack","key aggregation rogue-key attack"],"tags":["schnorr","multisig","security"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1976008010108678258","https://bitcoinops.org/en/topics/musig/","https://amzn.to/4ro0NdG"],"confidence":"medium","notes":"Add as a security failure mode distinct from the MuSig construction itself."},
+    {"id":"mining.selfish-mining","title":"Selfish Mining","category":"Mining","sourceId":"source.bitcoin-dev-project-post-1975289920634925475","sourceUrl":"https://x.com/Bitcoin_Devs/status/1975289920634925475","sourceContext":"Selfish Mining explained simply","existingNodeId":"","status":"new","atomicityRationale":"Selfish mining is one distinct incentive attack in which miners withhold blocks to gain a propagation and chain-selection advantage.","candidatePrerequisites":["mining.pool-vs-solo","protocol.reorgs-finality"],"chosenPrerequisites":["mining.pool-vs-solo","protocol.reorgs-finality"],"prerequisiteRationale":"Learners need pooled-mining incentives and the chain-selection/finality model before the withholding strategy is intelligible.","aliases":["selfish mining attack","block withholding for chain advantage"],"tags":["mining","incentives","attacks"],"estimatedTime":"40m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1975289920634925475","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Add as a distinct miner strategy; do not merge it with block withholding, which targets pool compensation rather than chain advantage."},
+    {"id":"protocol.sighash-flags","title":"SIGHASH","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1966579053076337056","sourceUrl":"https://x.com/Bitcoin_Devs/status/1966579053076337056","sourceContext":"SigHash explained","existingNodeId":"protocol.sighash-flags","status":"existing","atomicityRationale":"The post explains the existing signature-hash flag concept.","candidatePrerequisites":["protocol.script"],"chosenPrerequisites":["protocol.script"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["SIGHASH","signature hash"],"tags":["signatures","transactions"],"estimatedTime":"90m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1966579053076337056","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Reuse protocol.sighash-flags; the quadratic-cost post is tracked separately as a candidate bridge."},
+    {"id":"audit.post-1962245647261745216","title":"Transaction Pinning","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1962245647261745216","sourceUrl":"https://x.com/Bitcoin_Devs/status/1962245647261745216","sourceContext":"Transaction Pinning explained","existingNodeId":"protocol.transaction-pinning","status":"existing","atomicityRationale":"The post repeats the existing transaction-pinning risk concept.","candidatePrerequisites":["protocol.package-relay"],"chosenPrerequisites":["protocol.package-relay"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["transaction pinning"],"tags":["mempool","contracts","attacks"],"estimatedTime":"70m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1962245647261745216","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.transaction-pinning."},
+    {"id":"protocol.segregated-witness","title":"Segregated Witness","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1961882664803209229","sourceUrl":"https://x.com/Bitcoin_Devs/status/1961882664803209229","sourceContext":"SegWit explained simply","existingNodeId":"protocol.segregated-witness","status":"existing","atomicityRationale":"The post explains the existing SegWit protocol upgrade.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"Reuse the existing node's graph position.","aliases":["SegWit","segwit"],"tags":["segwit","transactions","consensus"],"estimatedTime":"60m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1961882664803209229","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.segregated-witness."},
+    {"id":"audit.post-1956781577544896905","title":"WOTS+ Key Generation","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-1956781577544896905","sourceUrl":"https://x.com/Bitcoin_Devs/status/1956781577544896905","sourceContext":"WOTS+ key generation explained","existingNodeId":"","status":"skip","atomicityRationale":"The post teaches a post-quantum signature subroutine outside Bitcoin's current signature and script model; it does not yet establish a Bitcoin-specific prerequisite gap.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct Bitcoin graph edge is justified for this off-scope cryptographic series.","aliases":["WOTS+","Winternitz one-time signature plus"],"tags":["post-quantum","signatures"],"estimatedTime":"30m","resourceCandidates":[],"confidence":"high","notes":"Skip as non-Bitcoin-adjacent for this pass; preserve source coverage without adding a generic cryptography branch."},
+    {"id":"audit.post-1952320432033435819","title":"Winternitz One-Time Signatures","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-1952320432033435819","sourceUrl":"https://x.com/Bitcoin_Devs/status/1952320432033435819","sourceContext":"WOTS explained","existingNodeId":"","status":"skip","atomicityRationale":"The post is part of the SPHINCS+ post-quantum signature series, not a Bitcoin-specific concept currently needed by the graph.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct Bitcoin graph edge is justified for this off-scope cryptographic series.","aliases":["WOTS","Winternitz signatures"],"tags":["post-quantum","signatures"],"estimatedTime":"30m","resourceCandidates":[],"confidence":"high","notes":"Skip and keep grouped with the SPHINCS+ series rather than minting isolated cryptographic nodes."},
+    {"id":"audit.post-1951962210902671675","title":"SPHINCS+","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-1951962210902671675","sourceUrl":"https://x.com/Bitcoin_Devs/status/1951962210902671675","sourceContext":"SPHINCS+ and Lamport signatures explained","existingNodeId":"","status":"skip","atomicityRationale":"SPHINCS+ is a post-quantum signature scheme, but this post does not connect it to a Bitcoin protocol or learner prerequisite branch.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct Bitcoin graph edge is justified for this off-scope cryptographic series.","aliases":["SPHINCS plus"],"tags":["post-quantum","signatures"],"estimatedTime":"30m","resourceCandidates":[],"confidence":"high","notes":"Skip for the Bitcoin graph's current scope; revisit only as part of a deliberate post-quantum roadmap."},
+    {"id":"audit.post-1951704233742651737","title":"SPHINCS+ Signature Scheme","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-1951704233742651737","sourceUrl":"https://x.com/Bitcoin_Devs/status/1951704233742651737","sourceContext":"SPHINCS+ explained","existingNodeId":"","status":"skip","atomicityRationale":"This is a duplicate introductory post in the same non-Bitcoin-specific SPHINCS+ series.","candidatePrerequisites":[],"chosenPrerequisites":[],"prerequisiteRationale":"No direct Bitcoin graph edge is justified for this off-scope cryptographic series.","aliases":["SPHINCS+"],"tags":["post-quantum","signatures"],"estimatedTime":"30m","resourceCandidates":[],"confidence":"high","notes":"Skip as a duplicate/off-scope series member."},
+    {"id":"extension.bitchat","title":"Bitchat","category":"Extension Systems","sourceId":"source.bitcoin-dev-project-post-1946961429363327053","sourceUrl":"https://x.com/Bitcoin_Devs/status/1946961429363327053","sourceContext":"Bitchat explained simply","existingNodeId":"extension.bitchat","status":"existing","atomicityRationale":"The post explains the existing Bitchat extension concept.","candidatePrerequisites":["ops.mesh-networks","extension.nostr"],"chosenPrerequisites":["ops.mesh-networks","extension.nostr"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["Bitchat"],"tags":["messaging","mesh"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1946961429363327053","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse extension.bitchat."},
+    {"id":"audit.post-1945962367738601788","title":"Compact Block Filter","category":"Network, Relay & Client Sync","sourceId":"source.bitcoin-dev-project-post-1945962367738601788","sourceUrl":"https://x.com/Bitcoin_Devs/status/1945962367738601788","sourceContext":"Compact Block Filter explained Part 1","existingNodeId":"protocol.compact-block-filters","status":"existing","atomicityRationale":"This earlier post is another explanation of the existing compact-filter node.","candidatePrerequisites":["dev.p2p-messages","protocol.block-structure"],"chosenPrerequisites":["dev.p2p-messages","protocol.block-structure"],"prerequisiteRationale":"Reuse the existing node's direct prerequisites.","aliases":["compact block filter"],"tags":["light-clients","filters"],"estimatedTime":"70m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1945962367738601788","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.compact-block-filters."},
+    {"id":"audit.post-1945645540152135684","title":"Child Pays for Parent","category":"Network, Relay & Client Sync","sourceId":"source.bitcoin-dev-project-post-1945645540152135684","sourceUrl":"https://x.com/Bitcoin_Devs/status/1945645540152135684","sourceContext":"Earlier CPFP transaction explanation","existingNodeId":"protocol.cpfp","status":"existing","atomicityRationale":"This is an earlier explainer for the same CPFP concept.","candidatePrerequisites":["protocol.fee-market"],"chosenPrerequisites":["protocol.fee-market"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["CPFP"],"tags":["fees","mempool"],"estimatedTime":"55m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1945645540152135684","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.cpfp."},
+    {"id":"audit.post-1934578478575489365","title":"Lamport Signatures","category":"Fundamentals","sourceId":"source.bitcoin-dev-project-post-1934578478575489365","sourceUrl":"https://x.com/Bitcoin_Devs/status/1934578478575489365","sourceContext":"Lamport Signatures explained","existingNodeId":"fundamentals.lamport-signatures","status":"existing","atomicityRationale":"The post repeats the existing Lamport signature concept.","candidatePrerequisites":["fundamentals.hash-functions"],"chosenPrerequisites":["fundamentals.hash-functions"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["Lamport signatures"],"tags":["post-quantum","signatures"],"estimatedTime":"30m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1934578478575489365","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Reuse fundamentals.lamport-signatures."},
+    {"id":"protocol.commit-delay-reveal","title":"Commit-Delay-Reveal Protocol","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1931775486449103086","sourceUrl":"https://x.com/Bitcoin_Devs/status/1931775486449103086","sourceContext":"Commit-Delay-Reveal protocol explained","existingNodeId":"","status":"new","atomicityRationale":"One protocol pattern: commit to a value, wait through a delay, and reveal it later so participants cannot adapt after seeing others' commitments.","candidatePrerequisites":["fundamentals.commitment-schemes"],"chosenPrerequisites":["fundamentals.commitment-schemes"],"prerequisiteRationale":"Commitment schemes provide the hiding/binding foundation; the delay and reveal sequence is the distinct protocol composition.","aliases":["CDR protocol","commit delay reveal"],"tags":["commitments","protocols","coordination"],"estimatedTime":"35m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1931775486449103086","https://amzn.to/4ro0NdG"],"confidence":"medium","notes":"Add only if the post's Bitcoin/BitVM context is retained in the node resources; do not turn generic commit-reveal into an unbounded protocol family."},
+    {"id":"protocol.cross-input-signature-aggregation","title":"Cross-Input Signature Aggregation","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1905214178379362814","sourceUrl":"https://x.com/Bitcoin_Devs/status/1905214178379362814","sourceContext":"CISA full aggregation explained","existingNodeId":"protocol.cross-input-signature-aggregation","status":"existing","atomicityRationale":"The post explains the existing CISA concept.","candidatePrerequisites":["protocol.adaptor-signatures"],"chosenPrerequisites":["protocol.adaptor-signatures"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["CISA","full signature aggregation"],"tags":["signatures","aggregation"],"estimatedTime":"75m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1905214178379362814","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.cross-input-signature-aggregation."},
+    {"id":"security.dust-attack","title":"Dust Attack","category":"Security","sourceId":"source.bitcoin-dev-project-post-1904946739603452376","sourceUrl":"https://x.com/Bitcoin_Devs/status/1904946739603452376","sourceContext":"Dust attack explained","existingNodeId":"","status":"new","atomicityRationale":"A dust attack is one specific privacy attack: send trace-value outputs to targets so later spending can link their wallets or contaminate their coin-control decisions.","candidatePrerequisites":["protocol.dust-policy","privacy.pseudonymity"],"chosenPrerequisites":["protocol.dust-policy","privacy.pseudonymity"],"prerequisiteRationale":"Dust policy explains the output threshold and pseudonymity explains why forced linkage is harmful; neither edge is transitive through the other.","aliases":["dusting attack","dust attack"],"tags":["privacy","utxos","attacks"],"estimatedTime":"30m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1904946739603452376","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Add as a privacy threat distinct from the operational dust-policy threshold."},
+    {"id":"audit.post-1904596944649150556","title":"CISA Half Signature Aggregation","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1904596944649150556","sourceUrl":"https://x.com/Bitcoin_Devs/status/1904596944649150556","sourceContext":"CISA half signature aggregation explained","existingNodeId":"protocol.cross-input-signature-aggregation","status":"merge","atomicityRationale":"Half-aggregation is a design variant within the existing CISA concept, not a separate learner-facing protocol node.","candidatePrerequisites":["protocol.adaptor-signatures"],"chosenPrerequisites":["protocol.adaptor-signatures"],"prerequisiteRationale":"Reuse the existing CISA node's direct prerequisite.","aliases":["half signature aggregation","half-agg"],"tags":["signatures","aggregation"],"estimatedTime":"75m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1904596944649150556","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Merge into protocol.cross-input-signature-aggregation and preserve the variant as an alias/context."},
+    {"id":"audit.post-1904136400213340298","title":"Cross-Input Signature Aggregation","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1904136400213340298","sourceUrl":"https://x.com/Bitcoin_Devs/status/1904136400213340298","sourceContext":"CISA explained","existingNodeId":"protocol.cross-input-signature-aggregation","status":"existing","atomicityRationale":"The post directly explains the existing CISA node.","candidatePrerequisites":["protocol.adaptor-signatures"],"chosenPrerequisites":["protocol.adaptor-signatures"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["CISA"],"tags":["signatures","aggregation"],"estimatedTime":"75m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1904136400213340298","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.cross-input-signature-aggregation."},
+    {"id":"audit.post-1903881770204070155","title":"Transaction Pinning Attack","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1903881770204070155","sourceUrl":"https://x.com/Bitcoin_Devs/status/1903881770204070155","sourceContext":"Transaction Pinning Attack explained","existingNodeId":"protocol.transaction-pinning","status":"existing","atomicityRationale":"This post is a second framing of the existing transaction-pinning risk.","candidatePrerequisites":["protocol.package-relay"],"chosenPrerequisites":["protocol.package-relay"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["transaction pinning attack"],"tags":["mempool","attacks"],"estimatedTime":"70m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1903881770204070155","https://amzn.to/4ro0NdG"],"confidence":"high","notes":"Reuse protocol.transaction-pinning."},
+    {"id":"protocol.sequence-locks-bip68","title":"BIP 68 Sequence Numbers","category":"Protocol & Consensus","sourceId":"source.bitcoin-dev-project-post-1903150655071719663","sourceUrl":"https://x.com/Bitcoin_Devs/status/1903150655071719663","sourceContext":"BIP-68 sequence number explained","existingNodeId":"protocol.sequence-locks-bip68","status":"existing","atomicityRationale":"The post explains the existing BIP 68 sequence-lock concept.","candidatePrerequisites":["protocol.timelocks"],"chosenPrerequisites":["protocol.timelocks"],"prerequisiteRationale":"Reuse the existing node's direct prerequisite.","aliases":["BIP 68","sequence numbers","relative timelocks"],"tags":["timelocks","consensus"],"estimatedTime":"80m","resourceCandidates":["https://x.com/Bitcoin_Devs/status/1903150655071719663","https://amzn.to/4b5xUhC"],"confidence":"high","notes":"Reuse protocol.sequence-locks-bip68."}
   ],
   "edges": [
     {
@@ -4316,7 +4826,16 @@
     ,{"from":"protocol.rbf","to":"protocol.replacement-cycling","type":"prerequisite","status":"proposed","rationale":"Replacement cycling repeatedly uses transaction replacement, so learners need the RBF policy mechanism first.","sourceId":"source.bitcoinops-topics","notes":"Package RBF is related but not required for the core attack sequence."},
     {"from":"protocol.cpfp","to":"protocol.replacement-cycling","type":"prerequisite","status":"proposed","rationale":"The attack cycles child-fee relationships to evict a target, so learners need CPFP mechanics first.","sourceId":"source.bitcoinops-topics","notes":"Transaction pinning is the broader downstream risk class, not a prerequisite."},
     {"from":"protocol.tapleaf-inclusion-proofs","to":"protocol.taproot-control-blocks","type":"prerequisite","status":"proposed","rationale":"Control blocks extend the tapleaf proof path with internal-key and parity data.","sourceId":"source.optech-schnorr-taproot-workshop","notes":"Generic Merkle trees are inherited through the proof node."},
-    {"from":"dev.review-culture","to":"dev.pseudonymous-development","type":"prerequisite","status":"proposed","rationale":"Pseudonymous development relies on public technical evidence and independent peer review to preserve accountability without requiring legal-identity disclosure.","sourceId":"source.bitcoin-dev-philosophy","notes":"Privacy pseudonymity is related context, not a direct prerequisite, because this node concerns contributor identity and governance rather than transaction linkage."}
+    {"from":"dev.review-culture","to":"dev.pseudonymous-development","type":"prerequisite","status":"proposed","rationale":"Pseudonymous development relies on public technical evidence and independent peer review to preserve accountability without requiring legal-identity disclosure.","sourceId":"source.bitcoin-dev-philosophy","notes":"Privacy pseudonymity is related context, not a direct prerequisite, because this node concerns contributor identity and governance rather than transaction linkage."},
+    {"from":"fundamentals.merkle-trees","to":"protocol.mast","type":"prerequisite","status":"proposed","rationale":"MAST uses a Merkle tree to commit to multiple alternative script branches while revealing only one branch during spending.","sourceId":"source.bitcoin-dev-project-post-1998431297333501989","notes":"Direct cryptographic structure; TapTree remains a downstream Taproot-specific realization."},
+    {"from":"protocol.script","to":"protocol.mast","type":"prerequisite","status":"proposed","rationale":"MAST commits to alternative Bitcoin Script branches, so learners need the locking and spending language before the tree commitment is meaningful.","sourceId":"source.bitcoin-dev-project-post-1998431297333501989","notes":"Keep Script direct; the node is not only a generic Merkle-tree concept."},
+    {"from":"protocol.sighash-flags","to":"protocol.sighash-quadratic-hashing","type":"prerequisite","status":"proposed","rationale":"The quadratic hashing problem is a performance consequence of how legacy signature digests are constructed under SIGHASH semantics.","sourceId":"source.bitcoin-dev-project-post-1987562939109306699","notes":"BIP 143 is a supporting mitigation source, not a prerequisite edge."},
+    {"from":"protocol.musig","to":"security.rogue-key-attack","type":"prerequisite","status":"proposed","rationale":"The rogue-key attack occurs in naive public-key aggregation, so learners need the MuSig aggregation setting before the failure mode.","sourceId":"source.bitcoin-dev-project-post-1976008010108678258","notes":"Schnorr is inherited through MuSig; avoid a redundant direct Schnorr edge."},
+    {"from":"mining.pool-vs-solo","to":"mining.selfish-mining","type":"prerequisite","status":"proposed","rationale":"Selfish mining is an incentive strategy by miners and pools, so learners need the pooled-versus-solo mining context first.","sourceId":"source.bitcoin-dev-project-post-1975289920634925475","notes":"Pool economics is one direct parent; chain selection is supplied by the finality parent below."},
+    {"from":"protocol.reorgs-finality","to":"mining.selfish-mining","type":"prerequisite","status":"proposed","rationale":"Selfish mining relies on strategic withholding and release of competing branches, which requires the chain-reorganization and finality model.","sourceId":"source.bitcoin-dev-project-post-1975289920634925475","notes":"Keep the reorganization model direct rather than adding generic proof-of-work as a redundant ancestor."},
+    {"from":"fundamentals.commitment-schemes","to":"protocol.commit-delay-reveal","type":"prerequisite","status":"proposed","rationale":"Commit-delay-reveal composes a cryptographic commitment with a timed reveal, so the learner first needs the hiding and binding commitment model.","sourceId":"source.bitcoin-dev-project-post-1931775486449103086","notes":"The delay/reveal composition is the node's distinct outcome."},
+    {"from":"protocol.dust-policy","to":"security.dust-attack","type":"prerequisite","status":"proposed","rationale":"Dust attacks exploit the distinction between tiny-output relay policy and the ability to place trace-value UTXOs in a wallet.","sourceId":"source.bitcoin-dev-project-post-1904946739603452376","notes":"Policy threshold is direct context for the attack mechanism."},
+    {"from":"privacy.pseudonymity","to":"security.dust-attack","type":"prerequisite","status":"proposed","rationale":"The privacy harm of dusting comes from linking future spends and wallet activity, so learners need the pseudonymity and linkage model.","sourceId":"source.bitcoin-dev-project-post-1904946739603452376","notes":"Keep privacy linkage direct; it is not inherited through dust policy."}
   ],
   "decisions": [
     {
@@ -6024,6 +6543,20 @@
         "source.bitcoin-dev-philosophy"
       ],
       "notes": "Added with dev.review-culture as the only direct prerequisite. Keep transaction pseudonymity and censorship resistance as related context rather than redundant graph parents."
-    }
+    },
+    {
+      "id":"decision.bitcoin-dev-project-post-inventory-2026-07-11","type":"inventory","subject":"source.bitcoin-dev-project-explained-posts","status":"resolved","rationale":"The authenticated live search was enumerated into 34 individual post source rows. The earlier 43-post count was not preserved at post granularity and remains historical evidence rather than a completion claim.","relatedConceptIds":[],"relatedSourceIds":["source.bitcoin-dev-project-explained-posts"],"notes":"Current enumeration includes duplicate explainers and post-quantum cryptography series members; each is retained as a source row and normalized separately rather than silently dropped."},
+    {
+      "id":"decision.mast-slice","type":"scope","subject":"protocol.mast","status":"resolved","rationale":"MAST survives dedupe as a generic script-branch commitment concept distinct from the TapTree's Taproot-specific realization. The post supplies a precise learner outcome around selective branch revelation.","relatedConceptIds":["protocol.mast","protocol.taptree","fundamentals.merkle-trees","protocol.script"],"relatedSourceIds":["source.bitcoin-dev-project-post-1998431297333501989"],"notes":"Added with Merkle trees and Script as direct prerequisites; do not add TapTree as a redundant direct parent."},
+    {
+      "id":"decision.sighash-quadratic-hashing-slice","type":"scope","subject":"protocol.sighash-quadratic-hashing","status":"resolved","rationale":"The quadratic signature-hashing cost is a distinct historical validation failure and bridge to BIP 143's cached digest design, not merely another SIGHASH flag label.","relatedConceptIds":["protocol.sighash-quadratic-hashing","protocol.sighash-flags"],"relatedSourceIds":["source.bitcoin-dev-project-post-1987562939109306699"],"notes":"Added with SIGHASH flags as the only direct prerequisite."},
+    {
+      "id":"decision.rogue-key-attack-slice","type":"scope","subject":"security.rogue-key-attack","status":"resolved","rationale":"The rogue-key attack has a distinct security learning outcome: naive key aggregation can authorize an attacker-controlled relation. It should not be hidden inside the MuSig construction node.","relatedConceptIds":["security.rogue-key-attack","protocol.musig","fundamentals.schnorr-signatures"],"relatedSourceIds":["source.bitcoin-dev-project-post-1976008010108678258"],"notes":"Added after dedupe against MuSig and Schnorr; MuSig is the sole direct graph parent because Schnorr is inherited."},
+    {
+      "id":"decision.selfish-mining-slice","type":"scope","subject":"mining.selfish-mining","status":"resolved","rationale":"Selfish mining is a chain-selection incentive attack distinct from block withholding, which attacks pool compensation by hiding valid shares. The post fills a missing mining attack branch.","relatedConceptIds":["mining.selfish-mining","mining.block-withholding","mining.pool-vs-solo","protocol.reorgs-finality"],"relatedSourceIds":["source.bitcoin-dev-project-post-1975289920634925475"],"notes":"Added with pool-versus-solo mining and reorg/finality as direct prerequisites."},
+    {
+      "id":"decision.commit-delay-reveal-slice","type":"scope","subject":"protocol.commit-delay-reveal","status":"resolved","rationale":"Commit-delay-reveal is a reusable protocol composition that adds timing and anti-adaptation semantics to a commitment scheme. It is narrower than generic commitments and does not duplicate existing commit/reveal-adjacent nodes.","relatedConceptIds":["protocol.commit-delay-reveal","fundamentals.commitment-schemes"],"relatedSourceIds":["source.bitcoin-dev-project-post-1931775486449103086"],"notes":"Added with commitment schemes as the only direct prerequisite; preserve the CDR source context in resources."},
+    {
+      "id":"decision.dust-attack-slice","type":"scope","subject":"security.dust-attack","status":"resolved","rationale":"Dust attack is a privacy threat that is not equivalent to the dust-policy threshold. It explains why unsolicited tiny outputs can create wallet-linkage and coin-control risks.","relatedConceptIds":["security.dust-attack","protocol.dust-policy","privacy.pseudonymity"],"relatedSourceIds":["source.bitcoin-dev-project-post-1904946739603452376"],"notes":"Added with dust policy and pseudonymity as direct prerequisites."}
   ]
 }

@@ -145,7 +145,7 @@ History & Governance (29 concepts)
 - User-Activated Soft Fork (UASF): How node operators coordinated policy to enforce soft-fork activation during the SegWit era.
 - Version Bits Signaling: Miner signaling mechanism for coordinated soft-fork deployment using block version fields.
 
-Mining (22 concepts)
+Mining (23 concepts)
 - 51% Attack Model: Majority hashrate threat model: what an attacker can and cannot do under Nakamoto consensus.
 - ASICBoost: ASICBoost is a proof-of-work optimization that can reduce hashing cost under specific block-construction strategies. Its deployment affects miner incentives, transparency, and template policy debates.
 - ASICs: ASICs are application-specific chips built for Bitcoin's SHA-256 Proof of Work. They dramatically increase hashing efficiency versus general-purpose hardware, reshaping mining economics and decentralization tradeoffs.
@@ -165,6 +165,7 @@ Mining (22 concepts)
 - Mining Pool Shares: Mining pool shares are partial proofs of work found under a pool-defined target that is easier than the network target. They let a pool verify that a miner contributed real hash work, measure each miner's proportional contribution, and split payouts when one submitted share also happens to satisfy the actual network target.
 - Mining Template Construction: How miners and pools build candidate blocks from mempool transactions under policy, size, and fee constraints.
 - Pool vs Solo Mining: Variance, payout models, and operational tradeoffs.
+- Selfish Mining: Selfish mining is an incentive attack in which miners withhold privately found blocks and reveal them strategically to gain a chain-selection and propagation advantage over honest miners.
 - Stale Blocks: Why valid blocks can become stale due to propagation races and how relay improvements reduce this risk.
 - Stratum: Mining communication protocol concepts and architecture.
 - Stratum V2: Mining protocol upgrades for efficiency, security, and improved job negotiation.
@@ -227,7 +228,7 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (77 concepts)
+Protocol & Consensus (80 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are a core building block for scriptless scripts-style contracts, DLC settlement, atomic swaps, and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -244,6 +245,7 @@ Protocol & Consensus (77 concepts)
 - CHECKLOCKTIMEVERIFY (BIP 65): Script opcode that enforces an absolute locktime for spending conditions in Bitcoin scripts.
 - CHECKSEQUENCEVERIFY (BIP 112): Script opcode that enforces relative locktime conditions using sequence-based spending constraints.
 - Coinbase Transaction: Special first transaction in each block that collects subsidy and transaction fees.
+- Commit-Delay-Reveal Protocol: A commit-delay-reveal protocol commits to a value, waits through a delay, and reveals it later so participants cannot adapt their choice after seeing other commitments. The pattern composes cryptographic commitments with timing and coordination rules.
 - Consensus Rules: Validation rules that define Bitcoin’s canonical state.
 - CPFP Carve-Out Policy: CPFP carve-out is a mempool policy exception intended to make Lightning commitment fee-bumping practical. It affects package acceptance limits and descendant accounting.
 - Cross-Input Signature Aggregation (CISA): CISA aggregates signatures across multiple inputs to reduce weight and improve coordination efficiency. It introduces new accounting and policy considerations for batch spenders.
@@ -261,6 +263,7 @@ Protocol & Consensus (77 concepts)
 - Huffman-Optimized TapTrees: A Huffman-optimized TapTree places more likely spending paths closer to the root so the average revealed proof path is shorter. It is a specific Taproot tree-construction optimization, not a different spend rule or proof format.
 - MATT and CCV: MATT and CCV propose composable covenant techniques for generalized contract trees. They aim to express advanced spending programs with structured state transitions.
 - Median Time Past: Consensus time reference based on prior blocks, reducing miner timestamp manipulation for locktime behavior.
+- Merkelized Alternative Script Trees (MAST): MAST commits to multiple Bitcoin Script spending branches in a Merkle tree while revealing only the branch used to spend. It reduces revealed policy and witness data without hiding the committed alternatives from verification.
 - MuSig: MuSig aggregates multiple participants' public keys and partial signatures into one Schnorr key and one Schnorr signature. It preserves single-signature-looking on-chain spends while requiring interactive coordination between the signers.
 - OP_CAT: OP_CAT concatenates stack elements and expands Script programmability. It is frequently discussed as a primitive for covenant and introspection-style constructions.
 - OP_CHECKMULTISIG: Legacy Script opcode that verifies an m-of-n set of signatures against a list of public keys. Its historical off-by-one bug explains why multisig spends include a leading OP_0 placeholder in the unlocking script.
@@ -275,6 +278,7 @@ Protocol & Consensus (77 concepts)
 - Pay-to-Public-Key-Hash (P2PKH): Legacy output type that locks coins to a hash of the recipient public key instead of the full key itself. It hides the public key until spend time and became the dominant template for classic Bitcoin addresses and script-based payments.
 - Pay-to-Script-Hash (P2SH): Output type where spending conditions are committed as a script hash and revealed at spend time.
 - Proof of Work: Mining via Proof of Work solves three core problems at once: consensus on transaction history, network security against sybil and rewrite attacks, and open distribution of new coins through block rewards.
+- Quadratic SIGHASH Hashing Cost: Legacy signature hashing repeated transaction-wide work for each input, creating quadratic validation cost as transactions grew. Cached digest designs such as BIP 143 address this performance failure while preserving signature-commitment semantics.
 - Reorgs and Finality: Probabilistic finality and chain reorganization behavior.
 - Script Execution Stack: Bitcoin Script evaluates spending conditions as a stack machine. Data pushes and opcodes consume and produce stack items in sequence, and a script succeeds only if execution finishes without failure and leaves a truthy result on the stack.
 - Script Timelocks: Timelock primitives used to constrain when funds can be spent in script contracts.
@@ -306,7 +310,7 @@ Protocol & Consensus (77 concepts)
 - What Is a Protocol?: A protocol is a shared rule set that independent participants follow to coordinate behavior without central control. Bitcoin works as a monetary protocol because nodes enforce rules the same way.
 - X-Only Public Keys: X-only public keys encode only the x coordinate of a secp256k1 point and restrict valid keys to one y-coordinate parity choice. Taproot and Schnorr use this 32-byte form to simplify key handling and reduce witness size.
 
-Security (56 concepts)
+Security (58 concepts)
 - Address Reuse: How reuse harms financial privacy and graph analysis resistance.
 - Adversarial Thinking: Adversarial thinking models how rational and irrational attackers can exploit protocol and implementation edges. It is essential for reviewing Bitcoin changes before deployment.
 - AML/KYC and Sanctions Tradeoffs: Compliance controls can reduce some abuse vectors while increasing surveillance and exclusion risks. The tradeoff analysis should separate legal requirements, policy goals, and technical limits.
@@ -326,6 +330,7 @@ Security (56 concepts)
 - Diffie-Hellman Key Exchange: Diffie-Hellman lets two parties derive a shared secret over a public channel using group exponentiation. In Bitcoin systems, elliptic-curve variants appear in encrypted transport and protocol design patterns.
 - Digital Signatures: Verifiable authorization without revealing private keys.
 - Discrete Logarithm Problem: Bitcoin key security depends on the hardness of solving discrete logarithms on elliptic curves. This hardness assumption is the core one-way property behind public keys.
+- Dust Attack: A dust attack sends trace-value outputs to targets so later spending can link their wallets or contaminate coin-control decisions. It exploits the gap between a policy threshold for tiny outputs and the privacy meaning of spending them.
 - ECDSA: ECDSA is the legacy Bitcoin signature algorithm used by pre-Taproot outputs and many wallets. Understanding its nonce and inverse terms explains key leak risks and malleability-era constraints.
 - Eclipse Attacks: Eclipse attacks isolate a node from honest peers to manipulate its view of the network. Mitigation requires peer diversity, routing hygiene, and robust eviction policy.
 - Elliptic Curve Cryptography: Elliptic curve cryptography maps finite-field arithmetic into group operations used for Bitcoin keys and signatures. It is the practical cryptographic system behind secp256k1.
@@ -350,6 +355,7 @@ Security (56 concepts)
 - Public/Private Keys: Asymmetric cryptography foundations for ownership proofs.
 - Reproducible Builds: Reproducible builds let independent parties verify that released binaries match source code. They reduce supply-chain trust assumptions for wallet and node software.
 - Responsible Disclosure: Responsible disclosure coordinates vulnerability reporting and patching to reduce exploit windows. In Bitcoin, disclosure timing and communication quality can have ecosystem-wide impact.
+- Rogue-Key Attack: A rogue-key attack exploits naive public-key aggregation by choosing a related key that cancels another participant's key, making an aggregate signature appear authorized without the intended cooperation. Key aggregation protocols need binding or proof-of-possession defenses.
 - Scalar Multiplication: Scalar multiplication is repeated elliptic-curve point addition and is the operation that derives public keys from private keys. It is efficient forward but infeasible to reverse in practice.
 - Schnorr Signatures: Schnorr signatures are Bitcoin's modern signature scheme introduced with Taproot and designed for linearity and simpler multisignature constructions. They improve composability for advanced scripts and protocols.
 - Script-Type Fingerprinting: Privacy leakage from distinctive output script and address-type patterns that narrow likely wallet/software identity.

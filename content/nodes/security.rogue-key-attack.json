@@ -1,0 +1,31 @@
+{
+  "id": "security.rogue-key-attack",
+  "title": "Rogue-Key Attack",
+  "description": "A rogue-key attack exploits naive public-key aggregation by choosing a related key that cancels another participant's key, making an aggregate signature appear authorized without the intended cooperation. Key aggregation protocols need binding or proof-of-possession defenses.",
+  "category": "Security",
+  "prerequisites": ["protocol.musig"],
+  "resources": [
+    {
+      "type": "article",
+      "title": "Bitcoin Dev Project: Schnorr rogue-key attack explained",
+      "url": "https://x.com/Bitcoin_Devs/status/1976008010108678258",
+      "notes": "Learner-facing explanation of the key-aggregation attack."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: MuSig",
+      "url": "https://bitcoinops.org/en/topics/musig/",
+      "notes": "Technical context for key aggregation and rogue-key defenses in multisignature constructions."
+    },
+    {
+      "type": "book",
+      "title": "Mastering Bitcoin",
+      "url": "https://amzn.to/4ro0NdG",
+      "notes": "Reference background for Schnorr signatures and multisignature coordination.",
+      "regionalUrls": {"BR": "https://amzn.to/4te47JX"}
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": ["schnorr", "multisig", "security"],
+  "aliases": ["rogue key attack", "key aggregation rogue-key attack"]
+}
