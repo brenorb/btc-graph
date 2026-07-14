@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  compactGraphNodeRows,
   deriveNextProgressState,
   normalizeGraphNodeRows,
   resolveLabelText,
@@ -119,16 +120,40 @@ describe("normalizeGraphNodeRows", () => {
     { id: "top", x: 160, y: 120 },
   ];
 
-  it("snaps nodes with the same prerequisite depth onto the same row", () => {
-    const normalized = normalizeGraphNodeRows(data, positionedNodes, "desktop");
-    const byId = new Map(normalized.map((node) => [node.id, node]));
+    it("keeps Dagre's x positions and aligns nodes by prerequisite depth", () => {
+      const normalized = normalizeGraphNodeRows(data, positionedNodes, "desktop");
+      const byId = new Map(normalized.map((node) => [node.id, node]));
 
-    expect(byId.get("root-a")?.x).toBe(80);
-    expect(byId.get("root-b")?.x).toBe(320);
-    expect(byId.get("root-a")?.y).toBe(byId.get("root-b")?.y);
+      expect(byId.get("root-a")?.x).toBe(80);
+      expect(byId.get("root-b")?.x).toBe(320);
+      expect(byId.get("root-a")?.y).toBe(byId.get("root-b")?.y);
     expect(byId.get("mid-a")?.y).toBe(byId.get("mid-b")?.y);
     expect(byId.get("mid-a")?.y).toBeLessThan(byId.get("root-a")?.y ?? Infinity);
     expect(byId.get("top")?.y).toBeLessThan(byId.get("mid-a")?.y ?? Infinity);
+    });
+
+  it("limits large horizontal gaps within each prerequisite row", () => {
+    const compacted = compactGraphNodeRows(
+      data,
+      [
+        { id: "root-a", x: 0, y: 192 },
+        { id: "root-b", x: 400, y: 192 },
+        { id: "mid-a", x: 20, y: 96 },
+        { id: "mid-b", x: 120, y: 96 },
+        { id: "top", x: 80, y: 0 },
+      ],
+      new Map([
+        ["root-a", 20],
+        ["root-b", 30],
+        ["mid-a", 20],
+        ["mid-b", 20],
+        ["top", 20],
+      ]),
+    );
+    const byId = new Map(compacted.map((node) => [node.id, node]));
+
+    expect((byId.get("root-b")?.x ?? 0) - (byId.get("root-a")?.x ?? 0)).toBe(150);
+    expect((byId.get("mid-b")?.x ?? 0) - (byId.get("mid-a")?.x ?? 0)).toBe(100);
   });
 
   it("uses tighter row spacing on mobile", () => {

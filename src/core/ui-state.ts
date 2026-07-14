@@ -5,6 +5,8 @@ export type ThemeMode = "light" | "dark";
 export type CategoryBulkAction = "select_all" | "deselect_all";
 export type ViewportMode = "desktop" | "mobile";
 
+export const GRAPH_TITLE_GAP_MULTIPLIER = 5;
+
 export interface GraphLayoutSettings {
   name: "dagre";
   rankDir: "BT";
@@ -172,7 +174,7 @@ export function resolveGraphLayoutSettings(viewportMode: ViewportMode = "desktop
   };
 }
 
-function resolveGraphNodeDepths(data: GraphData) {
+export function resolveGraphNodeDepths(data: GraphData) {
   const prerequisitesById = new Map(data.nodes.map((node) => [node.id, node.prerequisites]));
   const memo = new Map<string, number>();
   const visiting = new Set<string>();
@@ -224,6 +226,64 @@ export function normalizeGraphNodeRows(
     ...node,
     y: (maxDepth - (depths.get(node.id) ?? 0)) * rowGap,
   }));
+}
+
+export function compactGraphNodeRows(
+  data: GraphData,
+  nodes: GraphNodePosition[],
+  titleWidths: Map<string, number>,
+  viewportMode: ViewportMode = "desktop",
+): GraphNodePosition[] {
+  if (nodes.length < 2) {
+    return nodes;
+  }
+
+  const depths = resolveGraphNodeDepths(data);
+  const minimumGap = viewportMode === "mobile" ? 30 : 32;
+  const rows = new Map<number, GraphNodePosition[]>();
+
+  for (const node of nodes) {
+    const depth = depths.get(node.id) ?? 0;
+    const row = rows.get(depth) ?? [];
+    row.push(node);
+    rows.set(depth, row);
+  }
+
+  const positionById = new Map<string, GraphNodePosition>();
+  for (const row of rows.values()) {
+    if (row.length < 2) {
+      positionById.set(row[0].id, row[0]);
+      continue;
+    }
+
+    const orderedRow = [...row].sort((left, right) => left.x - right.x);
+    const originalCenter = (orderedRow[0].x + orderedRow.at(-1)!.x) / 2;
+    const compactedX: number[] = [orderedRow[0].x];
+
+    for (let index = 1; index < orderedRow.length; index += 1) {
+      const previous = orderedRow[index - 1];
+      const current = orderedRow[index];
+      const previousTitleWidth = titleWidths.get(previous.id) ?? minimumGap / 2;
+      const currentTitleWidth = titleWidths.get(current.id) ?? minimumGap / 2;
+      const maximumGap = Math.max(
+        minimumGap,
+        GRAPH_TITLE_GAP_MULTIPLIER * Math.max(previousTitleWidth, currentTitleWidth),
+      );
+      compactedX.push(Math.min(current.x, compactedX[index - 1] + maximumGap));
+    }
+
+    const compactedCenter = (compactedX[0] + compactedX.at(-1)!) / 2;
+    const centerOffset = originalCenter - compactedCenter;
+
+    orderedRow.forEach((node, index) => {
+      positionById.set(node.id, {
+        ...node,
+        x: compactedX[index] + centerOffset,
+      });
+    });
+  }
+
+  return nodes.map((node) => positionById.get(node.id) ?? node);
 }
 
 export function resolveGraphColorPalette(theme: ThemeMode): GraphColorPalette {

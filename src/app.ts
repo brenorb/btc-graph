@@ -27,6 +27,7 @@ import {
 } from "./core/node-assistant";
 import {
   applyCategoryBulkAction,
+  compactGraphNodeRows,
   deriveNextProgressState,
   type LabelVisibilityMode,
   resolveCategoryColor,
@@ -989,6 +990,26 @@ function computeElements(state: AppState) {
   return { nodes, edges, strictVisibleIds };
 }
 
+function measureGraphTitleWidths(data: GraphData): Map<string, number> {
+  if (typeof navigator !== "undefined" && /jsdom/i.test(navigator.userAgent)) {
+    return new Map(data.nodes.map((node) => [node.id, node.title.length * 6]));
+  }
+
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+  if (!context) {
+    return new Map(data.nodes.map((node) => [node.id, node.title.length * 6]));
+  }
+
+  context.font = '10px "Archivo", sans-serif';
+  return new Map(
+    data.nodes.map((node) => [
+      node.id,
+      Math.min(120, context.measureText(node.title).width) + 6,
+    ]),
+  );
+}
+
 function applyGraphTheme(state: AppState) {
   const palette = resolveGraphColorPalette(
     document.documentElement.dataset.theme === "dark" ? "dark" : "light",
@@ -1081,15 +1102,20 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
 
   state.cy.resize();
   state.cy.layout(resolveGraphLayoutSettings(state.viewportMode)).run();
-  const normalizedRows = normalizeGraphNodeRows(
+  const normalizedRows = compactGraphNodeRows(
     state.data,
-    Array.from(state.cy.nodes())
-      .filter((node) => typeof node.position === "function")
-      .map((node) => ({
-        id: node.id(),
-        x: node.position("x"),
-        y: node.position("y"),
-      })),
+    normalizeGraphNodeRows(
+      state.data,
+      Array.from(state.cy.nodes())
+        .filter((node) => typeof node.position === "function")
+        .map((node) => ({
+          id: node.id(),
+          x: node.position("x"),
+          y: node.position("y"),
+        })),
+      state.viewportMode,
+    ),
+    measureGraphTitleWidths(state.data),
     state.viewportMode,
   );
   if (normalizedRows.length > 0) {
