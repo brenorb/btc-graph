@@ -9,15 +9,15 @@
   "resources": [
     {
       "type": "article",
-      "title": "Learn Me a Bitcoin: Compact Size",
-      "url": "https://learnmeabitcoin.com/technical/general/compact-size/",
-      "notes": "Visual explanation of Bitcoin's variable-length integer format and decoding rules."
+      "title": "Bitcoin Wiki: Protocol Documentation",
+      "url": "https://en.bitcoin.it/wiki/Protocol_documentation#Variable_length_integer",
+      "notes": "Wire-protocol table for CompactSize prefixes, encoded widths, and integer ranges."
     },
     {
       "type": "article",
       "title": "Bitcoin Core Developer Documentation: Serialization",
-      "url": "https://developer.bitcoin.org/reference/transactions.html",
-      "notes": "Reference context for CompactSize fields in transaction serialization."
+      "url": "https://developer.bitcoin.org/reference/transactions.html#compactsize-unsigned-integers",
+      "notes": "Reference context for CompactSize fields and canonical size encodings in transaction serialization."
     },
     {
       "type": "book",
@@ -42,4 +42,3 @@
     "var_int"
   ]
 }
-
