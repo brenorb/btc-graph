@@ -1,0 +1,41 @@
+{
+  "id": "extension.l402",
+  "title": "L402 Lightning HTTP Payments",
+  "description": "L402 combines an HTTP 402 challenge, a Lightning invoice, and a macaroon-based access token so a client can pay for an online resource and retry with cryptographic proof of payment. It enables metered APIs and machine-to-machine access without requiring a conventional account or credit-card session.",
+  "category": "Extension Systems",
+  "prerequisites": [
+    "lightning.invoices"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "L402 Protocol Specification",
+      "url": "https://docs.lightning.engineering/the-lightning-network/l402/protocol-specification",
+      "notes": "Official request, challenge, payment, and authenticated-retry flow, including token and preimage handling."
+    },
+    {
+      "type": "tool",
+      "title": "Lightning Labs L402 Repository",
+      "url": "https://github.com/lightninglabs/L402",
+      "notes": "Reference libraries and examples for adding L402 payment authentication to clients and servers."
+    },
+    {
+      "type": "article",
+      "title": "Freedom Skills: L402 API Reference",
+      "url": "https://github.com/brenorb/freedom-skills/blob/main/skills/mdk-l402-api/references/l402-api.md",
+      "notes": "Practical guide to the L402 challenge-response flow and common security checks when integrating a paid API."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "lightning",
+    "payments",
+    "authentication"
+  ],
+  "aliases": [
+    "Lightning Service Authentication Token",
+    "LSAT",
+    "HTTP 402 Lightning payments",
+    "Lightning paid APIs"
+  ]
+}

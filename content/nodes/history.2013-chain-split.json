@@ -1,0 +1,41 @@
+{
+  "id": "history.2013-chain-split",
+  "title": "March 2013 Chain Split",
+  "description": "Bitcoin Core 0.8 accepted a block that older 0.7 nodes rejected because the versions used different databases with different practical limits. The accidental split showed that undocumented implementation constraints can become de facto consensus rules and that recovery may require miners and users to coordinate around compatibility.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "protocol.softfork-hardfork"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 50: March 2013 Chain Fork Post-Mortem",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki",
+      "notes": "Canonical post-mortem covering the Berkeley DB lock limit, the LevelDB transition, the split, and the coordinated recovery."
+    },
+    {
+      "type": "article",
+      "title": "11/12 March 2013 Chain Fork Information",
+      "url": "https://bitcoin.org/chainfork",
+      "notes": "Contemporaneous public notice explaining which node versions followed each chain and why major miners temporarily returned to 0.7 compatibility."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core 0.8.0 Release Notes",
+      "url": "https://bitcoin.org/en/release/v0.8.0",
+      "notes": "Documents the chain database migration from Berkeley DB to LevelDB that exposed the compatibility boundary."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "history",
+    "consensus",
+    "chain splits"
+  ],
+  "aliases": [
+    "2013 chain fork",
+    "BIP 50",
+    "Bitcoin Core 0.8 fork",
+    "Berkeley DB chain split"
+  ]
+}
