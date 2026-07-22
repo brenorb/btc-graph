@@ -1,0 +1,41 @@
+{
+  "id": "protocol.taproot-script-path-spends",
+  "title": "Taproot Script-Path Spends",
+  "description": "A Taproot script-path spend reveals one committed Tapscript leaf, the witness items that satisfy it, and a control block proving that leaf belongs to the output key. Nodes recompute the Taproot commitment before executing the revealed script, while every unused branch remains hidden.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.taproot-control-blocks",
+    "protocol.tapscript"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 341: Taproot",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki",
+      "notes": "Canonical witness and control-block rules for proving that a revealed script was committed by a P2TR output."
+    },
+    {
+      "type": "article",
+      "title": "BIP 342: Validation of Taproot Scripts",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki",
+      "notes": "Defines how the revealed Tapscript leaf is executed after its Taproot commitment has been verified."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Schnorr/Taproot Workshop",
+      "url": "https://bitcoinops.org/en/schnorr-taproot-workshop/",
+      "notes": "Worked exercises for constructing TapTrees and spending a selected branch with its inclusion proof."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "taproot",
+    "tapscript",
+    "spending"
+  ],
+  "aliases": [
+    "script path spend",
+    "taproot script spend",
+    "P2TR script path"
+  ]
+}

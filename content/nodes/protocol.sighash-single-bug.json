@@ -1,0 +1,34 @@
+{
+  "id": "protocol.sighash-single-bug",
+  "title": "Legacy SIGHASH_SINGLE Bug",
+  "description": "In legacy signature hashing, SIGHASH_SINGLE with an input index that has no matching output signs the constant value 1 instead of the intended transaction data. Because old signatures depend on that behavior, the bug remains part of legacy consensus even though newer signature algorithms reject or avoid the edge case.",
+  "category": "Protocol & Consensus",
+  "prerequisites": [
+    "protocol.sighash-flags"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 143: Transaction Signature Verification for Version 0 Witness Program",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki",
+      "notes": "The specification documents the out-of-range SIGHASH_SINGLE behavior inherited from legacy signature hashing and how SegWit v0 handles output commitments."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Core: SignatureHash Implementation",
+      "url": "https://github.com/bitcoin/bitcoin/blob/a2e074d66ac17ca7907909bbbb563e77185a45e5/src/script/interpreter.cpp#L1610-L1621",
+      "notes": "Pinned consensus implementation showing the legacy out-of-range branch returning uint256::ONE while newer signature versions use different rules."
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "sighash",
+    "consensus bugs",
+    "signatures"
+  ],
+  "aliases": [
+    "SIGHASH_SINGLE bug",
+    "SIGHASH_SINGLE out-of-range bug",
+    "SIGHASH_SINGLE constant one"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "custody.psbt-signer-validation",
+  "title": "PSBT Signer Validation",
+  "description": "A PSBT signer should independently verify the referenced UTXOs, scripts, sighash type, amounts, fees, destinations, and change before producing signatures. The PSBT is a coordination container, not proof that the proposed transaction matches the signer's wallet policy or intent.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.psbt"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "BIP 174: Partially Signed Bitcoin Transaction Format",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki",
+      "notes": "Canonical PSBT specification, including the checks signers must perform before accepting UTXO, script, and sighash data."
+    },
+    {
+      "type": "article",
+      "title": "Bitcoin Optech Topic: PSBT",
+      "url": "https://bitcoinops.org/en/topics/psbt/",
+      "notes": "Implementation-oriented history of PSBT safety, interoperability, and signer behavior across wallet software and hardware devices."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "psbt",
+    "signing",
+    "transaction verification"
+  ],
+  "aliases": [
+    "PSBT auditing",
+    "pre-signing PSBT checks",
+    "PSBT verification before signing"
+  ]
+}
