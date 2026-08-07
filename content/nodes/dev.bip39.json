@@ -4,6 +4,7 @@
   "description": "Mnemonic seed format and entropy/checksum model used by many wallet backups.",
   "category": "Wallets",
   "prerequisites": [
+    "fundamentals.entropy",
     "fundamentals.hash-functions"
   ],
   "resources": [

@@ -1,0 +1,39 @@
+{
+  "id": "fundamentals.entropy",
+  "title": "Cryptographic Entropy",
+  "description": "Entropy measures how unpredictable a secret or random value is to an attacker. Cryptographic security depends on the entropy actually present in key material, not on whether its output merely looks random.",
+  "category": "Security",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "NIST IR 8427: Full Entropy Assumption",
+      "url": "https://csrc.nist.gov/pubs/ir/8427/final",
+      "notes": "Explains unpredictability, min-entropy, and why entropy determines the security strength of random bit generation."
+    },
+    {
+      "type": "specification",
+      "title": "BIP 39: Mnemonic Code",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+      "notes": "Defines the initial entropy sizes and checksum process used to create Bitcoin mnemonic phrases."
+    },
+    {
+      "type": "article",
+      "title": "Technical Deep Dive into the Entropy Issue",
+      "url": "https://blog.coinkite.com/entropy-technical-backgrounder/",
+      "notes": "A concrete hardware-wallet case showing how a generator can produce plausible output with a much smaller effective search space."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "cryptography",
+    "randomness",
+    "security",
+    "keys"
+  ],
+  "aliases": [
+    "cryptographic entropy",
+    "min-entropy",
+    "entropy budget"
+  ]
+}

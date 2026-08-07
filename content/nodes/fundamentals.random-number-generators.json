@@ -1,0 +1,44 @@
+{
+  "id": "fundamentals.random-number-generators",
+  "title": "Random Number Generators",
+  "description": "Random number generators turn entropy into values used for keys, nonces, and other security-sensitive operations. TRNGs obtain randomness from physical sources, while PRNGs and CSPRNGs expand an internal state and remain secure only when that state is seeded and managed correctly.",
+  "category": "Security",
+  "prerequisites": [
+    "fundamentals.entropy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "NIST: Random Number Generation",
+      "url": "https://csrc.nist.gov/topics/security-and-privacy/cryptography/random-number-generation",
+      "notes": "Overview of entropy sources, random bit generation, PRNGs, and deterministic random bit generators."
+    },
+    {
+      "type": "article",
+      "title": "NIST Glossary: Pseudorandom Number Generator",
+      "url": "https://csrc.nist.gov/glossary/term/Pseudorandom_Number_Generator",
+      "notes": "Defines deterministic generators and the conditions under which a cryptographic PRNG can be unpredictable."
+    },
+    {
+      "type": "article",
+      "title": "Technical Deep Dive into the Entropy Issue",
+      "url": "https://blog.coinkite.com/entropy-technical-backgrounder/",
+      "notes": "Shows how a hardware RNG integration error routed wallet seed generation through a software fallback PRNG."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "cryptography",
+    "randomness",
+    "trng",
+    "prng",
+    "csprng"
+  ],
+  "aliases": [
+    "RNG",
+    "TRNG",
+    "PRNG",
+    "CSPRNG",
+    "deterministic random bit generator"
+  ]
+}

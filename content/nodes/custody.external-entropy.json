@@ -1,0 +1,41 @@
+{
+  "id": "custody.external-entropy",
+  "title": "External Entropy",
+  "description": "External entropy lets a person contribute independent randomness to wallet seed generation instead of relying only on a device's internal generator. Dice, cards, coins, and other physical methods can work when their outcomes are unbiased, kept secret, counted correctly, and converted into key material without mistakes.",
+  "category": "Wallets",
+  "prerequisites": [
+    "fundamentals.entropy"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "COLDCARD: Verifying Dice Roll Math",
+      "url": "https://coldcard.com/docs/verifying-dice-roll-math/",
+      "notes": "Explains how dice outcomes become seed entropy and why the number and privacy of rolls matter."
+    },
+    {
+      "type": "specification",
+      "title": "BIP 39: Mnemonic Code",
+      "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+      "notes": "Defines how initial entropy is checksummed and encoded as a mnemonic phrase."
+    },
+    {
+      "type": "article",
+      "title": "NIST SP 800-90B: Entropy Sources",
+      "url": "https://csrc.nist.gov/pubs/sp/800/90/b/final",
+      "notes": "Provides the broader model for entropy sources, conditioning, and health considerations."
+    }
+  ],
+  "estimatedTime": "30m",
+  "tags": [
+    "wallets",
+    "entropy",
+    "dice",
+    "key generation"
+  ],
+  "aliases": [
+    "user-supplied entropy",
+    "dice-roll entropy",
+    "physical entropy"
+  ]
+}

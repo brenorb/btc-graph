@@ -1,0 +1,43 @@
+{
+  "id": "history.coldcard-rng-incident",
+  "title": "COLDCARD RNG Incident",
+  "description": "A firmware integration mistake caused some COLDCARD models to generate wallet seeds through a predictable software PRNG instead of the intended hardware RNG. The incident shows how a plausible-looking random output, open source, and a released firmware binary can still leave users with a dangerously small key search space.",
+  "category": "History & Governance",
+  "prerequisites": [
+    "dev.bip39",
+    "fundamentals.random-number-generators"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "COLDCARD Security Advisory",
+      "url": "https://blog.coinkite.com/coldcard-mk3-seed-generation-warning/",
+      "notes": "Official affected-model guidance, firmware versions, dice-entropy exception, and migration procedure."
+    },
+    {
+      "type": "article",
+      "title": "Technical Deep Dive into the Entropy Issue",
+      "url": "https://blog.coinkite.com/entropy-technical-backgrounder/",
+      "notes": "Official technical explanation of the libNgU integration, fallback PRNG, model differences, and emergency fix."
+    },
+    {
+      "type": "article",
+      "title": "Predictable RNG Fallback and 32-Bit Reseed in COLDCARD Firmware",
+      "url": "https://engineering.block.xyz/blog/predictable-rng-fallback-and-32-bit-reseed-in-coldcard-firmware",
+      "notes": "Independent technical analysis of the fallback path and limited reseeding behavior."
+    }
+  ],
+  "estimatedTime": "35m",
+  "tags": [
+    "coldcard",
+    "hardware wallets",
+    "rng",
+    "entropy",
+    "firmware"
+  ],
+  "aliases": [
+    "Coldcard RNG bug",
+    "COLDCARD entropy incident",
+    "Coldcard seed-generation vulnerability"
+  ]
+}
