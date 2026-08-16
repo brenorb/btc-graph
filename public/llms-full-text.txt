@@ -20,8 +20,9 @@ Site sections:
 
 Topics by category:
 
-Economics (33 concepts)
+Economics (34 concepts)
 - Barter Limitations: Why direct barter fails at scale and drives monetary emergence.
+- Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
 - Bitcoin Supply and Demand: Bitcoin supply is programmatically constrained by its issuance schedule, so long-run supply expansion is not discretionary. When demand for holding or transacting in bitcoin rises against that static schedule, price tends to increase.
 - Bretton Woods and 1971: The 1971 suspension of dollar-gold convertibility marked the transition to the modern fiat era. This event is central to debates about monetary discretion, inflation, and hard-money alternatives.
 - Cantillon Effects: New money enters economies through specific channels, changing relative prices unevenly. Distribution effects depend on who receives new liquidity first.
@@ -54,10 +55,6 @@ Economics (33 concepts)
 - Token Basics: A token is a digitally represented unit with rules defined by a protocol or issuer. In Bitcoin education, this topic clarifies differences between native bitcoin units and tokenized or custodial claims.
 - Transaction Batching Economics: Cost and UTXO-set tradeoffs of batching payments versus issuing many independent transactions.
 - Volatility Psychology and Risk Sizing: Market volatility amplifies behavioral biases such as panic selling and leverage chasing. Risk sizing discipline matters more than prediction accuracy for long-term survival.
-
-Economics & Incentives (2 concepts)
-- Bitcoin Denominations and Satoshis: Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.
-- Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 
 Extension Systems (73 concepts)
 - Ark Protocol: Ark is an off-chain coordination design for batched transfers with periodic settlement anchors. It combines contract structure with liquidity and timing assumptions.
@@ -254,7 +251,7 @@ Network, Relay & Client Sync (56 concepts)
 - Version 3 Transaction Relay: Version 3 transaction relay, also called TRUC, adds opt-in relay rules that restrict unconfirmed transaction topology to reduce pinning attacks and make fee-bumping more reliable for contract protocols. It is a policy-layer relay mechanism rather than a consensus change.
 - WTXID Relay (BIP 339): Peer-to-peer relay mode that uses witness transaction IDs to improve transaction tracking consistency.
 
-Protocol & Consensus (94 concepts)
+Protocol & Consensus (95 concepts)
 - 64-Byte Transaction Bug: A 64-byte witness-stripped transaction can look like the preimage of an internal Merkle-tree node, creating ambiguity that can be abused against SPV proofs and other partial block verifiers. Proposed fixes such as BIP 53 and the consensus-cleanup package remove or constrain that edge case rather than relying on every verifier to defend against it separately.
 - Adaptor Signatures: Adaptor signatures embed encrypted conditions into signature flows. They are foundational for DLC settlement and PTLC-style constructions.
 - Addresses and Outputs: Address formats, script templates, and spendability.
@@ -267,6 +264,7 @@ Protocol & Consensus (94 concepts)
 - Bitcoin URI Scheme (BIP21): BIP21 defines the `bitcoin:` URI scheme for packaging a payment destination with an amount and optional wallet-facing metadata such as a label or message. It standardizes payment links and QR payloads without changing the underlying transaction format.
 - Block Height: Height indexing of blocks and coinbase commitments used for chain ordering and validation assumptions.
 - Block Structure: Header fields, merkle root, and block composition.
+- Block Subsidy: The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.
 - Block Weight and Virtual Bytes: How weight units and vbytes price block space after SegWit.
 - Byzantine Generals Problem: Consensus under adversarial communication assumptions.
 - Change Outputs: A change output returns leftover value from a transaction back to the spender when the selected inputs exceed the payment amount and fees. Understanding change outputs is the bridge between basic output structure and later wallet decisions about coin selection, privacy leakage, and address reuse.

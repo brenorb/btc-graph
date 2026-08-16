@@ -2,7 +2,7 @@
   "id": "economics.block-subsidy",
   "title": "Block Subsidy",
   "description": "The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.",
-  "category": "Economics & Incentives",
+  "category": "Protocol & Consensus",
   "prerequisites": [
     "protocol.coinbase-transaction"
   ],
@@ -35,4 +35,3 @@
     "new bitcoin issuance"
   ]
 }
-

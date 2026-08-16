@@ -2573,7 +2573,7 @@
       "id": "economics.bitcoin-denominations",
       "title": "Bitcoin Denominations and Satoshis",
       "description": "Bitcoin is commonly expressed in BTC and satoshis. One bitcoin contains 100 million satoshis, making the satoshi the smallest standard unit used to quote and transfer bitcoin amounts.",
-      "category": "Economics & Incentives",
+      "category": "Economics",
       "prerequisites": [
         "fundamentals.money-properties"
       ],
@@ -2658,7 +2658,7 @@
       "id": "economics.block-subsidy",
       "title": "Block Subsidy",
       "description": "The block subsidy is the newly issued bitcoin a valid block may claim in its coinbase transaction. It follows the issuance schedule and declines through halvings, while transaction fees are a separate part of miner revenue.",
-      "category": "Economics & Incentives",
+      "category": "Protocol & Consensus",
       "prerequisites": [
         "protocol.coinbase-transaction"
       ],
