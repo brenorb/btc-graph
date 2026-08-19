@@ -12,6 +12,10 @@
   --danger: #c2410c;
   --ok: #166534;
   --shadow: 0 12px 28px rgba(5, 18, 35, 0.12);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --motion-fast: 160ms;
+  --motion-base: 220ms;
 }
 
 :root[data-theme="dark"] {
@@ -50,6 +54,82 @@ body {
     radial-gradient(circle at 50% 100%, rgba(18, 113, 255, 0.08), transparent 36%),
     var(--bg-0);
   overflow-x: hidden;
+}
+
+button,
+a,
+input,
+.detail-panel,
+.mobile-tools-panel,
+.help-modal,
+.donate-modal,
+.help-backdrop,
+.donate-backdrop,
+.detail-backdrop,
+.mobile-tools-overlay {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes surface-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes graph-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes content-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes feedback-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.layout > .header,
+.layout > .main-panel,
+.layout > .site-footer {
+  animation: surface-in 560ms var(--ease-out) both;
+}
+
+.layout > .main-panel { animation-delay: 70ms; }
+.layout > .site-footer { animation-delay: 110ms; }
+
+.graph-enter {
+  animation: graph-in 420ms var(--ease-out) both;
 }
 
 .layout {
@@ -147,7 +227,9 @@ select {
   padding: 0 12px;
   font-size: 0.86rem;
   font-weight: 500;
-  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  transition: background var(--motion-fast) ease, border-color var(--motion-fast) ease,
+    color var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) ease;
 }
 
 .btn,
@@ -165,6 +247,8 @@ input {
   padding: 0 12px;
   font-size: 0.86rem;
   font-weight: 500;
+  transition: background var(--motion-fast) ease, border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
 }
 
 .btn:hover,
@@ -173,6 +257,19 @@ input {
 .legend-item:hover {
   background: var(--control-hover);
   border-color: color-mix(in srgb, var(--accent) 34%, var(--panel-border));
+  transform: translateY(-1px);
+}
+
+.btn:active,
+.progress-btn:active,
+.icon-btn:active,
+.legend-item:active {
+  transform: translateY(0) scale(0.97);
+}
+
+:where(button, a, input):focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 76%, white);
+  outline-offset: 2px;
 }
 
 .btn,
@@ -261,6 +358,14 @@ input {
   background: color-mix(in srgb, var(--panel) 92%, transparent);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
   backdrop-filter: blur(10px);
+  animation: content-in 500ms 220ms var(--ease-out) both;
+}
+
+.graph-stage {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 48%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 48%);
 }
 
 .legend-item {
@@ -274,7 +379,16 @@ input {
   font-size: 0.8rem;
   color: var(--text);
   cursor: pointer;
+  animation: content-in 320ms var(--ease-out) both;
 }
+
+.legend-item:nth-child(2) { animation-delay: 20ms; }
+.legend-item:nth-child(3) { animation-delay: 40ms; }
+.legend-item:nth-child(4) { animation-delay: 60ms; }
+.legend-item:nth-child(5) { animation-delay: 80ms; }
+.legend-item:nth-child(6) { animation-delay: 100ms; }
+.legend-item:nth-child(7) { animation-delay: 120ms; }
+.legend-item:nth-child(8) { animation-delay: 140ms; }
 
 :root[data-theme="dark"] .legend-item {
   background: rgba(15, 23, 42, 0.55);
@@ -294,6 +408,31 @@ input {
   width: 100%;
   height: 100%;
   min-height: 0;
+  transform-origin: center;
+}
+
+.graph-hint {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--panel-border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel) 84%, transparent);
+  color: var(--muted);
+  font: 500 0.72rem/1 "Azeret Mono", monospace;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  animation: content-in 500ms 260ms var(--ease-out) both;
+}
+
+.graph-hint-divider {
+  color: var(--accent);
 }
 
 .detail-panel {
@@ -306,6 +445,7 @@ input {
   flex-direction: column;
   gap: 12px;
   overflow: auto;
+  transition: box-shadow var(--motion-base) var(--ease-out), border-color var(--motion-base) ease;
 }
 
 .detail-panel-top {
@@ -334,6 +474,16 @@ input {
   display: grid;
   gap: 16px;
 }
+
+.detail-stack > * {
+  animation: content-in 360ms var(--ease-out) both;
+}
+
+.detail-stack > :nth-child(2) { animation-delay: 35ms; }
+.detail-stack > :nth-child(3) { animation-delay: 65ms; }
+.detail-stack > :nth-child(4) { animation-delay: 95ms; }
+.detail-stack > :nth-child(5) { animation-delay: 125ms; }
+.detail-stack > :nth-child(6) { animation-delay: 155ms; }
 
 .detail-adjacency {
   display: grid;
@@ -455,7 +605,7 @@ input {
 }
 
 .search-results {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 20;
   max-height: 260px;
@@ -465,10 +615,21 @@ input {
   background: var(--panel);
   border-radius: 12px;
   box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px) scale(0.985);
+  transform-origin: top center;
+  transition: opacity var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out),
+    visibility 0s linear var(--motion-fast);
 }
 
 .search-results.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
 }
 
 .search-result {
@@ -480,6 +641,7 @@ input {
   text-align: left;
   padding: 10px;
   cursor: pointer;
+  animation: content-in 220ms var(--ease-out) both;
 }
 
 .search-result:last-child {
@@ -496,15 +658,20 @@ input {
 
 .help-backdrop,
 .donate-backdrop {
+  display: block;
   position: fixed;
   inset: 0;
   z-index: 29;
   background: rgba(14, 20, 33, 0.44);
+  opacity: 0;
+  transition: opacity var(--motion-base) ease;
 }
 
 .help-backdrop.open,
 .donate-backdrop.open {
   display: block;
+  opacity: 1;
+  animation: backdrop-in var(--motion-base) ease both;
 }
 
 .help-modal {
@@ -522,13 +689,14 @@ input {
   gap: 14px;
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform var(--motion-base) var(--ease-in), opacity var(--motion-base) ease;
 }
 
 .help-modal.open {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
+  transition-timing-function: var(--ease-out), ease;
 }
 
 .donate-modal {
@@ -546,13 +714,14 @@ input {
   gap: 12px;
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform var(--motion-base) var(--ease-in), opacity var(--motion-base) ease;
 }
 
 .donate-modal.open {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
+  transition-timing-function: var(--ease-out), ease;
 }
 
 .help-modal-header,
@@ -684,6 +853,10 @@ input {
 .donate-feedback {
   min-height: 1.2rem;
   text-align: center;
+}
+
+.donate-feedback:not([hidden]) {
+  animation: feedback-in var(--motion-fast) var(--ease-out) both;
 }
 
 .site-footer {
@@ -848,6 +1021,11 @@ input {
     inset: 0;
     z-index: 21;
     background: rgba(14, 20, 33, 0.24);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--motion-base) ease, visibility 0s linear var(--motion-base);
   }
 
   .mobile-tools-overlay.open,
@@ -857,8 +1035,15 @@ input {
     display: block;
   }
 
+  .mobile-tools-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
   .mobile-tools-panel {
-    display: none;
+    display: grid;
     position: absolute;
     top: 74px;
     right: 10px;
@@ -870,10 +1055,21 @@ input {
     border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px) scale(0.985);
+    transform-origin: top center;
+    transition: opacity var(--motion-base) ease, transform var(--motion-base) var(--ease-out),
+      visibility 0s linear var(--motion-base);
   }
 
   .mobile-tools-panel.open {
-    display: grid;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
     grid-auto-rows: max-content;
     align-content: start;
   }
@@ -939,12 +1135,14 @@ input {
     max-height: 84dvh;
     border-radius: 20px 20px 0 0;
     transform: translateY(calc(100% + 12px));
-    transition: transform 0.26s ease;
+    opacity: 0;
+    transition: transform 280ms var(--ease-out), opacity 220ms ease;
     z-index: 25;
     padding: 10px 14px 18px;
   }
 
   .detail-panel.open {
+    opacity: 1;
     transform: translateY(0);
   }
 
@@ -1028,5 +1226,16 @@ input {
     width: min(94vw, 360px);
     padding: 14px;
     border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
   }
 }

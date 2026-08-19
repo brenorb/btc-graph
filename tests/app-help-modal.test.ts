@@ -144,6 +144,8 @@ vi.mock("cytoscape-dagre", () => ({
 }));
 
 describe("help modal", () => {
+  const waitForExitMotion = () => new Promise((resolve) => window.setTimeout(resolve, 240));
+
   beforeEach(() => {
     document.body.innerHTML = `<div id="app"></div>`;
     window.history.replaceState({}, "", "/");
@@ -212,6 +214,7 @@ describe("help modal", () => {
     expect(storage.setItem).toHaveBeenCalledWith("btc-graph-help-seen", "1");
 
     closeButton?.click();
+    await waitForExitMotion();
 
     expect(modal?.hidden).toBe(true);
   });
@@ -239,6 +242,7 @@ describe("help modal", () => {
     expect(modal?.hidden).toBe(false);
 
     document.querySelector<HTMLElement>("#help-backdrop")?.click();
+    await waitForExitMotion();
 
     expect(modal?.hidden).toBe(true);
   });

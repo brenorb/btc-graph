@@ -72,9 +72,13 @@ interface AppState {
   viewportMode: "desktop" | "mobile";
   labelMode: LabelVisibilityMode;
   mobileToolsOpen: boolean;
+  detailHideHandle: number | null;
+  mobileToolsHideHandle: number | null;
   donateModalOpen: boolean;
   donateFeedbackResetHandle: number | null;
+  donateModalHideHandle: number | null;
   helpModalOpen: boolean;
+  helpModalHideHandle: number | null;
 }
 
 const NODE_ASSISTANT_CHAT_URL = "https://chatgpt.com/?q=";
@@ -83,6 +87,7 @@ const LIGHTNING_ADDRESS = "breno@bipa.app";
 const LIGHTNING_URI = `lightning:${LIGHTNING_ADDRESS}`;
 const DONATION_QR_IMAGE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&format=svg&data=${encodeURIComponent(LIGHTNING_URI)}`;
 const HELP_MODAL_STORAGE_KEY = "btc-graph-help-seen";
+const MOTION_DURATION_MS = 220;
 const LOGO_MARK_URL = `${import.meta.env.BASE_URL}brand/logo-mark.png`;
 const LOGO_MARK_WHITE_URL = `${import.meta.env.BASE_URL}brand/logo-mark-white.png`;
 
@@ -225,11 +230,18 @@ function createLayout(root: HTMLElement) {
             </a>
           </div>
         </div>
-        <div id="graph"></div>
-        <div class="graph-controls">
-          <button class="icon-btn" id="graph-zoom-in" type="button" aria-label="Zoom in">+</button>
-          <button class="icon-btn" id="graph-zoom-out" type="button" aria-label="Zoom out">-</button>
-          <button class="btn graph-fit-btn" id="graph-zoom-fit" type="button">Fit</button>
+        <div class="graph-stage">
+          <div id="graph"></div>
+          <div class="graph-hint" aria-hidden="true">
+            <span>Click a node to explore</span>
+            <span class="graph-hint-divider">·</span>
+            <span>Prerequisites flow upward</span>
+          </div>
+          <div class="graph-controls">
+            <button class="icon-btn" id="graph-zoom-in" type="button" aria-label="Zoom in">+</button>
+            <button class="icon-btn" id="graph-zoom-out" type="button" aria-label="Zoom out">-</button>
+            <button class="btn graph-fit-btn" id="graph-zoom-fit" type="button">Fit</button>
+          </div>
         </div>
       </section>
 
@@ -604,35 +616,38 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
 
   layout?.setAttribute("data-viewport-mode", state.viewportMode);
 
-  if (detailBackdrop) {
-    detailBackdrop.hidden = !detailOpen;
-    detailBackdrop.classList.toggle("open", detailOpen);
-  }
-
-  if (mobileToolsOverlay) {
-    mobileToolsOverlay.hidden = !mobileToolsVisible;
-    mobileToolsOverlay.classList.toggle("open", mobileToolsVisible);
-  }
-
-  if (helpBackdrop) {
-    helpBackdrop.hidden = !state.helpModalOpen;
-    helpBackdrop.classList.toggle("open", state.helpModalOpen);
-  }
-
-  if (helpModal) {
-    helpModal.hidden = !state.helpModalOpen;
-    helpModal.classList.toggle("open", state.helpModalOpen);
-  }
-
-  if (donateBackdrop) {
-    donateBackdrop.hidden = !state.donateModalOpen;
-    donateBackdrop.classList.toggle("open", state.donateModalOpen);
-  }
-
-  if (donateModal) {
-    donateModal.hidden = !state.donateModalOpen;
-    donateModal.classList.toggle("open", state.donateModalOpen);
-  }
+  syncAnimatedGroup(
+    [detailBackdrop],
+    detailOpen,
+    () => state.detailHideHandle,
+    (handle) => {
+      state.detailHideHandle = handle;
+    },
+  );
+  syncAnimatedGroup(
+    [mobileToolsOverlay],
+    mobileToolsVisible,
+    () => state.mobileToolsHideHandle,
+    (handle) => {
+      state.mobileToolsHideHandle = handle;
+    },
+  );
+  syncAnimatedGroup(
+    [helpBackdrop, helpModal],
+    state.helpModalOpen,
+    () => state.helpModalHideHandle,
+    (handle) => {
+      state.helpModalHideHandle = handle;
+    },
+  );
+  syncAnimatedGroup(
+    [donateBackdrop, donateModal],
+    state.donateModalOpen,
+    () => state.donateModalHideHandle,
+    (handle) => {
+      state.donateModalHideHandle = handle;
+    },
+  );
 
   mobileToolsPanel?.classList.toggle("open", mobileToolsVisible);
   mobileToolsToggle?.setAttribute("aria-expanded", String(mobileToolsVisible));
@@ -640,6 +655,48 @@ function syncResponsiveLayout(state: AppState, root: HTMLElement) {
     "overlay-open",
     detailOpen || mobileToolsVisible || state.helpModalOpen || state.donateModalOpen,
   );
+}
+
+function syncAnimatedGroup(
+  elements: Array<HTMLElement | null>,
+  open: boolean,
+  getHideHandle: () => number | null,
+  setHideHandle: (handle: number | null) => void,
+) {
+  const visibleElements = elements.filter((element): element is HTMLElement => Boolean(element));
+  const currentHandle = getHideHandle();
+  if (currentHandle !== null) {
+    window.clearTimeout(currentHandle);
+    setHideHandle(null);
+  }
+
+  if (open) {
+    visibleElements.forEach((element) => {
+      element.hidden = false;
+      element.classList.add("open");
+    });
+    return;
+  }
+
+  const wasVisible = visibleElements.some((element) => !element.hidden);
+  visibleElements.forEach((element) => element.classList.remove("open"));
+  if (!wasVisible) {
+    visibleElements.forEach((element) => {
+      element.hidden = true;
+    });
+    return;
+  }
+
+  const hide = () => {
+    visibleElements.forEach((element) => {
+      element.hidden = true;
+    });
+    setHideHandle(null);
+  };
+  const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ? 0
+    : MOTION_DURATION_MS;
+  setHideHandle(window.setTimeout(hide, duration));
 }
 
 function setHelpModalOpen(state: AppState, root: HTMLElement, open: boolean) {
@@ -871,6 +928,13 @@ function renderDetails(state: AppState, root: HTMLElement) {
       selectNode(state, root, nodeId);
     });
   });
+}
+
+function replayCssAnimation(element: HTMLElement | null, className: string) {
+  if (!element) return;
+  element.classList.remove(className);
+  void element.offsetWidth;
+  element.classList.add(className);
 }
 
 function syncNodeClasses(state: AppState) {
@@ -1145,6 +1209,7 @@ function rerenderGraph(state: AppState, root: HTMLElement) {
     }
   }
   state.cy.fit(undefined, state.viewportMode === "mobile" ? 18 : 32);
+  replayCssAnimation(root.querySelector<HTMLElement>("#graph"), "graph-enter");
 
   refreshLabels(state);
   renderCategoryBulkControls(state, root);
@@ -1473,9 +1538,13 @@ export async function bootstrapApp(root: HTMLElement | null) {
     viewportMode: resolveViewportMode(window.innerWidth),
     labelMode: "all",
     mobileToolsOpen: false,
+    detailHideHandle: null,
+    mobileToolsHideHandle: null,
     donateModalOpen: false,
     donateFeedbackResetHandle: null,
+    donateModalHideHandle: null,
     helpModalOpen: autoOpenHelpModal,
+    helpModalHideHandle: null,
   };
 
   const fromUrl = readViewStateFromUrl(state);
