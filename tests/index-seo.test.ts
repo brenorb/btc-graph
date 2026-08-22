@@ -22,6 +22,7 @@ describe("homepage SEO shell", () => {
     expect(html).toContain('"contactPoint"');
     expect(html).toContain('"address"');
     expect(html).toContain("<h1>Bitcoin Learning Graph</h1>");
+    expect(html).toContain('<main id="main">');
     expect(html).toContain("<h2>What you can study</h2>");
     expect(html).toContain("Browse the concept library");
     expect(html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<style[\s\S]*?<\/style>/g, "")).toContain("Bitcoin Learning Graph is a free, open-source study guide");
