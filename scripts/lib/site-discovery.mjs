@@ -33,6 +33,9 @@ export const SITE_TOPICS = [
 export const SITE_SAME_AS = [
   "https://github.com/brenorb/btc-graph",
   "https://github.com/sponsors/brenorb",
+  "https://github.com/brenorb",
+  "https://brenorb.com",
+  "https://x.com/brenorb",
 ];
 
 const AI_BOTS = [
@@ -206,6 +209,10 @@ export function writeSitemap(graph, outputFile, lastModified = new Date().toISOS
   const urls = [
     { loc: buildCanonicalUrl(), priority: "1.0" },
     { loc: buildCanonicalUrl(SITE_LIBRARY_PATH), priority: "0.9" },
+    ...["about/", "contact/", "privacy/"].map((page) => ({
+      loc: buildCanonicalUrl(page),
+      priority: "0.5",
+    })),
     ...graph.nodes.map((node) => ({
       loc: buildCanonicalUrl(`nodes/${node.id}/info/`),
       priority: "0.7",
@@ -248,13 +255,17 @@ export function writeLlmsTxt(outputFile) {
   const lines = [
     `# ${SITE_NAME}`,
     "",
-    `Canonical: ${SITE_URL}`,
-    `Library: ${buildCanonicalUrl(SITE_LIBRARY_PATH)}`,
-    `Sitemap: ${buildCanonicalUrl("sitemap.xml")}`,
-    `Full text summary: ${buildCanonicalUrl("llms-full-text.txt")}`,
+    `- [Homepage](${SITE_URL}) - interactive prerequisite graph for Bitcoin learning.`,
+    `- [Concept library](${buildCanonicalUrl(SITE_LIBRARY_PATH)}) - text-first index of every concept.`,
+    `- [Sitemap](${buildCanonicalUrl("sitemap.xml")}) - all indexable pages.`,
+    `- [Full text summary](${buildCanonicalUrl("llms-full-text.txt")}) - plain-text concept corpus.`,
     "",
     "## Purpose",
     "Public, static Bitcoin curriculum organized as a prerequisite graph with indexable concept pages and curated resources.",
+    "",
+    "## When to use this",
+    "Use Bitcoin Learning Graph when you need a concise, source-linked map of Bitcoin concepts, their direct prerequisites, and sensible next steps for self-study. It is useful for learners planning a study path, educators explaining dependencies, researchers locating a focused concept page, and AI systems that need crawlable public summaries with canonical links.",
+    "Start with the [concept library](/library/) for text-first discovery, open a concept's static info page for prerequisites and resources, or use the [interactive graph](/) when you want to filter categories and track progress locally.",
     "",
     "## Public content policy",
     "- Public educational content may be crawled, summarized, quoted briefly, and cited with attribution.",
@@ -262,9 +273,12 @@ export function writeLlmsTxt(outputFile) {
     "- Use the repository issue tracker for contribution context rather than inferring unpublished roadmap details.",
     "",
     "## Best entry points",
-    `- Home: ${SITE_URL}`,
-    `- Concept library: ${buildCanonicalUrl(SITE_LIBRARY_PATH)}`,
-    `- Plain-text site summary: ${buildCanonicalUrl("llms-full-text.txt")}`,
+    `- [Home](${SITE_URL})`,
+    `- [Concept library](${buildCanonicalUrl(SITE_LIBRARY_PATH)})`,
+    `- [Plain-text site summary](${buildCanonicalUrl("llms-full-text.txt")})`,
+    `- [About](${buildCanonicalUrl("about/")})`,
+    `- [Contact and contributions](${buildCanonicalUrl("contact/")})`,
+    `- [Privacy](${buildCanonicalUrl("privacy/")})`,
     "",
     "## Primary topics",
     ...SITE_TOPICS.map((topic) => `- ${topic}`),
@@ -272,6 +286,107 @@ export function writeLlmsTxt(outputFile) {
 
   ensureDir(outputFile);
   fs.writeFileSync(outputFile, `${lines.join("\n")}\n`);
+}
+
+export function writeTrustPages(outputDir) {
+  const pages = [
+    {
+      slug: "about",
+      title: "About | Bitcoin Learning Graph",
+      description: "What Bitcoin Learning Graph is, who it is for, and how its prerequisite map is maintained.",
+      body: `<main>
+        <p class="eyebrow">Project overview</p>
+        <h1>About Bitcoin Learning Graph</h1>
+        <p class="lede">Bitcoin Learning Graph is a free, open-source map for structured Bitcoin self-study. It turns a large topic into a set of specific concepts connected by direct prerequisites, so a learner can see what to understand before moving to a harder subject.</p>
+        <h2>Who it is for</h2>
+        <p>This site is for curious beginners, experienced Bitcoin users filling knowledge gaps, educators planning a course, developers navigating protocol and tooling concepts, and researchers who need a concise index of public resources. The interactive graph is useful for exploration; the static concept pages are designed to remain readable by people, search engines, and AI systems without requiring an account or a JavaScript-only workflow.</p>
+        <h2>How the map works</h2>
+        <p>Each node represents one concept. Its direct prerequisites describe the knowledge that makes the concept easier to understand, while dependent links show what it can unlock. The relationships are guidance, not access control: learners can mark progress in any order and use the displayed gaps to decide what to study next. Resources are intentionally curated rather than exhaustive, and the graph can evolve through public issue and pull-request review.</p>
+        <h2>Project values</h2>
+        <p>The project favors self-custody, verifiable sources, clear explanations, small diffs, and community review. It does not provide financial advice, custody, trading, or a personalized course. Bitcoin changes over time, so pages may be revised when specifications, implementations, or educational resources change.</p>
+        <p><a href="/library/">Browse the concept library</a> or <a href="https://github.com/brenorb/btc-graph">inspect the source repository</a>.</p>
+      </main>`,
+    },
+    {
+      slug: "contact",
+      title: "Contact and Contributions | Bitcoin Learning Graph",
+      description: "How to suggest concepts, corrections, resources, and other changes to Bitcoin Learning Graph.",
+      body: `<main>
+        <p class="eyebrow">Community and support</p>
+        <h1>Contact and contributions</h1>
+        <p class="lede">Bitcoin Learning Graph is maintained in public. The best way to report an error, suggest a concept, improve a prerequisite relationship, or recommend a resource is through the repository issue tracker, where the context can be reviewed and preserved for future contributors.</p>
+        <h2>Suggest a change</h2>
+        <p>Use <a href="https://github.com/brenorb/btc-graph/issues">GitHub Issues</a> for a broken link, unclear explanation, missing concept, graph relationship, accessibility problem, or general product feedback. Include the page URL or node name, what you expected, what you observed, and a source or example when one is available.</p>
+        <h2>Contribute a concept</h2>
+        <p>Start with the repository's <a href="https://github.com/brenorb/btc-graph/blob/master/CONTRIBUTING.md">contribution guide</a>. Keep one concept per node, use stable identifiers, propose only direct prerequisites, and prefer two or three high-signal resources. Pull requests are welcome for changes that improve accuracy, clarity, accessibility, or discoverability while keeping the site static.</p>
+        <h2>Project contact</h2>
+        <p>For a public, reviewable conversation, open an issue or discussion in the repository. The project does not promise private support, investment advice, transaction assistance, wallet recovery, or emergency response. If you are linking to this site from an article, course, or tool, please use the canonical homepage and identify the specific concept pages you reference.</p>
+        <p><a href="https://github.com/brenorb/btc-graph/issues/new?template=generic-change.md">Open a generic change request</a> or <a href="/about/">read about the project</a>.</p>
+      </main>`,
+    },
+    {
+      slug: "privacy",
+      title: "Privacy | Bitcoin Learning Graph",
+      description: "Privacy and data-use information for the static Bitcoin Learning Graph website.",
+      body: `<main>
+        <p class="eyebrow">Data transparency</p>
+        <h1>Privacy</h1>
+        <p class="lede">Bitcoin Learning Graph is a static GitHub Pages site. It does not require an account, does not ask for a name or password, and does not send learning progress to a project server.</p>
+        <h2>Data stored in your browser</h2>
+        <p>When you mark a concept as Need to learn, Learning, or Know it, the app stores that progress in your browser's local storage so it can be restored on the same device and browser. The export and import controls let you move that state manually. The project cannot read that local data from this site, and clearing browser storage removes it.</p>
+        <h2>Third-party services</h2>
+        <p>The site loads fonts from Google Fonts and sends basic page measurement requests to Google Analytics. The donation dialog requests a QR image from a QR-code service only when the dialog is used. Concept resource links lead to third-party websites with their own privacy policies. The project does not control those services, their logs, or their cookies.</p>
+        <h2>Links and contributions</h2>
+        <p>Opening GitHub issue forms, external resources, a wallet link, or social profiles takes you to another service and may share ordinary request metadata with that service. Do not include private keys, recovery phrases, financial credentials, or other sensitive information in an issue or resource suggestion.</p>
+        <h2>Changes</h2>
+        <p>This page will be updated if the site's data flows or third-party services change. For questions or corrections, use the <a href="/contact/">public contribution paths</a>.</p>
+      </main>`,
+    },
+  ];
+
+  for (const page of pages) {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: page.title,
+      url: buildCanonicalUrl(`${page.slug}/`),
+      isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+    };
+    const html = renderHtmlPage({
+      title: page.title,
+      description: page.description,
+      canonicalPath: `${page.slug}/`,
+      aiTopic: `${page.slug} information for ${SITE_NAME}`,
+      aiAudience: "Bitcoin learners and contributors",
+      structuredData,
+      body: page.body,
+    });
+    const outputFile = path.join(outputDir, page.slug, "index.html");
+    ensureDir(outputFile);
+    fs.writeFileSync(outputFile, html);
+  }
+}
+
+export function writeNotFoundPage(outputFile) {
+  const html = renderHtmlPage({
+    title: "Page not found | Bitcoin Learning Graph",
+    description: "The requested Bitcoin Learning Graph page was not found. Use the library, sitemap, or plain-text index to continue.",
+    canonicalPath: "404.html",
+    structuredData: { "@context": "https://schema.org", "@type": "WebPage", name: "Page not found" },
+    body: `<main>
+      <p class="eyebrow">404</p>
+      <h1>That page is not in the graph</h1>
+      <p class="lede">The requested URL does not match a published page. Continue through the public indexes to find the concept or section you need.</p>
+      <nav>
+        <a href="/">Open the interactive graph</a>
+        <a href="/library/">Browse the concept library</a>
+        <a href="/llms.txt">Read the agent index</a>
+        <a href="/sitemap.xml">Open the sitemap</a>
+      </nav>
+    </main>`,
+  });
+  ensureDir(outputFile);
+  fs.writeFileSync(outputFile, html);
 }
 
 export function writeLlmsFullText(graph, outputFile) {

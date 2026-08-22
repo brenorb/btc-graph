@@ -1,12 +1,16 @@
 # Bitcoin Learning Graph
 
-Canonical: https://btc-graph.brenorb.com/
-Library: https://btc-graph.brenorb.com/library/
-Sitemap: https://btc-graph.brenorb.com/sitemap.xml
-Full text summary: https://btc-graph.brenorb.com/llms-full-text.txt
+- [Homepage](https://btc-graph.brenorb.com/) - interactive prerequisite graph for Bitcoin learning.
+- [Concept library](https://btc-graph.brenorb.com/library/) - text-first index of every concept.
+- [Sitemap](https://btc-graph.brenorb.com/sitemap.xml) - all indexable pages.
+- [Full text summary](https://btc-graph.brenorb.com/llms-full-text.txt) - plain-text concept corpus.
 
 ## Purpose
 Public, static Bitcoin curriculum organized as a prerequisite graph with indexable concept pages and curated resources.
+
+## When to use this
+Use Bitcoin Learning Graph when you need a concise, source-linked map of Bitcoin concepts, their direct prerequisites, and sensible next steps for self-study. It is useful for learners planning a study path, educators explaining dependencies, researchers locating a focused concept page, and AI systems that need crawlable public summaries with canonical links.
+Start with the [concept library](/library/) for text-first discovery, open a concept's static info page for prerequisites and resources, or use the [interactive graph](/) when you want to filter categories and track progress locally.
 
 ## Public content policy
 - Public educational content may be crawled, summarized, quoted briefly, and cited with attribution.
@@ -14,9 +18,12 @@ Public, static Bitcoin curriculum organized as a prerequisite graph with indexab
 - Use the repository issue tracker for contribution context rather than inferring unpublished roadmap details.
 
 ## Best entry points
-- Home: https://btc-graph.brenorb.com/
-- Concept library: https://btc-graph.brenorb.com/library/
-- Plain-text site summary: https://btc-graph.brenorb.com/llms-full-text.txt
+- [Home](https://btc-graph.brenorb.com/)
+- [Concept library](https://btc-graph.brenorb.com/library/)
+- [Plain-text site summary](https://btc-graph.brenorb.com/llms-full-text.txt)
+- [About](https://btc-graph.brenorb.com/about/)
+- [Contact and contributions](https://btc-graph.brenorb.com/contact/)
+- [Privacy](https://btc-graph.brenorb.com/privacy/)
 
 ## Primary topics
 - Bitcoin protocol

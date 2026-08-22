@@ -6,8 +6,10 @@ import {
   writeLibraryPage,
   writeLlmsFullText,
   writeLlmsTxt,
+  writeNotFoundPage,
   writeRobotsTxt,
   writeSitemap,
+  writeTrustPages,
 } from "./lib/site-discovery.mjs";
 
 const repoRoot = process.cwd();
@@ -20,6 +22,8 @@ const sitemapOutputFile = path.join(repoRoot, "public", "sitemap.xml");
 const robotsOutputFile = path.join(repoRoot, "public", "robots.txt");
 const llmsOutputFile = path.join(repoRoot, "public", "llms.txt");
 const llmsFullTextOutputFile = path.join(repoRoot, "public", "llms-full-text.txt");
+const trustPagesOutputDir = path.join(repoRoot, "public");
+const notFoundOutputFile = path.join(repoRoot, "public", "404.html");
 
 const requiredFields = [
   "id",
@@ -168,6 +172,8 @@ writeSitemap(graph, sitemapOutputFile, buildTimestamp);
 writeRobotsTxt(robotsOutputFile);
 writeLlmsTxt(llmsOutputFile);
 writeLlmsFullText(graph, llmsFullTextOutputFile);
+writeTrustPages(trustPagesOutputDir);
+writeNotFoundPage(notFoundOutputFile);
 
 console.log(
   `Built ${graph.nodes.length} nodes -> ${path.relative(repoRoot, outputFile)}, ${path.relative(repoRoot, infoPagesOutputDir)}, ${path.relative(repoRoot, libraryOutputFile)}, ${path.relative(repoRoot, sitemapOutputFile)}, ${path.relative(repoRoot, robotsOutputFile)}, ${path.relative(repoRoot, llmsOutputFile)}, and ${path.relative(repoRoot, llmsFullTextOutputFile)}`,

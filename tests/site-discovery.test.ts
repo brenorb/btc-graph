@@ -8,8 +8,10 @@ import {
   writeLibraryPage,
   writeLlmsFullText,
   writeLlmsTxt,
+  writeNotFoundPage,
   writeRobotsTxt,
   writeSitemap,
+  writeTrustPages,
 } from "../scripts/lib/site-discovery.mjs";
 
 const tempDirs = [];
@@ -78,9 +80,21 @@ describe("site discovery assets", () => {
     expect(robots).toContain("User-agent: ClaudeBot");
     expect(robots).toContain("Sitemap: https://btc-graph.brenorb.com/sitemap.xml");
 
-    expect(llms).toContain("Canonical: https://btc-graph.brenorb.com/");
-    expect(llms).toContain("Full text summary: https://btc-graph.brenorb.com/llms-full-text.txt");
+    expect(llms).toContain("[Homepage](https://btc-graph.brenorb.com/)");
+    expect(llms).toContain("[Full text summary](https://btc-graph.brenorb.com/llms-full-text.txt)");
+    expect(llms).toContain("## When to use this");
     expect(llms).toContain("Bitcoin protocol");
+  });
+
+  it("writes trust pages and a recoverable not-found page", () => {
+    const dir = createTempDir();
+    writeTrustPages(dir);
+    writeNotFoundPage(path.join(dir, "404.html"));
+
+    expect(fs.readFileSync(path.join(dir, "about", "index.html"), "utf8")).toContain("<h1>About Bitcoin Learning Graph</h1>");
+    expect(fs.readFileSync(path.join(dir, "contact", "index.html"), "utf8")).toContain("<h1>Contact and contributions</h1>");
+    expect(fs.readFileSync(path.join(dir, "privacy", "index.html"), "utf8")).toContain("<h1>Privacy</h1>");
+    expect(fs.readFileSync(path.join(dir, "404.html"), "utf8")).toContain('href="/sitemap.xml"');
   });
 
   it("writes a text-first library page and a full-text summary", () => {
