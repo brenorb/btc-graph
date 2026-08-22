@@ -94,7 +94,9 @@ describe("site discovery assets", () => {
     expect(fs.readFileSync(path.join(dir, "about", "index.html"), "utf8")).toContain("<h1>About Bitcoin Learning Graph</h1>");
     expect(fs.readFileSync(path.join(dir, "contact", "index.html"), "utf8")).toContain("<h1>Contact and contributions</h1>");
     expect(fs.readFileSync(path.join(dir, "privacy", "index.html"), "utf8")).toContain("<h1>Privacy</h1>");
-    expect(fs.readFileSync(path.join(dir, "404.html"), "utf8")).toContain('href="/sitemap.xml"');
+    const notFoundHtml = fs.readFileSync(path.join(dir, "404.html"), "utf8");
+    expect(notFoundHtml).toContain("# Page not found");
+    expect(notFoundHtml).toContain('href="/sitemap.xml"');
   });
 
   it("writes a text-first library page and a full-text summary", () => {
