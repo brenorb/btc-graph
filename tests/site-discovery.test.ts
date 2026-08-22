@@ -96,6 +96,7 @@ describe("site discovery assets", () => {
     expect(fs.readFileSync(path.join(dir, "privacy", "index.html"), "utf8")).toContain("<h1>Privacy</h1>");
     const notFoundHtml = fs.readFileSync(path.join(dir, "404.html"), "utf8");
     expect(notFoundHtml).toContain("# Page not found");
+    expect(notFoundHtml).toContain('name="robots" content="noindex"');
     expect(notFoundHtml).toContain('href="/sitemap.xml"');
   });
 

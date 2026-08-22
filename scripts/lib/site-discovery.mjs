@@ -368,15 +368,20 @@ export function writeTrustPages(outputDir) {
 }
 
 export function writeNotFoundPage(outputFile) {
-  const html = renderHtmlPage({
-    title: "Page not found | Bitcoin Learning Graph",
-    description: "The requested Bitcoin Learning Graph page was not found. Use the library, sitemap, or plain-text index to continue.",
-    canonicalPath: "404.html",
-    structuredData: { "@context": "https://schema.org", "@type": "WebPage", name: "Page not found" },
-    body: `<main>
+  const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found | ${SITE_NAME}</title>
+    <link rel="stylesheet" href="/crawl-pages.css" />
+  </head>
+  <body>
+    <main>
       <p class="eyebrow">404</p>
       <h1>That page is not in the graph</h1>
-      <p class="lede">The requested URL does not match a published page. Continue through the public indexes to find the concept or section you need.</p>
+      <p class="lede">The requested URL does not match a published page.</p>
       <pre class="agent-recovery"># Page not found
 
 Try:
@@ -384,14 +389,16 @@ Try:
 - [Sitemap](/sitemap.xml)
 - [LLMs index](/llms.txt)
 - [Concept library](/library/)</pre>
-      <nav>
+      <nav aria-label="Recovery links">
         <a href="/">Open the interactive graph</a>
         <a href="/library/">Browse the concept library</a>
         <a href="/llms.txt">Read the agent index</a>
         <a href="/sitemap.xml">Open the sitemap</a>
       </nav>
-    </main>`,
-  });
+    </main>
+  </body>
+</html>
+`;
   ensureDir(outputFile);
   fs.writeFileSync(outputFile, html);
 }
