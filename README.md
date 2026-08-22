@@ -1,8 +1,8 @@
-# btc-graph
+# Bitcoin Learning Graph
 
 Interactive, static Bitcoin learning graph built for GitHub Pages.
 
-Live site: https://btc-graph.brenorb.com/
+Canonical site: https://btc-graph.brenorb.com/
 
 Search-friendly library: https://btc-graph.brenorb.com/library/
 
