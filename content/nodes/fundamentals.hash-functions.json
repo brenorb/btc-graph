@@ -3,7 +3,9 @@
   "title": "Hash Functions",
   "description": "Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.",
   "category": "Security",
-  "prerequisites": [],
+  "prerequisites": [
+    "fundamentals.one-way-functions"
+  ],
   "resources": [
     {
       "type": "book",
