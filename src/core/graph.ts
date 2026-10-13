@@ -37,7 +37,7 @@ export function validateGraphData(data: GraphData): ValidationResult {
 
   for (const node of nodes) {
     for (const field of REQUIRED_NODE_FIELDS) {
-      if (!(field in node) || (node as Record<string, unknown>)[field] === undefined) {
+      if (!(field in node) || node[field] === undefined) {
         errors.push(`Node "${node.id ?? "<unknown>"}" missing required field: ${field}`);
       }
     }

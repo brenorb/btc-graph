@@ -14,7 +14,7 @@ import {
   writeTrustPages,
 } from "../scripts/lib/site-discovery.mjs";
 
-const tempDirs = [];
+const tempDirs: string[] = [];
 
 function createTempDir() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "btc-graph-site-discovery-"));
