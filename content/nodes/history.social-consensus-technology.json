@@ -4,8 +4,7 @@
   "description": "Bitcoin works through social consensus around rule enforcement, not just code execution. Like contracts, the social layer determines legitimacy when disputes or edge cases appear.",
   "category": "History & Governance",
   "prerequisites": [
-    "economics.schelling-points",
-    "history.block-size-war"
+    "economics.schelling-points"
   ],
   "resources": [
     {
