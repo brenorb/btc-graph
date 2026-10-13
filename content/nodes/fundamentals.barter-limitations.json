@@ -6,24 +6,6 @@
   "prerequisites": [],
   "resources": [
     {
-      "type": "article",
-      "title": "Bitcoin.page",
-      "url": "https://bitcoin.page",
-      "notes": "Accessible concept summaries."
-    },
-    {
-      "type": "article",
-      "title": "Bitcoin Optech",
-      "url": "https://bitcoinops.org/",
-      "notes": "High-signal explainers and updates."
-    },
-    {
-      "type": "article",
-      "title": "Bitcoin Design",
-      "url": "https://bitcoin.design/",
-      "notes": "User-centered framing for applied learning."
-    },
-    {
       "type": "book",
       "title": "The Bitcoin Standard",
       "url": "https://amzn.to/4h1H0iK",
