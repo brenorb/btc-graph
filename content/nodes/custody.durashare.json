@@ -1,0 +1,30 @@
+{
+  "id": "custody.durashare",
+  "title": "DuraShare",
+  "description": "A BIP39 threshold-backup specification using Shamir sharing over GF(2053), with offline software and a manual fallback. Its per-share audit checks geographically distributed backup artifacts before recovery without reconstructing the mnemonic.",
+  "category": "Wallets",
+  "prerequisites": [
+    "custody.shamirs-secret-sharing",
+    "dev.bip39"
+  ],
+  "resources": [
+    {
+      "type": "article",
+      "title": "DuraShare Specification and Reference Implementations",
+      "url": "https://github.com/GRIFORTIS/durashare",
+      "notes": "Primary protocol, manual/software specifications, and test vectors. The project states that reference implementations have not been independently audited and should not be used with real funds. The BIP39 passphrase requires a separate backup."
+    }
+  ],
+  "estimatedTime": "45m",
+  "tags": [
+    "backups",
+    "threshold",
+    "recovery",
+    "experimental"
+  ],
+  "aliases": [
+    "DuraShare",
+    "BIP39-native threshold backup",
+    "per-share audit"
+  ]
+}
