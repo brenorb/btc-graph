@@ -5860,6 +5860,7 @@
       "description": "Bitcoin key security depends on the hardness of solving discrete logarithms on elliptic curves. This hardness assumption is the core one-way property behind public keys.",
       "category": "Security",
       "prerequisites": [
+        "fundamentals.one-way-functions",
         "fundamentals.finite-fields",
         "fundamentals.modular-exponentiation"
       ],
@@ -6114,7 +6115,9 @@
       "title": "Hash Functions",
       "description": "Hash functions deterministically compress arbitrary inputs into fixed-size digests. Bitcoin relies on preimage, second-preimage, and collision resistance for identifiers, commitments, and proof-of-work.",
       "category": "Security",
-      "prerequisites": [],
+      "prerequisites": [
+        "fundamentals.one-way-functions"
+      ],
       "resources": [
         {
           "type": "book",
@@ -6510,6 +6513,36 @@
       ],
       "aliases": [
         "neutral rules"
+      ]
+    },
+    {
+      "id": "fundamentals.one-way-functions",
+      "title": "One-Way Functions",
+      "description": "Functions that are efficient to evaluate but computationally hard to invert on typical outputs. Hash preimage resistance and discrete-logarithm hardness are distinct examples of this shared cryptographic idea; neither problem is a prerequisite for the other.",
+      "category": "Security",
+      "prerequisites": [],
+      "resources": [
+        {
+          "type": "article",
+          "title": "NIST: Cryptographic Hash Function",
+          "url": "https://csrc.nist.gov/glossary/term/cryptographic_hash_function",
+          "notes": "Defines the one-way property as preimage resistance and distinguishes it from collision resistance."
+        },
+        {
+          "type": "article",
+          "title": "Mastering Bitcoin: Public Key Cryptography",
+          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+          "notes": "Explains easy forward evaluation and hard inversion for elliptic-curve public keys."
+        }
+      ],
+      "estimatedTime": "25m",
+      "tags": [
+        "cryptography",
+        "one-way functions"
+      ],
+      "aliases": [
+        "one-way function",
+        "hard-to-invert functions"
       ]
     },
     {

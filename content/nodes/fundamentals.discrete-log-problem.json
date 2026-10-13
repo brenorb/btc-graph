@@ -4,6 +4,7 @@
   "description": "Bitcoin key security depends on the hardness of solving discrete logarithms on elliptic curves. This hardness assumption is the core one-way property behind public keys.",
   "category": "Security",
   "prerequisites": [
+    "fundamentals.one-way-functions",
     "fundamentals.finite-fields",
     "fundamentals.modular-exponentiation"
   ],

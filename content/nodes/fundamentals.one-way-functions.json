@@ -1,0 +1,30 @@
+{
+  "id": "fundamentals.one-way-functions",
+  "title": "One-Way Functions",
+  "description": "Functions that are efficient to evaluate but computationally hard to invert on typical outputs. Hash preimage resistance and discrete-logarithm hardness are distinct examples of this shared cryptographic idea; neither problem is a prerequisite for the other.",
+  "category": "Security",
+  "prerequisites": [],
+  "resources": [
+    {
+      "type": "article",
+      "title": "NIST: Cryptographic Hash Function",
+      "url": "https://csrc.nist.gov/glossary/term/cryptographic_hash_function",
+      "notes": "Defines the one-way property as preimage resistance and distinguishes it from collision resistance."
+    },
+    {
+      "type": "article",
+      "title": "Mastering Bitcoin: Public Key Cryptography",
+      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc",
+      "notes": "Explains easy forward evaluation and hard inversion for elliptic-curve public keys."
+    }
+  ],
+  "estimatedTime": "25m",
+  "tags": [
+    "cryptography",
+    "one-way functions"
+  ],
+  "aliases": [
+    "one-way function",
+    "hard-to-invert functions"
+  ]
+}
