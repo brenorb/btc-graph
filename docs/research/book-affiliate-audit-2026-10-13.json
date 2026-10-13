@@ -1,0 +1,575 @@
+{
+  "date": "2026-10-13",
+  "scope": "All 254 book-resource occurrences at default-branch application baseline 9cf0c165f8b05510e1066a22aba9d74d6c8ade57; after mapping eight free chapters to the existing affiliate pair, 36 distinct affiliate URLs remain.",
+  "verification": "GET with redirects; 200 and matching product title verify a listing response. Service-error responses remain unverified; no stock availability claimed.",
+  "products": [
+    {
+      "url": "https://amzn.to/4woCZcK",
+      "final_host": "www.amazon.com",
+      "asin": "1098150090",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering Bitcoin: Programming the Open Blockchain: Antonopoulos, Andreas M., Harding, David A.: 9781098150099: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://link.amazon/B060bSZFu",
+      "final_host": "www.amazon.com.br",
+      "asin": "1098150090",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering Bitcoin: Programming the Open Blockchain | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 302 ",
+        "HTTP/2 302 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4b5xUhC",
+      "final_host": "www.amazon.com",
+      "asin": "1492031496",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Programming Bitcoin: Learn How to Program Bitcoin from Scratch: 9781492031499: Computer Science Books @ Amazon.com",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4lX5bzw",
+      "final_host": "www.amazon.com.br",
+      "asin": "1492031496",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Programming Bitcoin: Learn How to Program Bitcoin from Scratch | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4ro0NdG",
+      "final_host": "www.amazon.com",
+      "asin": "1098150090",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering Bitcoin: Programming the Open Blockchain: Antonopoulos, Andreas M., Harding, David A.: 9781098150099: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4te47JX",
+      "final_host": "www.amazon.com.br",
+      "asin": "1098150090",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering Bitcoin: Programming the Open Blockchain | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4s33eUd",
+      "final_host": "www.amazon.com",
+      "asin": "9916723591",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Service Unavailable Error",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com/dp/9916723591?tag=brenorb00-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Service Unavailable Error"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/4uRjb1v",
+      "final_host": "www.amazon.com.br",
+      "asin": "9916723591",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/9916723591?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/46Tdru0",
+      "final_host": "www.amazon.com",
+      "asin": "1999257405",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Price of Tomorrow: Why Deflation is the Key to an Abundant Future: Booth, Jeff: 9781999257408: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/3O1yHHB",
+      "final_host": "www.amazon.com.br",
+      "asin": "6583638061",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "O preço do amanhã | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4uiDGEh",
+      "final_host": "www.amazon.com",
+      "asin": "1495251438",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Denationalisation of Money (Large Print Edition): The Argument Refined: Hayek, Friedrich A.: 9781495251436: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4dIgWaD",
+      "final_host": "www.amazon.com.br",
+      "asin": "8562816248",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Desestatização do dinheiro: Uma análise da teoria e prática das moedas simultâneas | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4h1H0iK",
+      "final_host": "www.amazon.com",
+      "asin": "1119473861",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Bitcoin Standard: The Decentralized Alternative to Central Banking: Ammous, Saifedean: 9781119473862: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4byFMZo",
+      "final_host": "www.amazon.com.br",
+      "asin": "9949745780",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/9949745780?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/40V421t",
+      "final_host": "www.amazon.com",
+      "asin": "1492054860",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments: Antonopoulos, Andreas M., Osuntokun, Olaoluwa, Pickhardt, Rene:",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4v6P9aq",
+      "final_host": "www.amazon.com.br",
+      "asin": "1492054860",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4sJ3wjb",
+      "final_host": "www.amazon.com",
+      "asin": "1641990503",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Little Bitcoin Book: Why Bitcoin Matters for Your Freedom, Finances, and Future: Collective, Bitcoin, Ajiboye, Mr Timi, Buenaventura, Mr",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/3NMybNF",
+      "final_host": "www.amazon.com.br",
+      "asin": "1676613285",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/1676613285?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/3Njwy9P",
+      "final_host": "www.amazon.com",
+      "asin": "1794326316",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Inventing Bitcoin: The Technology Behind the First Truly Scarce and Decentralized Money Explained: Pritzker, Yan, Evans, Nicholas: 9781794326316: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4rTB6C8",
+      "final_host": "www.amazon.com.br",
+      "asin": "B07MWXRWNB",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/B07MWXRWNB?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/3R1uIMQ",
+      "final_host": "www.amazon.com",
+      "asin": "0226320545",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Road to Serfdom: Text and Documents-The Definitive Edition (The Collected Works of F. A. Hayek, Volume 2): Hayek, F.",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://link.amazon/B04h36HHN",
+      "final_host": "www.amazon.com.br",
+      "asin": "0226320553",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Road to Serfdom: Text and Documents: Text and Documents-The Definitive Edition Volume 2 | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 302 ",
+        "HTTP/2 302 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/46QsdSd",
+      "final_host": "www.amazon.com",
+      "asin": "1736110527",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Layered Money: From Gold and Dollars to Bitcoin and Central Bank Digital Currencies: Bhatia, Nik: 9781736110522: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4rUSLcM",
+      "final_host": "www.amazon.com.br",
+      "asin": "9916974047",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Dinheiro em camadas: Do ouro e dólares ao bitcoin e moedas digitais de banco central | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4eSQHig",
+      "final_host": "www.amazon.com",
+      "asin": "0143116177",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Ascent of Money: A Financial History of the World: 10th Anniversary Edition: Ferguson, Niall: 8601200962765: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://link.amazon/B0j0dwMtg",
+      "final_host": "www.amazon.com.br",
+      "asin": "6555352175",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 302 ",
+        "HTTP/2 302 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/6555352175?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/4b64b8s",
+      "final_host": "www.amazon.com",
+      "asin": "B08YQMC2WM",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Blocksize War: The battle over who controls Bitcoin’s protocol rules: Bier, Jonathan: 9798721895609: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4rXhk90",
+      "final_host": "www.amazon.com.br",
+      "asin": "B08YQMC2WM",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/B08YQMC2WM?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/4bjOd9C",
+      "final_host": "www.amazon.com",
+      "asin": "B0CQLMQRH7",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Genesis Book: The Story of the People and Projects That Inspired Bitcoin: van Wirdum, Aaron: 9798989132621: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/41xvliA",
+      "final_host": "www.amazon.com.br",
+      "asin": "B0DX6X1S34",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/B0DX6X1S34?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/4lvhhQ8",
+      "final_host": "www.amazon.com",
+      "asin": "0996061371",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Book Of Satoshi: The Collected Writings of Bitcoin Creator Satoshi Nakamoto: Champagne, Phil, Lopp, Jameson, St-Onge, Peter: 9780996061377: Amazon.com:",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/3NWFpyF",
+      "final_host": "www.amazon.com.br",
+      "asin": "B0CH23YQZZ",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/B0CH23YQZZ?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    },
+    {
+      "url": "https://amzn.to/4sxMnc0",
+      "final_host": "www.amazon.com",
+      "asin": "B0CG8985FR",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Broken Money: Why Our Financial System is Failing Us and How We Can Make it Better: Alden, Lyn: 9798988666318: Amazon.com:",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/4dKG5S5",
+      "final_host": "www.amazon.com.br",
+      "asin": "B0CG83QBJ6",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "Broken Money: Why Our Financial System is Failing Us and How We Can Make it Better | Amazon.com.br",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://amzn.to/3SSJGFo",
+      "final_host": "www.amazon.com",
+      "asin": "1258092948",
+      "affiliate_tag": "brenorb00-20",
+      "http_status": "200",
+      "curl_exit": 0,
+      "title": "The Strategy Of Conflict: Schelling, Thomas C: 9781258092948: Amazon.com: Books",
+      "status_chain": [
+        "HTTP/2 301 ",
+        "HTTP/2 200 "
+      ],
+      "verified_product_page": true
+    },
+    {
+      "url": "https://link.amazon/B0ggWGwrD",
+      "final_host": "www.amazon.com.br",
+      "asin": "B08QVD9RYL",
+      "affiliate_tag": "brenorb07-20",
+      "http_status": "500",
+      "curl_exit": 0,
+      "title": "503 - Erro de serviço indisponível",
+      "status_chain": [
+        "HTTP/2 302 ",
+        "HTTP/2 302 ",
+        "HTTP/2 500 "
+      ],
+      "clean_url_retry": {
+        "url": "https://www.amazon.com.br/dp/B08QVD9RYL?tag=brenorb07-20",
+        "status": "500",
+        "curl_exit": 0,
+        "title": "503 - Erro de serviço indisponível"
+      },
+      "verified_product_page": false
+    }
+  ]
+}

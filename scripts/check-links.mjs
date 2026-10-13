@@ -1,3 +1,4 @@
+import { collectResourceUrls } from "./lib/resource-urls.mjs";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -20,24 +21,6 @@ function loadNodes() {
   });
 }
 
-function collectUrls(nodes) {
-  const usage = new Map();
-
-  for (const node of nodes) {
-    const resources = Array.isArray(node.resources) ? node.resources : [];
-    for (const resource of resources) {
-      const url = typeof resource.url === "string" ? resource.url.trim() : "";
-      if (!url) continue;
-
-      if (!usage.has(url)) {
-        usage.set(url, new Set());
-      }
-      usage.get(url).add(node.id);
-    }
-  }
-
-  return usage;
-}
 
 async function fetchWithTimeout(url, method) {
   const controller = new AbortController();
@@ -126,7 +109,7 @@ async function run() {
   }
 
   const nodes = loadNodes();
-  const usage = collectUrls(nodes);
+  const usage = collectResourceUrls(nodes);
   const urls = [...usage.keys()];
 
   const failures = [];

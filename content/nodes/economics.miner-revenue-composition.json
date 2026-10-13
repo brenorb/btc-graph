@@ -22,11 +22,12 @@
     {
       "type": "book",
       "title": "Mastering Bitcoin: Mining and Consensus",
-      "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+      "url": "https://amzn.to/4ro0NdG",
       "notes": "Detailed treatment of economic incentives for miners.",
       "regionalUrls": {
         "BR": "https://amzn.to/4te47JX"
-      }
+      },
+      "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
     }
   ],
   "estimatedTime": "50m",

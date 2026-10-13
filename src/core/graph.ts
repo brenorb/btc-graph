@@ -20,6 +20,16 @@ const REQUIRED_NODE_FIELDS = [
   "estimatedTime",
 ] as const;
 
+function isValidFreeUrl(value: unknown) {
+  if (typeof value !== "string") return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
 function isValidRegionalUrls(value: unknown): value is Record<string, string> {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
     return false;
@@ -49,6 +59,9 @@ export function validateGraphData(data: GraphData): ValidationResult {
     }
 
     for (const resource of Array.isArray(node.resources) ? node.resources : []) {
+      if (resource.freeUrl !== undefined && !isValidFreeUrl(resource.freeUrl)) {
+        errors.push(`Node "${node.id}" has invalid freeUrl for resource "${resource.title}"`);
+      }
       if (
         resource.regionalUrls !== undefined &&
         !isValidRegionalUrls(resource.regionalUrls)

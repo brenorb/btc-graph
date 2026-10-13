@@ -114,6 +114,16 @@ describe("validateGraphData", () => {
     ).toBe(true);
   });
 
+  it("rejects malformed or non-web free resource URLs", () => {
+    for (const freeUrl of ["", "not a URL", "javascript:alert(1)", 42]) {
+      const data = sampleData();
+      data.nodes[0].resources = [{ type: "book", title: "A book", url: "https://example.com/book", freeUrl } as any];
+      const result = validateGraphData(data);
+      expect(result.valid).toBe(false);
+      expect(result.errors.some(error => error.includes("invalid freeUrl"))).toBe(true);
+    }
+  });
+
   it("rejects malformed regionalUrls maps", () => {
     const data = sampleData();
     data.nodes[0].resources = [
