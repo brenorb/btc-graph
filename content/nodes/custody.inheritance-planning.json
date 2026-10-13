@@ -9,7 +9,13 @@
   ],
   "resources": [
     {
-      "type": "article",
+      "type": "book",
+      "title": "Cryptoasset Inheritance Planning: A Simple Guide for Owners",
+      "url": "https://amzn.to/40uBk7z",
+      "notes": "Pamela Morgan’s practical guide to preparing an access plan for heirs and testing recoverability."
+    },
+    {
+      "type": "book",
       "title": "Smart Custody Book",
       "url": "https://github.com/BlockchainCommons/SmartCustodyBook",
       "notes": "Open reference material for long-term custody design and recovery planning."
