@@ -39,4 +39,20 @@ Resource fields:
 - `type`
 - `title`
 - `url`
+- `regionalUrls` (optional map, e.g. `BR` for Brazil)
+- `freeUrl` (optional HTTP(S) URL to an author-approved free text/chapter)
 - `notes` (optional)
+
+## Book links
+
+Book `url` values use verified Amazon affiliate links. Reuse the existing pair
+for the same book and edition; prefer a verified Brazil affiliate link in
+`regionalUrls.BR` when available. Follow redirects all the way to the product
+page and confirm title, edition, marketplace and affiliate tag. A short-link
+redirect, HTTP service error, or reachability check alone does not establish a
+valid listing. Record unverified destinations rather than guessing new editions.
+
+Keep author-approved free chapters in `freeUrl`; the purchase and free links
+appear within one curated resource. `npm run check:links` checks default,
+regional and free URLs. See [the book audit](docs/research/book-affiliate-audit.md)
+for verified destinations and remaining product-page checks.

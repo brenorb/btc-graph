@@ -5,6 +5,7 @@ export interface NodeResource {
   title: string;
   url: string;
   regionalUrls?: Record<string, string>;
+  freeUrl?: string;
   notes?: string;
 }
 

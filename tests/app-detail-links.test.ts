@@ -48,6 +48,7 @@ const sampleData = {
         {
           type: "book",
           title: "Mastering Bitcoin",
+          freeUrl: "https://example.com/free-chapter",
           url: "https://www.amazon.com/dp/1491954388",
           regionalUrls: {
             BR: "https://www.amazon.com.br/dp/1491954388",
@@ -276,6 +277,9 @@ describe("node detail links", () => {
 
     expect(resourceLink?.textContent).toBe("Mastering Bitcoin");
     expect(resourceLink?.getAttribute("href")).toBe("https://www.amazon.com.br/dp/1491954388");
+    const freeLink = document.querySelector<HTMLAnchorElement>(".resources [data-free-resource-link]");
+    expect(freeLink?.getAttribute("href")).toBe("https://example.com/free-chapter");
+    expect(freeLink?.textContent).toBe("Read free");
   });
 
   it("shows only the first two gaps by default and expands the rest on demand", async () => {

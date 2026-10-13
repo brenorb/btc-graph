@@ -102,6 +102,7 @@ describe("writeNodeInfoPages", () => {
             {
               type: "book",
               title: "Mastering Bitcoin",
+              freeUrl: "https://example.com/free-chapter?a=1&b=2",
               url: "https://www.amazon.com/dp/1491954388",
               regionalUrls: {
                 BR: "https://www.amazon.com.br/dp/1491954388",
@@ -136,6 +137,10 @@ describe("writeNodeInfoPages", () => {
     const resourceLink = dom.window.document.querySelector<HTMLAnchorElement>("[data-resource-link]");
 
     expect(resourceLink?.getAttribute("href")).toBe("https://www.amazon.com.br/dp/1491954388");
+    const freeLink = dom.window.document.querySelector<HTMLAnchorElement>("[data-free-resource-link]");
+    expect(freeLink?.getAttribute("href")).toBe("https://example.com/free-chapter?a=1&b=2");
+    expect(freeLink?.textContent).toBe("Read free");
+    expect(freeLink?.hasAttribute("data-resource-link")).toBe(false);
   });
 
   it("renders empty adjacency lists explicitly when a node has no direct neighbors", () => {

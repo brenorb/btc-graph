@@ -35,6 +35,16 @@ const requiredFields = [
   "estimatedTime",
 ];
 
+function isValidFreeUrl(value) {
+  if (typeof value !== "string") return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
 function isValidRegionalUrls(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
     return false;
@@ -88,6 +98,9 @@ function validate(nodes) {
     }
 
     for (const resource of Array.isArray(node.resources) ? node.resources : []) {
+      if (resource.freeUrl !== undefined && !isValidFreeUrl(resource.freeUrl)) {
+        errors.push(`Node "${node.id}" has invalid freeUrl for resource "${resource.title}"`);
+      }
       if (
         resource.regionalUrls !== undefined &&
         !isValidRegionalUrls(resource.regionalUrls)

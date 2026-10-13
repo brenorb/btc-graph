@@ -117,7 +117,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/custody.output-labeling/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/dev.descriptors/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -377,7 +377,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/economics.fee-pressure-cycles/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -412,7 +412,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/economics.miner-revenue-composition/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -952,7 +952,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/history.gpu-to-asic-era/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -1207,7 +1207,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/mining.energy-accounting/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -1222,7 +1222,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/mining.fee-sniping/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -1492,7 +1492,7 @@
   </url>
   <url>
     <loc>https://btc-graph.brenorb.com/nodes/privacy.utxo-consolidation-tradeoffs/info/</loc>
-    <lastmod>2026-08-22T01:19:45.139Z</lastmod>
+    <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

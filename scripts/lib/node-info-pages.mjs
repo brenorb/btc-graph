@@ -182,8 +182,9 @@ function renderResourceList(resources) {
 
   return resources
     .map((resource) => {
+      const freeLink = resource.freeUrl ? ` <a href="${escapeHtml(resource.freeUrl)}" rel="noreferrer" data-free-resource-link>Read free</a>` : "";
       const notes = resource.notes ? ` <span class="meta">${escapeHtml(resource.notes)}</span>` : "";
-      return `<li><a href="${escapeHtml(resource.url)}" rel="noreferrer" data-resource-link data-default-url="${escapeHtml(resource.url)}" data-regional-urls="${serializeRegionalUrls(resource.regionalUrls)}">${escapeHtml(resource.title)}</a> <span class="meta">(${escapeHtml(resource.type)})</span>${notes}</li>`;
+      return `<li><a href="${escapeHtml(resource.url)}" rel="noreferrer" data-resource-link data-default-url="${escapeHtml(resource.url)}" data-regional-urls="${serializeRegionalUrls(resource.regionalUrls)}">${escapeHtml(resource.title)}</a> <span class="meta">(${escapeHtml(resource.type)})</span>${freeLink}${notes}</li>`;
     })
     .join("");
 }

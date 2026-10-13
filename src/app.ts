@@ -785,6 +785,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
               <div class="resource">
                 <div class="resource-type">${resource.type}</div>
                 <a href="${resolveResourceHref(resource)}" target="_blank" rel="noreferrer">${resource.title}</a>
+                ${resource.freeUrl ? `<div class="meta"><a data-free-resource-link href="${resource.freeUrl.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}" target="_blank" rel="noreferrer">Read free</a></div>` : ""}
                 ${resource.notes ? `<div class="meta">${resource.notes}</div>` : ""}
               </div>
             `,

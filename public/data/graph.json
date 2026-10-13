@@ -766,11 +766,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Wallets",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Wallet data-management and control patterns for advanced users.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc"
         }
       ],
       "estimatedTime": "45m",
@@ -1587,11 +1588,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Wallets",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Wallet architecture context for descriptor-based design and address handling.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc"
         }
       ],
       "estimatedTime": "75m",
@@ -2932,11 +2934,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Transaction Fees",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Economic background for fee dynamics and bidding strategies.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc"
         },
         {
           "type": "article",
@@ -3254,11 +3257,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Mining and Consensus",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Detailed treatment of economic incentives for miners.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
         }
       ],
       "estimatedTime": "50m",
@@ -7721,11 +7725,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Mining",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Technical and economic context for mining hardware evolution.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
         },
         {
           "type": "article",
@@ -9883,11 +9888,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Mining and Consensus",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Protocol-level treatment of work, cost, and security.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
         }
       ],
       "estimatedTime": "55m",
@@ -10002,11 +10008,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Mining",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Mining incentive framework and block-template decision context.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
         },
         {
           "type": "article",
@@ -12128,11 +12135,12 @@
         {
           "type": "book",
           "title": "Mastering Bitcoin: Transaction Fees",
-          "url": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc",
+          "url": "https://amzn.to/4ro0NdG",
           "notes": "Economic mechanics behind fee pressure and input management.",
           "regionalUrls": {
             "BR": "https://amzn.to/4te47JX"
-          }
+          },
+          "freeUrl": "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc"
         }
       ],
       "estimatedTime": "65m",
