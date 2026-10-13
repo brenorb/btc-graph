@@ -9,7 +9,10 @@
     "build": "npm run build:data && vite build",
     "preview": "vite preview",
     "test": "npm run build:data && vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "check": "npm run lint && npm run typecheck && npm test && npm run check:links && npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,10 +33,16 @@
   },
   "homepage": "https://btc-graph.brenorb.com/",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/cytoscape": "^3.21.9",
+    "@types/cytoscape-dagre": "^2.3.4",
+    "@types/jsdom": "^30.0.0",
     "@types/node": "^25.3.3",
     "eslint": "^10.0.2",
+    "globals": "^17.13.0",
     "jsdom": "^28.1.0",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.2",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   },

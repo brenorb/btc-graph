@@ -10,9 +10,9 @@ import {
   searchNodes,
   validateGraphData,
 } from "../src/core/graph";
-import type { GraphData, NodeProgressState } from "../src/core/types";
+import type { GraphData, GraphNode, NodeProgressState } from "../src/core/types";
 
-function sampleData(): GraphData {
+function sampleData(): GraphData & { nodes: [GraphNode, ...GraphNode[]] } {
   return {
     nodes: [
       {
@@ -274,7 +274,7 @@ describe("saveProgressState", () => {
 
     saveProgressState(storage, progress);
     expect(writes).toHaveLength(1);
-    expect(JSON.parse(writes[0])).toEqual(progress);
+    expect(JSON.parse(writes[0]!)).toEqual(progress);
   });
 
   it("does not throw when storage setItem fails", () => {

@@ -12,9 +12,7 @@
 
 ```bash
 npm ci
-npm run build:data
-npm run check:links
-npm test
+npm run check
 ```
 
 ## Node quality rules
@@ -40,3 +38,8 @@ Resource fields:
 - `title`
 - `url`
 - `notes` (optional)
+
+`npm run check` runs lint, strict type checking (including tests), graph/test
+validation, resource link checks, and the production build. CI and Pages use this
+same gate. For a faster local loop, run `npm run lint` and `npm run typecheck`
+separately.

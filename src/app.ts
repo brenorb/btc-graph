@@ -907,7 +907,7 @@ function renderDetails(state: AppState, root: HTMLElement) {
     detail
       .querySelector<HTMLButtonElement>(`[data-node-ai-copy="${node.id}"]`)
       ?.addEventListener("click", async () => {
-        const value = promptInput?.value ?? state.assistantDraftPrompts[node.id];
+        const value = promptInput?.value ?? state.assistantDraftPrompts[node.id] ?? currentAssistantPrompt;
         syncAssistantPrompt(value);
         try {
           await navigator.clipboard.writeText(value);
@@ -958,7 +958,7 @@ function refreshLabels(state: AppState) {
     const isHovered = Boolean(node.data("hovered"));
     const isSelected = node.id() === state.selectedId;
     const mode =
-      state.labelMode === "all" || ((isHovered || isSelected) && state.labelMode !== "all")
+      state.labelMode === "all" || isHovered || isSelected
         ? "all"
         : "none";
     node.data("label", resolveLabelText(mode, title, isHovered));
@@ -1084,7 +1084,7 @@ function applyGraphTheme(state: AppState) {
     node.data("labelBackgroundColor", palette.labelBackground);
     node.data("borderColor", palette.nodeBorder);
 
-    if (Boolean(node.data("contextual"))) {
+    if (node.data("contextual")) {
       node.data("color", palette.contextualNodeFill);
     }
   }
@@ -1441,14 +1441,14 @@ function createGraph(container: HTMLElement) {
           label: "data(label)",
           "font-size": 10,
           "text-wrap": "wrap",
-          "text-max-width": 120,
+          "text-max-width": "120px",
           "text-valign": "bottom",
           "text-margin-y": 8,
           "background-color": "data(color)",
           color: "data(labelColor)",
           "text-background-color": "data(labelBackgroundColor)",
           "text-background-opacity": 0.84,
-          "text-background-padding": 3,
+          "text-background-padding": "3px",
           "text-background-shape": "roundrectangle",
           "border-width": 1,
           "border-color": "data(borderColor)",
@@ -1462,7 +1462,7 @@ function createGraph(container: HTMLElement) {
           "target-arrow-shape": "triangle",
           "target-arrow-color": "data(lineColor)",
           "curve-style": "bezier",
-          opacity: "data(opacity)",
+          opacity: (edge: cytoscape.EdgeSingular) => Number(edge.data("opacity")),
         },
       },
       {

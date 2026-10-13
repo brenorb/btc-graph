@@ -30,7 +30,6 @@ describe("encodeViewStateToQuery", () => {
     const state = {
       selectedId: "node.a",
       hiddenCategories: new Set(["Category"]),
-      // @ts-expect-error testing accidental extra field
       progress: { "node.a": "know_it" },
     };
 

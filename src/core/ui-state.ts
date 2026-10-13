@@ -59,7 +59,7 @@ const FALLBACK_CATEGORY_COLORS = [
   "#0891b2",
   "#059669",
   "#b45309",
-];
+] as const;
 
 const PROGRESS_STROKES: Record<ProgressState, ProgressStroke> = {
   need_to_learn: {
@@ -126,12 +126,13 @@ export function applyCategoryBulkAction(
 }
 
 export function resolveCategoryColor(category: string): string {
-  if (category in CATEGORY_COLOR_MAP) {
-    return CATEGORY_COLOR_MAP[category];
+  const categoryColor = CATEGORY_COLOR_MAP[category];
+  if (categoryColor !== undefined) {
+    return categoryColor;
   }
 
   const hash = [...category].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return FALLBACK_CATEGORY_COLORS[hash % FALLBACK_CATEGORY_COLORS.length];
+  return FALLBACK_CATEGORY_COLORS[hash % FALLBACK_CATEGORY_COLORS.length] ?? FALLBACK_CATEGORY_COLORS[0];
 }
 
 export function resolveProgressStroke(progress: ProgressState): ProgressStroke {
@@ -251,34 +252,39 @@ export function compactGraphNodeRows(
 
   const positionById = new Map<string, GraphNodePosition>();
   for (const row of rows.values()) {
-    if (row.length < 2) {
-      positionById.set(row[0].id, row[0]);
+    const orderedRow = [...row].sort((left, right) => left.x - right.x);
+    const [first, ...remaining] = orderedRow;
+    if (!first) continue;
+    if (remaining.length === 0) {
+      positionById.set(first.id, first);
       continue;
     }
 
-    const orderedRow = [...row].sort((left, right) => left.x - right.x);
-    const originalCenter = (orderedRow[0].x + orderedRow.at(-1)!.x) / 2;
-    const compactedX: number[] = [orderedRow[0].x];
+    const last = remaining.at(-1) ?? first;
+    const originalCenter = (first.x + last.x) / 2;
+    const compacted = [first];
+    let previous = first;
+    let previousX = first.x;
 
-    for (let index = 1; index < orderedRow.length; index += 1) {
-      const previous = orderedRow[index - 1];
-      const current = orderedRow[index];
+    for (const current of remaining) {
       const previousTitleWidth = titleWidths.get(previous.id) ?? minimumGap / 2;
       const currentTitleWidth = titleWidths.get(current.id) ?? minimumGap / 2;
       const maximumGap = Math.max(
         minimumGap,
         GRAPH_TITLE_GAP_MULTIPLIER * Math.max(previousTitleWidth, currentTitleWidth),
       );
-      compactedX.push(Math.min(current.x, compactedX[index - 1] + maximumGap));
+      previousX = Math.min(current.x, previousX + maximumGap);
+      compacted.push({ ...current, x: previousX });
+      previous = current;
     }
 
-    const compactedCenter = (compactedX[0] + compactedX.at(-1)!) / 2;
+    const compactedCenter = (first.x + previousX) / 2;
     const centerOffset = originalCenter - compactedCenter;
 
-    orderedRow.forEach((node, index) => {
+    compacted.forEach((node) => {
       positionById.set(node.id, {
         ...node,
-        x: compactedX[index] + centerOffset,
+        x: node.x + centerOffset,
       });
     });
   }
