@@ -1,0 +1,434 @@
+{
+  "date": "2026-10-13T04:13:19.068Z",
+  "source_revision": "9cf0c165f8b05510e1066a22aba9d74d6c8ade57",
+  "environment": {
+    "cpu": "Apple M5 Max",
+    "logical_cpus": 18,
+    "ram_bytes": 137438953472,
+    "os": "27.0.0",
+    "node": "v24.21.0",
+    "browser": "155.0.8059.40",
+    "headless": true
+  },
+  "data": {
+    "nodes": 427,
+    "edges": 608,
+    "sha256": "a2ad58e13a24ddd236681b24a0c807d6500714a529bab18cfc23f3f552b3d8b8",
+    "bytes": 632695,
+    "gzip_bytes": 100207
+  },
+  "builds": [
+    {
+      "name": "baseline",
+      "chunks": [
+        {
+          "name": "assets/index-vVFltt4n.js",
+          "entry": true,
+          "dynamic_entry": false,
+          "bytes": 580029,
+          "gzip_bytes": 187930
+        }
+      ],
+      "pre_minification_rendered_bytes_by_group": {
+        "application_and_runtime": 69870,
+        "cytoscape_and_layout_dependencies": 1474926
+      }
+    },
+    {
+      "name": "lazy-trial",
+      "chunks": [
+        {
+          "name": "assets/index-CBBdCO9U.js",
+          "entry": true,
+          "dynamic_entry": false,
+          "bytes": 1983,
+          "gzip_bytes": 1016
+        },
+        {
+          "name": "assets/app-BCzdWDEb.js",
+          "entry": false,
+          "dynamic_entry": true,
+          "bytes": 579311,
+          "gzip_bytes": 187595
+        }
+      ],
+      "pre_minification_rendered_bytes_by_group": {
+        "application_and_runtime": 71929,
+        "cytoscape_and_layout_dependencies": 1474926
+      }
+    },
+    {
+      "name": "vendor-split",
+      "chunks": [
+        {
+          "name": "assets/graph-runtime-C9XRwMh6.js",
+          "entry": false,
+          "dynamic_entry": false,
+          "bytes": 536945,
+          "gzip_bytes": 174809
+        },
+        {
+          "name": "assets/index-DCI4O2qP.js",
+          "entry": true,
+          "dynamic_entry": false,
+          "bytes": 43010,
+          "gzip_bytes": 13122
+        }
+      ],
+      "pre_minification_rendered_bytes_by_group": {
+        "cytoscape_and_layout_dependencies": 1474920,
+        "application_and_runtime": 69866
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "multiplier": 1,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 656.1000000238419,
+          "rerender_ms": 699.5999999642372,
+          "ready_ms": 815.8999999761581,
+          "data_ms": 34.69999998807907,
+          "settle_ms": 20.80000001192093,
+          "relayout_ms": 566.8000000119209,
+          "refresh_ms": 616.1000000238419,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273
+          }
+        },
+        {
+          "layout_ms": 670.1999999880791,
+          "rerender_ms": 711.8999999761581,
+          "ready_ms": 830.1000000238419,
+          "data_ms": 34.89999997615814,
+          "settle_ms": 29.399999976158142,
+          "relayout_ms": 565.1999999880791,
+          "refresh_ms": 613.3000000119209,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999955
+          }
+        },
+        {
+          "layout_ms": 654.1999999880791,
+          "rerender_ms": 696.1999999880791,
+          "ready_ms": 805.8000000119209,
+          "data_ms": 34,
+          "settle_ms": 33.19999998807907,
+          "relayout_ms": 590.8999999761581,
+          "refresh_ms": 640.5,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.5,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999955
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "multiplier": 2,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 2499.199999988079,
+          "rerender_ms": 2562,
+          "ready_ms": 2670.400000035763,
+          "data_ms": 38.40000003576279,
+          "settle_ms": 28,
+          "relayout_ms": 2395.5,
+          "refresh_ms": 2478.5,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.599999999999454,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273
+          }
+        },
+        {
+          "layout_ms": 2440.2999999523163,
+          "rerender_ms": 2502.199999988079,
+          "ready_ms": 2607,
+          "data_ms": 36.5,
+          "settle_ms": 25.200000047683716,
+          "relayout_ms": 2292.300000011921,
+          "refresh_ms": 2367,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.5,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000728
+          }
+        },
+        {
+          "layout_ms": 2430.300000011921,
+          "rerender_ms": 2492.899999976158,
+          "ready_ms": 2599.5,
+          "data_ms": 42.80000001192093,
+          "settle_ms": 27.30000001192093,
+          "relayout_ms": 2297.800000011921,
+          "refresh_ms": 2369.5,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.599999999999454,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999727
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "multiplier": 4,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 9426.100000023842,
+          "rerender_ms": 9549.200000047684,
+          "ready_ms": 9682.700000047684,
+          "data_ms": 59.90000003576279,
+          "settle_ms": 19.80000001192093,
+          "relayout_ms": 9282.699999988079,
+          "refresh_ms": 9452.300000011921,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.600000000000364,
+            "median": 16.69999999999891,
+            "p95": 16.700000000000728
+          }
+        },
+        {
+          "layout_ms": 8906.5,
+          "rerender_ms": 9005.5,
+          "ready_ms": 9188.299999952316,
+          "data_ms": 87.90000003576279,
+          "settle_ms": 24.5,
+          "relayout_ms": 8358.400000035763,
+          "refresh_ms": 8480,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.5,
+            "median": 16.69999999999891,
+            "p95": 16.80000000000109
+          }
+        },
+        {
+          "layout_ms": 7715.600000023842,
+          "rerender_ms": 7801.599999964237,
+          "ready_ms": 7909.299999952316,
+          "data_ms": 48.09999996423721,
+          "settle_ms": 29.400000035762787,
+          "relayout_ms": 7076.5,
+          "refresh_ms": 7179.600000023842,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.599999999998545,
+            "median": 16.69999999999891,
+            "p95": 16.799999999999272
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "multiplier": 1,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 470.30000001192093,
+          "rerender_ms": 499.2999999523163,
+          "ready_ms": 572,
+          "data_ms": 28.899999976158142,
+          "settle_ms": 31.599999964237213,
+          "relayout_ms": 359,
+          "refresh_ms": 388.9000000357628,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999727
+          }
+        },
+        {
+          "layout_ms": 447.80000001192093,
+          "rerender_ms": 476,
+          "ready_ms": 548.1999999880791,
+          "data_ms": 26.600000023841858,
+          "settle_ms": 18.69999998807907,
+          "relayout_ms": 398.7000000476837,
+          "refresh_ms": 433.39999997615814,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.800000000000182
+          }
+        },
+        {
+          "layout_ms": 491.30000001192093,
+          "rerender_ms": 522.1999999880791,
+          "ready_ms": 604.6999999880791,
+          "data_ms": 35.89999997615814,
+          "settle_ms": 34.5,
+          "relayout_ms": 311,
+          "refresh_ms": 337.30000001192093,
+          "nodes": 427,
+          "edges": 608,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "multiplier": 2,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 1413.699999988079,
+          "rerender_ms": 1450.1000000238419,
+          "ready_ms": 1515.1000000238419,
+          "data_ms": 24.19999998807907,
+          "settle_ms": 7.100000023841858,
+          "relayout_ms": 1390.6000000238419,
+          "refresh_ms": 1436.6000000238419,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273
+          }
+        },
+        {
+          "layout_ms": 1533.0999999642372,
+          "rerender_ms": 1571.5,
+          "ready_ms": 1651.2999999523163,
+          "data_ms": 34,
+          "settle_ms": 17.69999998807907,
+          "relayout_ms": 1472.1000000238419,
+          "refresh_ms": 1516.8999999761581,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000273
+          }
+        },
+        {
+          "layout_ms": 1571,
+          "rerender_ms": 1611.1000000238419,
+          "ready_ms": 1683.9000000357628,
+          "data_ms": 27.80000001192093,
+          "settle_ms": 17.899999976158142,
+          "relayout_ms": 1520.8999999761581,
+          "refresh_ms": 1570.300000011921,
+          "nodes": 854,
+          "edges": 1216,
+          "pan_frame_ms": {
+            "min": 16.59999999999991,
+            "median": 16.699999999999818,
+            "p95": 16.799999999999727
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "multiplier": 4,
+      "topology": "disconnected copies of current graph",
+      "repetitions": [
+        {
+          "layout_ms": 5515,
+          "rerender_ms": 5579,
+          "ready_ms": 5672,
+          "data_ms": 45.200000047683716,
+          "settle_ms": 19.599999964237213,
+          "relayout_ms": 5656.199999988079,
+          "refresh_ms": 5745.099999964237,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.599999999999454,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000728
+          }
+        },
+        {
+          "layout_ms": 5956.800000011921,
+          "rerender_ms": 6034.5,
+          "ready_ms": 6113.600000023842,
+          "data_ms": 38.700000047683716,
+          "settle_ms": 21.900000035762787,
+          "relayout_ms": 5475.300000011921,
+          "refresh_ms": 5568.199999988079,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.599999999998545,
+            "median": 16.699999999999818,
+            "p95": 16.800000000000182
+          }
+        },
+        {
+          "layout_ms": 5729.800000011921,
+          "rerender_ms": 5799.800000011921,
+          "ready_ms": 5875.300000011921,
+          "data_ms": 36.59999996423721,
+          "settle_ms": 26.900000035762787,
+          "relayout_ms": 7759.300000011921,
+          "refresh_ms": 7858.299999952316,
+          "nodes": 1708,
+          "edges": 2432,
+          "pan_frame_ms": {
+            "min": 16.5,
+            "median": 16.699999999999818,
+            "p95": 16.700000000000728
+          }
+        }
+      ]
+    }
+  ]
+}
