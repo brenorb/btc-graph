@@ -7301,8 +7301,7 @@
       "category": "History & Governance",
       "prerequisites": [
         "protocol.softfork-hardfork",
-        "history.early-bitcoin",
-        "history.social-consensus-technology"
+        "history.early-bitcoin"
       ],
       "resources": [
         {
@@ -7625,8 +7624,7 @@
       "description": "The economic majority is the set of participants willing and able to accept Bitcoin in exchange for goods, services, or other currencies. This governance theory argues that miners cannot successfully impose a protocol change that the economically relevant users reject, because those users can refuse to recognize the resulting chain or assign it economic value.",
       "category": "History & Governance",
       "prerequisites": [
-        "protocol.nodes-vs-miners",
-        "economics.schelling-points"
+        "protocol.nodes-vs-miners"
       ],
       "resources": [
         {
@@ -13359,7 +13357,8 @@
       "description": "Validation rules that define Bitcoin’s canonical state.",
       "category": "Protocol & Consensus",
       "prerequisites": [
-        "protocol.proof-of-work"
+        "protocol.proof-of-work",
+        "history.social-consensus-technology"
       ],
       "resources": [
         {

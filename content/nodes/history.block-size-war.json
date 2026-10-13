@@ -5,8 +5,7 @@
   "category": "History & Governance",
   "prerequisites": [
     "protocol.softfork-hardfork",
-    "history.early-bitcoin",
-    "history.social-consensus-technology"
+    "history.early-bitcoin"
   ],
   "resources": [
     {
