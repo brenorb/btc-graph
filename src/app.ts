@@ -6,9 +6,10 @@ import {
   filterGraphByCategories,
   getDirectDependents,
   loadProgressState,
+  PROGRESS_STORAGE_KEY,
   reconcileSelection,
   sanitizeProgressState,
-  saveProgressState,
+  updateNodeProgress,
   searchNodes,
   validateGraphData,
 } from "./core/graph";
@@ -469,15 +470,11 @@ function themeSetup(storage: StorageLike | undefined) {
 function setProgress(state: AppState, nodeId: string, next: ProgressState) {
   const current = state.progress[nodeId]?.state ?? null;
   const resolved = deriveNextProgressState(current, next);
-  if (!resolved) {
-    delete state.progress[nodeId];
-  } else {
-    state.progress[nodeId] = {
-      state: resolved,
-      updatedAt: new Date().toISOString(),
-    };
-  }
-  saveProgressState(state.storage, state.progress);
+  state.progress = updateNodeProgress(
+    state.storage,
+    nodeId,
+    resolved ? { state: resolved, updatedAt: new Date().toISOString() } : null,
+  );
 }
 
 function buildNodeAssistantChatHref(prompt: string) {
@@ -1119,10 +1116,9 @@ function wireExportImport(state: AppState, root: HTMLElement) {
         const parsed = sanitizeProgressState(JSON.parse(text));
         for (const [id, entry] of Object.entries(parsed)) {
           if (state.nodeById.has(id)) {
-            state.progress[id] = entry;
+            state.progress = updateNodeProgress(state.storage, id, entry);
           }
         }
-        saveProgressState(state.storage, state.progress);
         renderDetails(state, root);
         syncNodeClasses(state);
       } catch {
@@ -1554,4 +1550,12 @@ export async function bootstrapApp(root: HTMLElement | null) {
   rerenderGraph(state, root);
   wireInteractions(state, root);
   wireExportImport(state, root);
+
+  // Another tab changed the progress: show it here too.
+  window.addEventListener("storage", (event) => {
+    if (event.key !== PROGRESS_STORAGE_KEY) return;
+    state.progress = loadProgressState(storage);
+    renderDetails(state, root);
+    syncNodeClasses(state);
+  });
 }

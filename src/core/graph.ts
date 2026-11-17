@@ -1,4 +1,5 @@
 import type {
+  NodeProgressEntry,
   FilteredGraphResult,
   GraphData,
   GraphNode,
@@ -256,6 +257,29 @@ export function saveProgressState(
   } catch {
     // Ignore quota/security errors and keep app functional.
   }
+}
+
+/**
+ * Change one node's progress in storage and return the stored progress.
+ *
+ * Each open tab keeps its own copy of the progress it loaded. Saving that
+ * whole copy overwrote marks made in other tabs since, so this re-reads
+ * storage and changes only the one node.
+ */
+export function updateNodeProgress(
+  storage: StorageLike | undefined,
+  nodeId: string,
+  entry: NodeProgressEntry | null,
+  storageKey = PROGRESS_STORAGE_KEY,
+): NodeProgressState {
+  const progress = loadProgressState(storage, storageKey);
+  if (entry) {
+    progress[nodeId] = entry;
+  } else {
+    delete progress[nodeId];
+  }
+  saveProgressState(storage, progress, storageKey);
+  return progress;
 }
 
 export function sanitizeProgressState(input: unknown): NodeProgressState {
